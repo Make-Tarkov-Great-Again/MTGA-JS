@@ -1,25 +1,49 @@
-'use strict'
+const cert = require('./source/certificategenerator');
 
-const path = require('path')
-const AutoLoad = require('fastify-autoload')
+const app = require('fastify')({
+    logger: {
+        prettyPrint: true
+    },
+    http2: true,
+    https: {
+        allowHTTP1: true,
+        key: cert.KEY,
+        cert: cert.CERT
+    }
+});
 
-module.exports = async function (fastify, opts) {
-  // Place here your custom code!
+app.register(require
+    ('@fastify/compress'),
+    {
+        encodings: ['deflate', 'gzip'],
+        global: true
+    }
+);
 
-  // Do not touch the following lines
+app.register(require
+    ('@fastify/cookie'),
+    {
+        secret: 'secret',
+        parseOptions: {}
+    }
+);
 
-  // This loads all plugins defined in plugins
-  // those should be support plugins that are reused
-  // through your application
-  fastify.register(AutoLoad, {
-    dir: path.join(__dirname, 'plugins'),
-    options: Object.assign({}, opts)
-  })
 
-  // This loads all plugins defined in routes
-  // define your routes in one of these
-  fastify.register(AutoLoad, {
-    dir: path.join(__dirname, 'routes'),
-    options: Object.assign({}, opts)
-  })
-}
+const fs = require('fs');
+const serverConfig = fs.readFileSync('./database/config/server.json');
+
+app.get('/', function (request, reply) {
+    let config = JSON.parse(serverConfig);
+
+    reply.send({ config });
+});
+
+
+
+app.listen(3000, function (err, address) {
+    if (err) {
+        app.log.error(err);
+        process.exit(1);
+    }
+    app.log.info(`Listening on ${address}`);
+});
