@@ -13,7 +13,7 @@ const Database = class {
         this.locales;
         this.templates;
         //this.bots;
-        this.profiles;
+        //this.profiles;
         this.traders;
     }
 
@@ -25,6 +25,7 @@ const Database = class {
             this.loadWeather(),
             this.loadLanguage(),
             this.loadTemplates(),
+            this.loadTraders(),
             //this.loadProfiles(),
             //this.loadBots()
         ]);
@@ -83,16 +84,25 @@ const Database = class {
      */
     async loadLanguage() {
         //util.logger.logDebug("# Database: Loading languages", 1)
-        const allLangs = fileIO.readParsed('./database/locales/languages.json', 'utf8').data;
+        const allLangs = fileIO.getDirectoriesFrom(`./database/locales`);
         this.locales = { "languages": [] };
-        for (const locale of allLangs) {
-            const currentLocalePath = "./database/locales/" + locale.ShortName + "/";
-            if (fileIO.fileExist(currentLocalePath + "locales.json") && fileIO.fileExist(currentLocalePath + "menu.json")) {
-                this.locales[locale.ShortName] = {
-                    locale: fileIO.readParsed(currentLocalePath + "locales.json").data,
-                    menu: fileIO.readParsed(currentLocalePath + "menu.json").data,
+        for (const lang in allLangs) {
+            const locale = allLangs[lang];
+            const currentLocalePath = `./database/locales/` + locale + `/`;
+            if (fileIO.fileExist(`${currentLocalePath}locale.json`) && fileIO.fileExist(`${currentLocalePath}menu.json`)) {
+                let localeCopy = fileIO.readParsed(`${currentLocalePath}locale.json`)
+                if (typeof localeCopy.data != "undefined") { localeCopy = localeCopy.data; }
+
+                let menuCopy = fileIO.readParsed(`${currentLocalePath}menu.json`)
+                if (typeof menuCopy.data != "undefined") { menuCopy = menuCopy.data; }
+
+                this.locales[locale] = {
+                    locale: localeCopy,
+                    menu: menuCopy,
                 };
                 this.locales.languages.push(locale);
+            } else {
+                console.log(`# Database: Missing locale files for ${locale}`);
             }
         }
         //util.logger.logDebug("# Database: Loading languages", 2)
@@ -136,11 +146,11 @@ const Database = class {
      */
     async loadTraders() {
         //util.logger.logDebug("# Database: Loading traders", 1)
-        const traderKeys = fileIO.getDirectoriesFrom('./server/dumps/traders');
+        const traderKeys = fileIO.getDirectoriesFrom('./database/traders');
         this.traders = { names: {} };
         for (let traderID of traderKeys) {
 
-            const path = `./server/dumps/traders/${traderID}/`;
+            const path = `./database/traders/${traderID}/`;
             this.traders[traderID] = { base: {}, assort: {}, categories: {} };
 
             // read base and assign to variable
