@@ -1,13 +1,11 @@
 const cert = require('./source/certificategenerator');
-const fs = require('fs');
-const path = require('path');
+
+
+
 
 /**
- * Convenience plugin for Fastify that loads all plugins found in a 
- * directory and automatically configures routes matching the folder structure.
+ * Fastify
  */
-const autoload = require('@fastify/autoload');  
-
 const app = require('fastify')({
     logger: {
         prettyPrint: true
@@ -20,6 +18,45 @@ const app = require('fastify')({
     }
 });
 
+/**
+ * Globals I guess????
+ */
+global.AE = { util: {} };
+
+/**
+ * Register Database
+ */
+const database = require(`./source/database`);
+database.loadDatabase();
+global.AE.database = database;
+
+
+
+/**
+ * Register Route Handler
+ */
+app.register(require('./routes/core'));
+
+
+/**
+ * WebSocket support for Fastify. Built upon ws@8.
+ * https://github.com/fastify/fastify-websocket
+ */
+app.register(require('@fastify/websocket'));
+app.register(async function (app) {
+    app.get('*', { websocket: true }, (connection, request) => {
+        connection.socket.on('message', message => {
+            connection.socket.send(' websocket is working i guess ');
+        });
+    });
+});
+
+/**
+ * Adds compression utils to the Fastify reply object and 
+ * a hook to decompress requests payloads.
+ * Supports gzip, deflate, and brotli.
+ * https://github.com/fastify/fastify-compress
+ */
 app.register(require
     ('@fastify/compress'),
     {
@@ -29,17 +66,9 @@ app.register(require
 );
 
 /**
- * Load all routes found in the routes directory.
- 
-app.register(autoload, {
-    dir: path.join(__dirname, 'source/controllers'),
-});
-*/
-
-
-/**
  * A plugin for Fastify that adds support 
  * for reading and setting cookies.
+ * https://github.com/fastify/fastify-cookie
  */
 app.register(require
     ('@fastify/cookie'),
@@ -52,15 +81,9 @@ app.register(require
 /**
  * A plugin for Fastify that adds support 
  * for getting raw URL information from the request.
+ * https://github.com/fastify/fastify-url-data
  */
 app.register(require('@fastify/url-data'));
-
-
-const serverConfig = fs.readFileSync('./database/config/server.json');
-const launcherRoute = require('./routes/launcher');
-
-
-
 
 /* if (app.path.indexOf('/')) {
     app.all('/', function (request, reply) {
@@ -69,14 +92,24 @@ const launcherRoute = require('./routes/launcher');
     });
 } */
 
-const RouteServer = require('./routes/routerhandler');
-RouteServer.initializeRouting(app);
+/**
+ * Start the server
+ * @param {*} app 
+ */
+const startServerInstance = async (app) => {
+    try {
+        await app.listen(3000);
+    } catch (err) {
+        console.log(err);
+    }
+}
 
+startServerInstance(app);
 
-app.listen(3000, function (err, address) {
+/* app.listen(3000, function (err, address) {
     if (err) {
         app.log.error(err);
         process.exit(1);
     }
     app.log.info(`Listening on ${address}`);
-});
+}); */

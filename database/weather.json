@@ -1,0 +1,23 @@
+{
+	"err": 0,
+	"errmsg": null,
+	"data": {
+		"weather": {
+			"timestamp": 1644516004,
+			"cloud": -0.53,
+			"wind_speed": 2,
+			"wind_direction": 1,
+			"wind_gustiness": 0.031,
+			"rain": 1,
+			"rain_intensity": 0,
+			"fog": 0.002,
+			"temp": 18,
+			"pressure": 761,
+			"date": "2022-02-10",
+			"time": "2022-02-10 21:00:04"
+		},
+		"date": "2022-02-10",
+		"time": "09:03:58",
+		"acceleration": 7
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"insuranceStart": [
+		"5a8fd75188a45036844e0aee",
+		"5a8fd75188a45036844e0af1"
+	],
+	"insuranceFound": [
+		"5a8fd75188a45036844e0ad9",
+		"5a8fd75188a45036844e0adb",
+		"5a8fd75188a45036844e0adc"
+	],
+	"insuranceFailed": [
+		"5a8fd75188a45036844e0b0a"
+	],
+	"insuranceExpired": [
+		"5a8fd75188a45036844e0aea"
+	],
+	"insuranceComplete": [
+		"5a8fd75188a45036844e0af3"
+	]
+}

@@ -1,0 +1,71 @@
+{
+    "err": 0,
+    "errmsg": null,
+    "data": [
+        {
+            "ShortName": "ch",
+            "Name": "Chinese"
+        },
+        {
+            "ShortName": "cz",
+            "Name": "Czech"
+        },
+        {
+            "ShortName": "en",
+            "Name": "English"
+        },
+        {
+            "ShortName": "fr",
+            "Name": "French"
+        },
+        {
+            "ShortName": "ge",
+            "Name": "German"
+        },
+        {
+            "ShortName": "hu",
+            "Name": "Hungarian"
+        },
+        {
+            "ShortName": "it",
+            "Name": "Italian"
+        },
+        {
+            "ShortName": "jp",
+            "Name": "Japanese"
+        },
+        {
+            "ShortName": "kr",
+            "Name": "Korean"
+        },
+        {
+            "ShortName": "pl",
+            "Name": "Polish"
+        },
+        {
+            "ShortName": "po",
+            "Name": "Portugal"
+        },
+        {
+            "ShortName": "sk",
+            "Name": "Slovak"
+        },
+        {
+            "ShortName": "es",
+            "Name": "Spanish"
+        },
+        {
+            "ShortName": "es-mx",
+            "Name": "Spanish Mexico"
+        },
+        {
+            "ShortName": "tu",
+            "Name": "Turkish"
+        },
+        {
+            "ShortName": "ru",
+            "Name": "Русский"
+        }
+    ],
+    "crc": 1443373084
+}

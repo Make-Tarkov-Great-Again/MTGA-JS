@@ -1,0 +1,38 @@
+{
+	"_id": "42",
+	"intId": "123",
+	"user": {
+		"id": "99",
+		"memberType": 0,
+		"nickname": "Unknown",
+		"rating": 100.0,
+		"isRatingGrowing": true,
+		"avatar": "/files/trader/avatar/unknown.jpg"
+	},
+	"root": "5cf5e9f402153a196f20e270",
+	"items": [
+		{
+			"_id": "5cf5e9f402153a196f20e270",
+			"_tpl": "54009119af1c881c07000029",
+			"upd": {
+				"UnlimitedCount": true,
+				"StackObjectsCount": 999
+			}
+		}
+	],
+	"itemsCost": 1337,
+	"requirements": [
+		{
+			"count": 1,
+			"_tpl": "5449016a4bdc2d6f028b456f"
+		}
+	],
+	"requirementsCost": 1337,
+	"summaryCost": 1337,
+	"sellInOnePiece": false,
+	"startTime": 1577840400,
+	"endTime": 1735693200,
+	"buyRestrictionMax": 1,
+	"priority": false,
+	"loyaltyLevel": 1
+}

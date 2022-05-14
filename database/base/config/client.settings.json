@@ -1,0 +1,39 @@
+{
+	"config": {
+		"MemoryManagementSettings": {
+			"HeapPreAllocationEnabled": false,
+			"HeapPreAllocationMB": 200,
+			"OverrideRamCleanerSettings": false,
+			"RamCleanerEnabled": false,
+			"GigabytesRequiredToDisableGCDuringRaid": 18,
+			"AggressiveGC": true
+		},
+		"ReleaseProfiler": {
+			"Enabled": true,
+			"RecordTriggerValue": 2000,
+			"MaxRecords": 100
+		},
+		"FramerateLimit": {
+			"MinFramerateLimit": 30,
+			"MaxFramerateLobbyLimit": 60,
+			"MaxFramerateGameLimit": 144
+		},
+		"ClientSendRateLimit": 120,
+		"TurnOffLogging": false,
+		"NVidiaHighlights": false,
+		"WebDiagnosticsEnabled": false,
+		"KeepAliveInterval": 140,
+		"GroupStatusInterval": 60,
+		"PingServersInterval": 5,
+		"PingServerResultSendInterval": -1,
+		"WeaponOverlapDistanceCulling": 50,
+		"FirstCycleDelaySeconds": 20,
+		"SecondCycleDelaySeconds": 40,
+		"NextCycleDelaySeconds": 60,
+		"AdditionalRandomDelaySeconds": 13,
+		"Mark502and504AsNonImportant": true,
+		"DefaultRetriesCount": 1,
+		"CriticalRetriesCount": 1,
+		"AFKTimeoutSeconds": 1800
+	}
+}
