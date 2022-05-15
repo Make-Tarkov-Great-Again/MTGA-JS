@@ -1,5 +1,5 @@
 'use strict'
-const fileIO = require('./../plugins/fileIO');
+const fileIO = require('../plugins/utilities/fileIO');
 
 /**
  * Return completed database

@@ -1,14 +1,31 @@
 'use strict'
 const fs = require('fs');
 
+/**
+ * Read file and parse it.
+ * @param {*} file 
+ * @returns 
+ */
 const readParsed = (file) => {
     return JSON.parse(fs.readFileSync(file, 'utf8'));
 }
 
-const exist = (file) => {
-    return fs.existsSync(file);
+/**
+ * Check if file exists.
+ * @param {*} filePath 
+ * @param {*} useRelative 
+ * @returns 
+ */
+const fileExist = (filePath, useRelative = true) => {
+    return fs.existsSync(getAbsolutePathFrom(filePath, useRelative));
 }
 
+/**
+ * Convert object to string.
+ * @param {*} data 
+ * @param {*} oneLiner 
+ * @returns 
+ */
 const stringify = (data, oneLiner = false) => {
     return (oneLiner) ? JSON.stringify(data, null, "\t") : JSON.stringify(data);
 }
@@ -48,10 +65,6 @@ const getDirectoriesFrom = (path, useRelative = true) => {
     });
 }
 
-const fileExist = (filePath, useRelative = true) => {
-    return fs.existsSync(getAbsolutePathFrom(filePath, useRelative));
-}
-
 /**
 * Retrieve all files present at a given path.
 * @param {string} path 
@@ -67,7 +80,6 @@ const getFilesFrom = (path, useRelative = true) => {
 module.exports = {
     writeFile,
     readParsed,
-    exist,
     fileExist,
     stringify,
     getFilesFrom,

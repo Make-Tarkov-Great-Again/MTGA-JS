@@ -1,34 +1,34 @@
 'use strict'
 
-const changeProfileEmail = async (request, reply) => {
+async function changeProfileEmail (request, reply) {
     reply.send(`/launcher/profile/change/email route is working`);
 }
 
-const changeProfilePassword = async (request, reply) => {
+async function changeProfilePassword(request, reply){
     reply.send(`/launcher/profile/change/password route is working`);
 }
 
-const wipeProfile = async (request, reply) => {
+async function wipeProfile(request, reply){
     reply.send(`/launcher/profile/change/wipe route is working`);
 }
 
-const getProfile = async (request, reply) => {
+async function getProfile(request, reply){
     reply.send(`/launcher/profile/get route is working`);
 }
 
-const loginProfile = async (request, reply) => {
+async function loginProfile(request, reply){
     reply.send(`/launcher/profile/login route is working`);
 }
 
-const registerProfile = async (request, reply) => {
+async function registerProfile(request, reply){
     reply.send(`/launcher/profile/register route is working`);
 }
 
-const removeProfile = async (request, reply) => {
+async function removeProfile(request, reply){
     reply.send(`/launcher/profile/remove route is working`);
 }
 
-const connectServer = async (request, reply) => {
+async function connectServer(request, reply){
     reply.send(`/launcher/server/connect route is working`);
 }
 

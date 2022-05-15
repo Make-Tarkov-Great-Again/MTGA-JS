@@ -1,8 +1,5 @@
 const cert = require('./source/certificategenerator');
 
-
-
-
 /**
  * Fastify
  */
@@ -23,19 +20,13 @@ const app = require('fastify')({
  */
 global.AE = { util: {} };
 
+
 /**
  * Register Database
  */
 const database = require(`./source/database`);
 database.loadDatabase();
 global.AE.database = database;
-
-
-
-/**
- * Register Route Handler
- */
-app.register(require('./plugins/routes/core'));
 
 
 /**
@@ -52,64 +43,19 @@ app.register(async function (app) {
 });
 
 /**
- * Adds compression utils to the Fastify reply object and 
- * a hook to decompress requests payloads.
- * Supports gzip, deflate, and brotli.
- * https://github.com/fastify/fastify-compress
+ * Register Plugins
  */
-app.register(require
-    ('@fastify/compress'),
-    {
-        encodings: ['deflate', 'gzip'],
-        global: true
-    }
-);
-
-/**
- * A plugin for Fastify that adds support 
- * for reading and setting cookies.
- * https://github.com/fastify/fastify-cookie
- */
-app.register(require
-    ('@fastify/cookie'),
-    {
-        secret: 'urmomisawesome',
-        parseOptions: {}
-    }
-);
-
-/**
- * A plugin for Fastify that adds support 
- * for getting raw URL information from the request.
- * https://github.com/fastify/fastify-url-data
- */
-app.register(require('@fastify/url-data'));
-
-/* if (app.path.indexOf('/')) {
-    app.all('/', function (request, reply) {
-        let config = JSON.parse(serverConfig);
-        reply.send({ config });
-    });
-} */
+app.register(require('./plugins/register.js'));
 
 /**
  * Start the server
- * @param {*} app 
  */
-const startServerInstance = async (app) => {
+const start = async () => {
     try {
         await app.listen(3000);
     } catch (err) {
         console.log(err);
+        //process.exit(1);
     }
 }
-
-startServerInstance(app);
-
-/* app.listen(3000, function (err, address) {
-    if (err) {
-        app.log.error(err);
-        process.exit(1);
-    }
-    app.log.info(`Listening on ${address}`);
-}); */
+start();

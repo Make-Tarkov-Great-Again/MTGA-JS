@@ -15,7 +15,7 @@ const {
  * @param {*} opts Fastify options
  * @param {*} done Callback
  */
-const launcherRoutes = (app, opts, done) => {
+async function launcherRoutes (app, opts) {
 
     /**
      * Initialize Router for /launcher/profile/*
@@ -40,7 +40,5 @@ const launcherRoutes = (app, opts, done) => {
      * Initialize Router for /launcher/server/*
      */
     app.get("/launcher/server/connect", connectServer);
-
-    done();
 }
 module.exports = launcherRoutes;

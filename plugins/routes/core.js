@@ -1,7 +1,7 @@
 'use strict'
 const launcherRoutes = require(`./routers/launcher`);
 
-const coreRouter = (app, opts, done) => {
+const coreRouter = async (app, opts, done) =>{
     /**
     * Initialize Router
     */
@@ -15,6 +15,6 @@ const coreRouter = (app, opts, done) => {
 
     app.register(launcherRoutes);
 
-    done()
+    done();
 }
 module.exports = coreRouter
