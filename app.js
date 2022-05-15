@@ -35,7 +35,7 @@ global.AE.database = database;
 /**
  * Register Route Handler
  */
-app.register(require('./routes/core'));
+app.register(require('./plugins/routes/core'));
 
 
 /**

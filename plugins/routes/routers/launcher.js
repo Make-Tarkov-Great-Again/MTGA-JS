@@ -7,7 +7,7 @@ const {
     registerProfile, 
     removeProfile,
     connectServer
-} = require(`./../handlers/launcher`);
+} = require(`../handlers/launcher`);
 
 /**
  * Is this working?
