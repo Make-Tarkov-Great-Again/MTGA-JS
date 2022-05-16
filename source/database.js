@@ -1,5 +1,4 @@
 'use strict'
-const fileIO = require('../plugins/utilities/fileIO');
 
 /**
  * Return completed database
@@ -13,7 +12,7 @@ const Database = class {
         this.locales;
         this.templates;
         //this.bots;
-        //this.profiles;
+        this.profiles;
         this.traders;
     }
 
@@ -26,7 +25,7 @@ const Database = class {
             this.loadLanguage(),
             this.loadTemplates(),
             this.loadTraders(),
-            //this.loadProfiles(),
+            this.loadProfiles(),
             //this.loadBots()
         ]);
     }
@@ -35,15 +34,15 @@ const Database = class {
     */
     async loadCore() {
         this.core = {
-            serverConfig: fileIO.readParsed(`./database/configs/server.json`),
+            serverConfig: AE.fileIO.readParsed(`./database/configs/server.json`),
 
-            matchMetrics: fileIO.readParsed(`./database/configs/matchMetrics.json`),
-            globals: fileIO.readParsed(`./database/configs/globals.json`).data,
+            matchMetrics: AE.fileIO.readParsed(`./database/configs/matchMetrics.json`),
+            globals: AE.fileIO.readParsed(`./database/configs/globals.json`).data,
 
-            botTemplate: fileIO.readParsed(`./database/configs/schema/botTemplate.json`),
-            fleaOfferTemplate: fileIO.readParsed(`./database/configs/schema/fleaOfferTemplate.json`),
+            botTemplate: AE.fileIO.readParsed(`./database/configs/schema/botTemplate.json`),
+            fleaOfferTemplate: AE.fileIO.readParsed(`./database/configs/schema/fleaOfferTemplate.json`),
 
-            botCore: fileIO.readParsed(`./database/bots/botCore.json`)
+            botCore: AE.fileIO.readParsed(`./database/bots/botCore.json`)
         }
     }
 
@@ -52,7 +51,7 @@ const Database = class {
      */
     async loadItems() {
         //util.logger.logDebug("# Database: Loading items", 1)
-        const itemsDump = fileIO.readParsed('./database/items.json');
+        const itemsDump = AE.fileIO.readParsed('./database/items.json');
         this.items = itemsDump.data;
         //util.logger.logDebug("# Database: Loading items", 2);
     }
@@ -62,10 +61,10 @@ const Database = class {
     async loadHideout() {
         //util.logger.logDebug("# Database: Loading hideout", 1)
         this.hideout = {
-            areas: fileIO.readParsed('./database/hideout/areas.json').data,
-            productions: fileIO.readParsed('./database/hideout/productions.json').data,
-            scavcase: fileIO.readParsed('./database/hideout/scavcase.json').data,
-            settings: fileIO.readParsed('./database/hideout/settings.json').data,
+            areas: AE.fileIO.readParsed('./database/hideout/areas.json').data,
+            productions: AE.fileIO.readParsed('./database/hideout/productions.json').data,
+            scavcase: AE.fileIO.readParsed('./database/hideout/scavcase.json').data,
+            settings: AE.fileIO.readParsed('./database/hideout/settings.json').data,
         };
         //util.logger.logDebug("# Database: Loading hideout", 2)
     }
@@ -75,7 +74,7 @@ const Database = class {
      */
     async loadWeather() {
         //util.logger.logDebug("# Database: Loading weather", 1)
-        this.weather = fileIO.readParsed('./database/weather.json').data;
+        this.weather = AE.fileIO.readParsed('./database/weather.json').data;
         //util.logger.logDebug("# Database: Loading weather", 2)
     }
 
@@ -84,16 +83,16 @@ const Database = class {
      */
     async loadLanguage() {
         //util.logger.logDebug("# Database: Loading languages", 1)
-        const allLangs = fileIO.getDirectoriesFrom(`./database/locales`);
+        const allLangs = AE.fileIO.getDirectoriesFrom(`./database/locales`);
         this.locales = { "languages": [] };
         for (const lang in allLangs) {
             const locale = allLangs[lang];
             const currentLocalePath = `./database/locales/` + locale + `/`;
-            if (fileIO.fileExist(`${currentLocalePath}locale.json`) && fileIO.fileExist(`${currentLocalePath}menu.json`)) {
-                let localeCopy = fileIO.readParsed(`${currentLocalePath}locale.json`)
+            if (AE.fileIO.fileExist(`${currentLocalePath}locale.json`) && AE.fileIO.fileExist(`${currentLocalePath}menu.json`)) {
+                let localeCopy = AE.fileIO.readParsed(`${currentLocalePath}locale.json`)
                 if (typeof localeCopy.data != "undefined") { localeCopy = localeCopy.data; }
 
-                let menuCopy = fileIO.readParsed(`${currentLocalePath}menu.json`)
+                let menuCopy = AE.fileIO.readParsed(`${currentLocalePath}menu.json`)
                 if (typeof menuCopy.data != "undefined") { menuCopy = menuCopy.data; }
 
                 this.locales[locale] = {
@@ -113,7 +112,7 @@ const Database = class {
      */
     async loadTemplates() {
         //util.logger.logDebug("# Database: Loading templates", 1)
-        const templatesData = fileIO.readParsed('./database/templates.json').data;
+        const templatesData = AE.fileIO.readParsed('./database/templates.json').data;
         this.templates = {
             "Categories": templatesData.Categories,
             "Items": templatesData.Items,
@@ -126,17 +125,17 @@ const Database = class {
      */
     async loadProfiles() {
         //util.logger.logDebug("# Database: Loading profiles", 1)
-        const profilesKeys = fileIO.getDirectoriesFrom('./server/db/profiles');
+        const profilesKeys = AE.fileIO.getDirectoriesFrom('/database/profiles/');
         this.profiles = {};
         for (let profileType of profilesKeys) {
-            const path = `./server/db/profiles/${profileType}/`;
+            const path = `./database/profiles/${profileType}/`;
             this.profiles[profileType] = {};
-            this.profiles[profileType]["character"] = fileIO.readParsed(`${path}character.json`);
-            this.profiles[profileType]["initialTraderStanding"] = fileIO.readParsed(`${path}initialTraderStanding.json`);
-            this.profiles[profileType]["inventory_bear"] = fileIO.readParsed(`${path}inventory_bear.json`);
-            this.profiles[profileType]["inventory_usec"] = fileIO.readParsed(`${path}inventory_usec.json`);
+            this.profiles[profileType]["character"] = AE.fileIO.readParsed(`${path}character.json`);
+            this.profiles[profileType]["initialTraderStanding"] = AE.fileIO.readParsed(`${path}initialTraderStanding.json`);
+            this.profiles[profileType]["inventory_bear"] = AE.fileIO.readParsed(`${path}inventory_bear.json`);
+            this.profiles[profileType]["inventory_usec"] = AE.fileIO.readParsed(`${path}inventory_usec.json`);
             //this.profiles[profileType]["starting_outfit"] = util.fileIO.readParsed(`${path}starting_outfit.json`);
-            this.profiles[profileType]["storage"] = fileIO.readParsed(`${path}storage.json`);
+            this.profiles[profileType]["storage"] = AE.fileIO.readParsed(`${path}storage.json`);
         }
         //util.logger.logDebug("# Database: Loading profiles", 2)
     }
@@ -146,7 +145,7 @@ const Database = class {
      */
     async loadTraders() {
         //util.logger.logDebug("# Database: Loading traders", 1)
-        const traderKeys = fileIO.getDirectoriesFrom('./database/traders');
+        const traderKeys = AE.fileIO.getDirectoriesFrom('./database/traders');
         this.traders = { names: {} };
         for (let traderID of traderKeys) {
 
@@ -154,7 +153,7 @@ const Database = class {
             this.traders[traderID] = { base: {}, assort: {}, categories: {} };
 
             // read base and assign to variable
-            const traderBase = fileIO.readParsed(`${path}base.json`);
+            const traderBase = AE.fileIO.readParsed(`${path}base.json`);
             this.traders[traderID].base = traderBase
 
             // create names object and assign trader nickname to traderID
@@ -163,12 +162,12 @@ const Database = class {
             this.traders.names[nickname] = traderID;
 
             // if quest assort exists, read and assign to variable
-            if (fileIO.fileExist(`${path}questassort.json`)) {
-                this.traders[traderID].questassort = fileIO.readParsed(`${path}questassort.json`);
+            if (AE.fileIO.fileExist(`${path}questassort.json`)) {
+                this.traders[traderID].questassort = AE.fileIO.readParsed(`${path}questassort.json`);
             }
 
             // read assort and assign to variable
-            let assort = fileIO.readParsed(`${path}assort.json`);
+            let assort = AE.fileIO.readParsed(`${path}assort.json`);
             // give support for assort dump files
             if (!typeof assort.data == "undefined") {
                 assort = assort.data;
@@ -176,13 +175,13 @@ const Database = class {
             this.traders[traderID].assort = assort;
 
             // check if suits exists, read and assign to variable
-            if (fileIO.fileExist(`${path}suits.json`)) {
-                this.traders[traderID].suits = fileIO.readParsed(`${path}suits.json`);
+            if (AE.fileIO.fileExist(`${path}suits.json`)) {
+                this.traders[traderID].suits = AE.fileIO.readParsed(`${path}suits.json`);
             }
 
             // check if dialogue exists, read and assign to variable
-            if (fileIO.fileExist(`${path}dialogue.json`)) {
-                this.traders[traderID].dialogue = fileIO.readParsed(`${path}dialogue.json`);
+            if (AE.fileIO.fileExist(`${path}dialogue.json`)) {
+                this.traders[traderID].dialogue = AE.fileIO.readParsed(`${path}dialogue.json`);
             }
         }
 

@@ -1,4 +1,5 @@
 'use strict'
+const fastJson = require('fast-json-stringify');
 
 
 async function changeProfileEmail (request, reply) {
@@ -29,8 +30,26 @@ async function removeProfile(request, reply){
     await reply.send(`/launcher/profile/remove route is working`);
 }
 
+/**
+ * Connects to the server
+ * @param {*} request 
+ * @param {*} reply 
+ */
 async function connectServer(request, reply){
-    await reply.send(`/launcher/server/connect route is working`);
+    const connectSchema = fastJson({
+        backendURL: 'string',
+        name: 'string',
+        editions: 'string'
+    });
+
+    await reply.send(
+        connectSchema({
+            backendURL: "https://" + AE.serverConfig.ip + ":" + AE.serverConfig.port,
+            name: AE.serverConfig.name,
+            editions: Object.keys(AE.database.profiles)
+        })
+    )
+    .type('application/json');
 }
 
 

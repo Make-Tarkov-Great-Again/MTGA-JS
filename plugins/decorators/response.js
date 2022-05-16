@@ -15,10 +15,21 @@ const {
  */
 async function response(app, options) {
     await app.decorateReply("noBody", noBody);
+    app.log.info("Decorated noBody");
+    
     await app.decorateReply("getBody", getBody);
+    app.log.info("Decorated getBody");
+
     await app.decorateReply("getUnclearedBody", getUnclearedBody);
+    app.log.info("Decorated getUnclearedBody");
+
     await app.decorateReply("nullResponse", nullResponse);
+    app.log.info("Decorated nullResponse");
+
     await app.decorateReply("emptyArrayResponse", emptyArrayResponse);
+    app.log.info("Decorated emptyArrayResponse");
+
     await app.decorate("clearString", clearString);
+    app.log.info("Decorated clearString");
 };
 module.exports = fp(response);
