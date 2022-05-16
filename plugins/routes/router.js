@@ -1,5 +1,5 @@
 'use strict'
-const launcherRoutes = require(`./routes/routers/launcher`);
+const launcherRoutes = require(`./routers/launcher`);
 
 async function coreRouter (app, opts) {
     /**

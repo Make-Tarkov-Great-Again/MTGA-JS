@@ -1,8 +1,8 @@
 const cert = require('./source/certificategenerator');
 
 /**
- * Fastify
- */
+* Fastify
+*/
 const app = require('fastify')({
     logger: {
         prettyPrint: true
@@ -16,37 +16,36 @@ const app = require('fastify')({
 });
 
 /**
- * Globals I guess????
- */
+* Globals I guess????
+*/
 global.AE = { util: {} };
 
 /**
- * Register Database
- */
+* Register Database
+*/
 const database = require(`./source/database`);
 database.loadDatabase();
+app.log.info('Database loaded');
 global.AE.database = database;
+app.log.info('...and attached to the AE global object');
 
 /**
- * Register Plugins
- */
-app.register(require('./plugins/register.js'));
+* Register Plugins
+*/
+app.register(require('./plugins/register'));
+app.log.info('Registered plugins');
 
-/**
- * Register Routers
- * I can't seem to get this to run out of `register.js`
- */
-app.register(require('./plugins/router.js'))
 
 
 /**
- * Start the server
- */
-const start = async () => {
+* Start the server
+*/
+async function start(){
     try {
         await app.listen(3000, '127.0.0.1');
+        app.log.info(`Server listening on ${app.server.address().port}`);
     } catch (err) {
-        app.log(err);
+        app.log.info(err);
         process.exit(1);
     }
 }

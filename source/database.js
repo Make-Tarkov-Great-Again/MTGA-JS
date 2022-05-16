@@ -35,13 +35,13 @@ const Database = class {
     */
     async loadCore() {
         this.core = {
-            serverConfig: fileIO.readParsed(`./database/base/config/server.json`),
+            serverConfig: fileIO.readParsed(`./database/configs/server.json`),
 
-            matchMetrics: fileIO.readParsed(`./database/base/matchMetrics.json`),
-            globals: fileIO.readParsed(`./database/base/globals.json`).data,
+            matchMetrics: fileIO.readParsed(`./database/configs/matchMetrics.json`),
+            globals: fileIO.readParsed(`./database/configs/globals.json`).data,
 
-            botTemplate: fileIO.readParsed(`./database/base/schema/botTemplate.json`),
-            fleaOfferTemplate: fileIO.readParsed(`./database/base/schema/fleaOfferTemplate.json`),
+            botTemplate: fileIO.readParsed(`./database/configs/schema/botTemplate.json`),
+            fleaOfferTemplate: fileIO.readParsed(`./database/configs/schema/fleaOfferTemplate.json`),
 
             botCore: fileIO.readParsed(`./database/bots/botCore.json`)
         }
