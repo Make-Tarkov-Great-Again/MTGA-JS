@@ -14,11 +14,11 @@ const {
  * @param {*} opts Plugin options
  */
 async function response(app, options) {
-    app.decorateReply("noBody", noBody);
-    app.decorateReply("getBody", getBody);
-    app.decorateReply("getUnclearedBody", getUnclearedBody);
-    app.decorateReply("nullResponse", nullResponse);
-    app.decorateReply("emptyArrayResponse", emptyArrayResponse);
-    app.decorate("clearString", clearString);
+    await app.decorateReply("noBody", noBody);
+    await app.decorateReply("getBody", getBody);
+    await app.decorateReply("getUnclearedBody", getUnclearedBody);
+    await app.decorateReply("nullResponse", nullResponse);
+    await app.decorateReply("emptyArrayResponse", emptyArrayResponse);
+    await app.decorate("clearString", clearString);
 };
 module.exports = fp(response);
