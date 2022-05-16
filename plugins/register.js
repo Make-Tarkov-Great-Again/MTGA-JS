@@ -11,6 +11,28 @@ module.exports = fp(async function sensible(app, opts) {
 })
 
 /**
+ * A Fastify plugin for serving a Swagger UI, 
+ * using Swagger (OpenAPI v2) or OpenAPI v3 schemas 
+ * automatically generated from your route schemas, 
+ * or from an existing Swagger/OpenAPI schema.
+ * @see https://github.com/fastify/fastify-swagger
+ */
+module.exports = fp(async function swagger(app, opts) {
+  await app.register(require('@fastify/swagger'), {
+  })
+})
+
+
+/**
+ * Plugin for serving static files as fast as possible.
+ * @see https://github.com/fastify/fastify-static
+ */
+module.exports = fp(async function static(app, opts) {
+  await app.register(require('@fastify/static'), {})
+})
+
+
+/**
 * Adds compression utilities to the Fastify reply object and 
 * a hook to decompress requests payloads.
 * Supports gzip, deflate, and brotli.
@@ -24,11 +46,10 @@ module.exports = fp(async function fastifyCompress(app, opts) {
 })
 
 /**
-* Adds compression utils to the Fastify reply object and 
-* a hook to decompress requests payloads.
-* Supports gzip, deflate, and brotli.
-* @see https://github.com/fastify/fastify-compress
-*/
+ * A plugin for Fastify that adds support 
+ * for reading and setting cookies.
+ * @see https://github.com/fastify/fastify-cookie
+ */
 module.exports = fp(async function fastifyCookie(app, opts) {
   await app.register(require('@fastify-cookie'), {
     secret: 'urmomisawesome',

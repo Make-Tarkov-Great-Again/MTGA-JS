@@ -20,33 +20,12 @@ const app = require('fastify')({
  */
 global.AE = { util: {} };
 
-
 /**
  * Register Database
  */
 const database = require(`./source/database`);
 database.loadDatabase();
 global.AE.database = database;
-
-
-/**
- * WebSocket support for Fastify. Built upon ws@8.
- * @see https://github.com/fastify/fastify-websocket
- * Cannot get this working because I'm not sure how to get the server to accept
- 
-app.register(require('@fastify/websocket'))
-app.register(async function (app) {
-    app.get('/websocket', { websocket: true }, (
-        connection, // SocketStream
-        request // FastifyRequest
-    ) => {
-        connection.socket.on('message', message => {
-            // message.toString() === 'hi from client'
-            connection.socket.send('hi from server')
-        })
-    })
-})
-*/
 
 /**
  * Register Plugins
