@@ -1,44 +1,60 @@
-const { 
-    changeProfileEmail, 
-    changeProfilePassword, 
-    wipeProfile, 
-    getProfile, 
-    loginProfile, 
-    registerProfile, 
-    removeProfile,
-    connectServer
-} = require(`../handlers/launcher`);
+'use strict'
+const fastJson = require('fast-json-stringify');
+const Account = require('./../handlers/account');
 
-/**
- * Is this working?
- * @param {*} app Fastify instance
- * @param {*} opts Fastify options
- * @param {*} done Callback
- */
-async function launcherRoutes (app, opts) {
+module.exports.launcherRoutes = {
+    '/launcher/profile/change/email': async (url, info, sessionID) => {
+        return `/launcher/profile/change/email route is working`;
+    },
 
-    /**
-     * Initialize Router for /launcher/profile/*
-     */
+    '/launcher/profile/change/password': async (url, info, sessionID) => {
+        return `/launcher/profile/change/password route is working`;
+    },
 
-    await app.get("/launcher/profile/change/email", changeProfileEmail);
+    '/launcher/profile/wipe': async (url, info, sessionID) => {
+        return `/launcher/profile/change/wipe route is working`;
+    },
 
-    await app.get("/launcher/profile/change/password", changeProfilePassword);
+    '/launcher/profile/get': async (url, info, sessionID) => {
+        return`/launcher/profile/get route is working`;
+    },
 
-    await app.get("/launcher/profile/change/wipe", wipeProfile);
+    '/launcher/profile/login': async (url, info, sessionID) => {
+        return`/launcher/profile/login route is working`;
+    },
 
-    await app.get("/launcher/profile/get", getProfile);
+    '/launcher/profile/register': async (url, info, sessionID) => {
+        const mockinfo = {
+            id: `king`,
+            email: `king`,
+            password: `king`,
+            wipe: true,
+            edition: `Developer`,
+        }
+        const output = Account.register(mockinfo);
+        AE.server.log.info(output);
+        return (output === undefined
+            || output === null
+            || output === ''
+            ? 'FAILED'
+            : output);
+    },
 
-    await app.get("/launcher/profile/login", loginProfile);
+    '/launcher/profile/remove': async (url, info, sessionID) => {
+        return "/launcher/profile/remove route is working";
+    },
 
-    await app.get("/launcher/profile/register", registerProfile);
-
-    await app.get("/launcher/profile/remove", removeProfile);
-
-
-    /**
-     * Initialize Router for /launcher/server/*
-     */
-     await app.get("/launcher/server/connect", connectServer);
+    '/launcher/server/connect': async (url, info, sessionID) => {
+        const connectSchema = fastJson({
+            backendURL: 'string',
+            name: 'string',
+            editions: 'string'
+        });
+        const output = connectSchema({
+            backendURL: "https://" + AE.serverConfig.ip + ":" + AE.serverConfig.port,
+            name: AE.serverConfig.name,
+            editions: Object.keys(AE.database.profiles)
+        })
+        return (output)
+    }
 }
-module.exports = launcherRoutes;

@@ -50,39 +50,32 @@ const Database = class {
      * Load item data in parallel.
      */
     async loadItems() {
-        //util.logger.logDebug("# Database: Loading items", 1)
         const itemsDump = AE.fileIO.readParsed('./database/items.json');
         this.items = itemsDump.data;
-        //util.logger.logDebug("# Database: Loading items", 2);
     }
     /**
      * Load hideout data in parallel.
      */
     async loadHideout() {
-        //util.logger.logDebug("# Database: Loading hideout", 1)
         this.hideout = {
             areas: AE.fileIO.readParsed('./database/hideout/areas.json').data,
             productions: AE.fileIO.readParsed('./database/hideout/productions.json').data,
             scavcase: AE.fileIO.readParsed('./database/hideout/scavcase.json').data,
             settings: AE.fileIO.readParsed('./database/hideout/settings.json').data,
         };
-        //util.logger.logDebug("# Database: Loading hideout", 2)
     }
 
     /**
      * Load weather data in parallel.
      */
     async loadWeather() {
-        //util.logger.logDebug("# Database: Loading weather", 1)
         this.weather = AE.fileIO.readParsed('./database/weather.json').data;
-        //util.logger.logDebug("# Database: Loading weather", 2)
     }
 
     /**
      * Load language data in parallel.
      */
     async loadLanguage() {
-        //util.logger.logDebug("# Database: Loading languages", 1)
         const allLangs = AE.fileIO.getDirectoriesFrom(`./database/locales`);
         this.locales = { "languages": [] };
         for (const lang in allLangs) {
@@ -100,31 +93,25 @@ const Database = class {
                     menu: menuCopy,
                 };
                 this.locales.languages.push(locale);
-            } else {
-                console.log(`# Database: Missing locale files for ${locale}`);
             }
         }
-        //util.logger.logDebug("# Database: Loading languages", 2)
     }
 
     /**
      * Load templates data in parallel.
      */
     async loadTemplates() {
-        //util.logger.logDebug("# Database: Loading templates", 1)
         const templatesData = AE.fileIO.readParsed('./database/templates.json').data;
         this.templates = {
             "Categories": templatesData.Categories,
             "Items": templatesData.Items,
         };
-        //util.logger.logDebug("# Database: Loading templates", 2)
     }
 
     /**
      * Load profiles data in parallel.
      */
     async loadProfiles() {
-        //util.logger.logDebug("# Database: Loading profiles", 1)
         const profilesKeys = AE.fileIO.getDirectoriesFrom('/database/profiles/');
         this.profiles = {};
         for (let profileType of profilesKeys) {
@@ -137,14 +124,12 @@ const Database = class {
             //this.profiles[profileType]["starting_outfit"] = util.fileIO.readParsed(`${path}starting_outfit.json`);
             this.profiles[profileType]["storage"] = AE.fileIO.readParsed(`${path}storage.json`);
         }
-        //util.logger.logDebug("# Database: Loading profiles", 2)
     }
 
     /**
      * Load traders base data in parallel.
      */
     async loadTraders() {
-        //util.logger.logDebug("# Database: Loading traders", 1)
         const traderKeys = AE.fileIO.getDirectoriesFrom('./database/traders');
         this.traders = { names: {} };
         for (let traderID of traderKeys) {
@@ -190,8 +175,6 @@ const Database = class {
          * so that we can populate the assort with the correct/missing item data.
          * It may be best to do this as a separate step, and call it here.
          */
-
-        //util.logger.logDebug("# Database: Loading traders", 2)
     }
 
     async regenerateRagfair() {

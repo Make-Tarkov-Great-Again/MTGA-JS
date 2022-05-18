@@ -1,11 +1,12 @@
 const cert = require('./source/certificategenerator');
 
 /**
-* Fastify
+* Fastify instance
 */
 const app = require('fastify')({
     logger: {
-        prettyPrint: true
+        prettyPrint: true,
+        level: 'info'
     },
     http2: true,
     https: {
@@ -18,10 +19,12 @@ const app = require('fastify')({
 /* Globals */
 app.log.info('Loading global.AE object variables');
 global.AE = {
-    Fastify: app,
+    server: app,
     database: {},
     fileIO: require('./plugins/utilities/fileIO'),
     response: require('./plugins/utilities/response'),
+    utility: require('./plugins/utilities/utility'),
+    math: require('./plugins/utilities/math'),
     mods: {
         toLoad: {},
         config: {},
@@ -51,11 +54,6 @@ global.AE.bots = {
 global.AE.serverConfig = database.core.serverConfig;
 global.AE.globals = database.core.globals;
 global.AE.matchMetrics = database.core.matchMetrics;
-
-//global.AE.fileIO = require('./plugins/utilities/fileIO');
-//global.AE.response = require('./plugins/utilities/response');
-
-
 app.log.info('Loaded global.AE object variables');
 
 /*  Register Plugins */
