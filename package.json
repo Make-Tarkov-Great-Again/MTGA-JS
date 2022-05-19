@@ -4,7 +4,7 @@
   "description": "ur mom gay",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js --ignore `user/profiles/`"
   },
   "keywords": [],
   "author": "king",

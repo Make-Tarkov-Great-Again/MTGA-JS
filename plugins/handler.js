@@ -1,31 +1,26 @@
 'use strict'
+
+const { app, response, logger } = require(`./../app`);
 const {
     respondBundle,
     respondImage,
     respondNotify,
     respondKillResponse
-} = require(`./../plugins/utilities/response`);
+} = response;
 const { testRoutes, coreRoutes } = require(`./router`);
 const fs = require('fs');
 
 
 async function routeHandle(request, reply, Route) {
 
-    AE.server.log.info(`[request.url] ${request.url}`)
-    AE.server.log.info(`[request.body] ${request.body}`)
-
     const sessionID = request.cookies != undefined &&
         request.cookies["PHPSESSID"] !== undefined ?
         request.cookies["PHPSESSID"] : undefined;
 
-    AE.server.log.info(`Session ID: ${sessionID}`);
-
 
     let isCallback = false;
-    var routedData = await Route(request.url, request.body, sessionID);
-
-    AE.server.log.info(`[request.url] ${request.url}`)
-    AE.server.log.info(`[request.body] ${request.body}`)
+    var routedData = await Route(request.url, request.body, sessionID, reply);
+    console.log(`[REQUEST URL]: `, request.url);
 
 
     if (routedData != null && routedData != undefined) {
@@ -38,10 +33,8 @@ async function routeHandle(request, reply, Route) {
         }
         if (!isCallback) {
             reply
-                .header('Content-Type', 'application/json')
-                .compress(routedData, function (err, buffer) {
-                    reply.end(buffer)
-                })
+                .type('application/json')
+                .compress(routedData)
         }
     }
     else {
@@ -50,11 +43,71 @@ async function routeHandle(request, reply, Route) {
 }
 module.exports = routeHandle;
 
+function inflateRequestBody(request, reply, next, done) {
+
+    // console.log(req.body);
+
+    const stringifiedBody =
+        typeof (request.body) === "object" ? JSON.stringify(request.body) : null;
+
+    if (stringifiedBody == '{}') {
+        done(request.body);
+        return;
+    }
+
+    let isJson = request.body.toString !== undefined &&
+        request.body.toString('utf-8').charAt(0) == "{";
+
+    if (
+        (!isJson || (request.headers["content-encoding"] !== undefined && request.headers["content-encoding"] == "deflate")) &&
+        ((request.headers["user-agent"] !== undefined && request.headers["user-agent"].includes("Unity")) &&
+            request.body["toJSON"] !== undefined)
+    ) {
+
+        try {
+            reply.decompress(request.body, function (err, result) {
+
+                if (!err && result !== undefined) {
+
+                    var asyncInflatedString = result.toString('utf-8');
+                    // console.log(asyncInflatedString);
+                    if (asyncInflatedString.length > 0) {
+                        request.body = JSON.parse(asyncInflatedString);
+                    }
+                    end(request.body);
+
+                } else {
+                    end(request.body);
+                    return;
+                }
+
+
+            });
+
+        } catch (error) {
+            // console.error(error);
+            request.body = JSON.parse(request.body);
+            done(request.body);
+            return;
+
+        }
+        // console.log("inflating data...");
+        // console.log(req.body);
+
+    } else {
+        request.body = JSON.parse(request.body.toString('utf-8'));
+        done(request.body);
+    }
+
+    // done();
+
+}
+
 // if this works
 for (const route of testRoutes) {
     {
-        AE.server.all(route.url, (request, reply) => {
-            AE.server.log.info(`[ROUTER]: ${route.url}`);
+        app.all(route.url, (request, reply) => {
+            logger.logInfo(`[ROUTER]: ${route.url}`);
             return routeHandle(request, reply, route.action);
         })
     }
@@ -62,8 +115,8 @@ for (const route of testRoutes) {
 
 //this should too
 for (const route in coreRoutes) {
-    AE.server.all(route, (request, reply) => {
-        AE.server.log.info(`[ROUTER]: ${coreRoutes[route].url}`);
+    app.all(route, (request, reply) => {
+        logger.logInfo(`[ROUTER]: ${coreRoutes[route].url}`);
         return routeHandle(request, reply, coreRoutes[route]);
     })
 }

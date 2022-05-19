@@ -1,8 +1,19 @@
-const cert = require('./source/certificategenerator');
+const databaseCore = require('./source/database');
+const database = new databaseCore.Database();
+database.loadDatabase();
 
-/**
-* Fastify instance
-*/
+const accountHandler = require(`./plugins/routes/handlers/account`);
+const account = new accountHandler.Account();
+
+const logger = require('./plugins/utilities/logger');
+const fileIO = require('./plugins/utilities/fileIO');
+const math = require('./plugins/utilities/math');
+const utility = require('./plugins/utilities/utility');
+const response = require('./plugins/utilities/response');
+
+const { certificate } = require('./source/certificategenerator');
+const cert = certificate.generate("127.0.0.1");
+
 const app = require('fastify')({
     logger: {
         prettyPrint: true,
@@ -11,50 +22,26 @@ const app = require('fastify')({
     http2: true,
     https: {
         allowHTTP1: true,
-        key: cert.KEY,
-        cert: cert.CERT
+        key: cert.key,
+        cert: cert.cert
     }
 });
 
-/* Globals */
-app.log.info('Loading global.AE object variables');
-global.AE = {
-    server: app,
-    database: {},
-    fileIO: require('./plugins/utilities/fileIO'),
-    response: require('./plugins/utilities/response'),
-    utility: require('./plugins/utilities/utility'),
-    math: require('./plugins/utilities/math'),
+
+module.exports = {
+    app,
+    database,
+    account,
+    utility,
+    logger,
+    fileIO,
+    math,
+    response,
     mods: {
         toLoad: {},
         config: {},
     },
-};
-
-/* Register Database */
-const database = require(`./source/database`);
-database.loadDatabase();
-
-global.AE.database = {
-    fleaOfferTemplate: database.core.fleaOfferTemplate,
-    hideout: database.hideout,
-    items: database.items,
-    locales: database.locales,
-    templates: database.templates,
-    traders: database.traders,
-    weather: database.weather,
-    profiles: database.profiles,
 }
-global.AE.bots = {
-    botCore: database.core.botCore,
-    botTemplate: database.core.botTemplate,
-    //botNames: database.botNames,
-    //bots: database.bots,
-}
-global.AE.serverConfig = database.core.serverConfig;
-global.AE.globals = database.core.globals;
-global.AE.matchMetrics = database.core.matchMetrics;
-app.log.info('Loaded global.AE object variables');
 
 /*  Register Plugins */
 app.register(require('./plugins/register'));

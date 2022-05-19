@@ -2,11 +2,23 @@
 //const { default: fastifyCompress } = require("@fastify/compress");
 const { launcherRoutes } = require(`./routes/routers/launcher`);
 
+
 const testRoutes = [
+
+    /**
+     * request.url: url
+     * request.body: info
+     */
     {
         url: '/',
         action: async (url, info, sessionID) => {
-            return `/ is working`;
+            const email = !info.email ? "Failed" : info.email;
+            const password = !info.password ? "Failed" : info.password;
+            const edition = !info.edition ? "Failed" : info.edition;
+            
+            const output = email + " / " + password + " / " + edition;
+
+            return output;
         }
     },
     {

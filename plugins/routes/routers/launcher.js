@@ -1,60 +1,69 @@
 'use strict'
 const fastJson = require('fast-json-stringify');
-const Account = require('./../handlers/account');
+const {
+    find,
+    register,
+    getEditions,
+    remove,
+    changeEmail,
+    changePassword,
+    reloadAccountByLogin,
+    wipe
+} = require('./../../../app').account;
+const database = require('./../../../app').database;
+const { clearString, noBody } = require(`./../../utilities/response`);
 
 module.exports.launcherRoutes = {
     '/launcher/profile/change/email': async (url, info, sessionID) => {
-        return `/launcher/profile/change/email route is working`;
+        let output = changeEmail(info);
+        return (output === "" ? "FAILED" : "OK");
     },
 
     '/launcher/profile/change/password': async (url, info, sessionID) => {
-        return `/launcher/profile/change/password route is working`;
+        let output = changePassword(info);
+        return (output === "" ? "FAILED" : "OK");
     },
 
     '/launcher/profile/wipe': async (url, info, sessionID) => {
-        return `/launcher/profile/change/wipe route is working`;
+        let output = wipe(info);
+        return (output === "" ? "FAILED" : "OK")
     },
 
     '/launcher/profile/get': async (url, info, sessionID) => {
-        return`/launcher/profile/get route is working`;
+        const serverConfig = database.core.serverConfig
+        const accountID = reloadAccountByLogin(info);
+        let output = find(accountID);
+        return clearString(output["server"] = serverConfig.name)
     },
 
     '/launcher/profile/login': async (url, info, sessionID) => {
-        return`/launcher/profile/login route is working`;
+        let output = reloadAccountByLogin(info);
+        return noBody(output);
     },
 
     '/launcher/profile/register': async (url, info, sessionID) => {
-        const mockinfo = {
-            id: `king`,
-            email: `king`,
-            password: `king`,
-            wipe: true,
-            edition: `Developer`,
-        }
-        const output = Account.register(mockinfo);
+        const output = register(info);
         AE.server.log.info(output);
-        return (output === undefined
-            || output === null
-            || output === ''
-            ? 'FAILED'
-            : output);
+        return (output === "" ? "FAILED" : output);
     },
 
     '/launcher/profile/remove': async (url, info, sessionID) => {
-        return "/launcher/profile/remove route is working";
+        let output = remove(info)
+        return (output === "" ? "FAILED" : "OK");
     },
 
     '/launcher/server/connect': async (url, info, sessionID) => {
+        const data = getEditions(database)
         const connectSchema = fastJson({
             backendURL: 'string',
             name: 'string',
             editions: 'string'
         });
         const output = connectSchema({
-            backendURL: "https://" + AE.serverConfig.ip + ":" + AE.serverConfig.port,
-            name: AE.serverConfig.name,
-            editions: Object.keys(AE.database.profiles)
+            backendURL: "https://" + database.core.serverConfig.ip + ":" + database.core.serverConfig.port,
+            name: database.core.serverConfig.name,
+            editions: data
         })
-        return (output)
+        return output;
     }
 }
