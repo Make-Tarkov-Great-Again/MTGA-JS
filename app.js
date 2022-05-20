@@ -1,16 +1,15 @@
-const databaseCore = require('./source/database');
-const database = new databaseCore.Database();
-database.loadDatabase();
-
-const accountHandler = require(`./plugins/routes/handlers/account`);
-const account = new accountHandler.Account();
-
 const logger = require('./plugins/utilities/logger');
 const fileIO = require('./plugins/utilities/fileIO');
 const math = require('./plugins/utilities/math');
 const utility = require('./plugins/utilities/utility');
 const response = require('./plugins/utilities/response');
 
+const databaseCore = require('./source/database');
+const database = new databaseCore.Database();
+database.loadDatabase();
+
+const accountHandler = require(`./plugins/routes/handlers/account`);
+const account = new accountHandler.Account();
 const { certificate } = require('./source/certificategenerator');
 const cert = certificate.generate("127.0.0.1");
 
@@ -27,11 +26,14 @@ const app = require('fastify')({
     }
 });
 
+/*  Register Plugins */
+app.register(require('./plugins/register'));
+app.log.info('Registered plugins');
+
 
 module.exports = {
     app,
     database,
-    account,
     utility,
     logger,
     fileIO,
@@ -41,14 +43,8 @@ module.exports = {
         toLoad: {},
         config: {},
     },
+    account,
 }
-
-/*  Register Plugins */
-app.register(require('./plugins/register'));
-app.log.info('Registered plugins');
-
-
-
 /**
 * Start the server
 */

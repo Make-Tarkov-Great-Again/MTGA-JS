@@ -1,6 +1,6 @@
 'use strict'
 const fp = require('fastify-plugin');
-const resolve = require('path').resolve;
+const { resolve } = require('path');
 
 module.exports = fp(async function registerPlugins(app, opts) {
   /**
@@ -69,19 +69,11 @@ module.exports = fp(async function registerPlugins(app, opts) {
   })
   app.log.info('Sensible plugin loaded')
 
-
-
   /**
    * Set response decorators for fastify instance.
   */
   await app.register(require('./decorators/response'))
   app.log.info('Response decorators loaded')
-
-  /**
-   * Set fileIO decorators for fastify instance.
-  */
-  await app.register(require('./decorators/fileIO'))
-  app.log.info('FileIO decorators loaded')
 
   /**
    * Register Handler

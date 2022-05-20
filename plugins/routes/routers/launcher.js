@@ -1,16 +1,21 @@
 'use strict'
 const fastJson = require('fast-json-stringify');
 const {
-    find,
-    register,
-    getEditions,
-    remove,
-    changeEmail,
-    changePassword,
-    reloadAccountByLogin,
-    wipe
-} = require('./../../../app').account;
-const database = require('./../../../app').database;
+    account: {
+        find,
+        register,
+        getEditions,
+        remove,
+        changeEmail,
+        changePassword,
+        reloadAccountByLogin,
+        wipe
+    },
+    database: {
+        profiles,
+        core
+    }
+} = require(`./../../../app`);
 const { clearString, noBody } = require(`./../../utilities/response`);
 
 module.exports.launcherRoutes = {
@@ -31,13 +36,13 @@ module.exports.launcherRoutes = {
 
     '/launcher/profile/get': async (url, info, sessionID) => {
         const serverConfig = database.core.serverConfig
-        const accountID = reloadAccountByLogin(info);
+        const accountID = await reloadAccountByLogin(info);
         let output = find(accountID);
-        return clearString(output["server"] = serverConfig.name)
+        return noBody(output["server"] = serverConfig.name)
     },
 
     '/launcher/profile/login': async (url, info, sessionID) => {
-        let output = reloadAccountByLogin(info);
+        let output = await reloadAccountByLogin(info);
         return noBody(output);
     },
 
@@ -53,15 +58,15 @@ module.exports.launcherRoutes = {
     },
 
     '/launcher/server/connect': async (url, info, sessionID) => {
-        const data = getEditions(database)
+        const data = await getEditions(profiles)
         const connectSchema = fastJson({
             backendURL: 'string',
             name: 'string',
-            editions: 'string'
+            editions: 'array'
         });
         const output = connectSchema({
-            backendURL: "https://" + database.core.serverConfig.ip + ":" + database.core.serverConfig.port,
-            name: database.core.serverConfig.name,
+            backendURL: "https://" + core.serverConfig.ip + ":" + core.serverConfig.port,
+            name: core.serverConfig.name,
             editions: data
         })
         return output;

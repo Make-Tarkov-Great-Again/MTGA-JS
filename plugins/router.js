@@ -1,6 +1,7 @@
 'use strict'
-//const { default: fastifyCompress } = require("@fastify/compress");
+const { logger } = require("../app");
 const { launcherRoutes } = require(`./routes/routers/launcher`);
+const { noBody } = require(`./utilities/response`);
 
 
 const testRoutes = [
@@ -15,7 +16,7 @@ const testRoutes = [
             const email = !info.email ? "Failed" : info.email;
             const password = !info.password ? "Failed" : info.password;
             const edition = !info.edition ? "Failed" : info.edition;
-            
+
             const output = email + " / " + password + " / " + edition;
 
             return output;
@@ -24,7 +25,8 @@ const testRoutes = [
     {
         url: '/launcher',
         action: async (url, info, sessionID) => {
-            return `/launcher is working`;
+            const output = "That's pretty cool faggot."
+            return noBody(output);
         }
     }
 ]
@@ -39,8 +41,8 @@ module.exports.coreRoutes = coreRoutes;
  * Adds routes to the coreRoutes object
  */
 async function impregnateCoreRoutes() {
-   for (const route in launcherRoutes) {
-       coreRoutes[route] = launcherRoutes[route];
-   }
+    for (const route in launcherRoutes) {
+        coreRoutes[route] = launcherRoutes[route];
+    }
 }
 impregnateCoreRoutes();
