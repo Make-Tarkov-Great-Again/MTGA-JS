@@ -21,8 +21,7 @@ module.exports = fp(async function registerPlugins(app, opts) {
    * @see https://github.com/fastify/fastify-compress
   */
   await app.register(require('@fastify/compress'), {
-    encodings: ['deflate', 'gzip'],
-    global: true
+    global: true,
   })
   app.log.info('Compression is enabled')
 

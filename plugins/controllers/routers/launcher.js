@@ -43,7 +43,7 @@ module.exports.launcherRoutes = {
 
     '/launcher/profile/login': async (url, info, sessionID) => {
         let output = await reloadAccountByLogin(info);
-        return noBody(output);
+        return noBody(output, true);
     },
 
     '/launcher/profile/register': async (url, info, sessionID) => {
@@ -59,16 +59,17 @@ module.exports.launcherRoutes = {
 
     '/launcher/server/connect': async (url, info, sessionID) => {
         const data = await getEditions(profiles)
+        const server = core.serverConfig;
         const connectSchema = fastJson({
             backendURL: 'string',
             name: 'string',
             editions: 'array'
         });
         const output = connectSchema({
-            backendURL: "https://" + core.serverConfig.ip + ":" + core.serverConfig.port,
-            name: core.serverConfig.name,
+            backendURL: "https://" + server.ip + ":" + server.port,
+            name: server.name,
             editions: data
         })
-        return output;
+        return noBody(output);
     }
 }

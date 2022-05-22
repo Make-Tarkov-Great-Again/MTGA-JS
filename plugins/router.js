@@ -1,6 +1,6 @@
 'use strict'
 const { logger } = require("../app");
-const { launcherRoutes } = require(`./routes/routers/launcher`);
+const { launcherRoutes } = require(`./controllers/routers/launcher`);
 const { noBody } = require(`./utilities/response`);
 
 
@@ -13,11 +13,12 @@ const testRoutes = [
     {
         url: '/',
         action: async (url, info, sessionID) => {
-            const email = !info.email ? "Failed" : info.email;
-            const password = !info.password ? "Failed" : info.password;
-            const edition = !info.edition ? "Failed" : info.edition;
+            //const email = !info.email ? "Failed" : info.email;
+            //const password = !info.password ? "Failed" : info.password;
+            //const edition = !info.edition ? "Failed" : info.edition;
 
-            const output = email + " / " + password + " / " + edition;
+            //const output = email + " / " + password + " / " + edition;
+            const output = "Suck my balls"
 
             return output;
         }

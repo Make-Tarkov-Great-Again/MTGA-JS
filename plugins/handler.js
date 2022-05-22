@@ -11,31 +11,32 @@ const { testRoutes, coreRoutes } = require(`./router`);
 const fs = require('fs');
 
 
-async function routeHandle(request, reply, Route) {
+async function routeHandle(req, reply, Route) {
 
-    const sessionID = request.cookies != undefined &&
-        request.cookies["PHPSESSID"] !== undefined ?
-        request.cookies["PHPSESSID"] : undefined;
+    const sessionID = req.cookies != undefined &&
+        req.cookies["PHPSESSID"] !== undefined ?
+        req.cookies["PHPSESSID"] : undefined;
 
 
     let isCallback = false;
-    const routedData = await Route(request.url, request.body, sessionID);
-    console.log(`[REQUEST URL]: `, request.url);
+    const routedData = await Route(req.url, req.body, sessionID);
+    console.log(`[REQUEST URL]: `, req.url);
+    console.log(`[REQUEST BODY]: `, req.body);
 
 
     if (routedData != null && routedData != undefined) {
         const responseCallbacks = await getRespondCallbacks();
         for (const callback in responseCallbacks) {
             if (callback === routedData) {
-                responseCallbacks[callback](sessionID, request, reply, routedData);
+                responseCallbacks[callback](sessionID, req, reply, routedData);
                 isCallback = true;
             }
         }
         if (!isCallback) {
-            logger.logDebug(`[HANDLE ROUTE]: ${request.url}`);
+            logger.logDebug(`[HANDLE ROUTE]: ${req.url}`);
             reply
-                .type('application/json')
-                .compress(routedData);
+                .type('application/json', `utf8`)
+                .compress(fs.createReadStream(routedData));
             logger.logDebug(`[HANDLE ROUTE // COMPRESSED]: ${routedData}`);
         }
     }

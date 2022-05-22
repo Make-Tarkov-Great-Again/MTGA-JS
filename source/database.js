@@ -174,12 +174,6 @@ const Database = class {
                 this.traders[traderID].dialogue = readParsed(`${path}dialogue.json`);
             }
         }
-
-        /**
-         * Ragfair will need to be regenerated to the database later
-         * so that we can populate the assort with the correct/missing item data.
-         * It may be best to do this as a separate step, and call it here.
-         */
     }
 
     async regenerateRagfair() {
