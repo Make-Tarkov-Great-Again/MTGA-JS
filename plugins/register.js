@@ -26,9 +26,6 @@ module.exports = fp(async function registerPlugins(app, opts) {
   })
   app.log.info('@fastify/compress is enabled')
 
-  await app.register(require(`@fastify/multipart`))
-  app.log.info('@fastify/multipart is enabled')
-
   await app.register(require(`@fastify/formbody`))
   app.log.info('@fastify/formbody is enabled')
 

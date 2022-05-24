@@ -44,7 +44,7 @@ async function routeHandle(request, reply, Route) {
             logger.logDebug(`[HANDLE ROUTE]: ${request.url}`);
             reply
                 .compress(routedData);
-            logger.logDebug(`[HANDLE ROUTE // COMPRESSED]: ${reply.compress(routedData)}`);
+            logger.logDebug(`[HANDLE ROUTE // COMPRESSED]: ${routedData}`);
         }
     }
     else {
@@ -56,7 +56,7 @@ module.exports = routeHandle;
 // if this works
 for (const route of testRoutes) {
     {
-        app.all(route.url, (request, reply) => {
+        app.get(route.url, (request, reply) => {
             logger.logInfo(`[Test ROUTER]: ${route.url}`);
             return routeHandle(request, reply, route.action);
         })

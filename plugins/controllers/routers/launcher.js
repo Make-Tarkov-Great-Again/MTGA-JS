@@ -16,7 +16,6 @@ const {
         core
     }
 } = require(`./../../../app`);
-const { noBody } = require(`./../../utilities/response`);
 
 module.exports.launcherRoutes = {
     '/launcher/profile/change/email': async (url, info, sessionID) => {
@@ -38,12 +37,12 @@ module.exports.launcherRoutes = {
         const serverConfig = database.core.serverConfig
         const accountID = await reloadAccountByLogin(info);
         let output = find(accountID);
-        return noBody(output["server"] = serverConfig.name)
+        return output["server"] = serverConfig.name;
     },
 
     '/launcher/profile/login': async (url, info, sessionID) => {
         let output = await reloadAccountByLogin(info);
-        return noBody(output, true);
+        return output;
     },
 
     '/launcher/profile/register': async (url, info, sessionID) => {
@@ -58,7 +57,7 @@ module.exports.launcherRoutes = {
     },
 
     '/launcher/server/connect': async (url, info, sessionID) => {
-        const data = await getEditions(profiles)
+        const data = getEditions(profiles)
         const server = core.serverConfig;
         const connectSchema = fastJson({
             backendURL: 'string',
@@ -70,6 +69,6 @@ module.exports.launcherRoutes = {
             name: server.name,
             editions: data
         })
-        return noBody(output);
+        return output;
     }
 }

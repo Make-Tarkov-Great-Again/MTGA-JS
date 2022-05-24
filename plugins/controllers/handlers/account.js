@@ -386,7 +386,7 @@ class Account {
      * Retrieve all existing editions in server/db/profiles
      * @returns {Array} list of existing editions
      */
-    getEditions = async (profiles) => {
+    getEditions = (profiles) => {
         return Object.keys(profiles);
     }
 }
