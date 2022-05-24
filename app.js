@@ -26,53 +26,40 @@ const app = require('fastify')({
         allowHTTP1: true,
         key: cert.key,
         cert: cert.cert
-    }
-
-});
-
-
-app.addContentTypeParser(
-    'application/json',
-    {
-        parseAs: 'buffer',
-        bodyLimit: 52428800,
     },
-    function (req, body, done) {
-        try {
-            if (req.body != null) {
-                var json = JSON.parse(body)
-                done(null, json)
-            } else {
-                done(err, null);
-            }
-        } catch (err) {
-            err.statusCode = 400
-            done(err, undefined)
-        }
+    raw: {
+        bodyLimit: '50mb',
+        parameterLimit: 100000,
+        extended: true,
+        type: 'application/json'
     }
-);
-
-app.register(function (req, res, next) {
-    if (req.method == `POST`) {
-        if (req.body.toString && JSON.parse(req.body)) {
-            req.body = JSON.parse(req.body);
-            app.log.debug(req.body);
-            next();
-        } else {
-            if (req.headers['content-type'] == `deflate`) {
-                res
-                    .compress(req.body)
-            }
-            next();
-        }
-    } 
-    next()
 });
-
-
 /*  Register Plugins */
 app.register(require('./plugins/register'));
 app.log.info('Registered plugins');
+
+app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (req, body, done) {
+    try {
+        if (req.body != null) {
+            var json = JSON.parse(body)
+            done(null, json)
+        } else {
+            done(null, null);
+        }
+    } catch (err) {
+        err.statusCode = 400
+        done(err, undefined)
+    }
+})
+app.addContentTypeParser('*', function (request, payload, done) {
+    let data = ''
+    payload.on('data', chunk => { data += chunk })
+    payload.on('end', () => {
+      done(null, data)
+    })
+  })
+
+
 
 module.exports = {
     app,

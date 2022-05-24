@@ -16,7 +16,7 @@ const {
         core
     }
 } = require(`./../../../app`);
-const { clearString, noBody } = require(`./../../utilities/response`);
+const { noBody } = require(`./../../utilities/response`);
 
 module.exports.launcherRoutes = {
     '/launcher/profile/change/email': async (url, info, sessionID) => {

@@ -11,37 +11,44 @@ const { testRoutes, coreRoutes } = require(`./router`);
 const fs = require('fs');
 
 
-async function routeHandle(req, reply, Route) {
+async function routeHandle(request, reply, Route) {
 
-    const sessionID = req.cookies != undefined &&
-        req.cookies["PHPSESSID"] !== undefined ?
-        req.cookies["PHPSESSID"] : undefined;
+    console.log(`[REQUEST URL]: `, request.url);
+    console.log(`[REQUEST BODY]: `, request.body);
+    console.log(`[ROUTED METHOD]: `, request.method);
+
+    if (typeof request.url === "undefined") { return; }
+    if (typeof request.body === "undefined") {
+        console.log(`[REQUEST BODY WAS EMPTY]: `);
+    }
+
+
+    const sessionID = request.cookies != undefined &&
+        request.cookies["PHPSESSID"] !== undefined ?
+        request.cookies["PHPSESSID"] : undefined;
 
 
     let isCallback = false;
-    const routedData = await Route(req.url, req.body, sessionID);
-    console.log(`[REQUEST URL]: `, req.url);
-    console.log(`[REQUEST BODY]: `, req.body);
+    const routedData = await Route(request.url, request.body, sessionID);
 
 
     if (routedData != null && routedData != undefined) {
         const responseCallbacks = await getRespondCallbacks();
         for (const callback in responseCallbacks) {
             if (callback === routedData) {
-                responseCallbacks[callback](sessionID, req, reply, routedData);
+                responseCallbacks[callback](sessionID, request, reply, routedData);
                 isCallback = true;
             }
         }
         if (!isCallback) {
-            logger.logDebug(`[HANDLE ROUTE]: ${req.url}`);
+            logger.logDebug(`[HANDLE ROUTE]: ${request.url}`);
             reply
-                .type('application/json', `utf8`)
-                .compress(fs.createReadStream(routedData));
-            logger.logDebug(`[HANDLE ROUTE // COMPRESSED]: ${routedData}`);
+                .compress(routedData);
+            logger.logDebug(`[HANDLE ROUTE // COMPRESSED]: ${reply.compress(routedData)}`);
         }
     }
     else {
-        return `Altered Tarkov API is working`;
+        reply.send("Altered Tarkov API is working")
     }
 }
 module.exports = routeHandle;
@@ -58,9 +65,9 @@ for (const route of testRoutes) {
 
 //this should too
 for (const route in coreRoutes) {
-    app.all(route, (request, reply) => {
+    app.get(route, (req, res) => {
         logger.logInfo(`[Core ROUTER]: ${route}`);
-        return routeHandle(request, reply, coreRoutes[route]);
+        return routeHandle(req, res, coreRoutes[route]);
     })
 }
 
