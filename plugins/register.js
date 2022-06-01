@@ -1,6 +1,5 @@
 'use strict'
 const fp = require('fastify-plugin');
-const { resolve } = require('path');
 
 module.exports = fp(async function registerPlugins(app, opts) {
   /**
@@ -22,16 +21,14 @@ module.exports = fp(async function registerPlugins(app, opts) {
   */
   await app.register(require('@fastify/compress'),
   {
-    global: true
+    encodings: `deflate`
   })
   app.log.info('@fastify/compress is enabled')
 
   await app.register(require(`@fastify/formbody`))
   app.log.info('@fastify/formbody is enabled')
 
-  /**
-   * Register Handler
-  */
-  await app.register(require('./handler.js'))
-  app.log.info('Handler registered');
+  await app.register(require(`./router`))
+  app.log.info('Router registered');
+
 })

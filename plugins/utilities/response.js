@@ -22,6 +22,10 @@ const emptyArrayResponse = () => {
     return this.getBody([]);
 }
 
+module.exports = async function sendCompressedResponse(data, request, reply) {
+    reply.compress()
+}
+
 /**
  * Handle Bundle
  * @param {*} sessionID 

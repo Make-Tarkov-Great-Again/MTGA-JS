@@ -1,5 +1,4 @@
 const fs = require('fs');
-const fastJson = require('fast-json-stringify');
 const {
     logWarning,
     logSuccess,

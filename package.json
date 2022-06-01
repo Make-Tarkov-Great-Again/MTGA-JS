@@ -4,7 +4,7 @@
   "description": "ur mom gay",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js --ignore `user/profiles/`"
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "king",
@@ -16,7 +16,7 @@
     "@fastify/multipart": "^7.0.0",
     "@fastify/websocket": "^6.0.1",
     "@fastify/formbody": "^7.0.1",
-    "fastify": "^4.0.0-rc.3",
+    "fastify": "^4.0.0-rc.4",
     "fastify-plugin": "^3.0.1",
     "selfsigned": "^2.0.1"
   },

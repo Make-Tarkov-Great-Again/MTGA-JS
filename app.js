@@ -19,7 +19,29 @@ const cert = certificate.generate("127.0.0.1");
 const app = require('fastify')({
     logger: {
         prettyPrint: true,
-        level: 'info'
+        level: 'info',
+        serializers: {
+            res(res) {
+                // the default
+                return {
+                    statusCode: res.statusCode
+                }
+            },
+            req(req) {
+                return {
+                    method: req.method,
+                    url: req.url,
+                    path: req.path,
+                    // parameters: req.parameters,
+                    // Including the body and headers in the log could be in violation 
+                    // of privacy laws, e.g. GDPR. You should use the "redact" option to
+                    // remove sensitive fields. It could also leak authentication data in
+                    // the logs.
+                    body: req.body,
+                    headers: req.headers
+                }
+            }
+        }
     },
     http2: true,
     https: {
@@ -28,27 +50,16 @@ const app = require('fastify')({
         cert: cert.cert
     },
     bodyLimit: 52428800,
-    parameterLimit: 100000,
-    extended: true,
-    type: 'application/json'
+    exposeHeadRoutes: true,
 
 })
-    .addContentTypeParser('application/json', { parseAs: 'buffer' }, function (req, body, done) {
-        try {
-            if (req.body != null) {
-                var json = JSON.parse(body)
-                done(null, json)
-            } else {
-                done(null, null);
-            }
-        } catch (err) {
-            err.statusCode = 400
-            done(err, undefined)
-        }
+app.addContentTypeParser('*', function (request, payload, done) {
+    var data = ''
+    payload.on('data', chunk => { data += chunk })
+    payload.on('end', () => {
+      done(null, data)
     })
-    .register(require('./plugins/register'));
-app.log.info('Registered plugins');
-
+  })
 
 module.exports = {
     app,
@@ -64,6 +75,8 @@ module.exports = {
     },
     account,
 }
+
+app.register(require('./plugins/register'));
 /**
 * Start the server
 */
