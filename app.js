@@ -18,28 +18,25 @@ const cert = certificate.generate("127.0.0.1");
  */
 const app = require('fastify')({
     logger: {
-        prettyPrint: true,
-        level: 'info',
+        transport: {
+            target: 'pino-pretty'
+        },
         serializers: {
-            res(res) {
-                // the default
+            res(reply) {
+                // The default
                 return {
-                    statusCode: res.statusCode
+                    statusCode: reply.statusCode
                 }
             },
-            req(req) {
+            req(request) {
                 return {
-                    method: req.method,
-                    url: req.url,
-                    path: req.path,
-                    // parameters: req.parameters,
-                    // Including the body and headers in the log could be in violation 
-                    // of privacy laws, e.g. GDPR. You should use the "redact" option to
-                    // remove sensitive fields. It could also leak authentication data in
-                    // the logs.
-                    body: req.body,
-                    headers: req.headers
-                }
+                    method: request.method,
+                    url: request.url,
+                    headers: request.headers,
+                    hostname: request.hostname,
+                    remoteAddress: request.ip,
+                    remotePort: request.socket.remotePort
+                };
             }
         }
     },
@@ -49,17 +46,24 @@ const app = require('fastify')({
         key: cert.key,
         cert: cert.cert
     },
-    bodyLimit: 52428800,
-    exposeHeadRoutes: true,
 
+})
+app.addHook('preSerialization', async (_req, res, payload) => {
+    Object.assign(res.raw, { payload });
+});
+app.addHook('preHandler', function (req, reply, done) {
+    if (req.body) {
+        req.log.info({ body: req.body }, 'parsed body')
+    }
+    done()
 })
 app.addContentTypeParser('*', function (request, payload, done) {
     var data = ''
     payload.on('data', chunk => { data += chunk })
     payload.on('end', () => {
-      done(null, data)
+        done(null, data)
     })
-  })
+})
 
 module.exports = {
     app,
