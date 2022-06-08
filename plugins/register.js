@@ -1,7 +1,35 @@
 'use strict'
-const fp = require('fastify-plugin');
+const qs = require("qs");
 
-module.exports = fp(async function registerPlugins(app, opts) {
+module.exports = async function registerPlugins(app, opts) {
+
+  /**
+   * Adds compression utils to the Fastify reply object 
+   * and a hook to decompress requests payloads. 
+   * Supports gzip, deflate, and brotli.
+   * @see https://github.com/fastify/fastify-compress
+   */
+  await app.register(require('@fastify/compress'),
+    {
+      encodings: ['deflate'],
+      requestEncodings: ['gzip'],
+      removeContentLengthHeader: false,
+      global: true,
+      threshold: 0,
+    });
+  app.log.info("@fastify/compress is enabled");
+
+
+  /**
+   * Maybe I will need it in the future
+   * Plugin for serving static files as fast as possible.
+   * @see https://github.com/fastify/fastify-static
+   
+  app.register(require("@fastify/static"))
+  app.log.info("@fastify/static is enabled");
+  */
+
+
   /**
    * A plugin for Fastify that adds support 
    * for reading and setting cookies.
@@ -14,33 +42,16 @@ module.exports = fp(async function registerPlugins(app, opts) {
   app.log.info('@fastify/cookie is enabled')
 
   /**
-   * Adds compression utilities to the Fastify reply object and 
-   * a hook to decompress requests payloads.
-   * Supports gzip, deflate, and brotli.
-   * @see https://github.com/fastify/fastify-compress
-  */
-  await app.register(require('@fastify/compress'),
-    {
-      onInvalidRequestPayload: (request, encoding, error) => {
-        return {
-          statusCode: 400,
-          code: 'BAD_REQUEST',
-          error: 'Bad Request',
-          message: 'This is not a valid ' + encoding + ' encoded payload: ' + error.message
-        }
-      }
-    })
-  app.log.info('@fastify/compress is enabled')
-
-  await app.register(require(`@fastify/formbody`))
+   * A simple plugin for Fastify that adds a content type parser 
+   * for the content type application/x-www-form-urlencoded.
+   * @see https://github.com/fastify/fastify-formbody
+   */
+  await app.register(require('@fastify/formbody'), { parser: str => qs.parse(str) })
   app.log.info('@fastify/formbody is enabled')
 
-  await app.register(import(`fastify-print-routes`), {
-    useColors: true
-  })
-
-  await app.register(require(`./router`)
-  )
-  app.log.info('Router registered');
-
-})
+  /**
+* Register Handler
+*/
+  await app.register(require('./handler.js'))
+  app.log.info('Handler registered');
+}

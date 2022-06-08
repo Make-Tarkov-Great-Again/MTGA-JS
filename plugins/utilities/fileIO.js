@@ -10,6 +10,11 @@ const readParsed = (file) => {
     return JSON.parse(fs.readFileSync(file, 'utf8'));
 }
 
+const createReadStream = (file) => { return fs.createReadStream(file); }
+
+const createWriteStream = (file) => { return fs.createWriteStream(file, { flags: 'w' }); }
+
+
 /**
  * Check if file exists.
  * @param {*} filePath 
@@ -89,5 +94,7 @@ module.exports = {
     stringify,
     getFilesFrom,
     getDirectoriesFrom,
-    getAbsolutePathFrom
+    getAbsolutePathFrom,
+    createReadStream,
+    createWriteStream,
 }

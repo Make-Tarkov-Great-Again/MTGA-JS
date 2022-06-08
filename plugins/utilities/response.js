@@ -1,46 +1,68 @@
 'use strict'
-const { stringify } = require('./fileIO');
+const { stringify, createReadStream } = require('./fileIO');
+
+const mime = {
+    html: "text/html",
+    txt: "text/plain",
+    jpg: "image/jpeg",
+    png: "image/png",
+    css: "text/css",
+    otf: "font/opentype",
+    json: "application/json",
+}
+
+const mimeTypes = {
+    "css": "text/css",
+    "bin": "application/octet-stream",
+    "html": "text/html",
+    "jpg": "image/jpeg",
+    "js": "text/javascript",
+    "json": "application/json",
+    "png": "image/png",
+    "svg": "image/svg+xml",
+    "txt": "text/plain",
+    "json": "application/json",
+    "zlib": "application/zlib",
+}
+
+
 
 // noBody
 const noBody = (data) => {
     return clearString(stringify(data));
 }
 // getBody
-const getBody = (data, err = 0, errmsg = null) =>{
+const getBody = (data, err = 0, errmsg = null) => {
     return stringify({ "err": err, "errmsg": errmsg, "data": data }, true);
 }
 // getUnclearedBody
-const getUnclearedBody = (data, err = 0, errmsg = null) =>{
+const getUnclearedBody = (data, err = 0, errmsg = null) => {
     return stringify({ "err": err, "errmsg": errmsg, "data": data });
 }
 // nullResponse
 const nullResponse = () => {
-    return this.getBody(null);
+    return getBody(null);
 }
 // emptyArrayResponse
 const emptyArrayResponse = () => {
-    return this.getBody([]);
-}
-
-module.exports = async function sendCompressedResponse(data, request, reply) {
-    reply.compress()
+    return getBody([]);
 }
 
 /**
  * Handle Bundle
  * @param {*} sessionID 
  * @param {*} req 
- * @param {*} resp 
+ * @param {*} reply 
  * @param {*} body 
  */
-const respondBundle = async (sessionID, req, resp, body) => {
+const respondBundle = async (sessionID, req, reply, body) => {
     let bundleKey = req.url.split('/bundle/')[1];
     bundleKey = decodeURI(bundleKey);
     logger.logInfo(`[BUNDLE]: ${req.url}`);
-    let bundle = bundles_f.handler.getBundleByKey(bundleKey, true);
-    let path = bundle.path;
+    const bundle = bundles_f.handler.getBundleByKey(bundleKey, true);
+    const path = bundle.path;
     // send bundle
-    server.tarkovSend.file(resp, path);
+    file(reply, path);
 }
 /**
  * Handle Image
@@ -50,8 +72,8 @@ const respondBundle = async (sessionID, req, resp, body) => {
  * @param {*} body 
  */
 const respondImage = async (sessionID, req, resp, body) => {
-    let splittedUrl = req.url.split('/');
-    let fileName = splittedUrl[splittedUrl.length - 1].split('.').slice(0, -1).join('.');
+    const splittedUrl = req.url.split('/');
+    const fileName = splittedUrl[splittedUrl.length - 1].split('.').slice(0, -1).join('.');
     let baseNode = {};
     let imgCategory = "none";
 
@@ -92,23 +114,54 @@ const respondImage = async (sessionID, req, resp, body) => {
     if (!baseNode[fileName]) {
         logger.logError("Image not found! Sending backup image.");
         baseNode[fileName] = "res/noimage/" + imgCategory + ".png";
-        server.tarkovSend.file(resp, baseNode[fileName]);
+        await file(resp, baseNode[fileName]);
     } else {
         // send image
-        server.tarkovSend.file(resp, baseNode[fileName]);
+        await file(resp, baseNode[fileName]);
     }
 }
-/**
- * Handle Notifications
- * @param {*} sessionID 
- * @param {*} req 
- * @param {*} resp 
- * @param {*} data 
- */
-const respondNotify = async (sessionID, req, resp, data) => {
-    let splittedUrl = req.url.split('/');
-    sessionID = splittedUrl[splittedUrl.length - 1].split("?last_id")[0];
-    notifier_f.handler.notificationWaitAsync(resp, sessionID);
+
+const file = async (reply, file) => {
+    const _split = file.split(".");
+    const type = mime[_split[_split.length - 1]] || mime["txt"];
+    const fileStream = createReadStream(file);
+
+    fileStream.on("open", function () {
+        reply.header("Content-Type", type);
+        fileStream.pipe(reply);
+    });
+}
+
+const txtJson = async (reply, output) => {
+    reply.header(200, "OK", { "Content-Type": this.mime["json"] }).send(output);
+}
+
+const html = async (reply, output) => {
+    reply.header(200, "OK", { "Content-Type": mime["html"] }).send(output);
+}
+
+const sendStaticFile = async (req, reply) => {
+    if (req.url == "/favicon.ico") {
+        await file(reply, "res/icon.ico");
+        return true;
+    }
+    if (req.url.includes(".css")) {
+        await file(reply, "res/style.css");
+        return true;
+    }
+    if (req.url.includes("bender.light.otf")) {
+        await file(reply, "res/bender.light.otf");
+        return true;
+    }
+
+    if (req.url.includes("/server/config")) {
+        return true;
+    }
+/*     if (req.url == "/") {
+        await html(reply, home_f.RenderHomePage(), "");
+        return true;
+    } */
+    return false;
 }
 
 /**
@@ -137,6 +190,9 @@ module.exports = {
     clearString,
     respondBundle,
     respondImage,
-    respondNotify,
-    respondKillResponse
+    respondKillResponse,
+    txtJson,
+    html,
+    file
+
 }
