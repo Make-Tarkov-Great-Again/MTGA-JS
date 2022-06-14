@@ -6,12 +6,7 @@ const { html } = require(`./utilities/response`);
 /**
  * coreRoutes list
  */
-let coreRoutes = {
-    '/': async (url, info, sessionID) => {
-        await html(reply, renderHomePage(), "");
-        return true;
-    }
-};
+let coreRoutes = {};
 module.exports.coreRoutes = coreRoutes;
 
 /**

@@ -62,7 +62,7 @@ const respondBundle = async (sessionID, req, reply, body) => {
     const bundle = bundles_f.handler.getBundleByKey(bundleKey, true);
     const path = bundle.path;
     // send bundle
-    file(reply, path);
+    await file(reply, path);
 }
 /**
  * Handle Image
@@ -133,11 +133,11 @@ const file = async (reply, file) => {
 }
 
 const txtJson = async (reply, output) => {
-    reply.header(200, "OK", { "Content-Type": this.mime["json"] }).send(output);
+    await reply.header(200, "OK", { "Content-Type": this.mime["json"] }).send(output);
 }
 
 const html = async (reply, output) => {
-    reply.header(200, "OK", { "Content-Type": mime["html"] }).send(output);
+    await reply.header(200, "OK", { "Content-Type": mime["html"] }).send(output);
 }
 
 const sendStaticFile = async (req, reply) => {

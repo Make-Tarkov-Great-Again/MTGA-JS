@@ -1,7 +1,7 @@
 'use strict'
-const qs = require("qs");
+const fp = require('fastify-plugin');
 
-module.exports = async function registerPlugins(app, opts) {
+module.exports = fp(async function (app, opts) {
 
   /**
    * Adds compression utils to the Fastify reply object 
@@ -11,23 +11,9 @@ module.exports = async function registerPlugins(app, opts) {
    */
   await app.register(require('@fastify/compress'),
     {
-      encodings: ['deflate'],
-      requestEncodings: ['gzip'],
-      removeContentLengthHeader: false,
-      global: true,
-      threshold: 0,
+      inflateIfDeflated: true
     });
   app.log.info("@fastify/compress is enabled");
-
-
-  /**
-   * Maybe I will need it in the future
-   * Plugin for serving static files as fast as possible.
-   * @see https://github.com/fastify/fastify-static
-   
-  app.register(require("@fastify/static"))
-  app.log.info("@fastify/static is enabled");
-  */
 
 
   /**
@@ -46,12 +32,16 @@ module.exports = async function registerPlugins(app, opts) {
    * for the content type application/x-www-form-urlencoded.
    * @see https://github.com/fastify/fastify-formbody
    */
-  await app.register(require('@fastify/formbody'), { parser: str => qs.parse(str) })
+  await app.register(require('@fastify/formbody'))
   app.log.info('@fastify/formbody is enabled')
+
+  app.post(`/`, (request, reply) => {
+    reply.send(request.body)
+  })
 
   /**
 * Register Handler
 */
   await app.register(require('./handler.js'))
   app.log.info('Handler registered');
-}
+})

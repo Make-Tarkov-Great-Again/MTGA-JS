@@ -3,7 +3,6 @@ const fileIO = require('./plugins/utilities/fileIO');
 const math = require('./plugins/utilities/math');
 const utility = require('./plugins/utilities/utility');
 const response = require('./plugins/utilities/response');
-const qs = require("qs");
 
 const databaseCore = require('./source/database');
 const database = new databaseCore.Database();
@@ -27,6 +26,7 @@ const app = require('fastify')({
                 // The default
                 return {
                     statusCode: reply.statusCode
+
                 }
             },
             req(request) {
@@ -34,9 +34,14 @@ const app = require('fastify')({
                     method: request.method,
                     url: request.url,
                     headers: request.headers,
+                    params: request.params,
+                    body: request.body,
+                    query: request.query,
                     hostname: request.hostname,
                     remoteAddress: request.ip,
-                    remotePort: request.socket.remotePort
+                    remotePort: request.socket.remotePort,
+                    routerMethod: request.routerMethod,
+                    routerPath: request.routerPath
                 };
             }
         }
@@ -63,68 +68,32 @@ module.exports = {
     account,
 }
 
-//app.register(require('./plugins/register'));
-/**
-   * Adds compression utils to the Fastify reply object 
-   * and a hook to decompress requests payloads. 
-   * Supports gzip, deflate, and brotli.
-   * @see https://github.com/fastify/fastify-compress
-   */
-app.register(require('@fastify/compress'),
-    {
-        encodings: ['deflate'],
-        requestEncodings: ['gzip'],
-        removeContentLengthHeader: false,
-        global: true,
-        threshold: 0,
-    });
-app.log.info("@fastify/compress is enabled");
-
-
-/**
-* Maybe I will need it in the future
-* Plugin for serving static files as fast as possible.
-* @see https://github.com/fastify/fastify-static
-
-app.register(require("@fastify/static"))
-app.log.info("@fastify/static is enabled");
-*/
-
-
-/**
-* A plugin for Fastify that adds support 
-* for reading and setting cookies.
-* @see https://github.com/fastify/fastify-cookie
-*/
-app.register(require("@fastify/cookie"), {
-    secret: 'urmomisawesome',
-    parseOptions: {}
+app.removeAllContentTypeParsers();
+app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (req, body, done) {
+    try {
+        var json = JSON.parse(body)
+        done(null, json)
+    } catch (err) {
+        err.statusCode = 400
+        done(err, undefined)
+    }
 })
-app.log.info('@fastify/cookie is enabled')
 
-/**
-* A simple plugin for Fastify that adds a content type parser 
-* for the content type application/x-www-form-urlencoded.
-* @see https://github.com/fastify/fastify-formbody
-*/
-app.register(require('@fastify/formbody'), { parser: str => qs.parse(str) })
-app.log.info('@fastify/formbody is enabled')
+app.addContentTypeParser('*', (req, payload, done) => {
+    const chunks = [];
+    payload.on('data', chunk => {
+        chunks.push(chunk);
+    });
+    payload.on('end', () => {
+        done(null, Buffer.concat(chunks));
+    });
+});
 
 /**
 * Register Handler
 */
-app.register(require('./plugins/handler.js'))
-app.log.info('Handler registered');
-
-
-
-app.addContentTypeParser('*', function (request, payload, done) {
-    var data = ''
-    payload.on('data', chunk => { data += chunk })
-    payload.on('end', () => {
-        done(null, data)
-    })
-})
+app.register(require('./plugins/register.js'))
+app.log.info('Register registered');
 
 
 

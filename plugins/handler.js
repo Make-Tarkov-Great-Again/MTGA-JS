@@ -7,9 +7,7 @@ const {
     //respondNotify,
     respondKillResponse
 } = response;
-const { testRoutes, coreRoutes } = require(`./router`);
-const fs = require('fs');
-const zlib = require('zlib');
+const { coreRoutes } = require(`./router`);
 
 async function routeHandle(request, reply, Route) {
 
@@ -43,9 +41,9 @@ module.exports = routeHandle;
 
 //this should too
 for (const route in coreRoutes) {
-    app.all(route, async (req, res) => {
+    app.all(route, async (request, reply) => {
         logger.logDebug(`[Core ROUTER]: ${route}`);
-        routeHandle(req, res, coreRoutes[route]);
+        return routeHandle(request, reply, coreRoutes[route]);
     })
 }
 
@@ -58,7 +56,6 @@ async function getRespondCallbacks() {
     return {
         "BUNDLE": respondBundle,
         "IMAGE": respondImage,
-        //"NOTIFY": respondNotify,
         "DONE": respondKillResponse
     }
 }
