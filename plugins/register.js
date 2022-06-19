@@ -42,6 +42,6 @@ module.exports = fp(async function (app, opts) {
   /**
 * Register Handler
 */
-  await app.register(require('./handler.js'))
+  await app.register(require('./router.js'))
   app.log.info('Handler registered');
 })
