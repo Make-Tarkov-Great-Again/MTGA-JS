@@ -25,6 +25,17 @@ const mimeTypes = {
     "zlib": "application/zlib",
 }
 
+const parseAcceptHeaders = (acceptHeaders)  => {
+    const splitAcceptHeaders = acceptHeaders.split(',');
+    switch(true) {
+        case splitAcceptHeaders.includes('text/html'):
+            return mime['html'];
+        break;
+        case splitAcceptHeaders.includes('text/css'):
+            return mime['css'];
+        break;
+    }
+}
 
 
 // noBody
@@ -193,6 +204,6 @@ module.exports = {
     respondKillResponse,
     txtJson,
     html,
-    file
-
+    file,
+    parseAcceptHeaders
 }

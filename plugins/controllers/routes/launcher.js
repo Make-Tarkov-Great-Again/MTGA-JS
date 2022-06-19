@@ -45,8 +45,6 @@ module.exports.launcherRoutes = {
         return (output === "" ? "FAILED" : "OK");
     },
 
-
-
     '/launcher/profile/get': async (url, info, sessionID) => {
         const serverConfig = database.core.serverConfig
         const accountID = await reloadAccountByLogin(info);

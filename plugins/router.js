@@ -1,7 +1,6 @@
 'use strict'
 const { launcherRoutes } = require(`./controllers/routes/launcher`);
-const { renderHomePage } = require(`./controllers/handlers/home`);
-const { html } = require(`./utilities/response`);
+const { weblauncherRoutes } = require(`./controllers/routes/weblauncher`);
 
 /**
  * coreRoutes list
@@ -15,6 +14,10 @@ module.exports.coreRoutes = coreRoutes;
 function impregnateCoreRoutes() {
     for (const route in launcherRoutes) {
         coreRoutes[route] = launcherRoutes[route];
+    }
+
+    for (const route in weblauncherRoutes) {
+        coreRoutes[route] = weblauncherRoutes[route];
     }
 }
 impregnateCoreRoutes();

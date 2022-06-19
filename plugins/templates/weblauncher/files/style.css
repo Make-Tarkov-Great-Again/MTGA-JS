@@ -1,0 +1,30 @@
+h2 {
+    font-size: 16px;
+    padding: 3px 0 0 10px;
+    margin: 0;
+}
+
+h3 {
+    font-size: 14px;
+    padding: 3px 0 0 15px;
+    margin: 0;
+}
+
+p {
+    font-size: 12px;
+    padding: 3px 0 0 25px;
+    margin: 0;
+}
+
+body {
+    color: #fff;
+    background: #000
+}
+
+table {
+    border-bottom: 1px solid #aaa;
+}
+
+.right {
+    text-align: right;
+}

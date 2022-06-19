@@ -8,8 +8,12 @@ const {
     respondKillResponse
 } = response;
 const { coreRoutes } = require(`./router`);
+const { parseAcceptHeaders } = require(`./utilities/response`);
 
 async function routeHandle(request, reply, Route) {
+    if(request.headers != undefined && request.headers["accept"] != undefined && request.headers["accept"] != null) {
+        reply.header('Content-Type', parseAcceptHeaders(request.headers.accept));
+    }
 
     const sessionID = request.cookies != undefined &&
         request.cookies["PHPSESSID"] !== undefined ?

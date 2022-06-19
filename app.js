@@ -1,4 +1,5 @@
 const logger = require('./plugins/utilities/logger');
+const weblauncher = require('./plugins/controllers/handlers/weblauncher');
 const fileIO = require('./plugins/utilities/fileIO');
 const math = require('./plugins/utilities/math');
 const utility = require('./plugins/utilities/utility');
@@ -58,6 +59,7 @@ module.exports = {
     database,
     utility,
     logger,
+    weblauncher,
     fileIO,
     math,
     response,
