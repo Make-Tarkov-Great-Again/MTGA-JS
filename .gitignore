@@ -37,7 +37,6 @@ jspm_packages
 .node_repl_history
 
 # 0x
-profile-*
 
 # mac files
 .DS_Store
@@ -53,7 +52,6 @@ profile-*
 *code-workspace
 
 # clinic
-profile*
 *clinic*
 *flamegraph*
 package-lock.json
