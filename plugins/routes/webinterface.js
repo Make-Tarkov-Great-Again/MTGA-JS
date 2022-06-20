@@ -203,7 +203,7 @@ module.exports = async function webinterfaceRoutes(app, opts) {
                 logger.logDebug("[WEBINTERFACE]Starting tarkov...")
                 var spawn = require('child_process').spawn;
                 var tarkovGame = spawn(tarkovPath, ['-bC5vLmcuaS5u={"email":"' + account.email + '","password":"' + account.password + '","toggle":true,"timestamp":0}', '-token=' + sessionID, '-config={"BackendUrl":"https://' + core.serverConfig.ip + ':'+core.serverConfig.port + '","Version":"live"}']);
-                reply.redirect(generateMessageURL("Successfull", "Tarkov will start shortly."));
+                reply.redirect(generateMessageURL("Successful", "Tarkov will start shortly."));
             } else {
                 logger.logDebug("[WEBINTERFACE] Unable to start tarkov, file does not exist.");
                 setTarkovPath(sessionID, null);
