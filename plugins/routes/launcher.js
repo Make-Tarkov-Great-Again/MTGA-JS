@@ -16,14 +16,10 @@ const {
         profiles,
         core
     }
-} = require(`../../../app`);
-const { noBody } = require('../../utilities/response');
+} = require('../../app');
+const { noBody } = require('../utilities/response');
 
 module.exports = async function launcherRoutes(app, opts) {
-    app.post(`/`, (request, reply) => {
-        return (request.body);
-    })
-
     app.get('/launcher/profile/change/email', async (request, reply) => {
         let output = await changeEmail(request.body);
         return (output === "" ? "FAILED" : "OK");

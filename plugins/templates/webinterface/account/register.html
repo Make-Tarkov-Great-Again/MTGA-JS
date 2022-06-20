@@ -1,0 +1,24 @@
+<div class="form-signin w-100 m-auto">
+    <form action="/webinterface/account/register" method="post">
+        <h1 class="h3 mb-3 fw-normal">Please fill out the registration form</h1>
+
+        <div class="form-floating">
+            <input name="email" type="text" class="form-control" id="email" placeholder="Username">
+            <label for="email">Username</label>
+        </div>
+
+        <div class="form-floating">
+            <input name="password" type="password" class="form-control" id="username" placeholder="Password">
+            <label for="username">Password</label>
+        </div>
+
+        <div class="form-floating">
+            <select name="edition" type="dropdown" class="form-control" id="edition">
+            {{editions}}
+            </select>
+            <label for="edition">Select your edition</label>
+        </div>
+
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+    </form>
+</div>

@@ -1,5 +1,4 @@
 const logger = require('./plugins/utilities/logger');
-const weblauncher = require('./plugins/controllers/handlers/weblauncher');
 const fileIO = require('./plugins/utilities/fileIO');
 const math = require('./plugins/utilities/math');
 const utility = require('./plugins/utilities/utility');
@@ -9,9 +8,9 @@ const databaseCore = require('./source/database');
 const database = new databaseCore.Database();
 database.loadDatabase();
 
-const accountHandler = require(`./plugins/controllers/handlers/account`);
+const accountHandler = require("./plugins/models/account");
 const account = new accountHandler.Account();
-const { certificate } = require('./source/certificategenerator');
+const { certificate } = require("./source/certificategenerator");
 const cert = certificate.generate("127.0.0.1");
 
 /**
@@ -59,7 +58,6 @@ module.exports = {
     database,
     utility,
     logger,
-    weblauncher,
     fileIO,
     math,
     response,

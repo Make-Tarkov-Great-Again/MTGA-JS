@@ -122,11 +122,8 @@ const Database = class {
         for (let profileType of profilesKeys) {
             const path = `./database/profiles/${profileType}/`;
             this.profiles[profileType] = {};
-            this.profiles[profileType]["character"] = readParsed(`${path}character.json`);
-            this.profiles[profileType]["initialTraderStanding"] = readParsed(`${path}initialTraderStanding.json`);
-            this.profiles[profileType]["inventory_bear"] = readParsed(`${path}inventory_bear.json`);
-            this.profiles[profileType]["inventory_usec"] = readParsed(`${path}inventory_usec.json`);
-            //this.profiles[profileType]["starting_outfit"] = util.fileIO.readParsed(`${path}starting_outfit.json`);
+            this.profiles[profileType]["character_bear"] = readParsed(`${path}character_bear.json`);
+            this.profiles[profileType]["character_usec"] = readParsed(`${path}character_usec.json`);
             this.profiles[profileType]["storage"] = readParsed(`${path}storage.json`);
         }
     }
