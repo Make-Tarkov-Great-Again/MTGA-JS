@@ -201,7 +201,7 @@ class Account {
 
         logger.logDebug("[CLUSTER] Registering new account...")
 
-        accountID = generateUniqueId("AID");
+        accountID = await generateUniqueId("AID");
 
         this.accounts[accountID] = {
             id: accountID,
@@ -211,7 +211,7 @@ class Account {
             edition: info.edition,
         };
 
-        this.saveToDisk(accountID);
+        await this.saveToDisk(accountID);
         return "";
     }
 
