@@ -17,7 +17,7 @@ const {
         core
     }
 } = require('../../app');
-const { noBody } = require('../utilities/response');
+const { noBody } = require('../utilities');
 
 module.exports = async function launcherRoutes(app, opts) {
     app.get('/launcher/profile/change/email', async (request, reply) => {

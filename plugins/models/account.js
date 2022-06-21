@@ -429,4 +429,4 @@ class Account {
     }
 }
 
-module.exports.Account = Account;
+module.exports = new Account();

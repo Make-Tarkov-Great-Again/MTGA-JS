@@ -1,15 +1,3 @@
-const logger = require('./plugins/utilities/logger');
-const fileIO = require('./plugins/utilities/fileIO');
-const math = require('./plugins/utilities/math');
-const utility = require('./plugins/utilities/utility');
-const response = require('./plugins/utilities/response');
-
-const databaseCore = require('./source/database');
-const database = new databaseCore.Database();
-database.loadDatabase();
-
-const accountHandler = require("./plugins/models/account");
-const account = new accountHandler.Account();
 const { certificate } = require("./source/certificategenerator");
 const cert = certificate.generate("127.0.0.1");
 
@@ -53,18 +41,15 @@ const app = require('fastify')({
         cert: cert.cert
     },
 })
+
+const database = require('./source/database');
+database.loadDatabase();
+const account = require("./plugins/models/account");
+
+
 module.exports = {
     app,
     database,
-    utility,
-    logger,
-    fileIO,
-    math,
-    response,
-    mods: {
-        toLoad: {},
-        config: {},
-    },
     account,
 }
 

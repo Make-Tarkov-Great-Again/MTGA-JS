@@ -3,7 +3,7 @@ const {
     readParsed,
     fileExist,
     getDirectoriesFrom,
-  } = require('./../plugins/utilities/fileIO');
+  } = require('./../plugins/utilities/');
 
 /**
  * Return completed database
@@ -117,7 +117,7 @@ const Database = class {
      * Load profiles data in parallel.
      */
     async loadProfiles() {
-        const profilesKeys = getDirectoriesFrom('/database/profiles/');
+        const profilesKeys = getDirectoriesFrom('./database/profiles/');
         this.profiles = {};
         for (let profileType of profilesKeys) {
             const path = `./database/profiles/${profileType}/`;
@@ -182,4 +182,4 @@ const Database = class {
          */
     }
 }
-module.exports.Database = Database;
+module.exports= new Database();

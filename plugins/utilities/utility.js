@@ -1,5 +1,5 @@
 
-/** Generate Unique ID used in the server by using uuid-v4 or date if old method
+/** Generate Unique ID used in the server by using nanoid
  * @param {string} prefix 
  * @returns Unique ID as string
  */
