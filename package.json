@@ -9,7 +9,6 @@
   "keywords": [],
   "author": "king",
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
     "@fastify/compress": "^6.1.0",
     "@fastify/cookie": "^7.0.0",
@@ -20,6 +19,7 @@
     "fastify-plugin": "^3.0.1",
     "fastify-raw-body": "^4.0.0",
     "find-my-way": "^6.4.0",
+    "nanoid": "^4.0.0",
     "selfsigned": "^2.0.1"
   },
   "devDependencies": {

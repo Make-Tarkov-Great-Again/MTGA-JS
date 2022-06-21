@@ -201,7 +201,7 @@ class Account {
 
         logger.logDebug("[CLUSTER] Registering new account...")
 
-        accountID = generateUniqueId("AID", true);
+        accountID = generateUniqueId("AID");
 
         this.accounts[accountID] = {
             id: accountID,
