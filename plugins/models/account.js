@@ -49,9 +49,19 @@ class Account {
         }
 
         /**
+         * Set profileIDs based on if profile directory exists, if not create and set it.
+         */
+        let profileIDs = null;
+        if (fileExist("./user/profiles")) {
+            profileIDs = getDirectoriesFrom("./user/profiles/");
+        } else {
+            createDirectory("./user/profiles");
+            profileIDs = getDirectoriesFrom("./user/profiles/");
+        }
+
+        /**
          * Read account files from disk for accounts that are not cached already.
          */
-        const profileIDs = getDirectoriesFrom("./user/profiles/");
         for (const id in profileIDs) {
             if (!fileExist(`./user/profiles/${profileIDs[id]}/account.json`)) {
                 logger.logWarning(`[CLUSTER] reloadAccountbyLogin - Account file for account ${profileIDs[id]} does not exist.`);
@@ -72,7 +82,7 @@ class Account {
                 }
             }
         }
-        
+
         // If the account does not exist, this will allow the launcher to display an error message.
         return false;
     }
@@ -130,7 +140,7 @@ class Account {
                     const savedAccount = readParsed(`./user/profiles/${id}/account.json`);
                     if (stringify(currentAccount) !== stringify(savedAccount)) {
                         // Save memory content to disk.
-                        writeFile(`/user/profiles/${id}/account.json`, this.accounts[id]);
+                        writeFile(`./user/profiles/${id}/account.json`, this.accounts[id]);
 
                         // Update file age to prevent another reload by this server.
                         const stats = fs.statSync(`./user/profiles/${id}/account.json`);
@@ -393,15 +403,13 @@ class Account {
      * @param {*} state 
      */
     getTarkovPath = async (sessionID) => {
-        if(sessionID == (null || undefined))
-        {
+        if (sessionID == (null || undefined)) {
             return false
         }
 
         // This needs to be at the top to check for changed accounts.
         await this.reloadAccountBySessionID(sessionID);
-        if(this.accounts[sessionID].tarkovPath != (null || undefined))
-        {
+        if (this.accounts[sessionID].tarkovPath != (null || undefined)) {
             logger.logDebug("[CLUSTER] Saved Tarkov Path for account " + sessionID);
             return this.accounts[sessionID].tarkovPath;
         } else {
@@ -410,8 +418,7 @@ class Account {
     }
 
     setTarkovPath = async (sessionID, tarkovPath) => {
-        if(sessionID == (null || undefined))
-        {
+        if (sessionID == (null || undefined)) {
             return false
         }
 

@@ -4,8 +4,7 @@
  * @returns Unique ID as string
  */
 const generateUniqueId = async (prefix = "") => {
-    const { default: nanoid } = await import('nanoid');
-    console.log("nanoid");
+    const { nanoid } = await import('nanoid');
     let retVal = `${prefix}-${nanoid()}`
     return retVal;
 }
