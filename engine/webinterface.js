@@ -25,6 +25,19 @@ class webInterface {
         return this.sessionID;
     }
 
+    async checkForSessionID(request) {
+        const sessionID = request.cookies.PHPSESSID;
+        if (sessionID) {
+            this.setSessionID(sessionID);
+            logger.logDebug("[WEBINTERFACE] Found sessionID cookie: " + sessionID);
+            return sessionID;
+        } else {
+            this.setSessionID(null);
+        }
+    
+        return false;
+    }
+
     async generateMessageURL(messageHeader, messageBody) {
         return "/message?messageHeader=" + messageHeader + "&messageBody=" + messageBody;
     }
@@ -79,66 +92,23 @@ class webInterface {
         return await read(this.baseDirectory + "/files/" + filename);
     }
 
+    async renderPage(templateFile, variables = {}) {
+        let baseHTML = await this.getBase();
+        let fusedPage =  String(baseHTML).replace("{{content}}", await read(this.baseDirectory + templateFile));
+
+        for (const [key, value] of Object.entries(variables)) {
+            fusedPage = String(fusedPage).replace("{{" + key + "}}", value)
+        }
+        
+        return fusedPage;
+    }
+
     async displayMessage(messageHeader, messageContent) {
-        let baseHTML = await this.getBase();
-        return String(baseHTML)
-            .replace("{{content}}", await read(this.baseDirectory + "/message.html"))
-            .replace("{{messageHeader}}", messageHeader)
-            .replace("{{messageContent}}", messageContent);
-    }
-
-    async displayContent(content) {
-        logger.logDebug("[WEBINTERFACE] Test display: " + content);
-        let baseHTML = await this.getBase();
-        return String(baseHTML).replace("{{content}}", content);
-    }
-
-    async displayHomePage(accountData) {
-        logger.logDebug(accountData);
-        let baseHTML = await this.getBase();
-        return String(baseHTML)
-            .replace("{{content}}", await read(this.baseDirectory + "/account/home.html"))
-            .replace("{{version}}", database.core.serverConfig.serverVersion)
-            .replace("{{username}}", accountData.email);
-    }
-
-    async displayLoginPage() {
-        let baseHTML = await this.getBase();
-        return String(baseHTML).replace("{{content}}", await read(this.baseDirectory + "/account/login.html"));
-    }
-
-    async displaySettingsPage() {
-        let baseHTML = await this.getBase();
-        return String(baseHTML).replace("{{content}}", await read(this.baseDirectory + "/account/settings.html"));
-    }
-
-    async displayRegistrationPage(editions) {
-        let editionsHTML = "";
-
-        for (const [name, value] of Object.entries(editions)) {
-            editionsHTML = editionsHTML + '<option value="' + value + '">' + value + '</option>'
+        let pageVariables = {
+            "messageHeader": messageHeader,
+            "messageContent": messageContent
         }
-
-        let baseHTML = await this.getBase();
-        let registrationPageHTML = String(baseHTML)
-            .replace("{{content}}", await read(this.baseDirectory + "/account/register.html"))
-            .replace("{{editions}}", editionsHTML)
-
-
-        return registrationPageHTML;
-    }
-
-    async checkForSessionID(request) {
-        const sessionID = request.cookies.PHPSESSID;
-        if (sessionID) {
-            this.setSessionID(sessionID);
-            logger.logDebug("[WEBINTERFACE] Found sessionID cookie: " + sessionID);
-            return sessionID;
-        } else {
-            this.setSessionID(null);
-        }
-    
-        return false;
+        return await this.renderPage("/message.html", pageVariables);
     }
 }
 

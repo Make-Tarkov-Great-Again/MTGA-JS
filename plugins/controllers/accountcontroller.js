@@ -1,5 +1,5 @@
 
-const { profiles } = require("../../engine/database");
+const { profiles, core } = require("../../engine/database");
 const { account } = require("../models/account");
 const { logger } = require("../utilities");
 const { generateUniqueId } = require(`../utilities/utility`);
@@ -13,11 +13,19 @@ class accountController {
     static home = async (request = null, reply = null) => {
         reply.type("text/html")
         const sessionID = await webinterface.checkForSessionID(request);
+        logger.logDebug(account.get(sessionID));
         if (sessionID) {
-            // ToDo: Add Profile Data and Extend home.html //
-            return await webinterface.displayHomePage(await account.get(sessionID));
+            let userAccount = await account.get(sessionID);
+            if(userAccount) {
+                // ToDo: Add Profile Data and Extend home.html //
+                let pageVariables = {
+                    "version": core.serverConfig.serverVersion,
+                    "username": userAccount.email
+                }
+                return await webinterface.renderPage("/account/home.html", pageVariables);
+            }
         } else {
-            return await webinterface.displayContent("Please log into your account or register a new one.");
+            reply.redirect(await webinterface.generateMessageURL("Login please", "Login into your account or create a new one."));
         }
     }
 
@@ -25,15 +33,15 @@ class accountController {
         reply.type("text/html")
 
         if (await webinterface.checkForSessionID(request)) {
-            return webinterface.displayContent("fuck off");
+            reply.redirect(await webinterface.generateMessageURL("Error", "Incorrect call."));
         } else {
-            return webinterface.displayLoginPage();
+            return await webinterface.renderPage("/account/login.html");
         }
     }
     
     static login = async (request = null, reply = null) => {
         if (await webinterface.checkForSessionID(request)) {
-            return await webinterface.displayContent("fuck off");
+            reply.redirect(await webinterface.generateMessageURL("Error", "Incorrect call."));
         } else {
             if (request.body.email != (undefined || null) && request.body.password != (undefined || null)) {
                 let userAccount = await account.getBy('email', request.body.email);
@@ -54,8 +62,18 @@ class accountController {
         if (await webinterface.checkForSessionID(request)) {
             return await webinterface.displayContent("fuck off");
         } else {
-            let editions = Object.keys(profiles);
-            return await webinterface.displayRegistrationPage(editions);
+            let editionsHTML = "";
+
+            for (const [name, value] of Object.keys(profiles)) {
+                editionsHTML = editionsHTML + '<option value="' + value + '">' + value + '</option>'
+            }
+
+            let pageVariables = {
+                "editions": editionsHTML,
+                "username": userAccount.email
+            }
+            
+            return await webinterface.renderPage("/account/register.html", );
         }
     }
 
