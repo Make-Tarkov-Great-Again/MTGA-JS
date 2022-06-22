@@ -1,5 +1,5 @@
 
-const { profiles, core } = require("../../engine/database");
+const { editions, core } = require("../../engine/database");
 const { account } = require("../models/account");
 const { logger } = require("../utilities");
 const { generateUniqueId } = require(`../utilities/utility`);
@@ -24,7 +24,7 @@ class accountController {
         if (sessionID) {
             let userAccount = await account.get(sessionID);
             if(userAccount) {
-                // ToDo: Add Profile Data and Extend home.html //
+                // ToDo: Add Account Data and Extend home.html //
                 let pageVariables = {
                     "version": core.serverConfig.serverVersion,
                     "username": userAccount.email
@@ -89,9 +89,9 @@ class accountController {
         } else {
             let editionsHTML = "";
 
-            logger.logDebug(profiles);
+            logger.logDebug(editions);
 
-            for (const [name, value] of Object.entries(Object.keys(profiles))) {
+            for (const [name, value] of Object.entries(Object.keys(editions))) {
                 editionsHTML = editionsHTML + '<option value="' + value + '">' + value + '</option>'
             }
 
@@ -141,19 +141,35 @@ class accountController {
         reply.redirect('/webinterface/account/register');
     }
 
-    static remove = async (id, request = null, reply = null) => {
+    static remove = async (request = null, reply = null) => {
         
     }
 
-    static edit = async (id, request = null, reply = null) => {
-        
+    static edit = async (request = null, reply = null) => {
+        reply.type("text/html")
+
+        const sessionID = await webinterface.checkForSessionID(request);
+        if (!sessionID) {
+            reply.redirect('/webinterface/account/login');
+        }
+
+        const userAccount = await account.get(sessionID);
+        if(!userAccount) {
+            reply.redirect('/webinterface/account/login');
+        }
+
+        let pageVariables = {
+            "tarkovPath": ((userAccount.tarkovPath) ? userAccount.tarkovPath : '')
+        }
+
+        return await webinterface.renderPage("/account/settings.html", pageVariables);
     }
 
     static update = async (request = null, reply = null) => {
         
     }
 
-    static delete = async (id, request = null, reply = null) => {
+    static delete = async (request = null, reply = null) => {
         
     }
 }

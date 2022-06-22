@@ -1,5 +1,6 @@
 const { certificate } = require("./engine/certificategenerator");
 const cert = certificate.generate("127.0.0.1");
+const zlib = require("node:zlib");
 
 /**
  * Fastify instance
@@ -45,6 +46,7 @@ const app = require('fastify')({
 const database = require('./engine/database');
 database.loadDatabase();
 const webinterface = require("./engine/webinterface");
+const { logger } = require("./plugins/utilities");
 
 module.exports = {
     app,
@@ -54,12 +56,36 @@ module.exports = {
 
 app.removeAllContentTypeParsers();
 app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (req, body, done) {
-    try {
-        var json = JSON.parse(body)
-        done(null, json)
-    } catch (err) {
-        err.statusCode = 400
-        done(err, undefined)
+    if (req.headers['user-agent'].includes('Unity')) {
+        try {
+            zlib.inflate(body, function (err, data) {
+                if (!err && data !== undefined) {
+                    var inflatedString = data.toString('utf-8');
+                    if (inflatedString.length > 0) {
+                        var json = JSON.parse(inflatedString);
+                        done(null, json);
+                        return
+                    }
+                    done(null, body);
+                    return
+                } else {
+                    done(null, body);
+                    return
+                }
+            });
+        } catch (error) {
+            err.statusCode = 400
+            done(err, undefined)
+            return;
+        }
+    } else {
+        try {
+            var json = JSON.parse(body)
+            done(null, json)
+        } catch (err) {
+            err.statusCode = 400
+            done(err, undefined)
+        }
     }
 })
 

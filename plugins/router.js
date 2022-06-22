@@ -7,9 +7,6 @@ module.exports = async function router (app, opts){
     /* Register the routes for the webinterface */
     await app.register(require("./routes/webinterface"));
 
-    /* Register the routes for the account functionality of the webinterface */
-    await app.register(require("./routes/webinterfaceAccount"));
-
     /* Register the routes for the tarkov web launcher */
-    await app.register(require("./routes/webinterfaceLauncher"));
+    await app.register(require("./routes/client"));
 }

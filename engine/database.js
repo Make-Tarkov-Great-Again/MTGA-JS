@@ -23,12 +23,13 @@ class Database {
         this.locales;
         this.templates;
         //this.bots;
-        this.profiles;
+        this.editions;
         this.traders;
 
 
         // Model Data //
         this.accounts = {};
+        this.profiles = {};
         this.accountFileAge = {};
     }
 
@@ -41,11 +42,12 @@ class Database {
             this.loadLanguage(),
             this.loadTemplates(),
             this.loadTraders(),
-            this.loadProfiles(),
+            this.loadEditions(),
             //this.loadBots()
 
             // Model Data //
             this.loadAccounts(),
+            this.loadProfiles(),
         ]);
     }
     /**
@@ -128,17 +130,17 @@ class Database {
     }
 
     /**
-     * Load profiles data in parallel.
+     * Load editions data in parallel.
      */
-    async loadProfiles() {
-        const profilesKeys = getDirectoriesFrom('./database/profiles/');
-        this.profiles = {};
-        for (let profileType of profilesKeys) {
-            const path = `./database/profiles/${profileType}/`;
-            this.profiles[profileType] = {};
-            this.profiles[profileType]["character_bear"] = readParsed(`${path}character_bear.json`);
-            this.profiles[profileType]["character_usec"] = readParsed(`${path}character_usec.json`);
-            this.profiles[profileType]["storage"] = readParsed(`${path}storage.json`);
+    async loadEditions() {
+        const editionKeys = getDirectoriesFrom('./database/editions/');
+        this.editions = {};
+        for (let editionType of editionKeys) {
+            const path = `./database/editions/${editionType}/`;
+            this.editions[editionType] = {};
+            this.editions[editionType]["character_bear"] = readParsed(`${path}character_bear.json`);
+            this.editions[editionType]["character_usec"] = readParsed(`${path}character_usec.json`);
+            this.editions[editionType]["storage"] = readParsed(`${path}storage.json`);
         }
     }
 
@@ -215,12 +217,13 @@ class Database {
     async saveModel(type, identifier = null) {
         switch(type) {
             case "account":
-                await this.saveAccounts(identifier)
+                await this.saveAccount(identifier)
             break;
         }
         
     }
 
+    // Account data processing //
     async loadAccounts() {
         if (!fileExist("./user/profiles")) {
             createDirectory("./user/profiles");
@@ -236,7 +239,7 @@ class Database {
         }
     }
 
-    async saveAccounts(sessionID) {
+    async saveAccount(sessionID) {
         if (!fileExist(`./user/profiles/${sessionID}`)) {
             createDirectory(`./user/profiles/${sessionID}`);
         }
@@ -284,6 +287,23 @@ class Database {
     }
 
     async reloadAccount(accountID, forcedReload = false) {
+
+    }
+
+    // Profile data processing //
+    async loadProfiles() {
+
+    }
+
+    async saveProfile(sessionID) {
+
+    }
+
+    async reloadProfiles() {
+
+    }
+
+    async reloadProfile(sessionID, forcedReload = false) {
 
     }
 

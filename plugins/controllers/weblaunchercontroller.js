@@ -3,6 +3,7 @@ const { account } = require('../models/account');
 const fs = require('fs');
 const { logger } = require('../utilities');
 const { webinterface } = require('../../app');
+const { exec } = require('child_process');
 
 class weblauncherController {
     /**
@@ -21,6 +22,10 @@ class weblauncherController {
         }
 
         const userAccount = await account.get(sessionID);
+        if(!userAccount) {
+            reply.redirect('/webinterface/account/login');
+        }
+
         const tarkovPath = userAccount.tarkovPath;
 
         // Is the tarkovPath set within ther userAccount?
@@ -84,8 +89,7 @@ class weblauncherController {
             if (fs.existsSync(tarkovPath)) {
                 // Try to spawn tarkov.
                 logger.logDebug("[WEBINTERFACE]Starting tarkov...")
-                var spawn = require('child_process').spawn;
-                var tarkovGame = spawn(tarkovPath, ['-bC5vLmcuaS5u={"email":"' + userAccount.email + '","password":"' + userAccount.password + '","toggle":true,"timestamp":0}', '-token=' + sessionID, '-config={"BackendUrl":"https://' + core.serverConfig.ip + ':' + core.serverConfig.port + '","Version":"live"}']);
+                exec(tarkovPath + ' -bC5vLmcuaS5u={"email":"' + userAccount.email + '","password":"' + userAccount.password + '","toggle":true,"timestamp":0} -token=' + sessionID + ' -config={"BackendUrl":"https://' + core.serverConfig.ip + ':' + core.serverConfig.port + '","Version":"live"}');
                 return await webinterface.renderMessage("Successful", "Tarkov will start shortly.");
             } else {
                 // The tarkov executable doesn't exist
