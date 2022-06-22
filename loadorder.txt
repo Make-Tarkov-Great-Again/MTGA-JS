@@ -1,0 +1,39 @@
+:GET: :/singleplayer/bundles
+:POST: :/client/game/start
+![2022-06-22 20:35:59] Tried to load session AID4299742586159zSJpZenE but it wasn't cached, loading.
+:POST: :/client/menu/locale/en
+:POST: :/client/game/version/validate
+.[2022-06-22 20:35:59] User AID4299742586159zSJpZenE connected with client version 0.12.12.15.18103
+:POST: :/client/languages
+:POST: :/client/game/config
+:POST: :/client/items
+:POST: :/client/customization
+:POST: :/client/globals
+:POST: :/client/trading/api/traderSettings
+:POST: :/client/settings
+:POST: :/client/game/profile/list
+.[2022-06-22 20:36:07] Updating Health for: AID4299742586159zSJpZenE [Health:264962.26666666666/min (Infinity/BodyPart)] [Energy:33120.28333333333/min] [Hydration:33120.28333333333/min]
+:POST: :/client/game/profile/select
+:POST: :/client/profile/status
+:POST: :/client/weather
+:POST: :/client/locale/en
+:POST: :/client/locations
+:POST: :/client/game/profile/select
+:POST: :/client/profile/status
+:POST: :/client/handbook/templates
+:POST: :/client/hideout/areas
+:POST: :/client/hideout/settings
+:POST: :/client/hideout/production/recipes
+:POST: :/client/hideout/production/scavcase/recipes
+:POST: :/client/handbook/builds/my/list
+:POST: :/client/notifier/channel/create
+:POST: :/client/mail/dialog/list
+:POST: :/client/friend/list
+:POST: :/client/friend/request/list/inbox
+:POST: :/client/friend/request/list/outbox
+.[2022-06-22 20:36:10] Account file for account AID4299742586159zSJpZenE was saved to disk.
+:POST: :/client/profile/status
+:POST: :/client/trading/customization/storage
+:POST: :/client/server/list
+:POST: :/client/quest/list
+:POST: :/client/repeatalbeQuests/activityPeriods

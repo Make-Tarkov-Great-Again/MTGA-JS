@@ -1,5 +1,6 @@
 'use strict'
 const fs = require('fs');
+const safeStringify = require('fast-safe-stringify');
 
 /**
  * Read file and parse it.
@@ -36,7 +37,7 @@ const fileExist = (filePath, useRelative = true) => {
  * @returns 
  */
 const stringify = (data, oneLiner = false) => {
-    return (oneLiner) ? JSON.stringify(data, null, "\t") : JSON.stringify(data);
+    return (oneLiner) ? safeStringify(data, null, "\t") : safeStringify(data);
 }
 
 /**
