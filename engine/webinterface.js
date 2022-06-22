@@ -38,10 +38,6 @@ class webInterface {
         return false;
     }
 
-    async generateMessageURL(messageHeader, messageBody) {
-        return "/message?messageHeader=" + messageHeader + "&messageBody=" + messageBody;
-    }
-
     // Render Page //
 
     async getBase() {
@@ -103,7 +99,7 @@ class webInterface {
         return fusedPage;
     }
 
-    async displayMessage(messageHeader, messageContent) {
+    async renderMessage(messageHeader, messageContent) {
         let pageVariables = {
             "messageHeader": messageHeader,
             "messageContent": messageContent

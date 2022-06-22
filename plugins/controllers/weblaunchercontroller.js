@@ -12,6 +12,8 @@ class weblauncherController {
      * @param {*} reply 
      */
     static launch = async (request = null, reply = null) => {
+        reply.type("text/html")
+        
         const sessionID = await webinterface.checkForSessionID(request);
         if (!sessionID) {
             reply.redirect('/webinterface/account/login');
@@ -63,18 +65,18 @@ class weblauncherController {
                 userAccount.tarkovPath = scriptOutput.replace(/[\r\n]/gm, '') + "\\EscapeFromTarkov.exe"
                 userAccount.save();
             });
-            reply.redirect(await webinterface.generateMessageURL("Info", "Please set the tarkov game path (NOT YOUR LIVE GAME CLIENT!!!1!!11!!elf) in the dialogue box that was opened and try to start tarkov again."));
+            return await webinterface.renderMessage("Info", "Please set the tarkov game path (NOT YOUR LIVE GAME CLIENT!!!1!!11!!elf) in the dialogue box that was opened and try to start tarkov again.");
         } else {
             if (fs.existsSync(tarkovPath)) {
                 logger.logDebug("[WEBINTERFACE]Starting tarkov...")
                 var spawn = require('child_process').spawn;
                 var tarkovGame = spawn(tarkovPath, ['-bC5vLmcuaS5u={"email":"' + userAccount.email + '","password":"' + userAccount.password + '","toggle":true,"timestamp":0}', '-token=' + sessionID, '-config={"BackendUrl":"https://' + core.serverConfig.ip + ':' + core.serverConfig.port + '","Version":"live"}']);
-                reply.redirect(await webinterface.generateMessageURL("Successful", "Tarkov will start shortly."));
+                return await webinterface.renderMessage("Successful", "Tarkov will start shortly.");
             } else {
                 logger.logDebug("[WEBINTERFACE] Unable to start tarkov, file does not exist.");
                 userAccount.tarkovPath = null;
                 userAccount.save();
-                reply.redirect(await webinterface.generateMessageURL("Error", "Tarkov path was incorrect, please reset the tarkov path."));
+                return await webinterface.renderMessage("Error", "Tarkov path was incorrect, please reset the tarkov path.");
             }
         }
     }

@@ -12,6 +12,7 @@ class accountController {
 
     static home = async (request = null, reply = null) => {
         reply.type("text/html")
+        
         const sessionID = await webinterface.checkForSessionID(request);
         logger.logDebug(account.get(sessionID));
         if (sessionID) {
@@ -25,7 +26,7 @@ class accountController {
                 return await webinterface.renderPage("/account/home.html", pageVariables);
             }
         } else {
-            reply.redirect(await webinterface.generateMessageURL("Login please", "Login into your account or create a new one."));
+            return await webinterface.renderMessage("Restricted", "Login into your account or create a new one.");
         }
     }
 
@@ -33,7 +34,7 @@ class accountController {
         reply.type("text/html")
 
         if (await webinterface.checkForSessionID(request)) {
-            reply.redirect(await webinterface.generateMessageURL("Error", "Incorrect call."));
+            return await webinterface.renderMessage("Error", "Incorrect call.");
         } else {
             return await webinterface.renderPage("/account/login.html");
         }
@@ -41,7 +42,7 @@ class accountController {
     
     static login = async (request = null, reply = null) => {
         if (await webinterface.checkForSessionID(request)) {
-            reply.redirect(await webinterface.generateMessageURL("Error", "Incorrect call."));
+            return await webinterface.renderMessage("Error", "Incorrect call.");
         } else {
             if (request.body.email != (undefined || null) && request.body.password != (undefined || null)) {
                 let userAccount = await account.getBy('email', request.body.email);
@@ -52,7 +53,7 @@ class accountController {
                     }
                 }
             }
-            reply.redirect(await webinterface.generateMessageURL("Error", "Incorrect username or password."));
+            return await webinterface.renderMessage("Error", "Incorrect username or password.");
         }
     }
 
@@ -60,7 +61,7 @@ class accountController {
         reply.type("text/html")
 
         if (await webinterface.checkForSessionID(request)) {
-            return await webinterface.displayContent("fuck off");
+            return await webinterface.renderMessage("Error", "Incorrect call.");
         } else {
             let editionsHTML = "";
 
@@ -69,7 +70,7 @@ class accountController {
             for (const [name, value] of Object.entries(Object.keys(profiles))) {
                 editionsHTML = editionsHTML + '<option value="' + value + '">' + value + '</option>'
             }
-            
+
             let pageVariables = {
                 "editions": editionsHTML
             }
@@ -86,7 +87,7 @@ class accountController {
 
             if(await account.getBy('email', request.body.email)) {
                 logger.logDebug("[CLUSTER] Account already exists.")
-                reply.redirect(await webinterface.generateMessageURL("Error", "The account already exists, please choose a different username."));
+                return await webinterface.renderMessage("Error", "The account already exists, please choose a different username.");
             }
 
             let newAccount = new account;
