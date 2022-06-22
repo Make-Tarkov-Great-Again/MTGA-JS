@@ -10,6 +10,12 @@ class accountController {
         return account.getBy("email", "bude");
     }
 
+    /**
+     * Display the initial homepage when accessing the web interface
+     * @param {*} request 
+     * @param {*} reply 
+     * @returns A rendered webpage
+     */
     static home = async (request = null, reply = null) => {
         reply.type("text/html")
         
@@ -30,6 +36,12 @@ class accountController {
         }
     }
 
+    /**
+     * Show the login page.
+     * @param {*} request 
+     * @param {*} reply 
+     * @returns A rendered webpage
+     */
     static showLogin = async (request = null, reply = null) => {
         reply.type("text/html")
 
@@ -40,6 +52,12 @@ class accountController {
         }
     }
     
+    /**
+     * Process data from the login page.
+     * @param {*} request 
+     * @param {*} reply 
+     * @returns 
+     */
     static login = async (request = null, reply = null) => {
         if (await webinterface.checkForSessionID(request)) {
             return await webinterface.renderMessage("Error", "Incorrect call.");
@@ -57,6 +75,12 @@ class accountController {
         }
     }
 
+    /**
+     * Show the registration page and create select options for each game edition.
+     * @param {*} request 
+     * @param {*} reply 
+     * @returns 
+     */
     static create = async (request = null, reply = null) => {
         reply.type("text/html")
 
@@ -79,6 +103,12 @@ class accountController {
         }
     }
 
+    /**
+     * Process the data from the registration page and create a new account.
+     * @param {*} request 
+     * @param {*} reply 
+     * @returns 
+     */
     static store = async (request = null, reply = null) => {
         if (request.body.email != (undefined || null) && request.body.password != (undefined || null) && request.body.edition != (undefined || null)) {
             logger.logDebug("[CLUSTER] Registering new account...")

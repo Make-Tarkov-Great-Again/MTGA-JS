@@ -6,6 +6,10 @@ class baseModel {
 
     }
 
+    /**
+     * Save the model
+     * @returns true if the model was saved, will return false otherwise.
+     */
     async save() {
         const { database } = require("../../app");
         var className = this.constructor.name;
@@ -18,6 +22,10 @@ class baseModel {
         return false;
     }
     
+    /**
+     * Destroy the model
+     * @returns true if the model was destroyed, will return false otherwise.
+     */
     async destroy() {
         const { database } = require("../../app");
 
@@ -29,6 +37,10 @@ class baseModel {
         return false;
     }
 
+    /**
+     * Get the model based on its ID
+     * @returns returns the model instance, will return false otherwise.
+     */
     static async get(id) {
         const { database } = require("../../app");
 
@@ -41,6 +53,12 @@ class baseModel {
         return  false;
     }
 
+    /**
+     * Will try to get the model instance by comparing a property with the provided value.
+     * @param {*} property 
+     * @param {*} value 
+     * @returns 
+     */
     static async getBy(property, value) {
         const { database } = require("../../app");
 
