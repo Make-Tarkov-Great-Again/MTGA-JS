@@ -1,0 +1,39 @@
+<div class="row mb-3">
+    <div class="col-6 themed-grid-col">
+        <center>
+            <h2>Account Settings</h2>
+            <div class="form w-100 m-auto">
+                <form action="/webinterface/account/settings/changePassword" method="post">
+                    <h1 class="h3 mb-3 fw-normal">Change Password</h1>                    
+                    <div class="form-floating">
+                        <input name="password" type="password" class="form-control" id="password" placeholder="Password">
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="form-floating">
+                        <input name="password_retype" type="password" class="form-control" id="password_retype" placeholder="Retype Password">
+                        <label for="password_retype">Retype Password</label>
+                    </div>
+                    <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="form w-100 m-auto">
+                <form action="/webinterface/account/settings/tarkovPath" method="post">
+                    <h1 class="h3 mb-3 fw-normal">Launcher</h1>                    
+                    <div class="form-floating">
+                        <input name="tarkovPath" type="text" class="form-control" id="tarkovPath" placeholder="tarkovPath" value="{{tarkovPath}}">
+                        <label for="tarkovPath">tarkovPath</label>
+                    </div>
+                    <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
+                </form>
+            </div>
+        </center>
+    </div>
+    <div class="col-6 themed-grid-col">
+        <center>
+            <h2>Profile Settings</h2>
+            <div class="form w-100 m-auto">
+                <button class="w-100 btn btn-lg btn-primary" onclick="confirmRedirect('/webinterface/account/settings/wipe')" >Wipe Account</button>
+            </div>
+        </center>
+    </div>
+  </div>

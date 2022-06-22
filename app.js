@@ -44,13 +44,10 @@ const app = require('fastify')({
 
 const database = require('./source/database');
 database.loadDatabase();
-const account = require("./plugins/models/account");
-
 
 module.exports = {
     app,
-    database,
-    account,
+    database
 }
 
 app.removeAllContentTypeParsers();

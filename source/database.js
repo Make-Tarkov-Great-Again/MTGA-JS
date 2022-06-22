@@ -1,14 +1,20 @@
 'use strict'
+const { account } = require('../plugins/models/account');
+const fs = require('fs');
+const logger = require('../plugins/utilities/logger');
 const {
     readParsed,
     fileExist,
+    stringify,
+    writeFile,
     getDirectoriesFrom,
+    createDirectory
   } = require('./../plugins/utilities/');
 
 /**
  * Return completed database
  */
-const Database = class {
+class Database {
     constructor() {
         this.core;
         this.items;
@@ -19,6 +25,11 @@ const Database = class {
         //this.bots;
         this.profiles;
         this.traders;
+
+
+        // Model Data //
+        this.accounts = {};
+        this.accountFileAge = {};
     }
 
     async loadDatabase() {
@@ -32,6 +43,9 @@ const Database = class {
             this.loadTraders(),
             this.loadProfiles(),
             //this.loadBots()
+
+            // Model Data //
+            this.loadAccounts(),
         ]);
     }
     /**
@@ -181,5 +195,92 @@ const Database = class {
          * to generate that data, and then use that data to populate the flea.
          */
     }
+
+    /////////////////// MODEL DATA ///////////////////
+
+    async createModelFromParse(model, data) {
+        let classModel = eval(`new ${model}`);
+        for (const [key, value] of Object.entries(data)) {
+            classModel[key] = value;
+        }
+        
+        return classModel;
+    }
+
+    async loadAccounts() {
+        if (!fileExist("./user/profiles")) {
+            createDirectory("./user/profiles");
+        }
+
+        for (const profileID of getDirectoriesFrom('/user/profiles')) {
+            if (fileExist("./user/profiles/" + profileID + "/account.json")) {
+                logger.logDebug("[DATABASE][ACCOUNTS] Loading user account " + profileID);
+                this.accounts[profileID] = await this.createModelFromParse('account', readParsed("./user/profiles/" + profileID + "/account.json"));
+                const stats = fs.statSync(`./user/profiles/${profileID}/account.json`);
+                this.accountFileAge[profileID] = stats.mtimeMs;
+            }
+        }
+    }
+
+    async save(type, identifier = null) {
+        switch(type) {
+            case "account":
+                await this.saveAccounts(identifier)
+            break;
+        }
+        
+    }
+
+    async saveAccounts(sessionID) {
+        if (!fileExist(`./user/profiles/${sessionID}`)) {
+            createDirectory(`./user/profiles/${sessionID}`);
+        }
+        // Does the account file exist? (Required for new accounts)
+        if (!fileExist(`./user/profiles/${sessionID}/account.json`)) {
+            // Save memory content to disk
+            writeFile(`./user/profiles/${sessionID}/account.json`, stringify(this.accounts[sessionID]));
+
+            // Update file age to prevent another reload by this server.
+            const stats = fs.statSync(`./user/profiles/${sessionID}/account.json`);
+            this.accountFileAge[sessionID] = stats.mtimeMs;
+
+            logger.logSuccess(`[CLUSTER] New account ${sessionID} registered and was saved to disk.`);
+        } else {
+            // Check if the file was modified by another cluster member using the file age.
+            const stats = fs.statSync(`./user/profiles/${sessionID}/account.json`);
+            if (stats.mtimeMs == this.accountFileAge[sessionID]) {
+                // Check if the memory content differs from the content on disk.
+                const currentAccount = this.accounts[sessionID];
+                const savedAccount = readParsed(`./user/profiles/${sessionID}/account.json`);
+                if (stringify(currentAccount) !== stringify(savedAccount)) {
+                    // Save memory content to disk
+                    logger.logDebug(this.accounts[sessionID]);
+                    writeFile(`./user/profiles/${sessionID}/account.json`, stringify(this.accounts[sessionID]));
+
+                    // Update file age to prevent another reload by this server.
+                    const stats = fs.statSync(`./user/profiles/${sessionID}/account.json`);
+                    this.accountFileAge[sessionID] = stats.mtimeMs;
+
+                    logger.logSuccess(`[CLUSTER] Account file for account ${sessionID} was saved to disk.`);
+                }
+            } else {
+                logger.logWarning(`[CLUSTER] Account file for account ${sessionID} was modified, reloading.`);
+
+                // Reload the account from disk.
+                this.accounts[sessionID] = readParsed(`./user/profiles/${sessionID}/account.json`);
+                // Reset the file age for this users account file.
+                this.accountFileAge[sessionID] = stats.mtimeMs;
+            }
+        }
+    }
+
+    async reloadAccounts() {
+
+    }
+
+    async reloadAccount(accountID, forcedReload = false) {
+
+    }
+
 }
-module.exports= new Database();
+module.exports = new Database();

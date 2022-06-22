@@ -11,32 +11,37 @@ class webInterfaceController {
     constructor() {
         this.sessionID = null;
         this.privateNavigation = {
-            "Start Tarkov": "/webinterface/weblauncher/start"
+            "Start Tarkov": "/webinterface/weblauncher/start",
+            "Settings": "/webinterface/account/settings"
         }
         this.baseDirectory = "./plugins/templates/webinterface";
         logger.logDebug("[WEBINTERFACE] Constructed.")
     }
 
     // Auth //
-    setSessionID(sessionID) {
+    async setSessionID(sessionID) {
         this.sessionID = sessionID;
     }
 
-    getSessionID() {
+    async getSessionID() {
         return this.sessionID;
+    }
+
+    async generateMessageURL(messageHeader, messageBody) {
+        return "/message?messageHeader=" + messageHeader + "&messageBody=" + messageBody;
     }
 
     // Render Page //
 
-    getBase() {
+    async getBase() {
         logger.logDebug("[WEBINTERFACE] Reading base file: " + this.baseDirectory + "/base.html");
-        return this.parseBase(read(this.baseDirectory + "/base.html"));
+        return this.parseBase(await read(this.baseDirectory + "/base.html"));
     }
 
-    generateNavigation(sessionID) {
+    async generateNavigation(sessionID) {
         let outputHTML = "";
 
-        if (this.getSessionID() != null) {
+        if (await this.getSessionID() != null) {
             for (const [name, link] of Object.entries(this.privateNavigation)) {
                 outputHTML = outputHTML +
                     '<li class="nav-item"> \
@@ -64,60 +69,78 @@ class webInterfaceController {
 
     }
 
-    parseBase(baseHTML) {
+    async parseBase(baseHTML) {
         let parsed = String(baseHTML)
             .replaceAll("{{servername}}", core.serverConfig.name)
-            .replaceAll("{{navigation}}", this.generateNavigation());
+            .replaceAll("{{navigation}}", await this.generateNavigation());
         return parsed;
     }
 
-    readFile(filename) {
+    async readFile(filename) {
         logger.logDebug("[WEBINTERFACE] Reading file: " + this.baseDirectory + "/files/" + filename);
-        return read(this.baseDirectory + "/files/" + filename);
+        return await read(this.baseDirectory + "/files/" + filename);
     }
 
-    displayMessage(messageHeader, messageContent) {
-        let baseHTML = this.getBase();
+    async displayMessage(messageHeader, messageContent) {
+        let baseHTML = await this.getBase();
         return String(baseHTML)
-            .replace("{{content}}", read(this.baseDirectory + "/message.html"))
+            .replace("{{content}}", await read(this.baseDirectory + "/message.html"))
             .replace("{{messageHeader}}", messageHeader)
             .replace("{{messageContent}}", messageContent);
     }
 
-    displayContent(content) {
+    async displayContent(content) {
         logger.logDebug("[WEBINTERFACE] Test display: " + content);
-        let baseHTML = this.getBase();
+        let baseHTML = await this.getBase();
         return String(baseHTML).replace("{{content}}", content);
     }
 
-    displayHomePage(accountData) {
+    async displayHomePage(accountData) {
         logger.logDebug(accountData);
-        let baseHTML = this.getBase();
+        let baseHTML = await this.getBase();
         return String(baseHTML)
-            .replace("{{content}}", read(this.baseDirectory + "/account/home.html"))
+            .replace("{{content}}", await read(this.baseDirectory + "/account/home.html"))
             .replace("{{version}}", core.serverConfig.serverVersion)
             .replace("{{username}}", accountData.email);
     }
 
-    displayLoginPage() {
-        let baseHTML = this.getBase();
-        return String(baseHTML).replace("{{content}}", read(this.baseDirectory + "/account/login.html"));
+    async displayLoginPage() {
+        let baseHTML = await this.getBase();
+        return String(baseHTML).replace("{{content}}", await read(this.baseDirectory + "/account/login.html"));
     }
 
-    displayRegistrationPage(editions) {
+    async displaySettingsPage() {
+        let baseHTML = await this.getBase();
+        return String(baseHTML).replace("{{content}}", await read(this.baseDirectory + "/account/settings.html"));
+    }
+
+    async displayRegistrationPage(editions) {
         let editionsHTML = "";
 
         for (const [name, value] of Object.entries(editions)) {
             editionsHTML = editionsHTML + '<option value="' + value + '">' + value + '</option>'
         }
 
-        let baseHTML = this.getBase();
+        let baseHTML = await this.getBase();
         let registrationPageHTML = String(baseHTML)
-            .replace("{{content}}", read(this.baseDirectory + "/account/register.html"))
+            .replace("{{content}}", await read(this.baseDirectory + "/account/register.html"))
             .replace("{{editions}}", editionsHTML)
 
 
         return registrationPageHTML;
+    }
+
+    async checkForSessionID(request) {
+        const sessionID = request.cookies.PHPSESSID;
+        if (sessionID) {
+            this.setSessionID(sessionID);
+            logger.logDebug("[WEBINTERFACE] Found sessionID cookie: " + sessionID);
+            return sessionID;
+        } else {
+            this.setSessionID(null);
+        }
+    
+        return false;
     }
 }
 
