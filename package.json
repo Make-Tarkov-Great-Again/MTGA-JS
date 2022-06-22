@@ -1,13 +1,13 @@
 {
   "name": "Make Tarkov Great Again",
   "version": "0.0.1",
-  "description": "ur mom gay",
+  "description": "Fastify Tarkov Emulation Server",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"
   },
   "keywords": [],
-  "author": "MTGA",
+  "author": "MTGA-Team",
   "license": "ISC",
   "dependencies": {
     "@fastify/autoload": "^5.0.0",
