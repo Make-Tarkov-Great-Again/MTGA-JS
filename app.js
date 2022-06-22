@@ -1,4 +1,4 @@
-const { certificate } = require("./source/certificategenerator");
+const { certificate } = require("./engine/certificategenerator");
 const cert = certificate.generate("127.0.0.1");
 
 /**
@@ -42,12 +42,14 @@ const app = require('fastify')({
     },
 })
 
-const database = require('./source/database');
+const database = require('./engine/database');
 database.loadDatabase();
+const webinterface = require("./engine/webinterface");
 
 module.exports = {
     app,
-    database
+    database,
+    webinterface
 }
 
 app.removeAllContentTypeParsers();

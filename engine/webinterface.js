@@ -1,20 +1,18 @@
-const {
-    app,
-    database: {
-        core
-    }
-} = require('../../app');
+const { logger, read } = require("../plugins/utilities");
+const database = require("./database");
 
-const { logger, read } = require("../utilities");
-
-class webInterfaceController {
+/**
+ * The webInterfaceController handles the parsing of templates.
+ * Can be optimized.
+ */
+class webInterface {
     constructor() {
         this.sessionID = null;
         this.privateNavigation = {
             "Start Tarkov": "/webinterface/weblauncher/start",
             "Settings": "/webinterface/account/settings"
         }
-        this.baseDirectory = "./plugins/templates/webinterface";
+        this.baseDirectory = "./templates/webinterface";
         logger.logDebug("[WEBINTERFACE] Constructed.")
     }
 
@@ -71,7 +69,7 @@ class webInterfaceController {
 
     async parseBase(baseHTML) {
         let parsed = String(baseHTML)
-            .replaceAll("{{servername}}", core.serverConfig.name)
+            .replaceAll("{{servername}}", database.core.serverConfig.name)
             .replaceAll("{{navigation}}", await this.generateNavigation());
         return parsed;
     }
@@ -100,7 +98,7 @@ class webInterfaceController {
         let baseHTML = await this.getBase();
         return String(baseHTML)
             .replace("{{content}}", await read(this.baseDirectory + "/account/home.html"))
-            .replace("{{version}}", core.serverConfig.serverVersion)
+            .replace("{{version}}", database.core.serverConfig.serverVersion)
             .replace("{{username}}", accountData.email);
     }
 
@@ -144,4 +142,4 @@ class webInterfaceController {
     }
 }
 
-module.exports = new webInterfaceController();
+module.exports = new webInterface();

@@ -10,7 +10,7 @@ class baseModel {
         const { database } = require("../../app");
         var className = this.constructor.name;
         database[className + 's'][this.id] = this;
-        database.save(className, this.id);
+        database.saveModel(className, this.id);
     }
     
     async destroy() {

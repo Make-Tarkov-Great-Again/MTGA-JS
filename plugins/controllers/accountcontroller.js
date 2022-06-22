@@ -1,9 +1,9 @@
 
-const { profiles } = require("../../source/database");
+const { profiles } = require("../../engine/database");
 const { account } = require("../models/account");
 const { logger } = require("../utilities");
 const { generateUniqueId } = require(`../utilities/utility`);
-const webInterfaceController = require("./webInterfaceController");
+const { webinterface } = require('../../app');
 
 class accountController {
     static test = async () => {
@@ -12,28 +12,28 @@ class accountController {
 
     static home = async (request = null, reply = null) => {
         reply.type("text/html")
-        const sessionID = await webInterfaceController.checkForSessionID(request);
+        const sessionID = await webinterface.checkForSessionID(request);
         if (sessionID) {
             // ToDo: Add Profile Data and Extend home.html //
-            return await webInterfaceController.displayHomePage(await account.get(sessionID));
+            return await webinterface.displayHomePage(await account.get(sessionID));
         } else {
-            return await webInterfaceController.displayContent("Please log into your account or register a new one.");
+            return await webinterface.displayContent("Please log into your account or register a new one.");
         }
     }
 
     static showLogin = async (request = null, reply = null) => {
         reply.type("text/html")
 
-        if (await webInterfaceController.checkForSessionID(request)) {
-            return webInterfaceController.displayContent("fuck off");
+        if (await webinterface.checkForSessionID(request)) {
+            return webinterface.displayContent("fuck off");
         } else {
-            return webInterfaceController.displayLoginPage();
+            return webinterface.displayLoginPage();
         }
     }
     
     static login = async (request = null, reply = null) => {
-        if (await webInterfaceController.checkForSessionID(request)) {
-            return await webInterfaceController.displayContent("fuck off");
+        if (await webinterface.checkForSessionID(request)) {
+            return await webinterface.displayContent("fuck off");
         } else {
             if (request.body.email != (undefined || null) && request.body.password != (undefined || null)) {
                 let userAccount = await account.getBy('email', request.body.email);
@@ -44,22 +44,20 @@ class accountController {
                     }
                 }
             }
-            reply.redirect(await webInterfaceController.generateMessageURL("Error", "Incorrect username or password."));
+            reply.redirect(await webinterface.generateMessageURL("Error", "Incorrect username or password."));
         }
     }
 
     static create = async (request = null, reply = null) => {
         reply.type("text/html")
 
-        if (await webInterfaceController.checkForSessionID(request)) {
-            return await webInterfaceController.displayContent("fuck off");
+        if (await webinterface.checkForSessionID(request)) {
+            return await webinterface.displayContent("fuck off");
         } else {
             let editions = Object.keys(profiles);
-            return await webInterfaceController.displayRegistrationPage(editions);
+            return await webinterface.displayRegistrationPage(editions);
         }
     }
-
-    
 
     static store = async (request = null, reply = null) => {
         if (request.body.email != (undefined || null) && request.body.password != (undefined || null) && request.body.edition != (undefined || null)) {
@@ -69,7 +67,7 @@ class accountController {
 
             if(await account.getBy('email', request.body.email)) {
                 logger.logDebug("[CLUSTER] Account already exists.")
-                reply.redirect(await webInterfaceController.generateMessageURL("Error", "The account already exists, please choose a different username."));
+                reply.redirect(await webinterface.generateMessageURL("Error", "The account already exists, please choose a different username."));
             }
 
             let newAccount = new account;
@@ -94,6 +92,10 @@ class accountController {
     }
 
     static remove = async (id, request = null, reply = null) => {
+        
+    }
+
+    static edit = async (id, request = null, reply = null) => {
         
     }
 

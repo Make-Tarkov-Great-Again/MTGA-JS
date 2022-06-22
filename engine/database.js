@@ -1,5 +1,4 @@
 'use strict'
-const { account } = require('../plugins/models/account');
 const fs = require('fs');
 const logger = require('../plugins/utilities/logger');
 const {
@@ -10,6 +9,7 @@ const {
     getDirectoriesFrom,
     createDirectory
   } = require('./../plugins/utilities/');
+const { account } = require('../plugins/models/account');
 
 /**
  * Return completed database
@@ -207,6 +207,20 @@ class Database {
         return classModel;
     }
 
+    /**
+     * Calls the models save functionality based on the model type.
+     * @param {*} type 
+     * @param {*} identifier 
+     */
+    async saveModel(type, identifier = null) {
+        switch(type) {
+            case "account":
+                await this.saveAccounts(identifier)
+            break;
+        }
+        
+    }
+
     async loadAccounts() {
         if (!fileExist("./user/profiles")) {
             createDirectory("./user/profiles");
@@ -220,15 +234,6 @@ class Database {
                 this.accountFileAge[profileID] = stats.mtimeMs;
             }
         }
-    }
-
-    async save(type, identifier = null) {
-        switch(type) {
-            case "account":
-                await this.saveAccounts(identifier)
-            break;
-        }
-        
     }
 
     async saveAccounts(sessionID) {
