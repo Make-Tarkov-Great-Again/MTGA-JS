@@ -64,16 +64,17 @@ class accountController {
         } else {
             let editionsHTML = "";
 
-            for (const [name, value] of Object.keys(profiles)) {
+            logger.logDebug(profiles);
+
+            for (const [name, value] of Object.entries(Object.keys(profiles))) {
                 editionsHTML = editionsHTML + '<option value="' + value + '">' + value + '</option>'
             }
-
+            
             let pageVariables = {
-                "editions": editionsHTML,
-                "username": userAccount.email
+                "editions": editionsHTML
             }
             
-            return await webinterface.renderPage("/account/register.html", );
+            return await webinterface.renderPage("/account/register.html", pageVariables);
         }
     }
 
