@@ -10,21 +10,35 @@ class baseModel {
         const { database } = require("../../app");
         var className = this.constructor.name;
         database[className + 's'][this.id] = this;
-        database.saveModel(className, this.id);
+
+        if(database.saveModel(className, this.id)) {
+            return true
+        }
+        
+        return false;
     }
     
     async destroy() {
         const { database } = require("../../app");
 
         var className = this.name;
-        delete database[className + 's'][this.id];
+        if(delete database[className + 's'][this.id]) {
+            return true;
+        }
+
+        return false;
     }
 
     static async get(id) {
         const { database } = require("../../app");
 
         var className = this.name;
-        return database[className + 's'][id];
+        let instance = database[className + 's'][id];
+        if(instance) {
+            return instance;
+        }
+
+        return  false;
     }
 
     static async getBy(property, value) {
