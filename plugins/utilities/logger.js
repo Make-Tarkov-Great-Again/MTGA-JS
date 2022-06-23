@@ -118,7 +118,7 @@ class Logger {
   logDebug(text, mode = 0) {
     switch (mode) {
       case 0:
-        this.log("[DEBUG]", text, "white");
+        this.log("[DEBUG]" , text, "white");
         return;
       case 1:
         this.log("[DEBUG]", text, "white");

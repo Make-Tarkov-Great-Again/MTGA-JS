@@ -1,7 +1,6 @@
 'use strict'
 const { logger, fileExist } = require('../utilities');
 const { webinterface } = require('../../app');
-const fastJson = require('fast-json-stringify');
 const fs = require('fs');
 const { accountController } = require('../controllers/accountcontroller');
 const { weblauncherController } = require('../controllers/weblaunchercontroller');

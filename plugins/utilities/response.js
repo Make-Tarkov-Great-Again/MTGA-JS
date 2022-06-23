@@ -25,6 +25,7 @@ const mimeTypes = {
     "zlib": "application/zlib",
 }
 
+// 
 const parseAcceptHeaders = (acceptHeaders)  => {
     const splitAcceptHeaders = acceptHeaders.split(',');
     switch(true) {
@@ -35,6 +36,22 @@ const parseAcceptHeaders = (acceptHeaders)  => {
             return mime['css'];
         break;
     }
+}
+
+const zlibJsonReply = async (data, reply) => {
+    let deflatedData = null;
+    let header = { 
+        'Content-Type': this.mime["json"] 
+    }
+
+    internal.zlib.deflate(data, function (err, buf) {
+        deflatedData = buf;
+    });
+
+    // in this case we are using only the nodejs http server response object
+    reply.raw.writeHead(200, header)
+    reply.raw.write('ok')
+    reply.raw.end()
 }
 
 
@@ -205,5 +222,6 @@ module.exports = {
     txtJson,
     html,
     file,
-    parseAcceptHeaders
+    parseAcceptHeaders,
+    zlibJsonReply
 }

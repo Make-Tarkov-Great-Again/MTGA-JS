@@ -1,26 +1,23 @@
 const { database } = require("../../../app");
 const { profile } = require("../../models/profile");
 const { getSessionID, getBody } = require("../../utilities");
+const { fastifyResponse } = require("../../utilities/fastifyResponse");
 const logger = require("../../utilities/logger");
 
 /**
  * This is an example controller with a basic callset.
  */
-class gameController { 
+class gameController {
     constructor() {
     }
 
     // JET Basics //
     static modeOfflinePatches = async (request = null, reply = null) => {
-        reply
-            .type("application/json")
-            .compress(database.core.serverConfig.Patches);
+        return await fastifyResponse.zlibJsonReply(reply, database.core.serverConfig.Patches);
     }
 
     static modeOfflinePatchNodes = async (request = null, reply = null) => {
-        reply
-            .type("application/json")
-            .compress(database.core.serverConfig.PatchNodes)
+        return await fastifyResponse.zlibJsonReply(reply, database.core.serverConfig.PatchNodes)
     }
 
     // Game //
@@ -28,13 +25,27 @@ class gameController {
     static clientGameStart = async (request = null, reply = null) => {
         let playerProfile = profile.get(await getSessionID(request));
         if (playerProfile) {
-            reply
-                .type("application/json")
-                .compress(getBody({ utc_time: Date.now() / 1000 }, 0, null))
+            return await fastifyResponse.zlibJsonReply
+                (
+                    reply,
+                    fastifyResponse.applyBody
+                    (
+                        {utc_time: Date.now() / 1000},
+                        0,
+                        null
+                    )
+                )
         } else {
-            reply
-                .type("application/json")
-                .compress(getBody({ utc_time: Date.now() / 1000 }, 999, "Profile Not sadas!!"))
+            return await fastifyResponse.zlibJsonReply
+            (
+                reply, 
+                fastifyResponse.applyBody
+                (
+                    {utc_time: Date.now() / 1000}, 
+                    999, 
+                    "Profile Not Found!!"
+                )
+            )
         }
     }
 }
