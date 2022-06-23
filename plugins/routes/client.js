@@ -1,3 +1,4 @@
+const { clientController } = require("../controllers/client/clientController");
 const { gameController } = require("../controllers/client/gameController");
 const { menuController } = require("../controllers/client/menuController");
 
@@ -17,6 +18,10 @@ module.exports = async function gameRoutes(app, opts) {
 
     // Client Game Routes //
 
+    app.post(`/client/game/config`, async (request, reply) => {
+        return await gameController.clientGameConfig(request, reply);
+    });
+
     app.post(`/client/game/start`, async (request, reply) => {
         return await gameController.clientGameStart(request, reply);
     });
@@ -25,6 +30,7 @@ module.exports = async function gameRoutes(app, opts) {
         return await gameController.clientGameVersionValidate(request, reply);
     });
 
+
     // Client Menu Routes //
 
     app.post(`/client/menu/locale/:language`, async (request, reply) => {
@@ -32,11 +38,20 @@ module.exports = async function gameRoutes(app, opts) {
     });
 
     app.post(`/client/locale/:language`, async (request, reply) => {
-        return await menuController.clientGlobalLocale(request, reply);
+        return await menuController.clientLocale(request, reply);
     })
 
-    app.post(`/client/languages`, async (request, reply) => {
-        return await menuController.clientGetLanguages(request, reply);
+    // Ungrouped routes //
+
+    app.post(`/client/customization`, async (request, reply) => {
+        return await clientController.clientCustomization(request, reply);
     });
-    
+
+    app.post(`/client/items`, async (request, reply) => {
+        return await clientController.clientItems(request, reply);
+    });
+
+    app.post(`/client/languages`, async (request, reply) => {
+        return await clientController.clientLanguages(request, reply);
+    });    
 }

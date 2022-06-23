@@ -1,12 +1,11 @@
 const { database } = require("../../../app");
 const { profile } = require("../../models/profile");
+const utilities = require("../../utilities");
 const { getBody } = require("../../utilities");
 const { fastifyResponse } = require("../../utilities/fastifyResponse");
 const logger = require("../../utilities/logger");
 
-/**
- * This is an example controller with a basic callset.
- */
+
 class gameController {
     constructor() {
     }
@@ -19,7 +18,6 @@ class gameController {
     static modeOfflinePatchNodes = async (request = null, reply = null) => {
         return await fastifyResponse.zlibJsonReply(reply, database.core.serverConfig.PatchNodes)
     }
-
     // Game //
 
     static clientGameStart = async (request = null, reply = null) => {
@@ -55,6 +53,38 @@ class gameController {
         (
             reply, 
             fastifyResponse.applyBody(null)
+        )
+    }
+
+    static clientGameConfig = async (request = null, reply = null) => {
+        const sessionID = await fastifyResponse.getSessionID(request);
+        const responseObject = {
+            queued: false,
+            banTime: 0,
+            hash: "BAN0",
+            lang: "en",
+            ndaFree: false,
+            reportAvailable: true,
+            languages: database.languages,
+            aid: sessionID,
+            token: sessionID,
+            taxonomy: 6,
+            activeProfileId: "pmc" + sessionID,
+            nickname: "user",
+            backend: {
+              Trading: fastifyResponse.getBackendURL(),
+              Messaging: fastifyResponse.getBackendURL(),
+              Main: fastifyResponse.getBackendURL(),
+              RagFair: fastifyResponse.getBackendURL(),
+            },
+            totalInGame: 0,
+            utc_time: utilities.getCurrentTimestamp(),
+        }
+
+        return await fastifyResponse.zlibJsonReply
+        (
+            reply, 
+            fastifyResponse.applyBody(responseObject)
         )
     }
 }

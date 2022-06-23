@@ -147,7 +147,7 @@ const getServerUptimeInSeconds = async () => {
 /**
  * @returns Current Date timestamp in seconds
  */
-const getCurrentTimestamp = async () => {
+const getCurrentTimestamp = () => {
     return ~~(new Date().getTime() / 1000);
 }
 /**

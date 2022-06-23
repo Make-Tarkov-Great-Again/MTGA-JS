@@ -14,6 +14,10 @@ class fastifyResponse {
         json: "application/json",
     }
 
+    static getBackendURL() {
+        const { database } = require("../../app");
+        return "https://" + database.core.serverConfig.ip + ":" + database.core.serverConfig.port;
+    }
 
     static getSessionID = async (request) => {
         const sessionID = request.cookies.PHPSESSID;

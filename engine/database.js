@@ -20,12 +20,13 @@ class Database {
         this.items;
         this.hideout;
         this.weather;
+        this.languages = {};
         this.locales;
         this.templates;
+        
         //this.bots;
         this.editions;
         this.traders;
-
 
         // Model Data //
         this.accounts = {};
@@ -97,6 +98,8 @@ class Database {
      * Load language data in parallel.
      */
     async loadLanguage() {
+        this.languages = readParsed(`./database/locales/languages.json`)['data'];
+
         const allLangs = getDirectoriesFrom(`./database/locales`);
         this.locales = { "languages": [] };
         for (const lang in allLangs) {
