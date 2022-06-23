@@ -24,7 +24,7 @@
     "slow-json-stringify": "^2.0.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.16",
+    "nodemon": "^2.0.18",
     "pino-pretty": "^8.1.0",
     "tap": "^16.3.0"
   }
