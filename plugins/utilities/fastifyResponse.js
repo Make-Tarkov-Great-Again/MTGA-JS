@@ -1,6 +1,7 @@
-const { stringify } = require("node:querystring");
-const zlib = require("node:zlib");
+const zlib = require("zlib");
 const { logger } = require(".");
+const { stringify } = require("./fileIO");
+
 
 class fastifyResponse {
     static mime = {
@@ -17,7 +18,7 @@ class fastifyResponse {
 
     static zlibJsonReply = async (reply, data) => {
         logger.logDebug("[zlibJsonReply] Compressing data:")
-        logger.logDebug(data);
+        logger.logDebug(stringify(data));
         let header = { 
             'Content-Type': this.mime["json"],
         }

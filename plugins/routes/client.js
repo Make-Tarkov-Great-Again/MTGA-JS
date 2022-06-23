@@ -14,6 +14,11 @@ module.exports = async function gameRoutes(app, opts) {
     });
 
     // Client Game Rotues //
+
+    app.get(`/client/game/start`, async (request, reply) => {
+        return await gameController.clientGameStart(request, reply);
+    });
+
     app.post(`/client/game/start`, async (request, reply) => {
         return await gameController.clientGameStart(request, reply);
     });
