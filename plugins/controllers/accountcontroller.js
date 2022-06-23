@@ -26,7 +26,7 @@ class accountController {
             if(userAccount) {
                 // ToDo: Add Account Data and Extend home.html //
                 let pageVariables = {
-                    "version": core.serverConfig.serverVersion,
+                    "version": core.serverConfig.version,
                     "username": userAccount.email
                 }
                 return await webinterface.renderPage("/account/home.html", pageVariables);

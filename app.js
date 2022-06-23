@@ -54,7 +54,7 @@ module.exports = {
     webinterface
 }
 
-app.removeAllContentTypeParsers();
+app.removeContentTypeParser("application/json");
 app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (req, body, done) {
     if (req.headers['user-agent'].includes('Unity')) {
         try {

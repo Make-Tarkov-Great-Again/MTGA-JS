@@ -9,10 +9,7 @@ module.exports = fp(async function (app, opts) {
    * Supports gzip, deflate, and brotli.
    * @see https://github.com/fastify/fastify-compress
    */
-  await app.register(require('@fastify/compress'),
-    {
-      inflateIfDeflated: true
-    });
+  await app.register(require('@fastify/compress'));
   app.log.info("@fastify/compress is enabled");
 
 
@@ -34,10 +31,6 @@ module.exports = fp(async function (app, opts) {
    */
   await app.register(require('@fastify/formbody'))
   app.log.info('@fastify/formbody is enabled')
-
-  app.post(`/`, (request, reply) => {
-    reply.send(request.body)
-  })
 
   /**
 * Register Handler
