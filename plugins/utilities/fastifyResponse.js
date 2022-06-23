@@ -1,6 +1,6 @@
 const zlib = require("zlib");
-const { logger } = require(".");
 const { stringify } = require("./fileIO");
+const logger = require("./logger");
 
 
 class fastifyResponse {
@@ -12,6 +12,16 @@ class fastifyResponse {
         css: "text/css",
         otf: "font/opentype",
         json: "application/json",
+    }
+
+
+    static getSessionID = async (request) => {
+        const sessionID = request.cookies.PHPSESSID;
+        if (sessionID) {
+            return sessionID;
+        } else {
+            return false
+        }
     }
 
     // HTTP Data Processing functionality //

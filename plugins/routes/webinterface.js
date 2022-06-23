@@ -2,8 +2,8 @@
 const { logger, fileExist } = require('../utilities');
 const { webinterface } = require('../../app');
 const fs = require('fs');
-const { accountController } = require('../controllers/accountcontroller');
-const { weblauncherController } = require('../controllers/weblaunchercontroller');
+const { accountController } = require('../controllers/accountController');
+const { weblauncherController } = require('../controllers/weblauncherController');
 
 const {
     database: {

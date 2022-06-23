@@ -1,4 +1,6 @@
 const { gameController } = require("../controllers/client/gameController");
+const { menuController } = require("../controllers/client/menuController");
+
 const { logger } = require("../utilities");
 
 module.exports = async function gameRoutes(app, opts) {
@@ -13,13 +15,19 @@ module.exports = async function gameRoutes(app, opts) {
         return await gameController.modeOfflinePatchNodes(request, reply);
     });
 
-    // Client Game Rotues //
-
-    app.get(`/client/game/start`, async (request, reply) => {
-        return await gameController.clientGameStart(request, reply);
-    });
+    // Client Game Routes //
 
     app.post(`/client/game/start`, async (request, reply) => {
         return await gameController.clientGameStart(request, reply);
+    }); 
+
+    app.post(`/client/game/version/validate`, async (request, reply) => {
+        return await gameController.clientGameVersionValidate(request, reply);
+    });
+
+    // Client Menu Routes //
+
+    app.post(`/client/menu/locale/:language`, async (request, reply) => {
+        return await menuController.clientMenuLocale(request, reply);
     });
 }

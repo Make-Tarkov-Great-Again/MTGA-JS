@@ -1,6 +1,6 @@
 const { database } = require("../../../app");
 const { profile } = require("../../models/profile");
-const { getSessionID, getBody } = require("../../utilities");
+const { getBody } = require("../../utilities");
 const { fastifyResponse } = require("../../utilities/fastifyResponse");
 const logger = require("../../utilities/logger");
 
@@ -23,7 +23,7 @@ class gameController {
     // Game //
 
     static clientGameStart = async (request = null, reply = null) => {
-        let playerProfile = profile.get(await getSessionID(request));
+        let playerProfile = profile.get(await fastifyResponse.getSessionID(request));
         if (playerProfile) {
             return await fastifyResponse.zlibJsonReply
                 (
@@ -47,6 +47,15 @@ class gameController {
                 )
             )
         }
+    }
+
+    static clientGameVersionValidate = async (request = null, reply = null) => {
+        logger.logInfo("Client connected with version: " + request.body.version.major);
+        return await fastifyResponse.zlibJsonReply
+        (
+            reply, 
+            fastifyResponse.applyBody(null)
+        )
     }
 }
 

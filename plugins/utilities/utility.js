@@ -9,15 +9,6 @@ const generateUniqueId = async (prefix = "") => {
     return retVal;
 }
 
-const getSessionID = async (request) => {
-    const sessionID = request.cookies.PHPSESSID;
-    if (sessionID) {
-        return sessionID;
-    } else {
-        return false
-    }
-}
-
 /**Check if the given value is undefined
  * 
  * @param {*} value definition to check
@@ -193,6 +184,5 @@ module.exports = {
     cloneSymbol,
     cloneReg,
     cloneOtherType,
-    isUndefined,
-    getSessionID
+    isUndefined
 }
