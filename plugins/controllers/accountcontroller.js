@@ -1,6 +1,6 @@
 
-const { editions, core } = require("../../engine/database");
-const { Account } = require("../models");
+const { core } = require("../../engine/database");
+const { Account, Edition } = require("../models");
 const { logger, generateUniqueId } = require("../utilities");
 const { webinterface } = require('../../app');
 
@@ -86,10 +86,7 @@ class AccountController {
             return webinterface.renderMessage("Error", "Incorrect call.");
         } else {
             let editionsHTML = "";
-
-            logger.logDebug(editions);
-
-            for (const [name, value] of Object.entries(Object.keys(editions))) {
+            for (const [name, value] of Object.entries(Object.keys(await Edition.getAll()))) {
                 editionsHTML = editionsHTML + '<option value="' + value + '">' + value + '</option>'
             }
 

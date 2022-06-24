@@ -1,9 +1,9 @@
 const { BaseModel } = require("./BaseModel");
 
-class Language extends BaseModel {
+class Edition extends BaseModel {
     constructor() {
         super();
     }
 }
 
-module.exports.Language = Language;
+module.exports.Edition = Edition;

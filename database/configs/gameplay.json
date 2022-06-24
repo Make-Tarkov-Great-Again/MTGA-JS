@@ -1,0 +1,106 @@
+{
+    "inRaid": {
+        "showDeathMessage": true,
+        "createFriendlyAI": true,
+        "airdropSettings": {
+            "airdropChancePercent": {
+                "bigmap": 100,
+                "woods": 100,
+                "lighthouse": 100,
+                "shoreline": 100,
+                "interchange": 100,
+                "reserve": 100
+            },
+            "airdropMinStartTimeSeconds": 90,
+            "airdropMaxStartTimeSeconds": 120,
+            "airdropMinOpenHeight": 100,
+            "airdropMaxOpenHeight": 150,
+            "planeMinFlyHeight": 400,
+            "planeMaxFlyHeight": 500,
+            "planeVolume": 0.5,
+            "maximumAirdopsPerRaid": 1
+        }
+    },
+    "fence": {
+        "killingScavsFenceLevelChange": -0.01,
+        "killingPMCsFenceLevelChange": 0.02,
+        "fenceLevelAssortModifier": 1.05
+    },
+    "other": {
+        "RedeemTime": 72
+    },
+    "defaultRaidSettings": {
+        "aiAmount": "High",
+        "aiDifficulty": "Medium",
+        "bossEnabled": true,
+        "scavWars": false,
+        "taggedAndCursed": false
+    },
+    "hideout": {
+        "productionTimeDivide_Areas": 10000,
+        "hideoutConstructionUpgradeFixedTime": 0,
+        "productionTimeDivide_ScavCase": 20,
+        "productionTimeDivide_Bitcoin": 6,
+        "productionTimeDivide_Production": 100
+    },
+    "trading": {
+        "ragfairMultiplier": 1.6,
+        "repairMultiplier": 1,
+        "insureMultiplier": 0.1,
+        "insurerMultiplier": {
+            "5a7c2eca46aef81a7ca2145d": {
+                "0": 0.3,
+                "1": 0.25,
+                "2": 0.19,
+                "3": 0.13
+            }
+        },
+        "insureReturnChance": 100,
+        "fenceAssortSize": 5,
+        "buyItemsMarkedFound": true,
+        "traderSupply": {
+            "5a7c2eca46aef81a7ca2145d": 3600,
+            "5ac3b934156ae10c4430e83c": 3600,
+            "5c0647fdd443bc2504c2d371": 3600,
+            "54cb50c76803fa8b248b4571": 3600,
+            "54cb57776803fa99248b456e": 3600,
+            "579dc571d53a0658a154fbec": 600,
+            "5935c25fb3acc3127c3d8cd9": 3600,
+            "58330581ace78e27b8b10cee": 3600
+        }
+    },
+    "location": {
+        "realTimeEnabled": true,
+        "forceWeatherEnabled": false,
+        "forceWeatherId": false
+    },
+    "locationloot": {
+        "containers": {
+            "ChanceForEmpty": 10,
+            "ChanceToSpawnNextItem": 10,
+            "AttemptsToPlaceLoot": 1
+        },
+        "RarityMultipliers": {
+            "Not_exist": 0,
+            "Common": 0.9,
+            "Uncommon": 0.7,
+            "Rare": 0.25,
+            "Superrare": 0.05
+        },
+        "noDuplicatesTill": 2,
+        "useDynamicLootFromItemsArray": false,
+        "useDynamicLootMultiplier": true,
+        "DynamicLooseLootMultiplier": 2
+    },
+    "match": {
+        "enabled": true
+    },
+    "weapons": {
+        "cameraRecoilDesc": "Adjust Camera Recoil by (%) percentage - 0 = no recoil, 100 = vanilla recoil, 2 = double recoil",
+        "cameraRecoil": 100,
+        "verticalRecoilDesc": "Adjust Vertical Recoil by (%) percentage - 0 = no recoil, 100 = vanilla recoil, 2 = double recoil",
+        "verticalRecoil": 100,
+        "horizontalRecoilDesc": "Adjust Horizontal Recoil by (%) percentage - 0 = no recoil, 100 = vanilla recoil, 2 = double recoil",
+        "horizontalRecoil": 100
+    }
+}
