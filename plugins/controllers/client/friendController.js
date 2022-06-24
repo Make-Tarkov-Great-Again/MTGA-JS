@@ -1,8 +1,7 @@
 const { database } = require("../../../app");
 
-class friendController  { 
-    constructor() {
-    }
+class FriendController  { 
+    
 }
 
-module.exports.friendController = friendController;
+module.exports.FriendController = FriendController;

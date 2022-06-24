@@ -3,7 +3,7 @@ const { stringify } = require("./fileIO");
 const logger = require("./logger");
 
 
-class fastifyResponse {
+class FastifyResponse {
     static mime = {
         html: "text/html",
         txt: "text/plain",
@@ -32,6 +32,7 @@ class fastifyResponse {
 
     static zlibJsonReply = async (reply, data) => {
         logger.logDebug("[zlibJsonReply] Compressing data:");
+        console.log(stringify(data, true));
         //logger.logDebug(stringify(data));
         let header = {
             'Content-Type': this.mime["json"]
@@ -47,4 +48,4 @@ class fastifyResponse {
     };
 }
 
-module.exports.fastifyResponse = fastifyResponse;
+module.exports.FastifyResponse = FastifyResponse;

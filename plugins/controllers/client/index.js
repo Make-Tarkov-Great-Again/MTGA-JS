@@ -1,13 +1,13 @@
-const clientController = require("./clientController");
-const friendController = require("./friendController");
-const gameController = require("./gameController");
-const menuController = require("./menuController");
-const tradingController = require("./tradingController");
+const ClientController = require("./ClientController");
+const FriendController = require("./FriendController");
+const GameController = require("./GameController");
+const MenuController = require("./MenuController");
+const TradingController = require("./TradingController");
 
 module.exports = {
-    ...clientController,
-    ...friendController,
-    ...gameController,
-    ...menuController,
-    ...tradingController
+    ...ClientController,
+    ...FriendController,
+    ...GameController,
+    ...MenuController,
+    ...TradingController
 }

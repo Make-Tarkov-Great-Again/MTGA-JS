@@ -1,11 +1,11 @@
 const { database } = require("../../../app");
-const { account } = require("../../models");
-const { logger, fastifyResponse } = require("../../utilities");
+const { Account } = require("../../models");
+const { logger, FastifyResponse } = require("../../utilities");
 
 
-class menuController {
+class MenuController {
     static clientMenuLocale = async (request = null, reply = null) => {
-        const playerAccount = await account.get(await fastifyResponse.getSessionID(request));
+        const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
         if (playerAccount) {
             if (playerAccount.getLanguage() != request.params['language']) {
                 playerAccount.lang = request.params['language'];
@@ -13,11 +13,11 @@ class menuController {
             }
         }
         
-        return fastifyResponse.zlibJsonReply (
+        return FastifyResponse.zlibJsonReply (
             reply,
-            fastifyResponse.applyBody(database.locales[playerAccount.getLanguage()].menu)
+            FastifyResponse.applyBody(database.locales[playerAccount.getLanguage()].menu)
         )
     }
 }
 
-module.exports.menuController = menuController;
+module.exports.MenuController = MenuController;

@@ -2,8 +2,8 @@
 const { logger, fileExist } = require('../utilities');
 const { webinterface } = require('../../app');
 const fs = require('fs');
-const { accountController } = require('../controllers/accountController');
-const { weblauncherController } = require('../controllers/weblauncherController');
+const { AccountController } = require('../controllers/AccountController');
+const { WeblauncherController } = require('../controllers/WeblauncherController');
 
 const {
     database: {
@@ -13,7 +13,7 @@ const {
 } = require('../../app');
 module.exports = async function webinterfaceRoutes(app, opts) {
     app.get(`/`, async (request, reply) => {
-        return accountController.home(request, reply);
+        return AccountController.home(request, reply);
     })
 
     app.get(`/files/*`, async (request, reply) => {
@@ -26,7 +26,7 @@ module.exports = async function webinterfaceRoutes(app, opts) {
                 break;
         }
 
-        return await webinterface.readFile(file);
+        return webinterface.readFile(file);
     })
 
     app.get(`/message`, async (request, reply) => {
@@ -37,40 +37,39 @@ module.exports = async function webinterfaceRoutes(app, opts) {
 
     // Account Routes //
     app.get('/webinterface/account/test', async (request, reply) => {
-        return await accountController.test(request, reply);
+        return AccountController.test(request, reply);
     })
 
     app.get('/webinterface/account/register', async (request, reply) => {
-        return await accountController.create(request, reply);
+        return AccountController.create(request, reply);
     })
 
     app.post('/webinterface/account/register', async (request, reply) => {
-        return await accountController.store(request, reply);
+        return AccountController.store(request, reply);
     })
 
     app.get('/webinterface/account/login', async (request, reply) => {
-        return await accountController.showLogin(request,reply);
+        return AccountController.showLogin(request,reply);
     })
 
     app.post('/webinterface/account/login', async (request, reply) => {
-        return await accountController.login(request,reply);
+        return AccountController.login(request,reply);
     })
 
     app.get('/webinterface/account/settings', async (request, reply) => {
-        return await accountController.edit(request,reply);
+        return AccountController.edit(request,reply);
     })
 
     app.post('/webinterface/account/settings', async (request, reply) => {
-        return await accountController.update(request,reply);
+        return AccountController.update(request,reply);
     })
 
     app.get('/webinterface/account/logout', async (request, reply) => {
-        reply.clearCookie('PHPSESSID', { path: '/' })
-        reply.redirect('/');
+        return AccountController.logout(request,reply);
     })
 
     // Launcher Route //
     app.get('/webinterface/weblauncher/start', async (request, reply) => {
-        return await weblauncherController.launch(request, reply)
+        return WeblauncherController.launch(request, reply)
     }) 
 }
