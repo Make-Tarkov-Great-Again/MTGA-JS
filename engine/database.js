@@ -9,7 +9,7 @@ const {
     getDirectoriesFrom,
     createDirectory
 } = require('./../plugins/utilities/');
-const { Account, Trader } = require('../plugins/models');
+const { Account, Trader, Item } = require('../plugins/models');
 
 /**
  * Return completed database

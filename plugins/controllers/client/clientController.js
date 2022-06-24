@@ -26,7 +26,7 @@ class ClientController {
     static clientItems = async (request = null, reply = null) => {
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody(Item.getAll())
+            FastifyResponse.applyBody(await Item.getAll())
         )
     }
 
