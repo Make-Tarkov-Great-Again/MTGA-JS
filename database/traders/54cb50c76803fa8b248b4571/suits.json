@@ -1,0 +1,522 @@
+[
+  {
+    "_id": "bear_sumrak_upper",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "619bf75264927e572d0d5853",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "bear_sumrak_lower",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "619b99ad604fcc392676806c",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "bear_kit_lower_voin",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "603d01a1b41c9b37c6592047",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "bear_kit_upper_borey",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "5fd3e7e2dd870108a754b230",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "bear_kit_lower_triarius",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "5fce42bc187e6a2b994b8247",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "bear_kit_lower_g99",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "5f5f46fa5021ce62144be7bd",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "bear_kit_upper_g99",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "5f5f45df0bc58666c37e7832",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "bear_kit_lower_zaslon",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "5e9dcc8a86f77434375990e2",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "bear_kit_upper_tiger",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "5e9dcb8386f774054b6f79a9",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "bear_kit_upper_telnik",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "5e4bb08f86f774069619fbbc",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "bear_kit_lower_combat",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "5e4bb6d786f77406975c9364",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "bear_kit_lower_oldschool",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "5df8e72186f7741263108806",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "bear_kit_upper_zaslon",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "5df8e5c886f7744a122d6834",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "bear_kit_lower_striker",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "5d1f647586f7744bcb0adfb0",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "bear_kit_lower_gorkasso",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "5d1f647186f7744bce0ef70c",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "bear_kit_lower_fsburban",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "5d1f646286f7744bce0ef70a",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "bear_kit_lower_summerfield",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "5d1f647a86f7744bca3f1691",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "bear_kit_lower_gorkakobra",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "5d1f646c86f7743f8362cf3f",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "bear_kit_upper_blacklynx",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "5d1f609d86f7744bca3f1689",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "bear_kit_upper_summerfield",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "5d1f60f086f7744bce0ef704",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "bear_kit_upper_ghostmarksman",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "5d1f60ca86f7743014163025",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "bear_kit_upper_fsbfastresponse",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "5d1f60b486f7744bcb0adfa8",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "bear_kit_upper_contractortshirt",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "5d1f60ae86f7744bcc04998b",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "DefaultBearLowerSuite",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "5cd946231388ce000d572fe3",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "DefaultBearUpperSuite",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "5cd945d71388ce000a659dfb",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  },
+  {
+    "_id": "bear_kit_upper_voin",
+    "tid": "579dc571d53a0658a154fbec",
+    "suiteId": "6038b228af2e28262649af14",
+    "isActive": true,
+    "requirements": {
+      "loyaltyLevel": 1,
+      "profileLevel": 1,
+      "standing": 0,
+      "skillRequirements": [],
+      "questRequirements": [],
+      "itemRequirements": [
+        {
+          "count": 1,
+          "_tpl": "5449016a4bdc2d6f028b456f",
+          "onlyFunctional": true
+        }
+      ]
+    }
+  }
+]

@@ -31,9 +31,6 @@ class FastifyResponse {
     // HTTP Data Processing functionality //
 
     static zlibJsonReply = async (reply, data) => {
-        logger.logDebug("[zlibJsonReply] Compressing data:");
-        //console.log(stringify(data, true));
-        //logger.logDebug(stringify(data));
         let header = {
             'Content-Type': this.mime["json"]
         };
