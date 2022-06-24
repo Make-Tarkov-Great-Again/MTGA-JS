@@ -1,8 +1,7 @@
 
 const { editions, core } = require("../../engine/database");
-const { account } = require("../models/account");
-const { logger } = require("../utilities");
-const { generateUniqueId } = require(`../utilities/utility`);
+const { account } = require("../models");
+const { logger, generateUniqueId } = require("../utilities");
 const { webinterface } = require('../../app');
 
 class accountController {

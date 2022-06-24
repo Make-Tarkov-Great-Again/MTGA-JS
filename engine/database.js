@@ -1,15 +1,15 @@
 'use strict'
 const fs = require('fs');
-const logger = require('../plugins/utilities/logger');
 const {
+    logger,
     readParsed,
     fileExist,
     stringify,
     writeFile,
     getDirectoriesFrom,
     createDirectory
-  } = require('./../plugins/utilities/');
-const { account } = require('../plugins/models/account');
+} = require('./../plugins/utilities/');
+const { account } = require('../plugins/models');
 
 /**
  * Return completed database
@@ -23,7 +23,7 @@ class Database {
         this.languages = {};
         this.locales;
         this.templates;
-        
+
         //this.bots;
         this.editions;
         this.traders;
@@ -101,7 +101,7 @@ class Database {
         this.languages = readParsed(`./database/locales/languages.json`)['data'];
 
         const allLangs = getDirectoriesFrom(`./database/locales`);
-        this.locales = { "languages": [] };
+        this.locales = {};
         for (const lang in allLangs) {
             const locale = allLangs[lang];
             const currentLocalePath = `./database/locales/` + locale + `/`;
@@ -116,7 +116,6 @@ class Database {
                     locale: localeCopy,
                     menu: menuCopy,
                 };
-                this.locales.languages.push(locale);
             }
         }
     }
@@ -208,7 +207,7 @@ class Database {
         for (const [key, value] of Object.entries(data)) {
             classModel[key] = value;
         }
-        
+
         return classModel;
     }
 
@@ -218,12 +217,12 @@ class Database {
      * @param {*} identifier 
      */
     async saveModel(type, identifier = null) {
-        switch(type) {
+        switch (type) {
             case "account":
                 await this.saveAccount(identifier)
-            break;
+                break;
         }
-        
+
     }
 
     // Account data processing //

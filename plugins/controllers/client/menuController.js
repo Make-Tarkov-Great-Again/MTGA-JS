@@ -1,6 +1,8 @@
 const { database } = require("../../../app");
-const { account } = require("../../models/account");
+const { account } = require("../../models");
 const { logger, fastifyResponse } = require("../../utilities");
+
+
 class menuController {
     static clientMenuLocale = async (request = null, reply = null) => {
         const playerAccount = await account.get(await fastifyResponse.getSessionID(request));

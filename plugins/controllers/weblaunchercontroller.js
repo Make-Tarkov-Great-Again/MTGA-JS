@@ -1,8 +1,7 @@
-const { core } = require('../../engine/database');
-const { account } = require('../models/account');
+const { account } = require('../models');
 const fs = require('fs');
 const { logger } = require('../utilities');
-const { webinterface } = require('../../app');
+const { webinterface, database: { core } } = require('../../app');
 const { exec } = require('child_process');
 
 class weblauncherController {

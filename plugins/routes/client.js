@@ -1,7 +1,4 @@
-const { clientController } = require("../controllers/client/clientController");
-const { gameController } = require("../controllers/client/gameController");
-const { menuController } = require("../controllers/client/menuController");
-
+const { clientController, gameController, menuController } = require("../controllers/client")
 const { logger } = require("../utilities");
 
 module.exports = async function gameRoutes(app, opts) {
@@ -53,5 +50,9 @@ module.exports = async function gameRoutes(app, opts) {
 
     app.post(`/client/languages`, async (request, reply) => {
         return await clientController.clientLanguages(request, reply);
-    });    
+    });
+
+    app.post(`/client/globals`, async (request, reply) => {
+        return await clientController.clientGlobals(request, reply);
+    })
 }

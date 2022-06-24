@@ -1,5 +1,5 @@
 const { database } = require("../../../app");
-const { account } = require("../../models/account");
+const { account } = require("../../models");
 const { fastifyResponse } = require("../../utilities/fastifyResponse");
 
 /**
@@ -34,6 +34,13 @@ class clientController {
         return fastifyResponse.zlibJsonReply(
             reply,
             fastifyResponse.applyBody(database.clientCustomization)
+        )
+    }
+
+    static clientGlobals = async (request = null, reply = null) => {
+        return fastifyResponse.zlibJsonReply(
+            reply,
+            fastifyResponse.applyBody(database.core.globals)
         )
     }
 }

@@ -1,9 +1,6 @@
 const { database } = require("../../../app");
-const { profile } = require("../../models/profile");
-const utilities = require("../../utilities");
-const { getBody } = require("../../utilities");
-const { fastifyResponse } = require("../../utilities/fastifyResponse");
-const logger = require("../../utilities/logger");
+const { profile } = require("../../models");
+const { getCurrentTimestamp, logger, fastifyResponse } = require("../../utilities");
 
 
 class gameController {
@@ -27,33 +24,33 @@ class gameController {
                 (
                     reply,
                     fastifyResponse.applyBody
-                    (
-                        {utc_time: Date.now() / 1000},
-                        0,
-                        null
-                    )
+                        (
+                            { utc_time: Date.now() / 1000 },
+                            0,
+                            null
+                        )
                 )
         } else {
             return await fastifyResponse.zlibJsonReply
-            (
-                reply, 
-                fastifyResponse.applyBody
                 (
-                    {utc_time: Date.now() / 1000}, 
-                    999, 
-                    "Profile Not Found!!"
+                    reply,
+                    fastifyResponse.applyBody
+                        (
+                            { utc_time: Date.now() / 1000 },
+                            999,
+                            "Profile Not Found!!"
+                        )
                 )
-            )
         }
     }
 
     static clientGameVersionValidate = async (request = null, reply = null) => {
         logger.logInfo("Client connected with version: " + request.body.version.major);
         return await fastifyResponse.zlibJsonReply
-        (
-            reply, 
-            fastifyResponse.applyBody(null)
-        )
+            (
+                reply,
+                fastifyResponse.applyBody(null)
+            )
     }
 
     static clientGameConfig = async (request = null, reply = null) => {
@@ -72,20 +69,20 @@ class gameController {
             activeProfileId: "pmc" + sessionID,
             nickname: "user",
             backend: {
-              Trading: fastifyResponse.getBackendURL(),
-              Messaging: fastifyResponse.getBackendURL(),
-              Main: fastifyResponse.getBackendURL(),
-              RagFair: fastifyResponse.getBackendURL(),
+                Trading: fastifyResponse.getBackendURL(),
+                Messaging: fastifyResponse.getBackendURL(),
+                Main: fastifyResponse.getBackendURL(),
+                RagFair: fastifyResponse.getBackendURL(),
             },
             totalInGame: 0,
-            utc_time: utilities.getCurrentTimestamp(),
+            utc_time: getCurrentTimestamp(),
         }
 
         return await fastifyResponse.zlibJsonReply
-        (
-            reply, 
-            fastifyResponse.applyBody(responseObject)
-        )
+            (
+                reply,
+                fastifyResponse.applyBody(responseObject)
+            )
     }
 }
 
