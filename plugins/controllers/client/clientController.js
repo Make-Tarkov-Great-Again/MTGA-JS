@@ -1,5 +1,6 @@
 const { database } = require("../../../app");
-const { Account, Item } = require("../../models");
+const { Account, Item, Language, Locale } = require("../../models");
+const { logger } = require("../../utilities");
 const { FastifyResponse } = require("../../utilities/FastifyResponse");
 
 /**
@@ -11,7 +12,7 @@ class ClientController {
         if (playerAccount) {
             return FastifyResponse.zlibJsonReply(
                 reply,
-                FastifyResponse.applyBody(database.locales.global[playerAccount.getLanguage()])
+                FastifyResponse.applyBody(await Locale.get(playerAccount.getLanguage()))
             )
         }
     }
@@ -19,7 +20,7 @@ class ClientController {
     static clientLanguages = async (_request = null, reply = null) => {
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody(database.languages)
+            FastifyResponse.applyBody(await Language.getAllWithoutKeys())
         )
     }
 
