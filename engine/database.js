@@ -23,7 +23,7 @@ class Database {
         this.languages = {};
         this.locales = {};
         this.templates = {};
-
+        this.configs = {};
         //this.bots;
         this.editions = {};
         this.traders = {};
@@ -42,6 +42,7 @@ class Database {
             this.loadWeather(),
             this.loadLanguage(),
             this.loadTemplates(),
+            this.loadConfigs(),
             this.loadTraders(),
             this.loadEditions(),
             //this.loadBots()
@@ -148,6 +149,10 @@ class Database {
          */
     }
 
+    async loadConfigs() {
+        this.configs.gameplay = readParsed(`./config/gameplay.json`);
+    }
+
     /////////////////// MODEL DATA ///////////////////
 
     async createModelFromParse(model, data) {
@@ -188,14 +193,28 @@ class Database {
         for (const traderID of traderKeys) {
 
             const path = `./database/traders/${traderID}/`;
-            
+
             this.traders[traderID] = await this.createModelFromParse('Trader', {}) ;
 
             // read base and assign to variable
             const traderBase = readParsed(`${path}base.json`);
             this.traders[traderID].sell_category = traderBase.sell_category;
             traderBase.sell_category = []; //need to empty sell_category to prevent tarkov from complaining
-            this.traders[traderID].base = traderBase
+
+            if (traderBase.repair.price_rate === 0) {
+                traderBase.repair.price_rate = 100;
+                traderBase.repair.price_rate *= this.configs.gameplay.trading.repairMultiplier;
+                traderBase.repair.price_rate -= 100;
+            } else {
+                traderBase.repair.price_rate *= this.configs.gameplay.trading.repairMultiplier;
+                if (traderBase.repair.price_rate === 0) {
+                    traderBase.repair.price_rate = -1;
+                }
+            }
+            if (traderBase.repair.price_rate < 0) {
+                traderBase.repair.price_rate = -100;
+            }
+            this.traders[traderID].base = traderBase;
 
             // if quest assort exists, read and assign to variable
             if (fileExist(`${path}questassort.json`)) {
@@ -213,6 +232,8 @@ class Database {
             // check if suits exists, read and assign to variable
             if (fileExist(`${path}suits.json`)) {
                 this.traders[traderID].suits = readParsed(`${path}suits.json`);
+            } else {
+                this.traders[traderID].suits = [];
             }
 
             // check if dialogue exists, read and assign to variable
