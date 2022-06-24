@@ -175,7 +175,10 @@ class Database {
 
     // Load Items
     async loadItems() {
-        this.items = await this.createModelFromParse('Item',  readParsed('./database/items.json')) ;
+        let items = readParsed('./database/items.json');
+        if (typeof items.data != "undefined") { items = items.data; }
+
+        this.items = await this.createModelFromParse('Item',  items) ;
     }
 
     // Load Traders

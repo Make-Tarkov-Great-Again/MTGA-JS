@@ -7,7 +7,7 @@ const { FastifyResponse } = require("../../utilities/FastifyResponse");
  */
 class ClientController {
     static clientLocale = async (request = null, reply = null) => {
-        const playerAccount = await Account.get(await fastifyResponse.getSessionID(request));
+        const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
         if (playerAccount) {
             return FastifyResponse.zlibJsonReply(
                 reply,
@@ -16,28 +16,28 @@ class ClientController {
         }
     }
 
-    static clientLanguages = async (request = null, reply = null) => {
+    static clientLanguages = async (_request = null, reply = null) => {
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(database.languages)
         )
     }
 
-    static clientItems = async (request = null, reply = null) => {
+    static clientItems = async (_request = null, reply = null) => {
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(await Item.getAll())
         )
     }
 
-    static clientCustomization = async (request = null, reply = null) => {
+    static clientCustomization = async (_request = null, reply = null) => {
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(database.clientCustomization)
         )
     }
 
-    static clientGlobals = async (request = null, reply = null) => {
+    static clientGlobals = async (_request = null, reply = null) => {
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(database.core.globals)

@@ -32,7 +32,7 @@ class FastifyResponse {
 
     static zlibJsonReply = async (reply, data) => {
         logger.logDebug("[zlibJsonReply] Compressing data:");
-        console.log(stringify(data, true));
+        //console.log(stringify(data, true));
         //logger.logDebug(stringify(data));
         let header = {
             'Content-Type': this.mime["json"]
