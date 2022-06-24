@@ -60,23 +60,22 @@ app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (re
         try {
             zlib.inflate(body, function (err, data) {
                 if (!err && data !== undefined) {
-                    var inflatedString = data.toString('utf-8');
+                    const inflatedString = data.toString('utf-8');
                     if (inflatedString.length > 0) {
-                        var json = JSON.parse(inflatedString);
-                        done(null, json);
+                        done(null, JSON.parse(inflatedString));
                         return
                     }
                     done(null, body);
-                    return
+                    //return
                 } else {
                     done(null, body);
-                    return
+                    //return
                 }
             });
         } catch (error) {
             err.statusCode = 400
             done(err, undefined)
-            return;
+            //return;
         }
     } else {
         try {
@@ -89,7 +88,7 @@ app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (re
     }
 })
 
-app.addContentTypeParser('*', (req, payload, done) => {
+app.addContentTypeParser('*', (_req, payload, done) => {
     const chunks = [];
     payload.on('data', chunk => {
         chunks.push(chunk);

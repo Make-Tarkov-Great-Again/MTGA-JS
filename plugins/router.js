@@ -1,7 +1,7 @@
 'use strict'
 
 
-module.exports = async function router (app, opts){
+module.exports = async function router (app, _opts){
     //await app.register(require("./routes/launcher"));
     
     /* Register the routes for the webinterface */

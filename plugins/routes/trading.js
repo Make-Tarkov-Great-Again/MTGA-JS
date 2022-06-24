@@ -2,7 +2,7 @@ const { tradingController } = require("../controllers/client");
 const { fastifyResponse } = require("../utilities");
 
 
-module.exports = async function tradingRoutes(app, opts) {
+module.exports = async function tradingRoutes(app, _opts) {
 
     app.post(`/client/trading/api/getTradersList`, async (request, reply) => {
         await tradingController.getAllTraders(request, reply);
