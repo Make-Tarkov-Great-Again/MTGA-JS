@@ -37,7 +37,7 @@ const fileExist = (filePath, useRelative = true) => {
  * @returns 
  */
 const stringify = (data, oneLiner = false) => {
-    return (oneLiner) ? safeStringify(data, 1) : safeStringify(data);
+    return (oneLiner) ? safeStringify(data, null, "\t") : safeStringify(data);
 };
 
 /**
