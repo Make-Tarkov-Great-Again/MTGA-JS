@@ -46,12 +46,12 @@ class gameController {
 
     static clientGameVersionValidate = async (request = null, reply = null) => {
         logger.logInfo("Client connected with version: " + request.body.version.major);
-        return await fastifyResponse.zlibJsonReply
+        await fastifyResponse.zlibJsonReply
             (
                 reply,
                 fastifyResponse.applyBody(null)
-            )
-    }
+            );
+    };
 
     static clientGameConfig = async (request = null, reply = null) => {
         const sessionID = await fastifyResponse.getSessionID(request);
@@ -72,18 +72,18 @@ class gameController {
                 Trading: fastifyResponse.getBackendURL(),
                 Messaging: fastifyResponse.getBackendURL(),
                 Main: fastifyResponse.getBackendURL(),
-                RagFair: fastifyResponse.getBackendURL(),
+                RagFair: fastifyResponse.getBackendURL()
             },
             totalInGame: 0,
-            utc_time: getCurrentTimestamp(),
-        }
+            utc_time: getCurrentTimestamp()
+        };
 
-        return await fastifyResponse.zlibJsonReply
+        await fastifyResponse.zlibJsonReply
             (
                 reply,
                 fastifyResponse.applyBody(responseObject)
-            )
-    }
+            );
+    };
 }
 
 module.exports.gameController = gameController;

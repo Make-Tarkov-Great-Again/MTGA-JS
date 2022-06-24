@@ -37,8 +37,8 @@ const fileExist = (filePath, useRelative = true) => {
  * @returns 
  */
 const stringify = (data, oneLiner = false) => {
-    return (oneLiner) ? safeStringify(data, null, "\t") : safeStringify(data);
-}
+    return (oneLiner) ? safeStringify(data, 1) : safeStringify(data);
+};
 
 /**
 * Overwrite if file exists, else create file with content in it.
@@ -48,7 +48,7 @@ const stringify = (data, oneLiner = false) => {
 */
 const writeFile = (filePath, data, useRelative = true) => {
     fs.writeFileSync((useRelative) ? getAbsolutePathFrom(filePath) : filePath, data, { encoding: "utf8", flag: "w+" });
-}
+};
 
 /**
 * Retrieve absolute path using shortened path.
@@ -61,7 +61,7 @@ const getAbsolutePathFrom = (path) => {
         return `${process.cwd()}${path}`;
     }
     return `${process.cwd()}/${path}`;
-}
+};
 
 /**
 * Retrieve all directories present at a given path.
@@ -73,7 +73,7 @@ const getDirectoriesFrom = (path, useRelative = true) => {
     return fs.readdirSync(tempPath).filter(function (file) {
         return fs.statSync(`${tempPath}/${file}`).isDirectory();
     });
-}
+};
 
 /**
 * Retrieve all files present at a given path.
@@ -85,11 +85,11 @@ const getFilesFrom = (path, useRelative = true) => {
     return fs.readdirSync(tempPath).filter(function (file) {
         return fs.statSync(`${tempPath}/${file}`).isFile();
     });
-}
+};
 
 const createDirectory = (filePath, useRelative = true) => {
     return fs.mkdirSync(getAbsolutePathFrom(filePath, useRelative));
-}
+};
 
 module.exports = {
     createDirectory,
@@ -102,5 +102,5 @@ module.exports = {
     getDirectoriesFrom,
     getAbsolutePathFrom,
     createReadStream,
-    createWriteStream,
-}
+    createWriteStream
+};

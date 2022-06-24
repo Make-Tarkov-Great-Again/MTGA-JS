@@ -10,28 +10,28 @@ const { read, fastifyResponse} = require("../../utilities");
 
 class tradingController {
     static getAllTraders = async (request = null, reply = null) => {
-        let traders = [];
+        const traders = [];
         for (const traderID in database.traders) {
             if (traderID === "ragfair" || traderID === "names") {
                 continue;
             }
             traders.push(database.traders[traderID].base);
         }
-        return fastifyResponse.zlibJsonReply
+        await fastifyResponse.zlibJsonReply
             (
                 reply,
                 fastifyResponse.applyBody(traders)
-            )
-    }
+            );
+    };
 
     static getStoragePath = async (request = null, reply = null) => {
         const sessionID = await fastifyResponse.getSessionID(request);
         const storagePath = read(`user/profiles/${sessionID}/storage.json`);
-        return fastifyResponse.zlibJsonReply
+        await fastifyResponse.zlibJsonReply
             (
                 reply,
                 fastifyResponse.applyBody(storagePath)
-            )
-    }
+            );
+    };
 }
 module.exports.tradingController = tradingController;
