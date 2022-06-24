@@ -5,6 +5,7 @@ const Trader = require('./Trader');
 const Item = require('./Item');
 const Locale = require('./Locale');
 const ClientCustomization = require('./ClientCustomization');
+const Language = require('./Language');
 
 module.exports = {
     ...BaseModel,
@@ -14,4 +15,5 @@ module.exports = {
     ...Item,
     ...Locale,
     ...ClientCustomization,
+    ...Language
 }

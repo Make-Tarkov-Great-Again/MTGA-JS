@@ -9,7 +9,7 @@ const {
     getDirectoriesFrom,
     createDirectory
 } = require('./../plugins/utilities/');
-const { Account, Trader, Item } = require('../plugins/models');
+const { Account, Trader, Item, Locale, Language } = require('../plugins/models');
 
 /**
  * Return completed database
@@ -40,7 +40,8 @@ class Database {
             this.loadItems(),
             this.loadHideout(),
             this.loadWeather(),
-            this.loadLanguage(),
+            this.loadLanguages(),
+            this.loadLocales(),
             this.loadTemplates(),
             this.loadConfigs(),
             this.loadTraders(),
@@ -83,32 +84,6 @@ class Database {
      */
     async loadWeather() {
         this.weather = readParsed('./database/weather.json').data;
-    }
-
-    /**
-     * Load language data in parallel.
-     */
-    async loadLanguage() {
-        this.languages = readParsed(`./database/locales/languages.json`)['data'];
-
-        const allLangs = getDirectoriesFrom(`./database/locales`);
-        this.locales = {};
-        for (const lang in allLangs) {
-            const locale = allLangs[lang];
-            const currentLocalePath = `./database/locales/` + locale + `/`;
-            if (fileExist(`${currentLocalePath}locale.json`) && fileExist(`${currentLocalePath}menu.json`)) {
-                let localeCopy = readParsed(`${currentLocalePath}locale.json`);
-                if (typeof localeCopy.data != "undefined") { localeCopy = localeCopy.data; }
-
-                let menuCopy = readParsed(`${currentLocalePath}menu.json`);
-                if (typeof menuCopy.data != "undefined") { menuCopy = menuCopy.data; }
-
-                this.locales[locale] = {
-                    locale: localeCopy,
-                    menu: menuCopy
-                };
-            }
-        }
     }
 
     /**
@@ -181,6 +156,38 @@ class Database {
         if (typeof items.data != "undefined") { items = items.data; }
 
         this.items = await this.createModelFromParse('Item',  items) ;
+    }
+
+    async loadLanguages() {
+        let languages = readParsed(`./database/locales/languages.json`);
+        if (typeof languages.data != "undefined") { languages = languages.data; }
+
+        for (const [index, language] of Object.entries(languages)) {
+            this.languages[language.ShortName] = await this.createModelFromParse('Language', language);
+        }
+        logger.logDebug(this.languages);
+    }
+
+    // Load language
+    async loadLocales () {
+        const localeKeys = getDirectoriesFrom(`./database/locales`);
+        this.locales = {};
+        for (const locale in localeKeys) {
+            const localeIdentifier = localeKeys[locale];
+            const currentLocalePath = `./database/locales/` + localeIdentifier + `/`;
+            if (fileExist(`${currentLocalePath}locale.json`) && fileExist(`${currentLocalePath}menu.json`)) {
+                let localeCopy = readParsed(`${currentLocalePath}locale.json`);
+                if (typeof localeCopy.data != "undefined") { localeCopy = localeCopy.data; }
+
+                let menuCopy = readParsed(`${currentLocalePath}menu.json`);
+                if (typeof menuCopy.data != "undefined") { menuCopy = menuCopy.data; }
+
+                this.locales[localeIdentifier] = await this.createModelFromParse('Locale',  {
+                    locale: localeCopy,
+                    menu: menuCopy
+                });
+            }
+        }
     }
 
     // Load Traders

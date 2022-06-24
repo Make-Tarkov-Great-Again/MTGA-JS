@@ -1,5 +1,5 @@
 const { database } = require("../../../app");
-const { Profile } = require("../../models");
+const { Profile, Language } = require("../../models");
 const { getCurrentTimestamp, logger, FastifyResponse } = require("../../utilities");
 
 
@@ -59,7 +59,7 @@ class GameController {
             lang: "en",
             ndaFree: false,
             reportAvailable: true,
-            languages: database.languages,
+            languages: await Language.getAllWithoutKeys(),
             aid: sessionID,
             token: sessionID,
             taxonomy: 6,

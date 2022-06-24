@@ -75,6 +75,15 @@ class BaseModel {
             return collection;
         }
     }
+
+    static async getAllWithoutKeys() {
+        const withKeys = await this.getAll()
+        let withoutKeys = [];
+        for (let identifier of Object.keys(withKeys)) {
+            withoutKeys.push(withKeys[identifier]);
+        }
+        return withoutKeys;
+    }
 }
 
 module.exports.BaseModel = BaseModel;
