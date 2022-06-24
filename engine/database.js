@@ -16,17 +16,17 @@ const { account } = require('../plugins/models');
  */
 class Database {
     constructor() {
-        this.core;
-        this.items;
-        this.hideout;
-        this.weather;
+        this.core = {};
+        this.items = {};
+        this.hideout = {};
+        this.weather = {};
         this.languages = {};
-        this.locales;
-        this.templates;
+        this.locales = {};
+        this.templates = {};
 
         //this.bots;
-        this.editions;
-        this.traders;
+        this.editions = {};
+        this.traders = {};
 
         // Model Data //
         this.accounts = {};
@@ -48,7 +48,7 @@ class Database {
 
             // Model Data //
             this.loadAccounts(),
-            this.loadProfiles(),
+            this.loadProfiles()
         ]);
     }
     /**
@@ -65,7 +65,7 @@ class Database {
             fleaOfferTemplate: readParsed(`./database/configs/schema/fleaOfferTemplate.json`),
 
             botCore: readParsed(`./database/bots/botCore.json`)
-        }
+        };
     }
 
     /**
@@ -83,7 +83,7 @@ class Database {
             areas: readParsed('./database/hideout/areas.json').data,
             productions: readParsed('./database/hideout/productions.json').data,
             scavcase: readParsed('./database/hideout/scavcase.json').data,
-            settings: readParsed('./database/hideout/settings.json').data,
+            settings: readParsed('./database/hideout/settings.json').data
         };
     }
 
@@ -106,15 +106,15 @@ class Database {
             const locale = allLangs[lang];
             const currentLocalePath = `./database/locales/` + locale + `/`;
             if (fileExist(`${currentLocalePath}locale.json`) && fileExist(`${currentLocalePath}menu.json`)) {
-                let localeCopy = readParsed(`${currentLocalePath}locale.json`)
+                let localeCopy = readParsed(`${currentLocalePath}locale.json`);
                 if (typeof localeCopy.data != "undefined") { localeCopy = localeCopy.data; }
 
-                let menuCopy = readParsed(`${currentLocalePath}menu.json`)
+                let menuCopy = readParsed(`${currentLocalePath}menu.json`);
                 if (typeof menuCopy.data != "undefined") { menuCopy = menuCopy.data; }
 
                 this.locales[locale] = {
                     locale: localeCopy,
-                    menu: menuCopy,
+                    menu: menuCopy
                 };
             }
         }
@@ -127,7 +127,7 @@ class Database {
         const templatesData = readParsed('./database/templates.json').data;
         this.templates = {
             "Categories": templatesData.Categories,
-            "Items": templatesData.Items,
+            "Items": templatesData.Items
         };
     }
 
@@ -137,7 +137,7 @@ class Database {
     async loadEditions() {
         const editionKeys = getDirectoriesFrom('./database/editions/');
         this.editions = {};
-        for (let editionType of editionKeys) {
+        for (const editionType of editionKeys) {
             const path = `./database/editions/${editionType}/`;
             this.editions[editionType] = {};
             this.editions[editionType]["character_bear"] = readParsed(`${path}character_bear.json`);
@@ -152,7 +152,7 @@ class Database {
     async loadTraders() {
         const traderKeys = getDirectoriesFrom('./database/traders');
         this.traders = { names: {} };
-        for (let traderID of traderKeys) {
+        for (const traderID of traderKeys) {
 
             const path = `./database/traders/${traderID}/`;
             this.traders[traderID] = { base: {}, assort: {}, categories: {} };
@@ -174,7 +174,7 @@ class Database {
             // read assort and assign to variable
             let assort = readParsed(`${path}assort.json`);
             // give support for assort dump files
-            if (!typeof assort.data == "undefined") {
+            if (!typeof assort.data === "undefined") {
                 assort = assort.data;
             }
             this.traders[traderID].assort = assort;
@@ -219,7 +219,7 @@ class Database {
     async saveModel(type, identifier = null) {
         switch (type) {
             case "account":
-                await this.saveAccount(identifier)
+                await this.saveAccount(identifier);
                 break;
         }
 
@@ -257,8 +257,8 @@ class Database {
             logger.logSuccess(`[CLUSTER] New account ${sessionID} registered and was saved to disk.`);
         } else {
             // Check if the file was modified by another cluster member using the file age.
-            const stats = fs.statSync(`./user/profiles/${sessionID}/account.json`);
-            if (stats.mtimeMs == this.accountFileAge[sessionID]) {
+            let stats = fs.statSync(`./user/profiles/${sessionID}/account.json`);
+            if (stats.mtimeMs === this.accountFileAge[sessionID]) {
                 // Check if the memory content differs from the content on disk.
                 const currentAccount = this.accounts[sessionID];
                 const savedAccount = readParsed(`./user/profiles/${sessionID}/account.json`);
@@ -268,7 +268,7 @@ class Database {
                     writeFile(`./user/profiles/${sessionID}/account.json`, stringify(this.accounts[sessionID]));
 
                     // Update file age to prevent another reload by this server.
-                    const stats = fs.statSync(`./user/profiles/${sessionID}/account.json`);
+                    stats = fs.statSync(`./user/profiles/${sessionID}/account.json`);
                     this.accountFileAge[sessionID] = stats.mtimeMs;
 
                     logger.logSuccess(`[CLUSTER] Account file for account ${sessionID} was saved to disk.`);

@@ -20,18 +20,18 @@ const { noBody } = require('../utilities');
 
 module.exports = async function launcherRoutes(app, opts) {
     app.get('/launcher/profile/change/email', async (request, reply) => {
-        let output = await changeEmail(request.body);
+        const output = await changeEmail(request.body);
         return (output === "" ? "FAILED" : "OK");
     });
 
     app.get('/launcher/profile/change/password', async (request, reply) => {
-        let output = await changePassword(request.body);
+        const output = await changePassword(request.body);
         return (output === "" ? "FAILED" : "OK");
     });
 
     app.post('/launcher/profile/wipe', async (request, reply) => {
-        let output = await wipe(request.body);
-        return (output === "" ? "FAILED" : "OK")
+        const output = await wipe(request.body);
+        return (output === "" ? "FAILED" : "OK");
     });
 
     app.post('/launcher/profile/register', async (request, reply) => {
@@ -41,14 +41,14 @@ module.exports = async function launcherRoutes(app, opts) {
     });
 
     app.post('/launcher/profile/remove', async (request, reply) => {
-        let output = await remove(request.body)
+        const output = await remove(request.body)
         return (output === "" ? "FAILED" : "OK");
     });
 
     app.get('/launcher/profile/get', async (request, reply) => {
         const serverConfig = database.core.serverConfig
         const accountID = await reloadAccountByLogin(request.body);
-        let output = find(accountID);
+        const output = find(accountID);
         return noBody(output["server"] = serverConfig.name);
     });
 

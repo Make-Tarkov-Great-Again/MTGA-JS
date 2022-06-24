@@ -5,15 +5,15 @@ const database = require("./database");
  * The webInterfaceController handles the parsing of templates.
  * Can be optimized.
  */
-class webInterface {
+class WebInterface {
     constructor() {
         this.sessionID = null;
         this.privateNavigation = {
             "Start Tarkov": "/webinterface/weblauncher/start",
             "Settings": "/webinterface/account/settings"
-        }
+        };
         this.baseDirectory = "./templates/webinterface";
-        logger.logDebug("[WEBINTERFACE] Constructed.")
+        logger.logDebug("[WEBINTERFACE] Constructed.");
     }
 
     // Auth //
@@ -34,7 +34,7 @@ class webInterface {
         } else {
             this.setSessionID(null);
         }
-    
+
         return false;
     }
 
@@ -55,7 +55,7 @@ class webInterface {
                     <a class="nav-link" href="' + link + '"> \
                     ' + name + '\
                     </a> \
-                </li>'
+                </li>';
             }
 
             outputHTML = outputHTML +
@@ -77,7 +77,7 @@ class webInterface {
     }
 
     async parseBase(baseHTML) {
-        let parsed = String(baseHTML)
+        const parsed = String(baseHTML)
             .replaceAll("{{servername}}", database.core.serverConfig.name)
             .replaceAll("{{navigation}}", await this.generateNavigation());
         return parsed;
@@ -85,27 +85,27 @@ class webInterface {
 
     async readFile(filename) {
         logger.logDebug("[WEBINTERFACE] Reading file: " + this.baseDirectory + "/files/" + filename);
-        return await read(this.baseDirectory + "/files/" + filename);
+        await read(this.baseDirectory + "/files/" + filename);
     }
 
     async renderPage(templateFile, variables = {}) {
-        let baseHTML = await this.getBase();
+        const baseHTML = await this.getBase();
         let fusedPage =  String(baseHTML).replace("{{content}}", await read(this.baseDirectory + templateFile));
 
         for (const [key, value] of Object.entries(variables)) {
-            fusedPage = String(fusedPage).replace("{{" + key + "}}", value)
+            fusedPage = String(fusedPage).replace("{{" + key + "}}", value);
         }
-        
+
         return fusedPage;
     }
 
     async renderMessage(messageHeader, messageContent) {
-        let pageVariables = {
+        const pageVariables = {
             "messageHeader": messageHeader,
             "messageContent": messageContent
-        }
-        return await this.renderPage("/message.html", pageVariables);
+        };
+        await this.renderPage("/message.html", pageVariables);
     }
 }
 
-module.exports = new webInterface();
+module.exports = new WebInterface();
