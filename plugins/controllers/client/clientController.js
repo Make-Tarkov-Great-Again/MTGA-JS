@@ -1,11 +1,11 @@
 const { database } = require("../../../app");
 const { account } = require("../../models");
-const { fastifyResponse } = require("../../utilities");
+const { fastifyResponse } = require("../../utilities/fastifyResponse");
 
 /**
  * The controller for all ungrouped routes.
  */
-class ClientController {
+class clientController {
     static clientLocale = async (request = null, reply = null) => {
         const playerAccount = await account.get(await fastifyResponse.getSessionID(request));
         if (playerAccount) {
@@ -16,28 +16,28 @@ class ClientController {
         }
     }
 
-    static clientLanguages = async (_request = null, reply = null) => {
+    static clientLanguages = async (request = null, reply = null) => {
         return fastifyResponse.zlibJsonReply(
             reply,
             fastifyResponse.applyBody(database.languages)
         )
     }
 
-    static clientItems = async (_request = null, reply = null) => {
+    static clientItems = async (request = null, reply = null) => {
         return fastifyResponse.zlibJsonReply(
             reply,
             fastifyResponse.applyBody(database.items)
         )
     }
 
-    static clientCustomization = async (_request = null, reply = null) => {
+    static clientCustomization = async (request = null, reply = null) => {
         return fastifyResponse.zlibJsonReply(
             reply,
             fastifyResponse.applyBody(database.clientCustomization)
         )
     }
 
-    static clientGlobals = async (_request = null, reply = null) => {
+    static clientGlobals = async (request = null, reply = null) => {
         return fastifyResponse.zlibJsonReply(
             reply,
             fastifyResponse.applyBody(database.core.globals)
@@ -45,4 +45,4 @@ class ClientController {
     }
 }
 
-module.exports.ClientController = ClientController;
+module.exports.clientController = clientController;

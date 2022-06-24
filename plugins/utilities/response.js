@@ -21,6 +21,7 @@ const mimeTypes = {
     "png": "image/png",
     "svg": "image/svg+xml",
     "txt": "text/plain",
+    "json": "application/json",
     "zlib": "application/zlib",
 }
 
@@ -30,8 +31,10 @@ const parseAcceptHeaders = (acceptHeaders)  => {
     switch(true) {
         case splitAcceptHeaders.includes('text/html'):
             return mime['html'];
+        break;
         case splitAcceptHeaders.includes('text/css'):
             return mime['css'];
+        break;
     }
 }
 
@@ -41,7 +44,7 @@ const zlibJsonReply = async (data, reply) => {
         'Content-Type': this.mime["json"] 
     }
 
-    internal.zlib.deflate(data, function (_err, buf) {
+    internal.zlib.deflate(data, function (err, buf) {
         deflatedData = buf;
     });
 
@@ -80,7 +83,7 @@ const emptyArrayResponse = () => {
  * @param {*} reply 
  * @param {*} body 
  */
-const respondBundle = async (_sessionID, req, reply, _body) => {
+const respondBundle = async (sessionID, req, reply, body) => {
     let bundleKey = req.url.split('/bundle/')[1];
     bundleKey = decodeURI(bundleKey);
     logger.logInfo(`[BUNDLE]: ${req.url}`);
@@ -96,11 +99,11 @@ const respondBundle = async (_sessionID, req, reply, _body) => {
  * @param {*} resp 
  * @param {*} body 
  */
-const respondImage = async (_sessionID, req, resp, _body) => {
+const respondImage = async (sessionID, req, resp, body) => {
     const splittedUrl = req.url.split('/');
     const fileName = splittedUrl[splittedUrl.length - 1].split('.').slice(0, -1).join('.');
     let baseNode = {};
-    let imgCategory = null;
+    let imgCategory = "none";
 
     // get images to look through
     switch (true) {
@@ -146,10 +149,10 @@ const respondImage = async (_sessionID, req, resp, _body) => {
     }
 }
 
-const file = async (reply, _file) => {
-    const _split = _file.split(".");
+const file = async (reply, file) => {
+    const _split = file.split(".");
     const type = mime[_split[_split.length - 1]] || mime["txt"];
-    const fileStream = createReadStream(_file);
+    const fileStream = createReadStream(file);
 
     fileStream.on("open", function () {
         reply.header("Content-Type", type);
@@ -179,7 +182,14 @@ const sendStaticFile = async (req, reply) => {
         return true;
     }
 
-    return (req.url.includes("/server/config"));
+    if (req.url.includes("/server/config")) {
+        return true;
+    }
+/*     if (req.url == "/") {
+        await html(reply, home_f.RenderHomePage(), "");
+        return true;
+    } */
+    return false;
 }
 
 /**

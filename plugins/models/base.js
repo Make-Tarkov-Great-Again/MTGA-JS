@@ -1,7 +1,7 @@
 const { logger } = require("../utilities");
 
 
-class BaseModel {
+class baseModel {
     constructor() {
 
     }
@@ -15,7 +15,11 @@ class BaseModel {
         var className = this.constructor.name;
         database[className + 's'][this.id] = this;
 
-        return (database.saveModel(className, this.id));
+        if(database.saveModel(className, this.id)) {
+            return true
+        }
+        
+        return false;
     }
     
     /**
@@ -26,7 +30,11 @@ class BaseModel {
         const { database } = require("../../app");
 
         var className = this.name;
-        return (delete database[className + 's'][this.id]);
+        if(delete database[className + 's'][this.id]) {
+            return true;
+        }
+
+        return false;
     }
 
     /**
@@ -42,7 +50,7 @@ class BaseModel {
             return instance;
         }
 
-        return false;
+        return  false;
     }
 
     /**
@@ -64,4 +72,4 @@ class BaseModel {
     }
 }
 
-module.exports.baseModel = BaseModel;
+module.exports.baseModel = baseModel;

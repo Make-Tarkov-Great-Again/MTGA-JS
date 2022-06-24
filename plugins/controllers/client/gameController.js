@@ -3,22 +3,24 @@ const { profile } = require("../../models");
 const { getCurrentTimestamp, logger, fastifyResponse } = require("../../utilities");
 
 
-class GameController {
-    
-    // JET Basics //
-    static modeOfflinePatches = async (_request = null, reply = null) => {
-        await fastifyResponse.zlibJsonReply(reply, database.core.serverConfig.Patches);
+class gameController {
+    constructor() {
     }
 
-    static modeOfflinePatchNodes = async (_request = null, reply = null) => {
-        await fastifyResponse.zlibJsonReply(reply, database.core.serverConfig.PatchNodes)
+    // JET Basics //
+    static modeOfflinePatches = async (request = null, reply = null) => {
+        return await fastifyResponse.zlibJsonReply(reply, database.core.serverConfig.Patches);
+    }
+
+    static modeOfflinePatchNodes = async (request = null, reply = null) => {
+        return await fastifyResponse.zlibJsonReply(reply, database.core.serverConfig.PatchNodes)
     }
     // Game //
 
     static clientGameStart = async (request = null, reply = null) => {
         let playerProfile = profile.get(await fastifyResponse.getSessionID(request));
         if (playerProfile) {
-            await fastifyResponse.zlibJsonReply
+            return await fastifyResponse.zlibJsonReply
                 (
                     reply,
                     fastifyResponse.applyBody
@@ -29,7 +31,7 @@ class GameController {
                         )
                 )
         } else {
-            await fastifyResponse.zlibJsonReply
+            return await fastifyResponse.zlibJsonReply
                 (
                     reply,
                     fastifyResponse.applyBody
@@ -84,4 +86,4 @@ class GameController {
     };
 }
 
-module.exports.GameController = GameController;
+module.exports.gameController = gameController;

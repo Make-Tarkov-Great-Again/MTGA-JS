@@ -1,6 +1,6 @@
 const { baseModel } = require("./base");
 
-class Account extends baseModel {
+class account extends baseModel {
     constructor() {
         super();
     }
@@ -16,4 +16,4 @@ class Account extends baseModel {
     }
 }
 
-module.exports.account = Account;
+module.exports.account = account;

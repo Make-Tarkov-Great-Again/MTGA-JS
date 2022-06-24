@@ -1,7 +1,7 @@
 'use strict'
 const fp = require('fastify-plugin');
 
-module.exports = fp(async function (app, _opts) {
+module.exports = fp(async function (app, opts) {
 
   /**
    * Adds compression utils to the Fastify reply object 

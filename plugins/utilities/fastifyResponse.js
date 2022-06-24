@@ -3,7 +3,7 @@ const { stringify } = require("./fileIO");
 const logger = require("./logger");
 
 
-class FastifyResponse {
+class fastifyResponse {
     static mime = {
         html: "text/html",
         txt: "text/plain",
@@ -47,4 +47,4 @@ class FastifyResponse {
     };
 }
 
-module.exports.fastifyResponse = FastifyResponse;
+module.exports.fastifyResponse = fastifyResponse;
