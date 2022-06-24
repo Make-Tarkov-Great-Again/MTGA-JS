@@ -193,11 +193,13 @@ class Database {
 
             // read base and assign to variable
             const traderBase = readParsed(`${path}base.json`);
+            this.traders[traderID].sell_category = traderBase.sell_category;
+            traderBase.sell_category = []; //need to empty sell_category to prevent tarkov from complaining
             this.traders[traderID].base = traderBase
 
             // if quest assort exists, read and assign to variable
             if (fileExist(`${path}questassort.json`)) {
-                this.traders[traderID].questassort = await readParsed(`${path}questassort.json`);
+                this.traders[traderID].questassort = readParsed(`${path}questassort.json`);
             }
 
             // read assort and assign to variable
@@ -210,12 +212,12 @@ class Database {
 
             // check if suits exists, read and assign to variable
             if (fileExist(`${path}suits.json`)) {
-                this.traders[traderID].suits = await readParsed(`${path}suits.json`);
+                this.traders[traderID].suits = readParsed(`${path}suits.json`);
             }
 
             // check if dialogue exists, read and assign to variable
             if (fileExist(`${path}dialogue.json`)) {
-                this.traders[traderID].dialogue = await readParsed(`${path}dialogue.json`);
+                this.traders[traderID].dialogue = readParsed(`${path}dialogue.json`);
             }
         }
     }
