@@ -1,9 +1,17 @@
-const base = require('./base');
-const profile = require('./profile');
-const account = require('./account');
+const BaseModel = require('./BaseModel');
+const Profile = require('./Profile');
+const Account = require('./Account');
+const Trader = require('./Trader');
+const Item = require('./Item');
+const Locale = require('./Locale');
+const ClientCustomization = require('./ClientCustomization');
 
 module.exports = {
-    ...base,
-    ...profile,
-    ...account
+    ...BaseModel,
+    ...Profile,
+    ...Account,
+    ...Trader,
+    ...Item,
+    ...Locale,
+    ...ClientCustomization,
 }

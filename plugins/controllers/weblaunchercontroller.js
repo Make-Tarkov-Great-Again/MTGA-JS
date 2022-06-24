@@ -1,10 +1,10 @@
-const { account } = require('../models');
+const { Account } = require('../models');
 const fs = require('fs');
 const { logger } = require('../utilities');
 const { webinterface, database: { core } } = require('../../app');
 const { exec } = require('child_process');
 
-class weblauncherController {
+class WeblauncherController {
     /**
      * Evaulate if the client has a tarkovPath set in his account data and if not, spawn a powershell session to promt the user to select the correct folder.
      * If the path exists and a tarkov exe is found, it will spawn the tarkov client with the correct boot parameters.
@@ -20,7 +20,7 @@ class weblauncherController {
             reply.redirect('/webinterface/account/login');
         }
 
-        const userAccount = await account.get(sessionID);
+        const userAccount = await Account.get(sessionID);
         if(!userAccount) {
             reply.redirect('/webinterface/account/login');
         }
@@ -72,7 +72,7 @@ class weblauncherController {
             });
 
             // Save the tarkov path if it's correct and reset.
-            folderDialogue.on('close', function (code) {
+            folderDialogue.on('close', function (_code) {
                 let newTarkovPath = scriptOutput.replace(/[\r\n]/gm, '') + "\\EscapeFromTarkov.exe"
                 if(fs.existsSync(newTarkovPath))
                 {
@@ -82,23 +82,23 @@ class weblauncherController {
             });
 
             // Render a message to give the user a headsup about what needs to be done.
-            return await webinterface.renderMessage("Info", "Please set the tarkov game path (NOT YOUR LIVE GAME CLIENT!!!1!!11!!elf) in the dialogue box that was opened and try to start tarkov again.");
+            return webinterface.renderMessage("Info", "Please set the tarkov game path (NOT YOUR LIVE GAME CLIENT!!!1!!11!!elf) in the dialogue box that was opened and try to start tarkov again.");
         } else {
             // Check if the tarkovPath exists.
             if (fs.existsSync(tarkovPath)) {
                 // Try to spawn tarkov.
                 logger.logDebug("[WEBINTERFACE]Starting tarkov...")
                 exec(tarkovPath + ' -bC5vLmcuaS5u={"email":"' + userAccount.email + '","password":"' + userAccount.password + '","toggle":true,"timestamp":0} -token=' + sessionID + ' -config={"BackendUrl":"https://' + core.serverConfig.ip + ':' + core.serverConfig.port + '","Version":"live"}');
-                return await webinterface.renderMessage("Successful", "Tarkov will start shortly.");
+                return webinterface.renderMessage("Successful", "Tarkov will start shortly.");
             } else {
                 // The tarkov executable doesn't exist
                 logger.logDebug("[WEBINTERFACE] Unable to start tarkov, file does not exist.");
                 userAccount.tarkovPath = null;
                 userAccount.save();
-                return await webinterface.renderMessage("Error", "Tarkov path was incorrect, please reset the tarkov path.");
+                return webinterface.renderMessage("Error", "Tarkov path was incorrect, please reset the tarkov path.");
             }
         }
     }
 }
 
-module.exports.weblauncherController = weblauncherController;
+module.exports.WeblauncherController = WeblauncherController;

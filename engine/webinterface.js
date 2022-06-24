@@ -42,10 +42,10 @@ class WebInterface {
 
     async getBase() {
         logger.logDebug("[WEBINTERFACE] Reading base file: " + this.baseDirectory + "/base.html");
-        return this.parseBase(await read(this.baseDirectory + "/base.html"));
+        return this.parseBase(read(this.baseDirectory + "/base.html"));
     }
 
-    async generateNavigation(sessionID) {
+    async generateNavigation() {
         let outputHTML = "";
 
         if (await this.getSessionID() != null) {
@@ -77,25 +77,24 @@ class WebInterface {
     }
 
     async parseBase(baseHTML) {
-        const parsed = String(baseHTML)
+        return String(baseHTML)
             .replaceAll("{{servername}}", database.core.serverConfig.name)
             .replaceAll("{{navigation}}", await this.generateNavigation());
-        return parsed;
     }
 
     async readFile(filename) {
         logger.logDebug("[WEBINTERFACE] Reading file: " + this.baseDirectory + "/files/" + filename);
-        await read(this.baseDirectory + "/files/" + filename);
+        return read(this.baseDirectory + "/files/" + filename);
     }
 
     async renderPage(templateFile, variables = {}) {
         const baseHTML = await this.getBase();
-        let fusedPage =  String(baseHTML).replace("{{content}}", await read(this.baseDirectory + templateFile));
+        let fusedPage =  String(baseHTML).replace("{{content}}", read(this.baseDirectory + templateFile));
 
         for (const [key, value] of Object.entries(variables)) {
             fusedPage = String(fusedPage).replace("{{" + key + "}}", value);
         }
-
+        
         return fusedPage;
     }
 
@@ -104,7 +103,7 @@ class WebInterface {
             "messageHeader": messageHeader,
             "messageContent": messageContent
         };
-        await this.renderPage("/message.html", pageVariables);
+        return this.renderPage("/message.html", pageVariables);
     }
 }
 

@@ -9,7 +9,7 @@ const {
     getDirectoriesFrom,
     createDirectory
 } = require('./../plugins/utilities/');
-const { account } = require('../plugins/models');
+const { Account, Trader } = require('../plugins/models');
 
 /**
  * Return completed database
@@ -68,13 +68,6 @@ class Database {
         };
     }
 
-    /**
-     * Load item data in parallel.
-     */
-    async loadItems() {
-        const itemsDump = readParsed('./database/items.json');
-        this.items = itemsDump.data;
-    }
     /**
      * Load hideout data in parallel.
      */
@@ -146,51 +139,6 @@ class Database {
         }
     }
 
-    /**
-     * Load traders base data in parallel.
-     */
-    async loadTraders() {
-        const traderKeys = getDirectoriesFrom('./database/traders');
-        this.traders = { names: {} };
-        for (const traderID of traderKeys) {
-
-            const path = `./database/traders/${traderID}/`;
-            this.traders[traderID] = { base: {}, assort: {}, categories: {} };
-
-            // read base and assign to variable
-            const traderBase = readParsed(`${path}base.json`);
-            this.traders[traderID].base = traderBase
-
-            // create names object and assign trader nickname to traderID
-            let nickname = traderBase.nickname;
-            if (nickname === "Unknown") nickname = "Ragfair";
-            this.traders.names[nickname] = traderID;
-
-            // if quest assort exists, read and assign to variable
-            if (fileExist(`${path}questassort.json`)) {
-                this.traders[traderID].questassort = readParsed(`${path}questassort.json`);
-            }
-
-            // read assort and assign to variable
-            let assort = readParsed(`${path}assort.json`);
-            // give support for assort dump files
-            if (!typeof assort.data === "undefined") {
-                assort = assort.data;
-            }
-            this.traders[traderID].assort = assort;
-
-            // check if suits exists, read and assign to variable
-            if (fileExist(`${path}suits.json`)) {
-                this.traders[traderID].suits = readParsed(`${path}suits.json`);
-            }
-
-            // check if dialogue exists, read and assign to variable
-            if (fileExist(`${path}dialogue.json`)) {
-                this.traders[traderID].dialogue = readParsed(`${path}dialogue.json`);
-            }
-        }
-    }
-
     async regenerateRagfair() {
         /**
          * Ragfair needs to be created in a meticulous way this time around
@@ -218,11 +166,55 @@ class Database {
      */
     async saveModel(type, identifier = null) {
         switch (type) {
-            case "account":
+            case "Account":
                 await this.saveAccount(identifier);
                 break;
         }
 
+    }
+
+    // Load Items
+    async loadItems() {
+        this.items = await this.createModelFromParse('Item',  readParsed('./database/items.json')) ;
+    }
+
+    // Load Traders
+    async loadTraders() {
+        const traderKeys = getDirectoriesFrom('./database/traders');
+        this.traders = { };
+        for (const traderID of traderKeys) {
+
+            const path = `./database/traders/${traderID}/`;
+            
+            this.traders[traderID] = await this.createModelFromParse('Trader', {}) ;
+
+            // read base and assign to variable
+            const traderBase = readParsed(`${path}base.json`);
+            this.traders[traderID].base = traderBase
+
+            // if quest assort exists, read and assign to variable
+            if (fileExist(`${path}questassort.json`)) {
+                this.traders[traderID].questassort = await readParsed(`${path}questassort.json`);
+            }
+
+            // read assort and assign to variable
+            let assort = readParsed(`${path}assort.json`);
+            // give support for assort dump files
+            if (!typeof assort.data === "undefined") {
+                assort = assort.data;
+            }
+            this.traders[traderID].assort = assort;
+
+            // check if suits exists, read and assign to variable
+            if (fileExist(`${path}suits.json`)) {
+                this.traders[traderID].suits = await readParsed(`${path}suits.json`);
+            }
+
+            // check if dialogue exists, read and assign to variable
+            if (fileExist(`${path}dialogue.json`)) {
+                this.traders[traderID].dialogue = await readParsed(`${path}dialogue.json`);
+            }
+        }
     }
 
     // Account data processing //
@@ -234,7 +226,7 @@ class Database {
         for (const profileID of getDirectoriesFrom('/user/profiles')) {
             if (fileExist("./user/profiles/" + profileID + "/account.json")) {
                 logger.logDebug("[DATABASE][ACCOUNTS] Loading user account " + profileID);
-                this.accounts[profileID] = await this.createModelFromParse('account', readParsed("./user/profiles/" + profileID + "/account.json"));
+                this.accounts[profileID] = await this.createModelFromParse('Account', readParsed("./user/profiles/" + profileID + "/account.json"));
                 const stats = fs.statSync(`./user/profiles/${profileID}/account.json`);
                 this.accountFileAge[profileID] = stats.mtimeMs;
             }

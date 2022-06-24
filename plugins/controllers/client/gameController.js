@@ -1,60 +1,57 @@
 const { database } = require("../../../app");
-const { profile } = require("../../models");
-const { getCurrentTimestamp, logger, fastifyResponse } = require("../../utilities");
+const { Profile } = require("../../models");
+const { getCurrentTimestamp, logger, FastifyResponse } = require("../../utilities");
 
 
-class gameController {
-    constructor() {
-    }
-
+class GameController {
     // JET Basics //
     static modeOfflinePatches = async (request = null, reply = null) => {
-        return await fastifyResponse.zlibJsonReply(reply, database.core.serverConfig.Patches);
+        return FastifyResponse.zlibJsonReply(reply, database.core.serverConfig.Patches);
     }
 
     static modeOfflinePatchNodes = async (request = null, reply = null) => {
-        return await fastifyResponse.zlibJsonReply(reply, database.core.serverConfig.PatchNodes)
+        return FastifyResponse.zlibJsonReply(reply, database.core.serverConfig.PatchNodes)
     }
     // Game //
 
     static clientGameStart = async (request = null, reply = null) => {
-        let playerProfile = profile.get(await fastifyResponse.getSessionID(request));
+        let playerProfile = Profile.get(await FastifyResponse.getSessionID(request));
         if (playerProfile) {
-            return await fastifyResponse.zlibJsonReply
+            return FastifyResponse.zlibJsonReply
+            (
+                reply,
+                FastifyResponse.applyBody
                 (
-                    reply,
-                    fastifyResponse.applyBody
-                        (
-                            { utc_time: Date.now() / 1000 },
-                            0,
-                            null
-                        )
+                    { utc_time: Date.now() / 1000 },
+                    0,
+                    null
                 )
+            )
         } else {
-            return await fastifyResponse.zlibJsonReply
+            return FastifyResponse.zlibJsonReply
+            (
+                reply,
+                FastifyResponse.applyBody
                 (
-                    reply,
-                    fastifyResponse.applyBody
-                        (
-                            { utc_time: Date.now() / 1000 },
-                            999,
-                            "Profile Not Found!!"
-                        )
+                    { utc_time: Date.now() / 1000 },
+                    999,
+                    "Profile Not Found!!"
                 )
+            )
         }
     }
 
     static clientGameVersionValidate = async (request = null, reply = null) => {
         logger.logInfo("Client connected with version: " + request.body.version.major);
-        await fastifyResponse.zlibJsonReply
-            (
-                reply,
-                fastifyResponse.applyBody(null)
-            );
+        await FastifyResponse.zlibJsonReply
+        (
+            reply,
+            FastifyResponse.applyBody(null)
+        );
     };
 
     static clientGameConfig = async (request = null, reply = null) => {
-        const sessionID = await fastifyResponse.getSessionID(request);
+        const sessionID = await FastifyResponse.getSessionID(request);
         const responseObject = {
             queued: false,
             banTime: 0,
@@ -69,21 +66,21 @@ class gameController {
             activeProfileId: "pmc" + sessionID,
             nickname: "user",
             backend: {
-                Trading: fastifyResponse.getBackendURL(),
-                Messaging: fastifyResponse.getBackendURL(),
-                Main: fastifyResponse.getBackendURL(),
-                RagFair: fastifyResponse.getBackendURL()
+                Trading: FastifyResponse.getBackendURL(),
+                Messaging: FastifyResponse.getBackendURL(),
+                Main: FastifyResponse.getBackendURL(),
+                RagFair: FastifyResponse.getBackendURL()
             },
             totalInGame: 0,
             utc_time: getCurrentTimestamp()
         };
 
-        await fastifyResponse.zlibJsonReply
-            (
-                reply,
-                fastifyResponse.applyBody(responseObject)
-            );
+        await FastifyResponse.zlibJsonReply
+        (
+            reply,
+            FastifyResponse.applyBody(responseObject)
+        );
     };
 }
 
-module.exports.gameController = gameController;
+module.exports.GameController = GameController;

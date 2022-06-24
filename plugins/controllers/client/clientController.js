@@ -1,48 +1,48 @@
 const { database } = require("../../../app");
-const { account } = require("../../models");
-const { fastifyResponse } = require("../../utilities/fastifyResponse");
+const { Account, Item } = require("../../models");
+const { FastifyResponse } = require("../../utilities/FastifyResponse");
 
 /**
  * The controller for all ungrouped routes.
  */
-class clientController {
+class ClientController {
     static clientLocale = async (request = null, reply = null) => {
-        const playerAccount = await account.get(await fastifyResponse.getSessionID(request));
+        const playerAccount = await Account.get(await fastifyResponse.getSessionID(request));
         if (playerAccount) {
-            return fastifyResponse.zlibJsonReply(
+            return FastifyResponse.zlibJsonReply(
                 reply,
-                fastifyResponse.applyBody(database.locales.global[playerAccount.getLanguage()])
+                FastifyResponse.applyBody(database.locales.global[playerAccount.getLanguage()])
             )
         }
     }
 
     static clientLanguages = async (request = null, reply = null) => {
-        return fastifyResponse.zlibJsonReply(
+        return FastifyResponse.zlibJsonReply(
             reply,
-            fastifyResponse.applyBody(database.languages)
+            FastifyResponse.applyBody(database.languages)
         )
     }
 
     static clientItems = async (request = null, reply = null) => {
-        return fastifyResponse.zlibJsonReply(
+        return FastifyResponse.zlibJsonReply(
             reply,
-            fastifyResponse.applyBody(database.items)
+            FastifyResponse.applyBody(Item.getAll())
         )
     }
 
     static clientCustomization = async (request = null, reply = null) => {
-        return fastifyResponse.zlibJsonReply(
+        return FastifyResponse.zlibJsonReply(
             reply,
-            fastifyResponse.applyBody(database.clientCustomization)
+            FastifyResponse.applyBody(database.clientCustomization)
         )
     }
 
     static clientGlobals = async (request = null, reply = null) => {
-        return fastifyResponse.zlibJsonReply(
+        return FastifyResponse.zlibJsonReply(
             reply,
-            fastifyResponse.applyBody(database.core.globals)
+            FastifyResponse.applyBody(database.core.globals)
         )
     }
 }
 
-module.exports.clientController = clientController;
+module.exports.ClientController = ClientController;

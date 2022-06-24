@@ -1,9 +1,9 @@
 const { BaseModel } = require("./BaseModel");
 
-class Profile extends BaseModel {
+class Locale extends BaseModel {
     constructor() {
         super();
     }
 }
 
-module.exports.Profile = Profile;
+module.exports.Locale = Locale;

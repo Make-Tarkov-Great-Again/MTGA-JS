@@ -1,7 +1,7 @@
 const { logger } = require("../utilities");
 
 
-class baseModel {
+class BaseModel {
     constructor() {
 
     }
@@ -13,13 +13,9 @@ class baseModel {
     async save() {
         const { database } = require("../../app");
         var className = this.constructor.name;
-        database[className + 's'][this.id] = this;
+        database[className.toLowerCase() + 's'][this.id] = this;
 
-        if(database.saveModel(className, this.id)) {
-            return true
-        }
-        
-        return false;
+        return database.saveModel(className, this.id);
     }
     
     /**
@@ -30,11 +26,7 @@ class baseModel {
         const { database } = require("../../app");
 
         var className = this.name;
-        if(delete database[className + 's'][this.id]) {
-            return true;
-        }
-
-        return false;
+        return delete database[className.toLowerCase() + 's'][this.id];
     }
 
     /**
@@ -45,7 +37,7 @@ class baseModel {
         const { database } = require("../../app");
 
         var className = this.name;
-        let instance = database[className + 's'][id];
+        let instance = database[className.toLowerCase() + 's'][id];
         if(instance) {
             return instance;
         }
@@ -63,13 +55,26 @@ class baseModel {
         const { database } = require("../../app");
 
         var className = this.name;
-        for(let classDimensionElement of Object.keys(database[className + 's'])) {
-            if(database[className + 's'][classDimensionElement][property] === value) {
-                return database[className + 's'][classDimensionElement];
+        for(let classDimensionElement of Object.keys(database[className.toLowerCase() + 's'])) {
+            if(database[className.toLowerCase() + 's'][classDimensionElement][property] === value) {
+                return database[className.toLowerCase() + 's'][classDimensionElement];
             }
         }
         return false;
     }
+
+    /**
+     * Will get every instance of the model as a collection
+     * @returns
+     */
+    static async getAll() {
+        const { database } = require("../../app");
+        var className = this.name;
+        let collection = database[className.toLowerCase() + 's'];
+        if(collection) {
+            return collection;
+        }
+    }
 }
 
-module.exports.baseModel = baseModel;
+module.exports.BaseModel = BaseModel;

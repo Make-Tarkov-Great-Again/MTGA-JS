@@ -1,7 +1,7 @@
 /**
  * This is an example controller with a basic callset.
  */
-class templateController {
+class TemplateController {
     /**
      * List all entries.
      * @param {*} request 
@@ -79,4 +79,4 @@ class templateController {
     }
 }
 
-module.exports.templateController = templateController;
+module.exports.TemplateController = TemplateController;

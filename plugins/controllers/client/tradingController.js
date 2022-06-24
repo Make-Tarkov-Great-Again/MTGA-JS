@@ -5,33 +5,41 @@
  */
 
 const { database } = require("../../../app");
-const { read, fastifyResponse} = require("../../utilities");
+const { Trader } = require("../../models");
+const { read, FastifyResponse, logger} = require("../../utilities");
 
 
-class tradingController {
-    static getAllTraders = async (request = null, reply = null) => {
+class TradingController {
+
+    static clientTradingApiGetTradersList = async (request = null, reply = null) => {
         const traders = [];
-        for (const traderID in database.traders) {
-            if (traderID === "ragfair" || traderID === "names") {
+        for (const [traderID, trader] of Object.entries(await Trader.getAll())) {
+            if(trader.isRagfair())
                 continue;
-            }
-            traders.push(database.traders[traderID].base);
+            traders.push(trader.base);
         }
-        await fastifyResponse.zlibJsonReply
-            (
-                reply,
-                fastifyResponse.applyBody(traders)
-            );
+
+        await FastifyResponse.zlibJsonReply
+        (
+            reply,
+            FastifyResponse.applyBody(traders)
+        );
     };
 
-    static getStoragePath = async (request = null, reply = null) => {
-        const sessionID = await fastifyResponse.getSessionID(request);
-        const storagePath = read(`user/profiles/${sessionID}/storage.json`);
-        await fastifyResponse.zlibJsonReply
-            (
-                reply,
-                fastifyResponse.applyBody(storagePath)
-            );
+
+    static clientTradingApiTraderSettings = async (request = null, reply = null) => {
+        const traders = [];
+        for (const [traderID, trader] of Object.entries(await Trader.getAll())) {
+            if(trader.isRagfair())
+                continue;
+            traders.push(trader.base);
+        }
+        
+        await FastifyResponse.zlibJsonReply
+        (
+            reply,
+            FastifyResponse.applyBody(traders)
+        );
     };
 }
-module.exports.tradingController = tradingController;
+module.exports.TradingController = TradingController;
