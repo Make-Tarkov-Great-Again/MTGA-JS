@@ -4,7 +4,7 @@ const { account } = require("../models");
 const { logger, generateUniqueId } = require("../utilities");
 const { webinterface } = require('../../app');
 
-class accountController {
+class AccountController {
     static test = async () => {
         return account.getBy("email", "bude");
     }
@@ -28,10 +28,10 @@ class accountController {
                     "version": core.serverConfig.version,
                     "username": userAccount.email
                 }
-                return await webinterface.renderPage("/account/home.html", pageVariables);
+                await webinterface.renderPage("/account/home.html", pageVariables);
             }
         } else {
-            return await webinterface.renderMessage("Restricted", "Login into your account or create a new one.");
+            await webinterface.renderMessage("Restricted", "Login into your account or create a new one.");
         }
     }
 
@@ -45,9 +45,9 @@ class accountController {
         reply.type("text/html")
 
         if (await webinterface.checkForSessionID(request)) {
-            return await webinterface.renderMessage("Error", "Incorrect call.");
+            await webinterface.renderMessage("Error", "Incorrect call.");
         } else {
-            return await webinterface.renderPage("/account/login.html");
+            await webinterface.renderPage("/account/login.html");
         }
     }
     
@@ -59,7 +59,7 @@ class accountController {
      */
     static login = async (request = null, reply = null) => {
         if (await webinterface.checkForSessionID(request)) {
-            return await webinterface.renderMessage("Error", "Incorrect call.");
+            await webinterface.renderMessage("Error", "Incorrect call.");
         } else {
             if (request.body.email != (undefined || null) && request.body.password != (undefined || null)) {
                 let userAccount = await account.getBy('email', request.body.email);
@@ -70,7 +70,7 @@ class accountController {
                     }
                 }
             }
-            return await webinterface.renderMessage("Error", "Incorrect username or password.");
+            await webinterface.renderMessage("Error", "Incorrect username or password.");
         }
     }
 
@@ -84,7 +84,7 @@ class accountController {
         reply.type("text/html")
 
         if (await webinterface.checkForSessionID(request)) {
-            return await webinterface.renderMessage("Error", "Incorrect call.");
+            await webinterface.renderMessage("Error", "Incorrect call.");
         } else {
             let editionsHTML = "";
 
@@ -98,7 +98,7 @@ class accountController {
                 "editions": editionsHTML
             }
             
-            return await webinterface.renderPage("/account/register.html", pageVariables);
+            await webinterface.renderPage("/account/register.html", pageVariables);
         }
     }
 
@@ -116,7 +116,7 @@ class accountController {
 
             if(await account.getBy('email', request.body.email)) {
                 logger.logDebug("[CLUSTER] Account already exists.")
-                return await webinterface.renderMessage("Error", "The account already exists, please choose a different username.");
+                await webinterface.renderMessage("Error", "The account already exists, please choose a different username.");
             }
 
             let newAccount = new account;
@@ -161,7 +161,7 @@ class accountController {
             "tarkovPath": ((userAccount.tarkovPath) ? userAccount.tarkovPath : '')
         }
 
-        return await webinterface.renderPage("/account/settings.html", pageVariables);
+        await webinterface.renderPage("/account/settings.html", pageVariables);
     }
 
     static update = async (request = null, reply = null) => {
@@ -173,4 +173,4 @@ class accountController {
     }
 }
 
-module.exports.accountController = accountController;
+module.exports.accountController = AccountController;

@@ -5,8 +5,7 @@
  */
 const generateUniqueId = async (prefix = "") => {
     const { nanoid } = await import('nanoid');
-    let retVal = `${prefix}-${nanoid()}`
-    return retVal;
+    return `${prefix}-${nanoid()}`;
 }
 
 /**Check if the given value is undefined
@@ -61,7 +60,6 @@ const cloneReg = async (target) => {
 }
 // Invisible in console.log
 const cloneOtherType = async (target) => {
-    //const targetConstructor = target.constructor;
     switch (toRawType(target)) {
         case "Boolean":
         case "Number":
