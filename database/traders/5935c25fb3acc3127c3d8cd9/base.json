@@ -5,7 +5,7 @@
     "surname": "Пилсудский",
     "nickname": "Peacekeeper",
     "location": "Предпортовая",
-    "avatar": "/files/trader/avatar/59b91cbd86f77469aa5343cb.jpg",
+    "avatar": "/files/trader/avatar/59b91cbd86f77469aa5343cb.png",
     "balance_rub": 0,
     "balance_dol": 700000,
     "balance_eur": 0,
@@ -14,7 +14,7 @@
     "discount_end": 0,
     "buyer_up": false,
     "currency": "USD",
-    "nextResupply": 1631483587,
+    "nextResupply": 1649893675,
     "repair": {
         "availability": false,
         "quality": "2",
@@ -31,7 +31,8 @@
     },
     "medic": false,
     "gridHeight": 160,
-    "loyaltyLevels": [{
+    "loyaltyLevels": [
+        {
             "minLevel": 1,
             "minSalesSum": 0,
             "minStanding": 0,
@@ -40,7 +41,8 @@
             "insurance_price_coef": 5,
             "exchange_price_coef": 0,
             "heal_price_coef": 0
-        }, {
+        },
+        {
             "minLevel": "14",
             "minSalesSum": 11000,
             "minStanding": 0,
@@ -49,7 +51,8 @@
             "insurance_price_coef": 0,
             "exchange_price_coef": 0,
             "heal_price_coef": 0
-        }, {
+        },
+        {
             "minLevel": "23",
             "minSalesSum": 25000,
             "minStanding": 0.3,
@@ -58,7 +61,8 @@
             "insurance_price_coef": 0,
             "exchange_price_coef": 0,
             "heal_price_coef": 0
-        }, {
+        },
+        {
             "minLevel": "37",
             "minSalesSum": 32000,
             "minStanding": 0.6,
@@ -69,30 +73,5 @@
             "heal_price_coef": 0
         }
     ],
-    "sell_category": [
-        "5b47574386f77428ca22b2ef",
-        "5b47574386f77428ca22b2ed",
-        "5b47574386f77428ca22b2f1",
-        "5b5f701386f774093f2ecf0f",
-        "5b47574386f77428ca22b32f",
-        "5b5f704686f77447ec5d76d7",
-        "5b47574386f77428ca22b330",
-        "5b47574386f77428ca22b331",
-        "5b5f71c186f77409407a7ec0",
-        "5b5f71de86f774093f2ecf13",
-        "5b5f73ab86f774094242f195",
-        "5b5f73c486f77447ec5d7704",
-        "5b5f737886f774093e6cb4fb",
-        "5b5f724186f77447ed5636ad",
-        "5b5f740a86f77447ec5d7706",
-        "5b5f742686f774093e6cb4ff",
-        "5b5f744786f774094242f197",
-        "5b5f748386f774093e6cb501",
-        "5b5f749986f774094242f199",
-        "5b5f750686f774093e6cb503",
-        "5b5f75b986f77447ec5d7710",
-        "5b47574386f77428ca22b33f",
-        "5b5f78dc86f77409407a7f8e",
-        "5b47574386f77428ca22b345"
-	]
+    "sell_category": []
 }

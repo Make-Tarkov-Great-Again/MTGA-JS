@@ -1,0 +1,648 @@
+[
+   {
+      "_id": "wild_feet_slimPants_offer",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "5f5f653179db6e3f0e19b762",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 55,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [],
+         "itemRequirements": [
+            {
+               "count": 400000,
+               "_tpl": "5449016a4bdc2d6f028b456f"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "wild_feet_sweatpants_offer",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "5f5f64f947344c2e4f6c431e",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 50,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [],
+         "itemRequirements": [
+            {
+               "count": 600000,
+               "_tpl": "5449016a4bdc2d6f028b456f"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "wild_feet_wasatch_offer",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "5f5f65180bc58666c37e784a",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 5,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [],
+         "itemRequirements": [
+            {
+               "count": 200000,
+               "_tpl": "5449016a4bdc2d6f028b456f"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "GluharBodySuit_offer",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "GluharBodySuit",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 35,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [
+            "5d25e44f86f77443e625e385"
+         ],
+         "itemRequirements": [
+            {
+               "count": 3000000,
+               "_tpl": "5449016a4bdc2d6f028b456f"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "GluharLowerSuit_offer",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "GluharLowerSuit",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 35,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [
+            "5d25e44f86f77443e625e385"
+         ],
+         "itemRequirements": [
+            {
+               "count": 3000000,
+               "_tpl": "5449016a4bdc2d6f028b456f"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "KillaLowerSuite",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "5cdea3f87d6c8b647a3769b2",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 3,
+         "profileLevel": 48,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [
+            "5dc53acb86f77469c740c893"
+         ],
+         "itemRequirements": [
+            {
+               "count": 4000000,
+               "_tpl": "5449016a4bdc2d6f028b456f"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "Motorcross_offer",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "5e9de109f6164249e54453d2",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 10,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [],
+         "itemRequirements": []
+      }
+   },
+   {
+      "_id": "Pants_BOSS_Sanitar",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "Pants_BOSS_Sanitar",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 30,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [],
+         "itemRequirements": [
+            {
+               "count": 2500000,
+               "_tpl": "5449016a4bdc2d6f028b456f"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "Pants_BOSS_Shturman_offer",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "Pants_BOSS_Shturman",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 30,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [
+            "5d25e2ee86f77443e35162ea"
+         ],
+         "itemRequirements": [
+            {
+               "count": 2500000,
+               "_tpl": "5449016a4bdc2d6f028b456f"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "Pants_security_Flora_offer",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "Pants_security_Flora",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 25,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [
+            "5979f9ba86f7740f6c3fe9f2"
+         ],
+         "itemRequirements": [
+            {
+               "count": 25000,
+               "_tpl": "5696686a4bdc2da3298b456a"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "Pants_security_Gorka4_offer",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "Pants_security_Gorka4",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 25,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [
+            "5979f9ba86f7740f6c3fe9f2"
+         ],
+         "itemRequirements": [
+            {
+               "count": 25000,
+               "_tpl": "5696686a4bdc2da3298b456a"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "SavageLowerSuite1",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "5cdea20c7d6c8b0474535dab",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 0,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [],
+         "itemRequirements": []
+      }
+   },
+   {
+      "_id": "SavageLowerSuite2",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "5cdea30c7d6c8b04737c2d15",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 0,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [],
+         "itemRequirements": []
+      }
+   },
+   {
+      "_id": "SavageUpperSuite1",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "5cdea23c7d6c8b04723cf47b",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 0,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [],
+         "itemRequirements": []
+      }
+   },
+   {
+      "_id": "SavageUpperSuite2",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "5cdea3197d6c8b20b577f017",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 0,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [],
+         "itemRequirements": []
+      }
+   },
+   {
+      "_id": "scav_kit_upper_meteor",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "5df8e65d86f77412672a1e46",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 10,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [],
+         "itemRequirements": [
+            {
+               "count": 45000,
+               "_tpl": "5449016a4bdc2d6f028b456f"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "TopSecurity_gorka4_offer",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "TopSecurity_gorka4",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 25,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [
+            "5979f9ba86f7740f6c3fe9f2"
+         ],
+         "itemRequirements": [
+            {
+               "count": 25000,
+               "_tpl": "5696686a4bdc2da3298b456a"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "Top_BOSS_Sanitar",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "Top_BOSS_Sanitar",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 25,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [],
+         "itemRequirements": [
+            {
+               "count": 2500000,
+               "_tpl": "5449016a4bdc2d6f028b456f"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "Top_security_Husky_offer",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "Top_security_Husky",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 25,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [
+            "5979f9ba86f7740f6c3fe9f2"
+         ],
+         "itemRequirements": [
+            {
+               "count": 25000,
+               "_tpl": "5696686a4bdc2da3298b456a"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "Tshirt_security_TshirtTatu_01_offer",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "Tshirt_security_TshirtTatu_01",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 5,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [],
+         "itemRequirements": [
+            {
+               "count": 55000,
+               "_tpl": "5449016a4bdc2d6f028b456f"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "Tshirt_security_TshirtTatu_02_offer",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "Tshirt_security_TshirtTatu_02",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 5,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [],
+         "itemRequirements": [
+            {
+               "count": 55000,
+               "_tpl": "5449016a4bdc2d6f028b456f"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "wild_body_meteor",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "5df8a10486f77412672a1e3a",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 0,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [],
+         "itemRequirements": []
+      }
+   },
+   {
+      "_id": "wild_body_motocross",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "5e9de109f6164249e54453d2",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 0,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [],
+         "itemRequirements": []
+      }
+   },
+   {
+      "_id": "wild_body_offer",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "wild_body",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 15,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [
+            "596b455186f77457cb50eccb"
+         ],
+         "itemRequirements": [
+            {
+               "count": 75000,
+               "_tpl": "5449016a4bdc2d6f028b456f"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "wild_body_russia1",
+      "tid": "5ac3b934156ae10c4430e83c",
+      "suiteId": "5e4bb8e686f77406796b7ba2",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 0,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [],
+         "itemRequirements": []
+      }
+   },
+   {
+      "_id": "Wild_Dealmaker_body_offer",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "Wild_Dealmaker_body",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 0,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [
+            "5d25e2c386f77443e7549029"
+         ],
+         "itemRequirements": [
+            {
+               "count": 1500000,
+               "_tpl": "5449016a4bdc2d6f028b456f"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "Wild_Dealmaker_feet_offer",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "Wild_Dealmaker_feet",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 0,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [
+            "5d25e2c386f77443e7549029"
+         ],
+         "itemRequirements": [
+            {
+               "count": 1500000,
+               "_tpl": "5449016a4bdc2d6f028b456f"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "wild_feet_offer",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "wild_feet",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 15,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [
+            "596b455186f77457cb50eccb"
+         ],
+         "itemRequirements": [
+            {
+               "count": 75000,
+               "_tpl": "5449016a4bdc2d6f028b456f"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "wild_feet_sklon",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "5df8a15186f77412640e2e6a",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 0,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [],
+         "itemRequirements": []
+      }
+   },
+   {
+      "_id": "wild_pmcBot_body_offer",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "wild_pmcBot_body",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 40,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [],
+         "itemRequirements": [
+            {
+               "count": 750000,
+               "_tpl": "5449016a4bdc2d6f028b456f"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "wild_pmcBot_feet_offer",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "wild_pmcBot_feet",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 40,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [],
+         "itemRequirements": [
+            {
+               "count": 750000,
+               "_tpl": "5449016a4bdc2d6f028b456f"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "wild_security_body_1_offer",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "wild_security_body_1",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 20,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [],
+         "itemRequirements": [
+            {
+               "count": 1500,
+               "_tpl": "569668774bdc2da2298b4568"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "wild_security_body_2_offer",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "wild_security_body_2",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 20,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [],
+         "itemRequirements": [
+            {
+               "count": 1500,
+               "_tpl": "569668774bdc2da2298b4568"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "wild_security_feet_1_offer",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "wild_security_feet_1",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 20,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [],
+         "itemRequirements": [
+            {
+               "count": 1500,
+               "_tpl": "569668774bdc2da2298b4568"
+            }
+         ]
+      }
+   },
+   {
+      "_id": "wild_Shturman_body_offer",
+      "tid": "579dc571d53a0658a154fbec",
+      "suiteId": "wild_Shturman_body",
+      "isActive": true,
+      "requirements": {
+         "loyaltyLevel": 0,
+         "profileLevel": 30,
+         "standing": 0,
+         "skillRequirements": [],
+         "questRequirements": [
+            "5d25e2ee86f77443e35162ea"
+         ],
+         "itemRequirements": [
+            {
+               "count": 2500000,
+               "_tpl": "5449016a4bdc2d6f028b456f"
+            }
+         ]
+      }
+   }
+]

@@ -34,7 +34,7 @@ class Database {
         this.accountFileAge = {};
     }
 
-    async loadDatabase() {
+    async loadDatabase() { 
         await Promise.all([
             this.loadCore(),
             this.loadItems(),
@@ -58,13 +58,10 @@ class Database {
     async loadCore() {
         this.core = {
             serverConfig: readParsed(`./database/configs/server.json`),
-
             matchMetrics: readParsed(`./database/configs/matchMetrics.json`),
-            globals: readParsed(`./database/configs/globals.json`).data,
-
+            globals: readParsed(`./database/configs/globals.json`),
             botTemplate: readParsed(`./database/configs/schema/botTemplate.json`),
             fleaOfferTemplate: readParsed(`./database/configs/schema/fleaOfferTemplate.json`),
-
             botCore: readParsed(`./database/bots/botCore.json`)
         };
     }
@@ -189,56 +186,47 @@ class Database {
     // Load Traders
     async loadTraders() {
         const traderKeys = getDirectoriesFrom('./database/traders');
-        this.traders = { };
         for (const traderID of traderKeys) {
-
             const path = `./database/traders/${traderID}/`;
 
             this.traders[traderID] = await this.createModelFromParse('Trader', {}) ;
 
-            // read base and assign to variable
-            const traderBase = readParsed(`${path}base.json`);
-            this.traders[traderID].sell_category = traderBase.sell_category;
-            traderBase.sell_category = []; //need to empty sell_category to prevent tarkov from complaining
-
-            if (traderBase.repair.price_rate === 0) {
-                traderBase.repair.price_rate = 100;
-                traderBase.repair.price_rate *= this.configs.gameplay.trading.repairMultiplier;
-                traderBase.repair.price_rate -= 100;
+            if (fileExist(`${path}categories.json`)) {
+                this.traders[traderID].base = readParsed(`${path}base.json`);
+                //fix?
+                this.traders[traderID].base.repair.price_rate = null;
             } else {
-                traderBase.repair.price_rate *= this.configs.gameplay.trading.repairMultiplier;
-                if (traderBase.repair.price_rate === 0) {
-                    traderBase.repair.price_rate = -1;
-                }
+                this.traders[traderID].base = [];
             }
-            if (traderBase.repair.price_rate < 0) {
-                traderBase.repair.price_rate = -100;
-            }
-            this.traders[traderID].base = traderBase;
 
-            // if quest assort exists, read and assign to variable
+            if (fileExist(`${path}categories.json`)) {
+                this.traders[traderID].categories = readParsed(`${path}categories.json`)
+                this.traders[traderID].base.sell_category = readParsed(`${path}categories.json`);
+            } else {
+                this.traders[traderID].base.sell_category = [];
+            }
+
             if (fileExist(`${path}questassort.json`)) {
                 this.traders[traderID].questassort = readParsed(`${path}questassort.json`);
             }
 
-            // read assort and assign to variable
             let assort = readParsed(`${path}assort.json`);
-            // give support for assort dump files
             if (!typeof assort.data === "undefined") {
                 assort = assort.data;
             }
+
             this.traders[traderID].assort = assort;
 
-            // check if suits exists, read and assign to variable
             if (fileExist(`${path}suits.json`)) {
                 this.traders[traderID].suits = readParsed(`${path}suits.json`);
             } else {
                 this.traders[traderID].suits = [];
             }
 
-            // check if dialogue exists, read and assign to variable
             if (fileExist(`${path}dialogue.json`)) {
                 this.traders[traderID].dialogue = readParsed(`${path}dialogue.json`);
+            } else {
+                this.traders[traderID].dialogue = [];
             }
         }
     }
