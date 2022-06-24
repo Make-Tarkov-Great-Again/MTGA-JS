@@ -11,7 +11,7 @@ const { read, FastifyResponse, logger} = require("../../utilities");
 
 class TradingController {
 
-    static clientTradingApiGetTradersList = async (request = null, reply = null) => {
+    static clientTradingApiGetTradersList = async (_request = null, reply = null) => {
         const traders = [];
         for (const [traderID, trader] of Object.entries(await Trader.getAll())) {
             if(trader.isRagfair())
@@ -27,7 +27,7 @@ class TradingController {
     };
 
 
-    static clientTradingApiTraderSettings = async (request = null, reply = null) => {
+    static clientTradingApiTraderSettings = async (_request = null, reply = null) => {
         const traders = [];
         for (const [traderID, trader] of Object.entries(await Trader.getAll())) {
             if(trader.isRagfair())
