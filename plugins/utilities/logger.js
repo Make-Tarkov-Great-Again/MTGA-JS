@@ -80,7 +80,7 @@ class Logger {
         // somehow this shit is crashing...
         //this.LogFileStream = JET.util.fileIO.createFileWriteStream( this.getLogsFolderPath() + this.getFileName() );
       }
-    } catch { }
+    } catch {}
     if (typeof data == "string") {
       this.logConsole(logString + data);
       if (this.logFileStream != undefined) {
@@ -118,7 +118,7 @@ class Logger {
   logDebug(text, mode = 0) {
     switch (mode) {
       case 0:
-        this.log("[DEBUG]", text, "white");
+        this.log("[DEBUG]" , text, "white");
         return;
       case 1:
         this.log("[DEBUG]", text, "white");
@@ -129,12 +129,15 @@ class Logger {
         return;
     }
   }
-  logRequest(text, _data = "") {
-    this.log("[REQUEST]", text, "cyan", "black");
+  logRequest(text, data = "") {
+    if (data == "") {
+      this.log("[REQUEST]", text, "cyan", "black");
+    } else {
+      this.log("[REQUEST]", text, "cyan", "black");
+    }
   }
-
   throwError(message, whereOccured, additionalInfo = "") {
-    throw new Error(message + "\r\n" + whereOccured + (additionalInfo != "" ? `\r\n${additionalInfo}` : ""));
+    throw message + "\r\n" + whereOccured + (additionalInfo != "" ? `\r\n${additionalInfo}` : "");
   }
 }
 
@@ -143,8 +146,8 @@ class LoggerUtils {
   static getIsoDateString = (useFormatted = false) => {
     if (useFormatted) {
       return new Date().toISOString().
-        replace(/T/, ' ').
-        replace(/\..+/, '');
+      replace(/T/, ' ').
+      replace(/\..+/, '');
     }
     return new Date().toISOString();
   }

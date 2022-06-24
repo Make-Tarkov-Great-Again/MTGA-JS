@@ -21,7 +21,9 @@ const getRandomInt = (min = 0, max = 100) => {
  * @param {number} num2 second number input
 */
 const getPercentDiff = (num1, num2) => {
-    return (num1 / num2) * 100;
+    let raw = (num1 / num2) * 100;
+    let diff = raw;
+    return diff;
 }
 
 /** Used to get percentage difference between two numbers
@@ -29,8 +31,9 @@ const getPercentDiff = (num1, num2) => {
  * @param {number} num2 second number input (value to get percentage of)
  */
 const getPercentOf = (num1, num2) => {
-    const percentAsDecimal = num1 / 100
-    return percentAsDecimal * num2;
+    let percentAsDecimal = num1 / 100
+    let percent = percentAsDecimal * num2;
+    return percent;
 }
 
 /** true if lucky, false if unlucky

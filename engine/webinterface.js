@@ -45,7 +45,7 @@ class WebInterface {
         return this.parseBase(await read(this.baseDirectory + "/base.html"));
     }
 
-    async generateNavigation(_sessionID) {
+    async generateNavigation(sessionID) {
         let outputHTML = "";
 
         if (await this.getSessionID() != null) {
@@ -77,14 +77,15 @@ class WebInterface {
     }
 
     async parseBase(baseHTML) {
-        return String(baseHTML)
+        const parsed = String(baseHTML)
             .replaceAll("{{servername}}", database.core.serverConfig.name)
             .replaceAll("{{navigation}}", await this.generateNavigation());
+        return parsed;
     }
 
     async readFile(filename) {
         logger.logDebug("[WEBINTERFACE] Reading file: " + this.baseDirectory + "/files/" + filename);
-        return read(this.baseDirectory + "/files/" + filename);
+        await read(this.baseDirectory + "/files/" + filename);
     }
 
     async renderPage(templateFile, variables = {}) {

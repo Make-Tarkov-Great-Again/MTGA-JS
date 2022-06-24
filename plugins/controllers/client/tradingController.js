@@ -8,8 +8,8 @@ const { database } = require("../../../app");
 const { read, fastifyResponse} = require("../../utilities");
 
 
-class TradingController {
-    static getAllTraders = async (_request = null, reply = null) => {
+class tradingController {
+    static getAllTraders = async (request = null, reply = null) => {
         const traders = [];
         for (const traderID in database.traders) {
             if (traderID === "ragfair" || traderID === "names") {
@@ -34,4 +34,4 @@ class TradingController {
             );
     };
 }
-module.exports.TradingController = TradingController;
+module.exports.tradingController = tradingController;

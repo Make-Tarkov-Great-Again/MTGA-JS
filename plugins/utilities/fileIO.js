@@ -26,8 +26,8 @@ const createWriteStream = (file) => { return fs.createWriteStream(file, { flags:
  * @param {*} useRelative 
  * @returns 
  */
-const fileExist = (filePath) => {
-    return fs.existsSync(getAbsolutePathFrom(filePath));
+const fileExist = (filePath, useRelative = true) => {
+    return fs.existsSync(getAbsolutePathFrom(filePath, useRelative));
 }
 
 /**
@@ -87,8 +87,8 @@ const getFilesFrom = (path, useRelative = true) => {
     });
 };
 
-const createDirectory = (filePath) => {
-    return fs.mkdirSync(getAbsolutePathFrom(filePath));
+const createDirectory = (filePath, useRelative = true) => {
+    return fs.mkdirSync(getAbsolutePathFrom(filePath, useRelative));
 };
 
 module.exports = {

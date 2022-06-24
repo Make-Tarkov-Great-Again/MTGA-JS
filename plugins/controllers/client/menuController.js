@@ -3,7 +3,7 @@ const { account } = require("../../models");
 const { logger, fastifyResponse } = require("../../utilities");
 
 
-class MenuController {
+class menuController {
     static clientMenuLocale = async (request = null, reply = null) => {
         const playerAccount = await account.get(await fastifyResponse.getSessionID(request));
         if (playerAccount) {
@@ -20,4 +20,4 @@ class MenuController {
     }
 }
 
-module.exports.menuController = MenuController;
+module.exports.menuController = menuController;

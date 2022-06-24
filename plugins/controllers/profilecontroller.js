@@ -1,7 +1,7 @@
 /**
  * This is an example controller with a basic callset.
  */
- class ProfileController {
+ class profileController {
     /**
      * List all entries.
      * @param {*} request 
@@ -79,4 +79,4 @@
     }
 }
 
-module.exports.profileController = ProfileController;
+module.exports.profileController = profileController;
