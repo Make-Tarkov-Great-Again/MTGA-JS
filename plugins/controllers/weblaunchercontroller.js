@@ -74,8 +74,7 @@ class WeblauncherController {
             // Save the tarkov path if it's correct and reset.
             folderDialogue.on('close', function (_code) {
                 let newTarkovPath = scriptOutput.replace(/[\r\n]/gm, '') + "\\EscapeFromTarkov.exe"
-                if(fs.existsSync(newTarkovPath))
-                {
+                if(fs.existsSync(newTarkovPath)) {
                     userAccount.tarkovPath = newTarkovPath;
                     userAccount.save();
                 }
