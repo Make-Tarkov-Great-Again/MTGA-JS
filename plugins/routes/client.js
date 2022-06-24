@@ -64,4 +64,8 @@ module.exports = async function gameRoutes(app, opts) {
     app.post(`/client/globals`, async (request, reply) => {
         await ClientController.clientGlobals(request, reply);
     });
+
+    app.post(`/client/settings`, async (request, reply) => {
+        await ClientController.clientSettings(request, reply);
+    });
 }

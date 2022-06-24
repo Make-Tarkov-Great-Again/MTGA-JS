@@ -6,6 +6,7 @@ const Item = require('./Item');
 const Locale = require('./Locale');
 const ClientCustomization = require('./ClientCustomization');
 const Language = require('./Language');
+const Edition = require('./Edition');
 
 module.exports = {
     ...BaseModel,
@@ -15,5 +16,6 @@ module.exports = {
     ...Item,
     ...Locale,
     ...ClientCustomization,
-    ...Language
+    ...Language,
+    ...Edition
 }

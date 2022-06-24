@@ -44,6 +44,13 @@ class ClientController {
             FastifyResponse.applyBody(database.core.globals)
         )
     }
+
+    static clientSettings = async (_request = null, reply = null) => {
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody(database.core.clientSettings)
+        )
+    }
 }
 
 module.exports.ClientController = ClientController;

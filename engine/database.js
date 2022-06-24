@@ -9,7 +9,7 @@ const {
     getDirectoriesFrom,
     createDirectory
 } = require('./../plugins/utilities/');
-const { Account, Trader, Item, Locale, Language } = require('../plugins/models');
+const { Account, Trader, Item, Locale, Language, Edition } = require('../plugins/models');
 
 /**
  * Return completed database
@@ -23,7 +23,6 @@ class Database {
         this.languages = {};
         this.locales = {};
         this.templates = {};
-        this.configs = {};
         //this.bots;
         this.editions = {};
         this.traders = {};
@@ -43,7 +42,6 @@ class Database {
             this.loadLanguages(),
             this.loadLocales(),
             this.loadTemplates(),
-            this.loadConfigs(),
             this.loadTraders(),
             this.loadEditions(),
             //this.loadBots()
@@ -63,7 +61,9 @@ class Database {
             globals: readParsed(`./database/configs/globals.json`),
             botTemplate: readParsed(`./database/configs/schema/botTemplate.json`),
             fleaOfferTemplate: readParsed(`./database/configs/schema/fleaOfferTemplate.json`),
-            botCore: readParsed(`./database/bots/botCore.json`)
+            botCore: readParsed(`./database/bots/botCore.json`),
+            clientSettings: readParsed(`./database/configs/client.settings.json`),
+            gameplay:  readParsed(`./database/configs/gameplay.json`),
         };
     }
 
@@ -100,17 +100,6 @@ class Database {
     /**
      * Load editions data in parallel.
      */
-    async loadEditions() {
-        const editionKeys = getDirectoriesFrom('./database/editions/');
-        this.editions = {};
-        for (const editionType of editionKeys) {
-            const path = `./database/editions/${editionType}/`;
-            this.editions[editionType] = {};
-            this.editions[editionType]["character_bear"] = readParsed(`${path}character_bear.json`);
-            this.editions[editionType]["character_usec"] = readParsed(`${path}character_usec.json`);
-            this.editions[editionType]["storage"] = readParsed(`${path}storage.json`);
-        }
-    }
 
     async regenerateRagfair() {
         /**
@@ -119,10 +108,6 @@ class Database {
          * won't always be correct or up to date, so we need to create functions
          * to generate that data, and then use that data to populate the flea.
          */
-    }
-
-    async loadConfigs() {
-        this.configs.gameplay = readParsed(`./config/gameplay.json`);
     }
 
     /////////////////// MODEL DATA ///////////////////
@@ -149,23 +134,33 @@ class Database {
         }
 
     }
+    
+    // Load Editions
+    async loadEditions() {
+        const editionKeys = getDirectoriesFrom('./database/editions/');
+        this.editions = {};
+        for (const editionType of editionKeys) {
+            const path = `./database/editions/${editionType}/`;
+            this.editions[editionType] = await this.createModelFromParse('Edition', {});
+            this.editions[editionType].character_bear = readParsed(`${path}character_bear.json`);
+            this.editions[editionType].character_usec = readParsed(`${path}character_usec.json`);
+            this.editions[editionType].storage = readParsed(`${path}storage.json`);
+        }
+    }
 
     // Load Items
     async loadItems() {
         let items = readParsed('./database/items.json');
         if (typeof items.data != "undefined") { items = items.data; }
-
         this.items = await this.createModelFromParse('Item',  items) ;
     }
 
     async loadLanguages() {
         let languages = readParsed(`./database/locales/languages.json`);
         if (typeof languages.data != "undefined") { languages = languages.data; }
-
         for (const [index, language] of Object.entries(languages)) {
             this.languages[language.ShortName] = await this.createModelFromParse('Language', language);
         }
-        logger.logDebug(this.languages);
     }
 
     // Load language
