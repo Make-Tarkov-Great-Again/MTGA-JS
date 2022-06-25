@@ -51,6 +51,24 @@ class ClientController {
             FastifyResponse.applyBody(database.core.clientSettings)
         )
     }
+
+    static clientProfileList = async (request = null, reply = null) => {
+        const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
+
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody(playerAccount.profile.character)
+        )
+    }
+
+    static clientAccountCustomization = async (_request = null, reply = null) => {
+        {
+            return FastifyResponse.zlibJsonReply(
+                reply,
+                FastifyResponse.applyBody(database.customization)
+            )
+        }
+    }
 }
 
 module.exports.ClientController = ClientController;

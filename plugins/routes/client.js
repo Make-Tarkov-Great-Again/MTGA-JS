@@ -12,6 +12,9 @@ module.exports = async function gameRoutes(app, opts) {
         await GameController.modeOfflinePatchNodes(request, reply);
     });
 
+
+
+
     // Client Game Routes //
     app.post(`/client/game/config`, async (request, reply) => {
         await GameController.clientGameConfig(request, reply);
@@ -24,6 +27,25 @@ module.exports = async function gameRoutes(app, opts) {
     app.post(`/client/game/version/validate`, async (request, reply) => {
         await GameController.clientGameVersionValidate(request, reply);
     });
+
+    app.post("/client/game/profile/list", async (request, reply) => {
+        await ClientController.clientProfileList(request, reply);
+    });
+
+    app.post("/client/game/keepalive", async (request, reply) => {
+        await GameController.clientGameKeepAlive(request, reply);
+    })
+
+
+
+
+    // Client Account Routes //
+    app.post("/client/account/customization", async (request, reply) => {
+        await ClientController.clientAccountCustomization(request, reply);
+       //POST:/client/account/customization
+    });
+    
+
 
 
     // Client Menu Routes //

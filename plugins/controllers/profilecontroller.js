@@ -1,6 +1,11 @@
 /**
  * This is an example controller with a basic callset.
  */
+const { logger, FastifyResponse } = require("../utilities");
+const { Account, ClientCustomization } = require("../models");
+const { editions } = require("../../engine/database");
+
+
  class ProfileController {
     /**
      * List all entries.
@@ -18,6 +23,7 @@
      * @param {*} reply 
      */
     static show = async (id, request = null, reply = null) => {
+        
 
     }
 
@@ -27,7 +33,12 @@
      * @param {*} reply 
      */
     static create = async (request = null, reply = null) => {
-        
+        // Grab the sessionID from the request
+        const sessionID = await FastifyResponse.getSessionID(request);
+
+        // Grab the account by the sessionID, from the database
+        const account = await Account.get(sessionID);
+
     }
 
     /**
