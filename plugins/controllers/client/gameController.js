@@ -147,9 +147,9 @@ class GameController {
         character.Health.UpdateTime = ~~(Date.now() / 1000);
 
         profile.storage = {
-            err: 0, 
-            errmsg: null, 
-            data: 
+            err: 0,
+            errmsg: null,
+            data:
             {
                 _id: profile._id,
                 suites: profileTemplate.storage
@@ -163,5 +163,14 @@ class GameController {
 
         playerAccount.wipe = false;
     }
+
+    static clientGameProfileCreateReply = async (request = null, reply = null) => {
+        const sessionID = await FastifyResponse.getSessionID(request);
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody({ uid: "pmc" + sessionID })
+        )
+    }
+
 }
 module.exports.GameController = GameController;
