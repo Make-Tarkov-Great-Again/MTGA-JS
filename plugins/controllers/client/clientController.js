@@ -1,7 +1,6 @@
 const { database } = require("../../../app");
 const { Account, Item, Language, Locale } = require("../../models");
-const { logger, stringify } = require("../../utilities");
-const { FastifyResponse } = require("../../utilities/FastifyResponse");
+const { logger, stringify, FastifyResponse } = require("../../utilities");
 
 /**
  * The controller for all ungrouped routes.

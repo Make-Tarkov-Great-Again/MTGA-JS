@@ -1,6 +1,6 @@
 const { database } = require("../../../app");
 const { Profile, Language, Account } = require("../../models");
-const { getCurrentTimestamp, logger, FastifyResponse } = require("../../utilities");
+const { getCurrentTimestamp, logger, FastifyResponse, writeFile } = require("../../utilities");
 
 
 class GameController {
@@ -101,7 +101,7 @@ class GameController {
         )
     }
 
-    static clientGameProfileNicknameReserved = async (request = null, reply = null) => {
+    static clientGameProfileNicknameReserved = async (_request = null, reply = null) => {
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody("")
@@ -123,6 +123,45 @@ class GameController {
                 FastifyResponse.applyBody(null, 255, response.alreadyInUse)
             )
         }
+    }
+
+    static clientGameProfileCreate = async (request = null, reply = null) => {
+        const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
+        const chosenSide = request.body.side.toLowerCase();
+        const chosenSideCapital = chosenSide.charAt(0).toUpperCase() + chosenSide.slice(1);
+
+        let profile = await playerAccount.getProfile();
+        let character = profile.character;
+        let profileTemplate = database.editions[chosenSide]
+
+        character._id = "pmc" + playerAccount._id;
+        character.aid = playerAccount._id;
+        character.savage = "scav" + playerAccount._id;
+        character.Info.Side = chosenSideCapital;
+        character.Info.Nickname = request.body.nickname;
+        character.Info.LowerNickname = profileTemplate.Info.Nickname.toLowerCase();
+        character.Info.Voice = customization_f.getCustomization()[info.voiceId]._name;
+        character.Customization = profileTemplate.Customization
+        character.Customization.Head = request.body.headId;
+        character.Info.RegistrationDate = ~~(new Date() / 1000);
+        character.Health.UpdateTime = ~~(Date.now() / 1000);
+
+        profile.storage = {
+            err: 0, 
+            errmsg: null, 
+            data: 
+            {
+                _id: profile._id,
+                suites: profileTemplate.storage
+            }
+        };
+
+        writeFile(`./user/profiles/${profile._id}/character.json`, character);
+        writeFile(`./user/profiles/${profile._id}/storage.json`, profile.storage);
+        writeFile(`./user/profiles/${profile._id}/userbuilds.json`, profile.userbuilds);
+        writeFile(`./user/profiles/${profile._id}/dialogue.json`, profile.dialogue);
+
+        playerAccount.wipe = false;
     }
 }
 module.exports.GameController = GameController;
