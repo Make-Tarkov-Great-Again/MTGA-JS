@@ -5,9 +5,9 @@
   "eventPollIntervalSec": 60,
   "rebuildCache": true,
   "name": "Make Tarkov Great Again",
-	"discord": "",
-	"website": "",
-	"version": "0.0.1",
+  "discord": "",
+  "website": "",
+  "version": "0.0.1",
   "runSimpleHttpServer": false,
   "Patches": {
     "RemoveAddOfferButton_Awake": true,
@@ -57,14 +57,14 @@
     "ScavMode": true,
     "Trading": true
   },
-	"lootDebug": true,
-	"hideInfoLogs": false,
-	"debugTimer": true,
+  "lootDebug": true,
+  "hideInfoLogs": false,
+  "debugTimer": true,
   "showDebugLogs": false,
-	"translations": {
-		"alreadyInUse": "The nickname is already in use",
-		"tooShort": "The nickname is too short"
-	},
+  "translations": {
+    "alreadyInUse": "The nickname is already in use",
+    "tooShort": "The nickname is too short"
+  },
   "serverIPs": {
     "Enable": false,
     "Trading": "https://127.0.0.1:443",

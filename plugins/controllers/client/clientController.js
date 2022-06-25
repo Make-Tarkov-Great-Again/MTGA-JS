@@ -1,6 +1,6 @@
 const { database } = require("../../../app");
 const { Account, Item, Language, Locale } = require("../../models");
-const { logger } = require("../../utilities");
+const { logger, stringify } = require("../../utilities");
 const { FastifyResponse } = require("../../utilities/FastifyResponse");
 
 /**
@@ -8,19 +8,23 @@ const { FastifyResponse } = require("../../utilities/FastifyResponse");
  */
 class ClientController {
     static clientLocale = async (request = null, reply = null) => {
-        const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
-        const requestedLang = request.url.replace("/client/locale/", "");
-
-        if (playerAccount.lang) {
+        const requestedLanguage = request.params.language;
+        if (requestedLanguage) {
+            const language = await Locale.get(requestedLanguage);
             return FastifyResponse.zlibJsonReply(
                 reply,
-                FastifyResponse.applyBody(database.locales[playerAccount.lang].locale)
+                FastifyResponse.applyBody(language.locale)
             )
         } else {
-            return FastifyResponse.zlibJsonReply(
-                reply,
-                FastifyResponse.applyBody(database.locales[requestedLang].locale)
-            )
+            const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
+            const language = await Locale.get(playerAccount.getLanguage())
+
+            if (playerAccount) {
+                return FastifyResponse.zlibJsonReply(
+                    reply,
+                    FastifyResponse.applyBody(language.locale)
+                )
+            }
         }
     }
 
@@ -56,15 +60,6 @@ class ClientController {
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(database.core.clientSettings)
-        )
-    }
-
-    static clientProfileList = async (request = null, reply = null) => {
-        const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
-
-        return FastifyResponse.zlibJsonReply(
-            reply,
-            FastifyResponse.applyBody(playerAccount.profile.character)
         )
     }
 
