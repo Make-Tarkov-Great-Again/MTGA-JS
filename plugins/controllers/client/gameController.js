@@ -18,36 +18,36 @@ class GameController {
         let playerProfile = Profile.get(await FastifyResponse.getSessionID(request));
         if (playerProfile) {
             return FastifyResponse.zlibJsonReply
-            (
-                reply,
-                FastifyResponse.applyBody
                 (
-                    { utc_time: Date.now() / 1000 },
-                    0,
-                    null
+                    reply,
+                    FastifyResponse.applyBody
+                        (
+                            { utc_time: Date.now() / 1000 },
+                            0,
+                            null
+                        )
                 )
-            )
         } else {
             return FastifyResponse.zlibJsonReply
-            (
-                reply,
-                FastifyResponse.applyBody
                 (
-                    { utc_time: Date.now() / 1000 },
-                    999,
-                    "Profile Not Found!!"
+                    reply,
+                    FastifyResponse.applyBody
+                        (
+                            { utc_time: Date.now() / 1000 },
+                            999,
+                            "Profile Not Found!!"
+                        )
                 )
-            )
         }
     }
 
     static clientGameVersionValidate = async (request = null, reply = null) => {
         logger.logInfo("Client connected with version: " + request.body.version.major);
         await FastifyResponse.zlibJsonReply
-        (
-            reply,
-            FastifyResponse.applyBody(null)
-        );
+            (
+                reply,
+                FastifyResponse.applyBody(null)
+            );
     };
 
     static clientGameConfig = async (request = null, reply = null) => {
@@ -76,11 +76,20 @@ class GameController {
         };
 
         await FastifyResponse.zlibJsonReply
-        (
-            reply,
-            FastifyResponse.applyBody(responseObject)
-        );
+            (
+                reply,
+                FastifyResponse.applyBody(responseObject)
+            );
     };
+
+    static clientGameKeepAlive = async (request = null, _reply = null) => {
+        const sessionID = await FastifyResponse.getSessionID(request);
+        if (typeof sessionID == "undefined") return FastifyResponse.applyBody({
+            msg: "No Session",
+            utc_time: getCurrentTimestamp(),
+        });
+        return FastifyResponse.applyBody({ msg: "OK", utc_time: getCurrentTimestamp() });
+    }
 }
 
 module.exports.GameController = GameController;

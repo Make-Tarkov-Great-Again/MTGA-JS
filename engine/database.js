@@ -23,6 +23,7 @@ class Database {
         this.languages = {};
         this.locales = {};
         this.templates = {};
+        this.customization = {};
         //this.bots;
         this.editions = {};
         this.traders = {};
@@ -33,7 +34,7 @@ class Database {
         this.accountFileAge = {};
     }
 
-    async loadDatabase() { 
+    async loadDatabase() {
         await Promise.all([
             this.loadCore(),
             this.loadItems(),
@@ -48,7 +49,7 @@ class Database {
 
             // Model Data //
             this.loadAccounts(),
-            this.loadProfiles()
+            //this.loadProfiles()
         ]);
     }
     /**
@@ -63,7 +64,7 @@ class Database {
             fleaOfferTemplate: readParsed(`./database/configs/schema/fleaOfferTemplate.json`),
             botCore: readParsed(`./database/bots/botCore.json`),
             clientSettings: readParsed(`./database/configs/client.settings.json`),
-            gameplay:  readParsed(`./database/configs/gameplay.json`),
+            gameplay: readParsed(`./database/configs/gameplay.json`),
         };
     }
 
@@ -134,7 +135,7 @@ class Database {
         }
 
     }
-    
+
     // Load Editions
     async loadEditions() {
         const editionKeys = getDirectoriesFrom('./database/editions/');
@@ -152,7 +153,7 @@ class Database {
     async loadItems() {
         let items = readParsed('./database/items.json');
         if (typeof items.data != "undefined") { items = items.data; }
-        this.items = await this.createModelFromParse('Item',  items) ;
+        this.items = await this.createModelFromParse('Item', items);
     }
 
     async loadLanguages() {
@@ -164,7 +165,7 @@ class Database {
     }
 
     // Load language
-    async loadLocales () {
+    async loadLocales() {
         const localeKeys = getDirectoriesFrom(`./database/locales`);
         this.locales = {};
         for (const locale in localeKeys) {
@@ -177,7 +178,7 @@ class Database {
                 let menuCopy = readParsed(`${currentLocalePath}menu.json`);
                 if (typeof menuCopy.data != "undefined") { menuCopy = menuCopy.data; }
 
-                this.locales[localeIdentifier] = await this.createModelFromParse('Locale',  {
+                this.locales[localeIdentifier] = await this.createModelFromParse('Locale', {
                     locale: localeCopy,
                     menu: menuCopy
                 });
@@ -191,7 +192,7 @@ class Database {
         for (const traderID of traderKeys) {
             const path = `./database/traders/${traderID}/`;
 
-            this.traders[traderID] = await this.createModelFromParse('Trader', {}) ;
+            this.traders[traderID] = await this.createModelFromParse('Trader', {});
 
             if (fileExist(`${path}categories.json`)) {
                 this.traders[traderID].base = readParsed(`${path}base.json`);
@@ -247,6 +248,12 @@ class Database {
                 this.accountFileAge[profileID] = stats.mtimeMs;
             }
         }
+
+        /**
+         * loadProfiles can't be called unless the accounts are loaded
+         * If there's a better, more efficient way to do this, please let me know - King
+         */
+        this.loadProfiles();
     }
 
     async saveAccount(sessionID) {
@@ -302,6 +309,56 @@ class Database {
 
     // Profile data processing //
     async loadProfiles() {
+        for (const profileID of getDirectoriesFrom('/user/profiles')) {
+            this.accounts[profileID].profile = {
+                character: [],
+                storage: {},
+                userbuilds: {},
+                dialogue: {},
+            };
+            const profile = this.accounts[profileID].profile;
+            const path = `./user/profiles/${profileID}/`;
+            let stats;
+            switch (true) {
+                case fileExist(`${path}character.json`):
+                    logger.logWarning(`[CLUSTER] Loading character data for profile ${profileID}`);
+                    profile[profileID] = await this.createModelFromParse('Profile', readParsed("./user/profiles/" + profileID + "/character.json"));
+                    stats = fs.statSync(`./user/profiles/${profileID}/character.json`);
+                    this.profileCharacterFileAge[profileID] = stats.mtimeMs;
+                    //break;
+                case fileExist(`${path}storage.json`):
+                    logger.logWarning(`[CLUSTER] Loading storage data for profile ${profileID}`);
+                    profile[profileID].storage = readParsed("./user/profiles/" + profileID + "/storage.json");
+                    stats = fs.statSync(`./user/profiles/${profileID}/storage.json`);
+                    this.profileStorageFileAge[profileID] = stats.mtimeMs;
+                    //break;
+                case fileExist(`${path}userbuilds.json`):
+                    logger.logWarning(`[CLUSTER] Loading userbuilds data for profile ${profileID}`);
+                    profile[profileID].userbuilds = readParsed("./user/profiles/" + profileID + "/userbuilds.json");
+                    stats = fs.statSync(`./user/profiles/${profileID}/userbuilds.json`);
+                    this.profileUserbuildsFileAge[profileID] = stats.mtimeMs;
+                    //break;
+                case fileExist(`${path}dialogue.json`):
+                    logger.logWarning(`[CLUSTER] Loading dialogue data for profile ${profileID}`);
+                    profile[profileID].dialogue = readParsed("./user/profiles/" + profileID + "/dialogue.json");
+                    stats = fs.statSync(`./user/profiles/${profileID}/dialogue.json`);
+                    this.profileDialogueFileAge[profileID] = stats.mtimeMs;
+                    //break;
+                default:
+                    logger.logWarning(`[DATABASE][PROFILE] Profile ${profileID} does not exist.`);
+                    break;
+            }
+        }
+    }
+
+    async loadCustomization(){
+        let customization = readParsed("./database/customization.json");
+        if (typeof customization.data != "undefined") customization = customization.data;
+        this.customization = customization;
+
+    }
+
+    async loadDialogues() {
 
     }
 
