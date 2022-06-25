@@ -49,27 +49,27 @@ module.exports = async function webinterfaceRoutes(app, opts) {
     })
 
     app.get('/webinterface/account/login', async (request, reply) => {
-        return AccountController.showLogin(request,reply);
+        return AccountController.showLogin(request, reply);
     })
 
     app.post('/webinterface/account/login', async (request, reply) => {
-        return AccountController.login(request,reply);
+        return AccountController.login(request, reply);
     })
 
     app.get('/webinterface/account/settings', async (request, reply) => {
-        return AccountController.edit(request,reply);
+        return AccountController.edit(request, reply);
     })
 
     app.post('/webinterface/account/settings', async (request, reply) => {
-        return AccountController.update(request,reply);
+        return AccountController.update(request, reply);
     })
 
     app.get('/webinterface/account/logout', async (request, reply) => {
-        return AccountController.logout(request,reply);
+        return AccountController.logout(request, reply);
     })
 
     // Launcher Route //
     app.get('/webinterface/weblauncher/start', async (request, reply) => {
         return WeblauncherController.launch(request, reply)
-    }) 
+    })
 }

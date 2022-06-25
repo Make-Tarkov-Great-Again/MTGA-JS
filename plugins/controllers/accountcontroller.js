@@ -20,7 +20,7 @@ class AccountController {
         const sessionID = await webinterface.checkForSessionID(request);
         if (sessionID) {
             let userAccount = await Account.get(sessionID);
-            if(userAccount) {
+            if (userAccount) {
                 // ToDo: Add Account Data and Extend home.html //
                 let pageVariables = {
                     "version": core.serverConfig.version,
@@ -49,7 +49,7 @@ class AccountController {
             return webinterface.renderPage("/account/login.html");
         }
     }
-    
+
     /**
      * Process data from the login page.
      * @param {*} request 
@@ -62,8 +62,8 @@ class AccountController {
         } else {
             if (request.body.email != (undefined || null) && request.body.password != (undefined || null)) {
                 let userAccount = await Account.getBy('email', request.body.email);
-                if(userAccount) {
-                    if(request.body.password == userAccount.password) {
+                if (userAccount) {
+                    if (request.body.password == userAccount.password) {
                         reply.setCookie('PHPSESSID', userAccount.id, { path: '/' });
                         reply.redirect('/');
                     }
@@ -93,7 +93,7 @@ class AccountController {
             let pageVariables = {
                 "editions": editionsHTML
             }
-            
+
             return webinterface.renderPage("/account/register.html", pageVariables);
         }
     }
@@ -110,7 +110,7 @@ class AccountController {
 
             let newAccountID = await generateUniqueId("AID");
 
-            if(await Account.getBy('email', request.body.email)) {
+            if (await Account.getBy('email', request.body.email)) {
                 logger.logDebug("[CLUSTER] Account already exists.")
                 return webinterface.renderMessage("Error", "The account already exists, please choose a different username.");
             }
@@ -142,7 +142,7 @@ class AccountController {
     }
 
     static remove = async (request = null, reply = null) => {
-        
+
     }
 
     static edit = async (request = null, reply = null) => {
@@ -154,7 +154,7 @@ class AccountController {
         }
 
         const userAccount = await Account.get(sessionID);
-        if(!userAccount) {
+        if (!userAccount) {
             reply.redirect('/webinterface/account/login');
         }
 
@@ -166,11 +166,11 @@ class AccountController {
     }
 
     static update = async (request = null, reply = null) => {
-        
+
     }
 
     static delete = async (request = null, reply = null) => {
-        
+
     }
 }
 

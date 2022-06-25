@@ -255,7 +255,7 @@ class Database {
          */
         await this.loadProfiles();
     }
-    
+
     async saveAccount(sessionID) {
         if (!fileExist(`./user/profiles/${sessionID}`)) {
             createDirectory(`./user/profiles/${sessionID}`);

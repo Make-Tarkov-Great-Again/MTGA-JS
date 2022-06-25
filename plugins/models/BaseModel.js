@@ -17,7 +17,7 @@ class BaseModel {
 
         return database.saveModel(className, this.id);
     }
-    
+
     /**
      * Destroy the model
      * @returns true if the model was destroyed, will return false otherwise.
@@ -38,7 +38,7 @@ class BaseModel {
 
         var className = this.name;
         let instance = database[className.toLowerCase() + 's'][id];
-        if(instance) {
+        if (instance) {
             return instance;
         }
 
@@ -55,8 +55,8 @@ class BaseModel {
         const { database } = require("../../app");
 
         var className = this.name;
-        for(let classDimensionElement of Object.keys(database[className.toLowerCase() + 's'])) {
-            if(database[className.toLowerCase() + 's'][classDimensionElement][property] === value) {
+        for (let classDimensionElement of Object.keys(database[className.toLowerCase() + 's'])) {
+            if (database[className.toLowerCase() + 's'][classDimensionElement][property] === value) {
                 return database[className.toLowerCase() + 's'][classDimensionElement];
             }
         }
@@ -71,7 +71,7 @@ class BaseModel {
         const { database } = require("../../app");
         var className = this.name;
         let collection = database[className.toLowerCase() + 's'];
-        if(collection) {
+        if (collection) {
             return collection;
         }
     }

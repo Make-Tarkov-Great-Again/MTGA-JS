@@ -89,12 +89,12 @@ class WebInterface {
 
     async renderPage(templateFile, variables = {}) {
         const baseHTML = await this.getBase();
-        let fusedPage =  String(baseHTML).replace("{{content}}", read(this.baseDirectory + templateFile));
+        let fusedPage = String(baseHTML).replace("{{content}}", read(this.baseDirectory + templateFile));
 
         for (const [key, value] of Object.entries(variables)) {
             fusedPage = String(fusedPage).replace("{{" + key + "}}", value);
         }
-        
+
         return fusedPage;
     }
 

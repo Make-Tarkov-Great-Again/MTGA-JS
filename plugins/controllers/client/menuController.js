@@ -12,8 +12,8 @@ class MenuController {
                 playerAccount.save();
             }
         }
-        
-        return FastifyResponse.zlibJsonReply (
+
+        return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(database.locales[playerAccount.getLanguage()].menu)
         )
