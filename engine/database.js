@@ -9,7 +9,7 @@ const {
     getDirectoriesFrom,
     createDirectory
 } = require('./../plugins/utilities/');
-const { Account, Trader, Item, Locale, Language, Edition } = require('../plugins/models');
+const { Account, Trader, Item, Locale, Language, Edition, Profile } = require('../plugins/models');
 
 /**
  * Return completed database
@@ -30,8 +30,8 @@ class Database {
 
         // Model Data //
         this.accounts = {};
-        //this.profiles = {};
-        this.accountFileAge = {};
+        this.profiles = {};
+        this.fileAge = {};
     }
 
     async loadDatabase() {
@@ -245,7 +245,7 @@ class Database {
                 logger.logDebug("[DATABASE][ACCOUNTS] Loading user account " + profileID);
                 this.accounts[profileID] = await this.createModelFromParse('Account', readParsed("./user/profiles/" + profileID + "/account.json"));
                 const stats = fs.statSync(`./user/profiles/${profileID}/account.json`);
-                this.accountFileAge[profileID] = stats.mtimeMs;
+                this.fileAge[profileID] = { account: stats.mtimeMs };
             }
         }
 
@@ -253,10 +253,9 @@ class Database {
          * loadProfiles can't be called unless the accounts are loaded
          * If there's a better, more efficient way to do this, please let me know - King
          */
-        this.loadProfiles();
-        this.loadReservedNames();
+        await this.loadProfiles();
     }
-
+    
     async saveAccount(sessionID) {
         if (!fileExist(`./user/profiles/${sessionID}`)) {
             createDirectory(`./user/profiles/${sessionID}`);
@@ -268,13 +267,13 @@ class Database {
 
             // Update file age to prevent another reload by this server.
             const stats = fs.statSync(`./user/profiles/${sessionID}/account.json`);
-            this.accountFileAge[sessionID] = stats.mtimeMs;
+            this.fileAge[sessionID].account = stats.mtimeMs;
 
-            logger.logSuccess(`[CLUSTER] New account ${sessionID} registered and was saved to disk.`);
+            logger.logSuccess(`New account ${sessionID} registered and was saved to disk.`);
         } else {
             // Check if the file was modified by another cluster member using the file age.
             let stats = fs.statSync(`./user/profiles/${sessionID}/account.json`);
-            if (stats.mtimeMs === this.accountFileAge[sessionID]) {
+            if (stats.mtimeMs === this.fileAge[sessionID].account) {
                 // Check if the memory content differs from the content on disk.
                 const currentAccount = this.accounts[sessionID];
                 const savedAccount = readParsed(`./user/profiles/${sessionID}/account.json`);
@@ -285,7 +284,7 @@ class Database {
 
                     // Update file age to prevent another reload by this server.
                     stats = fs.statSync(`./user/profiles/${sessionID}/account.json`);
-                    this.accountFileAge[sessionID] = stats.mtimeMs;
+                    this.fileAge[sessionID].account = stats.mtimeMs;
 
                     logger.logSuccess(`[CLUSTER] Account file for account ${sessionID} was saved to disk.`);
                 }
@@ -295,7 +294,7 @@ class Database {
                 // Reload the account from disk.
                 this.accounts[sessionID] = readParsed(`./user/profiles/${sessionID}/account.json`);
                 // Reset the file age for this users account file.
-                this.accountFileAge[sessionID] = stats.mtimeMs;
+                this.fileAge[sessionID].account = stats.mtimeMs;
             }
         }
     }
@@ -308,55 +307,49 @@ class Database {
 
     }
 
-    async loadReservedNames() {
-        this.accounts.reservedNicknames = await this.createModelFromParse("ReservedNicknames", [])    // Reserved names are stored in the accounts object.
-    }
-
     // Profile data processing //
     async loadProfiles() {
         for (const profileID of getDirectoriesFrom('/user/profiles')) {
-            this.accounts[profileID] = await this.createModelFromParse("Profile", {
+            this.profiles[profileID] = await this.createModelFromParse("Profile", {
                 character: [],
                 storage: {},
                 userbuilds: {},
                 dialogue: {},
             });
-            const profile = this.accounts[profileID].profile;
+            const profile = this.profiles[profileID];
             const path = `./user/profiles/${profileID}/`;
             let stats;
-            switch (true) {
-                case fileExist(`${path}character.json`):
-                    logger.logWarning(`[CLUSTER] Loading character data for profile ${profileID}`);
-                    profile[profileID] = await this.createModelFromParse('Profile', readParsed("./user/profiles/" + profileID + "/character.json"));
-                    stats = fs.statSync(`./user/profiles/${profileID}/character.json`);
-                    this.profileCharacterFileAge[profileID] = stats.mtimeMs;
-                    //break;
-                case fileExist(`${path}storage.json`):
-                    logger.logWarning(`[CLUSTER] Loading storage data for profile ${profileID}`);
-                    profile[profileID].storage = readParsed("./user/profiles/" + profileID + "/storage.json");
-                    stats = fs.statSync(`./user/profiles/${profileID}/storage.json`);
-                    this.profileStorageFileAge[profileID] = stats.mtimeMs;
-                    //break;
-                case fileExist(`${path}userbuilds.json`):
-                    logger.logWarning(`[CLUSTER] Loading userbuilds data for profile ${profileID}`);
-                    profile[profileID].userbuilds = readParsed("./user/profiles/" + profileID + "/userbuilds.json");
-                    stats = fs.statSync(`./user/profiles/${profileID}/userbuilds.json`);
-                    this.profileUserbuildsFileAge[profileID] = stats.mtimeMs;
-                    //break;
-                case fileExist(`${path}dialogue.json`):
-                    logger.logWarning(`[CLUSTER] Loading dialogue data for profile ${profileID}`);
-                    profile[profileID].dialogue = readParsed("./user/profiles/" + profileID + "/dialogue.json");
-                    stats = fs.statSync(`./user/profiles/${profileID}/dialogue.json`);
-                    this.profileDialogueFileAge[profileID] = stats.mtimeMs;
-                    //break;
-                default:
-                    logger.logWarning(`[DATABASE][PROFILE] Profile ${profileID} does not exist.`);
-                    break;
+
+            if (fileExist(`${path}character.json`)) {
+                logger.logWarning(`Loading character data for profile ${profileID}`);
+                profile.character = readParsed("./user/profiles/" + profileID + "/character.json");
+                stats = fs.statSync(`./user/profiles/${profileID}/character.json`);
+                this.fileAge[profileID].character = stats.mtimeMs;
+            }
+            if (fileExist(`${path}storage.json`)) {
+                logger.logWarning(`Loading storage data for profile ${profileID}`);
+                profile.storage = readParsed("./user/profiles/" + profileID + "/storage.json");
+                stats = fs.statSync(`./user/profiles/${profileID}/storage.json`);
+                this.fileAge[profileID].storage = stats.mtimeMs;
+            }
+            if (fileExist(`${path}userbuilds.json`)) {
+                logger.logWarning(`Loading userbuilds data for profile ${profileID}`);
+                profile.userbuilds = readParsed("./user/profiles/" + profileID + "/userbuilds.json");
+                stats = fs.statSync(`./user/profiles/${profileID}/userbuilds.json`);
+                this.fileAge[profileID].userbuilds = stats.mtimeMs;
+            }
+
+            if (fileExist(`${path}dialogue.json`)) {
+                logger.logWarning(`Loading dialogue data for profile ${profileID}`);
+                profile.dialogue = readParsed("./user/profiles/" + profileID + "/dialogue.json");
+                stats = fs.statSync(`./user/profiles/${profileID}/dialogue.json`);
+                this.fileAge[profileID].dialogue = stats.mtimeMs;
             }
         }
     }
 
-    async loadCustomization(){
+
+    async loadCustomization() {
         let customization = readParsed("./database/customization.json");
         if (typeof customization.data != "undefined") customization = customization.data;
         this.customization = customization;

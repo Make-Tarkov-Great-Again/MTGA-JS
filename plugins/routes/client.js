@@ -29,12 +29,21 @@ module.exports = async function gameRoutes(app, opts) {
     });
 
     app.post("/client/game/profile/list", async (request, reply) => {
-        await ClientController.clientProfileList(request, reply);
+        await GameController.clientProfileList(request, reply);
     });
 
     app.post("/client/game/keepalive", async (request, reply) => {
         await GameController.clientGameKeepAlive(request, reply);
     })
+
+    app.post("/client/game/profile/nickname/reserved", async (request, reply) => {
+        await GameController.clientGameProfileNicknameReserved(request, reply);
+    })
+
+    app.post("/client/game/profile/nickname/validate", async (request, reply) => {
+        await GameController.clientGameProfileNicknameValidate(request, reply);
+    })
+
 
 
 
@@ -42,9 +51,9 @@ module.exports = async function gameRoutes(app, opts) {
     // Client Account Routes //
     app.post("/client/account/customization", async (request, reply) => {
         await ClientController.clientAccountCustomization(request, reply);
-       //POST:/client/account/customization
+        //POST:/client/account/customization
     });
-    
+
 
 
 

@@ -1,5 +1,5 @@
 const { database } = require("../../../app");
-const { Profile, Language } = require("../../models");
+const { Profile, Language, Account } = require("../../models");
 const { getCurrentTimestamp, logger, FastifyResponse } = require("../../utilities");
 
 
@@ -91,19 +91,38 @@ class GameController {
         return FastifyResponse.applyBody({ msg: "OK", utc_time: getCurrentTimestamp() });
     }
 
-    static clientGameProfileNicknameReserved = async (request = null, _reply = null) => {
-        /**
-         * Check if nickname is available, tell them to fuck off if it is not
-         * If it isn't, reserve it and add to the list of reserved nicknames
-         * not sure where we save that... maybe `database.accounts.reservedNicknames`
-         */
+    static clientProfileList = async (request = null, reply = null) => {
+        const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
+        const profile = await playerAccount.getProfile();
 
-        const reservedNames = database.accounts.reservedNicknames;
-        const requestedNickname = request.body.nickname;
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody(profile.character)
+        )
+    }
 
-        if (!reservedNames.includes(requestedNickname)) { return "" }
-        else { return null }
+    static clientGameProfileNicknameReserved = async (request = null, reply = null) => {
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody("")
+        )
+    }
+
+    static clientGameProfileNicknameValidate = async (request = null, reply = null) => {
+        const validate = await Account.ifAvailableNickname(request.body.nickname);
+        const response = database.core.serverConfig.translations
+
+        if (validate === true) {
+            return FastifyResponse.zlibJsonReply(
+                reply,
+                FastifyResponse.applyBody({ status: "OK" })
+            )
+        } else {
+            return FastifyResponse.zlibJsonReply(
+                reply,
+                FastifyResponse.applyBody(null, 255, response.alreadyInUse)
+            )
+        }
     }
 }
-
 module.exports.GameController = GameController;

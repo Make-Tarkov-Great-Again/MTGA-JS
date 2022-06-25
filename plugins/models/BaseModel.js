@@ -42,7 +42,7 @@ class BaseModel {
             return instance;
         }
 
-        return  false;
+        return false;
     }
 
     /**
