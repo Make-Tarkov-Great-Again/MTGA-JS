@@ -6,14 +6,14 @@ const { Account, ClientCustomization } = require("../models");
 const { editions } = require("../../engine/database");
 
 
- class ProfileController {
+class ProfileController {
     /**
      * List all entries.
      * @param {*} request 
      * @param {*} reply 
      */
     static index = async (request = null, reply = null) => {
-    
+
     }
 
     /**
@@ -23,7 +23,7 @@ const { editions } = require("../../engine/database");
      * @param {*} reply 
      */
     static show = async (id, request = null, reply = null) => {
-        
+
 
     }
 
@@ -47,7 +47,7 @@ const { editions } = require("../../engine/database");
      * @param {*} reply 
      */
     static store = async (request, reply = null) => {
-        
+
     }
 
     /**
@@ -57,7 +57,7 @@ const { editions } = require("../../engine/database");
      * @param {*} reply 
      */
     static remove = async (id, request = null, reply = null) => {
-        
+
     }
 
     /**
@@ -67,7 +67,7 @@ const { editions } = require("../../engine/database");
      * @param {*} reply 
      */
     static edit = async (id, request = null, reply = null) => {
-        
+
     }
 
     /**
@@ -76,7 +76,7 @@ const { editions } = require("../../engine/database");
      * @param {*} reply 
      */
     static update = async (request = null, reply = null) => {
-        
+
     }
 
     /**
@@ -86,7 +86,7 @@ const { editions } = require("../../engine/database");
      * @param {*} reply 
      */
     static delete = async (id, request = null, reply = null) => {
-        
+
     }
 }
 

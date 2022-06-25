@@ -8,7 +8,7 @@ class TemplateController {
      * @param {*} reply 
      */
     static index = async (request = null, reply = null) => {
-    
+
     }
 
     /**
@@ -27,7 +27,7 @@ class TemplateController {
      * @param {*} reply 
      */
     static create = async (request = null, reply = null) => {
-        
+
     }
 
     /**
@@ -36,7 +36,7 @@ class TemplateController {
      * @param {*} reply 
      */
     static store = async (request, reply = null) => {
-        
+
     }
 
     /**
@@ -46,7 +46,7 @@ class TemplateController {
      * @param {*} reply 
      */
     static remove = async (id, request = null, reply = null) => {
-        
+
     }
 
     /**
@@ -56,7 +56,7 @@ class TemplateController {
      * @param {*} reply 
      */
     static edit = async (id, request = null, reply = null) => {
-        
+
     }
 
     /**
@@ -65,7 +65,7 @@ class TemplateController {
      * @param {*} reply 
      */
     static update = async (request = null, reply = null) => {
-        
+
     }
 
     /**
@@ -75,7 +75,7 @@ class TemplateController {
      * @param {*} reply 
      */
     static delete = async (id, request = null, reply = null) => {
-        
+
     }
 }
 

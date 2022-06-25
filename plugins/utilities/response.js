@@ -26,22 +26,22 @@ const mimeTypes = {
 }
 
 // 
-const parseAcceptHeaders = (acceptHeaders)  => {
+const parseAcceptHeaders = (acceptHeaders) => {
     const splitAcceptHeaders = acceptHeaders.split(',');
-    switch(true) {
+    switch (true) {
         case splitAcceptHeaders.includes('text/html'):
             return mime['html'];
-        break;
+            break;
         case splitAcceptHeaders.includes('text/css'):
             return mime['css'];
-        break;
+            break;
     }
 }
 
 const zlibJsonReply = async (data, reply) => {
     let deflatedData = null;
-    let header = { 
-        'Content-Type': this.mime["json"] 
+    let header = {
+        'Content-Type': this.mime["json"]
     }
 
     internal.zlib.deflate(data, function (err, buf) {
@@ -185,10 +185,10 @@ const sendStaticFile = async (req, reply) => {
     if (req.url.includes("/server/config")) {
         return true;
     }
-/*     if (req.url == "/") {
-        await html(reply, home_f.RenderHomePage(), "");
-        return true;
-    } */
+    /*     if (req.url == "/") {
+            await html(reply, home_f.RenderHomePage(), "");
+            return true;
+        } */
     return false;
 }
 
