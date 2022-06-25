@@ -30,7 +30,7 @@ class Database {
 
         // Model Data //
         this.accounts = {};
-        this.profiles = {};
+        //this.profiles = {};
         this.accountFileAge = {};
     }
 
@@ -254,6 +254,7 @@ class Database {
          * If there's a better, more efficient way to do this, please let me know - King
          */
         this.loadProfiles();
+        this.loadReservedNames();
     }
 
     async saveAccount(sessionID) {
@@ -307,15 +308,19 @@ class Database {
 
     }
 
+    async loadReservedNames() {
+        this.accounts.reservedNicknames = await this.createModelFromParse("ReservedNicknames", [])    // Reserved names are stored in the accounts object.
+    }
+
     // Profile data processing //
     async loadProfiles() {
         for (const profileID of getDirectoriesFrom('/user/profiles')) {
-            this.accounts[profileID].profile = {
+            this.accounts[profileID] = await this.createModelFromParse("Profile", {
                 character: [],
                 storage: {},
                 userbuilds: {},
                 dialogue: {},
-            };
+            });
             const profile = this.accounts[profileID].profile;
             const path = `./user/profiles/${profileID}/`;
             let stats;

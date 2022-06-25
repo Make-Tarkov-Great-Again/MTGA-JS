@@ -54,7 +54,7 @@ module.exports = async function gameRoutes(app, opts) {
     });
 
     app.post(`/client/locale/:language`, async (request, reply) => {
-        await MenuController.clientLocale(request, reply);
+        await ClientController.clientLocale(request, reply);
     });
 
     // Trading Routes //
