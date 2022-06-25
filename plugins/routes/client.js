@@ -1,5 +1,5 @@
 const { ClientController, GameController, MenuController, TradingController } = require("../controllers/client");
-const { logger } = require("../utilities");
+const { logger, FastifyResponse } = require("../utilities");
 
 module.exports = async function gameRoutes(app, opts) {
 
@@ -42,6 +42,17 @@ module.exports = async function gameRoutes(app, opts) {
 
     app.post("/client/game/profile/nickname/validate", async (request, reply) => {
         await GameController.clientGameProfileNicknameValidate(request, reply);
+    })
+
+    app.post("/client/game/profile/create", async (request, reply) => {
+        await GameController.clientGameProfileCreate(request, reply);
+        return FastifyResponse.zlibJsonReply
+        (
+            reply, 
+            FastifyResponse.applyBody(
+                { uid: await FastifyResponse.getSessionID(request) }
+                )
+        )
     })
 
 

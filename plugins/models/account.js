@@ -25,7 +25,7 @@ class Account extends BaseModel {
      * @param {*} nickname 
      * @returns 
      */
-    async ifAvailableNickname(nickname) {
+    static async ifAvailableNickname(nickname) {
         const { database } = require("../../app");
         const collection = database.accounts;
         for (const [key, account] of Object.entries(collection)) {
