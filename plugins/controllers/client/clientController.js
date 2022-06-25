@@ -9,10 +9,17 @@ const { FastifyResponse } = require("../../utilities/FastifyResponse");
 class ClientController {
     static clientLocale = async (request = null, reply = null) => {
         const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
-        if (playerAccount) {
+        const requestedLang = request.url.replace("/client/locale/", "");
+
+        if (playerAccount.lang) {
             return FastifyResponse.zlibJsonReply(
                 reply,
-                FastifyResponse.applyBody(await Locale.get(playerAccount.getLanguage()))
+                FastifyResponse.applyBody(database.locales[playerAccount.lang].locale)
+            )
+        } else {
+            return FastifyResponse.zlibJsonReply(
+                reply,
+                FastifyResponse.applyBody(database.locales[requestedLang].locale)
             )
         }
     }

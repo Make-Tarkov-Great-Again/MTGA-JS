@@ -5,11 +5,11 @@ const { getCurrentTimestamp, logger, FastifyResponse } = require("../../utilitie
 
 class GameController {
     // JET Basics //
-    static modeOfflinePatches = async (request = null, reply = null) => {
+    static modeOfflinePatches = async (_request = null, reply = null) => {
         return FastifyResponse.zlibJsonReply(reply, database.core.serverConfig.Patches);
     }
 
-    static modeOfflinePatchNodes = async (request = null, reply = null) => {
+    static modeOfflinePatchNodes = async (_request = null, reply = null) => {
         return FastifyResponse.zlibJsonReply(reply, database.core.serverConfig.PatchNodes)
     }
     // Game //
@@ -89,6 +89,20 @@ class GameController {
             utc_time: getCurrentTimestamp(),
         });
         return FastifyResponse.applyBody({ msg: "OK", utc_time: getCurrentTimestamp() });
+    }
+
+    static clientGameProfileNicknameReserved = async (request = null, _reply = null) => {
+        /**
+         * Check if nickname is available, tell them to fuck off if it is not
+         * If it isn't, reserve it and add to the list of reserved nicknames
+         * not sure where we save that... maybe `database.accounts.reservedNicknames`
+         */
+
+        const reservedNames = database.accounts.reservedNicknames;
+        const requestedNickname = request.body.nickname;
+
+        if (!reservedNames.includes(requestedNickname)) { return "" }
+        else { return null }
     }
 }
 
