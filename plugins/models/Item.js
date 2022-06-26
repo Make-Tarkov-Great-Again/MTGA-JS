@@ -1,4 +1,4 @@
-const { BaseModel } = require("./baseModel");
+const { BaseModel } = require("./BaseModel");
 
 class Item extends BaseModel {
     constructor() {
