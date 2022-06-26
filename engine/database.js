@@ -9,7 +9,7 @@ const {
     getDirectoriesFrom,
     createDirectory
 } = require('./../plugins/utilities/');
-const { Account, Trader, Item, Locale, Language, Edition, Profile } = require('../plugins/models');
+const { Account, Trader, Item, Locale, Language, Edition, Profile, Customization } = require('../plugins/models');
 
 /**
  * Return completed database
@@ -23,7 +23,7 @@ class Database {
         this.languages = {};
         this.locales = {};
         this.templates = {};
-        this.customization = {};
+        this.customizations = {};
         //this.bots;
         this.editions = {};
         this.traders = {};
@@ -46,9 +46,9 @@ class Database {
             this.loadTraders(),
             this.loadEditions(),
             //this.loadBots()
-
+            this.loadCustomization(),
             // Model Data //
-            this.loadAccounts(),
+            this.loadAccounts()
             //this.loadProfiles()
         ]);
     }
