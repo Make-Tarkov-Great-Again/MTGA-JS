@@ -1,7 +1,7 @@
 const { BaseModel } = require("./BaseModel");
 
 class Weaponbuild extends BaseModel {
-    constructor(id) {
+    constructor() {
         super();
     }
 }
