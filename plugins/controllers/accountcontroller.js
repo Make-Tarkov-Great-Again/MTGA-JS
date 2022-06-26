@@ -115,6 +115,7 @@ class AccountController {
 
             if (await Account.getBy('email', request.body.email)) {
                 logger.logDebug("[CLUSTER] Account already exists.")
+                reply.type("text/html");
                 return webinterface.renderMessage("Error", "The account already exists, please choose a different username.");
             }
 
@@ -135,7 +136,7 @@ class AccountController {
                 reply.redirect('/webinterface/account/register');
             }
         } else {
-            reply.type("text/html")
+            reply.type("text/html");
             return webinterface.renderMessage("Error", "You specified an empty accountname or password.");
         }
 
