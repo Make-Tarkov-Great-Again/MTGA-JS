@@ -4,7 +4,7 @@
   "description": "Fastify Tarkov Emulation Server",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node --trace-warnings app.js "
   },
   "keywords": [],
   "author": "MTGA-Team",
@@ -19,6 +19,7 @@
     "fastify": "^4.1.0",
     "fastify-plugin": "^3.0.1",
     "find-my-way": "^7.0.0",
+    "lodash": "^4.17.21",
     "nanoid": "^4.0.0",
     "selfsigned": "^2.0.1",
     "slow-json-stringify": "^2.0.1"

@@ -1,8 +1,10 @@
 const { BaseModel } = require("./BaseModel");
 
 class Item extends BaseModel {
-    constructor() {
-        super();
+    constructor(id) {
+        super(id);
+
+        this.createDatabase(id);
     }
 }
 

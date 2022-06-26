@@ -1,6 +1,6 @@
 const { BaseModel } = require("./BaseModel");
 
-class Customization extends BaseModel {
+class HideoutArea extends BaseModel {
     constructor(id) {
         super();
 
@@ -8,4 +8,4 @@ class Customization extends BaseModel {
     }
 }
 
-module.exports.Customization = Customization;
+module.exports.HideoutArea = HideoutArea;

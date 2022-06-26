@@ -54,17 +54,11 @@ module.exports = async function gameRoutes(app, _opts) {
         )
     })
 
-
-
-
-
     // Client Account Routes //
     app.post("/client/account/customization", async (request, reply) => {
         await ClientController.clientAccountCustomization(request, reply);
         //POST:/client/account/customization
     });
-
-
 
 
     // Client Menu Routes //

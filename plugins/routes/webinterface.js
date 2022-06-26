@@ -32,7 +32,7 @@ module.exports = async function webinterfaceRoutes(app, opts) {
     app.get(`/message`, async (request, reply) => {
         await webinterface.checkForSessionID(request);
         reply.type("text/html")
-        return await webinterface.displayMessage(request.query.messageHeader, request.query.messageBody);
+        return webinterface.displayMessage(request.query.messageHeader, request.query.messageBody);
     })
 
     // Account Routes //

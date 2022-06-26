@@ -1,5 +1,5 @@
 const { database } = require("../../../app");
-const { Profile, Language, Account, Edition, Customization } = require("../../models");
+const { Profile, Language, Account, Edition, Customization, Character, Health } = require("../../models");
 const { getCurrentTimestamp, logger, FastifyResponse, writeFile } = require("../../utilities");
 
 
@@ -82,13 +82,16 @@ class GameController {
             );
     };
 
-    static clientGameKeepAlive = async (request = null, _reply = null) => {
+    static clientGameKeepAlive = async (request = null, reply = null) => {
+        let msg = "OK"
+
         const sessionID = await FastifyResponse.getSessionID(request);
-        if (typeof sessionID == "undefined") return FastifyResponse.applyBody({
-            msg: "No Session",
-            utc_time: getCurrentTimestamp(),
-        });
-        return FastifyResponse.applyBody({ msg: "OK", utc_time: getCurrentTimestamp() });
+        if (typeof sessionID == "undefined") msg = "No Session";
+
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody({ msg: msg, utc_time: getCurrentTimestamp() })
+        )
     }
 
     static clientProfileList = async (request = null, reply = null) => {
@@ -127,24 +130,31 @@ class GameController {
 
     static clientGameProfileCreate = async (request = null, reply = null) => {
         const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
+        if(!playerAccount) {
+            logger.logDebug("[clientGameProfileCreate] Invalid player account.")
+            return;
+        }
+
+        let voice = await Customization.get(request.body.voiceId);
+
         const chosenSide = request.body.side.toLowerCase();
         const chosenSideCapital = chosenSide.charAt(0).toUpperCase() + chosenSide.slice(1);
 
-        let profile = new Profile;
-        let character = profile.character;
-        let profileTemplate = Edition.get(chosenSide)
-
-        character._id = "pmc" + playerAccount._id;
-        character.aid = playerAccount._id;
-        character.savage = "scav" + playerAccount._id;
+        let profile = new Profile(playerAccount.id);
+        let character = await playerAccount.edition.getCharacterTemplateBySide(chosenSide).solvedClone();
+        character._id = "pmc" + playerAccount.id;
+        character.aid = playerAccount.id;
+        character.savage = "scav" + playerAccount.id;
+        character.Info = {};
         character.Info.Side = chosenSideCapital;
         character.Info.Nickname = request.body.nickname;
         character.Info.LowerNickname = request.body.nickname.toLowerCase();
-        character.Info.Voice = Customization.get([request.body.voiceId]._name);
-        character.Customization = profileTemplate.Customization
-        character.Customization.Head = request.body.headId;
+        character.Info.Voice = voice._name;
+        character.Customization.Head = await Customization.get(request.body.headId);
         character.Info.RegistrationDate = ~~(new Date() / 1000);
         character.Health.UpdateTime = ~~(Date.now() / 1000);
+
+        profile.pmc = character;
 
         profile.storage = {
             err: 0,
@@ -152,15 +162,15 @@ class GameController {
             data:
             {
                 _id: profile._id,
-                suites: profileTemplate.storage
+                suites: playerAccount.edition.storage
             }
         };
-
-        logger.logDefault(profile);
-
-        profile.save();
         playerAccount.wipe = false;
-        playerAccount.save();
+
+        await Promise.all([
+            profile.save(),
+            playerAccount.save(),
+        ]);
     }
 
     static clientGameProfileCreateReply = async (request = null, reply = null) => {

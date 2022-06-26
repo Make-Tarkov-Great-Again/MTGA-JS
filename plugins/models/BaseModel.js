@@ -1,9 +1,22 @@
 const { logger } = require("../utilities");
-
+const { cloneDeep } = require("lodash"); 
 
 class BaseModel {
     constructor() {
+        
+    }
 
+    /**
+     * Creates a new database Entry of the model it's used at with the provided id parameters as it's table index
+     * @param {*} id 
+     */
+    createDatabase(id) {
+        const { database } = require("../../app");
+        var className = this.constructor.name;
+        if(id) {
+            if(database[className.toLowerCase() + 's'] === undefined) database[className.toLowerCase() + 's'] = {}
+            database[className.toLowerCase() + 's'][id] = this;
+        }
     }
 
     /**
@@ -11,11 +24,7 @@ class BaseModel {
      * @returns true if the model was saved, will return false otherwise.
      */
     async save() {
-        const { database } = require("../../app");
-        var className = this.constructor.name;
-        database[className.toLowerCase() + 's'][this.id] = this;
-
-        return database.saveModel(className, this.id);
+        
     }
 
     /**
@@ -23,10 +32,43 @@ class BaseModel {
      * @returns true if the model was destroyed, will return false otherwise.
      */
     async destroy() {
-        const { database } = require("../../app");
-
         var className = this.name;
         return delete database[className.toLowerCase() + 's'][this.id];
+    }
+
+    /**
+     * Creates a deep clone of a Model, so it can, for example, be applied as a template without modifing the originating instance.
+     * @returns 
+     */
+    async clone() {
+        return cloneDeep(this);
+    }
+
+    /**
+     * When creating a deep clone, you also clone the instances within the specific model. They won't point to their original instance again (their are basically a new model instance). With this function, the original instance pointers will get resolved again.
+     * @returns 
+     */
+    async solvedClone() {
+        let dissolvedClone = await this.dissolve(cloneDeep(this));
+        await dissolvedClone.solve();
+        return dissolvedClone;
+    }
+
+    /**
+     * This is a base for the solve function in which you specifiy what model references should be created.ö
+     */
+    async solve() {
+        // Do Solve
+    }
+
+    /**
+     * This is the base function to dissolve model references. With this you are supposed to, instead of having a sub instance reference inside your primary instance, return only IDs. Look at accounts for an easy to understand example.
+     * @returns 
+     */
+    async dissolve() {
+        let dissolve = await this.clone()
+        // Do Dissolve
+        return dissolve;
     }
 
     /**
@@ -53,8 +95,8 @@ class BaseModel {
      */
     static async getBy(property, value) {
         const { database } = require("../../app");
-
         var className = this.name;
+        logger.logDebug(database[className.toLowerCase() + 's']);
         for (let classDimensionElement of Object.keys(database[className.toLowerCase() + 's'])) {
             if (database[className.toLowerCase() + 's'][classDimensionElement][property] === value) {
                 return database[className.toLowerCase() + 's'][classDimensionElement];

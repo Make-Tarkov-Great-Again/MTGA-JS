@@ -44,7 +44,7 @@ class ClientController {
     static clientCustomization = async (_request = null, reply = null) => {
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody(database.clientCustomization)
+            FastifyResponse.applyBody(await Customization.getAll())
         )
     }
 
@@ -78,8 +78,11 @@ class ClientController {
         }
     }
 
-    static clientWeather = async (_request = null, _reply = null) => {
-        return "these nuts are not the weather you are looking for";
+    static clientWeather = async (_request = null, reply = null) => {
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody(database.weather)
+        )
     }
 }
 

@@ -1,8 +1,10 @@
 const { BaseModel } = require("./BaseModel");
 
 class Language extends BaseModel {
-    constructor() {
+    constructor(id) {
         super();
+
+        this.createDatabase(id);
     }
 }
 

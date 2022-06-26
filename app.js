@@ -1,4 +1,5 @@
 const { certificate } = require("./engine/certificategenerator");
+const { logger } = require("./plugins/utilities");
 const cert = certificate.generate("127.0.0.1");
 const zlib = require("node:zlib");
 
@@ -44,15 +45,16 @@ const app = require('fastify')({
 })
 
 const database = require('./engine/database');
-database.loadDatabase();
 const webinterface = require("./engine/webinterface");
-const { logger } = require("./plugins/utilities");
 
 module.exports = {
     app,
     database,
     webinterface
 }
+
+const { DatabaseLoader } = require("./engine/databaseLoader");
+DatabaseLoader.loadDatabase();
 
 app.removeContentTypeParser("application/json");
 app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (req, body, done) {
