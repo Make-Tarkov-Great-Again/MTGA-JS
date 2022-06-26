@@ -24,6 +24,7 @@ class Database {
         this.locales = {};
         this.templates = {};
         this.customizations = {};
+        this.locations = {};
         //this.bots;
         this.editions = {};
         this.traders = {};
@@ -73,25 +74,38 @@ class Database {
      */
     async loadHideout() {
         this.hideout = {
-            areas: readParsed('./database/hideout/areas.json').data,
-            productions: readParsed('./database/hideout/productions.json').data,
-            scavcase: readParsed('./database/hideout/scavcase.json').data,
-            settings: readParsed('./database/hideout/settings.json').data
+            areas: [],
+            productions: [],
+            scavcase: [],
+            settings: []
         };
+
+        this.hideout.areas = readParsed('./database/hideout/areas.json')
+        if (typeof this.hideout.areas.data != "undefined") { this.hideout.areas = this.hideout.areas.data; }
+        this.hideout.productions = readParsed('./database/hideout/productions.json')
+        if (typeof this.hideout.productions.data != "undefined") { this.hideout.productions = this.hideout.productions.data; }
+        this.hideout.scavcase = readParsed('./database/hideout/scavcase.json')
+        if (typeof this.hideout.scavcase.data != "undefined") { this.hideout.scavcase = this.hideout.scavcase.data; }
+        this.hideout.settings = readParsed('./database/hideout/settings.json')
+        if (typeof this.hideout.settings.data != "undefined") { this.hideout.settings = this.hideout.settings.data; }
     }
+
 
     /**
      * Load weather data in parallel.
      */
     async loadWeather() {
-        this.weather = readParsed('./database/weather.json').data;
+        this.weather = readParsed('./database/weather.json')
+        if (typeof this.weather.data != "undefined") { this.weather = this.weather.data; }
     }
 
     /**
      * Load templates data in parallel.
      */
     async loadTemplates() {
-        const templatesData = readParsed('./database/templates.json').data;
+        let templatesData = readParsed('./database/templates.json')
+        if (typeof templatesData.data != "undefined") { templatesData = templatesData.data; }
+
         this.templates = {
             "Categories": templatesData.Categories,
             "Items": templatesData.Items
