@@ -135,6 +135,7 @@ class AccountController {
                 reply.redirect('/webinterface/account/register');
             }
         } else {
+            reply.type("text/html")
             return webinterface.renderMessage("Error", "You specified an empty accountname or password.");
         }
 
