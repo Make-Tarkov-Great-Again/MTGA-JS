@@ -3,7 +3,7 @@ const { logger, fileExist } = require('../utilities');
 const { webinterface } = require('../../app');
 const fs = require('fs');
 const { AccountController } = require('../controllers/AccountController');
-const { WeblauncherController } = require('../controllers/WeblauncherController');
+const { WeblauncherController } = require('../controllers/WebLauncherController');
 
 const {
     database: {

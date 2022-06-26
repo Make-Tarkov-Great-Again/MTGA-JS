@@ -1,4 +1,4 @@
-const { BaseModel } = require("./baseModel");
+const { BaseModel } = require("./BaseModel");
 
 class Locale extends BaseModel {
     constructor() {

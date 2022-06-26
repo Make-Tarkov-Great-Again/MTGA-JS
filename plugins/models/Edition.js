@@ -1,4 +1,4 @@
-const { BaseModel } = require("./baseModel");
+const { BaseModel } = require("./BaseModel");
 
 class Edition extends BaseModel {
     constructor() {

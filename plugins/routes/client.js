@@ -1,7 +1,7 @@
 const { ClientController, GameController, MenuController, TradingController } = require("../controllers/client");
 const { logger, FastifyResponse } = require("../utilities");
 
-module.exports = async function gameRoutes(app, opts) {
+module.exports = async function gameRoutes(app, _opts) {
 
     // Initial entry points for tarkov //
     app.get(`/mode/offline`, async (request, reply) => {

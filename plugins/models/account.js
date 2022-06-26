@@ -1,5 +1,5 @@
 const { logger } = require("../utilities");
-const { BaseModel } = require("./baseModel");
+const { BaseModel } = require("./BaseModel");
 
 class Account extends BaseModel {
     constructor() {
