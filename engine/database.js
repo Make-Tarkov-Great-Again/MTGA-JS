@@ -350,9 +350,11 @@ class Database {
 
 
     async loadCustomization() {
-        let customization = readParsed("./database/customization.json");
-        if (typeof customization.data != "undefined") customization = customization.data;
-        this.customization = customization;
+        let customizations = readParsed("./database/customization.json");
+        if (typeof customizations.data != "undefined") customizations = customizations.data;
+        for (const [index, customization] of Object.entries(customizations)) {
+            this.customizations[index] = await this.createModelFromParse('Customization', customization);
+        }
 
     }
 
