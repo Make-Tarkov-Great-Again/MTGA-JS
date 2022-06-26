@@ -1,8 +1,10 @@
 const { BaseModel } = require("./BaseModel");
 
 class Locale extends BaseModel {
-    constructor() {
+    constructor(id) {
         super();
+
+        this.createDatabase(id);
     }
 }
 

@@ -57,13 +57,16 @@ class AccountController {
      * @returns 
      */
     static login = async (request = null, reply = null) => {
+        reply.type("text/html")
         if (await webinterface.checkForSessionID(request)) {
             return webinterface.renderMessage("Error", "Incorrect call.");
         } else {
+            
             if (request.body.email != (undefined || null) && request.body.password != (undefined || null)) {
+                logger.logDebug(await Account.getBy('email', request.body.email));
                 let userAccount = await Account.getBy('email', request.body.email);
                 if (userAccount) {
-                    if (request.body.password == userAccount.password) {
+                    if (request.body.password === userAccount.password) {
                         reply.setCookie('PHPSESSID', userAccount.id, { path: '/' });
                         reply.redirect('/');
                     }
@@ -115,14 +118,14 @@ class AccountController {
                 return webinterface.renderMessage("Error", "The account already exists, please choose a different username.");
             }
 
-            let newAccount = new Account;
+            let newAccount = new Account(newAccountID);
             newAccount.id = newAccountID;
             newAccount.email = request.body.email;
             newAccount.password = request.body.password;
             newAccount.wipe = true;
-            newAccount.edition = request.body.edition;
-
+            newAccount.edition = await Edition.get(request.body.edition);
             await newAccount.save();
+            
             if (newAccount.id != (undefined || null || false)) {
                 logger.logDebug('[WEBINTERFACE] Registration successful for account ID: ' + newAccount.id);
                 reply.setCookie('PHPSESSID', newAccount.id, { path: '/' });
