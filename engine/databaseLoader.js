@@ -299,6 +299,7 @@ class DatabaseLoader {
 
     // Profile data processing //
     static async loadProfiles() {
+        const { database } = require('../app');
         for (const profileID of getDirectoriesFrom('/user/profiles')) {
             let profile = await this.createModelFromParseWithID("Profile", profileID, {
                 character: [],
@@ -330,7 +331,7 @@ class DatabaseLoader {
 
                 let parsedBuilds = readParsed("./user/profiles/" + profileID + "/userbuilds.json");
                 if (typeof parsedBuilds.data != "undefined") { parsedBuilds = parsedBuilds.data; }
-                profile.userbuilds = await this.createCollectionFromParse("Userbuild", ) 
+                profile.userbuilds = await this.createCollectionFromParse("Userbuild", parsedBuilds) 
 
                 stats = fs.statSync(`./user/profiles/${profileID}/userbuilds.json`);
                 database.fileAge[profileID].userbuilds = stats.mtimeMs;
