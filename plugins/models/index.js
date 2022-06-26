@@ -1,12 +1,13 @@
 const BaseModel = require('./baseModel');
-const Profile = require('./profile');
-const Account = require('./account');
+const Profile = require('./Profile');
+const Account = require('./Account');
 const Trader = require('./trader');
 const Item = require('./item');
 const Locale = require('./locale');
 const ClientCustomization = require('./clientCustomization');
 const Language = require('./language');
 const Edition = require('./edition');
+const Customization = require('./Customization');
 
 module.exports = {
     ...BaseModel,
@@ -17,5 +18,6 @@ module.exports = {
     ...Locale,
     ...ClientCustomization,
     ...Language,
-    ...Edition
+    ...Edition,
+    ...Customization
 }

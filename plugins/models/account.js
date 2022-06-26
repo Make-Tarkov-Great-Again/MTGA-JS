@@ -41,7 +41,7 @@ class Account extends BaseModel {
      * @returns 
      */
     async getProfile() {
-        const { Profile } = require("./profile");
+        const { Profile } = require("./Profile");
         logger.logDebug("Getting profile for account " + this.id);
         const profile = await Profile.get(this.id);
         if (profile) {
