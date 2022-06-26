@@ -109,4 +109,8 @@ module.exports = async function gameRoutes(app, _opts) {
     app.post(`/client/settings`, async (request, reply) => {
         await ClientController.clientSettings(request, reply);
     });
+
+    app.post(`/client/weather`, async (request, reply) => {
+        await ClientController.clientWeather(request, reply);
+    })
 }

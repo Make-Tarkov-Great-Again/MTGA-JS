@@ -77,6 +77,10 @@ class ClientController {
             )
         }
     }
+
+    static clientWeather = async (_request = null, _reply = null) => {
+        return "these nuts are not the weather you are looking for";
+    }
 }
 
 module.exports.ClientController = ClientController;

@@ -8,6 +8,7 @@ const ClientCustomization = require('./ClientCustomization');
 const Language = require('./Language');
 const Edition = require('./Edition');
 const Customization = require('./Customization');
+const Weather = require('./Weather');
 
 module.exports = {
     ...BaseModel,
@@ -19,5 +20,6 @@ module.exports = {
     ...ClientCustomization,
     ...Language,
     ...Edition,
-    ...Customization
+    ...Customization,
+    ...Weather
 }
