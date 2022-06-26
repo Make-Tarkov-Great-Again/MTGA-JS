@@ -1,5 +1,5 @@
 const { database } = require("../../../app");
-const { Account, Item, Language, Locale } = require("../../models");
+const { Account, Item, Language, Locale, Customization } = require("../../models");
 const { logger, stringify, FastifyResponse } = require("../../utilities");
 
 /**
@@ -63,10 +63,17 @@ class ClientController {
     }
 
     static clientAccountCustomization = async (_request = null, reply = null) => {
+        const customizations = [];
+        const nonFiltered = await Customization.getAllWithoutKeys();
+        for (const custo of nonFiltered) {
+            if (custo._props.Side && custo._props.Side.length > 0) {
+                customizations.push(custo._id);
+            }
+        }
         {
             return FastifyResponse.zlibJsonReply(
                 reply,
-                FastifyResponse.applyBody(database.customization)
+                FastifyResponse.applyBody(customizations)
             )
         }
     }
