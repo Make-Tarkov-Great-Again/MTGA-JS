@@ -108,7 +108,7 @@ class AccountController {
      * @returns 
      */
     static store = async (request = null, reply = null) => {
-        if (request.body.email != (undefined || null) && request.body.password != (undefined || null) && request.body.edition != (undefined || null)) {
+        if (request.body.email != (undefined || null || "") && request.body.password != (undefined || null || "") && request.body.edition != (undefined || null || "")) {
             logger.logDebug("[CLUSTER] Registering new account...")
 
             let newAccountID = await generateUniqueId("AID");
@@ -134,6 +134,8 @@ class AccountController {
                 logger.logDebug('[WEBINTERFACE] Registration failed.');
                 reply.redirect('/webinterface/account/register');
             }
+        } else {
+            return webinterface.renderMessage("Error", "You specified an empty accountname or password.");
         }
 
         reply.redirect('/webinterface/account/register');
