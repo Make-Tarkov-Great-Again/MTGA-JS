@@ -31,7 +31,7 @@ class AccountController {
                 return webinterface.renderMessage("Restricted", "Create a account.");
             }
         }
-        return await webinterface.renderMessage("Restricted", "Login or create a new account.");
+        return webinterface.renderMessage("Restricted", "Login or create a new account.");
     }
 
     /**
