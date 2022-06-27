@@ -96,12 +96,17 @@ class BaseModel {
     static async getBy(property, value) {
         const { database } = require("../../app");
         var className = this.name;
-        logger.logDebug(database[className.toLowerCase() + 's']);
+
+        if(!database[className.toLowerCase() + 's']) {
+            return false
+        }
+
         for (let classDimensionElement of Object.keys(database[className.toLowerCase() + 's'])) {
             if (database[className.toLowerCase() + 's'][classDimensionElement][property] === value) {
                 return database[className.toLowerCase() + 's'][classDimensionElement];
             }
         }
+        
         return false;
     }
 
