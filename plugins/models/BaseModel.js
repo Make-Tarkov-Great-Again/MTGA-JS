@@ -1,9 +1,9 @@
 const { logger } = require("../utilities");
-const { cloneDeep } = require("lodash"); 
+const { cloneDeep } = require("lodash");
 
 class BaseModel {
     constructor() {
-        
+
     }
 
     /**
@@ -13,8 +13,8 @@ class BaseModel {
     createDatabase(id) {
         const { database } = require("../../app");
         var className = this.constructor.name;
-        if(id) {
-            if(database[className.toLowerCase() + 's'] === undefined) database[className.toLowerCase() + 's'] = {}
+        if (id) {
+            if (database[className.toLowerCase() + 's'] === undefined) database[className.toLowerCase() + 's'] = {}
             database[className.toLowerCase() + 's'][id] = this;
         }
     }
@@ -24,7 +24,7 @@ class BaseModel {
      * @returns true if the model was saved, will return false otherwise.
      */
     async save() {
-        
+
     }
 
     /**
@@ -79,6 +79,10 @@ class BaseModel {
         const { database } = require("../../app");
 
         var className = this.name;
+        if (!database[className.toLowerCase() + 's']) {
+            return false;
+        }
+
         let instance = database[className.toLowerCase() + 's'][id];
         if (instance) {
             return instance;
@@ -97,7 +101,7 @@ class BaseModel {
         const { database } = require("../../app");
         var className = this.name;
 
-        if(!database[className.toLowerCase() + 's']) {
+        if (!database[className.toLowerCase() + 's']) {
             return false
         }
 
@@ -106,7 +110,7 @@ class BaseModel {
                 return database[className.toLowerCase() + 's'][classDimensionElement];
             }
         }
-        
+
         return false;
     }
 
@@ -117,6 +121,11 @@ class BaseModel {
     static async getAll() {
         const { database } = require("../../app");
         var className = this.name;
+
+        if (!database[className.toLowerCase() + 's']) {
+            return false
+        }
+
         let collection = database[className.toLowerCase() + 's'];
         if (collection) {
             return collection;
