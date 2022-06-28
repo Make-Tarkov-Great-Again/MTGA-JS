@@ -13,10 +13,10 @@ const { Account, Trader, Item, Locale, Language, Edition, Profile, Customization
 
 
 class DatabaseLoader {
-    constructor () {
+    constructor() {
 
     }
-    
+
     static async loadDatabase() {
         await Promise.all([
             this.loadCore(),
@@ -35,7 +35,7 @@ class DatabaseLoader {
         await this.loadAccounts();
         await this.loadProfiles();
     }
-    
+
     /**
     * Loads the core configurations
     */
@@ -56,7 +56,7 @@ class DatabaseLoader {
     /**
      * Load hideout data in parallel.
      */
-     static async loadHideout() {
+    static async loadHideout() {
         const database = require('./database');
         database.hideout = {
             areas: [],
@@ -95,7 +95,7 @@ class DatabaseLoader {
     /**
      * Load weather data in parallel.
      */
-     static async loadWeather() {
+    static async loadWeather() {
         const database = require('./database');
         database.weather = readParsed('./database/weather.json')
         if (typeof database.weather.data != "undefined") { database.weather = database.weather.data; }
@@ -104,7 +104,7 @@ class DatabaseLoader {
     /**
      * Load templates data in parallel.
      */
-     static async loadTemplates() {
+    static async loadTemplates() {
         const database = require('./database');
         let templatesData = readParsed('./database/templates.json')
         if (typeof templatesData.data != "undefined") { templatesData = templatesData.data; }
@@ -113,6 +113,30 @@ class DatabaseLoader {
             "Categories": templatesData.Categories,
             "Items": templatesData.Items
         };
+    }
+
+    static async loadLocations() {
+        const database = require('./database');
+        const maps = getDirectoriesFrom('./database/locations/');
+
+        for (const map in maps) {
+            let location = { "base": {}, "loot": {} };
+            location.base = fileIO.readParsed(`./database/locations/base/${map}.json`);
+            location.loot = { forced: [], mounted: [], static: [], dynamic: [] };
+/*             if (typeof db.locations.loot[name] != "undefined") {
+                let loot_data = fileIO.readParsed(`./database/locations/loot/${location}.json`);
+                for (let type in loot_data) {
+                    for (let item of loot_data[type]) {
+                        if (type == "static" || type == "mounted") {
+                            _location.loot[type].push(createStaticMountedStruct(item));
+                            continue;
+                        }
+                        _location.loot[type].push(createForcedDynamicStruct(item));
+                    }
+                }
+            } */
+            database.locations[map] = location;
+        }
     }
 
     /**
@@ -321,7 +345,7 @@ class DatabaseLoader {
             if (fileExist(`${path}storage.json`)) {
                 logger.logWarning(`Loading storage data for profile ${profileID}`);
                 profile.storage = readParsed("./user/profiles/" + profileID + "/storage.json");
-                
+
                 stats = fs.statSync(`./user/profiles/${profileID}/storage.json`);
                 database.fileAge[profileID].storage = stats.mtimeMs;
             }
@@ -331,7 +355,7 @@ class DatabaseLoader {
 
                 let parsedBuilds = readParsed("./user/profiles/" + profileID + "/userbuilds.json");
                 if (typeof parsedBuilds.data != "undefined") { parsedBuilds = parsedBuilds.data; }
-                profile.userbuilds = await this.createCollectionFromParse("Userbuild", parsedBuilds) 
+                profile.userbuilds = await this.createCollectionFromParse("Userbuild", parsedBuilds)
 
                 stats = fs.statSync(`./user/profiles/${profileID}/userbuilds.json`);
                 database.fileAge[profileID].userbuilds = stats.mtimeMs;
@@ -342,7 +366,7 @@ class DatabaseLoader {
 
                 let parsedDialogues = readParsed("./user/profiles/" + profileID + "/dialogue.json");
                 if (typeof parsedDialogues.data != "undefined") { parsedDialogues = parsedDialogues.data; }
-                profile.userbuilds = await this.createCollectionFromParse("Dialogue", parsedDialogues) 
+                profile.userbuilds = await this.createCollectionFromParse("Dialogue", parsedDialogues)
 
                 stats = fs.statSync(`./user/profiles/${profileID}/dialogue.json`);
                 database.fileAge[profileID].dialogue = stats.mtimeMs;

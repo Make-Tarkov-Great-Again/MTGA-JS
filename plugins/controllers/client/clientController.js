@@ -84,6 +84,23 @@ class ClientController {
             FastifyResponse.applyBody(database.weather)
         )
     }
+
+    static clientLocations = async (_request = null, reply = null) => {
+
+        let maps = database.location;
+        let data = {};
+        for (let map in maps) {
+            maps[map].base = utility.DeepCopy(global._database.locations[location].base);
+            newData[global._database.locations[location].base._Id].Loot = [];
+        }
+        data[map] = newData;
+
+
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody(base)
+        )
+    }
 }
 
 module.exports.ClientController = ClientController;
