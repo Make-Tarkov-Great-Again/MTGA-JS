@@ -1,0 +1,6941 @@
+{
+    "forced": [],
+    "mounted": [],
+    "static": [
+        {
+         "Id": "Lighthouse_Abadonned_pier_00017",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Abadonned_pier_00018",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Bus_Stop_00016",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f879c24597735401e6bc6"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Bus_Stop_00017",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909e4b686f7747f5b744fa4"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Bus_Stop_00018",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d4c186f7746ad34e805a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Chalet_00015",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d5ef86f77467974efbd8"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Chalet_00016",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d5ef86f77467974efbd8"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Chalet_00034",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d5ef86f77467974efbd8"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Chalet_00037",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Chalet_00038",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d76c86f77471e53d2adf"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Chalet_00039",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Chalet_00040",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d5ef86f77467974efbd8"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Chalet_00041",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Chalet_00042",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d24f86f77466f56e6855"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Chalet_00044",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d4c186f7746ad34e805a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Chalet_00045",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d7cf86f77470ee57d75a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Chalet_00046",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d7cf86f77470ee57d75a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Chalet_00047",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Chalet_00048",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909e4b686f7747f5b744fa4"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Chalet_00049",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909e4b686f7747f5b744fa4"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Chalet_00050",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Chalet_00051",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Chalet_00052",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8782245977354405a1e3"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Chalet_00053",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d24f86f77466f56e6855"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Complex_00004",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6fd45b86f774317075ed43"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00000",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6d2bb386f774785b07a77a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00001",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6d2b5486f774785c2ba8ea"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00002",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d7cf86f77470ee57d75a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00003",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00004",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00005",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00006",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6d2bb386f774785b07a77a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00007",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6d2b5486f774785c2ba8ea"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00008",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6d2bb386f774785b07a77a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00009",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6d2b5486f774785c2ba8ea"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00010",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6d2bb386f774785b07a77a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00011",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6d2bb386f774785b07a77a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00012",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6d2b5486f774785c2ba8ea"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00013",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6d2b5486f774785c2ba8ea"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00014",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6d2b5486f774785c2ba8ea"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00015",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6d2bb386f774785b07a77a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00016",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6d2bb386f774785b07a77a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00017",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6d2b5486f774785c2ba8ea"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00018",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6d2b5486f774785c2ba8ea"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00019",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6d2bb386f774785b07a77a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00020",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6d2b5486f774785c2ba8ea"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00021",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6d2bb386f774785b07a77a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00023",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d7cf86f77470ee57d75a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00024",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "61aa1ead84ea0800645777fd"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_DesignStuff_00025",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6d2b5486f774785c2ba8ea"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Fisher_Village_00003",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Fisher_Village_00004",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909e4b686f7747f5b744fa4"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Logistics_Terminal_00021",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6fd13186f77424ad2a8c69"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Logistics_Terminal_00025",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Logistics_Terminal_00026",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Logistics_Terminal_00027",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00000",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00001",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d5ef86f77467974efbd8"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00019",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d5ef86f77467974efbd8"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00022",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00025",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d5ef86f77467974efbd8"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00029",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00069",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00070",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00071",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00072",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d7cf86f77470ee57d75a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00073",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d7cf86f77470ee57d75a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00074",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00075",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00076",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00077",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87ad245977356274f2cc"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00078",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00079",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00081",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d5ef86f77467974efbd8"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00082",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d76c86f77471e53d2adf"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00083",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d7cf86f77470ee57d75a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00084",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d7cf86f77470ee57d75a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00085",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d5ef86f77467974efbd8"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00086",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d5ef86f77467974efbd8"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00087",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87ad245977356274f2cc"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00088",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d76c86f77471e53d2adf"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00089",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87ad245977356274f2cc"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00090",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87ad245977356274f2cc"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00091",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00092",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "61aa1e9a32a4743c3453d2cf"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00093",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d24f86f77466f56e6855"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00094",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00095",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00096",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "61aa1ead84ea0800645777fd"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00097",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00098",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00099",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d36d86f774660f0bb900"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00100",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d7cf86f77470ee57d75a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00101",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00102",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "61aa1ead84ea0800645777fd"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00104",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d5ef86f77467974efbd8"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00105",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00106",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00107",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00108",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00109",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00110",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00111",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d7cf86f77470ee57d75a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00112",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00113",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00114",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00115",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Loot_00116",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Main_00035",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d36d86f774660f0bb900"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Main_00036",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d4c186f7746ad34e805a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Roads_00008",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5c052cea86f7746b2101e8d8"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Roads_00009",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Roads_00013",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909e4b686f7747f5b744fa4"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Roads_00065",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909e4b686f7747f5b744fa4"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Roads_00066",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87ad245977356274f2cc"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Roads_00069",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Roads_00076",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Roads_00077",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Scripts_00000",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d45286f77465a8136dc6"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Scripts_00001",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d45286f77465a8136dc6"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SummerHotel_00041",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909e4b686f7747f5b744fa4"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SummerHotel_00042",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d36d86f774660f0bb900"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SummerHotel_00043",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d89086f77472591234a0"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SummerHotel_00044",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d4c186f7746ad34e805a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SummerHotel_00045",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d7cf86f77470ee57d75a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SummerHotel_00047",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SummerHotel_00048",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909e4b686f7747f5b744fa4"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SummerHotel_00049",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d45286f77465a8136dc6"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SummerHotel_00050",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d5ef86f77467974efbd8"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SummerHotel_00054",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SummerHotel_00055",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d24f86f77466f56e6855"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SummerHotel_00056",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SummerHotel_00057",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SummerHotel_00058",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00023",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d45286f77465a8136dc6"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00063",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00065",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00066",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00067",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00068",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d24f86f77466f56e6855"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00069",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00070",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00071",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00072",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6fd45b86f774317075ed43"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00073",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00075",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d24f86f77466f56e6855"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00076",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00077",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00078",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00079",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00080",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00081",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00082",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00083",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00084",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00085",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00086",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00087",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00088",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_SwampVillage_00089",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d36d86f774660f0bb900"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Terrain_00000",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Terrain_00001",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Terrain_00002",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Terrain_00003",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Terrain_00004",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Terrain_00005",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Terrain_00006",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Terrain_00007",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Terrain_00008",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Terrain_00009",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Terrain_00010",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Terrain_00011",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d36d86f774660f0bb900"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Terrain_00012",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d36d86f774660f0bb900"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Terrain_00013",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d36d86f774660f0bb900"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_TrainStation_00018",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d76c86f77471e53d2adf"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_TrainStation_00020",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87ad245977356274f2cc"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00008",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6d2bb386f774785b07a77a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00013",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d36d86f774660f0bb900"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00014",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d76c86f77471e53d2adf"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00016",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d89086f77472591234a0"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00063",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909e4b686f7747f5b744fa4"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00067",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87b7245977356274f2cd"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00068",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87b7245977356274f2cd"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00069",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87b7245977356274f2cd"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00070",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87b7245977356274f2cd"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00075",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00077",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00078",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87ad245977356274f2cc"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00079",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d24f86f77466f56e6855"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00080",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00081",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6fd45b86f774317075ed43"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00082",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6fd45b86f774317075ed43"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00083",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d36d86f774660f0bb900"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00084",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87b7245977356274f2cd"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00085",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87b7245977356274f2cd"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00086",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87b7245977356274f2cd"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00087",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87b7245977356274f2cd"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00088",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87b7245977356274f2cd"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00089",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87b7245977356274f2cd"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00090",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87b7245977356274f2cd"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00091",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87b7245977356274f2cd"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00092",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d89086f77472591234a0"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00093",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d7cf86f77470ee57d75a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00094",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6fd45b86f774317075ed43"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00095",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87ad245977356274f2cc"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00096",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87ad245977356274f2cc"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00097",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d5ef86f77467974efbd8"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00098",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6fd45b86f774317075ed43"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00099",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00102",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00103",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87ad245977356274f2cc"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00104",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00105",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6fd45b86f774317075ed43"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00106",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87ad245977356274f2cc"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00107",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d5ef86f77467974efbd8"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00108",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00109",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d7cf86f77470ee57d75a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00110",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87ad245977356274f2cc"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00111",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00112",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00113",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00114",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00115",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87ad245977356274f2cc"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00116",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87ad245977356274f2cc"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00117",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00118",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5d6fd45b86f774317075ed43"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00119",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87ad245977356274f2cc"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00120",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00121",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d7cf86f77470ee57d75a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00122",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00123",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d4c186f7746ad34e805a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00124",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00125",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00126",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f8778245977358849a9b5"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00127",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87a3245977356274f2cb"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_WaterStation_00128",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d7cf86f77470ee57d75a"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Water_filter_facility_01_00019",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d50c86f774659e6aaebe"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Water_filter_facility_02_00021",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "578f87ad245977356274f2cc"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Water_filter_facility_02_00022",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d5ef86f77467974efbd8"
+          }
+         ]
+        },
+        {
+         "Id": "Lighthouse_Water_filter_facility_03_00017",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909e4b686f7747f5b744fa4"
+          }
+         ]
+        },
+        {
+         "Id": "container_Lighthouse_DesignStuff_00000",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d89086f77472591234a0"
+          }
+         ]
+        },
+        {
+         "Id": "container_Lighthouse_Scripts_00000",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "61a89e5445a2672acf66c877"
+          }
+         ]
+        },
+        {
+         "Id": "container_Lighthouse_SummerHotel_00000",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "5909d89086f77472591234a0"
+          }
+         ]
+        },
+        {
+         "Id": "container_shoreline_scripts_00001",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "61a89e5445a2672acf66c877"
+          }
+         ]
+        },
+        {
+         "Id": "container_shoreline_scripts_00002",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "61a89e5445a2672acf66c877"
+          }
+         ]
+        },
+        {
+         "Id": "container_shoreline_scripts_00003",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "61a89e5445a2672acf66c877"
+          }
+         ]
+        },
+        {
+         "Id": "container_shoreline_scripts_00004",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "61a89e5445a2672acf66c877"
+          }
+         ]
+        },
+        {
+         "Id": "container_shoreline_scripts_00005",
+         "IsStatic": true,
+         "useGravity": true,
+         "randomRotation": false,
+         "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "Rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "IsGroupPosition": false,
+         "GroupPositions": [],
+         "Root": null,
+         "Items": [
+          {
+           "_id": null,
+           "_tpl": "61a89e5445a2672acf66c877"
+          }
+         ]
+        }
+       ],
+    "dynamic": [
+        {
+            "id": "Loot_jigul_garbage-13245750",
+            "Position": {
+                "x": -167.563766,
+                "y": 5.31553268,
+                "z": -437.749329
+            },
+            "Rotation": {
+                "x": -0.000120275363,
+                "y": 36.6871948,
+                "z": 183.296112
+            },
+            "Items": [
+                "5af04b6486f774195a3ebb49"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "LootGarbage (37)-12306868",
+            "Position": {
+                "x": 44.4839058,
+                "y": 5.27100229,
+                "z": -416.116058
+            },
+            "Rotation": {
+                "x": 0.0000112810139,
+                "y": 162.209808,
+                "z": -0.00000522223763
+            },
+            "Items": [
+                "57347da92459774491567cf5"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "LootGarbage (37)-11708862",
+            "Position": {
+                "x": -146.54187,
+                "y": 40.7868729,
+                "z": 85.41031
+            },
+            "Rotation": {
+                "x": -0.00000759052455,
+                "y": 51.7698746,
+                "z": 0.000003908567
+            },
+            "Items": [
+                "5751487e245977207e26a315"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "Hyundai_Bogdan_A202_open [0] 0-11575946",
+            "Position": {
+                "x": -484.260468,
+                "y": 7.52193,
+                "z": 364.255951
+            },
+            "Rotation": {
+                "x": -0.000144714635,
+                "y": 312.870667,
+                "z": 183.2961
+            },
+            "Items": [
+                "5e2af51086f7746d3f3c3402"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "ammo_all (3)3386616",
+            "Position": {
+                "x": 34.472,
+                "y": 10.962,
+                "z": -879.87
+            },
+            "Rotation": 0,
+            "Items": [
+                "57372f5c24597769917c0131",
+                "56dff4a2d2720bbd668b456a"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "mods_all3387054",
+            "Position": {
+                "x": 31.334,
+                "y": 12.289,
+                "z": -899.549
+            },
+            "Rotation": 0,
+            "Items": [
+                "57cffe0024597763b03fc60b"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "mods_all (7)3387434",
+            "Position": {
+                "x": -24.397,
+                "y": 13.344,
+                "z": -881.699
+            },
+            "Rotation": 0,
+            "Items": [
+                "5d25a6a48abbc306c62e6310",
+                "58dd3ad986f77403051cba8f"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "ammo_all (21)3387490",
+            "Position": {
+                "x": -102.765,
+                "y": 11.202,
+                "z": -794.847
+            },
+            "Rotation": 0,
+            "Items": [
+                "57372ac324597767001bc261",
+                "56dfef82d2720bbd668b4567"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "mods_all (3)3387592",
+            "Position": {
+                "x": -133.698,
+                "y": 12.136,
+                "z": -794.233
+            },
+            "Rotation": 0,
+            "Items": [
+                "58ac1bf086f77420ed183f9f"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "mods_all (1)3387700",
+            "Position": {
+                "x": 30.831,
+                "y": 12.289,
+                "z": -899.33
+            },
+            "Rotation": 0,
+            "Items": [
+                "5c6d5d8b2e221644fc630b39"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "mods_all (8)3387882",
+            "Position": {
+                "x": -24.427,
+                "y": 13.253,
+                "z": -881.318
+            },
+            "Rotation": 0,
+            "Items": [
+                "5cbda9f4ae9215000e5b9bfc"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "food_varios_mix (2)3388614",
+            "Position": {
+                "x": 32.681,
+                "y": 12.616,
+                "z": -857.58
+            },
+            "Rotation": 0,
+            "Items": [
+                "5734773724597737fd047c14"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "ammo_all (26)3389290",
+            "Position": {
+                "x": -16.526,
+                "y": 13.169,
+                "z": -900.387
+            },
+            "Rotation": 0,
+            "Items": [
+                "57372e73245977685d4159b4",
+                "56dff3afd2720bba668b4567",
+                "56dff3afd2720bba668b4567"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "mods_all (5)3389538",
+            "Position": {
+                "x": -133.38,
+                "y": 12.136,
+                "z": -794.583
+            },
+            "Rotation": 0,
+            "Items": [
+                "59e0bed186f774156f04ce84"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "mods_all (4)3389918",
+            "Position": {
+                "x": -133.242,
+                "y": 12.136,
+                "z": -794.28
+            },
+            "Rotation": 0,
+            "Items": [
+                "5bfe86bd0db83400232fe959"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "ammo_all (24)3390174",
+            "Position": {
+                "x": -99.283,
+                "y": 11.035,
+                "z": -795.06
+            },
+            "Rotation": 0,
+            "Items": [
+                "57372ee1245977685d4159b5",
+                "56dff4a2d2720bbd668b456a",
+                "56dff4a2d2720bbd668b456a"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "food_varios_mix (1)3390486",
+            "Position": {
+                "x": 32.819,
+                "y": 12.541,
+                "z": -858.634
+            },
+            "Rotation": 0,
+            "Items": [
+                "590c5f0d86f77413997acfab"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "mods_all (2)3390588",
+            "Position": {
+                "x": 31.28,
+                "y": 12.289,
+                "z": -897.999
+            },
+            "Rotation": 0,
+            "Items": [
+                "5bfd4cd60db834001c38f095"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "ammo_all (4)3387046",
+            "Position": {
+                "x": 34.618,
+                "y": 10.962,
+                "z": -880.236
+            },
+            "Rotation": 0,
+            "Items": [
+                "57372e4a24597768553071c2",
+                "56dff338d2720bbd668b4569"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "ammo_all (13)3387204",
+            "Position": {
+                "x": -104.849,
+                "y": 10.816,
+                "z": -949.227
+            },
+            "Rotation": 0,
+            "Items": [
+                "57372ee1245977685d4159b5",
+                "56dff4a2d2720bbd668b456a",
+                "56dff4a2d2720bbd668b456a"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "ammo_all (25)3387372",
+            "Position": {
+                "x": -92.747,
+                "y": 11.096,
+                "z": -795.208
+            },
+            "Rotation": 0,
+            "Items": [
+                "5737260b24597761224311f2",
+                "57371e4124597760ff7b25f1"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "ammo_all (11)3387458",
+            "Position": {
+                "x": 32.879,
+                "y": 11.39,
+                "z": -809.637
+            },
+            "Rotation": 0,
+            "Items": [
+                "57372ee1245977685d4159b5",
+                "56dff4a2d2720bbd668b456a",
+                "56dff4a2d2720bbd668b456a"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "food_varios_mix (5)3387474",
+            "Position": {
+                "x": -94.681,
+                "y": 10.784,
+                "z": -794.47
+            },
+            "Rotation": 0,
+            "Items": [
+                "5734773724597737fd047c14"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "ammo_all (10)3388110",
+            "Position": {
+                "x": 33.205,
+                "y": 11.552,
+                "z": -811.127
+            },
+            "Rotation": 0,
+            "Items": [
+                "5649ed104bdc2d3d1c8b458b",
+                "5656d7c34bdc2d9d198b4587"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "ammo_all (23)3388170",
+            "Position": {
+                "x": -99.881,
+                "y": 11.035,
+                "z": -795.233
+            },
+            "Rotation": 0,
+            "Items": [
+                "5649ed104bdc2d3d1c8b458b",
+                "5656d7c34bdc2d9d198b4587"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "ammo_all (1)3388384",
+            "Position": {
+                "x": 35.402,
+                "y": 11.774,
+                "z": -882.591
+            },
+            "Rotation": 0,
+            "Items": [
+                "57372ac324597767001bc261",
+                "56dfef82d2720bbd668b4567"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "Jeverly&food (2)3388680",
+            "Position": {
+                "x": 89.586,
+                "y": 1.273,
+                "z": 457.964
+            },
+            "Rotation": 0,
+            "Items": [
+                "573474f924597738002c6174"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "ammo_all (28)3389182",
+            "Position": {
+                "x": -16.815,
+                "y": 13.477,
+                "z": -892.7
+            },
+            "Rotation": 0,
+            "Items": [
+                "573727c624597765cc785b5b",
+                "5737201124597760fc4431f1"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "ammo_all3389306",
+            "Position": {
+                "x": 34.987,
+                "y": 11.774,
+                "z": -882.113
+            },
+            "Rotation": 0,
+            "Items": [
+                "573727c624597765cc785b5b",
+                "5737201124597760fc4431f1"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "ammo_all (2)3389416",
+            "Position": {
+                "x": 35.582,
+                "y": 11.851,
+                "z": -882.849
+            },
+            "Rotation": 0,
+            "Items": [
+                "5737256c2459776125652acd",
+                "57371aab2459775a77142f22"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "ammo_all (7)3389432",
+            "Position": {
+                "x": 52.291,
+                "y": 11.47,
+                "z": -809.299
+            },
+            "Rotation": 0,
+            "Items": [
+                "560d75f54bdc2da74d8b4573",
+                "560d61e84bdc2da74d8b4571"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "ammo_all (18)3389654",
+            "Position": {
+                "x": -100.834,
+                "y": 11.403,
+                "z": -795.011
+            },
+            "Rotation": 0,
+            "Items": [
+                "57372f5c24597769917c0131",
+                "56dff4a2d2720bbd668b456a"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "Jeverly&food (1)3390348",
+            "Position": {
+                "x": 90.695,
+                "y": 1.273,
+                "z": 457.86
+            },
+            "Rotation": 0,
+            "Items": [
+                "57513f07245977207e26a311"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "Jeverly&food3390402",
+            "Position": {
+                "x": 90.132,
+                "y": 1.273,
+                "z": 456.971
+            },
+            "Rotation": 0,
+            "Items": [
+                "573474f924597738002c6174"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "ammo_all (5)3390800",
+            "Position": {
+                "x": 52.166,
+                "y": 11.539,
+                "z": -808.893
+            },
+            "Rotation": 0,
+            "Items": [
+                "5737250c2459776125652acc",
+                "573719df2459775a626ccbc2"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "ammo_all (22)3387730",
+            "Position": {
+                "x": -101.187,
+                "y": 11.41,
+                "z": -794.412
+            },
+            "Rotation": 0,
+            "Items": [
+                "57372e73245977685d4159b4",
+                "56dff3afd2720bba668b4567",
+                "56dff3afd2720bba668b4567"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "ammo_all (6)3387992",
+            "Position": {
+                "x": 52.708,
+                "y": 11.47,
+                "z": -809.262
+            },
+            "Rotation": 0,
+            "Items": [
+                "5737260b24597761224311f2",
+                "57371e4124597760ff7b25f1"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "ammo_all (17)3388280",
+            "Position": {
+                "x": -101.325,
+                "y": 11.025,
+                "z": -796.027
+            },
+            "Rotation": 0,
+            "Items": [
+                "57372deb245977685d4159b3",
+                "56dff338d2720bbd668b4569",
+                "56dff338d2720bbd668b4569"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "ammo_all (27)3388356",
+            "Position": {
+                "x": -16.086,
+                "y": 13.182,
+                "z": -900.154
+            },
+            "Rotation": 0,
+            "Items": [
+                "57372deb245977685d4159b3",
+                "56dff338d2720bbd668b4569",
+                "56dff338d2720bbd668b4569"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "mods_all (6)3388364",
+            "Position": {
+                "x": -23.508,
+                "y": 13.236,
+                "z": -881.691
+            },
+            "Rotation": 0,
+            "Items": [
+                "5fb653962b1b027b1f50bd03"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "food_varios_mix3390028",
+            "Position": {
+                "x": 90.127,
+                "y": 1.874,
+                "z": 456.108
+            },
+            "Rotation": 0,
+            "Items": [
+                "5bc9c29cd4351e003562b8a3"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "Loot_jigul_garbage (1)-13245752",
+            "Position": {
+                "x": -167.428879,
+                "y": 5.3555336,
+                "z": -437.282043
+            },
+            "Rotation": {
+                "x": -0.000120275363,
+                "y": 36.6871948,
+                "z": 183.296112
+            },
+            "Items": [
+                "57347b8b24597737dd42e192"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "ammo_all (8)3386526",
+            "Position": {
+                "x": 53.933,
+                "y": 11.065,
+                "z": -809.005
+            },
+            "Rotation": 0,
+            "Items": [
+                "57372e4a24597768553071c2",
+                "56dff338d2720bbd668b4569"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "food_varios_mix (4)3389672",
+            "Position": {
+                "x": -95.158,
+                "y": 10.886,
+                "z": -795.125
+            },
+            "Rotation": 0,
+            "Items": [
+                "5bc9c29cd4351e003562b8a3"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "Jeverly&food (4)3390656",
+            "Position": {
+                "x": 87,
+                "y": 1.387,
+                "z": 463.868
+            },
+            "Rotation": 0,
+            "Items": [
+                "5734773724597737fd047c14"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "LootGarbage (35)-12306864",
+            "Position": {
+                "x": 43.76381,
+                "y": 5.159001,
+                "z": -415.79953
+            },
+            "Rotation": {
+                "x": 0.00001014853,
+                "y": 195.760971,
+                "z": 0.000001404702
+            },
+            "Items": [
+                "590c5d4b86f774784e1b9c45"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "ammo_all (16)3386624",
+            "Position": {
+                "x": -101.904,
+                "y": 11.025,
+                "z": -796.038
+            },
+            "Rotation": 0,
+            "Items": [
+                "5737273924597765dd374461",
+                "57371f8d24597761006c6a81"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "ammo_all (9)3386726",
+            "Position": {
+                "x": 54.022,
+                "y": 11.068,
+                "z": -808.657
+            },
+            "Rotation": 0,
+            "Items": [
+                "5737339e2459776af261abeb",
+                "56dff216d2720bbd668b4568"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "ammo_all (20)3388304",
+            "Position": {
+                "x": -102.411,
+                "y": 11.202,
+                "z": -794.663
+            },
+            "Rotation": 0,
+            "Items": [
+                "5737339e2459776af261abeb",
+                "56dff216d2720bbd668b4568"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "Loot_jigul_garbage-12373524",
+            "Position": {
+                "x": -128.85762,
+                "y": 6.6174,
+                "z": 476.0996
+            },
+            "Rotation": {
+                "x": -0.0001199552,
+                "y": 271.728821,
+                "z": 183.296158
+            },
+            "Items": [
+                "57347c5b245977448d35f6e1"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "food_varios_mix (3)3387134",
+            "Position": {
+                "x": -96.192,
+                "y": 10.866,
+                "z": -794.36
+            },
+            "Rotation": 0,
+            "Items": [
+                "5e8f3423fd7471236e6e3b64"
+            ],
+            "useGravity": true
+        }
+    ]
+}

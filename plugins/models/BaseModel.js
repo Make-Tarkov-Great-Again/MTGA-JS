@@ -1,5 +1,5 @@
 const { logger } = require("../utilities");
-const { cloneDeep } = require("lodash");
+const cloneDeep = require("rfdc");
 
 class BaseModel {
     constructor() {
@@ -7,7 +7,8 @@ class BaseModel {
     }
 
     /**
-     * Creates a new database Entry of the model it's used at with the provided id parameters as it's table index
+     * Creates a new database Entry of the model it's used at with the provided 
+     * id parameters as it's table index
      * @param {*} id 
      */
     createDatabase(id) {

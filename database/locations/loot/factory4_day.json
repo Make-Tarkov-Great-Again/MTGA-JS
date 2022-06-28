@@ -1,0 +1,1629 @@
+{
+    "forced": [
+        {
+            "id": "loot_quest_letter557344",
+            "Position": {
+                "x": -18.8457,
+                "y": 0.6842,
+                "z": 21.6351
+            },
+            "Rotation": {
+                "x": 338.5508,
+                "y": 18.11368,
+                "z": 80.9849548
+            },
+            "Items": [
+                "591093bb86f7747caa7bb2ee"
+            ]
+        },
+        {
+            "id": "loot_quest_r557846",
+            "Position": {
+                "x": 26.3819,
+                "y": 9.1867,
+                "z": 38.9887
+            },
+            "Rotation": {
+                "x": 272.994354,
+                "y": 134.752258,
+                "z": 270.002625
+            },
+            "Items": [
+                "593a87af86f774122f54a951"
+            ]
+        }
+    ],
+    "mounted": [],
+    "static": [
+        {
+            "id": "00171",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0b3",
+                    "_tpl": "578f8778245977358849a9b5"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00185",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0b4",
+                    "_tpl": "5d6fd45b86f774317075ed43"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00147",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0b8",
+                    "_tpl": "5909d5ef86f77467974efbd8"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00182",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0bc",
+                    "_tpl": "5909d5ef86f77467974efbd8"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00158",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0bd",
+                    "_tpl": "578f87ad245977356274f2cc"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00157",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0bf",
+                    "_tpl": "578f87ad245977356274f2cc"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00173",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0c0",
+                    "_tpl": "578f8778245977358849a9b5"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00156",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0c3",
+                    "_tpl": "578f87ad245977356274f2cc"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00184",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0c4",
+                    "_tpl": "578f87ad245977356274f2cc"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00186",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0c7",
+                    "_tpl": "5d6fe50986f77449d97f7463"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00155",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0cb",
+                    "_tpl": "578f87ad245977356274f2cc"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00154",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0ce",
+                    "_tpl": "578f87ad245977356274f2cc"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00160",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0d0",
+                    "_tpl": "578f8782245977354405a1e3"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00164",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0d4",
+                    "_tpl": "578f87b7245977356274f2cd"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00163",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0d5",
+                    "_tpl": "578f87b7245977356274f2cd"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00162",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0d7",
+                    "_tpl": "578f87b7245977356274f2cd"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00161",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0da",
+                    "_tpl": "578f87b7245977356274f2cd"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00153",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0dc",
+                    "_tpl": "578f87ad245977356274f2cc"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00145",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0de",
+                    "_tpl": "5909d5ef86f77467974efbd8"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00183",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0e0",
+                    "_tpl": "5909d50c86f774659e6aaebe"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00178",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0e1",
+                    "_tpl": "5909d50c86f774659e6aaebe"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00159",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0e4",
+                    "_tpl": "578f87ad245977356274f2cc"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00187",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0e5",
+                    "_tpl": "578f87ad245977356274f2cc"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00188",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0f0",
+                    "_tpl": "5909d36d86f774660f0bb900"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00152",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0f2",
+                    "_tpl": "578f87ad245977356274f2cc"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00176",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0f4",
+                    "_tpl": "578f8778245977358849a9b5"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00174",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0f6",
+                    "_tpl": "578f8778245977358849a9b5"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00151",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b0f9",
+                    "_tpl": "578f87ad245977356274f2cc"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00181",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b104",
+                    "_tpl": "578f87a3245977356274f2cb"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00170",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b106",
+                    "_tpl": "578f8778245977358849a9b5"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00180",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b108",
+                    "_tpl": "578f87ad245977356274f2cc"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00150",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b109",
+                    "_tpl": "578f87ad245977356274f2cc"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00148",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b10a",
+                    "_tpl": "5909d76c86f77471e53d2adf"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00149",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b10c",
+                    "_tpl": "578f87ad245977356274f2cc"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00175",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b10e",
+                    "_tpl": "5909e4b686f7747f5b744fa4"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00179",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b112",
+                    "_tpl": "5909d24f86f77466f56e6855"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00146",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b116",
+                    "_tpl": "5909d5ef86f77467974efbd8"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00169",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b118",
+                    "_tpl": "578f8778245977358849a9b5"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00172",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b11b",
+                    "_tpl": "578f8778245977358849a9b5"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00168",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b11d",
+                    "_tpl": "578f87b7245977356274f2cd"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00167",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b11f",
+                    "_tpl": "578f87b7245977356274f2cd"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00166",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b122",
+                    "_tpl": "578f87b7245977356274f2cd"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00165",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b125",
+                    "_tpl": "578f87b7245977356274f2cd"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00189",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b126",
+                    "_tpl": "578f8778245977358849a9b5"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        },
+        {
+            "id": "00190",
+            "Position": 0,
+            "Rotation": 0,
+            "Items": [
+                {
+                    "_id": "618940532ec84622b635b128",
+                    "_tpl": "578f8778245977358849a9b5"
+                }
+            ],
+            "IsStatic": true,
+            "useGravity": true
+        }
+    ],
+    "dynamic": [
+        {
+            "id": "lootpoint (37)557280",
+            "Position": {
+                "x": 38.836,
+                "y": 5.363,
+                "z": 41.331
+            },
+            "Rotation": 0,
+            "Items": [
+                "573475fb24597737fb1379e1"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (57)557394",
+            "Position": {
+                "x": 40.902,
+                "y": 0.463,
+                "z": -15.204
+            },
+            "Rotation": 0,
+            "Items": [
+                "5734770f24597738025ee254"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (89)557540",
+            "Position": {
+                "x": -19.82,
+                "y": 3.786,
+                "z": 28.326
+            },
+            "Rotation": 0,
+            "Items": [
+                "57347c93245977448d35f6e3"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (16)557566",
+            "Position": {
+                "x": 12.028,
+                "y": 8.483,
+                "z": 39.751
+            },
+            "Rotation": 0,
+            "Items": [
+                "5c4eecc32e221602b412b440"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (18)557614",
+            "Position": {
+                "x": 33.142,
+                "y": 2.674,
+                "z": 15.958
+            },
+            "Rotation": 0,
+            "Items": [
+                "609b9e31506cf869cf3eaf41"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "loot_mix_food_med_ammo (52)558206",
+            "Position": {
+                "x": 25.239,
+                "y": 1.738,
+                "z": 40.986
+            },
+            "Rotation": 0,
+            "Items": [
+                "544fb25a4bdc2dfb738b4567"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "loot_mix_food_med_ammo (51)558238",
+            "Position": {
+                "x": 25.318,
+                "y": 2.16,
+                "z": 35.148
+            },
+            "Rotation": 0,
+            "Items": [
+                "544fb45d4bdc2dee738b4568"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "lootpoint (99)558386",
+            "Position": {
+                "x": 31.025,
+                "y": 8.903,
+                "z": 41.063
+            },
+            "Rotation": 0,
+            "Items": [
+                "5734773724597737fd047c14"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (81)558410",
+            "Position": {
+                "x": -24.22,
+                "y": 2.042,
+                "z": 36.637
+            },
+            "Rotation": 0,
+            "Items": [
+                "5e2af22086f7746d3f3c33fa"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "fuel1 (15)558490",
+            "Position": {
+                "x": -15.59,
+                "y": -3.613,
+                "z": -30.395
+            },
+            "Rotation": 0,
+            "Items": [
+                "59fafb5d86f774067a6f2084"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "lootpoint (100)558668",
+            "Position": {
+                "x": 27.634,
+                "y": 9.948,
+                "z": 38.171
+            },
+            "Rotation": 0,
+            "Items": [
+                "59d64fc686f774171b243fe2"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (73)558700",
+            "Position": {
+                "x": 27.952,
+                "y": 8.439,
+                "z": 38.367
+            },
+            "Rotation": 0,
+            "Items": [
+                "57372e4a24597768553071c2",
+                "56dff338d2720bbd668b4569"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "food_drink1 (7)557164",
+            "Position": {
+                "x": 30.512,
+                "y": 1.96,
+                "z": 44.559
+            },
+            "Rotation": 0,
+            "Items": [
+                "590c5f0d86f77413997acfab"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "lootpoint557228",
+            "Position": {
+                "x": -24.091,
+                "y": 8.971,
+                "z": 52.265
+            },
+            "Rotation": 0,
+            "Items": [
+                "573476d324597737da2adc13"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (93)557402",
+            "Position": {
+                "x": 42.933,
+                "y": 0.704,
+                "z": 30.049
+            },
+            "Rotation": 0,
+            "Items": [
+                "57cffe20245977632f391a9d"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "meds (2)557450",
+            "Position": {
+                "x": -15.676,
+                "y": 0.712,
+                "z": -29.5
+            },
+            "Rotation": 0,
+            "Items": [
+                "5d02778e86f774203e7dedbe"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "tools1 (6)557458",
+            "Position": {
+                "x": 35.776,
+                "y": 0.204,
+                "z": -14.744
+            },
+            "Rotation": 0,
+            "Items": [
+                "5d1b31ce86f7742523398394"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "lootpoint (78)557558",
+            "Position": {
+                "x": 23.496,
+                "y": 8.955,
+                "z": 36.062
+            },
+            "Rotation": 0,
+            "Items": [
+                "58272d7f2459774f6311ddfd"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "loot_mix_food_med_ammo (48)557590",
+            "Position": {
+                "x": 15.971,
+                "y": 0.268,
+                "z": -20.553
+            },
+            "Rotation": 0,
+            "Items": [
+                "5751496424597720a27126da"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "lootpoint (59)557598",
+            "Position": {
+                "x": 39.544,
+                "y": 0.332,
+                "z": -14.472
+            },
+            "Rotation": 0,
+            "Items": [
+                "5d1b3f2d86f774253763b735"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "loot_mix_food_med_ammo (50)557710",
+            "Position": {
+                "x": 25.255,
+                "y": 1.629,
+                "z": 35.382
+            },
+            "Rotation": 0,
+            "Items": [
+                "57372f5c24597769917c0131",
+                "56dff4a2d2720bbd668b456a"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "lootpoint (83)557798",
+            "Position": {
+                "x": 11.53,
+                "y": 5.401,
+                "z": 37.289
+            },
+            "Rotation": 0,
+            "Items": [
+                "591c4efa86f7741030027726"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (108)557806",
+            "Position": {
+                "x": 31.243,
+                "y": 4.845,
+                "z": 38.986
+            },
+            "Rotation": 0,
+            "Items": [
+                "5d1b317c86f7742523398392"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (112)557814",
+            "Position": {
+                "x": 25.606,
+                "y": 5.294,
+                "z": 41.667
+            },
+            "Rotation": 0,
+            "Items": [
+                "5673de654bdc2d180f8b456d"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "meds (7)557886",
+            "Position": {
+                "x": -15.815,
+                "y": 0.517,
+                "z": -24.691
+            },
+            "Rotation": 0,
+            "Items": [
+                "544fb25a4bdc2dfb738b4567"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "lootpoint (34)557950",
+            "Position": {
+                "x": 5.132,
+                "y": 8.105,
+                "z": 57.96
+            },
+            "Rotation": 0,
+            "Items": [
+                "5d40412b86f7743cb332ac3a"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (94)557966",
+            "Position": {
+                "x": 19.275,
+                "y": 0.462,
+                "z": -0.673
+            },
+            "Rotation": 0,
+            "Items": [
+                "5751a25924597722c463c472"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (80)558222",
+            "Position": {
+                "x": 14.529,
+                "y": 9.391,
+                "z": 34.633
+            },
+            "Rotation": 0,
+            "Items": [
+                "590c2b4386f77425357b6123"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (65)558296",
+            "Position": {
+                "x": 46.348,
+                "y": 0.77,
+                "z": 31.643
+            },
+            "Rotation": 0,
+            "Items": [
+                "544fb3f34bdc2d03748b456a"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (39)558312",
+            "Position": {
+                "x": 58.738,
+                "y": 5.504,
+                "z": 13.705
+            },
+            "Rotation": 0,
+            "Items": [
+                "573476d324597737da2adc13"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "loot_mix_food_med_ammo (58)558336",
+            "Position": {
+                "x": 36.604,
+                "y": 1.687,
+                "z": 39.959
+            },
+            "Rotation": 0,
+            "Items": [
+                "544fb45d4bdc2dee738b4568"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "lootpoint (91)558370",
+            "Position": {
+                "x": -22.844,
+                "y": 1.598,
+                "z": 43.021
+            },
+            "Rotation": 0,
+            "Items": [
+                "590c31c586f774245e3141b2"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (1)558586",
+            "Position": {
+                "x": -21.208,
+                "y": 1.6,
+                "z": 55.25
+            },
+            "Rotation": 0,
+            "Items": [
+                "57347c1124597737fb1379e3"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (107)558602",
+            "Position": {
+                "x": 33.45,
+                "y": 5.264,
+                "z": 40.29
+            },
+            "Rotation": 0,
+            "Items": [
+                "5755356824597772cb798962"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "tools1 (2)558644",
+            "Position": {
+                "x": 28.459,
+                "y": -1.214,
+                "z": -12.489
+            },
+            "Rotation": 0,
+            "Items": [
+                "5d63d33b86f7746ea9275524"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "loot_mix_food_med_ammo (59)558772",
+            "Position": {
+                "x": 5.484,
+                "y": 1.41,
+                "z": -29.865
+            },
+            "Rotation": 0,
+            "Items": [
+                "57372e4a24597768553071c2",
+                "56dff338d2720bbd668b4569"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "lootpoint (5)557272",
+            "Position": {
+                "x": -24.248,
+                "y": 1.494,
+                "z": 57.119
+            },
+            "Rotation": 0,
+            "Items": [
+                "573476f124597737e04bf328"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (84)557312",
+            "Position": {
+                "x": 6.023,
+                "y": 1.498,
+                "z": 0.539
+            },
+            "Rotation": 0,
+            "Items": [
+                "573477e124597737dd42e191"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "meds (6)557410",
+            "Position": {
+                "x": -16.088,
+                "y": 0.517,
+                "z": -23.903
+            },
+            "Rotation": 0,
+            "Items": [
+                "5751a25924597722c463c472"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "lootpoint (44)557434",
+            "Position": {
+                "x": 5.73,
+                "y": 2.378,
+                "z": 55.629
+            },
+            "Rotation": 0,
+            "Items": [
+                "573475fb24597737fb1379e1"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (86)557670",
+            "Position": {
+                "x": -22.368,
+                "y": 1.318,
+                "z": 18.294
+            },
+            "Rotation": 0,
+            "Items": [
+                "590c5a7286f7747884343aea"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (41)557822",
+            "Position": {
+                "x": 45.69,
+                "y": 1.64,
+                "z": 29.18
+            },
+            "Rotation": 0,
+            "Items": [
+                "5e2af29386f7746d4159f077"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "household557870",
+            "Position": {
+                "x": 28.206,
+                "y": 1.73,
+                "z": 40.09
+            },
+            "Rotation": 0,
+            "Items": [
+                "5e2af00086f7746d3f3c33f7"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "lootpoint (76)558190",
+            "Position": {
+                "x": 23.161,
+                "y": 9.186,
+                "z": 36.063
+            },
+            "Rotation": 0,
+            "Items": [
+                "5d235a5986f77443f6329bc6"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (68)558402",
+            "Position": {
+                "x": 34.234,
+                "y": 1.19,
+                "z": 33.684
+            },
+            "Rotation": 0,
+            "Items": [
+                "57347b8b24597737dd42e192"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "meds (10)558418",
+            "Position": {
+                "x": -14.105,
+                "y": 1.49,
+                "z": -14.445
+            },
+            "Rotation": 0,
+            "Items": [
+                "5e8488fa988a8701445df1e4"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "lootpoint (33)558466",
+            "Position": {
+                "x": 27.799,
+                "y": 0.734,
+                "z": 17.162
+            },
+            "Rotation": 0,
+            "Items": [
+                "5672cb124bdc2d1a0f8b4568"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "ammo1 (6)558562",
+            "Position": {
+                "x": 1.968,
+                "y": -3.717,
+                "z": -25.995
+            },
+            "Rotation": 0,
+            "Items": [
+                "57372ac324597767001bc261",
+                "56dfef82d2720bbd668b4567"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "lootpoint (113)557328",
+            "Position": {
+                "x": 27.872,
+                "y": 5.293,
+                "z": 42.138
+            },
+            "Rotation": 0,
+            "Items": [
+                "59e35cbb86f7741778269d83"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (102)557352",
+            "Position": {
+                "x": 27.655,
+                "y": 9.405,
+                "z": 37.498
+            },
+            "Rotation": 0,
+            "Items": [
+                "574d967124597745970e7c94",
+                "574dad8024597745964bf05c",
+                "574db213245977459a2f3f5d",
+                "587df3a12459772c28142567",
+                "5656d7c34bdc2d9d198b4587"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "meds (5)557694",
+            "Position": {
+                "x": -19.837,
+                "y": 0.733,
+                "z": -25.825
+            },
+            "Rotation": 0,
+            "Items": [
+                "590c678286f77426c9660122"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "lootpoint (120)557918",
+            "Position": {
+                "x": -11.532,
+                "y": 2.401,
+                "z": 56.054
+            },
+            "Rotation": 0,
+            "Items": [
+                "56742c284bdc2d98058b456d"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "food_drink1 (2)558058",
+            "Position": {
+                "x": 36.069,
+                "y": 0.91,
+                "z": -9.636
+            },
+            "Rotation": 0,
+            "Items": [
+                "57513f9324597720a7128161"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "lootpoint (49)558214",
+            "Position": {
+                "x": 21.717,
+                "y": 9.106,
+                "z": 39.973
+            },
+            "Rotation": 0,
+            "Items": [
+                "590a3b0486f7743954552bdb"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (56)558684",
+            "Position": {
+                "x": 40.915,
+                "y": 0.43,
+                "z": -9.394
+            },
+            "Rotation": 0,
+            "Items": [
+                "590c2b4386f77425357b6123"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "Loot_armor_low (5)557252",
+            "Position": {
+                "x": 12.32283,
+                "y": 8.427,
+                "z": 36.9212646
+            },
+            "Rotation": {
+                "x": 271.255371,
+                "y": 0.000194819455,
+                "z": 22.6169052
+            },
+            "Items": [
+                "59e7635f86f7742cbf2c1095"
+            ]
+        },
+        {
+            "id": "loot_shelter_electr (8)557426",
+            "Position": {
+                "x": 3.105,
+                "y": -3.628,
+                "z": -11.622
+            },
+            "Rotation": 0,
+            "Items": [
+                "57347c1124597737fb1379e3"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "meds (9)557734",
+            "Position": {
+                "x": -19.648,
+                "y": 0.816,
+                "z": -25.03
+            },
+            "Rotation": 0,
+            "Items": [
+                "5751a25924597722c463c472"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "household558074",
+            "Position": {
+                "x": 27.084,
+                "y": 1.89,
+                "z": 38.833
+            },
+            "Rotation": 0,
+            "Items": [
+                "5e2aef7986f7746d3f3c33f5"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "tools1 (9)558090",
+            "Position": {
+                "x": 36.702,
+                "y": 0.73,
+                "z": -14.923
+            },
+            "Rotation": 0,
+            "Items": [
+                "5d1b317c86f7742523398392"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "tools1 (8)557172",
+            "Position": {
+                "x": 36.033,
+                "y": 0.204,
+                "z": -14.442
+            },
+            "Rotation": 0,
+            "Items": [
+                "5d40425986f7743185265461"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "loot_mix_food_med_ammo (46)557188",
+            "Position": {
+                "x": 23.458,
+                "y": 1.81,
+                "z": 35.05
+            },
+            "Rotation": 0,
+            "Items": [
+                "5d40407c86f774318526545a"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "ammo1 (11)557260",
+            "Position": {
+                "x": 2.681,
+                "y": -3.089,
+                "z": -28.43
+            },
+            "Rotation": 0,
+            "Items": [
+                "5737339e2459776af261abeb",
+                "56dff216d2720bbd668b4568"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "electr1 (1)557524",
+            "Position": {
+                "x": 26.762,
+                "y": 1.843,
+                "z": 42.622
+            },
+            "Rotation": 0,
+            "Items": [
+                "590a3cd386f77436f20848cb"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "lootpoint (43)557606",
+            "Position": {
+                "x": 57.026,
+                "y": 1.353,
+                "z": 20.07
+            },
+            "Rotation": 0,
+            "Items": [
+                "5672cb304bdc2dc2088b456a"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "tools1 (4)557782",
+            "Position": {
+                "x": 36.548,
+                "y": 0.967,
+                "z": -11.019
+            },
+            "Rotation": 0,
+            "Items": [
+                "5d1b31ce86f7742523398394"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "tools1 (1)557854",
+            "Position": {
+                "x": 27.848,
+                "y": -1.214,
+                "z": -11.977
+            },
+            "Rotation": 0,
+            "Items": [
+                "5af04b6486f774195a3ebb49"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        },
+        {
+            "id": "lootpoint (88)557910",
+            "Position": {
+                "x": -8.161,
+                "y": 1.847,
+                "z": 30.663
+            },
+            "Rotation": 0,
+            "Items": [
+                "59e3596386f774176c10a2a2"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (115)557986",
+            "Position": {
+                "x": 32.568,
+                "y": 4.873,
+                "z": 47.73
+            },
+            "Rotation": 0,
+            "Items": [
+                "573476d324597737da2adc13"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (45)558158",
+            "Position": {
+                "x": -23.099,
+                "y": 2.262,
+                "z": 53.573
+            },
+            "Rotation": 0,
+            "Items": [
+                "59e35ef086f7741777737012"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (58)558230",
+            "Position": {
+                "x": 40.65,
+                "y": 0.525,
+                "z": -10.365
+            },
+            "Rotation": 0,
+            "Items": [
+                "573476f124597737e04bf328"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (116)558264",
+            "Position": {
+                "x": 27.997,
+                "y": 5.237,
+                "z": 46.734
+            },
+            "Rotation": 0,
+            "Items": [
+                "5751a25924597722c463c472"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "lootpoint (106)558628",
+            "Position": {
+                "x": 40.179,
+                "y": 1.065,
+                "z": -15.429
+            },
+            "Rotation": 0,
+            "Items": [
+                "57347c5b245977448d35f6e1"
+            ],
+            "useGravity": true
+        },
+        {
+            "id": "loot_mix_food_med_ammo (63)558676",
+            "Position": {
+                "x": 64.961,
+                "y": 1.028,
+                "z": -36.884
+            },
+            "Rotation": 0,
+            "Items": [
+                "544fb62a4bdc2dfb738b4568"
+            ],
+            "useGravity": true,
+            "randomRotation": true
+        }
+    ]
+}
