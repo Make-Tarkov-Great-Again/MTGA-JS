@@ -1,6 +1,6 @@
 const { database } = require("../../../app");
-const { Account, Item, Language, Locale, Customization } = require("../../models");
-const { logger, stringify, FastifyResponse } = require("../../utilities");
+const { Account, Item, Language, Locale, Customization, Location } = require("../../models");
+const { logger, stringify, FastifyResponse, writeFile } = require("../../utilities");
 
 /**
  * The controller for all ungrouped routes.
@@ -70,12 +70,10 @@ class ClientController {
                 customizations.push(custo._id);
             }
         }
-        {
-            return FastifyResponse.zlibJsonReply(
-                reply,
-                FastifyResponse.applyBody(customizations)
-            )
-        }
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody(customizations)
+        )
     }
 
     static clientWeather = async (_request = null, reply = null) => {
@@ -86,19 +84,21 @@ class ClientController {
     }
 
     static clientLocations = async (_request = null, reply = null) => {
+        let locations = await Location.getAll();
+        let baseResponse = database.core.location_base;
+        let dissolvedLocations = {};
 
-        let maps = database.location;
-        let data = {};
-        for (let map in maps) {
-            maps[map].base = utility.DeepCopy(global._database.locations[location].base);
-            newData[global._database.locations[location].base._Id].Loot = [];
+        for (const [id, data] of Object.entries(locations)) {
+            let newData = await data.dissolve();
+            dissolvedLocations[id] = newData.base; 
+            dissolvedLocations[id].Loot = [];
         }
-        data[map] = newData;
 
+        baseResponse.locations = dissolvedLocations;
 
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody(base)
+            FastifyResponse.applyBody(baseResponse)
         )
     }
 }

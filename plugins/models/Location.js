@@ -1,3 +1,4 @@
+const { logger } = require("../utilities");
 const { BaseModel } = require("./BaseModel");
 
 class Location extends BaseModel {

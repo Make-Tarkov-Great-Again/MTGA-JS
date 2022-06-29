@@ -11,12 +11,16 @@ class MenuController {
                 playerAccount.lang = request.params['language'];
                 playerAccount.save();
             }
+            return FastifyResponse.zlibJsonReply(
+                reply,
+                FastifyResponse.applyBody(database.locales[playerAccount.getLanguage()].menu)
+            )
+        } else {
+            return FastifyResponse.zlibJsonReply(
+                reply,
+                FastifyResponse.applyBody("ERROR",999,"ERROR SHIT")
+            )
         }
-
-        return FastifyResponse.zlibJsonReply(
-            reply,
-            FastifyResponse.applyBody(database.locales[playerAccount.getLanguage()].menu)
-        )
     }
 }
 

@@ -155,13 +155,13 @@ class GameController {
         character.Health.UpdateTime = ~~(Date.now() / 1000);
 
         profile.pmc = character;
-
+        
         profile.storage = {
             err: 0,
             errmsg: null,
             data:
             {
-                _id: profile._id,
+                _id: character._id,
                 suites: playerAccount.edition.storage
             }
         };
