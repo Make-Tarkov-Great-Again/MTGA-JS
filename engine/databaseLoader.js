@@ -6,9 +6,10 @@ const {
     stringify,
     writeFile,
     getDirectoriesFrom,
-    createDirectory
+    createDirectory,
+    getFilesFrom
 } = require('./../plugins/utilities/');
-const { Account, Trader, Item, Locale, Language, Edition, Profile, Customization, Character, HideoutArea, HideoutProduction, HideoutSetting, HideoutScavcase } = require('../plugins/models');
+const { Account, Trader, Item, Locale, Language, Edition, Profile, Customization, Character, HideoutArea, HideoutProduction, HideoutSetting, HideoutScavcase, Location } = require('../plugins/models');
 
 
 
@@ -29,6 +30,7 @@ class DatabaseLoader {
             this.loadTraders(),
             //this.loadBots(),
             this.loadCustomization(),
+            this.loadLocations(),
             // Model Data //
         ]);
         await this.loadEditions();
@@ -50,6 +52,7 @@ class DatabaseLoader {
             botCore: readParsed(`./database/bots/botCore.json`),
             clientSettings: readParsed(`./database/configs/client.settings.json`),
             gameplay: readParsed(`./database/configs/gameplay.json`),
+            location_base: readParsed(`./database/configs/locations.json`)
         };
     }
 
@@ -116,26 +119,19 @@ class DatabaseLoader {
     }
 
     static async loadLocations() {
-        const database = require('./database');
-        const maps = getDirectoriesFrom('./database/locations/');
+        const maps = getFilesFrom('./database/locations/base');
+        for (let map of maps) {
+            let base = readParsed(`./database/locations/base/${map}`);
+            let loot = [];
+            let location = await this.createModelFromParseWithID("Location", base._Id, { "base": {}, "loot": {} });
 
-        for (const map in maps) {
-            let location = { "base": {}, "loot": {} };
-            location.base = fileIO.readParsed(`./database/locations/base/${map}.json`);
-            location.loot = { forced: [], mounted: [], static: [], dynamic: [] };
-/*             if (typeof db.locations.loot[name] != "undefined") {
-                let loot_data = fileIO.readParsed(`./database/locations/loot/${location}.json`);
-                for (let type in loot_data) {
-                    for (let item of loot_data[type]) {
-                        if (type == "static" || type == "mounted") {
-                            _location.loot[type].push(createStaticMountedStruct(item));
-                            continue;
-                        }
-                        _location.loot[type].push(createForcedDynamicStruct(item));
-                    }
-                }
-            } */
-            database.locations[map] = location;
+            if(fileExist(`./database/locations/loot/${map}`))
+            {
+                loot = readParsed(`./database/locations/loot/${map}`);
+            }
+
+            location.base = base;
+            location.loot = loot;
         }
     }
 

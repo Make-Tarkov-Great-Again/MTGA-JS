@@ -1,5 +1,5 @@
 const { logger } = require("../utilities");
-const cloneDeep = require("rfdc");
+const { cloneDeep } = require("lodash");
 
 class BaseModel {
     constructor() {
