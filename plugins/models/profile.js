@@ -7,6 +7,7 @@ const {
     stringify,
     writeFile,
 } = require("../utilities");
+const { Bot } = require("./Index");
 
 class Profile extends BaseModel {
     constructor(id) {
@@ -14,6 +15,19 @@ class Profile extends BaseModel {
 
         this.createDatabase(id);
         this.id = id;
+    }
+
+    getPmc() {
+        return this.pmc;
+    }
+
+    getScav() {
+        if(this.scav) {
+            return this.scav;
+        } else {
+            this.scav = await Bot.generatePlayerScav(this.id);
+            return this.scav;
+        }
     }
 
     getCharacterPath() {
