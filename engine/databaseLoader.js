@@ -46,11 +46,11 @@ class DatabaseLoader {
         database.core = {
             serverConfig: readParsed(`./database/configs/server.json`),
             matchMetrics: readParsed(`./database/configs/matchMetrics.json`),
-            globals: readParsed(`./database/configs/globals.json`),
+            globals: readParsed(`./database/configs/globals.json`).data,
             botTemplate: readParsed(`./database/configs/schema/botTemplate.json`),
             fleaOfferTemplate: readParsed(`./database/configs/schema/fleaOfferTemplate.json`),
             botCore: readParsed(`./database/bots/botCore.json`),
-            clientSettings: readParsed(`./database/configs/client.settings.json`),
+            clientSettings: readParsed(`./database/configs/client.settings.json`).data,
             gameplay: readParsed(`./database/configs/gameplay.json`),
             location_base: readParsed(`./database/configs/locations.json`)
         };

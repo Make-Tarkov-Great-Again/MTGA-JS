@@ -53,27 +53,30 @@ class GameController {
     static clientGameConfig = async (request = null, reply = null) => {
         const sessionID = await FastifyResponse.getSessionID(request);
         const responseObject = {
-            queued: false,
-            banTime: 0,
-            hash: "BAN0",
-            lang: "en",
-            ndaFree: false,
-            reportAvailable: true,
-            languages: await Language.getAllWithoutKeys(),
             aid: sessionID,
-            token: sessionID,
+            lang: "en",
+            languages: await Language.getAllWithoutKeys(),
+            ndaFree: false,
             taxonomy: 6,
             activeProfileId: "pmc" + sessionID,
-            nickname: "user",
             backend: {
                 Trading: FastifyResponse.getBackendURL(),
                 Messaging: FastifyResponse.getBackendURL(),
                 Main: FastifyResponse.getBackendURL(),
                 RagFair: FastifyResponse.getBackendURL()
             },
+            utc_time: getCurrentTimestamp(),
             totalInGame: 0,
-            utc_time: getCurrentTimestamp()
+            reportAvailable: true,
+            twitchEventMember: false,
         };
+            /*  
+            nickname: "user",
+            token: sessionID,
+            queued: false,
+            banTime: 0,
+            hash: "BAN0", 
+            */
 
         await FastifyResponse.zlibJsonReply
             (
@@ -97,11 +100,11 @@ class GameController {
     static clientProfileList = async (request = null, reply = null) => {
         let output = [];
         const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
-        if(!playerAccount.wipe) {
+        if (!playerAccount.wipe) {
             const profile = await playerAccount.getProfile();
-            if(profile) {
-                output.push(profile.getPmc());
-                output.push(profile.getScav());
+            if (profile) {
+                output.push(await profile.getPmc());
+                output.push(await profile.getScav());
             }
         }
 
@@ -125,7 +128,7 @@ class GameController {
         if (validate === true) {
             return FastifyResponse.zlibJsonReply(
                 reply,
-                FastifyResponse.applyBody({ status: "OK" })
+                FastifyResponse.applyBody({ status: "ok" })
             )
         } else {
             return FastifyResponse.zlibJsonReply(
@@ -137,7 +140,7 @@ class GameController {
 
     static clientGameProfileCreate = async (request = null, reply = null) => {
         const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
-        if(!playerAccount) {
+        if (!playerAccount) {
             logger.logDebug("[clientGameProfileCreate] Invalid player account.")
             return;
         }
@@ -162,7 +165,7 @@ class GameController {
         character.Health.UpdateTime = ~~(Date.now() / 1000);
 
         profile.pmc = character;
-        
+
         profile.storage = {
             err: 0,
             errmsg: null,
