@@ -17,11 +17,11 @@ class Profile extends BaseModel {
         this.id = id;
     }
 
-    getPmc() {
+    async getPmc() {
         return this.pmc;
     }
 
-    getScav() {
+    async getScav() {
         if(this.scav) {
             return this.scav;
         } else {
@@ -30,7 +30,7 @@ class Profile extends BaseModel {
         }
     }
 
-    getCharacterPath() {
+    async getCharacterPath() {
         return `./user/profiles/${this.id}/character.json`;
     }
 
