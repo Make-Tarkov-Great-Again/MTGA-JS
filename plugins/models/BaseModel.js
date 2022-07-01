@@ -38,7 +38,8 @@ class BaseModel {
     }
 
     /**
-     * Creates a deep clone of a Model, so it can, for example, be applied as a template without modifing the originating instance.
+     * Creates a deep clone of a Model, so it can, for example, 
+     * be applied as a template without modifing the originating instance.
      * @returns 
      */
     async clone() {
@@ -46,7 +47,10 @@ class BaseModel {
     }
 
     /**
-     * When creating a deep clone, you also clone the instances within the specific model. They won't point to their original instance again (their are basically a new model instance). With this function, the original instance pointers will get resolved again.
+     * When creating a deep clone, you also clone the instances 
+     * within the specific model. They won't point to their original instance again 
+     * (their are basically a new model instance). With this function, 
+     * the original instance pointers will get resolved again.
      * @returns 
      */
     async solvedClone() {
@@ -56,20 +60,23 @@ class BaseModel {
     }
 
     /**
-     * This is a base for the solve function in which you specifiy what model references should be created.ö
+     * This is a base for the solve function in which you specifiy 
+     * what model references should be created.ö
      */
     async solve() {
         // Do Solve
     }
 
     /**
-     * This is the base function to dissolve model references. With this you are supposed to, instead of having a sub instance reference inside your primary instance, return only IDs. Look at accounts for an easy to understand example.
+     * This is the base function to dissolve model references. 
+     * With this you are supposed to, instead of having a sub instance 
+     * reference inside your primary instance, return only IDs. 
+     * Look at accounts for an easy to understand example.
      * @returns 
      */
     async dissolve() {
-        let dissolve = await this.clone()
         // Do Dissolve
-        return dissolve;
+        return await this.clone();
     }
 
     /**

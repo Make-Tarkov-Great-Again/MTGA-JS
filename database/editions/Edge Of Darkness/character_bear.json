@@ -9,7 +9,7 @@
     "Voice": "",
     "Level": 1,
     "Experience": 0,
-    "RegistrationDate": 1641932568,
+    "RegistrationDate": 1656528315,
     "GameVersion": "edge_of_darkness",
     "AccountType": 0,
     "MemberCategory": 2,
@@ -19,18 +19,28 @@
     "Settings": {
       "Role": "assault",
       "BotDifficulty": "easy",
-      "Experience": -1
+      "Experience": -1,
+      "StandingForKill": 0,
+      "AggressorBonus": 0
     },
-    "NeedWipe": false,
-    "GlobalWipe": false,
     "NicknameChangeDate": 0,
+    "NeedWipeOptions": [],
+    "lastCompletedWipe": {
+      "$oid": "62bc241d9d2bace2730a04ad"
+    },
+    "lastCompletedEvent": {
+      "$oid": "62b9cf15c10512004803fffc"
+    },
+    "BannedState": false,
+    "BannedUntil": 0,
+    "IsStreamerModeAvailable": false,
     "Bans": []
   },
   "Customization": {
+    "Head": "5cc084dd14c02e000b0550a3",
     "Body": "5cc0858d14c02e000c6bea66",
     "Feet": "5cc085bb14c02e000e67a5c5",
-    "Hands": "5cc0876314c02e000c6bea6b",
-    "Head": "619f94f5b90286142b59d45f"
+    "Hands": "5cc0876314c02e000c6bea6b"
   },
   "Health": {
     "Hydration": {
@@ -89,7 +99,7 @@
         }
       }
     },
-    "UpdateTime": 1641932568
+    "UpdateTime": 1656528963
   },
   "Inventory": {
     "items": [
@@ -387,7 +397,7 @@
       },
       {
         "_id": "5fe49444ae6628187a2e77b6",
-        "_tpl": "557ffd194bdc2d28148b457f",
+        "_tpl": "627a4e6b255f7527fb05a0f6",
         "parentId": "61b7367440281631fc83f199",
         "slotId": "Pockets"
       },
@@ -3870,6 +3880,12 @@
         "LastAccess": -2147483648
       },
       {
+        "Id": "TroubleShooting",
+        "Progress": 0,
+        "PointsEarnedDuringSession": 0,
+        "LastAccess": -2147483648
+      },
+      {
         "Id": "Surgery",
         "Progress": 0,
         "PointsEarnedDuringSession": 0,
@@ -4018,7 +4034,9 @@
     "Points": 0
   },
   "Stats": {
-    "SessionCounters": null,
+    "SessionCounters": {
+      "Items": []
+    },
     "OverallCounters": {
       "Items": []
     },
@@ -4045,177 +4063,73 @@
     "57dc324a24597759501edc20": true,
     "57dc334d245977597164366f": true,
     "59d36a0086f7747e673f3946": true,
-    "590c657e86f77412b013051d": true,
-    "544fb3f34bdc2d03748b456a": true,
-    "58864a4f2459770fcc257101": true,
-    "5448be9a4bdc2dfd2f8b456a": true,
-    "544fb45d4bdc2dee738b4568": true,
-    "590c678286f77426c9660122": true,
-    "5926c3b286f774640d189b6b": true,
-    "584984812459776a704a82a6": true,
-    "59ccfdba86f7747f2109a587": true,
-    "545cdae64bdc2d39198b4568": true,
-    "5645bc214bdc2d363b8b4571": true,
-    "545cdb794bdc2d3a198b456a": true,
-    "592c2d1a86f7746dbe2af32a": true,
-    "567143bf4bdc2d1a0f8b4567": true,
-    "59bffbb386f77435b379b9c2": true,
-    "59bffc1f86f77435b128b872": true,
-    "595cf16b86f77427440c32e2": true,
-    "5644bd2b4bdc2d3b4c8b4572": true,
-    "59c6633186f7740cf0493bb9": true,
-    "5649b0544bdc2d1b2b8b458a": true,
-    "55d482194bdc2d1d4e8b456b": true,
-    "56d5a2bbd2720bb8418b456a": true,
-    "56d5a407d2720bb3418b456b": true,
-    "5926bb2186f7744b1c6c6e60": true,
-    "5926c0df86f77462f647f764": true,
-    "5926c36d86f77467a92a8629": true,
-    "5926d2be86f774134d668e4e": true,
-    "5926d3c686f77410de68ebc8": true,
-    "5926e16e86f7742f5a0f7ecb": true,
-    "5926c32286f774616e42de99": true,
-    "55801eed4bdc2d89578b4588": true,
-    "559ba5b34bdc2d1f1a8b4582": true,
-    "5887431f2459777e1612938f": true,
-    "56083e1b4bdc2dc8488b4572": true,
-    "56083eab4bdc2d26448b456a": true,
-    "560e620e4bdc2d724b8b456b": true,
-    "56ea8222d2720b69698b4567": true,
-    "58948c8e86f77409493f7266": true,
-    "5894a51286f77426d13baf02": true,
-    "5894a5b586f77426d2590767": true,
-    "5894a2c386f77427140b8342": true,
-    "58949dea86f77409483e16a8": true,
-    "5894a42086f77426d2590762": true,
-    "5894a73486f77426d259076c": true,
-    "5894a81786f77427140b8347": true,
-    "5894a13e86f7742405482982": true,
-    "58949edd86f77409483e16a9": true,
+    "576a581d2459771e7b1bc4f1": true,
+    "576a7c512459771e796e0e17": true,
     "55d7217a4bdc2d86028b456d": false,
     "557ffd194bdc2d28148b457f": false,
     "544a5cde4bdc2d39388b456b": false,
-    "5857a8bc2459772bad15db29": false,
-    "5b44c8ea86f7742d1627baf1": false,
+    "544a11ac4bdc2d470e8b456a": false,
+    "5ca20abf86f77418567a43f2": false,
     "564ca99c4bdc2d16268b4589": false,
-    "57cd379a24597778e7682ecf": false,
+    "54491bb74bdc2d09088b4567": false,
     "57dc2fa62459775949412633": false,
     "57dc32dc245977596d4ef3d3": false,
     "57dc347d245977596754e7a1": false,
     "5649ad3f4bdc2df8348b4585": false,
-    "5811ce772459770e9e5f9532": false,
-    "5894a05586f774094708ef75": false,
-    "56d59856d2720bd8418b456a": false,
-    "56d59948d2720bb7418b4582": false,
+    "566abbc34bdc2d92178b4576": false,
+    "576a63cd2459771e796e0e11": false,
+    "576a5ed62459771e9c2096cb": false,
     "56d59d3ad2720bdb418b4577": false,
-    "56d5a661d2720bd8418b456b": false,
-    "56d5a77ed2720b90418b4568": false,
-    "56d5a1f7d2720bb3418b456a": false,
     "5448bd6b4bdc2dfc2f8b4569": false,
     "5448c12b4bdc2d02308b456f": false,
     "573718ba2459775a75491131": false,
-    "5649b1c04bdc2d16268b457c": false,
-    "5649af094bdc2df8348b4586": false,
-    "5649aa744bdc2ded0b8b457e": false,
-    "5648b0744bdc2d363b8b4578": false,
-    "5696686a4bdc2da3298b456a": false,
     "5449016a4bdc2d6f028b456f": false,
-    "5448fee04bdc2dbc018b4567": false,
+    "544fb3364bdc2d34748b456a": true,
+    "5755356824597772cb798962": false,
     "544fb25a4bdc2dfb738b4567": false,
     "57347d7224597744596b4e72": false,
-    "544fb3364bdc2d34748b456a": false,
-    "5755356824597772cb798962": false,
+    "5448fee04bdc2dbc018b4567": false,
+    "5d40407c86f774318526545a": true,
+    "55d480c04bdc2d1d4e8b456a": false,
+    "5ac4cd105acfc40016339859": false,
+    "5ac50c185acfc400163398d4": false,
+    "5ac72e475acfc400180ae6fe": true,
+    "5ac50da15acfc4001718d287": false,
+    "5649ade84bdc2d1b2b8b4587": false,
+    "5ac7655e5acfc40016339a19": false,
+    "59c6633186f7740cf0493bb9": true,
+    "5648b1504bdc2d9d488b4584": true,
+    "5710c24ad2720bc3458b45a3": false,
+    "59984ab886f7743e98271174": true,
+    "59ccd11386f77428f24a488f": true,
+    "599860e986f7743bb57573a6": true,
+    "59985a8086f77414ec448d1a": true,
+    "5998597786f77414ea6da093": false,
+    "599860ac86f77436b225ed1a": false,
+    "599851db86f77467372f0a18": false,
+    "5998517986f7746017232f7e": false,
+    "5b432b965acfc47a8774094e": true,
+    "5ca20d5986f774331e7c9602": true,
     "5645bcc04bdc2d363b8b4572": false,
-    "5751a25924597722c463c472": false,
-    "544fb37f4bdc2dee738b4567": false,
-    "5e831507ea0a7c419c2f9bd9": false,
+    "56dff3afd2720bba668b4567": true,
+    "5aa2b87de5b5b00016327c25": false,
     "5648a7494bdc2d9d488b4583": false,
-    "544a11ac4bdc2d470e8b456a": false,
-    "5c0e9f2c86f77432297fe0a3": false,
-    "55d4887d4bdc2d962f8b4570": false,
-    "54527a984bdc2d4e668b4567": false,
-    "5aa2a7e8e5b5b00016327c16": false,
-    "5ab8f39486f7745cd93a1cca": false,
-    "54491bb74bdc2d09088b4567": false,
-    "5447a9cd4bdc2dbd208b4567": false,
-    "55d44fd14bdc2d962f8b456e": false,
-    "5649be884bdc2d79388b4577": false,
-    "55d4ae6c4bdc2d8b2f8b456e": false,
-    "55d355e64bdc2d962f8b4569": false,
-    "55d5f46a4bdc2d1b198b4567": false,
-    "55d459824bdc2d892f8b4573": false,
-    "55d3632e4bdc2d972f8b4569": false,
-    "56ea8d2fd2720b7c698b4570": false,
-    "55d4af3a4bdc2d972f8b456f": false,
-    "544a38634bdc2d58388b4568": false,
-    "55d4b9964bdc2d1d4e8b456e": false,
-    "58dd3ad986f77403051cba8f": false,
-    "5d02778e86f774203e7dedbe": false,
-    "5bfeaa0f0db834001b734927": false,
-    "5d1b371186f774253763a656": false,
-    "58d3db5386f77426186285a0": false,
-    "5aa7d03ae5b5b00016327db5": false,
-    "5c165d832e2216398b5a7e36": false,
-    "57c5ac0824597754771e88a9": false,
-    "5bfebc5e0db834001a6694e5": false,
-    "5bfea6e90db834001b7347f3": false,
-    "5bfebc320db8340019668d79": false,
-    "5bfeb32b0db834001a6694d9": false,
-    "5bfea7ad0db834001c38f1ee": false,
-    "557ff21e4bdc2d89578b4586": false,
-    "5af0454c86f7746bf20992e8": false,
-    "5e9dcf5986f7746c417435b3": false,
+    "5751a25924597722c463c472": true,
+    "544fb37f4bdc2dee738b4567": false,
     "590c5f0d86f77413997acfab": false,
-    "5c0e655586f774045612eeb2": false,
-    "5e870397991fd70db46995c8": false,
-    "560d5e524bdc2d25448b4571": false,
-    "5e87114fe2db31558c75a120": false,
-    "5e87116b81c4ed43e83cefdd": false,
-    "5e87080c81c4ed43e83cefda": false,
-    "5e87076ce2db31558c75a11d": false,
-    "5e87071478f43e51ca2de5e1": false,
-    "5e8708d4ae379e67d22e0102": false,
-    "5cadc190ae921500103bb3b6": false,
-    "5cadc2e0ae9215051e1c21e7": false,
-    "5cadc55cae921500103bb3be": false,
-    "5cadd919ae921500126a77f3": false,
-    "5cadd940ae9215051e1c2316": false,
-    "5cadc431ae921500113bb8d5": false,
-    "5cadc1c6ae9215000f2775a4": false,
-    "5cadc390ae921500126a77f1": false,
-    "57347da92459774491567cf5": false,
-    "5a0c27731526d80618476ac4": false,
-    "5d2f213448f0355009199284": false,
-    "569668774bdc2da2298b4568": false,
-    "5755383e24597772cb798966": false,
-    "590c695186f7741e566b64a2": false,
-    "5d403f9186f7743cac3f229b": false,
-    "5e4d34ca86f774264f758330": false,
-    "590c661e86f7741e566b646a": false,
-    "5d02797c86f774203f38e30a": false,
-    "5c0e530286f7747fa1419862": false,
-    "5e8488fa988a8701445df1e4": false,
-    "5f4f9eb969cdc30ff33f09db": false,
-    "5d5e9c74a4b9364855191c40": false,
-    "570fd6c2d2720bc6458b457f": false,
-    "5c488a752e221602b412af63": false,
-    "5c48a2852e221602b21d5923": false,
-    "5c48a2a42e221602b66d1e07": false,
-    "5c48a14f2e2216152006edd7": false,
-    "5c48a2c22e221602b313fb6c": false,
-    "5aafbde786f774389d0cbc0f": false,
-    "5d5d85c586f774279a21cbdb": false,
-    "544a5caa4bdc2d1a388b4568": false,
-    "5d5d940f86f7742797262046": false,
-    "5e2af47786f7746d404f3aaa": false,
-    "5e2af4a786f7746d3f3c3400": false,
-    "5c18b9192e2216398b5a8104": false,
-    "5c18b90d2e2216152142466b": false,
-    "5d1b36a186f7742523398433": false,
-    "572b7fa524597762b747ce82": false,
-    "5ae30bad5acfc400185c2dc4": false,
-    "5ae30db85acfc408fb139a05": false,
-    "5ae30e795acfc408fb139a0b": false
+    "5e831507ea0a7c419c2f9bd9": false,
+    "5bffdc370db834001d23eca8": false,
+    "57347da92459774491567cf5": true,
+    "5a0c27731526d80618476ac4": true,
+    "5755383e24597772cb798966": true,
+    "590c661e86f7741e566b646a": true,
+    "590c5d4b86f774784e1b9c45": false,
+    "5d1b371186f774253763a656": true,
+    "5b40e5e25acfc4001a599bea": true,
+    "5e2af4a786f7746d3f3c3400": true,
+    "5e2af47786f7746d404f3aaa": true,
+    "627a4e6b255f7527fb05a0f6": false,
+    "5ea034eb5aad6446a939737b": true
   },
   "ConditionCounters": {
     "Counters": []
@@ -4227,7 +4141,7 @@
     "Areas": [
       {
         "type": 3,
-        "level": 4,
+        "level": 1,
         "active": true,
         "passiveBonusesEnabled": true,
         "completeTime": 0,
@@ -4451,70 +4365,24 @@
     {
       "type": "StashSize",
       "templateId": "566abbc34bdc2d92178b4576"
-    },
-    {
-      "type": "StashSize",
-      "templateId": "5811ce572459770cba1a34ea"
-    },
-    {
-      "type": "StashSize",
-      "templateId": "5811ce662459770f6f490f32"
-    },
-    {
-      "type": "StashSize",
-      "templateId": "5811ce772459770e9e5f9532"
     }
   ],
   "Notes": {
     "Notes": []
   },
   "Quests": [],
-  "TradersInfo": {
-    "5c0647fdd443bc2504c2d371": {
-      "unlocked": false,
-      "salesSum": 0,
-      "standing": 0.2
-    },
-    "5935c25fb3acc3127c3d8cd9": {
-      "unlocked": false,
-      "salesSum": 0,
-      "standing": 0.2
-    },
-    "58330581ace78e27b8b10cee": {
-      "unlocked": false,
-      "salesSum": 0,
-      "standing": 0.2
-    },
-    "5a7c2eca46aef81a7ca2145d": {
-      "unlocked": false,
-      "salesSum": 0,
-      "standing": 0.2
-    },
-    "579dc571d53a0658a154fbec": {
-      "unlocked": false,
-      "salesSum": 0,
-      "standing": 0.2
-    },
-    "5ac3b934156ae10c4430e83c": {
-      "unlocked": false,
-      "salesSum": 0,
-      "standing": 0.2
-    },
-    "54cb50c76803fa8b248b4571": {
-      "unlocked": false,
-      "salesSum": 0,
-      "standing": 0.2
-    },
-    "54cb57776803fa99248b456e": {
-      "unlocked": false,
-      "salesSum": 0,
-      "standing": 0.2
-    }
-  },
   "RagfairInfo": {
     "rating": 0.2,
     "isRatingGrowing": true,
     "offers": []
   },
-  "WishList": []
+  "WishList": [],
+  "TradersInfo": {
+    "579dc571d53a0658a154fbec": {
+      "unlocked": true,
+      "disabled": false,
+      "saleSum": 0,
+      "standing": 0
+    }
+  }
 }

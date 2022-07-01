@@ -164,6 +164,9 @@ class GameController {
         character.Info.RegistrationDate = ~~(new Date() / 1000);
         character.Health.UpdateTime = ~~(Date.now() / 1000);
 
+        
+
+
         profile.pmc = character;
 
         profile.storage = {
