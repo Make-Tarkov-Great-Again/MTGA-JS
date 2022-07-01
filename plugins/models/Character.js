@@ -20,7 +20,7 @@ class Character extends BaseModel {
     }
 
     async dissolve() {
-        let dissolve = this.clone()
+        let dissolve = await this.clone()
         if(this.Customization !== undefined) {
             for (const [bodyPart, id] of Object.entries(this.Customization)) {
                 if(typeof id === "string") {
