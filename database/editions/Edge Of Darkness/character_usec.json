@@ -19,11 +19,21 @@
     "Settings": {
       "Role": "assault",
       "BotDifficulty": "easy",
-      "Experience": -1
+      "Experience": -1,
+      "StandingForKill": 0,
+      "AggressorBonus": 0
     },
-    "NeedWipe": false,
-    "GlobalWipe": false,
     "NicknameChangeDate": 0,
+    "NeedWipeOptions": [],
+    "lastCompletedWipe": {
+      "$oid": "62bc241d9d2bace2730a04ad"
+    },
+    "lastCompletedEvent": {
+      "$oid": "62b9cf15c10512004803fffc"
+    },
+    "BannedState": false,
+    "BannedUntil": 0,
+    "IsStreamerModeAvailable": false,
     "Bans": []
   },
   "Customization": {
@@ -399,7 +409,7 @@
       },
       {
         "_id": "5fe49a0e2694b0755a50476a",
-        "_tpl": "557ffd194bdc2d28148b457f",
+        "_tpl": "627a4e6b255f7527fb05a0f6",
         "parentId": "61b7367440281631fc83f072",
         "slotId": "Pockets"
       },
@@ -4315,7 +4325,8 @@
     "572b7fa524597762b747ce82": false,
     "5ae30bad5acfc400185c2dc4": false,
     "5ae30db85acfc408fb139a05": false,
-    "5ae30e795acfc408fb139a0b": false
+    "5ae30e795acfc408fb139a0b": false,
+    "627a4e6b255f7527fb05a0f6": false
   },
   "ConditionCounters": {
     "Counters": []

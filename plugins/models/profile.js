@@ -48,16 +48,16 @@ class Profile extends BaseModel {
         // Check if a PMC character exists in the server memory.
         if (this.pmc) {
             // Check if the profile path exists
-            if (fs.existsSync(this.getCharacterPath())) {
+            if (fs.existsSync(await this.getCharacterPath())) {
                 // Check if the file was modified elsewhere
-                let statsPreSave = fs.statSync(this.getCharacterPath());
+                let statsPreSave = fs.statSync(await this.getCharacterPath());
                 if (statsPreSave.mtimeMs == database.fileAge[this.id].pmc) {
                     // Compare the PMC character from server memory with the one saved on disk
                     let currentProfile = await this.pmc.dissolve();
-                    let savedProfile = readParsed(this.getCharacterPath());
+                    let savedProfile = readParsed(await this.getCharacterPath());
                     if (stringify(currentProfile) !== stringify(savedProfile)) {
                         // Save the PMC character from memory to disk.
-                        writeFile(this.getCharacterPath(), stringify(currentProfile));
+                        writeFile(await this.getCharacterPath(), stringify(currentProfile));
                         logger.logSuccess(`[CLUSTER] Profile for AID ${sessionID} was saved.`);
                     } else {
                         // Skip save ?
@@ -67,10 +67,10 @@ class Profile extends BaseModel {
                 }
             } else {
                 // Save the PMC character from memory to disk.
-                writeFile(this.getCharacterPath(), stringify(await this.pmc.dissolve()));
+                writeFile(await this.getCharacterPath(), stringify(await this.pmc.dissolve()));
             }
             // Update the savedFileAge stored in memory for the character.json.
-            let statsAfterSave = fs.statSync(this.getCharacterPath());
+            let statsAfterSave = fs.statSync(await this.getCharacterPath());
             database.fileAge[this.id].pmc = statsAfterSave.mtimeMs;
         }
 
