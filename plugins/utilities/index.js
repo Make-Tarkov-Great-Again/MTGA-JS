@@ -4,7 +4,6 @@ const math = require('./math');
 const utility = require('./utility');
 const response = require('./response');
 const fastifyResponse = require('./fastifyResponse');
-const aeFunctionLibrary = require('./aeFunctionLibrary');
 
 module.exports = {
     logger,
@@ -12,6 +11,5 @@ module.exports = {
     ...math,
     ...utility,
     ...response,
-    ...fastifyResponse,
-    ...aeFunctionLibrary
+    ...fastifyResponse
 }
