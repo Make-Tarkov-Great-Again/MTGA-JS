@@ -65,6 +65,13 @@ module.exports = async function gameRoutes(app, _opts) {
     });
 
 
+    // Client Notifier Routes //
+    app.post("/client/notifier/channel/create", async (request, reply) => {
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody(FastifyResponse.getNotifier(await FastifyResponse.getSessionID(request)))
+        )
+    });
 
     // Client Profile Routes //
     app.post("/client/profile/status", async (request, reply) => {
