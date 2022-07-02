@@ -14,7 +14,6 @@ const Weaponbuild = require('./Weaponbuild');
 const HideoutArea = require('./HideoutArea');
 const HideoutProduction = require('./HideoutProduction');
 const HideoutScavcase = require('./HideoutScavcase');
-const HideoutSetting = require('./HideoutSetting');
 const Location = require('./Location');
 const Bot  = require('./Bot');
 
@@ -35,7 +34,6 @@ module.exports = {
     ...HideoutArea,
     ...HideoutProduction,
     ...HideoutScavcase,
-    ...HideoutSetting,
     ...Location,
-    ...Bot,
+    ...Bot
 }

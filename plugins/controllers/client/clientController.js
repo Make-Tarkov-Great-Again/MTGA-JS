@@ -1,5 +1,5 @@
 const { database } = require("../../../app");
-const { Account, Item, Language, Locale, Customization, Location, HideoutArea, HideoutSetting } = require("../../models");
+const { Account, Item, Language, Locale, Customization, Location, HideoutArea, HideoutProduction, HideoutScavcase } = require("../../models");
 const { logger, stringify, FastifyResponse, writeFile } = require("../../utilities");
 
 /**
@@ -110,31 +110,23 @@ class ClientController {
     };
 
     static clientHideoutSettings = async (_request = null, reply = null) => {
-        const hideoutSettings = await HideoutSetting.getAll();
-        console.log()
-        const data = {};
-        for (const [id, settings] of Object.entries(hideoutSettings)) {
-            data[id] = settings.getAll();
-        }
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody(data)
+            FastifyResponse.applyBody(database.core.hideoutSettings)
         );
     };
 
     static clientHideoutProductionRecipes = async (_request = null, reply = null) => {
-        const data = database.hideoutproductions;
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody(data)
+            FastifyResponse.applyBody(await HideoutProduction.getAllWithoutKeys())
         );
     };
 
     static clientHideoutProductionScavcaseRecipes = async (_request = null, reply = null) => {
-        const data = database.hideoutscavcases;
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody(data)
+            FastifyResponse.applyBody(await HideoutScavcase.getAllWithoutKeys())
         );
     };
 
