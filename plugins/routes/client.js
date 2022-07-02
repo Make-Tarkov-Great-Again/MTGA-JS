@@ -64,6 +64,37 @@ module.exports = async function gameRoutes(app, _opts) {
     });
 
 
+
+    // Client Profile Routes //
+    app.post("/client/profile/status", async (request, reply) => {
+        const sessionID = await FastifyResponse.getSessionID(request);
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody({
+                maxPveCountExceeded: false,
+                profiles: [
+                    {
+                        profileid: "scav" + sessionID,
+                        profileToken: null,
+                        status: "Free",
+                        sid: "",
+                        ip: "",
+                        port: 0,
+                    },
+                    {
+                        profileid: "pmc" + sessionID,
+                        profileToken: null,
+                        status: "Free",
+                        sid: "",
+                        ip: "",
+                        port: 0,
+                    }
+                ]
+            })
+        )
+    })
+
+
     // Client Menu Routes //
     app.post(`/client/menu/locale/:language`, async (request, reply) => {
         await MenuController.clientMenuLocale(request, reply);
