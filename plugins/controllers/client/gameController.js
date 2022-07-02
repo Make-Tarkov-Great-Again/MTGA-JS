@@ -1,6 +1,6 @@
 const { database } = require("../../../app");
 const { Profile, Language, Account, Edition, Customization, Character, Health } = require("../../models");
-const { getCurrentTimestamp, logger, FastifyResponse, writeFile, stringify } = require("../../utilities");
+const { getCurrentTimestamp, logger, FastifyResponse, writeFile, stringify, readParsed } = require("../../utilities");
 
 
 class GameController {
@@ -99,15 +99,20 @@ class GameController {
 
     static clientProfileList = async (request = null, reply = null) => {
         let output = [];
+        let dummyScavData = readParsed("./scavDummy.json")
+        dummyScavData.aid = "scav"+ await FastifyResponse.getSessionID(request)
+
         const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
         if (!playerAccount.wipe) {
             const profile = await playerAccount.getProfile();
             if (profile) {
-                output.push(await profile.getPmc());
-                output.push(await profile.getScav());
+                //output.push(await profile.getPmc());
+                output.push(profile.character)
+                //output.push(await profile.getScav());
+                output.push(dummyScavData);
             }
         }
-
+        console.log(output)
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(output)
