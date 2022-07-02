@@ -123,14 +123,8 @@ class GameController {
         const sessionID = await FastifyResponse.getSessionID(request);
         const output = {
             "status": "ok",
-            "notifier": {
-                "server": FastifyResponse.getBackendURL(),
-                "channel_id": sessionID,
-                "url": `${FastifyResponse.getBackendURL()}/notifierServer/get/${sessionID}`,
-                "notifierServer": `${FastifyResponse.getBackendURL()}/notifierServer/get/${sessionID}`,
-                "ws": `${FastifyResponse.getWebSocketURL()}/notifierServer/getwebsocket/${sessionID}`
-            },
-            "notifierServer": `${FastifyResponse.getBackendURL()}/notifierServer/get/${sessionID}`
+            "notifier": FastifyResponse.getNotifier(sessionID),
+            "notifierServer": FastifyResponse.getNotifier(sessionID).notifierServer
         }
         return FastifyResponse.zlibJsonReply(
             reply,

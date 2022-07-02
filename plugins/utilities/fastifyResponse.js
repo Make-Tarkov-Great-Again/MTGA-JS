@@ -14,6 +14,17 @@ class FastifyResponse {
         json: "application/json"
     };
 
+    static getNotifier(sessionID) {
+        return {
+            "server": this.getBackendURL(),
+            "channel_id": sessionID,
+            "url": `${this.getBackendURL()}/notifierServer/get/${sessionID}`,
+            "notifierServer": `${this.getBackendURL()}/notifierServer/get/${sessionID}`,
+            "ws": `${this.getWebSocketURL()}/notifierServer/getwebsocket/${sessionID}`
+        }
+    }
+
+
     static getBackendURL() {
         const { database } = require("../../app");
         return "https://" + database.core.serverConfig.ip + ":" + database.core.serverConfig.port;
