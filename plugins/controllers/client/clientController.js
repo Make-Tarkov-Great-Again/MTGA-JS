@@ -90,7 +90,7 @@ class ClientController {
 
         for (const [id, data] of Object.entries(locations)) {
             let newData = await data.dissolve();
-            dissolvedLocations[id] = newData.base; 
+            dissolvedLocations[id] = newData.base;
             dissolvedLocations[id].Loot = [];
         }
 
@@ -103,7 +103,11 @@ class ClientController {
     }
 
     static clientHideoutAreas = async (_request = null, reply = null) => {
-        const data = database.hideoutareas;
+        const hideoutAreas = await HideoutArea.getAll();
+        const data = [];
+        for (const [id, area] of Object.entries(hideoutAreas)) {
+            data.push(area);
+        }
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(data)
