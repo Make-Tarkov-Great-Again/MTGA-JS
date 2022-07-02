@@ -65,6 +65,13 @@ module.exports = async function gameRoutes(app, _opts) {
     });
 
 
+    // Client Notifier Routes //
+    app.post("/client/notifier/channel/create", async (request, reply) => {
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody(FastifyResponse.getNotifier(await FastifyResponse.getSessionID(request)))
+        )
+    });
 
     // Client Profile Routes //
     app.post("/client/profile/status", async (request, reply) => {
@@ -157,7 +164,7 @@ module.exports = async function gameRoutes(app, _opts) {
     // hideout routes
 
     app.post(`/client/hideout/areas`, async (request, reply) => {
-        await ClientController.clientHideoutArea(request, reply);
+        await ClientController.clientHideoutAreas(request, reply);
     });
 
 }
