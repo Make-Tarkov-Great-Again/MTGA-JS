@@ -19,6 +19,10 @@ class FastifyResponse {
         return "https://" + database.core.serverConfig.ip + ":" + database.core.serverConfig.port;
     }
 
+    static getWebSocketURL() {
+        return this.getBackendURL().replace("https", "ws")
+    }
+
     static getSessionID = async (request) => {
         const sessionID = request.cookies.PHPSESSID;
         if (sessionID) {

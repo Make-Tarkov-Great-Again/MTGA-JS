@@ -32,6 +32,10 @@ module.exports = async function gameRoutes(app, _opts) {
         await GameController.clientProfileList(request, reply);
     });
 
+    app.post("/client/game/profile/select", async (request, reply) => {
+        await GameController.clientProfileSelect(request, reply);
+    })
+
     app.post("/client/game/keepalive", async (request, reply) => {
         await GameController.clientGameKeepAlive(request, reply);
     })
