@@ -11,6 +11,10 @@ const readParsed = (file) => {
     return JSON.parse(fs.readFileSync(file, 'utf8'));
 }
 
+const wipeDepend = (data) => {
+	return JSON.parse(stringify(data));
+}
+
 const read = (file) => {
     return fs.readFileSync(file, 'utf8');
 }
@@ -102,5 +106,6 @@ module.exports = {
     getDirectoriesFrom,
     getAbsolutePathFrom,
     createReadStream,
-    createWriteStream
+    createWriteStream,
+    wipeDepend
 };

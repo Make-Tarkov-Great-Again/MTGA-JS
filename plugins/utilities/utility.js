@@ -5,8 +5,7 @@
  */
 const generateUniqueId = async (prefix = "") => {
     const { nanoid } = await import('nanoid');
-    let retVal = `${prefix}-${nanoid()}`
-    return retVal;
+    return `${prefix}-${nanoid()}`;
 }
 
 /**Check if the given value is undefined
