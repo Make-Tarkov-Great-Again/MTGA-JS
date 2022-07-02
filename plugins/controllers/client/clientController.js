@@ -1,5 +1,5 @@
 const { database } = require("../../../app");
-const { Account, Item, Language, Locale, Customization, Location, HideoutArea } = require("../../models");
+const { Account, Item, Language, Locale, Customization, Location, HideoutArea, HideoutSetting } = require("../../models");
 const { logger, stringify, FastifyResponse, writeFile } = require("../../utilities");
 
 /**
@@ -103,10 +103,18 @@ class ClientController {
     }
 
     static clientHideoutAreas = async (_request = null, reply = null) => {
-        const hideoutAreas = await HideoutArea.getAll();
-        const data = [];
-        for (const [id, area] of Object.entries(hideoutAreas)) {
-            data.push(area);
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody(await HideoutArea.getAllWithoutKeys())
+        );
+    };
+
+    static clientHideoutSettings = async (_request = null, reply = null) => {
+        const hideoutSettings = await HideoutSetting.getAll();
+        console.log()
+        const data = {};
+        for (const [id, settings] of Object.entries(hideoutSettings)) {
+            data[id] = settings.getAll();
         }
         return FastifyResponse.zlibJsonReply(
             reply,
@@ -130,13 +138,6 @@ class ClientController {
         );
     };
 
-    static clientHideoutSettings = async (_request = null, reply = null) => {
-        const data = database.hideoutsettings;
-        return FastifyResponse.zlibJsonReply(
-            reply,
-            FastifyResponse.applyBody(data)
-        );
-    }
 }
 
 module.exports.ClientController = ClientController;
