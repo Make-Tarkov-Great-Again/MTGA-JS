@@ -106,8 +106,8 @@ class GameController {
         if (!playerAccount.wipe) {
             const profile = await playerAccount.getProfile();
             if (profile) {
-                //output.push(await profile.getPmc());
-                output.push(profile.character)
+                const pmc = await profile.getPmc().dissolve();
+                output.push(pmc);
                 //output.push(await profile.getScav());
                 output.push(dummyScavData);
             }
