@@ -119,6 +119,25 @@ class GameController {
         )
     }
 
+    static clientProfileSelect = async (request = null, reply = null) => {
+        const sessionID = await FastifyResponse.getSessionID(request);
+        const output = {
+            "status": "ok",
+            "notifier": {
+                "server": FastifyResponse.getBackendURL(),
+                "channel_id": sessionID,
+                "url": `${FastifyResponse.getBackendURL()}/notifierServer/get/${sessionID}`,
+                "notifierServer": `${FastifyResponse.getBackendURL()}/notifierServer/get/${sessionID}`,
+                "ws": `${FastifyResponse.getWebSocketURL()}/notifierServer/getwebsocket/${sessionID}`
+            },
+            "notifierServer": `${FastifyResponse.getBackendURL()}/notifierServer/get/${sessionID}`
+        }
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody(output)
+        )
+    }
+
     static clientGameProfileNicknameReserved = async (_request = null, reply = null) => {
         return FastifyResponse.zlibJsonReply(
             reply,
