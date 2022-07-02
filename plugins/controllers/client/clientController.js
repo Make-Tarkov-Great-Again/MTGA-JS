@@ -103,7 +103,7 @@ class ClientController {
     }
 
     static clientHideoutAreas = async (_request = null, reply = null) => {
-        const data = database.hideout.areas;
+        const data = database.hideoutareas;
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(data)
@@ -111,7 +111,7 @@ class ClientController {
     };
 
     static clientHideoutProductionRecipes = async (_request = null, reply = null) => {
-        const data = database.hideout.production;
+        const data = database.hideoutproductions;
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(data)
@@ -119,7 +119,7 @@ class ClientController {
     };
 
     static clientHideoutProductionScavcaseRecipes = async (_request = null, reply = null) => {
-        const data = database.hideout.scavcase;
+        const data = database.hideoutscavcases;
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(data)
@@ -127,7 +127,7 @@ class ClientController {
     };
 
     static clientHideoutSettings = async (_request = null, reply = null) => {
-        const data = database.hideout.settings;
+        const data = database.hideoutsettings;
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(data)
