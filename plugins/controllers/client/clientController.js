@@ -1,5 +1,5 @@
 const { database } = require("../../../app");
-const { Account, Item, Language, Locale, Customization, Location } = require("../../models");
+const { Account, Item, Language, Locale, Customization, Location, HideoutArea } = require("../../models");
 const { logger, stringify, FastifyResponse, writeFile } = require("../../utilities");
 
 /**
@@ -101,6 +101,14 @@ class ClientController {
             FastifyResponse.applyBody(baseResponse)
         )
     }
+
+    static clientHideoutAreas = async (_request = null, reply = null) => {
+        const areas = await HideoutArea.getAll();
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody(areas)
+        );
+    };
 }
 
 module.exports.ClientController = ClientController;
