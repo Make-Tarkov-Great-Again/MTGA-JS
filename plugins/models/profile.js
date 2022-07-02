@@ -1,13 +1,12 @@
-const { logger } = require("../utilities");
-const { BaseModel } = require("./BaseModel");
 const fs = require('fs');
 const {
     readParsed,
     fileExist,
+    logger,
     stringify,
     writeFile,
 } = require("../utilities");
-const { Bot } = require("./Index");
+const { Bot, BaseModel } = require("./Index");
 
 class Profile extends BaseModel {
     constructor(id) {
