@@ -51,12 +51,7 @@ module.exports = async function gameRoutes(app, _opts) {
 
     app.post("/client/game/profile/create", async (request, reply) => {
         await GameController.clientGameProfileCreate(request, reply);
-        return FastifyResponse.zlibJsonReply(
-            reply,
-            FastifyResponse.applyBody(
-                await GameController.clientGameProfileCreateReply(request, reply)
-            )
-        )
+        await GameController.clientGameProfileCreateReply(request, reply)
     })
 
     // Client Account Routes //
