@@ -160,16 +160,14 @@ class GameController {
         character.Info.Nickname = request.body.nickname;
         character.Info.LowerNickname = request.body.nickname.toLowerCase();
         character.Info.Voice = voice._name;
-        character.Customization.Head = await Customization.get(request.body.headId);
         character.Info.RegistrationDate = ~~(new Date() / 1000);
         character.Health.UpdateTime = ~~(Date.now() / 1000);
-
 
 
         /**
          * We nigger rig -King
          */
-        character.Customization.Head = character.Customization.Head._id
+        character.Customization.Head = request.body.headId
         character.Customization.Body = character.Customization.Body._id
         character.Customization.Hands = character.Customization.Hands._id
         character.Customization.Feet = character.Customization.Feet._id
