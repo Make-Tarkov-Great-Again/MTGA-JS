@@ -50,8 +50,10 @@ module.exports = async function gameRoutes(app, _opts) {
     })
 
     app.post("/client/game/profile/create", async (request, reply) => {
-        await GameController.clientGameProfileCreate(request, reply);
-        await GameController.clientGameProfileCreateReply(request, reply)
+        await Promise.all([
+            GameController.clientGameProfileCreate(request, reply),
+            GameController.clientGameProfileCreateReply(request, reply)
+        ])
     })
 
     // Client Account Routes //
@@ -166,11 +168,11 @@ module.exports = async function gameRoutes(app, _opts) {
         await ClientController.clientHideoutProductionRecipes(request, reply);
     });
 
-    
+
     app.post(`/client/hideout/production/scavcase/recipes`, async (request, reply) => {
         await ClientController.clientHideoutProductionScavcaseRecipes(request, reply);
     });
-    
+
     app.post(`/client/hideout/settings`, async (request, reply) => {
         await ClientController.clientHideoutSettings(request, reply);
     });
