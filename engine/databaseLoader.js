@@ -52,7 +52,8 @@ class DatabaseLoader {
             botCore: readParsed(`./database/bots/botCore.json`),
             clientSettings: readParsed(`./database/configs/client.settings.json`).data,
             gameplay: readParsed(`./database/configs/gameplay.json`),
-            location_base: readParsed(`./database/configs/locations.json`)
+            location_base: readParsed(`./database/configs/locations.json`),
+            hideoutSettings: readParsed(`./database/hideout/settings.json`).data
         };
     }
 
@@ -85,12 +86,6 @@ class DatabaseLoader {
         if (typeof hideoutScavcase.data != "undefined") { hideoutScavcase = hideoutScavcase.data; }
         for (const [index, scavcase] of Object.entries(hideoutScavcase)) {
             await this.createModelFromParseWithID('HideoutScavcase', index, scavcase);
-        }
-
-        let hideoutSettings = readParsed('./database/hideout/settings.json')
-        if (typeof hideoutSettings.data != "undefined") { hideoutSettings = hideoutSettings.data; }
-        for (const [index, setting] of Object.entries(hideoutSettings)) {
-            await this.createModelFromParseWithID('HideoutSetting', index, setting);
         }
     }
 
