@@ -205,12 +205,10 @@ class DatabaseLoader {
             await edition.usec.solve();
             edition.storage = readParsed(`${path}storage.json`);
         }
-        const database = require('./database');
     }
 
     // Load Items
     static async loadItems() {
-        const database = require('./database');
         let items = readParsed('./database/items.json');
         if (typeof items.data != "undefined") { items = items.data; }
 
