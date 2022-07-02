@@ -148,9 +148,16 @@ module.exports = async function gameRoutes(app, _opts) {
 
     app.post(`/client/weather`, async (request, reply) => {
         await ClientController.clientWeather(request, reply);
-    })
+    });
 
     app.post(`/client/locations`, async (request, reply) => {
         await ClientController.clientLocations(request, reply);
-    })
+    });
+
+    // hideout routes
+
+    app.post(`/client/hideout/areas`, async (request, reply) => {
+        await ClientController.clientHideoutArea(request, reply);
+    });
+
 }
