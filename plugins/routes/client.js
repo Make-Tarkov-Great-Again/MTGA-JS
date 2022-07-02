@@ -1,3 +1,4 @@
+const { database } = require("../../app");
 const { ClientController, GameController, MenuController, TradingController } = require("../controllers/client");
 const { logger, FastifyResponse } = require("../utilities");
 
@@ -92,6 +93,13 @@ module.exports = async function gameRoutes(app, _opts) {
                 ]
             })
         )
+    })
+
+    // Client Handbook Routes //
+    app.post("/client/handbook/templates", async (request, reply) => {
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody(database.templates))
     })
 
 
