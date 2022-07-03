@@ -1,5 +1,6 @@
 const { database } = require("../../app");
 const { ClientController, GameController, MenuController, TradingController } = require("../controllers/client");
+const { Weaponbuild } = require("../models");
 const { logger, FastifyResponse } = require("../utilities");
 
 module.exports = async function gameRoutes(app, _opts) {
@@ -12,8 +13,6 @@ module.exports = async function gameRoutes(app, _opts) {
     app.get(`/mode/offlineNodes`, async (request, reply) => {
         await GameController.modeOfflinePatchNodes(request, reply);
     });
-
-
 
 
     // Client Game Routes //
@@ -35,24 +34,24 @@ module.exports = async function gameRoutes(app, _opts) {
 
     app.post("/client/game/profile/select", async (request, reply) => {
         await GameController.clientProfileSelect(request, reply);
-    })
+    });
 
     app.post("/client/game/keepalive", async (request, reply) => {
         await GameController.clientGameKeepAlive(request, reply);
-    })
+    });
 
     app.post("/client/game/profile/nickname/reserved", async (request, reply) => {
         await GameController.clientGameProfileNicknameReserved(request, reply);
-    })
+    });
 
     app.post("/client/game/profile/nickname/validate", async (request, reply) => {
         await GameController.clientGameProfileNicknameValidate(request, reply);
-    })
+    });
 
     app.post("/client/game/profile/create", async (request, reply) => {
         await GameController.clientGameProfileCreate(request, reply);
-        await GameController.clientGameProfileCreateReply(request, reply)
-    })
+        await GameController.clientGameProfileCreateReply(request, reply);
+    });
 
     // Client Account Routes //
     app.post("/client/account/customization", async (request, reply) => {
@@ -65,7 +64,7 @@ module.exports = async function gameRoutes(app, _opts) {
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(FastifyResponse.getNotifier(await FastifyResponse.getSessionID(request)))
-        )
+        );
     });
 
     // Client Profile Routes //
@@ -94,16 +93,21 @@ module.exports = async function gameRoutes(app, _opts) {
                     }
                 ]
             })
-        )
-    })
+        );
+    });
 
     // Client Handbook Routes //
-    app.post("/client/handbook/templates", async (request, reply) => {
+    app.post("/client/handbook/templates", async (_request, reply) => {
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody(database.templates))
-    })
+            FastifyResponse.applyBody(database.templates));
+    });
 
+    app.post(`/client/handbook/builds/my/list`, async (request, reply) => {
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody(await Weaponbuild.getAllWithoutKeys()));
+    });
 
     // Client Menu Routes //
     app.post(`/client/menu/locale/:language`, async (request, reply) => {
@@ -166,13 +170,14 @@ module.exports = async function gameRoutes(app, _opts) {
         await ClientController.clientHideoutProductionRecipes(request, reply);
     });
 
-    
     app.post(`/client/hideout/production/scavcase/recipes`, async (request, reply) => {
         await ClientController.clientHideoutProductionScavcaseRecipes(request, reply);
     });
-    
+
     app.post(`/client/hideout/settings`, async (request, reply) => {
         await ClientController.clientHideoutSettings(request, reply);
     });
+
+    
 
 }
