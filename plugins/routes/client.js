@@ -162,6 +162,30 @@ module.exports = async function gameRoutes(app, _opts) {
     app.post(`/client/locations`, async (request, reply) => {
         await ClientController.clientLocations(request, reply);
     });
+    
+    app.post(`/client/quest/list`, async (request, reply) => {
+        await ClientController.clientQuestList(request, reply);
+    });
+
+    app.post(`/client/repeatalbeQuests/activityPeriods`, async (request, reply) => {
+        console.log("repeatalbeQuests need data");
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody([]));
+    });
+
+    app.post(`/client/server/list`, async (request, reply) => {
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody([{ ip: database.core.serverConfig.ip, port:  database.core.serverConfig.port }]));
+    });
+
+    app.post(`/client/checkVersion`, async (request, reply) => {
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody({isValid: true, latestVersion: ""})
+            )
+    });
 
     // hideout routes
 
