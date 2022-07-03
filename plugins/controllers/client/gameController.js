@@ -1,5 +1,5 @@
 const { database } = require("../../../app");
-const { Profile, Language, Account, Edition, Customization, Character, Health } = require("../../models");
+const { Profile, Language, Account, Edition, Customization, Character, Health, Weaponbuild } = require("../../models");
 const { getCurrentTimestamp, logger, FastifyResponse, writeFile, stringify, readParsed } = require("../../utilities");
 
 
@@ -156,20 +156,20 @@ class GameController {
         }
     }
 
-    static clientGameProfileCreate = async (request = null, reply = null) => {
+    static clientGameProfileCreate = async (request = null, _reply = null) => {
         const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
         if (!playerAccount) {
-            logger.logDebug("[clientGameProfileCreate] Invalid player account.")
+            logger.logDebug("[clientGameProfileCreate] Invalid player account.");
             return;
         }
 
-        let voice = await Customization.get(request.body.voiceId);
+        const voice = await Customization.get(request.body.voiceId);
 
         const chosenSide = request.body.side.toLowerCase();
         const chosenSideCapital = chosenSide.charAt(0).toUpperCase() + chosenSide.slice(1);
 
-        let profile = new Profile(playerAccount.id);
-        let character = await playerAccount.edition.getCharacterTemplateBySide(chosenSide).solvedClone();
+        const profile = new Profile(playerAccount.id);
+        const character = await playerAccount.edition.getCharacterTemplateBySide(chosenSide).solvedClone();
         character._id = "pmc" + playerAccount.id;
         character.aid = playerAccount.id;
         character.savage = "scav" + playerAccount.id;
@@ -185,11 +185,10 @@ class GameController {
         /**
          * We nigger rig -King
          */
-        character.Customization.Head = request.body.headId
-        character.Customization.Body = character.Customization.Body._id
-        character.Customization.Hands = character.Customization.Hands._id
-        character.Customization.Feet = character.Customization.Feet._id
-        
+        character.Customization.Head = request.body.headId;
+        character.Customization.Body = character.Customization.Body._id;
+        character.Customization.Hands = character.Customization.Hands._id;
+        character.Customization.Feet = character.Customization.Feet._id;
 
 
         profile.pmc = character;
@@ -205,9 +204,14 @@ class GameController {
         };
         playerAccount.wipe = false;
 
+        // we create the userbuilds file
+
+        const userBuilds = new Weaponbuild(playerAccount.id);
+
         await Promise.all([
             profile.save(),
             playerAccount.save(),
+            userBuilds.save()
         ]);
     }
 
