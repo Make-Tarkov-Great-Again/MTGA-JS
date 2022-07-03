@@ -103,7 +103,10 @@ module.exports = async function gameRoutes(app, _opts) {
             FastifyResponse.applyBody(database.templates));
     });
 
-    app.post(`/client/handbook/builds/my/list`, async (request, reply) => {
+    app.post(`/client/handbook/builds/my/list`, async (_request, reply) => {
+        const output = await Weaponbuild.getAllWithoutKeys();
+        const output_two = await Weaponbuild.getAll();
+        console.log()
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(await Weaponbuild.getAllWithoutKeys()));
@@ -177,7 +180,5 @@ module.exports = async function gameRoutes(app, _opts) {
     app.post(`/client/hideout/settings`, async (request, reply) => {
         await ClientController.clientHideoutSettings(request, reply);
     });
-
-    
 
 }
