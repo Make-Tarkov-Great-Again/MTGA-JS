@@ -105,7 +105,7 @@ class GameController {
         const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
         if (!playerAccount.wipe) {
             const profile = await playerAccount.getProfile();
-            if (profile) {
+            if (profile.character.length !== 0) {
                 const pmc = await profile.getPmc();
                 output.push(pmc);
                 //output.push(await profile.getScav());
