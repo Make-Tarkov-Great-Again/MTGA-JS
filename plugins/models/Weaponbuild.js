@@ -11,8 +11,6 @@ const {
 class Weaponbuild extends BaseModel {
     constructor(id) {
         super();
-
-        this.createDatabase(id);
         this.id = id;
     }
 
