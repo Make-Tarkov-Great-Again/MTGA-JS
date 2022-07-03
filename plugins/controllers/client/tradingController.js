@@ -45,7 +45,7 @@ class TradingController {
     static getStoragePath = async (request = null, reply = null) => {
         const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
         const profile = await playerAccount.getProfile();
-        const storagePath = await profile.getStoragePath();
+        const storagePath = profile.storage;
         await FastifyResponse.zlibJsonReply
             (
                 reply,

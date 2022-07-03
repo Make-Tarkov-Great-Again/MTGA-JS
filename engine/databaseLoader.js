@@ -334,7 +334,7 @@ class DatabaseLoader {
                 logger.logWarning(`Loading storage data for profile ${profileID}`);
                 let parsedStorage = readParsed("./user/profiles/" + profileID + "/storage.json")
                 if (typeof parsedStorage.data != "undefined") { parsedStorage = parsedStorage.data; }
-                profile.storage = await this.createModelFromParse("Storage", parsedStorage);
+                profile.storage = parsedStorage;
 
                 stats = fs.statSync(`./user/profiles/${profileID}/storage.json`);
                 database.fileAge[profileID].storage = stats.mtimeMs;
