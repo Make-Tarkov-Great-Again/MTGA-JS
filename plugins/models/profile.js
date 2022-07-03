@@ -33,9 +33,14 @@ class Profile extends BaseModel {
         return `./user/profiles/${this.id}/character.json`;
     }
 
+    async getStoragePath() {
+        return `./user/profiles/${this.id}/storage.json`;
+    }
+
     async save() {
         await Promise.all([
-            this.saveCharacter()
+            this.saveCharacter(),
+            this.saveStorage()
         ])
         
         logger.logDebug(this);
@@ -70,6 +75,40 @@ class Profile extends BaseModel {
             }
             // Update the savedFileAge stored in memory for the character.json.
             let statsAfterSave = fs.statSync(await this.getCharacterPath());
+            database.fileAge[this.id].pmc = statsAfterSave.mtimeMs;
+        }
+
+    }
+
+    async saveStorage() {
+        const { database } = require("../../app");
+
+        // Check if a PMC character exists in the server memory.
+        if (this.storage) {
+            // Check if the profile path exists
+            if (fs.existsSync(await this.getStoragePath())) {
+                // Check if the file was modified elsewhere
+                let statsPreSave = fs.statSync(await this.getStoragePath());
+                if (statsPreSave.mtimeMs == database.fileAge[this.id].pmc) {
+                    // Compare the PMC storage from server memory with the one saved on disk
+                    let currentProfile = await this.storage;
+                    let savedProfile = readParsed(await this.getStoragePath());
+                    if (stringify(currentProfile) !== stringify(savedProfile)) {
+                        // Save the PMC storage from memory to disk.
+                        writeFile(await this.getStoragePath(), stringify(currentProfile));
+                        logger.logSuccess(`[CLUSTER] Profile for AID ${sessionID} was saved.`);
+                    } else {
+                        // Skip save ?
+                    }
+                } else {
+                    // Recreate reload
+                }
+            } else {
+                // Save the PMC storage from memory to disk.
+                writeFile(await this.getStoragePath(), stringify(await this.storage));
+            }
+            // Update the savedFileAge stored in memory for the storage.json.
+            let statsAfterSave = fs.statSync(await this.getStoragePath());
             database.fileAge[this.id].pmc = statsAfterSave.mtimeMs;
         }
 
