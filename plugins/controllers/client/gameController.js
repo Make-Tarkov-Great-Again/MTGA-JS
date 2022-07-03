@@ -98,21 +98,21 @@ class GameController {
     }
 
     static clientProfileList = async (request = null, reply = null) => {
-        let output = [];
-        let dummyScavData = readParsed("./scavDummy.json")
+        const output = [];
+        const dummyScavData = readParsed("./scavDummy.json")
         dummyScavData.aid = "scav"+ await FastifyResponse.getSessionID(request)
 
         const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
         if (!playerAccount.wipe) {
             const profile = await playerAccount.getProfile();
             if (profile) {
-                const pmc = await profile.getPmc().dissolve();
+                const pmc = await profile.getPmc();
                 output.push(pmc);
                 //output.push(await profile.getScav());
                 output.push(dummyScavData);
             }
         }
-        console.log(output)
+        console.log(output);
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(output)
