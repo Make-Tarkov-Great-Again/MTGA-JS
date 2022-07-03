@@ -24,6 +24,10 @@ class FastifyResponse {
         }
     }
 
+    static getVersion = async (request) => {
+        return request.headers["app-version"].replace("EFT Client ", "")
+    }
+
 
     static getBackendURL() {
         const { database } = require("../../app");
