@@ -5,7 +5,7 @@
  */
 
 const { database } = require("../../../app");
-const { Trader } = require("../../models");
+const { Trader, Profile, Account } = require("../../models");
 const { read, FastifyResponse, logger } = require("../../utilities");
 
 
@@ -39,6 +39,17 @@ class TradingController {
             (
                 reply,
                 FastifyResponse.applyBody(traders)
+            );
+    };
+
+    static getStoragePath = async (request = null, reply = null) => {
+        const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
+        const profile = await playerAccount.getProfile();
+        const storagePath = await profile.getStoragePath();
+        await FastifyResponse.zlibJsonReply
+            (
+                reply,
+                FastifyResponse.applyBody(storagePath)
             );
     };
 }

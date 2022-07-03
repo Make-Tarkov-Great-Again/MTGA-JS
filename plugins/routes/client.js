@@ -1,5 +1,5 @@
 const { database } = require("../../app");
-const { ClientController, GameController, MenuController, TradingController } = require("../controllers/client");
+const { ClientController, GameController, MenuController, TradingController, FriendController } = require("../controllers/client");
 const { Weaponbuild } = require("../models");
 const { logger, FastifyResponse } = require("../utilities");
 
@@ -179,6 +179,27 @@ module.exports = async function gameRoutes(app, _opts) {
 
     app.post(`/client/hideout/settings`, async (request, reply) => {
         await ClientController.clientHideoutSettings(request, reply);
+    });
+
+    // Client Friends Routes //
+    app.post(`/client/friend/list`, async (request, reply) => {
+        await FriendController.clientFriendRequestList(request, reply);
+    });
+    app.post(`/client/friend/request/list/inbox`, async (request, reply) => {
+        await FriendController.clientFriendRequestListInbox(request, reply);
+    });
+    app.post(`/client/friend/request/list/outbox`, async (request, reply) => {
+        await FriendController.clientFriendRequestListOutbox(request, reply);
+    });
+
+
+    // Client Mail Routes //
+    app.post(`/client/mail/dialog/list`, async (request, reply) => {
+        //use dialoguecontroller later but we're smoving it for now
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody([])
+        );
     });
 
 }
