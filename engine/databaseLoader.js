@@ -120,8 +120,7 @@ class DatabaseLoader {
             let loot = [];
             let location = await this.createModelFromParseWithID("Location", base._Id, { "base": {}, "loot": {} });
 
-            if(fileExist(`./database/locations/loot/${map}`))
-            {
+            if (fileExist(`./database/locations/loot/${map}`)) {
                 loot = readParsed(`./database/locations/loot/${map}`);
             }
 
@@ -134,7 +133,7 @@ class DatabaseLoader {
      * Load editions data in parallel.
      */
 
-     static async regenerateRagfair() {
+    static async regenerateRagfair() {
         /**
          * Ragfair needs to be created in a meticulous way this time around
          * We need to compensate for the fact that the items in the assort
@@ -333,7 +332,9 @@ class DatabaseLoader {
 
             if (fileExist(`${path}storage.json`)) {
                 logger.logWarning(`Loading storage data for profile ${profileID}`);
-                profile.storage = readParsed("./user/profiles/" + profileID + "/storage.json");
+                let parsedStorage = readParsed("./user/profiles/" + profileID + "/storage.json")
+                if (typeof parsedStorage.data != "undefined") { parsedStorage = parsedStorage.data; }
+                profile.storage = await this.createModelFromParse("Storage", parsedStorage);
 
                 stats = fs.statSync(`./user/profiles/${profileID}/storage.json`);
                 database.fileAge[profileID].storage = stats.mtimeMs;
