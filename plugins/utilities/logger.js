@@ -68,12 +68,12 @@ class Logger {
    * @param {string} colorAtBack ("black", "red", "green", "yellow", "blue", "magenta", "cyan", "white")
    */
   log(type, data, colorAtFront, colorAtBack) {
-    const FrontColor = this.getConsoleColor("front", colorAtFront);
-    const BackColor = this.getConsoleColor("back", colorAtBack);
-    const Time = LoggerUtils.getIsoDateString(true);
+    const frontColor = this.getConsoleColor("front", colorAtFront);
+    const backColor = this.getConsoleColor("back", colorAtBack);
+    const time = LoggerUtils.getIsoDateString(true);
 
-    const logString = `${FrontColor}${BackColor}${type}${this.consoleColor.reset} ${Time} `;
-    const fileString = `${type}${Time}`;
+    const logString = `${frontColor}${backColor}${type}${this.consoleColor.reset} ${time} `;
+    const fileString = `${type}${time}`;
 
     try {
       if (this.logFileStream == undefined) {
@@ -101,13 +101,13 @@ class Logger {
     this.log("[INFO]", text, "white", "blue");
   }
   logSuccess(text) {
-    this.log("[INFO]", text, "white", "green");
+    this.log("[SUCCESS]", text, "white", "green");
   }
   logWarning(text) {
-    this.log("[INFO]", text, "white", "yellow");
+    this.log("[WARNING]", text, "white", "yellow");
   }
   logError(text) {
-    this.log("[INFO]", text, "white", "red");
+    this.log("[ERROR]", text, "white", "red");
   }
   /**
    * 
@@ -129,15 +129,11 @@ class Logger {
         return;
     }
   }
-  logRequest(text, data = "") {
-    if (data == "") {
-      this.log("[REQUEST]", text, "cyan", "black");
-    } else {
-      this.log("[REQUEST]", text, "cyan", "black");
-    }
+  logRequest(text) {
+    this.log("[REQUEST]", text, "cyan", "black");
   }
   throwError(message, whereOccured, additionalInfo = "") {
-    throw message + "\r\n" + whereOccured + (additionalInfo != "" ? `\r\n${additionalInfo}` : "");
+    throw new Error(message + "\r\n" + whereOccured + (additionalInfo != "" ? `\r\n${additionalInfo}` : ""));
   }
 }
 
