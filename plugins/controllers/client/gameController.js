@@ -196,7 +196,7 @@ class GameController {
 
         profile.storage = {
             _id: character._id,
-            suites: playerAccount.edition.storage
+            suites: playerAccount.edition.storage[chosenSide]
         };
         playerAccount.wipe = false;
 
