@@ -70,13 +70,13 @@ class GameController {
             reportAvailable: true,
             twitchEventMember: false,
         };
-            /*  
-            nickname: "user",
-            token: sessionID,
-            queued: false,
-            banTime: 0,
-            hash: "BAN0", 
-            */
+        /*  
+        nickname: "user",
+        token: sessionID,
+        queued: false,
+        banTime: 0,
+        hash: "BAN0", 
+        */
 
         await FastifyResponse.zlibJsonReply
             (
@@ -100,7 +100,7 @@ class GameController {
     static clientProfileList = async (request = null, reply = null) => {
         const output = [];
         const dummyScavData = readParsed("./scavDummy.json")
-        dummyScavData.aid = "scav"+ await FastifyResponse.getSessionID(request)
+        dummyScavData.aid = "scav" + await FastifyResponse.getSessionID(request)
 
         const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
         if (!playerAccount.wipe) {
@@ -195,13 +195,8 @@ class GameController {
         profile.character = character;
 
         profile.storage = {
-            err: 0,
-            errmsg: null,
-            data:
-            {
-                _id: character._id,
-                suites: playerAccount.edition.storage
-            }
+            _id: character._id,
+            suites: playerAccount.edition.storage
         };
         playerAccount.wipe = false;
 
@@ -210,9 +205,10 @@ class GameController {
         const userBuilds = new Weaponbuild(playerAccount.id);
 
         await Promise.all([
-            profile.save(),
+            profile.saveCharacter(),
             playerAccount.save(),
-            userBuilds.save()
+            userBuilds.save(),
+            profile.saveStorage()
         ]);
     }
 
