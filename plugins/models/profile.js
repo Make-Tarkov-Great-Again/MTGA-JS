@@ -45,14 +45,14 @@ class Profile extends BaseModel {
         const { database } = require("../../app");
 
         // Check if a PMC character exists in the server memory.
-        if (this.pmc) {
+        if (this.character) {
             // Check if the profile path exists
             if (fs.existsSync(await this.getCharacterPath())) {
                 // Check if the file was modified elsewhere
                 let statsPreSave = fs.statSync(await this.getCharacterPath());
                 if (statsPreSave.mtimeMs == database.fileAge[this.id].pmc) {
                     // Compare the PMC character from server memory with the one saved on disk
-                    let currentProfile = await this.pmc.dissolve();
+                    let currentProfile = await this.character.dissolve();
                     let savedProfile = readParsed(await this.getCharacterPath());
                     if (stringify(currentProfile) !== stringify(savedProfile)) {
                         // Save the PMC character from memory to disk.
@@ -66,7 +66,7 @@ class Profile extends BaseModel {
                 }
             } else {
                 // Save the PMC character from memory to disk.
-                writeFile(await this.getCharacterPath(), stringify(await this.pmc.dissolve()));
+                writeFile(await this.getCharacterPath(), stringify(await this.character.dissolve()));
             }
             // Update the savedFileAge stored in memory for the character.json.
             let statsAfterSave = fs.statSync(await this.getCharacterPath());

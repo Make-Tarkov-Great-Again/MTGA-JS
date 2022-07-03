@@ -75,8 +75,9 @@ class BaseModel {
      * @returns 
      */
     async dissolve() {
+        const dissolve = await this.clone()
         // Do Dissolve
-        return await this.clone();
+        return dissolve;
     }
 
     /**
