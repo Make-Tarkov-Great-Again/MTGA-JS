@@ -17,7 +17,7 @@ class Profile extends BaseModel {
     }
 
     async getPmc() {
-        return this.pmc;
+        return this.character;
     }
 
     async getScav() {

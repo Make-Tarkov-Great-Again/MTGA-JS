@@ -191,7 +191,7 @@ class GameController {
         character.Customization.Feet = character.Customization.Feet._id;
 
 
-        profile.pmc = character;
+        profile.character = character;
 
         profile.storage = {
             err: 0,
