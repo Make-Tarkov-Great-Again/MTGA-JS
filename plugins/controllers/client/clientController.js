@@ -130,6 +130,14 @@ class ClientController {
         );
     };
 
+    static clientQuestList = async (_request = null, reply = null) => {
+        console.log("Quest List Requested");
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody([])
+        );
+    };
+
 }
 
 module.exports.ClientController = ClientController;
