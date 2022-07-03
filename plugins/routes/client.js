@@ -161,7 +161,7 @@ module.exports = async function gameRoutes(app, _opts) {
     app.post(`/client/locations`, async (request, reply) => {
         await ClientController.clientLocations(request, reply);
     });
-    
+
     app.post(`/client/quest/list`, async (request, reply) => {
         await ClientController.clientQuestList(request, reply);
     });
@@ -176,14 +176,15 @@ module.exports = async function gameRoutes(app, _opts) {
     app.post(`/client/server/list`, async (request, reply) => {
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody([{ ip: database.core.serverConfig.ip, port:  database.core.serverConfig.port }]));
+            FastifyResponse.applyBody([{ ip: database.core.serverConfig.ip, port: database.core.serverConfig.port }]));
     });
 
     app.post(`/client/checkVersion`, async (request, reply) => {
+        const version = await FastifyResponse.getVersion(request);
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody({isValid: true, latestVersion: ""})
-            )
+            FastifyResponse.applyBody({ isValid: true, latestVersion: version })
+        )
     });
 
     // hideout routes
