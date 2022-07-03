@@ -106,14 +106,14 @@ class GameController {
         if (!playerAccount.wipe) {
             const profile = await playerAccount.getProfile();
             if (profile.character.length !== 0) {
-                const character = await profile.getPmc()
+                const character = await profile.getPmc();
                 const pmc = await character.dissolve();
                 output.push(pmc);
                 //output.push(await profile.getScav());
                 output.push(dummyScavData);
             }
         }
-        console.log(output);
+        //console.log(output);
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(output)
