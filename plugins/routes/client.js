@@ -50,7 +50,6 @@ module.exports = async function gameRoutes(app, _opts) {
 
     app.post("/client/game/profile/create", async (request, reply) => {
         await GameController.clientGameProfileCreate(request, reply);
-        await GameController.clientGameProfileCreateReply(request, reply);
     });
 
     // Client Account Routes //
