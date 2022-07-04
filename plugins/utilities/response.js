@@ -94,45 +94,43 @@ const respondBundle = async (sessionID, req, reply, body) => {
 }
 /**
  * Handle Image
- * @param {*} sessionID 
- * @param {*} req 
- * @param {*} resp 
- * @param {*} body 
+ * @param {*} request 
+ * @param {*} reply 
  */
-const respondImage = async (sessionID, req, resp, body) => {
-    const splittedUrl = req.url.split('/');
+const respondImage = async (request, reply) => {
+    const splittedUrl = request.url.split('/');
     const fileName = splittedUrl[splittedUrl.length - 1].split('.').slice(0, -1).join('.');
     let baseNode = {};
     let imgCategory = "none";
 
     // get images to look through
     switch (true) {
-        case req.url.includes("/quest"):
-            logger.logInfo(`[IMG.quests]: ${req.url}`);
+        case request.url.includes("/quest"):
+            logger.logInfo(`[IMG.quests]: ${request.url}`);
             baseNode = res.quest;
             imgCategory = "quest";
             break;
 
-        case req.url.includes("/handbook"):
-            logger.logInfo(`[IMG.handbook]: ${req.url}`);
+        case request.url.includes("/handbook"):
+            logger.logInfo(`[IMG.handbook]: ${request.url}`);
             baseNode = res.handbook;
             imgCategory = "handbook";
             break;
 
-        case req.url.includes("/avatar"):
-            logger.logInfo(`[IMG.avatar]: ${req.url}`);
+        case request.url.includes("/avatar"):
+            logger.logInfo(`[IMG.avatar]: ${request.url}`);
             baseNode = res.trader;
             imgCategory = "avatar";
             break;
 
-        case req.url.includes("/banners"):
-            logger.logInfo(`[IMG.banners]: ${req.url}`);
+        case request.url.includes("/banners"):
+            logger.logInfo(`[IMG.banners]: ${request.url}`);
             baseNode = res.banners;
             imgCategory = "banner";
             break;
 
         default:
-            logger.logInfo(`[IMG.hideout]: ${req.url}`);
+            logger.logInfo(`[IMG.hideout]: ${request.url}`);
             baseNode = res.hideout;
             imgCategory = "hideout";
             break;
@@ -142,10 +140,10 @@ const respondImage = async (sessionID, req, resp, body) => {
     if (!baseNode[fileName]) {
         logger.logError("Image not found! Sending backup image.");
         baseNode[fileName] = "res/noimage/" + imgCategory + ".png";
-        await file(resp, baseNode[fileName]);
+        await file(reply, baseNode[fileName]);
     } else {
         // send image
-        await file(resp, baseNode[fileName]);
+        await file(reply, baseNode[fileName]);
     }
 }
 
