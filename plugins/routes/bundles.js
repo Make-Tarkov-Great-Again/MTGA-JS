@@ -2,9 +2,11 @@
  * GET:/getBundleList
  */
 const { BundlesController } = require("../controllers/client");
+const { logger } = require("../utilities");
 
 
-module.exports = async function singleplayerBundles(app, opts) {
+module.exports = async function bundlesRoutes(app, _opts) {
+  logger.logWarning("Bundles not implemented yet")
   app.get(`/getBundleList`, async (_request, _reply) => {
     await BundlesController.getBundles();
   })
