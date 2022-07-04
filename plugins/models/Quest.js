@@ -7,19 +7,21 @@ class Quest extends BaseModel {
         this.createDatabase(id);
     }
 
-    async getCharacter() {
-        const { Profile } = require("./");
-        const profile = await Profile.get(this.id)
-        return profile.getPmc();
+    /**
+     * b
+     * @returns 
+     */
+    static async getCharacter(playerAccount) {
+        const profile = await playerAccount.getProfile();
+        return await profile.getPmc();
     }
 
-    static async getQuestsForPlayer() {
+    static async getQuestsForPlayer(playerAccount) {
 
         let quests = [];
 
-        const _profile = await this.getCharacter();
-        let quest_database = utility.DeepCopy(global._database.quests);
-        const side = _profile.Info.Side;
+        const _profile = await this.getCharacter(playerAccount);
+        let quest_database = await Quest.getAllWithoutKeys();
 
         let count = 0;
 
@@ -31,15 +33,15 @@ class Quest extends BaseModel {
                 quests.push(quest);
             }
 
-            const level = filterConditions(quest.conditions.AvailableForStart, "Level");
+            const level = await this.filterQuestConditions(quest.conditions.AvailableForStart, "Level");
             if (level.length) {
-                if (evaluateLevel(_profile, level[0])) {
+                if (await this.evaluateLevel(_profile, level[0])) {
                     continue;
                 }
             }
 
-            const questRequirements = filterConditions(quest.conditions.AvailableForStart, "Quest");
-            const loyaltyRequirements = filterConditions(quest.conditions.AvailableForStart, "TraderLoyalty");
+            const questRequirements = await this.filterQuestConditions(quest.conditions.AvailableForStart, "Quest");
+            const loyaltyRequirements = await this.filterQuestConditions(quest.conditions.AvailableForStart, "TraderLoyalty");
 
             if (questRequirements.length === 0 && loyaltyRequirements.length === 0) {
                 quests.push(quest);
