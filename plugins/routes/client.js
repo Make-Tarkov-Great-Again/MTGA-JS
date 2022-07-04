@@ -108,7 +108,7 @@ module.exports = async function gameRoutes(app, _opts) {
         console.log()
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody(await Weaponbuild.getAllWithoutKeys()));
+            FastifyResponse.applyBody(output));
     });
 
     // Client Menu Routes //
