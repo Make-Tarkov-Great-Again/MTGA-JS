@@ -113,6 +113,43 @@ class Profile extends BaseModel {
         }
 
     }
+
+    async getLoyalty(traderID, traderBase) {
+        const pmcData = await this.getPmc();
+        let playerSaleSum;
+        let playerStanding;
+        let playerLevel;
+        if (pmcData.TradersInfo[traderID]) {
+            playerSaleSum = pmcData.TradersInfo[traderID].salesSum;
+            playerStanding = pmcData.TradersInfo[traderID].standing;
+            playerLevel = pmcData.Info.Level;
+        } else {
+            playerSaleSum = 0;
+            playerStanding = 0;
+            playerLevel = pmcData.Info.Level;
+        }
+        let calculatedLoyalty = 0;
+        if (traderID !== "ragfair") {
+            // we check if player meet loyalty requirements
+            for (const loyaltyLevel of traderBase.loyaltyLevels) {
+                if (playerSaleSum >= loyaltyLevel.minSalesSum &&
+                    playerStanding >= loyaltyLevel.minStanding &&
+                    playerLevel >= loyaltyLevel.minLevel) {
+                        calculatedLoyalty++;
+                } else {
+                    if (calculatedLoyalty === 0) {
+                        calculatedLoyalty = 1;
+                    }
+                break;
+            }
+            }
+        } else {
+            return "ragfair";
+        }
+
+        return calculatedLoyalty;
+
+    }
 }
 
 module.exports.Profile = Profile;
