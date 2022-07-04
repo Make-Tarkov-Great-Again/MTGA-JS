@@ -52,6 +52,15 @@ module.exports = async function gameRoutes(app, _opts) {
         await GameController.clientGameProfileCreate(request, reply);
     });
 
+    app.post("/client/game/logout", async (request, reply) => {
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody({ status: "ok" })
+        );
+    });
+
+
+
     // Client Account Routes //
     app.post("/client/account/customization", async (request, reply) => {
         await ClientController.clientAccountCustomization(request, reply);
