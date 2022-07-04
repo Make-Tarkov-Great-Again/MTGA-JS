@@ -1,7 +1,6 @@
 const { AccountController } = require('../controllers/AccountController');
 const { WeblauncherController } = require('../controllers/WebLauncherController');
 const { ProfileController } = require('../controllers/ProfileController');
-const { Index } = require('./client/index');
 
 
 /**
@@ -12,6 +11,5 @@ const { Index } = require('./client/index');
 module.exports = {
     ...AccountController,
     ...WeblauncherController,
-    ...ProfileController,
-    ...Index
+    ...ProfileController
 }

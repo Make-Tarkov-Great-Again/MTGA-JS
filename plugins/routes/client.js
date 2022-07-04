@@ -50,8 +50,16 @@ module.exports = async function gameRoutes(app, _opts) {
 
     app.post("/client/game/profile/create", async (request, reply) => {
         await GameController.clientGameProfileCreate(request, reply);
-        await GameController.clientGameProfileCreateReply(request, reply);
     });
+
+    app.post("/client/game/logout", async (request, reply) => {
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody({ status: "ok" })
+        );
+    });
+
+
 
     // Client Account Routes //
     app.post("/client/account/customization", async (request, reply) => {
@@ -108,7 +116,7 @@ module.exports = async function gameRoutes(app, _opts) {
         console.log()
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody(await Weaponbuild.getAllWithoutKeys()));
+            FastifyResponse.applyBody(output));
     });
 
     // Client Menu Routes //
@@ -163,11 +171,12 @@ module.exports = async function gameRoutes(app, _opts) {
     });
 
     app.post(`/client/quest/list`, async (request, reply) => {
+        logger.logWarning("Quest List is not implemented yet");
         await ClientController.clientQuestList(request, reply);
     });
 
     app.post(`/client/repeatalbeQuests/activityPeriods`, async (request, reply) => {
-        console.log("repeatalbeQuests need data");
+        logger.logWarning("RepeatalbeQuests are not implemented yet");
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody([]));
@@ -207,19 +216,22 @@ module.exports = async function gameRoutes(app, _opts) {
 
     // Client Friends Routes //
     app.post(`/client/friend/list`, async (request, reply) => {
+        logger.logWarning("Friend List not implemented yet")
         await FriendController.clientFriendRequestList(request, reply);
     });
     app.post(`/client/friend/request/list/inbox`, async (request, reply) => {
+        logger.logWarning("Inbox is not implemented yet");
         await FriendController.clientFriendRequestListInbox(request, reply);
     });
     app.post(`/client/friend/request/list/outbox`, async (request, reply) => {
+        logger.logWarning("Outbox not implemented yet");
         await FriendController.clientFriendRequestListOutbox(request, reply);
     });
 
 
     // Client Mail Routes //
     app.post(`/client/mail/dialog/list`, async (request, reply) => {
-        //use dialoguecontroller later but we're smoving it for now
+        logger.logWarning("Dialog List not implemented yet");
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody([])

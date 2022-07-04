@@ -157,8 +157,9 @@ class GameController {
         }
     }
 
-    static clientGameProfileCreate = async (request = null, _reply = null) => {
-        const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
+    static clientGameProfileCreate = async (request = null, reply = null) => {
+        const sessionID = await FastifyResponse.getSessionID(request);
+        const playerAccount = await Account.get(sessionID);
         if (!playerAccount) {
             logger.logDebug("[clientGameProfileCreate] Invalid player account.");
             return;
@@ -210,15 +211,11 @@ class GameController {
             userBuilds.save(),
             profile.saveStorage()
         ]);
-    }
 
-    static clientGameProfileCreateReply = async (request = null, reply = null) => {
-        const sessionID = await FastifyResponse.getSessionID(request);
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody({ uid: "pmc" + sessionID })
         )
     }
-
 }
 module.exports.GameController = GameController;
