@@ -132,8 +132,9 @@ class ClientController {
         );
     };
 
-    static clientQuestList = async (_request = null, reply = null) => {
-        const quests = await Quest.getAllWithoutKeys();
+    static clientQuestList = async (request = null, reply = null) => {
+        const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
+        const quests = await Quest.getQuestsForPlayer(playerAccount);
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(quests)
