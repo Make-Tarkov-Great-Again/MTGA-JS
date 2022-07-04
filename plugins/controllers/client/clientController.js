@@ -1,5 +1,7 @@
 const { database } = require("../../../app");
-const { Account, Item, Language, Locale, Customization, Location, HideoutArea, HideoutProduction, HideoutScavcase } = require("../../models");
+const { Account, Item, Language, Locale, 
+    Customization, Location, HideoutArea, 
+    HideoutProduction, HideoutScavcase, Quest } = require("../../models");
 const { logger, stringify, FastifyResponse, writeFile } = require("../../utilities");
 
 /**
@@ -131,10 +133,10 @@ class ClientController {
     };
 
     static clientQuestList = async (_request = null, reply = null) => {
-        console.log("Quest List Requested");
+        const quests = await Quest.getAllWithoutKeys();
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody([])
+            FastifyResponse.applyBody(quests)
         );
     };
 

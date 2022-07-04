@@ -1,4 +1,3 @@
-const { cloneDeep } = require("lodash");
 const { BaseModel } = require("./BaseModel");
 
 class Quest extends BaseModel {
@@ -14,7 +13,7 @@ class Quest extends BaseModel {
         return profile.getPmc();
     }
 
-    async getQuestsForPlayer() {
+    static async getQuestsForPlayer() {
 
         let quests = [];
 
@@ -121,12 +120,6 @@ class Quest extends BaseModel {
         };
     }
 
-    /**
-    * 
-    * @param {*} quest "Quest" object
-    * @param {*} type "Level", "Quest" or "TraderLoyalty"
-    * @returns {object}
-    */
     static async filterQuestConditions(quest, type) {
         return quest.filter(c => {
             return c._parent === type;
