@@ -1,15 +1,13 @@
 const fs = require('fs');
 const {
-    logger,
-    readParsed,
-    fileExist,
-    stringify,
-    writeFile,
-    getDirectoriesFrom,
-    createDirectory,
-    getFilesFrom
-} = require('./../plugins/utilities/');
-const { Account, Trader, Item, Locale, Language, Edition, Profile, Customization, Character, HideoutArea, HideoutProduction, HideoutSetting, HideoutScavcase, Location } = require('../plugins/models');
+    logger, readParsed, fileExist, stringify,
+    writeFile, getDirectoriesFrom, createDirectory,
+    getFilesFrom } = require('./../plugins/utilities/');
+const { 
+    Account, Trader, Item, Locale, Language, 
+    Edition, Profile, Customization, Character, 
+    HideoutArea, HideoutProduction, HideoutSetting, 
+    HideoutScavcase, Location, Quest } = require('../plugins/models');
 
 
 
@@ -36,6 +34,7 @@ class DatabaseLoader {
         await this.loadEditions();
         await this.loadAccounts();
         await this.loadProfiles();
+        await this.loadQuests();
     }
 
     /**
@@ -179,6 +178,14 @@ class DatabaseLoader {
             await this.createModelFromParseWithID('Customization', index, customization);
         }
 
+    }
+
+    static async loadQuests() {
+        let quests = readParsed("./database/quests.json");
+        if (typeof quests.data != "undefined") quests = quests.data;
+        for (const [index, quest] of Object.entries(quests)) {
+            await this.createModelFromParseWithID('Quest', index, quest);
+        }
     }
 
     // Load Dialogues
