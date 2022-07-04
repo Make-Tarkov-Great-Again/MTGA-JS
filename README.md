@@ -1,4 +1,2 @@
 # Make Tarkov Great Again
-I don't feel like writing anymore than this, it's hot in my office.
-
-# AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+It's going to be great, so great, in fact it will be the best
