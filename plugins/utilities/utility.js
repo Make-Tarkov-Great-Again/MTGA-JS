@@ -65,6 +65,31 @@ const makeSign = async (Length) => {
 
     return result;
 }
+
+/* Find And Return Children (TRegular)
+ * input: PlayerData, InitialItem._id
+ * output: list of item._id
+ * List is backward first item is the furthest child and last item is main item
+ * returns all child items ids in array, includes itself and children
+ * */
+
+const findAndReturnChildren = async (pmcData, itemID) => {
+    return findAndReturnChildrenByItems(pmcData.Inventory.items, itemID);
+}
+
+const findAndReturnChildrenByItems = async (items, itemID) => {
+    const list = [];
+
+    for (let childitem of items) {
+        if (childitem.parentId === itemID) {
+            list.push.apply(list, findAndReturnChildrenByItems(items, childitem._id));
+        }
+    }
+    list.push(itemID); // it's required
+    return list;
+}
+
+
 module.exports = {
     generateUniqueId,
     makeSign,
@@ -74,5 +99,6 @@ module.exports = {
     getIsoDateString,
     utilFormat,
     clearString,
-    isUndefined
+    isUndefined,
+    findAndReturnChildrenByItems
 }
