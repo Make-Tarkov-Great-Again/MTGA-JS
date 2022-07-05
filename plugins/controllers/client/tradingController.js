@@ -52,5 +52,19 @@ class TradingController {
                 FastifyResponse.applyBody(storagePath)
             );
     };
+
+    static getTraderAssort = async (request = null, reply = null) => {
+        const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
+        const profile = await playerAccount.getProfile();
+        const traderId = request.raw.url.split("/")[request.raw.url.split("/").length - 1];
+        const trader = await Trader.get(traderId);
+        const assort = await trader.getFilteredAssort(profile);
+        await FastifyResponse.zlibJsonReply
+            (
+                reply,
+                FastifyResponse.applyBody(assort)
+            );
+    };
+
 }
 module.exports.TradingController = TradingController;
