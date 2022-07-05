@@ -145,6 +145,11 @@ module.exports = async function gameRoutes(app, _opts) {
         await TradingController.getTraderAssort(request, reply);
     });
 
+    app.post(`/client/trading/api/getUserAssortPrice/trader/:traderId`, async (request, reply) => {
+        //await TradingController.getAssortPrice(request, reply);
+        console.log()
+    });
+
     // Ungrouped routes //
     app.post(`/client/customization`, async (request, reply) => {
         await ClientController.clientCustomization(request, reply);
