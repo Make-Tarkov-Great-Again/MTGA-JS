@@ -56,7 +56,9 @@ class TradingController {
     static getTraderAssort = async (request = null, reply = null) => {
         const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
         const profile = await playerAccount.getProfile();
-        const traderId = request.raw.url.split("/")[request.raw.url.split("/").length - 1];
+        let splittedUrl = request.raw.url.split("/");
+        splittedUrl = splittedUrl[splittedUrl.length - 1].split("?");
+        const traderId = splittedUrl[0];
         const trader = await Trader.get(traderId);
         const assort = await trader.getFilteredAssort(profile);
         await FastifyResponse.zlibJsonReply
