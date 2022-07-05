@@ -73,9 +73,6 @@ const makeSign = async (Length) => {
  * returns all child items ids in array, includes itself and children
  * */
 
-const findAndReturnChildren = async (pmcData, itemID) => {
-    return findAndReturnChildrenByItems(pmcData.Inventory.items, itemID);
-}
 
 const findAndReturnChildrenByItems = async (items, itemID) => {
     const list = [];
@@ -101,4 +98,4 @@ module.exports = {
     clearString,
     isUndefined,
     findAndReturnChildrenByItems
-}
+};

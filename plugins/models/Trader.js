@@ -15,17 +15,18 @@ class Trader extends BaseModel {
     async getFilteredAssort(profile) {
         const loyalty = await profile.getLoyalty(this.base._id, this.base);
 
-        let traderClone = await this.clone();
+        const traderClone = await this.clone();
 
         if (this.isRagfair())
             return traderClone.assort;
 
-        //for (const [itemID, itemData] of Object.entries(traderClone.assort)) {
-        //    if (itemData.loyalty > loyalty) {
-        //        traderClone.assort = await this.removeItemFromAssort(traderClone.assort, itemID);
-        //        continue
-        //    }
-        //}
+        for (const [itemID, itemData] of Object.entries(traderClone.assort)) {
+            if (itemData.loyalty > loyalty) {
+                delete traderClone.assort[itemID];
+                //traderClone.assort = await this.removeItemFromAssort(traderClone.assort, itemID);
+                continue;
+            }
+        }
 
         return traderClone.assort;
     }
