@@ -176,7 +176,10 @@ module.exports = async function gameRoutes(app, _opts) {
 
     app.post(`/client/quest/list`, async (request, reply) => {
         logger.logWarning("Quest List is not implemented yet");
-        await ClientController.clientQuestList(request, reply);
+        //await ClientController.clientQuestList(request, reply);
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody([]));
     });
 
     app.post(`/client/repeatalbeQuests/activityPeriods`, async (request, reply) => {
