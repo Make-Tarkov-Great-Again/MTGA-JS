@@ -68,6 +68,7 @@ module.exports = async function gameRoutes(app, _opts) {
         switch(action){
             case "QuestAccept":
                 await GameController.clientGameProfileAcceptQuest(request, reply);
+                break;
             default:
                 logger.logWarning("not implemented yet");
         }
