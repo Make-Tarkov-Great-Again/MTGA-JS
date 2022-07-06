@@ -8,7 +8,7 @@ class Character extends BaseModel {
     }
 
     async solve() {
-        logger.logDebug("Solving Character");
+        logger.logDebug("Solving Character with ID:" + this._id);
         if(this.Customization !== undefined) {
             for (const [bodyPart, id] of Object.entries(this.Customization)) {
                 if(typeof id === "string") {
@@ -19,15 +19,16 @@ class Character extends BaseModel {
     }
 
     async dissolve() {
-        const dissolve = await this.clone();
-        if(this.Customization !== undefined) {
-            for (const [bodyPart, id] of Object.entries(this.Customization)) {
-                if(typeof id === "string") {
-                    this.Customization[bodyPart] = this.Customization[bodyPart]._id;
+        logger.logDebug("Dissolving Character with ID:" + this._id);
+        const dissolvedClone = await this.clone();
+        if(dissolvedClone.Customization !== undefined) {
+            for (const [bodyPart, id] of Object.entries(dissolvedClone.Customization)) {
+                if(typeof id === "object") {
+                    dissolvedClone.Customization[bodyPart] = dissolvedClone.Customization[bodyPart]._id;
                 }
             }
         }
-        return dissolve;
+        return dissolvedClone;
     }
 
     async addQuest(quest) {

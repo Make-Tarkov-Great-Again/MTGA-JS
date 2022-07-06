@@ -99,7 +99,11 @@ class GameController {
 
     static clientProfileList = async (request = null, reply = null) => {
         const output = [];
+
+        // Implement with offline raiding //
         const dummyScavData = readParsed("./scavDummy.json");
+
+
         dummyScavData.aid = "scav" + await FastifyResponse.getSessionID(request);
 
         const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
@@ -189,15 +193,7 @@ class GameController {
         character.Info.RegistrationDate = ~~(new Date() / 1000);
         character.Health.UpdateTime = ~~(Date.now() / 1000);
 
-
-        /**
-         * We nigger rig -King
-         */
-        character.Customization.Head = request.body.headId;
-        character.Customization.Body = character.Customization.Body._id;
-        character.Customization.Hands = character.Customization.Hands._id;
-        character.Customization.Feet = character.Customization.Feet._id;
-
+        character.Customization.Head = await Customization.get(request.body.headId);
 
         profile.character = character;
 
@@ -207,15 +203,12 @@ class GameController {
         };
         playerAccount.wipe = false;
 
-        // we create the userbuilds file
-
-        const userBuilds = new Weaponbuild(playerAccount.id);
+        profile.userbuilds = {};   
+        profile.dialogues = {}; 
 
         await Promise.all([
-            profile.saveCharacter(),
-            playerAccount.save(),
-            userBuilds.save(),
-            profile.saveStorage()
+            profile.save(),
+            playerAccount.save()
         ]);
 
         return FastifyResponse.zlibJsonReply(
@@ -226,10 +219,8 @@ class GameController {
 
     static clientGameProfileVoiceChange = async (request = null, reply = null) => {
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
-        playerProfile.character.Info.Nickname = request.body.nickname;
-        playerProfile.character.Info.LowerNickname = request.body.nickname.toLowerCase();
-
-        await playerProfile.saveCharacter();
+        playerProfile.character.Info.Voice = request.body.voice;
+        await playerProfile.save();
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody({
