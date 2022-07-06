@@ -54,15 +54,15 @@ class Profile extends BaseModel {
             // Check if the profile path exists
             if (fs.existsSync(await this.getCharacterPath())) {
                 // Check if the file was modified elsewhere
-                let statsPreSave = fs.statSync(await this.getCharacterPath());
-                if (statsPreSave.mtimeMs == database.fileAge[this.id].pmc) {
+                const statsPreSave = fs.statSync(await this.getCharacterPath());
+                if (statsPreSave.mtimeMs === database.fileAge[this.id].pmc) {
                     // Compare the PMC character from server memory with the one saved on disk
-                    let currentProfile = await this.character.dissolve();
-                    let savedProfile = readParsed(await this.getCharacterPath());
+                    const currentProfile = await this.character.dissolve();
+                    const savedProfile = readParsed(await this.getCharacterPath());
                     if (stringify(currentProfile) !== stringify(savedProfile)) {
                         // Save the PMC character from memory to disk.
                         writeFile(await this.getCharacterPath(), stringify(currentProfile));
-                        logger.logSuccess(`[CLUSTER] Profile for AID ${sessionID} was saved.`);
+                        logger.logSuccess(`[CLUSTER] Profile for AID ${this.id} was saved.`);
                     } else {
                         // Skip save ?
                     }
@@ -74,7 +74,7 @@ class Profile extends BaseModel {
                 writeFile(await this.getCharacterPath(), stringify(await this.character.dissolve()));
             }
             // Update the savedFileAge stored in memory for the character.json.
-            let statsAfterSave = fs.statSync(await this.getCharacterPath());
+            const statsAfterSave = fs.statSync(await this.getCharacterPath());
             database.fileAge[this.id].pmc = statsAfterSave.mtimeMs;
         }
 
@@ -146,9 +146,16 @@ class Profile extends BaseModel {
         } else {
             return "ragfair";
         }
-
         return calculatedLoyalty;
+    }
 
+    async getQuestStatus(questID) {
+        for (const quest of this.character.Quests) {
+            if (quest.qid === questID) {
+                return quest.status;
+            }
+        }
+        return "Locked";
     }
 }
 
