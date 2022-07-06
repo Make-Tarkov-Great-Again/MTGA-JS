@@ -60,11 +60,26 @@ class TradingController {
         splittedUrl = splittedUrl[splittedUrl.length - 1].split("?");
         const traderId = splittedUrl[0];
         const trader = await Trader.get(traderId);
-        const assort = await trader.getFilteredAssort(profile);
+        const res = await trader.getFilteredAssort(profile);
+        console.log()
         await FastifyResponse.zlibJsonReply
             (
                 reply,
-                FastifyResponse.applyBody(assort)
+                FastifyResponse.applyBody(res)
+            );
+    };
+
+    static getUserAssortPrice = async (request = null, reply = null) => {
+        const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
+        const profile = await playerAccount.getProfile();
+        let splittedUrl = request.raw.url.split("/");
+        splittedUrl = splittedUrl[splittedUrl.length - 1].split("?");
+        const traderId = splittedUrl[0];
+        const trader = await Trader.get(traderId);
+        await FastifyResponse.zlibJsonReply
+            (
+                reply,
+                FastifyResponse.applyBody(await trader.getPurchasesData(profile))
             );
     };
 
