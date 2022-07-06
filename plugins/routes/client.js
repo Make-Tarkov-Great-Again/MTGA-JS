@@ -52,12 +52,16 @@ module.exports = async function gameRoutes(app, _opts) {
         await GameController.clientGameProfileCreate(request, reply);
     });
 
-    app.post("/client/game/logout", async (request, reply) => {
+    app.post("/client/game/logout", async (_request, reply) => {
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody({ status: "ok" })
         );
     });
+
+    app.post("/client/game/profile/voice/change", async (request, reply) => {
+        await GameController.clientGameProfileVoiceChange(request, reply);
+    })
 
 
 
@@ -179,11 +183,7 @@ module.exports = async function gameRoutes(app, _opts) {
     });
 
     app.post(`/client/quest/list`, async (request, reply) => {
-        logger.logWarning("Quest List is not implemented yet");
-        //await ClientController.clientQuestList(request, reply);
-        return FastifyResponse.zlibJsonReply(
-            reply,
-            FastifyResponse.applyBody([]));
+        await ClientController.clientQuestList(request, reply);
     });
 
     app.post(`/client/repeatalbeQuests/activityPeriods`, async (request, reply) => {
