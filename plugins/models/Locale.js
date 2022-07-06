@@ -6,6 +6,10 @@ class Locale extends BaseModel {
 
         this.createDatabase(id);
     }
+
+    async getQuestLocales(questId) {
+        return this.locale.quest[questId];
+    }
 }
 
 module.exports.Locale = Locale;

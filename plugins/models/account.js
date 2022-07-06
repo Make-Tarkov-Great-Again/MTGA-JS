@@ -73,14 +73,14 @@ class Account extends BaseModel {
 
     /**
      * Return associated language
-     * @returns 
+     * @returns
      */
-    getLanguage() {
+    async getLanguage() {
         if (this.lang != (null || undefined || "")) {
             return this.lang;
         } else {
-            this.lang = en;
-            this.save()
+            this.lang = "en";
+            this.save();
             return this.lang;
         }
     }
@@ -127,7 +127,7 @@ class Account extends BaseModel {
      * @returns 
      */
     async dissolve() {
-        let dissolve = await this.clone()
+        const dissolve = await this.clone();
         dissolve.edition = dissolve.edition.id;
         return dissolve;
     }
