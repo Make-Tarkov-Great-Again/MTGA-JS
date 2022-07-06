@@ -13,21 +13,20 @@ class Character extends BaseModel {
             for (const [bodyPart, id] of Object.entries(this.Customization)) {
                 if(typeof id === "string") {
                     this.Customization[bodyPart] = await Customization.get(id);
-                }      
+                }
             }
-        }   
-        
+        }
     }
 
     async dissolve() {
-        let dissolve = await this.clone()
+        const dissolve = await this.clone();
         if(this.Customization !== undefined) {
             for (const [bodyPart, id] of Object.entries(this.Customization)) {
                 if(typeof id === "string") {
                     this.Customization[bodyPart] = this.Customization[bodyPart]._id;
-                }      
+                }
             }
-        }   
+        }
         return dissolve;
     }
 
@@ -37,7 +36,6 @@ class Character extends BaseModel {
             startTime: getCurrentTimestamp(),
             status: "Started"
         });
-        this.save();
     }
 }
 

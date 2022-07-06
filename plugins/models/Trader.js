@@ -30,6 +30,7 @@ class Trader extends BaseModel {
                 if (itemData.loyalty > loyalty) {
                     continue;
                 }
+
                 for (const item of itemData.items) {
                     output.items.push(item);
                 }
