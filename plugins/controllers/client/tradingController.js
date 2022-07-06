@@ -61,7 +61,6 @@ class TradingController {
         const traderId = splittedUrl[0];
         const trader = await Trader.get(traderId);
         const res = await trader.getFilteredAssort(profile);
-        console.log()
         await FastifyResponse.zlibJsonReply
             (
                 reply,

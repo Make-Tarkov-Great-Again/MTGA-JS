@@ -27,20 +27,16 @@ class Trader extends BaseModel {
                 output.loyal_level_items[itemID] = itemData.loyalty;
             } else {
                 // We do the filtering here for quest status & loyalty
+                if (itemData.loyalty > loyalty) {
+                    continue;
+                }
+                for (const item of itemData.items) {
+                    output.items.push(item);
+                }
+                output.barter_scheme[itemID] = itemData.barter_scheme;
+                output.loyal_level_items[itemID] = itemData.loyalty;
             }
         }
-
-        //if (this.isRagfair())
-        //    return traderClone.assort;
-//
-        //for (const [itemID, itemData] of Object.entries(traderClone.assort)) {
-        //    if (itemData.loyalty > loyalty) {
-        //        delete traderClone.assort[itemID];
-        //        //traderClone.assort = await this.removeItemFromAssort(traderClone.assort, itemID);
-        //        continue;
-        //    }
-        //}
-        //let res = traderClone.assort
         return output;
     }
 
