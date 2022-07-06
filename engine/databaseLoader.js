@@ -324,7 +324,7 @@ class DatabaseLoader {
                 character: [],
                 storage: {},
                 userbuilds: {},
-                dialogue: {},
+                dialogues: {},
             });
             const path = `./user/profiles/${profileID}/`;
             let stats;
@@ -363,10 +363,10 @@ class DatabaseLoader {
 
                 let parsedDialogues = readParsed("./user/profiles/" + profileID + "/dialogue.json");
                 if (typeof parsedDialogues.data != "undefined") { parsedDialogues = parsedDialogues.data; }
-                profile.userbuilds = await this.createCollectionFromParse("Dialogue", parsedDialogues)
+                profile.dialogues = await this.createCollectionFromParse("Dialogue", parsedDialogues)
 
                 stats = fs.statSync(`./user/profiles/${profileID}/dialogue.json`);
-                database.fileAge[profileID].dialogue = stats.mtimeMs;
+                database.fileAge[profileID].dialogues = stats.mtimeMs;
             }
         }
     }

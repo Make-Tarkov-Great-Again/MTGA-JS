@@ -13,7 +13,7 @@ class Quest extends BaseModel {
      */
     static async getCharacter(playerAccount) {
         const profile = await playerAccount.getProfile();
-        return await profile.getPmc();
+        return profile.getPmc();
     }
 
     static async getQuestsForPlayer(playerAccount) {
