@@ -42,8 +42,6 @@ class Profile extends BaseModel {
             this.saveCharacter(),
             this.saveStorage()
         ])
-        
-        logger.logDebug(this);
     }
 
     async saveCharacter() {

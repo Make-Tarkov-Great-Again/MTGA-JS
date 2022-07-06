@@ -183,15 +183,7 @@ class GameController {
         character.Info.RegistrationDate = ~~(new Date() / 1000);
         character.Health.UpdateTime = ~~(Date.now() / 1000);
 
-
-        /**
-         * We nigger rig -King
-         */
-        character.Customization.Head = request.body.headId;
-        character.Customization.Body = character.Customization.Body._id;
-        character.Customization.Hands = character.Customization.Hands._id;
-        character.Customization.Feet = character.Customization.Feet._id;
-
+        character.Customization.Head = await Customization.get(request.body.headId);
 
         profile.character = character;
 
@@ -206,10 +198,9 @@ class GameController {
         const userBuilds = new Weaponbuild(playerAccount.id);
 
         await Promise.all([
-            profile.saveCharacter(),
+            profile.save(),
             playerAccount.save(),
-            userBuilds.save(),
-            profile.saveStorage()
+            userBuilds.save()
         ]);
 
         return FastifyResponse.zlibJsonReply(
@@ -221,7 +212,7 @@ class GameController {
     static clientGameProfileVoiceChange = async (request = null, reply = null) => {
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
         playerProfile.character.Info.Voice = request.body.voice;
-        await playerProfile.saveCharacter();
+        await playerProfile.save();
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(null)
