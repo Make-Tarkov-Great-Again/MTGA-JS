@@ -1,6 +1,6 @@
 const { database } = require("../../../app");
-const { Account, Item, Language, Locale, 
-    Customization, Location, HideoutArea, 
+const { Account, Item, Language, Locale,
+    Customization, Location, HideoutArea,
     HideoutProduction, HideoutScavcase, Quest } = require("../../models");
 const { logger, stringify, FastifyResponse, writeFile } = require("../../utilities");
 
@@ -132,14 +132,14 @@ class ClientController {
         );
     };
 
-    //static clientQuestList = async (request = null, reply = null) => {
-    //    const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
-    //    const quests = await Quest.getQuestsForPlayer(playerAccount);
-    //    return FastifyResponse.zlibJsonReply(
-    //        reply,
-    //        FastifyResponse.applyBody(quests)
-    //    );
-    //};
+    static clientQuestList = async (request = null, reply = null) => {
+        const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
+        const quests = await Quest.getQuestsForPlayer(playerAccount);
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody(quests)
+        );
+    };
 
 }
 

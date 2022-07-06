@@ -217,5 +217,16 @@ class GameController {
             FastifyResponse.applyBody({ uid: "pmc" + sessionID })
         )
     }
+
+    static clientGameProfileVoiceChange = async (request = null, reply = null) => {
+        let playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
+        playerProfile.character.Info.Voice = request.body.voice;
+        await playerProfile.saveCharacter();
+
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody(null)
+        );
+    }
 }
 module.exports.GameController = GameController;
