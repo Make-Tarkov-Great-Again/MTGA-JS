@@ -16,19 +16,6 @@ module.exports = async function webinterfaceRoutes(app, opts) {
         return AccountController.home(request, reply);
     })
 
-    app.get(`/files/*`, async (request, reply) => {
-        const file = request.params['*'];
-        let fileExtension = String(file.split(".").at(-1)).toLowerCase();
-
-        switch (fileExtension) {
-            case "css":
-                reply.type("text/css")
-                break;
-        }
-
-        return webinterface.readFile(file);
-    })
-
     app.get(`/message`, async (request, reply) => {
         await webinterface.checkForSessionID(request);
         reply.type("text/html")

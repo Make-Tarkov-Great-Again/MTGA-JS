@@ -83,8 +83,7 @@ class WebInterface {
     }
 
     async readFile(filename) {
-        logger.logDebug("[WEBINTERFACE] Reading file: " + this.baseDirectory + "/files/" + filename);
-        return read(this.baseDirectory + "/files/" + filename);
+        return read(this.baseDirectory + "/resources/" + filename);
     }
 
     async renderPage(templateFile, variables = {}) {
