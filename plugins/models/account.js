@@ -86,22 +86,6 @@ class Account extends BaseModel {
     }
 
     /**
-     * Check if requested nickname is available
-     * @param {*} nickname 
-     * @returns 
-     */
-    static async ifAvailableNickname(nickname) {
-        const { database } = require("../../app");
-        const collection = database.accounts;
-        for (const [key, account] of Object.entries(collection)) {
-            if (account.nickname === nickname) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    /**
      * Get associated account profile
      * @returns 
      */
