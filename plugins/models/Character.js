@@ -1,4 +1,4 @@
-const { logger } = require("../utilities");
+const { logger, getCurrentTimestamp } = require("../utilities");
 const { BaseModel } = require("./BaseModel");
 const { Customization } = require("./Customization");
 
@@ -29,6 +29,15 @@ class Character extends BaseModel {
             }
         }   
         return dissolve;
+    }
+
+    async addQuest(quest) {
+        this.Quests.push({
+            qid: quest._id,
+            startTime: getCurrentTimestamp(),
+            status: "Started"
+        });
+        this.save();
     }
 }
 
