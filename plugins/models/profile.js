@@ -1,4 +1,5 @@
 const fs = require('fs');
+const { off } = require('process');
 const {
     readParsed,
     fileExist,
@@ -20,6 +21,18 @@ class Profile extends BaseModel {
         return this.character;
     }
 
+    async getDialogues() {
+        return this.dialogues;
+    }
+
+    async getDissolvedDialogues() {
+        const dissolvedCollection = [];
+        for (const [id, dialogue] of Object.entries(this.diologues)) {
+            dissolvedCollection.push(await dialogue.dissolve());
+        }
+        return dissolvedCollection;
+    }
+
     async getScav() {
         if(this.scav) {
             return this.scav;
@@ -37,10 +50,15 @@ class Profile extends BaseModel {
         return `./user/profiles/${this.id}/storage.json`;
     }
 
+    async getDialoguePath() {
+        return `./user/profiles/${this.id}/dialogue.json`;
+    }
+
     async save() {
         await Promise.all([
             this.saveCharacter(),
-            this.saveStorage()
+            this.saveStorage(),
+            this.saveDialogue()
         ])
     }
 
@@ -110,6 +128,42 @@ class Profile extends BaseModel {
             database.fileAge[this.id].pmc = statsAfterSave.mtimeMs;
         }
 
+    }
+
+    async saveDialogue() {
+        let dialoguePath = await this.getDialoguePath();
+        let dissolvedDialogues = await this.getDissolvedDialogues();
+
+        // Check if the dialogue file exists.
+        if (fileExist(dialoguePath)) {
+            // Check if the file was modified elsewhere.
+            let statsPreSave = fs.statSync(dialoguePath);
+            if (statsPreSave.mtimeMs == database.fileAge[this.id].dialogues) {
+
+                // Compare the dialogues from server memory with the ones saved on disk.
+                let currentDialogues = dissolvedDialogues;
+                let savedDialogues = readParsed(dialoguePath);
+                if (stringify(currentDialogues) !== stringify(savedDialogues)) {
+                    // Save the dialogues stored in memory to disk.
+                    writeFile(dialoguePath, dissolvedDialogues);
+
+                    // Reset the file age for the sessions dialogues.
+                    let stats = fs.statSync(dialoguePath);
+                    database.fileAge[this.id].dialogues = stats.mtimeMs;
+                    logger.logSuccess(`[CLUSTER] Dialogues for AID ${this.id} was saved.`);
+                }
+            } else {
+                // Fix reloading dialogues
+            }
+        } else {
+            // Save the dialogues stored in memory to disk.
+            writeFile(dialoguePath, dissolvedDialogues);
+
+            // Reset the file age for the sessions dialogues.
+            let stats = fs.statSync(dialoguePath);
+            database.fileAge[this.id].dialogues = stats.mtimeMs;
+            logger.logSuccess(`[CLUSTER] Dialogues for AID ${this.id} was created and saved.`);
+        }
     }
 
     async getLoyalty(traderID, traderBase) {
