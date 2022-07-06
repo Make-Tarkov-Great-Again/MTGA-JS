@@ -62,8 +62,8 @@
   "debugTimer": true,
   "showDebugLogs": false,
   "translations": {
-    "alreadyInUse": "The nickname is already in use",
-    "tooShort": "The nickname is too short"
+    "alreadyInUse": "This nickname is already in use.",
+    "tooShort": "Your nickname is too short"
   },
   "serverIPs": {
     "Enable": false,
