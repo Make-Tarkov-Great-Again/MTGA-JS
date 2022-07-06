@@ -16,12 +16,37 @@ class Profile extends BaseModel {
         this.id = id;
     }
 
+    /**
+ * Check if requested nickname is available
+ * @param {*} nickname 
+ * @returns 
+ */
+    static async ifAvailableNickname(nickname) {
+        const { database } = require("../../app");
+        const collection = database.profiles;
+
+        if (nickname.length < 3) { return "tooshort"; }
+        for (const [key, profile] of Object.entries(collection)) {
+            
+            // This check needs to come first to see if profile is created, or it'll pop and error
+            if (profile.character.length === 0) {
+                logger.logDebug(`[CLUSTER] Character for ${key} has not been created.`);
+                break;
+            }
+
+            if (profile.character.Info.Nickname === nickname) {
+                return "taken";
+            }
+        }
+        return "ok";
+    }
+
     async getPmc() {
         return this.character;
     }
 
     async getScav() {
-        if(this.scav) {
+        if (this.scav) {
             return this.scav;
         } else {
             this.scav = await Bot.generatePlayerScav(this.id);
@@ -42,7 +67,7 @@ class Profile extends BaseModel {
             this.saveCharacter(),
             this.saveStorage()
         ])
-        
+
         logger.logDebug(this);
     }
 
@@ -135,13 +160,13 @@ class Profile extends BaseModel {
                 if (playerSaleSum >= loyaltyLevel.minSalesSum &&
                     playerStanding >= loyaltyLevel.minStanding &&
                     playerLevel >= loyaltyLevel.minLevel) {
-                        calculatedLoyalty++;
+                    calculatedLoyalty++;
                 } else {
                     if (calculatedLoyalty === 0) {
                         calculatedLoyalty = 1;
                     }
-                break;
-            }
+                    break;
+                }
             }
         } else {
             return "ragfair";
