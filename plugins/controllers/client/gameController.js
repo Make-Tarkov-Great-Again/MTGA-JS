@@ -99,7 +99,11 @@ class GameController {
 
     static clientProfileList = async (request = null, reply = null) => {
         const output = [];
+
+        // Implement with offline raiding //
         const dummyScavData = readParsed("./scavDummy.json");
+
+
         dummyScavData.aid = "scav" + await FastifyResponse.getSessionID(request);
 
         const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
@@ -193,14 +197,12 @@ class GameController {
         };
         playerAccount.wipe = false;
 
-        // we create the userbuilds file
-
-        const userBuilds = new Weaponbuild(playerAccount.id);
+        profile.userbuilds = {};   
+        profile.dialogues = {}; 
 
         await Promise.all([
             profile.save(),
-            playerAccount.save(),
-            userBuilds.save()
+            playerAccount.save()
         ]);
 
         return FastifyResponse.zlibJsonReply(

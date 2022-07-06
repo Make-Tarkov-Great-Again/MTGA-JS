@@ -26,9 +26,9 @@ class Profile extends BaseModel {
     }
 
     async getDissolvedDialogues() {
-        const dissolvedCollection = [];
-        for (const [id, dialogue] of Object.entries(this.diologues)) {
-            dissolvedCollection.push(await dialogue.dissolve());
+        const dissolvedCollection = {};
+        for (const [id, dialogue] of Object.entries(this.dialogues)) {
+            dissolvedCollection[id] = await dialogue.dissolve();
         }
         return dissolvedCollection;
     }
@@ -131,6 +131,8 @@ class Profile extends BaseModel {
     }
 
     async saveDialogue() {
+        const { database } = require("../../app");
+
         let dialoguePath = await this.getDialoguePath();
         let dissolvedDialogues = await this.getDissolvedDialogues();
 
@@ -145,7 +147,7 @@ class Profile extends BaseModel {
                 let savedDialogues = readParsed(dialoguePath);
                 if (stringify(currentDialogues) !== stringify(savedDialogues)) {
                     // Save the dialogues stored in memory to disk.
-                    writeFile(dialoguePath, dissolvedDialogues);
+                    writeFile(dialoguePath, stringify(dissolvedDialogues));
 
                     // Reset the file age for the sessions dialogues.
                     let stats = fs.statSync(dialoguePath);
@@ -157,7 +159,7 @@ class Profile extends BaseModel {
             }
         } else {
             // Save the dialogues stored in memory to disk.
-            writeFile(dialoguePath, dissolvedDialogues);
+            writeFile(dialoguePath, stringify(dissolvedDialogues));
 
             // Reset the file age for the sessions dialogues.
             let stats = fs.statSync(dialoguePath);

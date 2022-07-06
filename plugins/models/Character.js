@@ -23,7 +23,6 @@ class Character extends BaseModel {
         const dissolvedClone = await this.clone();
         if(dissolvedClone.Customization !== undefined) {
             for (const [bodyPart, id] of Object.entries(dissolvedClone.Customization)) {
-                logger.logDebug(typeof id);
                 if(typeof id === "object") {
                     dissolvedClone.Customization[bodyPart] = dissolvedClone.Customization[bodyPart]._id;
                 }
