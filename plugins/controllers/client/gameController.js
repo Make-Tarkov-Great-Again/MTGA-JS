@@ -232,7 +232,7 @@ class GameController {
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
         const quest = await Quest.get(request.body.data[0].qid);
         await playerProfile.character.addQuest(quest);
-        await playerProfile.saveCharacter();
+        await playerProfile.save();
         console.log()
     };
 }
