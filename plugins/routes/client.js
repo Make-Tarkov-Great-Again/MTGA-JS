@@ -104,7 +104,7 @@ module.exports = async function gameRoutes(app, _opts) {
                         status: "Free",
                         sid: "",
                         ip: "",
-                        port: 0,
+                        port: 0
                     },
                     {
                         profileid: "pmc" + sessionID,
@@ -112,7 +112,7 @@ module.exports = async function gameRoutes(app, _opts) {
                         status: "Free",
                         sid: "",
                         ip: "",
-                        port: 0,
+                        port: 0
                     }
                 ]
             })
@@ -215,7 +215,7 @@ module.exports = async function gameRoutes(app, _opts) {
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody({ isValid: true, latestVersion: version })
-        )
+        );
     });
 
     // hideout routes
