@@ -61,8 +61,18 @@ module.exports = async function gameRoutes(app, _opts) {
 
     app.post("/client/game/profile/voice/change", async (request, reply) => {
         await GameController.clientGameProfileVoiceChange(request, reply);
-    })
+    });
 
+    app.post(`/client/game/profile/items/moving`, async (request, reply) => {
+        const action = request.body.data[0].Action;
+        switch(action){
+            case "QuestAccept":
+                await GameController.clientGameProfileAcceptQuest(request, reply);
+            default:
+                logger.logWarning("not implemented yet");
+        }
+        console.log()
+    });
 
 
     // Client Account Routes //

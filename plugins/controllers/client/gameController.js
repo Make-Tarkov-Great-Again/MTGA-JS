@@ -1,5 +1,5 @@
 const { database } = require("../../../app");
-const { Profile, Language, Account, Edition, Customization, Storage, Character, Health, Weaponbuild } = require("../../models");
+const { Profile, Language, Account, Edition, Customization, Storage, Character, Health, Weaponbuild, Quest } = require("../../models");
 const { getCurrentTimestamp, logger, FastifyResponse, writeFile, stringify, readParsed } = require("../../utilities");
 
 
@@ -7,11 +7,11 @@ class GameController {
     // JET Basics //
     static modeOfflinePatches = async (_request = null, reply = null) => {
         return FastifyResponse.zlibJsonReply(reply, database.core.serverConfig.Patches);
-    }
+    };
 
     static modeOfflinePatchNodes = async (_request = null, reply = null) => {
-        return FastifyResponse.zlibJsonReply(reply, database.core.serverConfig.PatchNodes)
-    }
+        return FastifyResponse.zlibJsonReply(reply, database.core.serverConfig.PatchNodes);
+    };
     // Game //
 
     static clientGameStart = async (request = null, reply = null) => {
@@ -26,7 +26,7 @@ class GameController {
                             0,
                             null
                         )
-                )
+                );
         } else {
             return FastifyResponse.zlibJsonReply
                 (
@@ -37,9 +37,9 @@ class GameController {
                             999,
                             "Profile Not Found!!"
                         )
-                )
+                );
         }
-    }
+    };
 
     static clientGameVersionValidate = async (request = null, reply = null) => {
         logger.logInfo("Client connected with version: " + request.body.version.major);
@@ -70,12 +70,12 @@ class GameController {
             reportAvailable: true,
             twitchEventMember: false,
         };
-        /*  
+        /* 
         nickname: "user",
         token: sessionID,
         queued: false,
         banTime: 0,
-        hash: "BAN0", 
+        hash: "BAN0",
         */
 
         await FastifyResponse.zlibJsonReply
@@ -86,7 +86,7 @@ class GameController {
     };
 
     static clientGameKeepAlive = async (request = null, reply = null) => {
-        let msg = "OK"
+        let msg = "OK";
 
         const sessionID = await FastifyResponse.getSessionID(request);
         if (typeof sessionID == "undefined") msg = "No Session";
@@ -94,13 +94,13 @@ class GameController {
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody({ msg: msg, utc_time: getCurrentTimestamp() })
-        )
-    }
+        );
+    };
 
     static clientProfileList = async (request = null, reply = null) => {
         const output = [];
-        const dummyScavData = readParsed("./scavDummy.json")
-        dummyScavData.aid = "scav" + await FastifyResponse.getSessionID(request)
+        const dummyScavData = readParsed("./scavDummy.json");
+        dummyScavData.aid = "scav" + await FastifyResponse.getSessionID(request);
 
         const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
         if (!playerAccount.wipe) {
@@ -117,8 +117,8 @@ class GameController {
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(output)
-        )
-    }
+        );
+    };
 
     static clientProfileSelect = async (request = null, reply = null) => {
         const sessionID = await FastifyResponse.getSessionID(request);
@@ -126,12 +126,12 @@ class GameController {
             "status": "ok",
             "notifier": FastifyResponse.getNotifier(sessionID),
             "notifierServer": FastifyResponse.getNotifier(sessionID).notifierServer
-        }
+        };
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(output)
-        )
-    }
+        );
+    };
 
     static clientGameProfileNicknameReserved = async (_request = null, reply = null) => {
         return FastifyResponse.zlibJsonReply(
@@ -148,14 +148,14 @@ class GameController {
             return FastifyResponse.zlibJsonReply(
                 reply,
                 FastifyResponse.applyBody({ status: "ok" })
-            )
+            );
         } else {
             return FastifyResponse.zlibJsonReply(
                 reply,
                 FastifyResponse.applyBody(null, 255, response.alreadyInUse)
-            )
+            );
         }
-    }
+    };
 
     static clientGameProfileCreate = async (request = null, reply = null) => {
         const sessionID = await FastifyResponse.getSessionID(request);
@@ -215,18 +215,25 @@ class GameController {
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody({ uid: "pmc" + sessionID })
-        )
-    }
+        );
+    };
 
     static clientGameProfileVoiceChange = async (request = null, reply = null) => {
-        let playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
+        const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
         playerProfile.character.Info.Voice = request.body.voice;
         await playerProfile.saveCharacter();
-
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(null)
         );
-    }
+    };
+
+    static clientGameProfileAcceptQuest = async (request = null, reply = null) => {
+        const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
+        const quest = await Quest.get(request.body.data[0].qid);
+        await playerProfile.character.addQuest(quest);
+        await playerProfile.saveCharacter();
+        console.log()
+    };
 }
 module.exports.GameController = GameController;
