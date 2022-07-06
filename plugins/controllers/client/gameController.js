@@ -145,19 +145,25 @@ class GameController {
     }
 
     static clientGameProfileNicknameValidate = async (request = null, reply = null) => {
-        const validate = await Account.ifAvailableNickname(request.body.nickname);
+        const validate = await Profile.ifAvailableNickname(request.body.nickname);
         const response = database.core.serverConfig.translations
 
-        if (validate === true) {
-            return FastifyResponse.zlibJsonReply(
-                reply,
-                FastifyResponse.applyBody({ status: "ok" })
-            );
-        } else {
-            return FastifyResponse.zlibJsonReply(
-                reply,
-                FastifyResponse.applyBody(null, 255, response.alreadyInUse)
-            );
+        switch (validate) {
+            case "ok":
+                return FastifyResponse.zlibJsonReply(
+                    reply,
+                    FastifyResponse.applyBody({ status: "ok" })
+                );
+            case "tooshort":
+                return FastifyResponse.zlibJsonReply(
+                    reply,
+                    FastifyResponse.applyBody(null, 256, response.tooShort)
+                );
+            case "taken":
+                return FastifyResponse.zlibJsonReply(
+                    reply,
+                    FastifyResponse.applyBody(null, 255, response.alreadyInUse)
+                );
         }
     };
 
@@ -217,8 +223,43 @@ class GameController {
         await playerProfile.save();
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody(null)
+            FastifyResponse.applyBody({
+                status: 0,
+                nicknamechangedate: ~~(new Date() / 1000)
+            })
         );
+    };
+
+    static clientGameProfileNicknameChange = async (request = null, reply = null) => {
+        const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
+        const validate = await Profile.ifAvailableNickname(request.body.nickname);
+        const response = database.core.serverConfig.translations
+
+
+        switch (validate) {
+            case "ok":
+                playerProfile.character.Info.Nickname = request.body.nickname;
+                playerProfile.character.Info.LowerNickname = request.body.nickname.toLowerCase();
+                await playerProfile.saveCharacter();
+
+                return FastifyResponse.zlibJsonReply(
+                    reply,
+                    FastifyResponse.applyBody({
+                        status: 0,
+                        nicknamechangedate: ~~(new Date() / 1000)
+                    })
+                );
+            case "tooshort":
+                return FastifyResponse.zlibJsonReply(
+                    reply,
+                    FastifyResponse.applyBody(null, 256, response.tooShort)
+                );
+            case "taken":
+                return FastifyResponse.zlibJsonReply(
+                    reply,
+                    FastifyResponse.applyBody(null, 255, response.alreadyInUse)
+                );
+        }
     };
 
     static clientGameProfileAcceptQuest = async (request = null, reply = null) => {

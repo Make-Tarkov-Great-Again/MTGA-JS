@@ -48,6 +48,10 @@ module.exports = async function gameRoutes(app, _opts) {
         await GameController.clientGameProfileNicknameValidate(request, reply);
     });
 
+    app.post("/client/game/profile/nickname/change", async (request, reply) => {
+        await GameController.clientGameProfileNicknameChange(request, reply);
+    });
+
     app.post("/client/game/profile/create", async (request, reply) => {
         await GameController.clientGameProfileCreate(request, reply);
     });
@@ -65,7 +69,7 @@ module.exports = async function gameRoutes(app, _opts) {
 
     app.post(`/client/game/profile/items/moving`, async (request, reply) => {
         const action = request.body.data[0].Action;
-        switch(action){
+        switch (action) {
             case "QuestAccept":
                 await GameController.clientGameProfileAcceptQuest(request, reply);
                 break;
