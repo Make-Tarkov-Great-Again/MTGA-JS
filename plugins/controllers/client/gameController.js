@@ -1,5 +1,5 @@
 const { database } = require("../../../app");
-const { Profile, Language, Account, Edition, Customization, Storage, Character, Health, Weaponbuild, Quest } = require("../../models");
+const { Profile, Language, Account, Edition, Customization, Storage, Character, Health, Weaponbuild, Quest, Locale } = require("../../models");
 const { getCurrentTimestamp, logger, FastifyResponse, writeFile, stringify, readParsed } = require("../../utilities");
 
 
@@ -142,7 +142,7 @@ class GameController {
             reply,
             FastifyResponse.applyBody("")
         )
-    }
+    };
 
     static clientGameProfileNicknameValidate = async (request = null, reply = null) => {
         const validate = await Profile.ifAvailableNickname(request.body.nickname);
@@ -265,9 +265,19 @@ class GameController {
     static clientGameProfileAcceptQuest = async (request = null, reply = null) => {
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
         const quest = await Quest.get(request.body.data[0].qid);
+        const questReward = await quest.getRewards(playerProfile, "Started");
         await playerProfile.character.addQuest(quest);
+        const userAccount = await Account.get(playerProfile.id);
+        const userLanguage = userAccount.getLanguage();
+        const locales = await Locale.get(userLanguage);
+        const questLocale = await locales.getQuestLocales(quest._id);
+        const messageContent = {
+            templateId: questLocale.startedMessageText,
+            type: 10,
+            maxStorageTime: database.core.gameplay.other.RedeemTime * 3600
+        };
+        await playerProfile.addDialogue(messageContent, questReward);
         await playerProfile.save();
-        console.log()
     };
 }
 module.exports.GameController = GameController;
