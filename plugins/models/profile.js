@@ -6,8 +6,9 @@ const {
     logger,
     stringify,
     writeFile,
+    generateUniqueId
 } = require("../utilities");
-const { Bot, BaseModel } = require("./Index");
+const { Bot, BaseModel, Dialogue } = require("./Index");
 
 class Profile extends BaseModel {
     constructor(id) {
@@ -226,6 +227,46 @@ class Profile extends BaseModel {
             return "ragfair";
         }
         return calculatedLoyalty;
+    }
+
+    async addDialogue(id, messageContent, rewards=[]) {
+        let dialogue = this.dialogue.get(id);
+        if (!dialogue) {
+            dialogue = await new Dialogue(id);
+            dialogue.messages = [];
+            dialogue.pinned = false;
+            dialogue.new = 0;
+            dialogue.attachmentsNew = 0;
+        }
+        dialogue.new += 1;
+
+        const stashItems = {};
+
+        if (rewards.length > 0) {
+            stashItems.stash = generateUniqueId();
+            stashItems.data = [];
+            // other bullshit todo
+        }
+
+        const message = {
+            _id: generateUniqueId();
+            uid: dialogueID,
+            type: messageContent.type,
+            dt: Date.now() / 1000,
+            templateId: messageContent.templateId,
+            text: messageContent.text,
+            hasRewards: rewards.length > 0,
+            rewardCollected: false,
+            items: stashItems,
+            maxStorageTime: messageContent.maxStorageTime,
+            systemData: messageContent.systemData
+        }
+
+        dialogue.messages.push(message)
+
+        // need to add notification
+        
+        console.log("nigga");
     }
 
     async getQuestStatus(questID) {
