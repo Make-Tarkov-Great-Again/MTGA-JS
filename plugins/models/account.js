@@ -75,7 +75,7 @@ class Account extends BaseModel {
      * Return associated language
      * @returns
      */
-    async getLanguage() {
+    getLanguage() {
         if (this.lang != (null || undefined || "")) {
             return this.lang;
         } else {
