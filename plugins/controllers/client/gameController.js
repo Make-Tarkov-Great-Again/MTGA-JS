@@ -276,7 +276,7 @@ class GameController {
             type: 10,
             maxStorageTime: database.core.gameplay.other.RedeemTime * 3600
         };
-        await playerProfile.addDialogue(messageContent, questReward);
+        await playerProfile.addDialogue(quest.traderId, messageContent, questReward);
         await playerProfile.save();
     };
 }
