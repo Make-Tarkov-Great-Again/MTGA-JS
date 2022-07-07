@@ -249,7 +249,7 @@ class Profile extends BaseModel {
         }
 
         const message = {
-            _id: generateUniqueId();
+            _id: generateUniqueId(),
             uid: dialogueID,
             type: messageContent.type,
             dt: Date.now() / 1000,
