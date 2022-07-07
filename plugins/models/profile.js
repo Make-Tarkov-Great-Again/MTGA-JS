@@ -6,7 +6,8 @@ const {
     logger,
     stringify,
     writeFile,
-    generateUniqueId
+    generateUniqueId,
+    getCurrentTimestamp
 } = require("../utilities");
 const { Bot, BaseModel, Dialogue } = require("./Index");
 
@@ -230,13 +231,15 @@ class Profile extends BaseModel {
     }
 
     async addDialogue(id, messageContent, rewards=[]) {
-        let dialogue = this.dialogue.get(id);
+        let dialogue;
         if (!dialogue) {
             dialogue = await new Dialogue(id);
             dialogue.messages = [];
             dialogue.pinned = false;
             dialogue.new = 0;
             dialogue.attachmentsNew = 0;
+        } else {
+            dialogue = this.dialogue.get(id);
         }
         dialogue.new += 1;
 
@@ -249,10 +252,10 @@ class Profile extends BaseModel {
         }
 
         const message = {
-            _id: generateUniqueId();
-            uid: dialogueID,
+            _id: await generateUniqueId(),
+            uid: id,
             type: messageContent.type,
-            dt: Date.now() / 1000,
+            dt: await getCurrentTimestamp(),
             templateId: messageContent.templateId,
             text: messageContent.text,
             hasRewards: rewards.length > 0,
@@ -262,10 +265,10 @@ class Profile extends BaseModel {
             systemData: messageContent.systemData
         }
 
-        dialogue.messages.push(message)
+        dialogue.messages.push(message);
 
         // need to add notification
-        
+
         console.log("nigga");
     }
 
