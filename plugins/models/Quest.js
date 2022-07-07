@@ -1,4 +1,5 @@
 const { BaseModel } = require("./BaseModel");
+//const { splitStack } = require("../utilities");
 
 class Quest extends BaseModel {
     constructor(id) {
@@ -139,6 +140,90 @@ class Quest extends BaseModel {
                     return false;
             }
         }
+    }
+
+    async processReward(reward) {
+        const rewardItems = [];
+        let targets;
+        const mods = [];
+
+        //// separate base item and mods, fix stacks
+        //for (let item of reward.items) {
+        //    if (item._id === reward.target) {
+        //        targets = splitStack(item);
+        //    } else {
+        //        mods.push(item);
+        //    }
+        //}
+
+        // add mods to the base items, fix ids
+        //for (const target of targets) {
+        //    let questItems = [target];
+//
+        //    for (let mod of mods) {
+        //        questItems.push(utility.DeepCopy(mod));
+        //    }
+//
+        //    rewardItems = rewardItems.concat(helper_f.replaceIDs(null, questItems));
+        //}
+
+        return rewardItems;
+    }
+
+    async getRewards(playerProfile, state) {
+        const rewards = [];
+
+        for (const reward of this.rewards[state]) {
+            switch(reward.type) {
+                case "Item":
+                    rewards = rewards.concat("BALLS");
+                    break;
+                default:
+                    console.log("No reward ?");
+                    break
+            }
+        }
+        /**for (const reward of this.rewards[state]) {
+            switch (reward.type) {
+                case "Item":
+                    rewards = rewards.concat(processReward(reward));
+                    break;
+                case "Experience":
+                    pmcData.Info.Experience += parseInt(reward.value);
+                    break;
+                case "TraderStanding":
+                    if (typeof pmcData.TradersInfo[reward.target] == "undefined") {
+                        pmcData.TradersInfo[reward.target] = {
+                        salesSum: 0,
+                        standing: 0,
+                        unlocked: true
+                        };
+                    }
+                    pmcData.TradersInfo[reward.target].standing += parseFloat(reward.value);
+                    break;
+                case "TraderUnlock":
+                    if (utility.isUndefined(pmcData.TradersInfo[reward.target])) {
+                        pmcData.TradersInfo[reward.target] = {
+                        salesSum: 0,
+                        standing: 0,
+                        unlocked: true
+                        };
+                    }
+
+                    pmcData.TradersInfo[reward.target].unlocked = true;
+                    break;
+                case "Skill":
+                    const skills = pmcData.Skills.Common.filter((skill) => skill.Id === reward.target);
+                    for (const Id in skills) {
+                        pmcData.Skills.Common[Id].Progress += parseInt(reward.value);
+                    }
+                    break;
+                default:
+                    console.log("MY BROTHER IN CHRIST WHAT THE FUCK ARE YOU TRYING TO ADD AS REWARD YOU FUCKING APE");
+                    return "balls";
+            }
+        }*/
+        return rewards;
     }
 }
 
