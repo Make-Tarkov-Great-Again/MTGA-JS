@@ -10,7 +10,6 @@ module.exports = fp(async function (app, opts) {
    * @see https://github.com/fastify/fastify-compress
    */
   await app.register(require('@fastify/compress'));
-  app.log.info("@fastify/compress is enabled");
 
 
   /**
@@ -22,7 +21,6 @@ module.exports = fp(async function (app, opts) {
     secret: 'urmomisawesome',
     parseOptions: {}
   })
-  app.log.info('@fastify/cookie is enabled')
 
   /**
    * A simple plugin for Fastify that adds a content type parser 
@@ -30,11 +28,9 @@ module.exports = fp(async function (app, opts) {
    * @see https://github.com/fastify/fastify-formbody
    */
   await app.register(require('@fastify/formbody'))
-  app.log.info('@fastify/formbody is enabled')
 
   /**
 * Register Handler
 */
   await app.register(require('./router.js'))
-  app.log.info('Handler registered');
 })
