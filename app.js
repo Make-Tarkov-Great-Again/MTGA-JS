@@ -27,11 +27,13 @@ const app = require('fastify')({
                     params: request.params,
                     body: request.body,
                     query: request.query,
+                    /*                     
                     hostname: request.hostname,
                     remoteAddress: request.ip,
                     remotePort: request.socket.remotePort,
                     routerMethod: request.routerMethod,
-                    routerPath: request.routerPath
+                    routerPath: request.routerPath 
+                    */
                 };
             }
         }
