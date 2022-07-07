@@ -58,7 +58,7 @@ class Quest extends BaseModel {
                     break;
                 }
 
-                if (previousQuest.status === Object.keys(questStatus)[condition._props.status[0]]) {
+                if (previousQuest.status === Object.keys(this.questStatus)[condition._props.status[0]]) {
                     continue;
                 }
 
