@@ -268,6 +268,8 @@ module.exports = async function gameRoutes(app, _opts) {
     // Client Ragfair Routes //
     app.post(`/client/ragfair/find`, async (request, reply) => {
         logger.logWarning("Find not implemented yet");
+        console.log(request.body)
+
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody([])
