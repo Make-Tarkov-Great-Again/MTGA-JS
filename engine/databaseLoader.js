@@ -3,10 +3,10 @@ const {
     logger, readParsed, fileExist, stringify,
     writeFile, getDirectoriesFrom, createDirectory,
     getFilesFrom } = require('./../plugins/utilities/');
-const { 
-    UtilityModel, Account, Trader, Item, Locale, Language, 
-    Edition, Profile, Customization, Character, 
-    HideoutArea, HideoutProduction, HideoutSetting, 
+const {
+    UtilityModel, Account, Trader, Item, Locale, Language,
+    Edition, Profile, Customization, Character,
+    HideoutArea, HideoutProduction, HideoutSetting,
     HideoutScavcase, Location, Quest } = require('../plugins/models');
 
 

@@ -1,5 +1,4 @@
 class UtilityModel {
-    /////////////////// MODEL DATA ///////////////////
 
     static async createModelFromParse(model, data) {
         let classModel = eval(`new ${model}`);
