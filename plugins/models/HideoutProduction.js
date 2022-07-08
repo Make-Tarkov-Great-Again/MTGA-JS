@@ -8,4 +8,4 @@ class HideoutProduction extends BaseModel {
     }
 }
 
-module.exports.HideoutProduction = HideoutProduction;
+module.exports = HideoutProduction;

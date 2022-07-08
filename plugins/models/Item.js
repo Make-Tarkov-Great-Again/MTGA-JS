@@ -8,4 +8,4 @@ class Item extends BaseModel {
     }
 }
 
-module.exports.Item = Item;
+module.exports = Item;

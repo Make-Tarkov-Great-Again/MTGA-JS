@@ -282,4 +282,4 @@ class Profile extends BaseModel {
     }
 }
 
-module.exports.Profile = Profile;
+module.exports = Profile;

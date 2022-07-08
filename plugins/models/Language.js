@@ -8,4 +8,4 @@ class Language extends BaseModel {
     }
 }
 
-module.exports.Language = Language;
+module.exports = Language;

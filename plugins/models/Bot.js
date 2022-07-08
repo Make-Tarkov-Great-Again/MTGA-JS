@@ -12,4 +12,4 @@ class Bot extends BaseModel {
     }
 }
 
-module.exports.Bot = Bot;
+module.exports = Bot;

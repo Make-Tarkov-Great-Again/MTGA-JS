@@ -8,4 +8,4 @@ class Customization extends BaseModel {
     }
 }
 
-module.exports.Customization = Customization;
+module.exports = Customization;
