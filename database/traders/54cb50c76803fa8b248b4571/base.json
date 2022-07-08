@@ -5,7 +5,7 @@
     "surname": "Романенко",
     "nickname": "Prapor",
     "location": "",
-    "avatar": "/files/trader/avatar/59b91ca086f77469a81232e4.png",
+    "avatar": "/files/trader/avatar/59b91ca086f77469a81232e4.jpg",
     "balance_rub": 80000000,
     "balance_dol": 0,
     "balance_eur": 0,
@@ -14,7 +14,7 @@
     "discount_end": 0,
     "buyer_up": false,
     "currency": "RUB",
-    "nextResupply": 1649891331,
+    "nextResupply": 1631489718,
     "repair": {
         "availability": true,
         "quality": "1.2",
@@ -75,5 +75,24 @@
             "heal_price_coef": 0
         }
     ],
-    "sell_category": []
+    "sell_category": [
+        "5b47574386f77428ca22b2f4",
+        "5b47574386f77428ca22b2ee",
+        "5b47574386f77428ca22b2f6",
+        "5b5f701386f774093f2ecf0f",
+        "5b5f73ec86f774093e6cb4fd",
+        "5b5f78e986f77447ed5636b1",
+        "5b5f78fc86f77409407a7f90",
+        "5b5f798886f77447ed5636b5",
+        "5b5f79d186f774093f2ed3c2",
+        "5b5f79a486f77409407a7f94",
+        "5b5f791486f774093f2ed3be",
+        "5b5f792486f77447ed5636b3",
+        "5b5f796a86f774093f2ed3c0",
+        "5b5f794b86f77409407a7f92",
+        "5b5f7a2386f774093f2ed3c4",
+        "5b47574386f77428ca22b33b",
+        "5b47574386f77428ca22b344",
+        "5c518ec986f7743b68682ce2"
+    ]
 }

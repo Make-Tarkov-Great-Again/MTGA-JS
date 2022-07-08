@@ -28,7 +28,7 @@ class DatabaseLoader {
         await this.loadAccounts();
         await this.loadProfiles();
         await this.loadQuests();
-        //await this.loadRagfair();
+        await this.loadRagfair();
     }
 
     /**
@@ -217,19 +217,11 @@ class DatabaseLoader {
 
             let trader = await UtilityModel.createModelFromParseWithID('Trader', traderID, {});
 
-            if (fileExist(`${path}categories.json`)) {
+            if (fileExist(`${path}base.json`)) {
                 trader.base = readParsed(`${path}base.json`);
-                //fix?
                 trader.base.repair.price_rate = null;
             } else {
                 trader.base = [];
-            }
-
-            if (fileExist(`${path}categories.json`)) {
-                trader.categories = readParsed(`${path}categories.json`)
-                trader.base.sell_category = readParsed(`${path}categories.json`);
-            } else {
-                trader.base.sell_category = [];
             }
 
             if (fileExist(`${path}questassort.json`)) {

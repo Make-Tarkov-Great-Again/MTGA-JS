@@ -5,7 +5,7 @@
     "surname": "Хабибуллина",
     "nickname": "Therapist",
     "location": "",
-    "avatar": "/files/trader/avatar/59b91cab86f77469aa5343ca.png",
+    "avatar": "/files/trader/avatar/59b91cab86f77469aa5343ca.jpg",
     "balance_rub": 20000000,
     "balance_dol": 0,
     "balance_eur": 0,
@@ -14,7 +14,7 @@
     "discount_end": 0,
     "buyer_up": false,
     "currency": "RUB",
-    "nextResupply": 1649889243,
+    "nextResupply": 1631488848,
     "repair": {
         "availability": false,
         "quality": "0",
@@ -77,5 +77,13 @@
             "heal_price_coef": "135"
         }
     ],
-    "sell_category": []
+    "sell_category": [
+        "5b47574386f77428ca22b33e",
+        "5b5f6fa186f77409407a7eb7",
+        "5b47574386f77428ca22b340",
+        "5b47574386f77428ca22b344",
+        "5b47574386f77428ca22b343",
+        "5b47574386f77428ca22b342",
+        "5b47574386f77428ca22b341"
+    ]
 }

@@ -5,7 +5,7 @@
     "surname": "Самойлов",
     "nickname": "Mechanic",
     "location": "Химкомбинат",
-    "avatar": "/files/trader/avatar/5a7c2ebb86f7746e324a06ab.png",
+    "avatar": "/files/trader/avatar/5a7c2ebb86f7746e324a06ab.jpg",
     "balance_rub": 80000000,
     "balance_dol": 0,
     "balance_eur": 0,
@@ -14,7 +14,7 @@
     "discount_end": 0,
     "buyer_up": false,
     "currency": "RUB",
-    "nextResupply": 1649884776,
+    "nextResupply": 1631483553,
     "repair": {
         "availability": true,
         "quality": "0.7",
@@ -75,5 +75,31 @@
             "heal_price_coef": 0
         }
     ],
-    "sell_category": []
+    "sell_category": [
+        "5b47574386f77428ca22b2ef",
+        "5b47574386f77428ca22b2ed",
+        "5b47574386f77428ca22b2f6",
+        "5b5f74cc86f77447ec5d770a",
+        "5b5f71c186f77409407a7ec0",
+        "5b5f71de86f774093f2ecf13",
+        "5b5f73ab86f774094242f195",
+        "5b5f73c486f77447ec5d7704",
+        "5b5f737886f774093e6cb4fb",
+        "5b5f724186f77447ed5636ad",
+        "5b5f73ec86f774093e6cb4fd",
+        "5b5f750686f774093e6cb503",
+        "5b5f75b986f77447ec5d7710",
+        "5b5f78e986f77447ed5636b1",
+        "5b5f78fc86f77409407a7f90",
+        "5b5f798886f77447ed5636b5",
+        "5b5f79d186f774093f2ed3c2",
+        "5b5f79a486f77409407a7f94",
+        "5b5f791486f774093f2ed3be",
+        "5b5f792486f77447ed5636b3",
+        "5b5f796a86f774093f2ed3c0",
+        "5b5f794b86f77409407a7f92",
+        "5b47574386f77428ca22b33b",
+        "5c518ed586f774119a772aee",
+        "5b47574386f77428ca22b345"
+    ]
 }

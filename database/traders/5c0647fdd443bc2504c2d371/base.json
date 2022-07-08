@@ -3,9 +3,9 @@
     "customization_seller": false,
     "name": "Егерь",
     "surname": "Егерь",
-    "nickname": "Jaegar",
+    "nickname": "Jaeger",
     "location": "",
-    "avatar": "/files/trader/avatar/5c06531a86f7746319710e1b.png",
+    "avatar": "/files/trader/avatar/5c06531a86f7746319710e1b.jpg",
     "balance_rub": 80000000,
     "balance_dol": 0,
     "balance_eur": 0,
@@ -14,7 +14,7 @@
     "discount_end": 0,
     "buyer_up": false,
     "currency": "RUB",
-    "nextResupply": 1649886869,
+    "nextResupply": 1631486713,
     "repair": {
         "availability": false,
         "quality": "0.7",
@@ -75,5 +75,23 @@
             "heal_price_coef": 0
         }
     ],
-    "sell_category": []
+    "sell_category": [
+        "5b47574386f77428ca22b2ee",
+        "5b47574386f77428ca22b2ed",
+        "5b47574386f77428ca22b2f2",
+        "5b47574386f77428ca22b2f3",
+        "5b5f6f6c86f774093f2ecf0b",
+        "5b5f6fa186f77409407a7eb7",
+        "5b5f6f8786f77447ed563642",
+        "5b5f798886f77447ed5636b5",
+        "5b5f791486f774093f2ed3be",
+        "5b5f7a0886f77409407a7f96",
+        "5b5f794b86f77409407a7f92",
+        "5b47574386f77428ca22b340",
+        "5b47574386f77428ca22b344",
+        "5b5f791486f774093f2ed3be",
+        "5b5f798886f77447ed5636b5",
+        "5b5f794b86f77409407a7f92",
+        "5b5f6f6c86f774093f2ecf0b"
+    ]
 }

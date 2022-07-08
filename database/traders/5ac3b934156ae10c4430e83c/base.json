@@ -2,10 +2,10 @@
     "_id": "5ac3b934156ae10c4430e83c",
     "customization_seller": true,
     "name": "Аршавир Саркисович",
-    "surname": "Ragman",
-    "nickname": "Барахольщик",
+    "surname": "Абрамян",
+    "nickname": "Ragman",
     "location": "",
-    "avatar": "/files/trader/avatar/5ac3b86a86f77461491d1ad8.png",
+    "avatar": "/files/trader/avatar/5ac3b86a86f77461491d1ad8.jpg",
     "balance_rub": 80000000,
     "balance_dol": 0,
     "balance_eur": 0,
@@ -14,7 +14,7 @@
     "discount_end": 0,
     "buyer_up": false,
     "currency": "RUB",
-    "nextResupply": 1649887097,
+    "nextResupply": 1631489044,
     "repair": {
         "availability": false,
         "quality": "1",
@@ -75,5 +75,7 @@
             "heal_price_coef": 0
         }
     ],
-    "sell_category": []
+    "sell_category": [
+        "5b47574386f77428ca22b33f"
+    ]
 }
