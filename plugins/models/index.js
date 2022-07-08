@@ -16,6 +16,7 @@ const HideoutProduction = require('./HideoutProduction');
 const HideoutScavcase = require('./HideoutScavcase');
 const Location = require('./Location');
 const Bot  = require('./Bot');
+const UtilityModel = require('./UtilityModel');
 
 module.exports = {
     ...Account,
@@ -35,5 +36,6 @@ module.exports = {
     ...HideoutProduction,
     ...HideoutScavcase,
     ...Location,
-    ...Bot
+    ...Bot,
+    ...UtilityModel
 };
