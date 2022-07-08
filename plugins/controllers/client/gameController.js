@@ -181,7 +181,7 @@ class GameController {
         const chosenSideCapital = chosenSide.charAt(0).toUpperCase() + chosenSide.slice(1);
 
         const profile = new Profile(playerAccount.id);
-        const character = await playerAccount.edition.getCharacterTemplateBySide(chosenSide).solvedClone();
+        const character = await playerAccount.edition.getCharacterTemplateBySide(chosenSide);
         character._id = "pmc" + playerAccount.id;
         character.aid = playerAccount.id;
         character.savage = "scav" + playerAccount.id;
@@ -203,8 +203,8 @@ class GameController {
         };
         playerAccount.wipe = false;
 
-        profile.userbuilds = {};   
-        profile.dialogues = {}; 
+        profile.userbuilds = {};
+        profile.dialogues = {};
 
         await Promise.all([
             profile.save(),

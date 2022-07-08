@@ -1,6 +1,6 @@
 const { logger } = require("../utilities");
 //const { cloneDeep } = require("lodash");
-const cloneDeep = require('rfdc')()
+const cloneDeep = require('rfdc')();
 
 class BaseModel {
     constructor() {
@@ -55,7 +55,7 @@ class BaseModel {
      * @returns 
      */
     async solvedClone() {
-        let dissolvedClone = await this.dissolve(cloneDeep(this));
+        let dissolvedClone = await this.dissolve();
         await dissolvedClone.solve();
         return dissolvedClone;
     }
