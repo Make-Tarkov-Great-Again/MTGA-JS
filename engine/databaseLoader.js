@@ -4,6 +4,7 @@ const {
     logger, readParsed, fileExist, stringify,
     writeFile, getDirectoriesFrom, createDirectory,
     getFilesFrom } = require('./../plugins/utilities/');
+const { RagfairLoader } = require('./ragfairLoader');
 
 
 class DatabaseLoader {
@@ -27,38 +28,8 @@ class DatabaseLoader {
         await this.loadAccounts();
         await this.loadProfiles();
         await this.loadQuests();
+        //await this.loadRagfair();
     }
-
-    /**
-     * Can't get @see UtilityModel to work, so I'm using this to load the items.
-     */
-   /**  static async createModelFromParse(model, data) {
-        let classModel = eval(`new ${model}`);
-        for (const [key, value] of Object.entries(data)) {
-            classModel[key] = value;
-        }
-
-        return classModel;
-    }
-
-    static async createModelFromParseWithID(model, id, data) {
-        let classModel = eval(`new ${model}("${id}")`);
-        for (const [key, value] of Object.entries(data)) {
-            classModel[key] = value;
-        }
-
-        return classModel;
-    }
-
-    static async createCollectionFromParse(model, dataSet) {
-        let collection = {};
-        for (const [index, data] of Object.entries(dataSet)) {
-            collection[index] = await this.createModelFromParse(model, data);
-        }
-
-        return collection;
-    }
-    */
 
     /**
     * Loads the core configurations
@@ -156,13 +127,8 @@ class DatabaseLoader {
      * Load editions data in parallel.
      */
 
-    static async regenerateRagfair() {
-        /**
-         * Ragfair needs to be created in a meticulous way this time around
-         * We need to compensate for the fact that the items in the assort
-         * won't always be correct or up to date, so we need to create functions
-         * to generate that data, and then use that data to populate the flea.
-         */
+    static async loadRagfair() {
+        await RagfairLoader.loadRagfairDatabase();
     }
 
     // Load Customization 

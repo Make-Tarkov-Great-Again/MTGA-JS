@@ -19,12 +19,12 @@ class RagfairLoader {
         };
 
         const traders = await Trader.getAll();
-        for (const trader of traders) {
-            if (trader.isRagfair() || trader.isFence()) {
+        for (const trader in traders) {
+            if (traders[trader].isRagfair() || traders[trader].isFence()) {
                 continue;
             }
 
-            const assort = trader.assort;
+            const assort = traders[trader].assort;
 
             for (const item of assort.items) {
                 if (item.slotId === "hideout") {
@@ -51,7 +51,7 @@ class RagfairLoader {
                     }
                 }
 
-                response.offers.push(await this.convertToRagfairAssort(itemsToSell, barter_scheme, loyal_level, counter));
+                response.offers.push(await this.convertToRagfairAssort(itemsToSell, barter_scheme, loyal_level, trader, counter));
             }
         }
         logger.logDebug(`[Ragfair Cache] Generated ${counter} offers inluding all traders assort`);
@@ -59,9 +59,9 @@ class RagfairLoader {
 
     }
 
-    static async convertToRagfairAssort(items, barter, loyal_level, counter) {
+    static async convertToRagfairAssort(items, barter, loyal_level, trader, counter) {
         let offer = database.core.traderFleaOfferTemplate.clone();
-        const traderObj = global._database.traders[trader].base;
+        const traderObj = trader.base;
         offer._id = items[0]._id;
         offer.intId = counter;
         offer.user = {
