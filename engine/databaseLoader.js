@@ -1,14 +1,9 @@
 const fs = require('fs');
+const { UtilityModel } = require('../plugins/models/UtilityModel');
 const {
     logger, readParsed, fileExist, stringify,
     writeFile, getDirectoriesFrom, createDirectory,
     getFilesFrom } = require('./../plugins/utilities/');
-const {
-    UtilityModel, Account, Trader, Item, Locale, Language,
-    Edition, Profile, Customization, Character,
-    HideoutArea, HideoutProduction, HideoutSetting,
-    HideoutScavcase, Location, Quest } = require('../plugins/models');
-
 
 
 class DatabaseLoader {
@@ -37,7 +32,7 @@ class DatabaseLoader {
     /**
      * Can't get @see UtilityModel to work, so I'm using this to load the items.
      */
-    static async createModelFromParse(model, data) {
+   /**  static async createModelFromParse(model, data) {
         let classModel = eval(`new ${model}`);
         for (const [key, value] of Object.entries(data)) {
             classModel[key] = value;
@@ -63,6 +58,7 @@ class DatabaseLoader {
 
         return collection;
     }
+    */
 
     /**
     * Loads the core configurations
@@ -99,20 +95,20 @@ class DatabaseLoader {
         let hideoutAreas = readParsed('./database/hideout/areas.json')
         if (typeof hideoutAreas.data != "undefined") { hideoutAreas = hideoutAreas.data; }
         for (const [index, area] of Object.entries(hideoutAreas)) {
-            await this.createModelFromParseWithID('HideoutArea', index, area);
+            await UtilityModel.createModelFromParseWithID('HideoutArea', index, area);
         }
 
         let hideoutProductions = readParsed('./database/hideout/productions.json');
         if (typeof hideoutProductions.data != "undefined") { hideoutProductions = hideoutProductions.data; }
         for (const [index, production] of Object.entries(hideoutProductions)) {
-            await this.createModelFromParseWithID('HideoutProduction', index, production);
+            await UtilityModel.createModelFromParseWithID('HideoutProduction', index, production);
         }
 
 
         let hideoutScavcase = readParsed('./database/hideout/scavcase.json');
         if (typeof hideoutScavcase.data != "undefined") { hideoutScavcase = hideoutScavcase.data; }
         for (const [index, scavcase] of Object.entries(hideoutScavcase)) {
-            await this.createModelFromParseWithID('HideoutScavcase', index, scavcase);
+            await UtilityModel.createModelFromParseWithID('HideoutScavcase', index, scavcase);
         }
     }
 
@@ -145,7 +141,7 @@ class DatabaseLoader {
         for (let map of maps) {
             let base = readParsed(`./database/locations/base/${map}`);
             let loot = [];
-            let location = await this.createModelFromParseWithID("Location", base._Id, { "base": {}, "loot": {} });
+            let location = await UtilityModel.createModelFromParseWithID("Location", base._Id, { "base": {}, "loot": {} });
 
             if (fileExist(`./database/locations/loot/${map}`)) {
                 loot = readParsed(`./database/locations/loot/${map}`);
@@ -174,7 +170,7 @@ class DatabaseLoader {
         let customizations = readParsed("./database/customization.json");
         if (typeof customizations.data != "undefined") customizations = customizations.data;
         for (const [index, customization] of Object.entries(customizations)) {
-            await this.createModelFromParseWithID('Customization', index, customization);
+            await UtilityModel.createModelFromParseWithID('Customization', index, customization);
         }
 
     }
@@ -183,7 +179,7 @@ class DatabaseLoader {
         let quests = readParsed("./database/quests.json");
         if (typeof quests.data != "undefined") quests = quests.data;
         for (const [index, quest] of Object.entries(quests)) {
-            await this.createModelFromParseWithID('Quest', index, quest);
+            await UtilityModel.createModelFromParseWithID('Quest', index, quest);
         }
     }
 
@@ -197,11 +193,11 @@ class DatabaseLoader {
         const editionKeys = getDirectoriesFrom('./database/editions/');
         for (const editionType of editionKeys) {
             const path = `./database/editions/${editionType}/`;
-            let edition = await this.createModelFromParseWithID('Edition', editionType, {});
+            let edition = await UtilityModel.createModelFromParseWithID('Edition', editionType, {});
             edition.id = editionType;
-            edition.bear = await this.createModelFromParse("Character", readParsed(`${path}character_bear.json`));
+            edition.bear = await UtilityModel.createModelFromParse("Character", readParsed(`${path}character_bear.json`));
             await edition.bear.solve();
-            edition.usec = await this.createModelFromParse("Character", readParsed(`${path}character_usec.json`));
+            edition.usec = await UtilityModel.createModelFromParse("Character", readParsed(`${path}character_usec.json`));
             await edition.usec.solve();
             edition.storage = readParsed(`${path}storage.json`);
         }
@@ -213,7 +209,7 @@ class DatabaseLoader {
         if (typeof items.data != "undefined") { items = items.data; }
 
         for (const [index, item] of Object.entries(items)) {
-            await this.createModelFromParseWithID('Item', index, item);
+            await UtilityModel.createModelFromParseWithID('Item', index, item);
         }
     }
 
@@ -221,7 +217,7 @@ class DatabaseLoader {
         let languages = readParsed(`./database/locales/languages.json`);
         if (typeof languages.data != "undefined") { languages = languages.data; }
         for (const [index, language] of Object.entries(languages)) {
-            await this.createModelFromParseWithID('Language', language.ShortName, language);
+            await UtilityModel.createModelFromParseWithID('Language', language.ShortName, language);
         }
     }
 
@@ -239,7 +235,7 @@ class DatabaseLoader {
                 let menuCopy = readParsed(`${currentLocalePath}menu.json`);
                 if (typeof menuCopy.data != "undefined") { menuCopy = menuCopy.data; }
 
-                await this.createModelFromParseWithID('Locale', localeIdentifier, {
+                await UtilityModel.createModelFromParseWithID('Locale', localeIdentifier, {
                     locale: localeCopy,
                     menu: menuCopy
                 });
@@ -253,7 +249,7 @@ class DatabaseLoader {
         for (const traderID of traderKeys) {
             const path = `./database/traders/${traderID}/`;
 
-            let trader = await this.createModelFromParseWithID('Trader', traderID, {});
+            let trader = await UtilityModel.createModelFromParseWithID('Trader', traderID, {});
 
             if (fileExist(`${path}categories.json`)) {
                 trader.base = readParsed(`${path}base.json`);
@@ -306,7 +302,7 @@ class DatabaseLoader {
             if (fileExist("./user/profiles/" + profileID + "/account.json")) {
                 logger.logDebug("[DATABASE][ACCOUNTS] Loading user account " + profileID);
 
-                let account = await this.createModelFromParseWithID('Account', profileID, readParsed("./user/profiles/" + profileID + "/account.json"));
+                let account = await UtilityModel.createModelFromParseWithID('Account', profileID, readParsed("./user/profiles/" + profileID + "/account.json"));
                 await account.solve();
 
                 const stats = fs.statSync(`./user/profiles/${profileID}/account.json`);
@@ -319,7 +315,7 @@ class DatabaseLoader {
     static async loadProfiles() {
         const { database } = require('../app');
         for (const profileID of getDirectoriesFrom('/user/profiles')) {
-            let profile = await this.createModelFromParseWithID("Profile", profileID, {
+            let profile = await UtilityModel.createModelFromParseWithID("Profile", profileID, {
                 character: [],
                 storage: {},
                 userbuilds: {},
@@ -330,7 +326,7 @@ class DatabaseLoader {
 
             if (fileExist(`${path}character.json`)) {
                 logger.logWarning(`Loading character data for profile ${profileID}`);
-                profile.character = await this.createModelFromParse("Character", readParsed("./user/profiles/" + profileID + "/character.json"));
+                profile.character = await UtilityModel.createModelFromParse("Character", readParsed("./user/profiles/" + profileID + "/character.json"));
 
                 stats = fs.statSync(`./user/profiles/${profileID}/character.json`);
                 database.fileAge[profileID].character = stats.mtimeMs;
@@ -351,7 +347,7 @@ class DatabaseLoader {
 
                 let parsedBuilds = readParsed("./user/profiles/" + profileID + "/userbuilds.json");
                 if (typeof parsedBuilds.data != "undefined") { parsedBuilds = parsedBuilds.data; }
-                profile.userbuilds = await this.createCollectionFromParse("Userbuild", parsedBuilds)
+                profile.userbuilds = await UtilityModel.createCollectionFromParse("Userbuild", parsedBuilds)
 
                 stats = fs.statSync(`./user/profiles/${profileID}/userbuilds.json`);
                 database.fileAge[profileID].userbuilds = stats.mtimeMs;
@@ -362,7 +358,7 @@ class DatabaseLoader {
 
                 let parsedDialogues = readParsed("./user/profiles/" + profileID + "/dialogue.json");
                 if (typeof parsedDialogues.data != "undefined") { parsedDialogues = parsedDialogues.data; }
-                profile.dialogues = await this.createCollectionFromParse("Dialogue", parsedDialogues)
+                profile.dialogues = await UtilityModel.createCollectionFromParse("Dialogue", parsedDialogues)
 
                 stats = fs.statSync(`./user/profiles/${profileID}/dialogue.json`);
                 database.fileAge[profileID].dialogues = stats.mtimeMs;

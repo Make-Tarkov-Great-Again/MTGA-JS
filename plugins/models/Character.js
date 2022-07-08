@@ -1,6 +1,6 @@
 const { logger, getCurrentTimestamp } = require("../utilities");
 const { BaseModel } = require("./BaseModel");
-const { Customization } = require("./Customization");
+const { Customization } = require("./Index");
 
 class Character extends BaseModel {
     constructor() {
