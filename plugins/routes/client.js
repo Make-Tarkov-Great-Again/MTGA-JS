@@ -1,6 +1,6 @@
 const { database } = require("../../app");
 const { ClientController, GameController, MenuController, TradingController, FriendController } = require("../controllers/client");
-const { Weaponbuild } = require("../models");
+const { Weaponbuild, Ragfair } = require("../models");
 const { logger, FastifyResponse } = require("../utilities");
 
 module.exports = async function gameRoutes(app, _opts) {
@@ -272,7 +272,7 @@ module.exports = async function gameRoutes(app, _opts) {
 
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody([])
+            FastifyResponse.applyBody(Ragfair.getOffers(request))
         );
     });
 

@@ -1,5 +1,6 @@
 const { BaseModel } = require("./BaseModel");
 const { FastifyResponse } = require("../utilities");
+const { database } = require("../../app");
 
 class Ragfair extends BaseModel {
     constructor(id) {
@@ -8,7 +9,7 @@ class Ragfair extends BaseModel {
         this.createDatabase(id);
     }
 
-    async sortOffers(request, offers) {
+    static async sortOffers(request, offers) {
         // Sort results
         switch (request.sortType) {
             case 0: // ID
@@ -57,25 +58,16 @@ class Ragfair extends BaseModel {
         return offers;
     }
 
-    async getOffers(request) {
+    static async getOffers(request) {
+        return database.ragfair_offers;
         const sessionID = await FastifyResponse.getSessionID(request);
 
         if (request.offerOwnerType === 1){ 
             return await this.getOffersFromTraders(request, sessionID); 
         }
-
-        let output = { 
-            categories: {}, 
-            offers: [], 
-            offersCount: 10, 
-            selectedCategory: "5b5f78dc86f77409407a7f8e" 
-        }
-
-        let itemsToAdd = [];
-        let offers = [];
     }
 
-    async getOffersFromTraders(request, sessionID) {
+    static async getOffersFromTraders(request, sessionID) {
         
     }
 
