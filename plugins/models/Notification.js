@@ -23,4 +23,4 @@ class Notification extends BaseModel {
     }
 }
 
-module.exports = Notification;
+module.exports.Notification = Notification;

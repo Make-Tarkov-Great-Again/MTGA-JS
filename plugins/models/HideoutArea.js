@@ -8,4 +8,4 @@ class HideoutArea extends BaseModel {
     }
 }
 
-module.exports = HideoutArea;
+module.exports.HideoutArea = HideoutArea;

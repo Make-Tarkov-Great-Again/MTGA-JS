@@ -8,4 +8,4 @@ class HideoutScavcase extends BaseModel {
     }
 }
 
-module.exports = HideoutScavcase;
+module.exports.HideoutScavcase = HideoutScavcase;
