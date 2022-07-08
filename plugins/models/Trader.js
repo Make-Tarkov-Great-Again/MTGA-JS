@@ -12,6 +12,10 @@ class Trader extends BaseModel {
         return this.base._id === "ragfair";
     }
 
+    isFence() {
+        return this.base._id === "579dc571d53a0658a154fbec";
+    }
+
     async getFilteredAssort(profile) {
         const output = {nextResupply: 0, items: [], barter_scheme: {}, loyal_level_items: {}};
         const loyalty = await profile.getLoyalty(this.base._id, this.base);
