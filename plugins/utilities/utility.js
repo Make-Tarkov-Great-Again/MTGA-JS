@@ -75,19 +75,20 @@ const makeSign = async (Length) => {
 
 
 const findChildren = async (idToFind, listToSearch) => {
-    let leads = [];
+    let foundChildren = [];
 
     for (const child of listToSearch) {
         if (child.parentId !== undefined
             && child.parentId.includes(idToFind)) {
-            leads.push.apply(leads, findChildren(listToSearch, child._id));
+            foundChildren.push.apply(foundChildren, findChildren(listToSearch, child._id));
         }
 
-        if (child.parentId === idToFind || child._id === idToFind) {
-            leads.push(child);
+        if (child.parentId === idToFind
+            || child._id === idToFind) {
+            foundChildren.push(child);
         }
     }
-    return leads;
+    return foundChildren;
 }
 
 //const splitStack = async (item) => {
@@ -123,5 +124,5 @@ module.exports = {
     clearString,
     isUndefined,
     findChildren
-    
+
 };
