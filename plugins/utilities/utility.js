@@ -74,16 +74,21 @@ const makeSign = async (Length) => {
  * */
 
 
-const findAndReturnChildrenByItems = async (items, itemID) => {
-    const list = [];
+const findChildren = async (idToFind, listToSearch) => {
+    let foundChildren = [];
 
-    for (let childitem of items) {
-        if (childitem.parentId === itemID) {
-            list.push.apply(list, findAndReturnChildrenByItems(items, childitem._id));
+    for (const child of listToSearch) {
+        if (child.parentId !== undefined
+            && child.parentId.includes(idToFind)) {
+            foundChildren.push.apply(foundChildren, findChildren(listToSearch, child._id));
+        }
+
+        if (child.parentId === idToFind
+            || child._id === idToFind) {
+            foundChildren.push(child);
         }
     }
-    list.push(itemID); // it's required
-    return list;
+    return foundChildren;
 }
 
 //const splitStack = async (item) => {
@@ -118,6 +123,6 @@ module.exports = {
     utilFormat,
     clearString,
     isUndefined,
-    findAndReturnChildrenByItems
-    
+    findChildren
+
 };

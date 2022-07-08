@@ -1,0 +1,33 @@
+{
+    "_id": "offerID",
+    "intId": 16733,
+    "user": {
+        "id": "",
+        "memberType": 4
+    },
+    "root": "barterID",
+    "items": [
+        {
+            "_id": "barterID",
+            "_tpl": "itemID",
+            "upd": {
+                "StackObjectsCount": 250000
+            }
+        }
+    ],
+    "itemsCost": 3500,
+    "requirements": [
+        {
+            "count": 32.07,
+            "_tpl": "tradeofferID"
+        }
+    ],
+    "requirementsCost": 3851,
+    "summaryCost": 3851,
+    "sellInOnePiece": false,
+    "startTime": 1649836279,
+    "endTime": 1650122646,
+    "unlimitedCount": true,
+    "buyRestrictionMax": 3,
+    "loyaltyLevel": 2
+}
