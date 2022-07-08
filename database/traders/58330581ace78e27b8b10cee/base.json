@@ -5,7 +5,7 @@
     "surname": "Киселёв",
     "nickname": "Skier",
     "location": "Таможня",
-    "avatar": "/files/trader/avatar/59b91cb486f77469a81232e5.png",
+    "avatar": "/files/trader/avatar/59b91cb486f77469a81232e5.jpg",
     "balance_rub": 8000000,
     "balance_dol": 0,
     "balance_eur": 0,
@@ -14,7 +14,7 @@
     "discount_end": 0,
     "buyer_up": false,
     "currency": "RUB",
-    "nextResupply": 1649887220,
+    "nextResupply": 1631487786,
     "repair": {
         "availability": true,
         "quality": "1",
@@ -75,5 +75,27 @@
             "heal_price_coef": 0
         }
     ],
-    "sell_category": []
+    "sell_category": [
+        "5b47574386f77428ca22b2f4",
+        "5b47574386f77428ca22b2ef",
+        "5b47574386f77428ca22b2f1",
+        "5b5f701386f774093f2ecf0f",
+        "5b47574386f77428ca22b32f",
+        "5b5f704686f77447ec5d76d7",
+        "5b5f6f3c86f774094242ef87",
+        "5b47574386f77428ca22b330",
+        "5b5f6f8786f77447ed563642",
+        "5b47574386f77428ca22b331",
+        "5b5f74cc86f77447ec5d770a",
+        "5b5f71c186f77409407a7ec0",
+        "5b5f71de86f774093f2ecf13",
+        "5b5f73ab86f774094242f195",
+        "5b5f73c486f77447ec5d7704",
+        "5b5f737886f774093e6cb4fb",
+        "5b5f724186f77447ed5636ad",
+        "5b5f73ec86f774093e6cb4fd",
+        "5b5f750686f774093e6cb503",
+        "5b5f75b986f77447ec5d7710",
+        "5b5f78dc86f77409407a7f8e"
+    ]
 }

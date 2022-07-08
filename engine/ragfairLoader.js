@@ -1,6 +1,8 @@
-const { Ragfair, Trader } = require("../plugins/models");
-const { findChildren } = require("../plugins/utilities");
-const { database } = require("../engine/database");
+const { Ragfair, Trader} = require("../plugins/models");
+const { findChildren, logger } = require("../plugins/utilities");
+const database = require("../engine/database");
+const cloneDeep = require('rfdc')()
+
 
 class RagfairLoader {
 
@@ -17,6 +19,7 @@ class RagfairLoader {
             "offersCount": 100,
             "selectedCategory": "5b5f78dc86f77409407a7f8e"
         };
+        let counter = 0;
 
         const traders = await Trader.getAll();
         for (const trader in traders) {
@@ -27,31 +30,34 @@ class RagfairLoader {
             const assort = traders[trader].assort;
 
             for (const item of assort.items) {
+
                 if (item.slotId === "hideout") {
                     let itemsToSell = [];
 
                     let barter_scheme = null;
-                    let loyal_level = null;
+                    let loyal_level = 0;
 
                     itemsToSell.push(item);
                     itemsToSell = [...itemsToSell, ...await findChildren(item._id, assort.items)];
-                }
 
-                for (const barter in assort.barter_scheme) {
-                    if (item._id == barter) {
-                        barter_scheme = assort.barter_scheme[barter][0];
-                        break;
+
+                    for (const barter in assort.barter_scheme) {
+                        if (item._id == barter) {
+                            barter_scheme = assort.barter_scheme[barter][0];
+                            break;
+                        }
                     }
-                }
 
-                for (const loyal in assort.loyal_level_items) {
-                    if (item._id == loyal) {
-                        loyal_level = assort.loyal_level_items[loyal];
-                        break;
+                    for (const loyal in assort.loyal_level_items) {
+                        if (item._id == loyal) {
+                            loyal_level = assort.loyal_level_items[loyal];
+                            break;
+                        }
                     }
-                }
 
-                response.offers.push(await this.convertToRagfairAssort(itemsToSell, barter_scheme, loyal_level, trader, counter));
+                    response.offers.push(await this.convertToRagfairAssort(itemsToSell, barter_scheme, loyal_level, traders[trader], counter));
+                    counter += 1;
+                }
             }
         }
         logger.logDebug(`[Ragfair Cache] Generated ${counter} offers inluding all traders assort`);
@@ -60,7 +66,7 @@ class RagfairLoader {
     }
 
     static async convertToRagfairAssort(items, barter, loyal_level, trader, counter) {
-        let offer = database.core.traderFleaOfferTemplate.clone();
+        let offer = cloneDeep(database.core.traderFleaOfferTemplate);
         const traderObj = trader.base;
         offer._id = items[0]._id;
         offer.intId = counter;

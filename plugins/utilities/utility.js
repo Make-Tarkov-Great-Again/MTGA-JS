@@ -78,9 +78,8 @@ const findChildren = async (idToFind, listToSearch) => {
     let foundChildren = [];
 
     for (const child of listToSearch) {
-        if (child.parentId !== undefined
-            && child.parentId.includes(idToFind)) {
-            foundChildren.push.apply(foundChildren, findChildren(listToSearch, child._id));
+        if (child.parentId !== undefined && child.parentId.includes(idToFind)) {
+            foundChildren.push.apply(foundChildren, await findChildren(child._id, listToSearch));
         }
 
         if (child.parentId === idToFind
