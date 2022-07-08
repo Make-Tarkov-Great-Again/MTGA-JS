@@ -9,7 +9,7 @@ const {
     generateUniqueId,
     getCurrentTimestamp
 } = require("../utilities");
-const { Bot, BaseModel, Dialogue } = require("./Index");
+const { Bot, BaseModel, Dialogue, Notification } = require("./Index");
 
 class Profile extends BaseModel {
     constructor(id) {
@@ -263,13 +263,13 @@ class Profile extends BaseModel {
             items: stashItems,
             maxStorageTime: messageContent.maxStorageTime,
             systemData: messageContent.systemData
-        }
+        };
 
         dialogue.messages.push(message);
 
         // need to add notification
-
-        console.log("nigga");
+        const notificationHandler = await Notification.get(this.id);
+        notificationHandler.createNewNotification(message);
     }
 
     async getQuestStatus(questID) {
