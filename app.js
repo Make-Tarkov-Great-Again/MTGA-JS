@@ -1,5 +1,4 @@
 const { certificate } = require("./engine/certificategenerator");
-const { logger } = require("./plugins/utilities");
 const cert = certificate.generate("127.0.0.1");
 const zlib = require("node:zlib");
 
@@ -107,7 +106,6 @@ app.addContentTypeParser('*', (req, payload, done) => {
 * Register Handler
 */
 app.register(require('./plugins/register.js'))
-app.log.info('Register registered');
 
 
 
