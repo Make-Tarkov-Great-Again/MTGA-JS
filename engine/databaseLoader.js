@@ -215,7 +215,7 @@ class DatabaseLoader {
         for (const traderID of traderKeys) {
             const path = `./database/traders/${traderID}/`;
 
-            let trader = await UtilityModel.createModelFromParseWithID('Trader', traderID, {});
+            const trader = await UtilityModel.createModelFromParseWithID('Trader', traderID, {});
 
             if (fileExist(`${path}base.json`)) {
                 trader.base = readParsed(`${path}base.json`);
