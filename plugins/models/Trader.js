@@ -79,4 +79,4 @@ class Trader extends BaseModel {
     }
 }
 
-module.exports = Trader;
+module.exports.Trader = Trader;

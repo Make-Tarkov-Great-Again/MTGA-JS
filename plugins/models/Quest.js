@@ -227,4 +227,4 @@ class Quest extends BaseModel {
     }
 }
 
-module.exports = Quest;
+module.exports.Quest = Quest;

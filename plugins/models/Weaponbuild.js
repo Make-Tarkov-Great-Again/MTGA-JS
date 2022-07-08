@@ -21,4 +21,4 @@ class Weaponbuild extends BaseModel {
     }
 }
 
-module.exports = Weaponbuild;
+module.exports.Weaponbuild = Weaponbuild;

@@ -1,3 +1,6 @@
+const { BaseModel } = require("./BaseModel");
+
+
 const fs = require('fs');
 const { off } = require('process');
 const {
@@ -9,7 +12,9 @@ const {
     generateUniqueId,
     getCurrentTimestamp
 } = require("../utilities");
-const { Bot, BaseModel, Dialogue, Notification } = require("./Index");
+const { Bot } = require("./Bot");
+const { Dialogue } = require("./Dialogue");
+const { Notification } = require("./Notification");
 
 class Profile extends BaseModel {
     constructor(id) {
@@ -282,4 +287,4 @@ class Profile extends BaseModel {
     }
 }
 
-module.exports = Profile;
+module.exports.Profile = Profile;

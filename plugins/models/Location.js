@@ -9,4 +9,4 @@ class Location extends BaseModel {
     }
 }
 
-module.exports = Location;
+module.exports.Location = Location;
