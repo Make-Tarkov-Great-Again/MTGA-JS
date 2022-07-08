@@ -7,6 +7,7 @@ class RagfairLoader {
 
 
     static async loadRagfair() {
-        
+        return "your mom gay"
     }
 }
+module.exports.RagfairLoader = RagfairLoader;
