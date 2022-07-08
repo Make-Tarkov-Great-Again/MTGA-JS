@@ -4,6 +4,7 @@ class Notification extends BaseModel {
     constructor(id) {
         super(id);
 
+        this.createDatabase(id);
     }
 
     async createNewNotification(message) {
