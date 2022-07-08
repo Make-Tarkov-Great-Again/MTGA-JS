@@ -1,3 +1,9 @@
+const {
+    Account, Trader, Locale, Language,
+    Edition, Profile, Customization, Character,
+    HideoutArea, HideoutProduction, HideoutSetting,
+    HideoutScavcase, Location, Quest, Item } = require('../models');
+
 class UtilityModel {
 
     static async createModelFromParse(model, data) {

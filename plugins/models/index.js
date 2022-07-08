@@ -1,4 +1,4 @@
-const BaseModel  = require('./BaseModel');
+const BaseModel = require('./BaseModel');
 const Character = require('./Character');
 const Account = require('./Account');
 const Trader = require('./Trader');
@@ -14,9 +14,8 @@ const Weaponbuild = require('./Weaponbuild');
 const HideoutArea = require('./HideoutArea');
 const HideoutProduction = require('./HideoutProduction');
 const HideoutScavcase = require('./HideoutScavcase');
-const Location = require('./Location');
-const Bot  = require('./Bot');
-const UtilityModel = require('./UtilityModel');
+const Location= require('./Location');
+const Bot = require('./Bot');
 
 module.exports = {
     ...Account,
@@ -25,8 +24,8 @@ module.exports = {
     ...Locale,
     ...Language,
     ...Edition,
-    ...Customization,
     ...Profile,
+    ...Customization,
     ...Character,
     ...Dialogue,
     ...Quest,
@@ -37,5 +36,4 @@ module.exports = {
     ...HideoutScavcase,
     ...Location,
     ...Bot,
-    ...UtilityModel
 };
