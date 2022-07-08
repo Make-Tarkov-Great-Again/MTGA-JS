@@ -12,4 +12,4 @@ class Locale extends BaseModel {
     }
 }
 
-module.exports.Locale = Locale;
+module.exports = Locale;

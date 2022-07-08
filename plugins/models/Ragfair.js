@@ -82,4 +82,4 @@ class Ragfair extends BaseModel {
 
 }
 
-module.exports.Ragfair = Ragfair;
+module.exports = Ragfair;

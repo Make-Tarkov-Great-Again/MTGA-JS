@@ -16,4 +16,4 @@ class Edition extends BaseModel {
     }
 }
 
-module.exports.Edition = Edition;
+module.exports = Edition;

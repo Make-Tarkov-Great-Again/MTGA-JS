@@ -10,4 +10,4 @@ class Dialogue extends BaseModel {
     }
 }
 
-module.exports.Dialogue = Dialogue;
+module.exports = Dialogue;

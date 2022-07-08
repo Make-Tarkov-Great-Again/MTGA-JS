@@ -117,4 +117,4 @@ class Account extends BaseModel {
     }
 }
 
-module.exports.Account = Account;
+module.exports = Account;
