@@ -44,7 +44,8 @@ class DatabaseLoader {
             matchMetrics: readParsed(`./database/configs/matchMetrics.json`),
             globals: readParsed(`./database/configs/globals.json`).data,
             botTemplate: readParsed(`./database/configs/schema/botTemplate.json`),
-            fleaOfferTemplate: readParsed(`./database/configs/schema/fleaOfferTemplate.json`),
+            traderFleaOfferTemplate: readParsed(`./database/configs/schema/traderFleaOfferTemplate.json`),
+            playerFleaOfferTemplate: readParsed(`./database/configs/schema/playerFleaOfferTemplate.json`),
             botCore: readParsed(`./database/bots/botCore.json`),
             clientSettings: readParsed(`./database/configs/client.settings.json`).data,
             gameplay: readParsed(`./database/configs/gameplay.json`),
@@ -182,7 +183,7 @@ class DatabaseLoader {
         if (typeof items.data != "undefined") { items = items.data; }
 
         for (const [index, item] of Object.entries(items)) {
-            let _item = await UtilityModel.createModelFromParseWithID('Item', index, item);
+            await UtilityModel.createModelFromParseWithID('Item', index, item);
         }
     }
 
