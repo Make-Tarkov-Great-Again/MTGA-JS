@@ -60,7 +60,7 @@ class RagfairLoader {
                 }
             }
         }
-        logger.logDebug(`[Ragfair Cache] Generated ${counter} offers inluding all traders assort`);
+        logger.logDebug(`[RAGFAIR] Generated ${counter} offers with all traders assort`);
         database.ragfair_offers = response;
 
     }
