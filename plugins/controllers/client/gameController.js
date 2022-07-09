@@ -1,5 +1,5 @@
 const { database } = require("../../../app");
-const { Profile, Language, Account, Edition, Customization, Storage, Character, Health, Weaponbuild, Quest, Locale } = require("../../models");
+const { Profile, Language, Account, Edition, Customization, Storage, Character, Health, Weaponbuild, Quest, Locale, Trader } = require("../../models");
 const { getCurrentTimestamp, logger, FastifyResponse, writeFile, stringify, readParsed } = require("../../utilities");
 
 
@@ -319,7 +319,22 @@ class GameController {
         logger.logDebug(request.body.data);
 
         for (const requestEntry of request.body.data) {
-            await playerProfile.character.examineItem(requestEntry.item);
+            if(requestEntry.fromOwner && requestEntry.fromOwner.type === "Trader") {
+                 const trader = await Trader.get(requestEntry.fromOwner.id);
+                 if(trader) {
+                    const inventoryItem = await trader.getAssortItemByID(requestEntry.item)
+                    if(!await playerProfile.character.examineItem(inventoryItem._tpl)) {
+                        logger.logDebug(`Examine Request failed: Unable to examine item ${inventoryItem._tpl}`);
+                    }
+                 } else {
+                    logger.logDebug("Examine Request failed: Unable to get trader data.")
+                 }
+            } else {
+                const item = await playerProfile.character.getInventoryItemByID(requestEntry.item);
+                if(item) {
+                    await playerProfile.character.examineItem(item._tpl);
+                } 
+            }
         }
 
         if(await playerProfile.save()) {
