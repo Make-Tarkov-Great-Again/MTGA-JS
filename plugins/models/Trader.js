@@ -28,10 +28,14 @@ class Trader extends BaseModel {
             output.loyal_level_items = traderClone.assort.loyal_level_items;
         } else {
             for (const item of traderClone.assort.items) {
-                if (traderClone.assort.loyal_level_items[item._id] <= loyalty) {
+                if (!traderClone.assort.loyal_level_items[item._id] || traderClone.assort.loyal_level_items[item._id] <= loyalty) {
                     output.items.push(item);
-                    output.barter_scheme = traderClone.assort.barter_scheme[item._id];
-                    output.loyal_level_items[item._id] = traderClone.assort.loyal_level_items[item._id];
+                    if (traderClone.assort.barter_scheme[item._id]) {
+                        output.barter_scheme[item._id] = traderClone.assort.barter_scheme[item._id];
+                    }
+                    if (traderClone.assort.loyal_level_items[item._id]) {
+                        output.loyal_level_items[item._id] = traderClone.assort.loyal_level_items[item._id];
+                    }
                 }
             }
         }
