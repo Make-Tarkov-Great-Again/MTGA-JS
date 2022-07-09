@@ -47,7 +47,6 @@ class Trader extends BaseModel {
         return this.assort.items.find(item => item._id == itemId);
     }
 
-    /**
     async removeItemFromAssort(assort, itemID) {
         const idsList = await findAndReturnChildrenByItems(assort, itemID);
         delete assort[itemID];
@@ -60,7 +59,6 @@ class Trader extends BaseModel {
         }
         return assort;
     }
-    */
 
 
     async getCurrency() {
