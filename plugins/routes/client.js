@@ -282,9 +282,16 @@ module.exports = async function gameRoutes(app, _opts) {
         logger.logWarning("Find not implemented yet");
         console.log(request.body)
 
+        const balle = await Ragfair.getAll()
+        let gay = balle.dissolve()
+
+        gay.offersCount = await Ragfair.getLimit(request)
+        gay.selectedCategory = await Ragfair.getSelectedCategory(request)
+
+
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody(Ragfair.getOffers(request))
+            FastifyResponse.applyBody(gay)
         );
     });
 
