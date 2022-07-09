@@ -1,5 +1,5 @@
 const { database } = require("../../../app");
-const { Profile, Language, Account, Edition, Customization, Storage, Character, Health, Weaponbuild, Quest, Locale, Trader } = require("../../models");
+const { Profile, Language, Account, Edition, Customization, Storage, Character, Health, Weaponbuild, Quest, Locale, Trader, Item } = require("../../models");
 const { getCurrentTimestamp, logger, FastifyResponse, writeFile, stringify, readParsed } = require("../../utilities");
 
 
@@ -146,7 +146,6 @@ class GameController {
 
     static clientGameProfileNicknameValidate = async (request = null, reply = null) => {
         const validate = await Profile.ifAvailableNickname(request.body.nickname);
-        const response = database.core.serverConfig.translations
 
         switch (validate) {
             case "ok":
@@ -157,12 +156,12 @@ class GameController {
             case "tooshort":
                 return FastifyResponse.zlibJsonReply(
                     reply,
-                    FastifyResponse.applyBody(null, 256, response.tooShort)
+                    FastifyResponse.applyBody(null, 256, "256 -")
                 );
             case "taken":
                 return FastifyResponse.zlibJsonReply(
                     reply,
-                    FastifyResponse.applyBody(null, 255, response.alreadyInUse)
+                    FastifyResponse.applyBody(null, 255, "255 - ")
                 );
         }
     };
@@ -233,7 +232,6 @@ class GameController {
     static clientGameProfileNicknameChange = async (request = null, reply = null) => {
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
         const validate = await Profile.ifAvailableNickname(request.body.nickname);
-        const response = database.core.serverConfig.translations
 
 
         switch (validate) {
@@ -252,12 +250,12 @@ class GameController {
             case "tooshort":
                 return FastifyResponse.zlibJsonReply(
                     reply,
-                    FastifyResponse.applyBody(null, 256, response.tooShort)
+                    FastifyResponse.applyBody(null, 256, "256 -")
                 );
             case "taken":
                 return FastifyResponse.zlibJsonReply(
                     reply,
-                    FastifyResponse.applyBody(null, 255, response.alreadyInUse)
+                    FastifyResponse.applyBody(null, 255, "255 - ")
                 );
         }
     };
@@ -288,7 +286,7 @@ class GameController {
 
     static clientGameProfileMoveItem = async (request = null, reply = null) => {
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
-        if(!playerProfile) {
+        if (!playerProfile) {
             // display error
         }
 
@@ -296,8 +294,8 @@ class GameController {
         logger.logDebug(request.body.data);
 
         let movedItems = await playerProfile.character.moveItems(request.body.data);
-        if(movedItems) {
-            if(await playerProfile.save()) {
+        if (movedItems) {
+            if (await playerProfile.save()) {
                 let changes = {
                     // Broken? Seems to fuck with containers? - Compare with dumps of moving containers
                     //items: { change: [movedItems] }
@@ -317,7 +315,7 @@ class GameController {
 
     static clientGameProfileExamine = async (request = null, reply = null) => {
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
-        if(!playerProfile) {
+        if (!playerProfile) {
             // display error
         }
 
@@ -325,25 +323,43 @@ class GameController {
         logger.logDebug(request.body.data);
 
         for (const requestEntry of request.body.data) {
-            if(requestEntry.fromOwner && requestEntry.fromOwner.type === "Trader") {
+            let templateItem;
+            if (requestEntry.fromOwner && requestEntry.fromOwner.type === "Trader") {
                 const trader = await Trader.get(requestEntry.fromOwner.id);
-                if(trader) {
-                    const inventoryItem = await trader.getAssortItemByID(requestEntry.item)
-                    if (!await playerProfile.character.examineItem(inventoryItem._tpl)) {
-                        logger.logDebug(`Examine Request failed: Unable to examine item ${inventoryItem._tpl}`);
+                if (trader) {
+                    const inventoryItem = await trader.getAssortItemByID(requestEntry.item);
+                    if (inventoryItem) {
+                        templateItem = await Item.get(inventoryItem._tpl)
+                    } else {
+                        logger.logError(`Examine Request failed: Unable to find item database template of itemId ${requestEntry.item}`);
+                        return false;
                     }
                 } else {
-                    logger.logDebug("Examine Request failed: Unable to get trader data.")
+                    logger.logError("Examine Request failed: Unable to get trader data.")
+                    return false;
                 }
             } else {
                 const item = await playerProfile.character.getInventoryItemByID(requestEntry.item);
-                if(item) {
-                    await playerProfile.character.examineItem(item._tpl);
+                if (item) {
+                    templateItem = await Item.get(item._tpl)
+                } else {
+                    logger.logError(`Examine Request failed: Unable to find item database template of itemId ${requestEntry.item}`);
+                    return false;
                 }
+            }
+
+            if (templateItem) {
+                if (await playerProfile.character.examineItem(templateItem._id)) {
+                    await playerProfile.character.addExperience(templateItem._props.ExamineExperience);
+                } else {
+                    logger.logError(`Examine Request failed: Unable to examine itemId ${templateItem._id}`);
+                }
+            } else {
+                logger.logError(`Examine Request failed: Unable to find item database template of itemId ${inventoryItem._tpl}`);
             }
         }
 
-        if(await playerProfile.save()) {
+        if (await playerProfile.save()) {
             let changes = {
                 // Fix
             }

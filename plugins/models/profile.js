@@ -303,7 +303,7 @@ class Profile extends BaseModel {
 
         profileChangesBase.profileChanges[this.character._id] = {
             _id: this.character._id,
-            experience: 0,
+            experience: await this.character.getExperience(),
             quests: [], // are those current accepted quests ?? -- seems like thoose are completed/failed quests -Nehax
             ragFairOffers: [], // are those current ragfair requests ?
             builds: [], // are those current weapon builds ??
