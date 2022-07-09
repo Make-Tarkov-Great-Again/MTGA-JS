@@ -130,9 +130,12 @@ class DatabaseLoader {
             await UtilityModel.createModelFromParseWithID('Preset', index, preset);
         }
 
-        const balle = await Preset.hasPresets("5447a9cd4bdc2dbd208b4567")
-        const balle2 = await Preset.getPresets("5447a9cd4bdc2dbd208b4567")
-        const balle3 = await Preset.getPreset("5447a9cd4bdc2dbd208b4567", '5a32808386f774764a3226d9')
+        const presetID = "5a32808386f774764a3226d9";
+        const weaponID = "5447a9cd4bdc2dbd208b4567";
+        const doesWeaponHavePreset = await Preset.weaponHasPreset(weaponID)
+        const weaponPresets = await Preset.getPresetsWithWeaponId(weaponID)
+        const presetPreset = await Preset.getPresetWithPresetId(presetID)
+        const allPresets = await Preset.getAllPresets()
     }
 
     static async loadRagfair() {
