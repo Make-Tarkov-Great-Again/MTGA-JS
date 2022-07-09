@@ -9,7 +9,8 @@ const {
     stringify,
     writeFile,
     generateUniqueId,
-    getCurrentTimestamp
+    getCurrentTimestamp,
+    findAndReturnChildrenByItems
 } = require("../utilities");
 const { Bot } = require("./Bot");
 const { Dialogue } = require("./Dialogue");
@@ -326,6 +327,10 @@ class Profile extends BaseModel {
         outputData.profileChanges[this.character._id] = mergedData;
 
         return outputData;
+    }
+
+    async removeItemFromProfile(itemId) {
+        const removeIds = findAndReturnChildrenByItems(this.getPmc(), itemId);
     }
 }
 
