@@ -1,5 +1,5 @@
 const { database } = require("../../../app");
-const { Profile, Language, Account, Edition, Customization, Storage, Character, Health, Weaponbuild, Quest, Locale, Trader } = require("../../models");
+const { Profile, Language, Account, Edition, Customization, Storage, Character, Health, Weaponbuild, Quest, Locale, Trader, Item } = require("../../models");
 const { getCurrentTimestamp, logger, FastifyResponse, writeFile, stringify, readParsed } = require("../../utilities");
 
 
@@ -323,21 +323,39 @@ class GameController {
         logger.logDebug(request.body.data);
 
         for (const requestEntry of request.body.data) {
+            let templateItem;
             if (requestEntry.fromOwner && requestEntry.fromOwner.type === "Trader") {
                 const trader = await Trader.get(requestEntry.fromOwner.id);
                 if (trader) {
-                    const inventoryItem = await trader.getAssortItemByID(requestEntry.item)
-                    if (!await playerProfile.character.examineItem(inventoryItem._tpl)) {
-                        logger.logDebug(`Examine Request failed: Unable to examine item ${inventoryItem._tpl}`);
+                    const inventoryItem = await trader.getAssortItemByID(requestEntry.item);
+                    if (inventoryItem) {
+                        templateItem = await Item.get(inventoryItem._tpl)
+                    } else {
+                        logger.logError(`Examine Request failed: Unable to find item database template of itemId ${requestEntry.item}`);
+                        return false;
                     }
                 } else {
-                    logger.logDebug("Examine Request failed: Unable to get trader data.")
+                    logger.logError("Examine Request failed: Unable to get trader data.")
+                    return false;
                 }
             } else {
                 const item = await playerProfile.character.getInventoryItemByID(requestEntry.item);
                 if (item) {
-                    await playerProfile.character.examineItem(item._tpl);
+                    templateItem = await Item.get(item._tpl)
+                } else {
+                    logger.logError(`Examine Request failed: Unable to find item database template of itemId ${requestEntry.item}`);
+                    return false;
                 }
+            }
+
+            if (templateItem) {
+                if (await playerProfile.character.examineItem(templateItem._id)) {
+                    await playerProfile.character.addExperience(templateItem._props.ExamineExperience);
+                } else {
+                    logger.logError(`Examine Request failed: Unable to examine itemId ${templateItem._id}`);
+                }
+            } else {
+                logger.logError(`Examine Request failed: Unable to find item database template of itemId ${inventoryItem._tpl}`);
             }
         }
 
