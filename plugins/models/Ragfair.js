@@ -1,6 +1,6 @@
 const { BaseModel } = require("./BaseModel");
 const { Item } = require("./Item");
-const { FastifyResponse } = require("../utilities");
+const { FastifyResponse, logger } = require("../utilities");
 const { database } = require("../../app");
 
 class Ragfair extends BaseModel {
@@ -12,19 +12,33 @@ class Ragfair extends BaseModel {
         const items = await Item.getAll();
 
         let filteredItems = [];
-    
-        const bannedItems = [ "Pockets",  "MobContainer",  "LootContainer" ];
+        let counter = 0;
+
+        const bannedItems =
+            [
+                "Pockets",
+                "Shrapnel",
+                "QuestRaidStash",
+                "QuestOfflineStash",
+                "stash 10x300",
+                "Standard stash 10x28",
+                "Prepare for escape stash 10x48",
+                "Left Behind stash 10x38",
+                "Edge of darkness stash 10x68",
+                "Стандартный инвентарь" //default inventory
+            ];
 
         for (const item in items) {
             switch (true) {
                 case items[item]._type === "Node":
-                    continue;
-                case items[item]._name.includes(bannedItems):
+                case items[item]._props.Name.includes(bannedItems):
+                    counter += 1;
                     continue;
                 case items[item]._props.CanSellOnRagfair === true:
                     filteredItems.push(items[item]);
             }
         }
+        logger.logDebug(`Ragfair: ${filteredItems.length} items loaded; ${counter} items filtered.`);
         return filteredItems;
     }
 
@@ -32,29 +46,29 @@ class Ragfair extends BaseModel {
 
     //static async createItemUpd() {}
 
-/*     static async convertItemToRagfairAssort(item, StackObjectsCount) {
-        let convertedItem = {
-            _id: "",
-            _tpl: "",
-            parentId: "",
-            slotId: "",
-            upd: {
-                StackObjectsCount: 99999999,
-                UnlimitedCount: true
+    /*     static async convertItemToRagfairAssort(item, StackObjectsCount) {
+            let convertedItem = {
+                _id: "",
+                _tpl: "",
+                parentId: "",
+                slotId: "",
+                upd: {
+                    StackObjectsCount: 99999999,
+                    UnlimitedCount: true
+                }
             }
-        }
-
-        let barter_scheme = [
-            {
-                count: 0,
-                "_tpl": ""
-            }
-        ]
-
-        let loyal_level_items[itemId] = 0;
-
-
-    } */
+    
+            let barter_scheme = [
+                {
+                    count: 0,
+                    "_tpl": ""
+                }
+            ]
+    
+            let loyal_level_items[itemId] = 0;
+    
+    
+        } */
 
 
     static async sortOffers(request, offers) {
