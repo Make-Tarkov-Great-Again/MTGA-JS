@@ -1,3 +1,4 @@
+const { logDebug, log } = require('./logger');
 
 /** Generate Unique ID used in the server by using nanoid
  * @param {string} prefix 
@@ -90,6 +91,49 @@ const findChildren = async (idToFind, listToSearch) => {
     return foundChildren;
 }
 
+// This bullshit handle both currency & barters
+// since I'm a lazy cunt I only did currency for now :)
+const payTrade = async (playerInventory, body, currency=null) => {
+    if (body.length === 1) {
+        const moneyFiltered = playerInventory.items.filter((item) => {
+            return item._tpl === currency;
+        });
+        let totalPlayerMoney = 0;
+        for (const moneyItem of moneyFiltered) {
+            totalPlayerMoney += !moneyItem.hasOwnProperty("upd") ? 1 : moneyItem.upd.StackObjectsCount;
+        }
+
+        if (!moneyFiltered || totalPlayerMoney < body[0].count) {
+            logDebug("Boy you poor as fuck");
+            return false;
+        }
+
+        let price = body[0].count;
+
+        for (const moneyItem of moneyFiltered) {
+            const itemAmount = !moneyItem.hasOwnProperty("upd") ? 1 : moneyItem.upd.StackObjectsCount;
+
+            if (price >= itemAmount) {
+                price = itemAmount;
+                // TODO remove the stack from player inv
+            } else {
+                if (!moneyItem.upd) {
+                    // TODO remove the item from player inv
+                    break;
+                } else {
+                    moneyItem.upd.StackObjectsCount -= price;
+                    // TODO changes output
+                    break;
+                }
+            }
+        }
+
+        console.log()
+    } else {
+        logDebug("That's barter, barter not done yet, pay me Leffe and I'll do it");
+    }
+}
+
 //const splitStack = async (item) => {
 //    if (!("upd" in item) || !("StackObjectsCount" in item.upd)) {
 //        return [item];
@@ -122,6 +166,6 @@ module.exports = {
     utilFormat,
     clearString,
     isUndefined,
-    findChildren
-
+    findChildren,
+    payTrade
 };

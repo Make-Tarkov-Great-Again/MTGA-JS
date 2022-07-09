@@ -1,6 +1,6 @@
 const { database } = require("../../../app");
 const { Profile, Language, Account, Edition, Customization, Storage, Character, Health, Weaponbuild, Quest, Locale, Trader, Item } = require("../../models");
-const { getCurrentTimestamp, logger, FastifyResponse, writeFile, stringify, readParsed } = require("../../utilities");
+const { getCurrentTimestamp, logger, FastifyResponse, writeFile, stringify, readParsed, payTrade } = require("../../utilities");
 
 
 class GameController {
@@ -319,7 +319,7 @@ class GameController {
             // display error
         }
 
-        logger.logDebug("Examin request:")
+        logger.logDebug("Examin request:");
         logger.logDebug(request.body.data);
 
         for (const requestEntry of request.body.data) {
@@ -373,6 +373,14 @@ class GameController {
             // display error
         }
     };
+
+    static clientGameTradingConfirm = async (request = null, reply = null) => {
+        const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
+        const trader = await Trader.get(request.body.data[0].tid);
+        const currency = await trader.getCurrency();
+        const isPayed = await payTrade(playerProfile.character.Inventory, request.body.data[0].scheme_items, currency);
+        console.log()
+    }
 
 
 }
