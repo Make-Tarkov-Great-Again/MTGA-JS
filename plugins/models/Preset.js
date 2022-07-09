@@ -16,14 +16,14 @@ class Preset extends BaseModel {
         const presets = Object.values(database.core.globals.ItemPresets);
         const reverse = {};
 
-        for (const p of presets) {
-            let tpl = p._items[0]._tpl;
+        for (const preset of presets) {
+            let tpl = preset._items[0]._tpl;
 
             if (!(tpl in reverse)) {
                 reverse[tpl] = [];
             }
             // weaponID[presetID] = preset database
-            reverse[tpl][p._id] = p;
+            reverse[tpl][preset._id] = preset;
         }
         return reverse;
     }
@@ -33,7 +33,7 @@ class Preset extends BaseModel {
      * @param {*} weaponID // ID of weapon to check
      * @returns 
      */
-    static async hasPresets(weaponID) {
+    static async weaponHasPreset(weaponID) {
         return weaponID in await this.getAll();
     }
 
@@ -42,27 +42,34 @@ class Preset extends BaseModel {
      * @param {*} weaponID // ID of weapon to check
      * @returns 
      */
-    static async getPresets(weaponID) {
-        if (await this.hasPresets(weaponID)) {
+    static async getPresetsWithWeaponId(weaponID) {
+        if (await this.weaponHasPreset(weaponID)) {
             const presets = await this.getAll();
             return presets[weaponID];
         }
     }
 
+    static async getAllPresets(){
+        return this.getAll();
+    }
+
     /**
-     * lost track of what i was doing here
+     * Get Preset with PresetID
      * @param {*} weaponID 
      * @param {*} presetID 
      * @returns 
      */
-    static async getPreset(weaponID, presetID) {
-        const presets = await this.getPresets(weaponID);
-        for (const p in presets) {
-            const preset = presets[p];
-            if (preset === presetID) {
-                return preset;
+    static async getPresetWithPresetId(presetID) {
+        const presets = await this.getAllPresets();
+        for (const weapon in presets) {
+            if (presetID in presets[weapon]) {
+                return presets[weapon][presetID];
             }
         }
+    }
+
+    static async createCustomPreset(){
+        return "your mom gay"
     }
 }
 
