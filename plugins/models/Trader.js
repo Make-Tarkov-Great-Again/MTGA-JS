@@ -59,8 +59,10 @@ class Trader extends BaseModel {
         switch(this.base.currency) {
             case "EUR":
                 currency = "569668774bdc2da2298b4568";
+                break;
             case "USD":
                 currency = "5696686a4bdc2da3298b456a";
+                break;
             default:
                 currency = "5449016a4bdc2d6f028b456f";
         }
