@@ -1,5 +1,5 @@
 const { database } = require("../../../app");
-const { Profile, Language, Account, Edition, Customization, Storage, Character, Health, Weaponbuild, Quest, Locale } = require("../../models");
+const { Profile, Language, Account, Edition, Customization, Storage, Character, Health, Weaponbuild, Quest, Locale, Trader } = require("../../models");
 const { getCurrentTimestamp, logger, FastifyResponse, writeFile, stringify, readParsed } = require("../../utilities");
 
 
@@ -279,5 +279,79 @@ class GameController {
         await playerProfile.addDialogue(quest.traderId, messageContent, questReward);
         await playerProfile.save();
     };
+
+    static clientGameProfileMoveItem = async (request = null, reply = null) => {
+        const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
+        if(!playerProfile) {
+            // display error
+        }
+
+        logger.logDebug("Move request:")
+        logger.logDebug(request.body.data);
+
+        let movedItems = await playerProfile.character.moveItems(request.body.data);
+        if(movedItems) {
+            if(await playerProfile.save()) {
+                let changes = {
+                    // Broken? Seems to fuck with containers? - Compare with dumps of moving containers
+                    //items: { change: [movedItems] }
+                }
+                let profileChangesBase = await playerProfile.getProfileChangesResponse(changes);
+                return FastifyResponse.zlibJsonReply(
+                    reply,
+                    FastifyResponse.applyBody(profileChangesBase)
+                );
+            } else {
+                // display error
+            }
+        } else {
+            // display error
+        }
+    };
+
+    static clientGameProfileExamine = async (request = null, reply = null) => {
+        const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
+        if(!playerProfile) {
+            // display error
+        }
+
+        logger.logDebug("Examin request:")
+        logger.logDebug(request.body.data);
+
+        for (const requestEntry of request.body.data) {
+            if(requestEntry.fromOwner && requestEntry.fromOwner.type === "Trader") {
+                 const trader = await Trader.get(requestEntry.fromOwner.id);
+                 if(trader) {
+                    const inventoryItem = await trader.getAssortItemByID(requestEntry.item)
+                    if(!await playerProfile.character.examineItem(inventoryItem._tpl)) {
+                        logger.logDebug(`Examine Request failed: Unable to examine item ${inventoryItem._tpl}`);
+                    }
+                 } else {
+                    logger.logDebug("Examine Request failed: Unable to get trader data.")
+                 }
+            } else {
+                const item = await playerProfile.character.getInventoryItemByID(requestEntry.item);
+                if(item) {
+                    await playerProfile.character.examineItem(item._tpl);
+                } 
+            }
+        }
+
+        if(await playerProfile.save()) {
+            let changes = {
+                // Fix
+            }
+
+            let profileChangesBase = await playerProfile.getProfileChangesResponse(changes);
+            return FastifyResponse.zlibJsonReply(
+                reply,
+                FastifyResponse.applyBody(profileChangesBase)
+            );
+        } else {
+            // display error
+        }
+    };
+
+
 }
 module.exports.GameController = GameController;
