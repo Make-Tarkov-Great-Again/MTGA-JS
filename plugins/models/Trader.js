@@ -22,24 +22,17 @@ class Trader extends BaseModel {
 
         const traderClone = await this.clone();
 
-        for (const [itemID, itemData] of Object.entries(traderClone.assort)) {
-            if (this.isRagfair()) {
-                for (const item of itemData.items) {
+        if (this.isRagfair()) {
+            output.items = traderClone.assort.items;
+            output.barter_scheme = traderClone.assort.barter_scheme;
+            output.loyal_level_items = traderClone.assort.loyal_level_items;
+        } else {
+            for (const item of traderClone.assort.items) {
+                if (traderClone.assort.loyal_level_items[item._id] <= loyalty) {
                     output.items.push(item);
+                    output.barter_scheme = traderClone.assort.barter_scheme[item._id];
+                    output.loyal_level_items[item._id] = traderClone.assort.loyal_level_items[item._id];
                 }
-                output.barter_scheme[itemID] = itemData.barter_scheme;
-                output.loyal_level_items[itemID] = itemData.loyalty;
-            } else {
-                // We do the filtering here for quest status & loyalty
-                if (itemData.loyalty > loyalty) {
-                    continue;
-                }
-
-                for (const item of itemData.items) {
-                    output.items.push(item);
-                }
-                output.barter_scheme[itemID] = itemData.barter_scheme;
-                output.loyal_level_items[itemID] = itemData.loyalty;
             }
         }
         return output;
