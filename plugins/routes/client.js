@@ -77,6 +77,10 @@ module.exports = async function gameRoutes(app, _opts) {
             case "Move":
                 await GameController.clientGameProfileMoveItem(request, reply);
             break;
+
+            case "Examine":
+                await GameController.clientGameProfileExamine(request, reply);
+            break;
             // more, MOOOOOOOOOOOOOOORE
             default:
                 logger.logWarning("Action " + action + " is not yet implemented.");

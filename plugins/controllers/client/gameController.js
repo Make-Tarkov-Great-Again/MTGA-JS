@@ -293,7 +293,8 @@ class GameController {
         if(movedItems) {
             if(await playerProfile.save()) {
                 let changes = {
-                    items: { change: [movedItems] }
+                    // Broken? Seems to fuck with containers? - Compare with dumps of moving containers
+                    //items: { change: [movedItems] }
                 }
                 let profileChangesBase = await playerProfile.getProfileChangesResponse(changes);
                 return FastifyResponse.zlibJsonReply(
@@ -303,6 +304,34 @@ class GameController {
             } else {
                 // display error
             }
+        } else {
+            // display error
+        }
+    };
+
+    static clientGameProfileExamine = async (request = null, reply = null) => {
+        const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
+        if(!playerProfile) {
+            // display error
+        }
+
+        logger.logDebug("Examin request:")
+        logger.logDebug(request.body.data);
+
+        for (const requestEntry of request.body.data) {
+            await playerProfile.character.examineItem(requestEntry.item);
+        }
+
+        if(await playerProfile.save()) {
+            let changes = {
+                // Fix
+            }
+
+            let profileChangesBase = await playerProfile.getProfileChangesResponse(changes);
+            return FastifyResponse.zlibJsonReply(
+                reply,
+                FastifyResponse.applyBody(profileChangesBase)
+            );
         } else {
             // display error
         }
