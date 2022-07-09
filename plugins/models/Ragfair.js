@@ -26,10 +26,6 @@ class Ragfair extends BaseModel {
         let filteredItems = [];
         let counter = 0;
 
-        /**
-         * Banned Items list
-         * (might need to be standalone)
-         */
         const bannedItems =
             [
                 "Pockets",
