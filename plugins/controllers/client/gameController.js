@@ -146,7 +146,6 @@ class GameController {
 
     static clientGameProfileNicknameValidate = async (request = null, reply = null) => {
         const validate = await Profile.ifAvailableNickname(request.body.nickname);
-        const response = database.core.serverConfig.translations
 
         switch (validate) {
             case "ok":
@@ -157,12 +156,12 @@ class GameController {
             case "tooshort":
                 return FastifyResponse.zlibJsonReply(
                     reply,
-                    FastifyResponse.applyBody(null, 256, response.tooShort)
+                    FastifyResponse.applyBody(null, 256, "256 -")
                 );
             case "taken":
                 return FastifyResponse.zlibJsonReply(
                     reply,
-                    FastifyResponse.applyBody(null, 255, response.alreadyInUse)
+                    FastifyResponse.applyBody(null, 255, "255 - ")
                 );
         }
     };
@@ -233,7 +232,6 @@ class GameController {
     static clientGameProfileNicknameChange = async (request = null, reply = null) => {
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
         const validate = await Profile.ifAvailableNickname(request.body.nickname);
-        const response = database.core.serverConfig.translations
 
 
         switch (validate) {
@@ -252,12 +250,12 @@ class GameController {
             case "tooshort":
                 return FastifyResponse.zlibJsonReply(
                     reply,
-                    FastifyResponse.applyBody(null, 256, response.tooShort)
+                    FastifyResponse.applyBody(null, 256, "256 -")
                 );
             case "taken":
                 return FastifyResponse.zlibJsonReply(
                     reply,
-                    FastifyResponse.applyBody(null, 255, response.alreadyInUse)
+                    FastifyResponse.applyBody(null, 255, "255 - ")
                 );
         }
     };
@@ -288,7 +286,7 @@ class GameController {
 
     static clientGameProfileMoveItem = async (request = null, reply = null) => {
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
-        if(!playerProfile) {
+        if (!playerProfile) {
             // display error
         }
 
@@ -296,8 +294,8 @@ class GameController {
         logger.logDebug(request.body.data);
 
         let movedItems = await playerProfile.character.moveItems(request.body.data);
-        if(movedItems) {
-            if(await playerProfile.save()) {
+        if (movedItems) {
+            if (await playerProfile.save()) {
                 let changes = {
                     // Broken? Seems to fuck with containers? - Compare with dumps of moving containers
                     //items: { change: [movedItems] }
@@ -317,7 +315,7 @@ class GameController {
 
     static clientGameProfileExamine = async (request = null, reply = null) => {
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
-        if(!playerProfile) {
+        if (!playerProfile) {
             // display error
         }
 
@@ -325,9 +323,9 @@ class GameController {
         logger.logDebug(request.body.data);
 
         for (const requestEntry of request.body.data) {
-            if(requestEntry.fromOwner && requestEntry.fromOwner.type === "Trader") {
+            if (requestEntry.fromOwner && requestEntry.fromOwner.type === "Trader") {
                 const trader = await Trader.get(requestEntry.fromOwner.id);
-                if(trader) {
+                if (trader) {
                     const inventoryItem = await trader.getAssortItemByID(requestEntry.item)
                     if (!await playerProfile.character.examineItem(inventoryItem._tpl)) {
                         logger.logDebug(`Examine Request failed: Unable to examine item ${inventoryItem._tpl}`);
@@ -337,13 +335,13 @@ class GameController {
                 }
             } else {
                 const item = await playerProfile.character.getInventoryItemByID(requestEntry.item);
-                if(item) {
+                if (item) {
                     await playerProfile.character.examineItem(item._tpl);
                 }
             }
         }
 
-        if(await playerProfile.save()) {
+        if (await playerProfile.save()) {
             let changes = {
                 // Fix
             }
