@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { Ragfair } = require('../plugins/models');
+const { Ragfair, Preset } = require('../plugins/models');
 const { UtilityModel } = require('../plugins/models/UtilityModel');
 const {
     logger, readParsed, fileExist, stringify,
@@ -29,6 +29,7 @@ class DatabaseLoader {
         await this.loadProfiles();
         await this.loadQuests();
         await this.loadRagfair();
+        await this.loadPresets();
     }
 
     /**
@@ -123,9 +124,16 @@ class DatabaseLoader {
         }
     }
 
-    /**
-     * Load editions data in parallel.
-     */
+    static async loadPresets() {
+        const presets = await Preset.initialize()
+        for (const [index, preset] of Object.entries(presets)) {
+            await UtilityModel.createModelFromParseWithID('Preset', index, preset);
+        }
+
+        const balle = await Preset.hasPresets("5447a9cd4bdc2dbd208b4567")
+        const balle2 = await Preset.getPresets("5447a9cd4bdc2dbd208b4567")
+        const balle3 = await Preset.getPreset("5447a9cd4bdc2dbd208b4567", '5a32808386f774764a3226d9')
+    }
 
     static async loadRagfair() {
         const database = require('./database');
