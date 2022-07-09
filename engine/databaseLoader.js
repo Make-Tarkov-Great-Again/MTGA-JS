@@ -5,7 +5,6 @@ const {
     logger, readParsed, fileExist, stringify,
     writeFile, getDirectoriesFrom, createDirectory,
     getFilesFrom } = require('./../plugins/utilities/');
-const { RagfairLoader } = require('./ragfairLoader');
 
 
 class DatabaseLoader {
@@ -130,8 +129,8 @@ class DatabaseLoader {
 
     static async loadRagfair() {
         const database = require('./database');
-        const data = await Ragfair.initialize();
-
+        database.ragfair = new Ragfair;
+        await database.ragfair.initialize();
     }
 
     // Load Customization 

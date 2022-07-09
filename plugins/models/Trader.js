@@ -101,6 +101,16 @@ class Trader extends BaseModel {
         }
         return output;
     }
+
+    static async getTraderByName(traderName) {
+        let traders = await Trader.getAll()
+        for (const [index, trader] of Object.entries(traders)) {
+            if(trader.base.nickname === traderName) {
+                return trader;
+            }
+        }
+        return false;
+    }
 }
 
 module.exports.Trader = Trader;

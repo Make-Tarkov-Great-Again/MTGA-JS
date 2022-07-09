@@ -1,63 +1,154 @@
 const { BaseModel } = require("./BaseModel");
 const { Item } = require("./Item");
-const { FastifyResponse } = require("../utilities");
+const { FastifyResponse, generateUniqueId, getCurrentTimestamp, logger } = require("../utilities");
 const { database } = require("../../app");
+const { Trader } = require("./Trader");
 
 class Ragfair extends BaseModel {
     constructor() {
         super();
+        this.offers = [];        
+        this.nextOfferId = 1;
+        //await this.initialize();
     }
 
-    static async initialize() {
+    async addExampleItem() {
+        const trader = await this.getTraderTemplate("Prapor");
+        const USD = await this.getCurrencyTemplate("RUB", 5);
+        await this.addItemByTemplateId(trader, "5e340dcdcb6d5863cc5e5efb", USD, 150, undefined, false, 1); // add a vog to offers
+
+        
+    }
+
+    async initialize() {
         const items = await Item.getAll();
 
         let filteredItems = [];
-    
-        const bannedItems = [ "Pockets",  "MobContainer",  "LootContainer" ];
+        let counter = 0;
+
+        /**
+         * Banned Items list
+         * (might need to be standalone)
+         */
+        const bannedItems =
+            [
+                "Pockets",
+                "Shrapnel",
+                "QuestRaidStash",
+                "QuestOfflineStash",
+                "stash 10x300",
+                "Standard stash 10x28",
+                "Prepare for escape stash 10x48",
+                "Left Behind stash 10x38",
+                "Edge of darkness stash 10x68",
+                "Стандартный инвентарь" //default inventory
+            ];
 
         for (const item in items) {
             switch (true) {
                 case items[item]._type === "Node":
-                    continue;
-                case items[item]._name.includes(bannedItems):
+                case items[item]._props.Name.includes(bannedItems):
+                    counter += 1;
                     continue;
                 case items[item]._props.CanSellOnRagfair === true:
                     filteredItems.push(items[item]);
             }
         }
-        return filteredItems;
+        logger.logSuccess(`[RAGFAIR]: ${filteredItems.length} items loaded; ${counter} items filtered.`);
+
+        await this.addExampleItem();
+        //return filteredItems;
     }
 
-    //static async convertItemsToRagfairAssort() {}
+    async getCurrencyTemplate(currency, amount) {
+        let templateId;
+        switch (currency) {
+            case "RUB":
+                templateId = "5449016a4bdc2d6f028b456f";
+            break;
 
-    //static async createItemUpd() {}
+            case "USD":
+                templateId = "5696686a4bdc2da3298b456a";
+            break;
 
-/*     static async convertItemToRagfairAssort(item, StackObjectsCount) {
-        let convertedItem = {
-            _id: "",
-            _tpl: "",
-            parentId: "",
-            slotId: "",
-            upd: {
-                StackObjectsCount: 99999999,
-                UnlimitedCount: true
+            case "EUR":
+                templateId = "569668774bdc2da2298b4568";
+            break;
+        }
+
+        return [
+            {
+                count: amount,
+                _tpl: templateId,
+            }
+        ];
+    }
+
+    async getTraderTemplate(traderName) {
+        let trader = await Trader.getTraderByName(traderName);
+        if(trader) {
+            return {
+                id: trader.base._id,
+                memberType: 4
             }
         }
 
-        let barter_scheme = [
+        return false;
+    }
+
+    async addItemByTemplateId(user, templateId, requirements, amount, childItems = undefined, sellInOnePiece = false, loyaltyLevel = undefined) {
+        let tempItem = {
+            _id : await generateUniqueId(),
+            _tpl: templateId
+        }
+        return this.addItem(user, tempItem, requirements, amount, childItems, sellInOnePiece, loyaltyLevel);
+    }
+
+    async addItem(user, parentItem, requirements, amount, childItems = undefined, sellInOnePiece = false, loyaltyLevel = undefined) {
+        let offer = {}
+
+        offer._id = await generateUniqueId();
+        offer.intId = this.nextOfferId;
+        offer.user = { 
+            id: user.id,
+            memberType: user.memberType
+        }
+        offer.root = parentItem._id;
+        offer.items = [
             {
-                count: 0,
-                "_tpl": ""
+                _id: parentItem._id,
+                _tpl: parentItem._tpl,
+                upd: {
+                    StackobjectsCount: amount
+                }
             }
         ]
 
-        let loyal_level_items[itemId] = 0;
+        if(childItems) {
+            Object.assign(offer.items, childItems);
+        }   
 
+        const currentTime = Date.now();
 
-    } */
+        offer.itemsCost = 100; // calculate
+        offer.requirements = requirements;
+        offer.summaryCost = 110; // calculate
+        offer.sellInOnePiece = sellInOnePiece;
+        offer.startTime = currentTime - 3600;
+        offer.endTime = currentTime + 3600;
 
+        // priority? //
+        // buy restriction //
 
-    static async sortOffers(request, offers) {
+        if(loyaltyLevel) {
+            offer.loyaltyLevel = loyaltyLevel
+        }
+
+        this.offers.push(offer);
+        this.nextOfferId += 1
+    }
+
+    async sortOffers(request, offers) {
         // Sort results
         switch (request.body.sortType) {
             case 0: // ID
@@ -106,7 +197,7 @@ class Ragfair extends BaseModel {
         return offers;
     }
 
-    static async getSelectedCategory(request) {
+    async getSelectedCategory(request) {
         const body = request.body;
         switch (body) {
             case body.handbookId:
@@ -118,12 +209,12 @@ class Ragfair extends BaseModel {
         }
     }
 
-    static async getLimit(request) {
+    async getLimit(request) {
         const body = request.body;
         return body.limit;
     }
 
-    static async getOffers(request) {
+    async getOffers(request) {
         return await Ragfair.getAll();
         const sessionID = await FastifyResponse.getSessionID(request);
 
