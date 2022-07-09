@@ -38,6 +38,11 @@ class Trader extends BaseModel {
         return output;
     }
 
+
+    async getAssortItemByID(itemId) {
+        return this.assort.items.find(item => item._id == itemId);
+    }
+
     /**
     async removeItemFromAssort(assort, itemID) {
         const idsList = await findAndReturnChildrenByItems(assort, itemID);
