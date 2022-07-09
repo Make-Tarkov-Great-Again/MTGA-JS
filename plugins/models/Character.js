@@ -78,21 +78,33 @@ class Character extends BaseModel {
                 }
 
             default:
-                logger.logError(`Unknown container type ${containerType}`);
-                return false;
+                logger.logDebug(`Trying to move item to equipment slot ${containerType}`);
+                if (await this.getInventoryItemByID(containerID)) {
+                    return this.moveItemToEquipmentSlot(itemId, containerType, containerID);
+                } else {
+                    logger.logError(`Move request failed: Invalid container with ID ${containerID}`);
+                    return false;
+                }
         }
     }
 
     async moveItemUsingSlotID(itemId, locationData, slotId, containerID) {
-        if(!itemId || !locationData) {
-            logger.logError("Move request failed: No itemId or locationData")
+        if(!itemId) {
+            logger.logError("Move request failed: No itemId")
             return false;
         }
 
         let itemSearch = await this.getInventoryItemByID(itemId);
         if (itemSearch) {
             logger.logDebug(`Located item with item ID ${itemId}`);
-            itemSearch.location = locationData;
+            
+            if(locationData) {
+                itemSearch.location = locationData;
+                itemSearch.location.r = (locationData.r = "Vertical" ? 1 : 0)
+            } else if(!locationData && itemSearch.location) {
+                delete itemSearch.location;
+            }
+            
             itemSearch.slotId = slotId;
             itemSearch.parentId = containerID;
             return itemSearch;
@@ -100,6 +112,10 @@ class Character extends BaseModel {
         
         logger.logDebug(`Unable to locate item with item ID ${itemId}`);
         return false
+    }
+
+    async moveItemToEquipmentSlot(itemId, equipmentSlotId, containerID) {
+        return this.moveItemUsingSlotID(itemId, null, equipmentSlotId, containerID);
     }
 
     async moveItemToHideout(itemId, locationData) {
@@ -114,6 +130,16 @@ class Character extends BaseModel {
         return this.Inventory.items.find(item => item._id == itemId);
     }
 
+    // Examine //
+
+    async examineItem(itemId) {
+        if(!itemId) {
+            logger.logError("Examine request failed: No itemId")
+        }
+
+        this.Encyclopedia[itemId] = true;
+        return true;
+    }
 }
 
 module.exports.Character = Character;
