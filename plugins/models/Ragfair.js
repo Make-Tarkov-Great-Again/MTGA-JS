@@ -1,17 +1,65 @@
 const { BaseModel } = require("./BaseModel");
+const { Item } = require("./Item");
 const { FastifyResponse } = require("../utilities");
 const { database } = require("../../app");
 
 class Ragfair extends BaseModel {
-    constructor(id) {
+    constructor() {
         super();
-
-        this.createDatabase(id);
     }
+
+    static async initialize() {
+        const items = Item.getAll();
+
+        let filteredItems = [];
+        let bannedItems = [ "Pockets"];
+
+        for (let item of items) {
+            if (item._type == "Node") {
+                bannedItems.push(item._id);
+                continue;
+            }
+            else (bannedItems.includes(item._name)) {
+                if (bannedItems.includes(item._name)) {
+                filteredItems.push(item);}
+        }
+
+    }
+
+    static async convertItemsToRagfairAssort() {}
+
+    static async createItemUpd() {
+
+    }
+
+    static async convertItemToRagfairAssort(item, StackObjectsCount) {
+        let convertedItem = {
+            _id: "",
+            _tpl: "",
+            parentId: "",
+            slotId: "",
+            upd: {
+                StackObjectsCount: 99999999,
+                UnlimitedCount: true
+            }
+        }
+
+        let barter_scheme = [
+            {
+                count: 0,
+                "_tpl": ""
+            }
+        ]
+
+        let loyal_level_items[itemId] = 0;
+
+
+    }
+
 
     static async sortOffers(request, offers) {
         // Sort results
-        switch (request.sortType) {
+        switch (request.body.sortType) {
             case 0: // ID
                 offers.sort((a, b) => { return a.intId - b.intId }
                 );
@@ -24,8 +72,8 @@ class Ragfair extends BaseModel {
 
             case 4: // Offer (title)
                 offers.sort((a, b) => {
-                      // @TODO: Get localized item names
-                      // i just hijacked this from SIT/AE/JET/Balle
+                    // @TODO: Get localized item names
+                    // i just hijacked this from SIT/AE/JET/Balle
                     try {
                         let aa = helper_f.tryGetItem(a._id)[1]._name;
                         let bb = helper_f.tryGetItem(b._id)[1]._name;
@@ -58,17 +106,34 @@ class Ragfair extends BaseModel {
         return offers;
     }
 
+    static async getSelectedCategory(request) {
+        const body = request.body;
+        switch (body) {
+            case body.handbookId:
+                return body.handbookId;
+            case body.linkedSearchId:
+                return body.linkedSearchId;
+            case body.neededSearchId:
+                return body.neededSearchId;
+        }
+    }
+
+    static async getLimit(request) {
+        const body = request.body;
+        return body.limit;
+    }
+
     static async getOffers(request) {
-        return database.ragfair_offers;
+        return await Ragfair.getAll();
         const sessionID = await FastifyResponse.getSessionID(request);
 
-        if (request.offerOwnerType === 1){ 
-            return await this.getOffersFromTraders(request, sessionID); 
+        if (request.offerOwnerType === 1) {
+            return await this.getOffersFromTraders(request, sessionID);
         }
     }
 
     static async getOffersFromTraders(request, sessionID) {
-        
+
     }
 
 
