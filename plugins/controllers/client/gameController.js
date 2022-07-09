@@ -279,5 +279,35 @@ class GameController {
         await playerProfile.addDialogue(quest.traderId, messageContent, questReward);
         await playerProfile.save();
     };
+
+    static clientGameProfileMoveItem = async (request = null, reply = null) => {
+        const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
+        if(!playerProfile) {
+            // display error
+        }
+
+        logger.logDebug("Move request:")
+        logger.logDebug(request.body.data);
+
+        let movedItems = await playerProfile.character.moveItems(request.body.data);
+        if(movedItems) {
+            if(await playerProfile.save()) {
+                let changes = {
+                    items: { change: [movedItems] }
+                }
+                let profileChangesBase = await playerProfile.getProfileChangesResponse(changes);
+                return FastifyResponse.zlibJsonReply(
+                    reply,
+                    FastifyResponse.applyBody(profileChangesBase)
+                );
+            } else {
+                // display error
+            }
+        } else {
+            // display error
+        }
+    };
+
+
 }
 module.exports.GameController = GameController;
