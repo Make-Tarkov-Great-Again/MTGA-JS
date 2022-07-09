@@ -1,11 +1,11 @@
 'use strict'
 const fp = require('fastify-plugin');
 
-module.exports = fp(async function (app, opts) {
+module.exports = fp(async function (app, _opts) {
 
   /**
-   * Adds compression utils to the Fastify reply object 
-   * and a hook to decompress requests payloads. 
+   * Adds compression utils to the Fastify reply object
+   * and a hook to decompress requests payloads.
    * Supports gzip, deflate, and brotli.
    * @see https://github.com/fastify/fastify-compress
    */
@@ -13,24 +13,24 @@ module.exports = fp(async function (app, opts) {
 
 
   /**
-   * A plugin for Fastify that adds support 
+   * A plugin for Fastify that adds support
    * for reading and setting cookies.
    * @see https://github.com/fastify/fastify-cookie
   */
   await app.register(require("@fastify/cookie"), {
     secret: 'urmomisawesome',
     parseOptions: {}
-  })
+  });
 
   /**
-   * A simple plugin for Fastify that adds a content type parser 
+   * A simple plugin for Fastify that adds a content type parser
    * for the content type application/x-www-form-urlencoded.
    * @see https://github.com/fastify/fastify-formbody
    */
-  await app.register(require('@fastify/formbody'))
+  await app.register(require('@fastify/formbody'));
 
   /**
 * Register Handler
 */
-  await app.register(require('./router.js'))
-})
+  await app.register(require('./router.js'));
+});

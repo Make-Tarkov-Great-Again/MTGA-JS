@@ -278,6 +278,12 @@ class GameController {
         };
         await playerProfile.addDialogue(quest.traderId, messageContent, questReward);
         await playerProfile.save();
+        const changes = {};
+        const profileChangesBase = await playerProfile.getProfileChangesResponse(changes);
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody(profileChangesBase)
+        );
     };
 
     static clientGameProfileMoveItem = async (request = null, reply = null) => {
@@ -320,20 +326,20 @@ class GameController {
 
         for (const requestEntry of request.body.data) {
             if(requestEntry.fromOwner && requestEntry.fromOwner.type === "Trader") {
-                 const trader = await Trader.get(requestEntry.fromOwner.id);
-                 if(trader) {
+                const trader = await Trader.get(requestEntry.fromOwner.id);
+                if(trader) {
                     const inventoryItem = await trader.getAssortItemByID(requestEntry.item)
-                    if(!await playerProfile.character.examineItem(inventoryItem._tpl)) {
+                    if (!await playerProfile.character.examineItem(inventoryItem._tpl)) {
                         logger.logDebug(`Examine Request failed: Unable to examine item ${inventoryItem._tpl}`);
                     }
-                 } else {
+                } else {
                     logger.logDebug("Examine Request failed: Unable to get trader data.")
-                 }
+                }
             } else {
                 const item = await playerProfile.character.getInventoryItemByID(requestEntry.item);
                 if(item) {
                     await playerProfile.character.examineItem(item._tpl);
-                } 
+                }
             }
         }
 
