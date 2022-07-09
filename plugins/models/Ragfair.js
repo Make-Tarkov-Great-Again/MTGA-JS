@@ -1,13 +1,15 @@
 const { BaseModel } = require("./BaseModel");
 const { Item } = require("./Item");
-const { FastifyResponse, generateUniqueId, getCurrentTimestamp, logger } = require("../utilities");
-const { database } = require("../../app");
 const { Trader } = require("./Trader");
+
+const {
+    FastifyResponse, generateUniqueId, getCurrentTimestamp,
+    logger, findChildren } = require("../utilities");
 
 class Ragfair extends BaseModel {
     constructor() {
         super();
-        this.offers = [];        
+        this.offers = [];
         this.nextOfferId = 1;
         //await this.initialize();
     }
@@ -17,7 +19,7 @@ class Ragfair extends BaseModel {
         const USD = await this.getCurrencyTemplate("RUB", 5);
         await this.addItemByTemplateId(trader, "5e340dcdcb6d5863cc5e5efb", USD, 150, undefined, false, 1); // add a vog to offers
 
-        
+
     }
 
     async initialize() {
@@ -56,20 +58,49 @@ class Ragfair extends BaseModel {
         //return filteredItems;
     }
 
+    async getSlotIdFromParent(item) {
+        const parent = item._parent
+        switch (true) {
+            case parent === "55818a594bdc2db9688b456a":
+                return "mod_stock";
+            case parent === "5448bc234bdc2d3c308b4569":
+                return "mod_magazine";
+            case parent === "555ef6e44bdc2de9068b457e":
+                return "mod_barrel";
+            case parent === "550aa4bf4bdc2dd6348b456b":
+                return "mod_muzzle";
+            case parent === "622b327b267a1b13a44abea3":
+                return "mod_gas_block";
+            case parent === "55818a104bdc2db9688b4569":
+                return "mod_handguard";
+            case parent === "55818b224bdc2dde698b456f":
+                return "mod_mount";
+            case parent === "55818add4bdc2d5b648b456f":
+            case parent === "55818ad54bdc2ddc698b4569":
+                return "mod_scope";
+            default:
+                console.log("[RAGFAIR]: Unknown slotId: " + parent);
+        }
+    }
+
+    async findPresetAndReturn(item){
+
+    }
+
     async getCurrencyTemplate(currency, amount) {
         let templateId;
         switch (currency) {
             case "RUB":
                 templateId = "5449016a4bdc2d6f028b456f";
-            break;
+                break;
 
             case "USD":
                 templateId = "5696686a4bdc2da3298b456a";
-            break;
+                break;
 
             case "EUR":
                 templateId = "569668774bdc2da2298b4568";
-            break;
+                break;
         }
 
         return [
@@ -82,7 +113,7 @@ class Ragfair extends BaseModel {
 
     async getTraderTemplate(traderName) {
         let trader = await Trader.getTraderByName(traderName);
-        if(trader) {
+        if (trader) {
             return {
                 id: trader.base._id,
                 memberType: 4
@@ -94,7 +125,7 @@ class Ragfair extends BaseModel {
 
     async addItemByTemplateId(user, templateId, requirements, amount, childItems = undefined, sellInOnePiece = false, loyaltyLevel = undefined) {
         let tempItem = {
-            _id : await generateUniqueId(),
+            _id: await generateUniqueId(),
             _tpl: templateId
         }
         return this.addItem(user, tempItem, requirements, amount, childItems, sellInOnePiece, loyaltyLevel);
@@ -105,7 +136,7 @@ class Ragfair extends BaseModel {
 
         offer._id = await generateUniqueId();
         offer.intId = this.nextOfferId;
-        offer.user = { 
+        offer.user = {
             id: user.id,
             memberType: user.memberType
         }
@@ -120,9 +151,9 @@ class Ragfair extends BaseModel {
             }
         ]
 
-        if(childItems) {
+        if (childItems) {
             Object.assign(offer.items, childItems);
-        }   
+        }
 
         const currentTime = Date.now();
 
@@ -136,7 +167,7 @@ class Ragfair extends BaseModel {
         // priority? //
         // buy restriction //
 
-        if(loyaltyLevel) {
+        if (loyaltyLevel) {
             offer.loyaltyLevel = loyaltyLevel
         }
 
