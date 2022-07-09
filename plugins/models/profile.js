@@ -2,7 +2,6 @@ const { BaseModel } = require("./BaseModel");
 
 
 const fs = require('fs');
-const { off } = require('process');
 const {
     readParsed,
     fileExist,
@@ -35,7 +34,6 @@ class Profile extends BaseModel {
 
         if (nickname.length < 3) { return "tooshort"; }
         for (const [key, profile] of Object.entries(collection)) {
-            
             // This check needs to come first to see if profile is created, or it'll pop and error
             if (profile.character.length === 0) {
                 logger.logDebug(`[PROFILE] Character for ${key} has not been created.`);
@@ -280,8 +278,11 @@ class Profile extends BaseModel {
 
         dialogue.messages.push(message);
 
-        // need to add notification
-        const notificationHandler = await Notification.get(this.id);
+        // need to add notificationcls
+        let notificationHandler = await Notification.get(this.id);
+        if (!notificationHandler) {
+            notificationHandler = await new Notification(this.id);
+        }
         notificationHandler.createNewNotification(message);
     }
 
@@ -295,21 +296,21 @@ class Profile extends BaseModel {
     }
 
     async getProfileChangesBase() {
-        let profileChangesBase = {
+        const profileChangesBase = {
             warnings: [],
-            profileChanges: {},
+            profileChanges: {}
         };
 
         profileChangesBase.profileChanges[this.character._id] = {
             _id: this.character._id,
             experience: 0,
-            quests: [], // are those current accepted quests ??
+            quests: [], // are those current accepted quests ?? -- seems like thoose are completed/failed quests -Nehax
             ragFairOffers: [], // are those current ragfair requests ?
             builds: [], // are those current weapon builds ??
             items: { change: [], new: [], del: [] },
             production: null,
             skills: {},
-            traderRelations: {}, //_profile.TradersInfo
+            traderRelations: {} //_profile.TradersInfo
         };
 
         return profileChangesBase;
@@ -320,8 +321,8 @@ class Profile extends BaseModel {
             return false;
         }
 
-        let outputData = await this.getProfileChangesBase();
-        let mergedData = Object.assign({}, outputData.profileChanges[this.character._id], profileChanges)
+        const outputData = await this.getProfileChangesBase();
+        const mergedData = Object.assign({}, outputData.profileChanges[this.character._id], profileChanges)
         outputData.profileChanges[this.character._id] = mergedData;
 
         return outputData;

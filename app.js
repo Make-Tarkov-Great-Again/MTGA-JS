@@ -16,7 +16,7 @@ const app = require('fastify')({
                 return {
                     statusCode: reply.statusCode
 
-                }
+                };
             },
             req(request) {
                 return {
@@ -25,13 +25,13 @@ const app = require('fastify')({
                     headers: request.headers,
                     params: request.params,
                     body: request.body,
-                    query: request.query,
-                    /*                     
+                    query: request.query
+                    /*
                     hostname: request.hostname,
                     remoteAddress: request.ip,
                     remotePort: request.socket.remotePort,
                     routerMethod: request.routerMethod,
-                    routerPath: request.routerPath 
+                    routerPath: request.routerPath
                     */
                 };
             }
@@ -42,8 +42,8 @@ const app = require('fastify')({
         allowHTTP1: true,
         key: cert.key,
         cert: cert.cert
-    },
-})
+    }
+});
 
 const database = require('./engine/database');
 const webinterface = require("./engine/webinterface");
@@ -52,7 +52,7 @@ module.exports = {
     app,
     database,
     webinterface
-}
+};
 
 const { DatabaseLoader } = require("./engine/databaseLoader");
 DatabaseLoader.loadDatabase();
@@ -67,30 +67,30 @@ app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (re
                     if (inflatedString.length > 0) {
                         var json = JSON.parse(inflatedString);
                         done(null, json);
-                        return
+                        return;
                     }
                     done(null, body);
-                    return
+                    return;
                 } else {
                     done(null, body);
-                    return
+                    return;
                 }
             });
         } catch (error) {
-            err.statusCode = 400
-            done(err, undefined)
+            err.statusCode = 400;
+            done(err, undefined);
             return;
         }
     } else {
         try {
-            var json = JSON.parse(body)
-            done(null, json)
+            var json = JSON.parse(body);
+            done(null, json);
         } catch (err) {
-            err.statusCode = 400
-            done(err, undefined)
+            err.statusCode = 400;
+            done(err, undefined);
         }
     }
-})
+});
 
 app.addContentTypeParser('*', (req, payload, done) => {
     const chunks = [];
@@ -105,7 +105,7 @@ app.addContentTypeParser('*', (req, payload, done) => {
 /**
 * Register Handler
 */
-app.register(require('./plugins/register.js'))
+app.register(require('./plugins/register.js'));
 
 
 
