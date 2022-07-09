@@ -1,23 +1,21 @@
-const { Ragfair, Trader} = require("../plugins/models");
+const { Trader } = require("../plugins/models");
+const { UtilityModel } = require("../plugins/models/UtilityModel");
 const { findChildren, logger } = require("../plugins/utilities");
 const database = require("../engine/database");
+const { padEnd } = require("lodash");
 const cloneDeep = require('rfdc')()
 
 
 class RagfairLoader {
 
-    static async loadRagfairDatabase() {
-        await this.loadRagfair();
-    }
-
 
     static async loadRagfair() {
 
-        let response = {
-            "categories": {},
-            "offers": [],
-            "offersCount": 100,
-            "selectedCategory": "5b5f78dc86f77409407a7f8e"
+        let ragfair = {
+            categories: {},
+            offers: [],
+            offersCount: 0,
+            selectedCategory: ""
         };
         let counter = 0;
 
@@ -55,13 +53,18 @@ class RagfairLoader {
                         }
                     }
 
-                    response.offers.push(await this.convertToRagfairAssort(itemsToSell, barter_scheme, loyal_level, traders[trader], counter));
+                    ragfair.offers.push(await this.convertToRagfairAssort(itemsToSell, barter_scheme, loyal_level, traders[trader], counter));
                     counter += 1;
                 }
             }
         }
         logger.logDebug(`[RAGFAIR] Generated ${counter} offers with all traders assort`);
-        database.ragfair_offers = response;
+        return ragfair;
+    }
+
+    static async convertItemsToRagfairAssort() {
+
+        
 
     }
 
