@@ -1,6 +1,6 @@
 const { database } = require("../../../app");
 const { Profile, Language, Account, Edition, Customization, Storage, Character, Health, Weaponbuild, Quest, Locale, Trader, Item } = require("../../models");
-const { getCurrentTimestamp, logger, FastifyResponse, writeFile, stringify, readParsed, payTrade } = require("../../utilities");
+const { generateUniqueId ,getCurrentTimestamp, logger, FastifyResponse, writeFile, stringify, readParsed, payTrade } = require("../../utilities");
 
 
 class GameController {
@@ -329,19 +329,19 @@ class GameController {
                 if (trader) {
                     const inventoryItem = await trader.getAssortItemByID(requestEntry.item);
                     if (inventoryItem) {
-                        templateItem = await Item.get(inventoryItem._tpl)
+                        templateItem = await Item.get(inventoryItem._tpl);
                     } else {
                         logger.logError(`Examine Request failed: Unable to find item database template of itemId ${requestEntry.item}`);
                         return false;
                     }
                 } else {
-                    logger.logError("Examine Request failed: Unable to get trader data.")
+                    logger.logError("Examine Request failed: Unable to get trader data.");
                     return false;
                 }
             } else {
                 const item = await playerProfile.character.getInventoryItemByID(requestEntry.item);
                 if (item) {
-                    templateItem = await Item.get(item._tpl)
+                    templateItem = await Item.get(item._tpl);
                 } else {
                     logger.logError(`Examine Request failed: Unable to find item database template of itemId ${requestEntry.item}`);
                     return false;
@@ -379,9 +379,37 @@ class GameController {
         const trader = await Trader.get(request.body.data[0].tid);
         const currency = await trader.getCurrency();
         const isPayed = await payTrade(playerProfile.character.Inventory, request.body.data[0].scheme_items, currency);
-        console.log()
-    }
+    };
 
+    static clientGameSplitItem = async (request = null, reply = null) => {
+        const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
+        const profileChanges = await playerProfile.getProfileChangesBase();
+        const pmc = await playerProfile.getPmc();
+        for (const item of playerProfile.character.Inventory.items) {
+            if (item._id === request.body.data[0].item) {
+                item.upd.StackObjectsCount -= request.body.data[0].count;
+                const idItem = await generateUniqueId();
+                profileChanges.profileChanges[pmc._id].items.new.push({
+                    _id: idItem,
+                    _tpl: item._tpl,
+                    upd: { StackObjectsCount: request.body.data[0].count }
+                });
+                pmc.Inventory.items.push({
+                    id: idItem,
+                    _tpl: item._tpl,
+                    parentId: request.body.data[0].container.id,
+                    slotId: request.body.data[0].container.container,
+                    location: request.body.data[0].container.location,
+                    upd: { StackObjectsCount: request.body.data[0].count }
+                });
+                break;
+            }
+        }
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody(profileChanges)
+        );
+    };
 
 }
 module.exports.GameController = GameController;

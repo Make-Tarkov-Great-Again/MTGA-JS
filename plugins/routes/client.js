@@ -85,6 +85,10 @@ module.exports = async function gameRoutes(app, _opts) {
             case "TradingConfirm":
                 await GameController.clientGameTradingConfirm(request, reply);
                 break;
+
+            case "Split":
+                await GameController.clientGameSplitItem(request, reply);
+                break;
             // more, MOOOOOOOOOOOOOOORE
             default:
                 logger.logWarning("Action " + action + " is not yet implemented.");
