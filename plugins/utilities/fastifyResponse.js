@@ -46,7 +46,7 @@ class FastifyResponse {
             return false;
         }
     }
-
+    
     // HTTP Data Processing functionality //
 
     static zlibJsonReply = async (reply, data) => {

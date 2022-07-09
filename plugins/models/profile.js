@@ -38,7 +38,7 @@ class Profile extends BaseModel {
             
             // This check needs to come first to see if profile is created, or it'll pop and error
             if (profile.character.length === 0) {
-                logger.logDebug(`[CLUSTER] Character for ${key} has not been created.`);
+                logger.logDebug(`[PROFILE] Character for ${key} has not been created.`);
                 break;
             }
 
@@ -92,6 +92,9 @@ class Profile extends BaseModel {
             this.saveStorage(),
             this.saveDialogue()
         ])
+
+        // Add code to check for failure
+        return true
     }
 
     async saveCharacter() {
@@ -103,27 +106,32 @@ class Profile extends BaseModel {
             if (fs.existsSync(await this.getCharacterPath())) {
                 // Check if the file was modified elsewhere
                 const statsPreSave = fs.statSync(await this.getCharacterPath());
-                if (statsPreSave.mtimeMs === database.fileAge[this.id].pmc) {
+                if (statsPreSave.mtimeMs === database.fileAge[this.id].character) {
                     // Compare the PMC character from server memory with the one saved on disk
                     const currentProfile = await this.character.dissolve();
                     const savedProfile = readParsed(await this.getCharacterPath());
                     if (stringify(currentProfile) !== stringify(savedProfile)) {
                         // Save the PMC character from memory to disk.
                         writeFile(await this.getCharacterPath(), stringify(currentProfile));
-                        logger.logSuccess(`[CLUSTER] Profile for AID ${this.id} was saved.`);
+                        logger.logSuccess(`[PROFILE] Character for AID ${this.id} was saved.`);
                     } else {
+                        logger.logWarning(`[PROFILE] Skipped saving character for AID ${this.id}.`);
                         // Skip save ?
                     }
                 } else {
+                    logger.logWarning(`[PROFILE] Character for AID ${this.id} requires reload.`);
                     // Recreate reload
                 }
             } else {
+                logger.logSuccess(`[PROFILE] Character for AID ${this.id} was saved in a newly created file.`);
                 // Save the PMC character from memory to disk.
                 writeFile(await this.getCharacterPath(), stringify(await this.character.dissolve()));
             }
             // Update the savedFileAge stored in memory for the character.json.
             const statsAfterSave = fs.statSync(await this.getCharacterPath());
-            database.fileAge[this.id].pmc = statsAfterSave.mtimeMs;
+            database.fileAge[this.id].character = statsAfterSave.mtimeMs;
+        } else {
+            logger.logError(`[PROFILE] Character for AID ${this.id} does not exist.`);
         }
 
     }
@@ -137,14 +145,14 @@ class Profile extends BaseModel {
             if (fs.existsSync(await this.getStoragePath())) {
                 // Check if the file was modified elsewhere
                 let statsPreSave = fs.statSync(await this.getStoragePath());
-                if (statsPreSave.mtimeMs == database.fileAge[this.id].pmc) {
+                if (statsPreSave.mtimeMs == database.fileAge[this.id].storage) {
                     // Compare the PMC storage from server memory with the one saved on disk
                     let currentProfile = await this.storage;
                     let savedProfile = readParsed(await this.getStoragePath());
                     if (stringify(currentProfile) !== stringify(savedProfile)) {
                         // Save the PMC storage from memory to disk.
                         writeFile(await this.getStoragePath(), stringify(currentProfile));
-                        logger.logSuccess(`[CLUSTER] Profile for AID ${sessionID} was saved.`);
+                        logger.logSuccess(`[PROFILE] Storage for AID ${this.id} was saved.`);
                     } else {
                         // Skip save ?
                     }
@@ -157,7 +165,7 @@ class Profile extends BaseModel {
             }
             // Update the savedFileAge stored in memory for the storage.json.
             let statsAfterSave = fs.statSync(await this.getStoragePath());
-            database.fileAge[this.id].pmc = statsAfterSave.mtimeMs;
+            database.fileAge[this.id].storage = statsAfterSave.mtimeMs;
         }
 
     }
@@ -184,7 +192,7 @@ class Profile extends BaseModel {
                     // Reset the file age for the sessions dialogues.
                     let stats = fs.statSync(dialoguePath);
                     database.fileAge[this.id].dialogues = stats.mtimeMs;
-                    logger.logSuccess(`[CLUSTER] Dialogues for AID ${this.id} was saved.`);
+                    logger.logSuccess(`[PROFILE] Dialogues for AID ${this.id} was saved.`);
                 }
             } else {
                 // Fix reloading dialogues
@@ -196,7 +204,7 @@ class Profile extends BaseModel {
             // Reset the file age for the sessions dialogues.
             let stats = fs.statSync(dialoguePath);
             database.fileAge[this.id].dialogues = stats.mtimeMs;
-            logger.logSuccess(`[CLUSTER] Dialogues for AID ${this.id} was created and saved.`);
+            logger.logSuccess(`[PROFILE] Dialogues for AID ${this.id} was created and saved.`);
         }
     }
 
@@ -284,6 +292,39 @@ class Profile extends BaseModel {
             }
         }
         return "Locked";
+    }
+
+    async getProfileChangesBase() {
+        let profileChangesBase = {
+            warnings: [],
+            profileChanges: {},
+        };
+
+        profileChangesBase.profileChanges[this.character._id] = {
+            _id: this.character._id,
+            experience: 0,
+            quests: [], // are those current accepted quests ??
+            ragFairOffers: [], // are those current ragfair requests ?
+            builds: [], // are those current weapon builds ??
+            items: { change: [], new: [], del: [] },
+            production: null,
+            skills: {},
+            traderRelations: {}, //_profile.TradersInfo
+        };
+
+        return profileChangesBase;
+    }
+
+    async getProfileChangesResponse(profileChanges) {
+        if(!profileChanges) {
+            return false;
+        }
+
+        let outputData = await this.getProfileChangesBase();
+        let mergedData = Object.assign({}, outputData.profileChanges[this.character._id], profileChanges)
+        outputData.profileChanges[this.character._id] = mergedData;
+
+        return outputData;
     }
 }
 
