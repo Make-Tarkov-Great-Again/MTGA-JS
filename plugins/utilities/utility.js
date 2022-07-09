@@ -134,26 +134,39 @@ const payTrade = async (playerInventory, body, currency=null) => {
     }
 }
 
-//const splitStack = async (item) => {
-//    if (!("upd" in item) || !("StackObjectsCount" in item.upd)) {
-//        return [item];
-//    }
-//
-//    const maxStack = global._database.items[item._tpl]._props.StackMaxSize;
-//    let count = item.upd.StackObjectsCount;
-//    let stacks = [];
-//
-//    while (count) {
-//        let amount = Math.min(count, maxStack);
-//        let newStack = clone(item);
-//
-//        newStack.upd.StackObjectsCount = amount;
-//        count -= amount;
-//        stacks.push(newStack);
-//    }
-//
-//    return stacks;
-//}
+const findAndReturnChildrenByItems = async (items, itemId) => {
+    let list = [];
+
+    for (let childitem of items) {
+        if (childitem.parentId === itemID) {
+        list.push.apply(list, findAndReturnChildrenByItems(items, childitem._id));
+        }
+    }
+
+    list.push(itemID); // it's required
+    return list;
+}
+
+/**const splitStack = async (item) => {
+    if (!("upd" in item) || !("StackObjectsCount" in item.upd)) {
+        return [item];
+    }
+
+    const maxStack = global._database.items[item._tpl]._props.StackMaxSize;
+    let count = item.upd.StackObjectsCount;
+    let stacks = [];
+
+    while (count) {
+        let amount = Math.min(count, maxStack);
+        let newStack = clone(item);
+
+        newStack.upd.StackObjectsCount = amount;
+        count -= amount;
+        stacks.push(newStack);
+    }
+
+    return stacks;
+}*/
 
 
 module.exports = {
@@ -167,5 +180,6 @@ module.exports = {
     clearString,
     isUndefined,
     findChildren,
-    payTrade
+    payTrade,
+    findAndReturnChildrenByItems
 };
