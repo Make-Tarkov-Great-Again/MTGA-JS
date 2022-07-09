@@ -1,4 +1,5 @@
 const fs = require('fs');
+const { Ragfair } = require('../plugins/models');
 const { UtilityModel } = require('../plugins/models/UtilityModel');
 const {
     logger, readParsed, fileExist, stringify,
@@ -129,21 +130,7 @@ class DatabaseLoader {
 
     static async loadRagfair() {
         const database = require('./database');
-        const data = await RagfairLoader.loadRagfair();
-
-        let ragfair = {
-            categories: {},
-            offers: [],
-            offersCount: 0,
-            selectedCategory: ""
-        };
-
-        database.ragfair = await UtilityModel.createModelFromParse("Ragfair", ragfair);
-        for (const [index, area] of Object.entries(hideoutAreas)) {
-            await UtilityModel.createModelFromParseWithID('HideoutArea', index, area);
-        }
-
-
+        const data = await Ragfair.initialize();
 
     }
 

@@ -9,30 +9,30 @@ class Ragfair extends BaseModel {
     }
 
     static async initialize() {
-        const items = Item.getAll();
+        const items = await Item.getAll();
 
         let filteredItems = [];
-        let bannedItems = [ "Pockets"];
+    
+        const bannedItems = [ "Pockets",  "MobContainer",  "LootContainer" ];
 
-        for (let item of items) {
-            if (item._type == "Node") {
-                bannedItems.push(item._id);
-                continue;
+        for (const item in items) {
+            switch (true) {
+                case items[item]._type === "Node":
+                    continue;
+                case items[item]._name.includes(bannedItems):
+                    continue;
+                case items[item]._props.CanSellOnRagfair === true:
+                    filteredItems.push(items[item]);
             }
-            else (bannedItems.includes(item._name)) {
-                if (bannedItems.includes(item._name)) {
-                filteredItems.push(item);}
         }
-
+        return filteredItems;
     }
 
-    static async convertItemsToRagfairAssort() {}
+    //static async convertItemsToRagfairAssort() {}
 
-    static async createItemUpd() {
+    //static async createItemUpd() {}
 
-    }
-
-    static async convertItemToRagfairAssort(item, StackObjectsCount) {
+/*     static async convertItemToRagfairAssort(item, StackObjectsCount) {
         let convertedItem = {
             _id: "",
             _tpl: "",
@@ -54,7 +54,7 @@ class Ragfair extends BaseModel {
         let loyal_level_items[itemId] = 0;
 
 
-    }
+    } */
 
 
     static async sortOffers(request, offers) {
