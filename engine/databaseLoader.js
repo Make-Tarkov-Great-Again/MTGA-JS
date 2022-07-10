@@ -28,8 +28,8 @@ class DatabaseLoader {
         await this.loadAccounts();
         await this.loadProfiles();
         await this.loadQuests();
-        await this.loadRagfair();
         await this.loadPresets();
+        await this.loadRagfair();
     }
 
     /**
