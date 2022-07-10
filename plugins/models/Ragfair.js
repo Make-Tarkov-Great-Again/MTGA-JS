@@ -1,6 +1,7 @@
 const { BaseModel } = require("./BaseModel");
 const { Item } = require("./Item");
 const { Trader } = require("./Trader");
+const { Preset } = require("./Preset");
 
 const {
     FastifyResponse, generateUniqueId, getCurrentTimestamp,
@@ -22,38 +23,27 @@ class Ragfair extends BaseModel {
 
     }
 
-    async initialize() {
-        const items = await Item.getAll();
-
+    async filterItemList(items) {
         let filteredItems = [];
-        let counter = 0;
-
-        const bannedItems =
-            [
-                "Pockets",
-                "Shrapnel",
-                "QuestRaidStash",
-                "QuestOfflineStash",
-                "stash 10x300",
-                "Standard stash 10x28",
-                "Prepare for escape stash 10x48",
-                "Left Behind stash 10x38",
-                "Edge of darkness stash 10x68",
-                "Стандартный инвентарь" //default inventory
-            ];
+        const bannedItems = await Item.bannedItems();
+        
 
         for (const item in items) {
             switch (true) {
                 case items[item]._type === "Node":
                 case items[item]._props.Name.includes(bannedItems):
-                    counter += 1;
                     continue;
                 case items[item]._props.CanSellOnRagfair === true:
                     filteredItems.push(items[item]);
             }
         }
-        logger.logSuccess(`[RAGFAIR]: ${filteredItems.length} items loaded; ${counter} items filtered.`);
+        return filteredItems;
+    }
 
+    async initialize() {
+        const items = await Item.getAll();
+        const filteredItems = await this.filterItemList(items);
+        
         await this.addExampleItem();
         //return filteredItems;
     }
@@ -81,10 +71,6 @@ class Ragfair extends BaseModel {
             default:
                 console.log("[RAGFAIR]: Unknown slotId: " + parent);
         }
-    }
-
-    async findPresetAndReturn(item){
-
     }
 
     async getCurrencyTemplate(currency, amount) {
