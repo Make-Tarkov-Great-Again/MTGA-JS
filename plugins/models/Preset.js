@@ -1,5 +1,6 @@
 const { BaseModel } = require("./BaseModel");
 const database = require("../../engine/database");
+const { logger } = require("../utilities");
 
 class Preset extends BaseModel {
     constructor(id) {
@@ -9,7 +10,7 @@ class Preset extends BaseModel {
     }
 
     /**
-     * Create weapon Preset database
+     * Create item Preset database
      * @returns 
      */
     static async initialize() {
@@ -22,39 +23,38 @@ class Preset extends BaseModel {
             if (!(tpl in reverse)) {
                 reverse[tpl] = [];
             }
-            // weaponID[presetID] = preset database
+            // item[presetID] = preset database
             reverse[tpl][preset._id] = preset;
         }
         return reverse;
     }
 
     /**
-     * Check if Preset exists for a weapon
-     * @param {*} weaponID // ID of weapon to check
+     * Check if Preset exists for a item
+     * @param {*} item // ID of item to check
      * @returns 
      */
-    static async weaponHasPreset(weaponID) {
-        return weaponID in await this.getAll();
+    static async itemHasPreset(item) {
+        const presets = await this.getAllPresets();
+        return item in presets;
     }
 
     /**
-     * Get all available Presets for a weapon
-     * @param {*} weaponID // ID of weapon to check
+     * Get all available Presets for a item
+     * @param {*} item // ID of item to check
      * @returns 
      */
-    static async getPresetsForWeapon(weaponID) {
-        if (await this.weaponHasPreset(weaponID)) {
-            const presets = await this.getAll();
-            return presets[weaponID];
-        }
+    static async getPresetsForItem(item) {
+        const presets = await this.getAllPresets();
+        return presets[item];
     }
 
     /**
-     * Get all available Presets for each weapon
+     * Get all available Presets for each item
      * @returns 
      */
-    static async getAllPresets(){
-        return this.getAll();
+    static async getAllPresets() {
+        return await this.getAll();
     }
 
     /**
@@ -64,14 +64,14 @@ class Preset extends BaseModel {
      */
     static async getPresetWithPresetId(presetID) {
         const presets = await this.getAllPresets();
-        for (const weapon in presets) {
-            if (presetID in presets[weapon]) {
-                return presets[weapon][presetID];
+        for (const item in presets) {
+            if (presetID in presets[item]) {
+                return presets[item][presetID];
             }
         }
     }
 
-    static async createCustomPreset(){
+    static async createCustomPreset() {
         return "your mom gay"
     }
 }

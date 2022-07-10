@@ -43,8 +43,30 @@ class Ragfair extends BaseModel {
         const items = await Item.getAll();
         const filteredItems = await this.bannedItemFilter(items);
 
+        //check filtered items for Presets and return them
+        for (const i in filteredItems) {
+            const item = filteredItems[i];
+            if (await Preset.itemHasPreset(item._id)) {
+                const relatives = await Preset.getPresetsForItem(item._id)
+                console.log(relatives);
+            }
+        }
+
+
         await this.addExampleItem();
         //return filteredItems;
+    }
+
+    async getChildrenReadyForChurch() {
+        /* 
+        let child = {
+            _id: await generateUniqueId(),
+            _tpl: ""
+            parentId: ""
+            slotId: ""
+        } 
+        */
+        return "your mom gay"
     }
 
     async getSlotIdFromParent(item) {
@@ -125,10 +147,6 @@ class Ragfair extends BaseModel {
             _tpl: templateId
         }
         return this.addItem(user, tempItem, requirements, amount, childItems, sellInOnePiece, loyaltyLevel);
-    }
-
-    async createChildItem() {
-        return "your mom gay"
     }
 
     /**
