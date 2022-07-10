@@ -23,10 +23,9 @@ class Ragfair extends BaseModel {
 
     }
 
-    async filterItemList(items) {
+    async bannedItemFilter(items) {
         let filteredItems = [];
         const bannedItems = await Item.bannedItems();
-        
 
         for (const item in items) {
             switch (true) {
@@ -42,8 +41,8 @@ class Ragfair extends BaseModel {
 
     async initialize() {
         const items = await Item.getAll();
-        const filteredItems = await this.filterItemList(items);
-        
+        const filteredItems = await this.bannedItemFilter(items);
+
         await this.addExampleItem();
         //return filteredItems;
     }
@@ -109,6 +108,17 @@ class Ragfair extends BaseModel {
         return false;
     }
 
+    /**
+     * 
+     * @param {*} user 
+     * @param {*} templateId 
+     * @param {*} requirements 
+     * @param {*} amount 
+     * @param {*} childItems 
+     * @param {*} sellInOnePiece 
+     * @param {*} loyaltyLevel 
+     * @returns 
+     */
     async addItemByTemplateId(user, templateId, requirements, amount, childItems = undefined, sellInOnePiece = false, loyaltyLevel = undefined) {
         let tempItem = {
             _id: await generateUniqueId(),
@@ -117,6 +127,20 @@ class Ragfair extends BaseModel {
         return this.addItem(user, tempItem, requirements, amount, childItems, sellInOnePiece, loyaltyLevel);
     }
 
+    async createChildItem() {
+        return "your mom gay"
+    }
+
+    /**
+     * 
+     * @param {*} user 
+     * @param {*} parentItem 
+     * @param {*} requirements 
+     * @param {*} amount 
+     * @param {*} childItems 
+     * @param {*} sellInOnePiece 
+     * @param {*} loyaltyLevel 
+     */
     async addItem(user, parentItem, requirements, amount, childItems = undefined, sellInOnePiece = false, loyaltyLevel = undefined) {
         let offer = {}
 
@@ -228,16 +252,11 @@ class Ragfair extends BaseModel {
     }
 
     async getOffers(request) {
-        return await Ragfair.getAll();
-        const sessionID = await FastifyResponse.getSessionID(request);
-
-        if (request.offerOwnerType === 1) {
-            return await this.getOffersFromTraders(request, sessionID);
-        }
+        return "your mom gay"
     }
 
     static async getOffersFromTraders(request, sessionID) {
-
+        return "your mom gay"
     }
 
 
