@@ -38,24 +38,27 @@ class Preset extends BaseModel {
     }
 
     /**
-     * Get all Presets for a weapon
+     * Get all available Presets for a weapon
      * @param {*} weaponID // ID of weapon to check
      * @returns 
      */
-    static async getPresetsWithWeaponId(weaponID) {
+    static async getPresetsForWeapon(weaponID) {
         if (await this.weaponHasPreset(weaponID)) {
             const presets = await this.getAll();
             return presets[weaponID];
         }
     }
 
+    /**
+     * Get all available Presets for each weapon
+     * @returns 
+     */
     static async getAllPresets(){
         return this.getAll();
     }
 
     /**
      * Get Preset with PresetID
-     * @param {*} weaponID 
      * @param {*} presetID 
      * @returns 
      */
