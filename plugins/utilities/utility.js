@@ -5,9 +5,9 @@ const { logDebug, log } = require('./logger');
  * @param {string} prefix
  * @returns Unique ID as string
  */
-const generateUniqueId = async (prefix = "") => {
+const generateUniqueId = async (prefix = "", idLength = 21) => {
     const { customAlphabet } = await import('nanoid');
-    const nanoid = customAlphabet('abcdefghijklmnopqrstuvwxyz123456789ABCDEFGHYJKLMNOPQRSTUVWXYZ', 21);
+    const nanoid = customAlphabet('abcdefghijklmnopqrstuvwxyz123456789ABCDEFGHYJKLMNOPQRSTUVWXYZ', idLength);
     return `${prefix}${nanoid()}`;
 }
 
