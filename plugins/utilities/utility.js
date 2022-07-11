@@ -1,4 +1,4 @@
-const { logDebug, log } = require('./logger');
+const logger = require('./logger');
 
 
 /** Generate Unique ID used in the server by using nanoid
@@ -106,7 +106,7 @@ const payTrade = async (playerInventory, body, currency=null) => {
         }
 
         if (!moneyFiltered || totalPlayerMoney < body[0].count) {
-            logDebug("Boy you poor as fuck");
+            logger.logDebug("Boy you poor as fuck");
             return false;
         }
 
@@ -132,7 +132,7 @@ const payTrade = async (playerInventory, body, currency=null) => {
 
         console.log()
     } else {
-        logDebug("That's barter, barter not done yet, pay me Leffe and I'll do it");
+        logger.logDebug("That's barter, barter not done yet, pay me Leffe and I'll do it");
     }
 }
 
