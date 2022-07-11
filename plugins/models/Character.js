@@ -145,9 +145,12 @@ class Character extends BaseModel {
     // EXP //
 
     async getExperience() {
+        if(!this.Info.Experience) {
+            this.Info.Experience = 0;
+        }
         return this.Info.Experience;
     }
-    
+
     async addExperience(experiencePoints) {
         // Required! This will create the object as an integer, otherwise the response will error out.
         if(!this.Info.Experience) {

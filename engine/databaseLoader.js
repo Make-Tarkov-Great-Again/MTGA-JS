@@ -279,11 +279,11 @@ class DatabaseLoader {
     static async loadProfiles() {
         const { database } = require('../app');
         for (const profileID of getDirectoriesFrom('/user/profiles')) {
-            let profile = await UtilityModel.createModelFromParseWithID("Profile", profileID, {
+            const profile = await UtilityModel.createModelFromParseWithID("Profile", profileID, {
                 character: [],
                 storage: {},
                 userbuilds: {},
-                dialogues: {},
+                dialogues: {}
             });
             const path = `./user/profiles/${profileID}/`;
             let stats;
@@ -298,7 +298,7 @@ class DatabaseLoader {
 
             if (fileExist(`${path}storage.json`)) {
                 logger.logWarning(`Loading storage data for profile ${profileID}`);
-                let parsedStorage = readParsed("./user/profiles/" + profileID + "/storage.json")
+                let parsedStorage = readParsed("./user/profiles/" + profileID + "/storage.json");
                 if (typeof parsedStorage.data != "undefined") { parsedStorage = parsedStorage.data; }
                 profile.storage = parsedStorage;
 
@@ -311,7 +311,7 @@ class DatabaseLoader {
 
                 let parsedBuilds = readParsed("./user/profiles/" + profileID + "/userbuilds.json");
                 if (typeof parsedBuilds.data != "undefined") { parsedBuilds = parsedBuilds.data; }
-                profile.userbuilds = await UtilityModel.createCollectionFromParse("Userbuild", parsedBuilds)
+                profile.userbuilds = await UtilityModel.createCollectionFromParse("Userbuild", parsedBuilds);
 
                 stats = fs.statSync(`./user/profiles/${profileID}/userbuilds.json`);
                 database.fileAge[profileID].userbuilds = stats.mtimeMs;
@@ -322,7 +322,7 @@ class DatabaseLoader {
 
                 let parsedDialogues = readParsed("./user/profiles/" + profileID + "/dialogue.json");
                 if (typeof parsedDialogues.data != "undefined") { parsedDialogues = parsedDialogues.data; }
-                profile.dialogues = await UtilityModel.createCollectionFromParse("Dialogue", parsedDialogues)
+                profile.dialogues = await UtilityModel.createCollectionFromParse("Dialogue", parsedDialogues);
 
                 stats = fs.statSync(`./user/profiles/${profileID}/dialogue.json`);
                 database.fileAge[profileID].dialogues = stats.mtimeMs;

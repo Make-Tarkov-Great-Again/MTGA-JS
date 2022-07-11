@@ -1,7 +1,8 @@
 const { database } = require("../../app");
 const { ClientController, GameController, MenuController, TradingController, FriendController } = require("../controllers/client");
-const { Weaponbuild, Ragfair } = require("../models");
+const { Weaponbuild, Ragfair, Profile } = require("../models");
 const { logger, FastifyResponse } = require("../utilities");
+const { logDebug } = require("../utilities/logger");
 
 module.exports = async function gameRoutes(app, _opts) {
 
@@ -113,13 +114,15 @@ module.exports = async function gameRoutes(app, _opts) {
     // Client Profile Routes //
     app.post("/client/profile/status", async (request, reply) => {
         const sessionID = await FastifyResponse.getSessionID(request);
+        const playerProfile = await Profile.get(sessionID);
+        const playerPMC = await playerProfile.getPmc();
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody({
                 maxPveCountExceeded: false,
                 profiles: [
                     {
-                        profileid: "scav" + sessionID,
+                        profileid: playerPMC.savage,
                         profileToken: null,
                         status: "Free",
                         sid: "",
@@ -127,7 +130,7 @@ module.exports = async function gameRoutes(app, _opts) {
                         port: 0
                     },
                     {
-                        profileid: "pmc" + sessionID,
+                        profileid: playerPMC._id,
                         profileToken: null,
                         status: "Free",
                         sid: "",

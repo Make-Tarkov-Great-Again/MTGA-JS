@@ -311,7 +311,7 @@ class Profile extends BaseModel {
             items: { change: [], new: [], del: [] },
             production: null,
             skills: {},
-            traderRelations: {} //_profile.TradersInfo
+            traderRelations: [] //_profile.TradersInfo
         };
 
         return profileChangesBase;

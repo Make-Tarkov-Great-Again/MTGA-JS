@@ -181,9 +181,10 @@ class GameController {
 
         const profile = new Profile(playerAccount.id);
         const character = await playerAccount.edition.getCharacterTemplateBySide(chosenSide);
-        character._id = "pmc" + playerAccount.id;
+        const newID = await generateUniqueId();
+        character._id = "pmc" + newID;
         character.aid = playerAccount.id;
-        character.savage = "scav" + playerAccount.id;
+        character.savage = "scav" + newID;
         character.Info = {};
         character.Info.Side = chosenSideCapital;
         character.Info.Nickname = request.body.nickname;
@@ -402,6 +403,7 @@ class GameController {
                     location: request.body.data[0].container.location,
                     upd: { StackObjectsCount: request.body.data[0].count }
                 });
+                await playerProfile.save();
                 break;
             }
         }
