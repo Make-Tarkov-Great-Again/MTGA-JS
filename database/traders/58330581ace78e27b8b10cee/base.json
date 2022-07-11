@@ -17,7 +17,7 @@
     "nextResupply": 1631487786,
     "repair": {
         "availability": true,
-        "quality": "1",
+        "quality": 1,
         "excluded_id_list": [],
         "excluded_category": [],
         "currency": "5449016a4bdc2d6f028b456f",
@@ -55,7 +55,7 @@
             "heal_price_coef": 0
         },
         {
-            "minLevel": "28",
+            "minLevel": 28,
             "minSalesSum": 1600000,
             "minStanding": 0.4,
             "buy_price_coef": 51,
@@ -65,7 +65,7 @@
             "heal_price_coef": 0
         },
         {
-            "minLevel": "38",
+            "minLevel": 38,
             "minSalesSum": 2600000,
             "minStanding": 0.75,
             "buy_price_coef": 51,
