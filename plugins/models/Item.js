@@ -7,7 +7,7 @@ class Item extends BaseModel {
         this.createDatabase(id);
     }
 
-    static async bannedItems(){
+    static async bannedItems() {
         return [
             "Pockets",
             "Shrapnel",
@@ -20,6 +20,15 @@ class Item extends BaseModel {
             "Edge of darkness stash 10x68",
             "Стандартный инвентарь" //default inventory
         ];
+    }
+
+    static async generatePriceTable(templatesItems) {
+        let priceTable = {};
+        for (const item of templatesItems) {
+            if (item.Price === 0) continue;
+            priceTable[item.Id] = item.Price;
+        }
+        return priceTable;
     }
 }
 
