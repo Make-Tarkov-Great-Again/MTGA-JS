@@ -17,7 +17,7 @@
     "nextResupply": 1631488848,
     "repair": {
         "availability": false,
-        "quality": "0",
+        "quality": 0,
         "excluded_id_list": [],
         "excluded_category": [
             "5447e1d04bdc2dff2f8b4567"
@@ -52,29 +52,29 @@
             "minStanding": 0.15,
             "buy_price_coef": 37,
             "repair_price_coef": 0,
-            "insurance_price_coef": "24",
+            "insurance_price_coef": 24,
             "exchange_price_coef": 0,
-            "heal_price_coef": "110"
+            "heal_price_coef": 110
         },
         {
-            "minLevel": "24",
+            "minLevel": 24,
             "minSalesSum": 700000,
             "minStanding": 0.3,
             "buy_price_coef": 37,
             "repair_price_coef": 0,
-            "insurance_price_coef": "28",
+            "insurance_price_coef": 28,
             "exchange_price_coef": 0,
-            "heal_price_coef": "120"
+            "heal_price_coef": 120
         },
         {
-            "minLevel": "35",
+            "minLevel": 35,
             "minSalesSum": 900000,
             "minStanding": 0.6,
             "buy_price_coef": 37,
             "repair_price_coef": 0,
-            "insurance_price_coef": "32",
+            "insurance_price_coef": 32,
             "exchange_price_coef": 0,
-            "heal_price_coef": "135"
+            "heal_price_coef": 135
         }
     ],
     "sell_category": [
