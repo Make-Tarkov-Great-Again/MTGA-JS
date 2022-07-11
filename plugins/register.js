@@ -11,17 +11,6 @@ module.exports = fp(async function (app, _opts) {
    */
   await app.register(require('@fastify/compress'));
 
-
-  /**
-   * A plugin for Fastify that adds support
-   * for reading and setting cookies.
-   * @see https://github.com/fastify/fastify-cookie
-  */
-  await app.register(require("@fastify/cookie"), {
-    secret: 'urmomisawesome',
-    parseOptions: {}
-  });
-
   /**
    * A simple plugin for Fastify that adds a content type parser
    * for the content type application/x-www-form-urlencoded.
