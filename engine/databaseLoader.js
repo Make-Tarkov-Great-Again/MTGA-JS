@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { Ragfair, Preset } = require('../plugins/models');
+const { Ragfair, Preset, Item } = require('../plugins/models');
 const { UtilityModel } = require('../plugins/models/UtilityModel');
 const {
     logger, readParsed, fileExist, stringify,
@@ -19,7 +19,6 @@ class DatabaseLoader {
             this.loadLocales(),
             this.loadTemplates(),
             this.loadTraders(),
-            //this.loadBots(),
             this.loadCustomization(),
             this.loadLocations(),
             // Model Data //
@@ -104,7 +103,8 @@ class DatabaseLoader {
 
         database.templates = {
             "Categories": templatesData.Categories,
-            "Items": templatesData.Items
+            "Items": templatesData.Items,
+            "PriceTable": await Item.generatePriceTable(templatesData.Items)
         };
     }
 

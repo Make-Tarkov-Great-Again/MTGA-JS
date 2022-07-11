@@ -2,6 +2,7 @@ const { BaseModel } = require("./BaseModel");
 const { Item } = require("./Item");
 const { Trader } = require("./Trader");
 const { Preset } = require("./Preset");
+const { tail } = require("lodash");
 
 const {
     FastifyResponse, generateUniqueId, getCurrentTimestamp,
@@ -47,8 +48,11 @@ class Ragfair extends BaseModel {
         for (const i in filteredItems) {
             const item = filteredItems[i];
             if (await Preset.itemHasPreset(item._id)) {
-                const relatives = await Preset.getPresetsForItem(item._id)
-                console.log(relatives);
+                const preset = await Preset.getPresetsForItem(item._id)
+                for (const p in preset) {
+                    const family = preset[p]._items
+                    //console.log(family)
+                }
             }
         }
 
@@ -130,17 +134,6 @@ class Ragfair extends BaseModel {
         return false;
     }
 
-    /**
-     * 
-     * @param {*} user 
-     * @param {*} templateId 
-     * @param {*} requirements 
-     * @param {*} amount 
-     * @param {*} childItems 
-     * @param {*} sellInOnePiece 
-     * @param {*} loyaltyLevel 
-     * @returns 
-     */
     async addItemByTemplateId(user, templateId, requirements, amount, childItems = undefined, sellInOnePiece = false, loyaltyLevel = undefined) {
         let tempItem = {
             _id: await generateUniqueId(),
@@ -149,16 +142,6 @@ class Ragfair extends BaseModel {
         return this.addItem(user, tempItem, requirements, amount, childItems, sellInOnePiece, loyaltyLevel);
     }
 
-    /**
-     * 
-     * @param {*} user 
-     * @param {*} parentItem 
-     * @param {*} requirements 
-     * @param {*} amount 
-     * @param {*} childItems 
-     * @param {*} sellInOnePiece 
-     * @param {*} loyaltyLevel 
-     */
     async addItem(user, parentItem, requirements, amount, childItems = undefined, sellInOnePiece = false, loyaltyLevel = undefined) {
         let offer = {}
 
