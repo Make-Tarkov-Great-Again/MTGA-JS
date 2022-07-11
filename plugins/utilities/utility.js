@@ -1,12 +1,14 @@
 const { logDebug, log } = require('./logger');
 
+
 /** Generate Unique ID used in the server by using nanoid
- * @param {string} prefix 
+ * @param {string} prefix
  * @returns Unique ID as string
  */
 const generateUniqueId = async (prefix = "") => {
-    const { nanoid } = await import('nanoid');
-    return `${prefix}-${nanoid()}`;
+    const { customAlphabet } = await import('nanoid');
+    const nanoid = customAlphabet('abcdefghijklmnopqrstuvwxyz123456789ABCDEFGHYJKLMNOPQRSTUVWXYZ', 21);
+    return `${prefix}${nanoid()}`;
 }
 
 /**Check if the given value is undefined
