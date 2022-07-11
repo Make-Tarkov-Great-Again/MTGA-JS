@@ -61,6 +61,10 @@ class Ragfair extends BaseModel {
         //return filteredItems;
     }
 
+    async prepareOfferCreation(itemId){
+        return "if single item, make single item. if parent item, make preset item"
+    }
+
     async getChildrenReadyForChurch() {
         /* 
         let child = {
