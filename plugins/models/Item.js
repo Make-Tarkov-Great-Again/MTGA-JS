@@ -30,6 +30,12 @@ class Item extends BaseModel {
         }
         return priceTable;
     }
+
+    static async getItemPrice(itemId) {
+        const database = require("../../engine/database");
+        const priceTable = database.templates.PriceTable
+        return priceTable[itemId];
+    }
 }
 
 module.exports.Item = Item;
