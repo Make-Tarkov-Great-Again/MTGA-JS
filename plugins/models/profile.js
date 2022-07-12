@@ -330,7 +330,7 @@ class Profile extends BaseModel {
     }
 
     async removeItemFromProfile(itemId) {
-        const removeIds = findAndReturnChildrenByItems(this.getPmc(), itemId);
+        const removeIds = await findAndReturnChildrenByItems(this.getPmc(), itemId);
     }
 }
 
