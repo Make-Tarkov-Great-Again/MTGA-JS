@@ -389,7 +389,7 @@ class GameController {
         for (const item of playerProfile.character.Inventory.items) {
             if (item._id === request.body.data[0].item) {
                 item.upd.StackObjectsCount -= request.body.data[0].count;
-                const idItem = await generateUniqueId();
+                const idItem = await generateUniqueId("", 24);
                 profileChanges.profileChanges[pmc._id].items.new.push({
                     _id: idItem,
                     _tpl: item._tpl,
