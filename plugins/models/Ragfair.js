@@ -16,11 +16,11 @@ class Ragfair extends BaseModel {
     }
 
     async initialize() {
-        const items = await Item.getAll();
-        const filteredItems = await this.bannedItemFilter(items);
-        const assorts = await this.getRequiredTraderInformationToMakeFuckingOffer();
+        //will be used when we start creating offers from the Item database
+        /* const items = await Item.getAll();
+        const filteredItems = await this.bannedItemFilter(items); 
 
-        //check filtered items for Presets and return them
+        check filtered items for Presets and return them
         for (const i in filteredItems) {
             const item = filteredItems[i];
             if (await Preset.itemHasPreset(item._id)) {
@@ -31,10 +31,16 @@ class Ragfair extends BaseModel {
                 }
             }
         }
+        return filteredItems; */
 
-
-        await this.addExampleItem();
-        //return filteredItems;
+        let data = {
+            categories: {},
+            offers: [],
+            offersCount: 100,
+            selectedCategory: "5b5f78dc86f77409407a7f8e"
+        }
+        data.push(await this.formatTraderAssorts());
+        console.log("we made it?");
     }
 
     async bannedItemFilter(items) {
@@ -66,70 +72,90 @@ class Ragfair extends BaseModel {
             1); // add a vog to offers
     }
 
-    async getRequiredTraderInformationToMakeFuckingOffer() {
+    async formatTraderAssorts() {
         const traders = await Trader.getAll();
-        let data = {
-            "categories": {},
-            "offers": [], "offersCount": 100,
-            "selectedCategory": "5b5f78dc86f77409407a7f8e"
-        }
+        let offers = []
 
         for (const t in traders) {
             const trader = traders[t];
             const traderTemplate = await this.getTraderTemplate(trader.base.nickname);
-            const childlessList = readParsed(getAbsolutePathFrom(`/childlessList.json`));
 
             for (const item of trader.assort.items) {
                 if (item.slotId === "hideout") {
 
-                    let barter_scheme;
-                    let loyal_level;
-                    let itemsToSell = [];
+                    const required = await this.convertItemDataForRagfairConversion(item, trader.assort);
+                    const barter_scheme = required.barter;
+                    const loyal_level = required.loyal;
+                    const itemsToSell = required.items;
 
-                    if (childlessList.includes(item._id)) {
-                        itemsToSell.push(item);
-                    } else {
-                        let children = await findChildren(item._id, trader.assort.items)
-                        let parent = children.shift() //incase i need to use it later
-                        itemsToSell.push(parent, ...children);
-                    }
-
-                    for (const barter in trader.assort.barter_scheme) {
-                        if (item._id == barter) {
-                            barter_scheme = trader.assort.barter_scheme[barter][0];
-                            break;
-                        }
-                    }
-
-                    for (const loyal in trader.assort.loyal_level_items) {
-                        if (item._id == loyal) {
-                            loyal_level = trader.assort.loyal_level_items[loyal];
-                            break;
-                        }
-                    }
-
-                    this.createTraderOffer(traderTemplate, itemsToSell, barter_scheme, loyal_level);
+                    offers.push(await this.convertItemFromTraderToRagfairOffer(traderTemplate, itemsToSell, barter_scheme, loyal_level));
                 }
             }
         }
-        return assorts;
+        return offers;
     }
 
-    async createTraderOffer(traderTemplate, itemsToSell, barter_scheme, loyal_level) {
+    async convertItemDataForRagfairConversion(item, assort) {
+        let data = [];
+        const childlessList = readParsed(getAbsolutePathFrom(`/childlessList.json`));
+
+        if (childlessList.includes(item._id)) {
+            data.items = item;
+        } else {
+            data.items = await findChildren(item._id, assort.items);
+        }
+
+        for (const barter in assort.barter_scheme) {
+            if (item._id == barter) {
+                data.barter = assort.barter_scheme[barter][0];
+                break;
+            }
+        }
+
+        for (const loyal in assort.loyal_level_items) {
+            if (item._id == loyal) {
+                data.loyal = assort.loyal_level_items[loyal];
+                break;
+            }
+        }
+        return data;
+    }
+
+    async convertItemFromTraderToRagfairOffer(traderTemplate, itemsToSell, barter_scheme, loyal_level) {
 
         let offer = {}
-        let newId = await generateUniqueId();
 
-        offer._id = newId;
+        offer._id = await generateUniqueId();
         offer.intId = this.nextOfferId;
         offer.user = traderTemplate
-        offer.root = itemsToSell[0]._id;
-        offer.items = itemsToSell;
-        offer.requirements = barter_scheme;
+
+        let item = itemsToSell;
+        if (typeof itemsToSell[0] !== "undefined") {
+            item = itemsToSell[0];
+        }
+        offer.root = item._id;
+
+        offer.items = item;
+        delete offer.items.upd.BuyRestrictionMax;
+        if (typeof offer.items.upd.BuyRestrictionCurrent !== "undefined") {
+            offer.buyRestrictionMax = offer.items.upd.BuyRestrictionCurrent;
+            delete offer.items.upd.BuyRestrictionCurrent;
+        }
+
+
+        offer.requirements = barter_scheme[0];
+
+        offer.requirementsCost = barter_scheme[0].count //calculate
+        offer.itemsCost = barter_scheme[0].count; // calculate
+        offer.summaryCost = barter_scheme[0].count; // calculate
+        offer.sellInOnePiece = false;
+
+        const currentTime = Date.now();
+        offer.startTime = currentTime - 3600;
+        offer.endTime = currentTime + 3600;
         offer.loyaltyLevel = loyal_level;
 
         return offer;
-
     }
 
 
