@@ -81,13 +81,22 @@ const findChildren = async (idToFind, listToSearch) => {
     let foundChildren = [];
 
     for (const child of listToSearch) {
-        if (child.parentId !== undefined && child.parentId.includes(idToFind)) {
-            foundChildren.push.apply(foundChildren, await findChildren(child._id, listToSearch));
+        if (child._id === idToFind) {
+            foundChildren.push(child);
         }
 
-        if (child.parentId === idToFind
-            || child._id === idToFind) {
+        if (child.parentId === idToFind) {
             foundChildren.push(child);
+        }
+
+        for (const parent of foundChildren) {
+            if (parent._id !== child._id) {
+                if (parent._id === child.parentId) {
+                    if (!foundChildren.includes(child)) {
+                        foundChildren.push(child)
+                    }
+                }
+            }
         }
     }
     return foundChildren;
@@ -95,7 +104,7 @@ const findChildren = async (idToFind, listToSearch) => {
 
 // This bullshit handle both currency & barters
 // since I'm a lazy cunt I only did currency for now :)
-const payTrade = async (playerInventory, body, currency=null) => {
+const payTrade = async (playerInventory, body, currency = null) => {
     if (body.length === 1) {
         const moneyFiltered = playerInventory.items.filter((item) => {
             return item._tpl === currency;
@@ -141,7 +150,7 @@ const findAndReturnChildrenByItems = async (items, itemId) => {
 
     for (let childitem of items) {
         if (childitem.parentId === itemID) {
-        list.push.apply(list, findAndReturnChildrenByItems(items, childitem._id));
+            list.push.apply(list, findAndReturnChildrenByItems(items, childitem._id));
         }
     }
 
@@ -153,20 +162,20 @@ const findAndReturnChildrenByItems = async (items, itemId) => {
     if (!("upd" in item) || !("StackObjectsCount" in item.upd)) {
         return [item];
     }
-
+ 
     const maxStack = global._database.items[item._tpl]._props.StackMaxSize;
     let count = item.upd.StackObjectsCount;
     let stacks = [];
-
+ 
     while (count) {
         let amount = Math.min(count, maxStack);
         let newStack = clone(item);
-
+ 
         newStack.upd.StackObjectsCount = amount;
         count -= amount;
         stacks.push(newStack);
     }
-
+ 
     return stacks;
 }*/
 
