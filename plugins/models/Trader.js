@@ -17,7 +17,12 @@ class Trader extends BaseModel {
     }
 
     async getFilteredAssort(profile) {
-        const output = {nextResupply: 0, items: [], barter_scheme: {}, loyal_level_items: {}};
+        const output = {
+            nextResupply: 0,
+            items: [],
+            barter_scheme: {},
+            loyal_level_items: {}
+        };
         const loyalty = await profile.getLoyalty(this.base._id, this.base);
 
         const traderClone = await this.clone();
@@ -63,7 +68,7 @@ class Trader extends BaseModel {
 
     async getCurrency() {
         let currency;
-        switch(this.base.currency) {
+        switch (this.base.currency) {
             case "EUR":
                 currency = "569668774bdc2da2298b4568";
                 break;
@@ -79,7 +84,7 @@ class Trader extends BaseModel {
     async getPurchasesData(profile) {
         let currency;
         const output = [];
-        switch(this.base.currency) {
+        switch (this.base.currency) {
             case "EUR":
                 currency = "569668774bdc2da2298b4568";
                 break;
@@ -95,7 +100,7 @@ class Trader extends BaseModel {
             if (["544901bf4bdc2ddf018b456d", "5449016a4bdc2d6f028b456f", "569668774bdc2da2298b4568", "5696686a4bdc2da3298b456a"].includes(item._id)) {
                 continue;
             }
-            output[item._id] = [[{_tpl: currency, count: 1 }]];
+            output[item._id] = [[{ _tpl: currency, count: 1 }]];
         }
         return output;
     }
@@ -103,7 +108,7 @@ class Trader extends BaseModel {
     static async getTraderByName(traderName) {
         let traders = await Trader.getAll()
         for (const [index, trader] of Object.entries(traders)) {
-            if(trader.base.nickname === traderName) {
+            if (trader.base.nickname === traderName) {
                 return trader;
             }
         }

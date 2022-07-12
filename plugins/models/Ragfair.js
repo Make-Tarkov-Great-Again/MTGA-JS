@@ -2,11 +2,10 @@ const { BaseModel } = require("./BaseModel");
 const { Item } = require("./Item");
 const { Trader } = require("./Trader");
 const { Preset } = require("./Preset");
-const { tail } = require("lodash");
 
 const {
     FastifyResponse, generateUniqueId, getCurrentTimestamp,
-    logger, findChildren } = require("../utilities");
+    logger, findChildren, writeFile, readParsed, getAbsolutePathFrom } = require("../utilities");
 
 class Ragfair extends BaseModel {
     constructor() {
@@ -16,33 +15,10 @@ class Ragfair extends BaseModel {
         //await this.initialize();
     }
 
-    async addExampleItem() {
-        const trader = await this.getTraderTemplate("Prapor");
-        const USD = await this.getCurrencyTemplate("RUB", 5);
-        await this.addItemByTemplateId(trader, "5e340dcdcb6d5863cc5e5efb", USD, 150, undefined, false, 1); // add a vog to offers
-
-
-    }
-
-    async bannedItemFilter(items) {
-        let filteredItems = [];
-        const bannedItems = await Item.bannedItems();
-
-        for (const item in items) {
-            switch (true) {
-                case items[item]._type === "Node":
-                case items[item]._props.Name.includes(bannedItems):
-                    continue;
-                case items[item]._props.CanSellOnRagfair === true:
-                    filteredItems.push(items[item]);
-            }
-        }
-        return filteredItems;
-    }
-
     async initialize() {
         const items = await Item.getAll();
         const filteredItems = await this.bannedItemFilter(items);
+        const assorts = await this.getRequiredTraderInformationToMakeFuckingOffer();
 
         //check filtered items for Presets and return them
         for (const i in filteredItems) {
@@ -61,21 +37,101 @@ class Ragfair extends BaseModel {
         //return filteredItems;
     }
 
-    async prepareOfferCreation(itemId){
-        return "if single item, make single item. if parent item, make preset item"
+    async bannedItemFilter(items) {
+        let filteredItems = [];
+        const bannedItems = await Item.bannedItems();
+
+        for (const item in items) {
+            switch (true) {
+                case items[item]._type === "Node":
+                case items[item]._props.Name.includes(bannedItems):
+                    continue;
+                case items[item]._props.CanSellOnRagfair === true:
+                    filteredItems.push(items[item]);
+            }
+        }
+        return filteredItems;
     }
 
-    async getChildrenReadyForChurch() {
-        /* 
-        let child = {
-            _id: await generateUniqueId(),
-            _tpl: ""
-            parentId: ""
-            slotId: ""
-        } 
-        */
-        return "your mom gay"
+    async addExampleItem() {
+        const trader = await this.getTraderTemplate("Prapor");
+        const USD = await this.getCustomCurrencyTemplate("RUB", 5);
+        await this.addItemByTemplateId(
+            trader,
+            "5e340dcdcb6d5863cc5e5efb",
+            USD,
+            150,
+            undefined,
+            false,
+            1); // add a vog to offers
     }
+
+    async getRequiredTraderInformationToMakeFuckingOffer() {
+        const traders = await Trader.getAll();
+        let data = {
+            "categories": {},
+            "offers": [], "offersCount": 100,
+            "selectedCategory": "5b5f78dc86f77409407a7f8e"
+        }
+
+        for (const t in traders) {
+            const trader = traders[t];
+            const traderTemplate = await this.getTraderTemplate(trader.base.nickname);
+            const childlessList = readParsed(getAbsolutePathFrom(`/childlessList.json`));
+
+            for (const item of trader.assort.items) {
+                if (item.slotId === "hideout") {
+
+                    let barter_scheme;
+                    let loyal_level;
+                    let itemsToSell = [];
+
+                    if (childlessList.includes(item._id)) {
+                        itemsToSell.push(item);
+                    } else {
+                        let children = await findChildren(item._id, trader.assort.items)
+                        let parent = children.shift() //incase i need to use it later
+                        itemsToSell.push(parent, ...children);
+                    }
+
+                    for (const barter in trader.assort.barter_scheme) {
+                        if (item._id == barter) {
+                            barter_scheme = trader.assort.barter_scheme[barter][0];
+                            break;
+                        }
+                    }
+
+                    for (const loyal in trader.assort.loyal_level_items) {
+                        if (item._id == loyal) {
+                            loyal_level = trader.assort.loyal_level_items[loyal];
+                            break;
+                        }
+                    }
+
+                    this.createTraderOffer(traderTemplate, itemsToSell, barter_scheme, loyal_level);
+                }
+            }
+        }
+        return assorts;
+    }
+
+    async createTraderOffer(traderTemplate, itemsToSell, barter_scheme, loyal_level) {
+
+        let offer = {}
+        let newId = await generateUniqueId();
+
+        offer._id = newId;
+        offer.intId = this.nextOfferId;
+        offer.user = traderTemplate
+        offer.root = itemsToSell[0]._id;
+        offer.items = itemsToSell;
+        offer.requirements = barter_scheme;
+        offer.loyaltyLevel = loyal_level;
+
+        return offer;
+
+    }
+
 
     async getSlotIdFromParent(item) {
         const parent = item._parent
@@ -102,8 +158,9 @@ class Ragfair extends BaseModel {
         }
     }
 
-    async getCurrencyTemplate(currency, amount) {
+    async getCustomCurrencyTemplate(currency, amount) {
         let templateId;
+
         switch (currency) {
             case "RUB":
                 templateId = "5449016a4bdc2d6f028b456f";
@@ -255,16 +312,6 @@ class Ragfair extends BaseModel {
         const body = request.body;
         return body.limit;
     }
-
-    async getOffers(request) {
-        return "your mom gay"
-    }
-
-    static async getOffersFromTraders(request, sessionID) {
-        return "your mom gay"
-    }
-
-
 }
 
 module.exports.Ragfair = Ragfair;
