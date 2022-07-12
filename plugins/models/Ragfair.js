@@ -10,7 +10,10 @@ const {
 class Ragfair extends BaseModel {
     constructor() {
         super();
+        this.categories = {};
         this.offers = [];
+        this.offersCount = 0;
+        this.selectedCategory = "";
         this.nextOfferId = 1;
         //await this.initialize();
     }
@@ -33,14 +36,13 @@ class Ragfair extends BaseModel {
         }
         return filteredItems; */
 
-        let data = {
-            categories: {},
-            offers: [],
-            offersCount: 100,
-            selectedCategory: "5b5f78dc86f77409407a7f8e"
-        }
-        data.push(await this.formatTraderAssorts());
-        console.log("we made it?");
+        logger.logError("Ragfair offers loading");
+        this.offers.push(...await this.formatTraderAssorts())
+        logger.logSuccess("Ragfair offers loaded");
+        this.offersCount = 100;
+        this.categories = {};
+        this.selectedCategory = "5b5f78dc86f77409407a7f8e";
+        logger.logSuccess("Ragfair initialized");
     }
 
     async bannedItemFilter(items) {
