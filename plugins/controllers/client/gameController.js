@@ -396,7 +396,7 @@ class GameController {
                     upd: { StackObjectsCount: request.body.data[0].count }
                 });
                 pmc.Inventory.items.push({
-                    id: idItem,
+                    _id: idItem,
                     _tpl: item._tpl,
                     parentId: request.body.data[0].container.id,
                     slotId: request.body.data[0].container.container,
