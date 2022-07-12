@@ -144,7 +144,7 @@ class AccountController {
     }
 
     static logout = async (request = null, reply = null) => {
-        reply.clearCookie('PHPSESSID', { path: '/' })
+        reply.clearCookie('PHPSESSID', { path: '/' });
         reply.redirect('/');
     }
 
