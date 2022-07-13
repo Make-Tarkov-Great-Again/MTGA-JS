@@ -1,7 +1,9 @@
+const { default: stringify } = require("fast-safe-stringify");
 const { database } = require("../../app");
+const cloneDeep = require("rfdc")();
 const { ClientController, GameController, MenuController, TradingController, FriendController } = require("../controllers/client");
 const { Weaponbuild, Ragfair, Profile } = require("../models");
-const { logger, FastifyResponse } = require("../utilities");
+const { logger, FastifyResponse, writeFile } = require("../utilities");
 const { logDebug } = require("../utilities/logger");
 
 module.exports = async function gameRoutes(app, _opts) {
@@ -289,13 +291,13 @@ module.exports = async function gameRoutes(app, _opts) {
         logger.logWarning("Find not implemented yet");
         console.log(request.body);
 
-        const ragfair = Ragfair();
-        const gay = await ragfair.getRagfair()
-
+        let ragfair = cloneDeep(database.ragfair);
+        writeFile("./ragfair.json", stringify(ragfair));
+        //ragfair.selectedCategory = await Ragfair.getSelectedCategory(request);
 
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody(gay)
+            FastifyResponse.applyBody(ragfair)
         );
     });
 
