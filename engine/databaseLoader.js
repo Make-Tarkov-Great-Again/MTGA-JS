@@ -134,7 +134,8 @@ class DatabaseLoader {
     static async loadRagfair() {
         const database = require('./database');
         database.ragfair = new Ragfair;
-        await database.ragfair.initialize();
+        const balle = await database.ragfair.initialize();
+        console.log("where do we go now?");
     }
 
     // Load Customization 
