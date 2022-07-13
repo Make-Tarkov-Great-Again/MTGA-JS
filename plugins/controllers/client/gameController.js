@@ -385,35 +385,29 @@ class GameController {
     static clientGameSplitItem = async (request = null, reply = null) => {
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
         const profileChanges = await playerProfile.getProfileChangesBase();
-        const pmc = await playerProfile.getPmc();
-        for (const item of playerProfile.character.Inventory.items) {
-            if (item._id === request.body.data[0].item) {
-                const idItem = await generateUniqueId("", 21);
-                profileChanges.profileChanges[pmc._id].items.new.push({
-                    _id: idItem,
-                    _tpl: item._tpl,
-                    upd: { StackObjectsCount: request.body.data[0].count }
-                });
-                // update the existing item stack
-                item.upd.StackObjectsCount -= request.body.data[0].count;
-                // create the new stack
-                pmc.Inventory.items.push({
-                    _id: idItem,
-                    _tpl: item._tpl,
-                    parentId: request.body.data[0].container.id,
-                    slotId: request.body.data[0].container.container,
-                    location: request.body.data[0].container.location,
-                    upd: { StackObjectsCount: request.body.data[0].count }
-                });
-                await playerProfile.save();
-                break;
+
+        const splittedItems = await playerProfile.character.splitItems(request.body.data);
+        if (splittedItems) {
+            if (await playerProfile.save()) {
+                const changes = {
+                    items: { new: [splittedItems]}
+                };
+                const finalProfileChanges = await playerProfile.getProfileChangesResponse(changes);
+                return FastifyResponse.zlibJsonReply(
+                    reply,
+                    FastifyResponse.applyBody(finalProfileChanges)
+                );
             }
         }
-        return FastifyResponse.zlibJsonReply(
-            reply,
-            FastifyResponse.applyBody(profileChanges)
-        );
+        
     };
+
+    static clientGameMergeItem = async (request = null, reply = null) => {
+        const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
+        const profileChanges = await playerProfile.getProfileChangesBase();
+
+        const mergedItems = await playerProfile.character.mergeItems(request.body.data);
+    }
 
 }
 module.exports.GameController = GameController;
