@@ -13,6 +13,8 @@ class Ragfair extends BaseModel {
 
         this.categories = {};
         this.offers = [];
+        this.offersCount = 0;
+        this.selectedCategory = "";
         this.nextOfferId = 1;
         //await this.initialize();
     }
@@ -45,10 +47,10 @@ class Ragfair extends BaseModel {
         return filteredItems; */
 
         let data = {
-            categories: {},
             offers: [],
             offersCount: 100,
-            selectedCategory: "5b5f78dc86f77409407a7f8e"
+            selectedCategory: "5b5f78dc86f77409407a7f8e",
+            categories: {}
         }
         data.offers.push(...await this.formatTraderAssorts());
         return data;
@@ -333,19 +335,19 @@ class Ragfair extends BaseModel {
         return offers;
     }
 
-    async getSelectedCategory(request) {
+    static async getSelectedCategory(request) {
         const body = request.body;
-        switch (body) {
-            case body.handbookId:
-                return body.handbookId;
-            case body.linkedSearchId:
-                return body.linkedSearchId;
-            case body.neededSearchId:
-                return body.neededSearchId;
+        switch (true) {
+            case body.handbookId != "":
+                return request.body.handbookId;
+            case body.linkedSearchId != "":
+                return request.body.linkedSearchId;
+            case body.neededSearchId != "":
+                return request.body.neededSearchId;
         }
     }
 
-    async getLimit(request) {
+    static async getLimit(request) {
         const body = request.body;
         return body.limit;
     }
