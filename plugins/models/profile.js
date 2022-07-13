@@ -323,7 +323,7 @@ class Profile extends BaseModel {
         }
 
         const outputData = await this.getProfileChangesBase();
-        const mergedData = Object.assign({}, outputData.profileChanges[this.character._id], profileChanges)
+        const mergedData = Object.assign({}, outputData.profileChanges[this.character._id], profileChanges);
         outputData.profileChanges[this.character._id] = mergedData;
 
         return outputData;

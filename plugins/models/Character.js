@@ -1,4 +1,4 @@
-const { logger, getCurrentTimestamp } = require("../utilities");
+const { logger, getCurrentTimestamp, generateUniqueId } = require("../utilities");
 const { BaseModel } = require("./BaseModel");
 const { Customization } = require("./Index");
 
@@ -42,9 +42,9 @@ class Character extends BaseModel {
     // Inventory Functionality //
 
     async moveItems(itemCollection) {
-        let movedItems = {}
+        const movedItems = {};
         for (const item of itemCollection) {
-            let movedItem = await this.moveItem(item.to.id, item.to.container, item.item, item.to.location);
+            const movedItem = await this.moveItem(item.to.id, item.to.container, item.item, item.to.location);
             Object.assign(movedItems, movedItem);
         }
         return movedItems;
@@ -126,16 +126,54 @@ class Character extends BaseModel {
         return this.moveItemUsingSlotID(itemId, locationData, "main", containerID);
     }
 
-    async getInventoryItemByID(itemId) {
-        return this.Inventory.items.find(item => item._id == itemId);
+    async splitItems(itemCollection) {
+        const splitedItems = {};
+        for (const item of itemCollection) {
+            const splitedItem = await this.splitItem(item.item, item.count, item.container.container, item.container.id, item.container.location);
+            Object.assign(splitedItems, splitedItem);
+        }
+        return splitedItems;
     }
+
+    async splitItem(itemId, splitStackCount, slotId, containerId, location) {
+        logger.logDebug(`Split request with params:
+        Container ID: ${containerId}
+        slot ID: ${slotId}
+        Item ID: ${itemId}
+        Split stack count: ${splitStackCount}
+        Location Data:`);
+        logger.logDebug(location);
+
+        const item = await this.getInventoryItemByID(itemId);
+        if (item) {
+            item.upd.StackObjectsCount -= splitStackCount;
+
+            const newItem = {
+                id: await generateUniqueId(),
+                _tpl: item._tpl,
+                parentId: containerId,
+                slotId: slotId,
+                location: location,
+                upd: {
+                    StackObjectsCount: splitStackCount
+                }
+            };
+            return newItem;
+        }
+        return false;
+    }
+
+    async getInventoryItemByID(itemId) {
+        return this.Inventory.items.find(item => item._id === itemId);
+    }
+
 
     // Examine //
 
     async examineItem(itemId) {
         if(!itemId) {
-            logger.logError("Examine request failed: No itemId")
-            return false
+            logger.logError("Examine request failed: No itemId");
+            return false;
         }
 
         this.Encyclopedia[itemId] = true;
