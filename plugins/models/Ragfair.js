@@ -5,7 +5,7 @@ const { Preset } = require("./Preset");
 
 const {
     FastifyResponse, generateUniqueId, getCurrentTimestamp,
-    logger, findChildren, writeFile, readParsed, getAbsolutePathFrom } = require("../utilities");
+    logger, findChildren, writeFile, readParsed, getAbsolutePathFrom, stringify } = require("../utilities");
 
 class Ragfair extends BaseModel {
     constructor() {
@@ -52,7 +52,9 @@ class Ragfair extends BaseModel {
             selectedCategory: "5b5f78dc86f77409407a7f8e",
             categories: {}
         }
+        logger.logError("hahahahah");
         data.offers.push(...await this.formatTraderAssorts());
+        logger.logSuccess("hahah i load ragfair after server loads");
         return data;
     }
 
@@ -90,6 +92,7 @@ class Ragfair extends BaseModel {
         let offers = []
 
         for (const t in traders) {
+            if (traders[t].isRagfair() || traders[t].isFence()) continue;
             const trader = traders[t];
             const traderTemplate = await this.getTraderTemplate(trader.base.nickname);
 
@@ -105,6 +108,7 @@ class Ragfair extends BaseModel {
                 }
             }
         }
+        writeFile(`/ragfair.json`, stringify(offers), true);
         return offers;
     }
 
@@ -131,7 +135,21 @@ class Ragfair extends BaseModel {
                 break;
             }
         }
+
+
         return data;
+    }
+
+    async cleanseItemUpd(item) {
+        let soiled = item
+        if (item[0]) soiled = item[0];
+        let soiledUPD = soiled.upd;
+
+        if (soiledUPD.hasOwnProperty("UnlimitedCount")) delete soiledUPD.UnlimitedCount
+        if (soiledUPD.hasOwnProperty("BuyRestrictionCurrent")) delete soiledUPD.BuyRestrictionCurrent;
+        if (soiledUPD.hasOwnProperty("BuyRestrictionMax")) delete soiledUPD.BuyRestrictionMax;
+
+        return soiled;
     }
 
     async convertItemFromTraderToRagfairOffer(traderTemplate, itemsToSell, barter_scheme, loyal_level) {
@@ -139,7 +157,10 @@ class Ragfair extends BaseModel {
         let offer = {}
 
         offer._id = await generateUniqueId();
+
         offer.intId = this.nextOfferId;
+        this.nextOfferId += 1
+
         offer.user = traderTemplate
 
         let item = itemsToSell;
@@ -148,13 +169,11 @@ class Ragfair extends BaseModel {
         }
         offer.root = item._id;
 
-        offer.items = item;
-        delete offer.items.upd.BuyRestrictionMax;
-        if (typeof offer.items.upd.BuyRestrictionCurrent !== "undefined") {
-            offer.buyRestrictionMax = offer.items.upd.BuyRestrictionCurrent;
-            delete offer.items.upd.BuyRestrictionCurrent;
+        if (item.upd.hasOwnProperty("BuyRestrictionCurrent")) {
+            offer.buyRestrictionMax = item.upd.BuyRestrictionCurrent;
         }
 
+        offer.items = await this.cleanseItemUpd(item);
 
         offer.requirements = barter_scheme[0];
 

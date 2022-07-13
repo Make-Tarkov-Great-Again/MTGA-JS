@@ -229,7 +229,7 @@ class DatabaseLoader {
             } else {
                 trader.base = [];
             }
-
+            
             if (fileExist(`${path}questassort.json`)) {
                 trader.questassort = readParsed(`${path}questassort.json`);
             }
