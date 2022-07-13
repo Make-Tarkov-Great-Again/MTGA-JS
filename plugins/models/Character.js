@@ -149,7 +149,7 @@ class Character extends BaseModel {
             item.upd.StackObjectsCount -= splitStackCount;
 
             const newItem = {
-                id: await generateUniqueId(),
+                _id: await generateUniqueId(),
                 _tpl: item._tpl,
                 parentId: containerId,
                 slotId: slotId,
