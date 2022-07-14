@@ -390,7 +390,7 @@ class GameController {
         if (splittedItems) {
             if (await playerProfile.save()) {
                 const changes = {
-                    items: { new: [splittedItems]}
+                    items: { change: [], del: [], new: [splittedItems]}
                 };
                 const finalProfileChanges = await playerProfile.getProfileChangesResponse(changes);
                 return FastifyResponse.zlibJsonReply(

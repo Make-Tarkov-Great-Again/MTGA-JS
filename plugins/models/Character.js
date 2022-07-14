@@ -1,4 +1,4 @@
-const { logger, getCurrentTimestamp, generateUniqueId } = require("../utilities");
+const { logger, getCurrentTimestamp, generateItemId } = require("../utilities");
 const { BaseModel } = require("./BaseModel");
 const { Customization } = require("./Index");
 
@@ -149,7 +149,7 @@ class Character extends BaseModel {
             item.upd.StackObjectsCount -= splitStackCount;
 
             const newItem = {
-                _id: await generateUniqueId(),
+                _id: await generateItemId(),
                 _tpl: item._tpl,
                 parentId: containerId,
                 slotId: slotId,
