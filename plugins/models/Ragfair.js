@@ -31,31 +31,35 @@ class Ragfair extends BaseModel {
 
     async initialize() {
         //will be used when we start creating offers from the Item database
-        /* const items = await Item.getAll();
-        const filteredItems = await this.bannedItemFilter(items); 
+        /*         const items = await Item.getAll();
+                const filteredItems = await this.bannedItemFilter(items); 
+                let childlessList = [];
+        
+                for (const i in filteredItems) {
+                    const item = filteredItems[i];
+                    if (await Preset.itemHasPreset(item._id)) {
+                        const preset = await Preset.getPresetsForItem(item._id)
+                        for (const p in preset) {
+                            const family = preset[p]._items
+                            //console.log(family)
+                        }
+                    } else {
+                        childlessList.push(item._id);
+                    }
+                } */
 
-        check filtered items for Presets and return them
-        for (const i in filteredItems) {
-            const item = filteredItems[i];
-            if (await Preset.itemHasPreset(item._id)) {
-                const preset = await Preset.getPresetsForItem(item._id)
-                for (const p in preset) {
-                    const family = preset[p]._items
-                    //console.log(family)
-                }
-            }
-        }
-        return filteredItems; */
 
         let data = {
             offers: [],
-            offersCount: 100,
+            offersCount: 0,
             selectedCategory: "5b5f78dc86f77409407a7f8e",
             categories: {}
         }
         logger.logError("hahahahah");
         data.offers.push(...await this.formatTraderAssorts());
         logger.logSuccess("hahah i load ragfair after server loads");
+
+        data.offersCount = data.offers.length;
         writeFile("./ragfair.json", stringify(FastifyResponse.applyBody(data), null, 2));
 
         return data;
@@ -115,9 +119,32 @@ class Ragfair extends BaseModel {
         return offers;
     }
 
+
+    async addAdditionalProperties(item) {
+        const items = await Item.getAll();
+
+        let updList = [];
+
+        for (const id in items) {
+            if (items[id]._id === item._id) {
+                if (items[id]._props.Foldable) {
+                    if (items[id]._props.Foldable === true) {
+                        console.log("Foldable")
+                    }
+                }
+
+                
+            }
+        }
+    }
+
+
+
     async convertItemDataForRagfairConversion(item, assort) {
         let data = [];
         const childlessList = readParsed(getAbsolutePathFrom(`/childlessList.json`));
+
+        //item = await this.addAdditionalProperties(item);
 
         if (childlessList.includes(item._id)) {
             data.items = item;
@@ -188,7 +215,17 @@ class Ragfair extends BaseModel {
         const currentTime = Date.now();
         offer.startTime = currentTime - 3600;
         offer.endTime = currentTime + 3600;
-        offer.unlimitedCount = true;
+
+        offer.locked = false; // i think these are quest locked items
+
+        offer.unlimitedCount = false;
+        if (itemsToSell.hasOwnProperty("upd") &&
+            itemsToSell.upd.hasOwnProperty("UnlimitedCount")) {
+            offer.unlimitedCount = itemsToSell.upd.UnlimitedCount;
+        } else if (itemsToSell[0].hasOwnProperty("upd") &&
+            itemsToSell[0].upd.hasOwnProperty("UnlimitedCount")) {
+            offer.unlimitedCount = itemsToSell[0].upd.UnlimitedCount;
+        }
 
 
         if (itemsToSell.hasOwnProperty("upd") &&
