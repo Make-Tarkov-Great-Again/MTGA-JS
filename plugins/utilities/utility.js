@@ -1,4 +1,5 @@
 const logger = require('./logger');
+const ObjectID = require("bson-objectid");
 
 
 /** Generate Unique ID used in the server by using nanoid
@@ -9,6 +10,10 @@ const generateUniqueId = async (prefix = "", idLength = 21) => {
     const { customAlphabet } = await import('nanoid');
     const nanoid = customAlphabet('abcdefghijklmnopqrstuvwxyz123456789ABCDEFGHYJKLMNOPQRSTUVWXYZ', idLength);
     return `${prefix}${nanoid()}`;
+}
+
+const generateItemId = async () => {
+    return ObjectID.createFromTime(Date.now()).toHexString();
 }
 
 /**Check if the given value is undefined
@@ -57,7 +62,7 @@ const formatTime = async (date) => {
     return `${("0" + date.getHours()).substr(-2)}-${("0" + date.getMinutes()).substr(-2)}-${("0" + date.getSeconds()).substr(-2)}`;
 }
 
-const makeSign = async (Length) => {
+const makeSign = (Length) => {
     let result = '';
     let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let charactersLength = characters.length;
@@ -192,5 +197,6 @@ module.exports = {
     isUndefined,
     findChildren,
     payTrade,
-    findAndReturnChildrenByItems
+    findAndReturnChildrenByItems,
+    generateItemId
 };
