@@ -292,7 +292,6 @@ module.exports = async function gameRoutes(app, _opts) {
         console.log(request.body);
 
         let ragfair = cloneDeep(database.ragfair);
-        writeFile("./ragfair.json", stringify(ragfair));
         //ragfair.selectedCategory = await Ragfair.getSelectedCategory(request);
 
         return FastifyResponse.zlibJsonReply(
