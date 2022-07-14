@@ -5,7 +5,7 @@ const { Preset } = require("./Preset");
 const cloneDeep = require("rfdc")();
 
 const {
-    FastifyResponse, generateUniqueId, getCurrentTimestamp,
+    FastifyResponse, generateUniqueId, getCurrentTimestamp, generateItemId,
     logger, findChildren, writeFile, readParsed, getAbsolutePathFrom, stringify } = require("../utilities");
 
 class Ragfair extends BaseModel {
@@ -192,7 +192,7 @@ class Ragfair extends BaseModel {
 
         let offer = {}
 
-        offer._id = await generateUniqueId("", 25);
+        offer._id = await generateItemId();
 
         offer.intId = this.nextOfferId;
         this.nextOfferId += 1
@@ -306,7 +306,7 @@ class Ragfair extends BaseModel {
 
     async addItemByTemplateId(user, templateId, requirements, amount, childItems = undefined, sellInOnePiece = false, loyaltyLevel = undefined) {
         let tempItem = {
-            _id: await generateUniqueId(),
+            _id: await generateItemId(),
             _tpl: templateId
         }
         return this.addItem(user, tempItem, requirements, amount, childItems, sellInOnePiece, loyaltyLevel);
@@ -315,7 +315,7 @@ class Ragfair extends BaseModel {
     async addItem(user, parentItem, requirements, amount, childItems = undefined, sellInOnePiece = false, loyaltyLevel = undefined) {
         let offer = {}
 
-        offer._id = await generateUniqueId("", 25);
+        offer._id = await generateItemId();
         offer.intId = this.nextOfferId;
         offer.user = {
             id: user.id,
