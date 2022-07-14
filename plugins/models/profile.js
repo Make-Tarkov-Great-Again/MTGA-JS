@@ -33,6 +33,9 @@ class Profile extends BaseModel {
         const { database } = require("../../app");
         const collection = database.profiles;
 
+        if (!collection) return "ok";
+
+
         if (nickname.length < 3) { return "tooshort"; }
         for (const [key, profile] of Object.entries(collection)) {
             // This check needs to come first to see if profile is created, or it'll pop and error
