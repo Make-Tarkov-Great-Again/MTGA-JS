@@ -2,6 +2,7 @@ const { BaseModel } = require("./BaseModel");
 const { Item } = require("./Item");
 const { Trader } = require("./Trader");
 const { Preset } = require("./Preset");
+const cloneDeep = require("rfdc")();
 
 const {
     FastifyResponse, generateUniqueId, getCurrentTimestamp,
@@ -55,6 +56,8 @@ class Ragfair extends BaseModel {
         logger.logError("hahahahah");
         data.offers.push(...await this.formatTraderAssorts());
         logger.logSuccess("hahah i load ragfair after server loads");
+        writeFile("./ragfair.json", stringify(FastifyResponse.applyBody(data), null, 2));
+
         return data;
     }
 
@@ -140,51 +143,62 @@ class Ragfair extends BaseModel {
         return data;
     }
 
-    async cleanseItemUpd(item) {
-        let soiled = item
-        if (item[0]) soiled = item[0];
-        let soiledUPD = soiled.upd;
-
-        if (soiledUPD.hasOwnProperty("UnlimitedCount")) delete soiledUPD.UnlimitedCount
-        if (soiledUPD.hasOwnProperty("BuyRestrictionCurrent")) delete soiledUPD.BuyRestrictionCurrent;
-        if (soiledUPD.hasOwnProperty("BuyRestrictionMax")) delete soiledUPD.BuyRestrictionMax;
-
-        return soiled;
+    async cleanseItem(item) {
+        if (item[0]) {
+            if (item[0].hasOwnProperty("parentId")) delete item[0].parentId;
+            if (item[0].hasOwnProperty("slotId")) delete item[0].slotId;
+            if (item[0].upd.hasOwnProperty("UnlimitedCount")) delete item[0].upd.UnlimitedCount
+            if (item[0].upd.hasOwnProperty("BuyRestrictionCurrent")) delete item[0].upd.BuyRestrictionCurrent;
+            if (item[0].upd.hasOwnProperty("BuyRestrictionMax")) delete item[0].upd.BuyRestrictionMax;
+            return item
+        } else {
+            if (item.hasOwnProperty("parentId")) delete item.parentId;
+            if (item.hasOwnProperty("slotId")) delete item.slotId;
+            if (item.upd.hasOwnProperty("UnlimitedCount")) delete item.upd.UnlimitedCount
+            if (item.upd.hasOwnProperty("BuyRestrictionCurrent")) delete item.upd.BuyRestrictionCurrent;
+            if (item.upd.hasOwnProperty("BuyRestrictionMax")) delete item.upd.BuyRestrictionMax;
+            return item
+        }
     }
 
     async convertItemFromTraderToRagfairOffer(traderTemplate, itemsToSell, barter_scheme, loyal_level) {
 
         let offer = {}
 
-        offer._id = await generateUniqueId();
+        offer._id = await generateUniqueId("", 25);
 
         offer.intId = this.nextOfferId;
         this.nextOfferId += 1
 
         offer.user = traderTemplate
 
-        let item = itemsToSell;
-        if (typeof itemsToSell[0] !== "undefined") {
-            item = itemsToSell[0];
-        }
-        offer.root = item._id;
+        let item = cloneDeep(itemsToSell);
 
-        if (item.upd.hasOwnProperty("BuyRestrictionCurrent")) {
-            offer.buyRestrictionMax = item.upd.BuyRestrictionCurrent;
-        }
+        offer.root = item[0]._id;
 
-        offer.items = await this.cleanseItemUpd(item);
+        offer.items = await this.cleanseItem(item);
 
-        offer.requirements = barter_scheme[0];
+        offer.itemsCost = barter_scheme[0].count; // calculate
+        offer.requirements = barter_scheme;
 
         offer.requirementsCost = barter_scheme[0].count //calculate
-        offer.itemsCost = barter_scheme[0].count; // calculate
         offer.summaryCost = barter_scheme[0].count; // calculate
         offer.sellInOnePiece = false;
 
         const currentTime = Date.now();
         offer.startTime = currentTime - 3600;
         offer.endTime = currentTime + 3600;
+        offer.unlimitedCount = true;
+
+
+        if (itemsToSell.hasOwnProperty("upd") &&
+            itemsToSell.upd.hasOwnProperty("BuyRestrictionCurrent")) {
+            offer.buyRestrictionMax = itemsToSell.upd.BuyRestrictionCurrent;
+        } else if (itemsToSell[0].hasOwnProperty("upd") &&
+            itemsToSell[0].upd.hasOwnProperty("BuyRestrictionCurrent")) {
+            offer.buyRestrictionMax = itemsToSell[0].upd.BuyRestrictionCurrent;
+        }
+
         offer.loyaltyLevel = loyal_level;
 
         return offer;
@@ -264,7 +278,7 @@ class Ragfair extends BaseModel {
     async addItem(user, parentItem, requirements, amount, childItems = undefined, sellInOnePiece = false, loyaltyLevel = undefined) {
         let offer = {}
 
-        offer._id = await generateUniqueId();
+        offer._id = await generateUniqueId("", 25);
         offer.intId = this.nextOfferId;
         offer.user = {
             id: user.id,
