@@ -13,7 +13,7 @@ const generateUniqueId = async (prefix = "", idLength = 21) => {
 }
 
 const generateItemId = async () => {
-    return ObjectID.createFromTime(Date.now()).toHexString();
+    return ObjectID.createFromTime(process.hrtime.bigint()).toHexString();
 }
 
 /**Check if the given value is undefined
