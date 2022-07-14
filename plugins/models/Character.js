@@ -158,6 +158,10 @@ class Character extends BaseModel {
                     StackObjectsCount: splitStackCount
                 }
             };
+            this.Inventory.items.push(newItem);
+            delete newItem.parentId;
+            delete newItem.location;
+            delete newItem.slotId;
             return newItem;
         }
         return false;

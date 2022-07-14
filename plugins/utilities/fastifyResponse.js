@@ -25,7 +25,7 @@ class FastifyResponse {
     }
 
     static getVersion = async (request) => {
-        return request.headers["app-version"].replace("EFT Client ", "")
+        return request.headers["app-version"].replace("EFT Client ", "");
     }
 
 
@@ -45,12 +45,12 @@ class FastifyResponse {
         } else {
             return false;
         }
-    }
-    
+    };
+
     // HTTP Data Processing functionality //
 
     static zlibJsonReply = async (reply, data) => {
-        let header = {
+        const header = {
             'Content-Type': this.mime["json"]
         };
         const deflatedData = zlib.deflateSync(stringify(data, true));
