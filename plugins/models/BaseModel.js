@@ -15,7 +15,7 @@ class BaseModel {
     createDatabase(id) {
         if (id) {
             const { database } = require("../../app");
-            var className = this.constructor.name;
+            const className = this.constructor.name;
             if (database[className.toLowerCase() + 's'] === undefined) database[className.toLowerCase() + 's'] = {}
             database[className.toLowerCase() + 's'][id] = this;
         }
@@ -34,7 +34,7 @@ class BaseModel {
      * @returns true if the model was destroyed, will return false otherwise.
      */
     async destroy() {
-        var className = this.name;
+        const className = this.name;
         return delete database[className.toLowerCase() + 's'][this.id];
     }
 
@@ -88,7 +88,7 @@ class BaseModel {
     static async get(id) {
         const { database } = require("../../app");
 
-        var className = this.name;
+        const className = this.name;
         if (!database[className.toLowerCase() + 's']) {
             return false;
         }
@@ -109,7 +109,7 @@ class BaseModel {
      */
     static async getBy(property, value) {
         const { database } = require("../../app");
-        var className = this.name;
+        const className = this.name;
 
         if (!database[className.toLowerCase() + 's']) {
             return false
@@ -130,7 +130,7 @@ class BaseModel {
      */
     static async getAll() {
         const { database } = require("../../app");
-        var className = this.name;
+        const className = this.name;
 
         if (!database[className.toLowerCase() + 's']) {
             return false
