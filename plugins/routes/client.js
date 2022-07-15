@@ -71,38 +71,50 @@ module.exports = async function gameRoutes(app, _opts) {
     });
 
     app.post(`/client/game/profile/items/moving`, async (request, reply) => {
+        const sessionID = await FastifyResponse.getSessionID(request);
+        const playerProfile = await Profile.get(sessionID);
+        const outputData = await playerProfile.getProfileChangesBase();
+        let actionResult;
         for (const moveActions of request.body.data) {
             const action = moveActions.Action;
             switch (action) {
                 case "QuestAccept":
-                    await GameController.clientGameProfileAcceptQuest(request, reply);
+                    actionResult = await GameController.clientGameProfileAcceptQuest(request, reply);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
-    
+
                 case "Move":
-                    await GameController.clientGameProfileMoveItem(request, reply);
+                    actionResult = await GameController.clientGameProfileMoveItem(request, reply);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
-    
+
                 case "Examine":
-                    await GameController.clientGameProfileExamine(request, reply);
+                    actionResult = await GameController.clientGameProfileExamine(request, reply);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
-    
+
                 case "TradingConfirm":
-                    await GameController.clientGameTradingConfirm(request, reply);
+                    actionResult = await GameController.clientGameTradingConfirm(request, reply);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
-    
+
                 case "Split":
-                    await GameController.clientGameSplitItem(request, reply);
+                    actionResult = await GameController.clientGameSplitItem(request, reply);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
-    
+
                 case "Merge":
-                    await GameController.clientGameMergeItem(request, reply);
+                    actionResult = await GameController.clientGameMergeItem(request, reply);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 // more, MOOOOOOOOOOOOOOORE
                 default:
                     logger.logWarning("Action " + action + " is not yet implemented.");
             }
         }
-        
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody(outputData));
     });
 
 
