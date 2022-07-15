@@ -384,13 +384,11 @@ class GameController {
 
     static clientGameSplitItem = async (request = null, reply = null) => {
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
-        const profileChanges = await playerProfile.getProfileChangesBase();
-
         const splittedItems = await playerProfile.character.splitItems(request.body.data);
         if (splittedItems) {
             if (await playerProfile.save()) {
                 const changes = {
-                    items: { change: [], del: [], new: [splittedItems]}
+                    items: { new: [splittedItems] }
                 };
                 const finalProfileChanges = await playerProfile.getProfileChangesResponse(changes);
                 return FastifyResponse.zlibJsonReply(
@@ -399,15 +397,24 @@ class GameController {
                 );
             }
         }
-        
     };
 
     static clientGameMergeItem = async (request = null, reply = null) => {
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
-        const profileChanges = await playerProfile.getProfileChangesBase();
-
         const mergedItems = await playerProfile.character.mergeItems(request.body.data);
-    }
+        if (mergedItems) {
+            if (await playerProfile.save()) {
+                const changes = {
+                    items: { del: [mergedItems] }
+                };
+                const finalProfileChanges = await playerProfile.getProfileChangesResponse(changes);
+                return FastifyResponse.zlibJsonReply(
+                    reply,
+                    FastifyResponse.applyBody(finalProfileChanges)
+                );
+            }
+        }
+    };
 
 }
 module.exports.GameController = GameController;
