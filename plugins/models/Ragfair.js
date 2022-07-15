@@ -6,7 +6,7 @@ const cloneDeep = require("rfdc")();
 
 const {
     FastifyResponse, generateUniqueId, getCurrentTimestamp, generateItemId,
-    logger, findChildren, writeFile, readParsed, getAbsolutePathFrom, stringify } = require("../utilities");
+    logger, findChildren, writeFile, readParsed, getAbsolutePathFrom, stringify, fileExist } = require("../utilities");
 
 class Ragfair extends BaseModel {
     constructor() {
@@ -67,16 +67,31 @@ class Ragfair extends BaseModel {
 
     async bannedItemFilter(items) {
         let filteredItems = [];
-        const bannedItems = await Item.bannedItems();
+        let bannedItems = [];
+        if (fileExist("./bannedItems.json")) {
+            bannedItems = readParsed(getAbsolutePathFrom(`/bannedItems.json`));
+        }
+        let counter = 0;
 
         for (const item in items) {
-            switch (true) {
-                case items[item]._type === "Node":
-                case items[item]._props.Name.includes(bannedItems):
-                    continue;
-                case items[item]._props.CanSellOnRagfair === true:
-                    filteredItems.push(items[item]);
+            if (!bannedItems.includes(items[item]._id)) {
+                switch (true) {
+                    case items[item]._type === "Node":
+                    case items[item]._props.IsUnbuyable === true:
+                    case items[item]._props.QuestItem === true:
+                    case items[item]._props.CanSellOnRagfair === false:
+                        counter += 1;
+                        bannedItems.push(items[item]._id);
+                        continue;
+                }
             }
+            if (items[item]._props.CanSellOnRagfair === true) {
+                filteredItems.push(items[item]);
+            }
+        }
+        if (counter != 0) {
+            logger.logError(`Banned items updated by ${counter}`);
+            writeFile("./bannedItems.json", stringify(bannedItems, false), true);
         }
         return filteredItems;
     }
@@ -133,7 +148,7 @@ class Ragfair extends BaseModel {
                     }
                 }
 
-                
+
             }
         }
     }
