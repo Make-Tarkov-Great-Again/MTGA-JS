@@ -37,7 +37,6 @@ class Character extends BaseModel {
 
         for (const [index, item] of Object.entries(dissolvedClone.Inventory.items)) {
             dissolvedClone.Inventory.items[index] = Object.assign({}, item)
-            logger.logDebug(dissolvedClone.Inventory.items[index])
         }
 
         return dissolvedClone;
