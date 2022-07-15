@@ -71,35 +71,38 @@ module.exports = async function gameRoutes(app, _opts) {
     });
 
     app.post(`/client/game/profile/items/moving`, async (request, reply) => {
-        const action = request.body.data[0].Action;
-        switch (action) {
-            case "QuestAccept":
-                await GameController.clientGameProfileAcceptQuest(request, reply);
-                break;
-
-            case "Move":
-                await GameController.clientGameProfileMoveItem(request, reply);
-                break;
-
-            case "Examine":
-                await GameController.clientGameProfileExamine(request, reply);
-                break;
-
-            case "TradingConfirm":
-                await GameController.clientGameTradingConfirm(request, reply);
-                break;
-
-            case "Split":
-                await GameController.clientGameSplitItem(request, reply);
-                break;
-
-            case "Merge":
-                await GameController.clientGameMergeItem(request, reply);
-                break;
-            // more, MOOOOOOOOOOOOOOORE
-            default:
-                logger.logWarning("Action " + action + " is not yet implemented.");
+        for (const moveActions of request.body.data) {
+            const action = moveActions.Action;
+            switch (action) {
+                case "QuestAccept":
+                    await GameController.clientGameProfileAcceptQuest(request, reply);
+                    break;
+    
+                case "Move":
+                    await GameController.clientGameProfileMoveItem(request, reply);
+                    break;
+    
+                case "Examine":
+                    await GameController.clientGameProfileExamine(request, reply);
+                    break;
+    
+                case "TradingConfirm":
+                    await GameController.clientGameTradingConfirm(request, reply);
+                    break;
+    
+                case "Split":
+                    await GameController.clientGameSplitItem(request, reply);
+                    break;
+    
+                case "Merge":
+                    await GameController.clientGameMergeItem(request, reply);
+                    break;
+                // more, MOOOOOOOOOOOOOOORE
+                default:
+                    logger.logWarning("Action " + action + " is not yet implemented.");
+            }
         }
+        
     });
 
 
