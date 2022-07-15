@@ -45,8 +45,10 @@ class Character extends BaseModel {
     async moveItems(itemCollection) {
         const movedItems = {};
         for (const item of itemCollection) {
-            const movedItem = await this.moveItem(item.to.id, item.to.container, item.item, item.to.location);
-            Object.assign(movedItems, movedItem);
+            if (item.Action === "Move") {
+                const movedItem = await this.moveItem(item.to.id, item.to.container, item.item, item.to.location);
+                Object.assign(movedItems, movedItem);
+            }
         }
         return movedItems;
     }
@@ -130,8 +132,10 @@ class Character extends BaseModel {
     async splitItems(itemCollection) {
         const splitedItems = {};
         for (const item of itemCollection) {
-            const splitedItem = await this.splitItem(item.item, item.count, item.container.container, item.container.id, item.container.location);
-            Object.assign(splitedItems, splitedItem);
+            if (item.Action === "Split"){
+                const splitedItem = await this.splitItem(item.item, item.count, item.container.container, item.container.id, item.container.location);
+                Object.assign(splitedItems, splitedItem);
+            }
         }
         return splitedItems;
     }
@@ -177,8 +181,10 @@ class Character extends BaseModel {
     async mergeItems(itemCollection) {
         const mergedItems = {};
         for (const item of itemCollection) {
-            const mergedItem = await this.mergeItem(item.item, item.with);
-            Object.assign(mergedItems, mergedItem);
+            if (item.Action === "Merge") {
+                const mergedItem = await this.mergeItem(item.item, item.with);
+                Object.assign(mergedItems, mergedItem);
+            }
         }
         return mergedItems;
     }
