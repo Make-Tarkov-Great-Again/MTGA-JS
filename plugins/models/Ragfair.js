@@ -56,10 +56,12 @@ class Ragfair extends BaseModel {
             categories: {}
         }
         logger.logError("hahahahah");
-        data.offers.push(...await this.formatTraderAssorts());
+        data.offers = await this.formatTraderAssorts();
         logger.logSuccess("hahah i load ragfair after server loads");
 
         data.offersCount = data.offers.length;
+
+        data.categories = await this.getCategories();
         writeFile("./ragfair.json", stringify(FastifyResponse.applyBody(data), null, 2));
 
         return data;
@@ -109,6 +111,22 @@ class Ragfair extends BaseModel {
             1); // add a vog to offers
     }
 
+    async getCategories() {
+        const traders = await Trader.getAll();
+        let categories = {};
+        for (const t in traders) {
+            if (traders[t].isRagfair() || traders[t].isFence()) continue;
+            const loyal_level_items = traders[t].assort.loyal_level_items;
+            for (const l in loyal_level_items) {
+                if (categories.hasOwnProperty(l)) continue;
+                categories[l] = 1;
+                //console.log(Object.keys(categories).length);
+            }
+
+        }
+        return categories;
+    }
+
     async formatTraderAssorts() {
         const traders = await Trader.getAll();
         let offers = []
@@ -130,7 +148,6 @@ class Ragfair extends BaseModel {
                 }
             }
         }
-        writeFile(`/ragfair.json`, stringify(offers), true);
         return offers;
     }
 
