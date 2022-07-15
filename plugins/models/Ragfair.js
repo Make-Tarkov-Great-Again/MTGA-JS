@@ -186,21 +186,16 @@ class Ragfair extends BaseModel {
     }
 
     async cleanseItem(item) {
-        if (item[0]) {
-            if (item[0].hasOwnProperty("parentId")) delete item[0].parentId;
-            if (item[0].hasOwnProperty("slotId")) delete item[0].slotId;
-            if (item[0].upd.hasOwnProperty("UnlimitedCount")) delete item[0].upd.UnlimitedCount
-            if (item[0].upd.hasOwnProperty("BuyRestrictionCurrent")) delete item[0].upd.BuyRestrictionCurrent;
-            if (item[0].upd.hasOwnProperty("BuyRestrictionMax")) delete item[0].upd.BuyRestrictionMax;
-            return item
-        } else {
-            if (item.hasOwnProperty("parentId")) delete item.parentId;
-            if (item.hasOwnProperty("slotId")) delete item.slotId;
-            if (item.upd.hasOwnProperty("UnlimitedCount")) delete item.upd.UnlimitedCount
-            if (item.upd.hasOwnProperty("BuyRestrictionCurrent")) delete item.upd.BuyRestrictionCurrent;
-            if (item.upd.hasOwnProperty("BuyRestrictionMax")) delete item.upd.BuyRestrictionMax;
-            return item
-        }
+
+        let soiledItem = item;
+        if (item[0]) soiledItem = item[0];
+        if (soiledItem.hasOwnProperty("parentId")) delete soiledItem.parentId;
+        if (soiledItem.hasOwnProperty("slotId")) delete soiledItem.slotId;
+        if (soiledItem.upd.hasOwnProperty("UnlimitedCount")) delete soiledItem.upd.UnlimitedCount
+        if (soiledItem.upd.hasOwnProperty("BuyRestrictionCurrent")) delete soiledItem.upd.BuyRestrictionCurrent;
+        if (soiledItem.upd.hasOwnProperty("BuyRestrictionMax")) delete soiledItem.upd.BuyRestrictionMax;
+
+        return item
     }
 
     async convertItemFromTraderToRagfairOffer(traderTemplate, itemsToSell, barter_scheme, loyal_level) {
