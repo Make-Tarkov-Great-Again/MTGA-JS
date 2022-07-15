@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { Ragfair, Preset, Item } = require('../plugins/models');
+const { Ragfair, Preset, Item, Profile } = require('../plugins/models');
 const { UtilityModel } = require('../plugins/models/UtilityModel');
 const {
     logger, readParsed, fileExist, stringify,
@@ -293,7 +293,6 @@ class DatabaseLoader {
             if (fileExist(`${path}character.json`)) {
                 logger.logWarning(`Loading character data for profile ${profileID}`);
                 profile.character = await UtilityModel.createModelFromParse("Character", readParsed("./user/profiles/" + profileID + "/character.json"));
-
                 stats = fs.statSync(`./user/profiles/${profileID}/character.json`);
                 database.fileAge[profileID].character = stats.mtimeMs;
             }

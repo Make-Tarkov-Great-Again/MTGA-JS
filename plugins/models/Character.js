@@ -1,7 +1,7 @@
 const { logger, getCurrentTimestamp, generateItemId } = require("../utilities");
 const { logDebug, logError } = require("../utilities/logger");
 const { BaseModel } = require("./BaseModel");
-const { Customization } = require("./Index");
+const { Customization, Item } = require("./Index");
 
 class Character extends BaseModel {
     constructor() {
@@ -9,6 +9,7 @@ class Character extends BaseModel {
     }
 
     async solve() {
+        const { UtilityModel } = require("./UtilityModel");
         logger.logDebug("Solving Character with ID:" + this._id);
         if (this.Customization !== undefined) {
             for (const [bodyPart, id] of Object.entries(this.Customization)) {
@@ -16,6 +17,10 @@ class Character extends BaseModel {
                     this.Customization[bodyPart] = await Customization.get(id);
                 }
             }
+        }
+
+        for (const [index, item] of Object.entries(this.Inventory.items)) {
+            this.Inventory.items[index] = await UtilityModel.createModelFromParse("Item", item);
         }
     }
 
@@ -29,6 +34,12 @@ class Character extends BaseModel {
                 }
             }
         }
+
+        for (const [index, item] of Object.entries(dissolvedClone.Inventory.items)) {
+            dissolvedClone.Inventory.items[index] = Object.assign({}, item)
+            logger.logDebug(dissolvedClone.Inventory.items[index])
+        }
+
         return dissolvedClone;
     }
 
@@ -40,7 +51,62 @@ class Character extends BaseModel {
         });
     }
 
+
+    
+    // Container Translation //
+    async getEquipmentContainerAsItem() {
+        return this.getInventoryItemByID(this.Inventory.equipment);
+    }
+
+    async getEquipmentContainerId() {
+        return this.Inventory.equipment;
+    }
+
+    async getStashContainerAsItem() {
+        return this.getInventoryItemByID(this.Inventory.stash);
+    }
+
+    async getStashContainerId() {
+        return this.Inventory.stash;
+    }
+
+    async getSortingTableContainerAsItem() {
+        return this.getInventoryItemByID(this.Inventory.sortingTable);
+    }
+
+    async getSortingTableContainerId() {
+        return this.Inventory.sortingTable;
+    }
+
+    async getQuestRaidItemsContainerAsItem() {
+        return this.getInventoryItemByID(this.Inventory.questRaidItems);
+    }
+
+    async getQuestRaidItemsContainerId() {
+        return this.Inventory.questRaidItems;
+    }
+
+    async getQuestStashItemsContainerAsItem() {
+        return this.getInventoryItemByID(this.Inventory.questStashItems);
+    }
+
+    async getQuestStashItemsContainerId() {
+        return this.Inventory.questStashItems;
+    }
+
     // Inventory Functionality //
+
+    async addItem(container, itemTemplate, childItemTemplateCollection = false, amount = 1, foundInRaid = false) {
+        if(!itemTemplate) {
+            return false;
+        }
+
+        
+    }
+
+    async removeItem(itemId, amount = 1) {
+
+    }
 
     async moveItems(itemCollection) {
         const movedItems = {};
@@ -64,7 +130,7 @@ class Character extends BaseModel {
         switch (containerType) {
             case "hideout":
                 logger.logDebug(`Trying to move item to/in hideout`);
-                if (containerID == this.Inventory.stash) {
+                if (containerID == await this.getStashContainerId()) {
                     return this.moveItemToHideout(itemId, locationData);
                 } else {
                     logger.logError(`Move request failed: Invalid container with ID ${containerID}`);
@@ -92,7 +158,7 @@ class Character extends BaseModel {
     }
 
     async moveItemUsingSlotID(itemId, locationData, slotId, containerID) {
-        if(!itemId) {
+        if (!itemId) {
             logger.logError("Move request failed: No itemId")
             return false;
         }
@@ -101,10 +167,10 @@ class Character extends BaseModel {
         if (itemSearch) {
             logger.logDebug(`Located item with item ID ${itemId}`);
 
-            if(locationData) {
+            if (locationData) {
                 itemSearch.location = locationData;
                 itemSearch.location.r = (locationData.r = "Vertical" ? 1 : 0)
-            } else if(!locationData && itemSearch.location) {
+            } else if (!locationData && itemSearch.location) {
                 delete itemSearch.location;
             }
 
@@ -122,7 +188,7 @@ class Character extends BaseModel {
     }
 
     async moveItemToHideout(itemId, locationData) {
-        return this.moveItemUsingSlotID(itemId, locationData, "hideout", this.Inventory.stash);
+        return this.moveItemUsingSlotID(itemId, locationData, "hideout", await this.getStashContainerId());
     }
 
     async moveItemToMain(itemId, locationData, containerID) {
@@ -132,7 +198,7 @@ class Character extends BaseModel {
     async splitItems(itemCollection) {
         const splitedItems = {};
         for (const item of itemCollection) {
-            if (item.Action === "Split"){
+            if (item.Action === "Split") {
                 const splitedItem = await this.splitItem(item.item, item.count, item.container.container, item.container.id, item.container.location);
                 Object.assign(splitedItems, splitedItem);
             }
@@ -211,7 +277,7 @@ class Character extends BaseModel {
     // Examine //
 
     async examineItem(itemId) {
-        if(!itemId) {
+        if (!itemId) {
             logger.logError("Examine request failed: No itemId");
             return false;
         }
@@ -223,7 +289,7 @@ class Character extends BaseModel {
     // EXP //
 
     async getExperience() {
-        if(!this.Info.Experience) {
+        if (!this.Info.Experience) {
             this.Info.Experience = 0;
         }
         return this.Info.Experience;
@@ -231,7 +297,7 @@ class Character extends BaseModel {
 
     async addExperience(experiencePoints) {
         // Required! This will create the object as an integer, otherwise the response will error out.
-        if(!this.Info.Experience) {
+        if (!this.Info.Experience) {
             this.Info.Experience = 0;
         }
 
