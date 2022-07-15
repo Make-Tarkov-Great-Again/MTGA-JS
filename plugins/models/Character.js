@@ -97,24 +97,24 @@ class Character extends BaseModel {
             return false;
         }
 
-        let itemSearch = await this.getInventoryItemByID(itemId);
+        const itemSearch = await this.getInventoryItemByID(itemId);
         if (itemSearch) {
             logger.logDebug(`Located item with item ID ${itemId}`);
-            
+
             if(locationData) {
                 itemSearch.location = locationData;
                 itemSearch.location.r = (locationData.r = "Vertical" ? 1 : 0)
             } else if(!locationData && itemSearch.location) {
                 delete itemSearch.location;
             }
-            
+
             itemSearch.slotId = slotId;
             itemSearch.parentId = containerID;
             return itemSearch;
         }
-        
+
         logger.logDebug(`Unable to locate item with item ID ${itemId}`);
-        return false
+        return false;
     }
 
     async moveItemToEquipmentSlot(itemId, equipmentSlotId, containerID) {

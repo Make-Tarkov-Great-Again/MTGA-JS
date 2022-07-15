@@ -277,12 +277,7 @@ class GameController {
         };
         await playerProfile.addDialogue(quest.traderId, messageContent, questReward);
         await playerProfile.save();
-        const changes = {};
-        const profileChangesBase = await playerProfile.getProfileChangesResponse(changes);
-        return FastifyResponse.zlibJsonReply(
-            reply,
-            FastifyResponse.applyBody(profileChangesBase)
-        );
+        return {};
     };
 
     static clientGameProfileMoveItem = async (request = null, reply = null) => {
@@ -294,18 +289,10 @@ class GameController {
         logger.logDebug("Move request:")
         logger.logDebug(request.body.data);
 
-        let movedItems = await playerProfile.character.moveItems(request.body.data);
+        const movedItems = await playerProfile.character.moveItems(request.body.data);
         if (movedItems) {
             if (await playerProfile.save()) {
-                let changes = {
-                    // Broken? Seems to fuck with containers? - Compare with dumps of moving containers
-                    //items: { change: [movedItems] }
-                }
-                let profileChangesBase = await playerProfile.getProfileChangesResponse(changes);
-                return FastifyResponse.zlibJsonReply(
-                    reply,
-                    FastifyResponse.applyBody(profileChangesBase)
-                );
+                return {};
             } else {
                 // display error
             }
@@ -361,15 +348,7 @@ class GameController {
         }
 
         if (await playerProfile.save()) {
-            let changes = {
-                // Fix
-            }
-
-            let profileChangesBase = await playerProfile.getProfileChangesResponse(changes);
-            return FastifyResponse.zlibJsonReply(
-                reply,
-                FastifyResponse.applyBody(profileChangesBase)
-            );
+            return {};
         } else {
             // display error
         }
@@ -387,14 +366,9 @@ class GameController {
         const splittedItems = await playerProfile.character.splitItems(request.body.data);
         if (splittedItems) {
             if (await playerProfile.save()) {
-                const changes = {
+                return {
                     items: { new: [splittedItems] }
                 };
-                const finalProfileChanges = await playerProfile.getProfileChangesResponse(changes);
-                return FastifyResponse.zlibJsonReply(
-                    reply,
-                    FastifyResponse.applyBody(finalProfileChanges)
-                );
             }
         }
     };
@@ -404,14 +378,9 @@ class GameController {
         const mergedItems = await playerProfile.character.mergeItems(request.body.data);
         if (mergedItems) {
             if (await playerProfile.save()) {
-                const changes = {
+                return {
                     items: { del: [mergedItems] }
                 };
-                const finalProfileChanges = await playerProfile.getProfileChangesResponse(changes);
-                return FastifyResponse.zlibJsonReply(
-                    reply,
-                    FastifyResponse.applyBody(finalProfileChanges)
-                );
             }
         }
     };

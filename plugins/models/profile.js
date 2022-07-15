@@ -320,16 +320,12 @@ class Profile extends BaseModel {
         return profileChangesBase;
     }
 
-    async getProfileChangesResponse(profileChanges) {
+    async getProfileChangesResponse(profileChanges, outputData) {
         if(!profileChanges) {
             return false;
         }
-
-        const outputData = await this.getProfileChangesBase();
         const mergedData = Object.assign({}, outputData.profileChanges[this.character._id], profileChanges);
         outputData.profileChanges[this.character._id] = mergedData;
-
-        return outputData;
     }
 
     async removeItemFromProfile(itemId) {
