@@ -1,3 +1,4 @@
+const { logger } = require("../utilities");
 const { BaseModel } = require("./BaseModel");
 
 class Item extends BaseModel {
@@ -6,7 +7,7 @@ class Item extends BaseModel {
 
         this.createDatabase(id);
     }
-
+    
     static async bannedItems() {
         return [
             "Pockets",
