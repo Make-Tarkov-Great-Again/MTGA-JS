@@ -92,6 +92,10 @@ module.exports = async function gameRoutes(app, _opts) {
             case "Split":
                 await GameController.clientGameSplitItem(request, reply);
                 break;
+
+            case "Merge":
+                await GameController.clientGameMergeItem(request, reply);
+                break;
             // more, MOOOOOOOOOOOOOOORE
             default:
                 logger.logWarning("Action " + action + " is not yet implemented.");
