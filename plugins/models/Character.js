@@ -1,4 +1,5 @@
 const { logger, getCurrentTimestamp, generateItemId } = require("../utilities");
+const { logDebug, logError } = require("../utilities/logger");
 const { BaseModel } = require("./BaseModel");
 const { Customization } = require("./Index");
 
@@ -159,9 +160,6 @@ class Character extends BaseModel {
                 }
             };
             this.Inventory.items.push(newItem);
-            delete newItem.parentId;
-            delete newItem.location;
-            delete newItem.slotId;
             return newItem;
         }
         return false;
@@ -171,6 +169,38 @@ class Character extends BaseModel {
         return this.Inventory.items.find(item => item._id === itemId);
     }
 
+    async removeInventoryItemByID(itemId) {
+        const indexOfItem = this.Inventory.items.findIndex(item => item._id === itemId);
+        this.Inventory.items.splice(indexOfItem, 1);
+    }
+
+    async mergeItems(itemCollection) {
+        const mergedItems = {};
+        for (const item of itemCollection) {
+            const mergedItem = await this.mergeItem(item.item, item.with);
+            Object.assign(mergedItems, mergedItem);
+        }
+        return mergedItems;
+    }
+
+    async mergeItem(mergedStackId, destinationStackId) {
+        const destinationItem = await this.getInventoryItemByID(destinationStackId);
+        if (destinationItem) {
+            const mergedItem = await this.getInventoryItemByID(mergedStackId);
+            if (mergedItem) {
+                if (!mergedItem.upd.StackObjectsCount) {
+                    mergedItem.upd.StackObjectsCount = 1;
+                }
+                destinationItem.upd.StackObjectsCount += mergedItem.upd.StackObjectsCount;
+                await this.removeInventoryItemByID(mergedStackId);
+                return { _id: mergedStackId };
+            }
+            logger.logError(`Merge request: couldn't find merged stack ${mergedStackId}`);
+            return false;
+        }
+        logger.logError(`Merge request: couldn't find destination stack ${destinationStackId}`);
+        return false;
+    }
 
     // Examine //
 
