@@ -4,7 +4,7 @@ const { UtilityModel } = require('../plugins/models/UtilityModel');
 const {
     logger, readParsed, fileExist, stringify,
     writeFile, getDirectoriesFrom, createDirectory,
-    getFilesFrom } = require('./../plugins/utilities/');
+    getFilesFrom, generateItemId } = require('./../plugins/utilities/');
 
 
 class DatabaseLoader {
@@ -239,7 +239,9 @@ class DatabaseLoader {
                 assort = assort.data;
             }
 
-            trader.assort = assort;
+
+            trader.assort = await DatabaseUtils.convertAssortMongoID(assort);
+
 
             if (fileExist(`${path}suits.json`)) {
                 trader.suits = readParsed(`${path}suits.json`);
@@ -328,6 +330,55 @@ class DatabaseLoader {
                 database.fileAge[profileID].dialogues = stats.mtimeMs;
             }
         }
+    }
+}
+
+
+class DatabaseUtils {
+
+    /**
+     * Convert all item._id to mongoIDs format.
+     * We also need to change the modified parentID to the corresponding mongoID.
+     */
+    static async convertAssortMongoID(traderAssort) {
+        const convertedIds = {};
+
+        // we do a first pass to map old id with MongoID and replace the old id
+        for (const item of traderAssort.items) {
+            const mongoID = await generateItemId();
+            convertedIds[item._id] = mongoID;
+            item._id = mongoID;
+        }
+
+        // we need to update parentID to their corresponding mongoID
+        for (const item of traderAssort.items) {
+            if (convertedIds[item.parentID]) {
+                item.parentID = convertedIds[item.parentID];
+            }
+        }
+
+        // we need to update loyal level items
+        const newLoyal = {};
+        for (let [key, value] of Object.entries(traderAssort.loyal_level_items)) {
+            if (convertedIds[key]) {
+                key = convertedIds[key];
+            }
+            newLoyal[key] = value;
+        }
+        traderAssort.loyal_level_items = newLoyal;
+
+
+        // we need to update the barter scheme
+        const newBarter = {};
+        for (let [key, value] of Object.entries(traderAssort.barter_scheme)) {
+            if (convertedIds[key]) {
+                key = convertedIds[key];
+            }
+            newBarter[key] = value;
+        }
+        traderAssort.barter_scheme = newBarter;
+
+        return traderAssort;
     }
 }
 
