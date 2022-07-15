@@ -66,7 +66,7 @@ class Trader extends BaseModel {
     }
 
 
-    async getCurrency() {
+    async getBaseCurrency() {
         let currency;
         switch (this.base.currency) {
             case "EUR":

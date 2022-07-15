@@ -13,9 +13,9 @@ class BaseModel {
      * @param {*} id 
      */
     createDatabase(id) {
-        const { database } = require("../../app");
-        var className = this.constructor.name;
         if (id) {
+            const { database } = require("../../app");
+            var className = this.constructor.name;
             if (database[className.toLowerCase() + 's'] === undefined) database[className.toLowerCase() + 's'] = {}
             database[className.toLowerCase() + 's'][id] = this;
         }
