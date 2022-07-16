@@ -239,7 +239,7 @@ class Ragfair extends BaseModel {
         offer.summaryCost = barter_scheme[0].count; // calculate
         offer.sellInOnePiece = false;
 
-        const currentTime = Date.now();
+        const currentTime = Math.floor(Date.now() / 1000);
         offer.startTime = currentTime - 3600;
         offer.endTime = currentTime + 3600;
 

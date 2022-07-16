@@ -172,7 +172,6 @@ module.exports = async function gameRoutes(app, _opts) {
 
     app.post(`/client/handbook/builds/my/list`, async (_request, reply) => {
         const output = await Weaponbuild.getAllWithoutKeys();
-        console.log()
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(output));
