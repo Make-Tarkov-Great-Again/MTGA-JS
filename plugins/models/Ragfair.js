@@ -232,11 +232,13 @@ class Ragfair extends BaseModel {
 
         offer.items = await this.cleanseItem(item);
 
-        offer.itemsCost = barter_scheme[0].count; // calculate
+        const cost = parseInt(barter_scheme[0].count);
+
+        offer.itemsCost = cost; // calculate
         offer.requirements = barter_scheme;
 
-        offer.requirementsCost = barter_scheme[0].count //calculate
-        offer.summaryCost = barter_scheme[0].count; // calculate
+        offer.requirementsCost =cost; //calculate
+        offer.summaryCost = cost; // calculate
         offer.sellInOnePiece = false;
 
         const currentTime = Math.floor(Date.now() / 1000);
@@ -270,7 +272,7 @@ class Ragfair extends BaseModel {
 
 
     async getSlotIdFromParent(item) {
-        const parent = item._parent
+        const parent = item._parent;
         switch (true) {
             case parent === "55818a594bdc2db9688b456a":
                 return "mod_stock";
@@ -380,7 +382,7 @@ class Ragfair extends BaseModel {
         }
 
         this.offers.push(offer);
-        this.nextOfferId += 1
+        this.nextOfferId += 1;
     }
 
     async sortOffers(request, offers) {
