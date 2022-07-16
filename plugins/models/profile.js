@@ -311,7 +311,7 @@ class Profile extends BaseModel {
             quests: [], // are those current accepted quests ?? -- seems like thoose are completed/failed quests -Nehax
             ragFairOffers: [], // are those current ragfair requests ?
             builds: [], // are those current weapon builds ??
-            items: { change: [], new: [], del: [] },
+            items: { },
             production: null,
             skills: {},
             traderRelations: [] //_profile.TradersInfo

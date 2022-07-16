@@ -1,3 +1,4 @@
+const { cloneDeep } = require("lodash");
 const { logger, getCurrentTimestamp, generateItemId } = require("../utilities");
 const { logDebug, logError } = require("../utilities/logger");
 const { BaseModel } = require("./BaseModel");
@@ -199,7 +200,11 @@ class Character extends BaseModel {
         for (const item of itemCollection) {
             if (item.Action === "Split") {
                 const splitedItem = await this.splitItem(item.item, item.count, item.container.container, item.container.id, item.container.location);
-                Object.assign(splitedItems, splitedItem);
+                const newItems = cloneDeep(splitedItem);
+                delete newItems.location;
+                delete newItems.slotId;
+                delete newItems.parentId;
+                Object.assign(splitedItems, newItems);
             }
         }
         return splitedItems;
@@ -217,7 +222,6 @@ class Character extends BaseModel {
         const item = await this.getInventoryItemByID(itemId);
         if (item) {
             item.upd.StackObjectsCount -= splitStackCount;
-
             const newItem = {
                 _id: await generateItemId(),
                 _tpl: item._tpl,

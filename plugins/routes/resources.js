@@ -4,13 +4,13 @@ const { read, logger } = require('../utilities');
 module.exports = async function resourcesRoutes(app, opts) {
     app.get(`/files/*`, async (request, reply) => {
         const file = request.params['*'].replace("jpg", "png");
-        const fs = require('fs')
+        const fs = require('fs');
         const stream = fs.createReadStream("./database/res/" + file);
 
         logger.logDebug("[RESOURCES] Reading file: /database/res/" + file);
 
         return stream;
-    })
+    });
 
     app.get(`/resources/*`, async (request, reply) => {
         const file = request.params['*'];
@@ -25,5 +25,5 @@ module.exports = async function resourcesRoutes(app, opts) {
         logger.logDebug("[RESOURCES] Reading file: " + webinterface.baseDirectory + "/resources/" + file);
 
         return webinterface.readFile(file);
-    })
+    });
 }
