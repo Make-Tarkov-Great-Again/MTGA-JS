@@ -352,8 +352,8 @@ class DatabaseUtils {
 
         // we need to update parentID to their corresponding mongoID
         for (const item of traderAssort.items) {
-            if (convertedIds[item.parentID]) {
-                item.parentID = convertedIds[item.parentID];
+            if (convertedIds[item.parentId]) {
+                item.parentID = convertedIds[item.parentId];
             }
         }
 
