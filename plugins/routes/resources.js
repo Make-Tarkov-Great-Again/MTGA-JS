@@ -3,9 +3,9 @@ const { read, logger } = require('../utilities');
 
 module.exports = async function resourcesRoutes(app, opts) {
     app.get(`/files/*`, async (request, reply) => {
-        const file = request.params['*'];
+        const file = request.params['*'].replace("jpg", "png");
         const fs = require('fs')
-        const stream = fs.createReadStream("./database/res/" + file)
+        const stream = fs.createReadStream("./database/res/" + file);
 
         logger.logDebug("[RESOURCES] Reading file: /database/res/" + file);
 
@@ -18,7 +18,7 @@ module.exports = async function resourcesRoutes(app, opts) {
 
         switch (fileExtension) {
             case "css":
-                reply.type("text/css")
+                reply.type("text/css");
                 break;
         }
 
