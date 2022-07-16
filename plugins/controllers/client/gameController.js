@@ -113,6 +113,7 @@ class GameController {
                 const character = await profile.getPmc();
                 const pmc = await character.dissolve();
                 output.push(pmc);
+                logger.logDebug(pmc);
                 //output.push(await profile.getScav());
                 output.push(dummyScavData);
             }

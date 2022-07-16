@@ -22,6 +22,12 @@ class Character extends BaseModel {
         for (const [index, item] of Object.entries(this.Inventory.items)) {
             this.Inventory.items[index] = await UtilityModel.createModelFromParse("Item", item);
         }
+
+        this.Inventory.equipment = await this.getInventoryItemByID(this.Inventory.equipment);
+        this.Inventory.stash = await this.getInventoryItemByID(this.Inventory.stash);
+        this.Inventory.sortingTable = await this.getInventoryItemByID(this.Inventory.sortingTable);
+        this.Inventory.questRaidItems = await this.getInventoryItemByID(this.Inventory.questRaidItems);
+        this.Inventory.questStashItems = await this.getInventoryItemByID(this.Inventory.questStashItems);
     }
 
     async dissolve() {
@@ -39,6 +45,12 @@ class Character extends BaseModel {
             dissolvedClone.Inventory.items[index] = Object.assign({}, item)
         }
 
+        dissolvedClone.Inventory.equipment = this.Inventory.equipment._id;
+        dissolvedClone.Inventory.stash = this.Inventory.stash._id;
+        dissolvedClone.Inventory.sortingTable = this.Inventory.sortingTable._id;
+        dissolvedClone.Inventory.questRaidItems = this.Inventory.questRaidItems._id;
+        dissolvedClone.Inventory.questStashItems = this.Inventory.questStashItems._id;
+
         return dissolvedClone;
     }
 
@@ -53,50 +65,30 @@ class Character extends BaseModel {
 
     
     // Container Translation //
-    async getEquipmentContainerAsItem() {
-        return this.getInventoryItemByID(this.Inventory.equipment);
-    }
-
-    async getEquipmentContainerId() {
+    async getEquipmentContainer() {
         return this.Inventory.equipment;
     }
 
-    async getStashContainerAsItem() {
-        return this.getInventoryItemByID(this.Inventory.stash);
-    }
-
-    async getStashContainerId() {
+    async getStashContainer() {
         return this.Inventory.stash;
     }
 
-    async getSortingTableContainerAsItem() {
-        return this.getInventoryItemByID(this.Inventory.sortingTable);
-    }
-
-    async getSortingTableContainerId() {
+    async getSortingTableContainer() {
         return this.Inventory.sortingTable;
     }
 
-    async getQuestRaidItemsContainerAsItem() {
-        return this.getInventoryItemByID(this.Inventory.questRaidItems);
-    }
-
-    async getQuestRaidItemsContainerId() {
+    async getQuestRaidItemsContainer() {
         return this.Inventory.questRaidItems;
     }
 
-    async getQuestStashItemsContainerAsItem() {
-        return this.getInventoryItemByID(this.Inventory.questStashItems);
-    }
-
-    async getQuestStashItemsContainerId() {
+    async getQuestStashItemsContainer() {
         return this.Inventory.questStashItems;
     }
 
     // Inventory Functionality //
 
     async addItem(container, itemTemplate, childItemTemplateCollection = false, amount = 1, foundInRaid = false) {
-        if(!itemTemplate) {
+        if( !container || !itemTemplate) {
             return false;
         }
 
@@ -129,7 +121,8 @@ class Character extends BaseModel {
         switch (containerType) {
             case "hideout":
                 logger.logDebug(`Trying to move item to/in hideout`);
-                if (containerID == await this.getStashContainerId()) {
+                let stashContainer = await this.getStashContainer();
+                if (containerID == stashContainer._id) {
                     return this.moveItemToHideout(itemId, locationData);
                 } else {
                     logger.logError(`Move request failed: Invalid container with ID ${containerID}`);
@@ -187,7 +180,8 @@ class Character extends BaseModel {
     }
 
     async moveItemToHideout(itemId, locationData) {
-        return this.moveItemUsingSlotID(itemId, locationData, "hideout", await this.getStashContainerId());
+        let stashContainer = await this.getStashContainer();
+        return this.moveItemUsingSlotID(itemId, locationData, "hideout", stashContainer._id);
     }
 
     async moveItemToMain(itemId, locationData, containerID) {
