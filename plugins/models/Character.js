@@ -88,12 +88,18 @@ class Character extends BaseModel {
 
     // Inventory Functionality //
 
-    async addItem(container, itemTemplate, childItemTemplateCollection = false, amount = 1, foundInRaid = false) {
-        if( !container || !itemTemplate) {
+    async addItem(container, item, childItems = undefined, amount = 1, foundInRaid = false) {
+        if( !container || !item) {
             return false;
         }
-
         
+        const itemSize = await Item.calculateSize(item, childItems);
+        logger.logDebug(itemSize);
+
+        const freeSlot = await Item.getFreeSlot(container, this.Inventory.items, itemSize['sizeX'], itemSize['sizeY']);
+        if(freeSlot) {
+            
+        }
     }
 
     async removeItem(itemId, amount = 1) {
