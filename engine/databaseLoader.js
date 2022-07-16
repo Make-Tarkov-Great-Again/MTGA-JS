@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { Ragfair, Preset, Item, Profile } = require('../plugins/models');
+const { Ragfair, Preset, Item, Profile, Categorie } = require('../plugins/models');
 const { UtilityModel } = require('../plugins/models/UtilityModel');
 const {
     logger, readParsed, fileExist, stringify,
@@ -101,6 +101,10 @@ class DatabaseLoader {
         let templatesData = readParsed('./database/templates.json')
         if (typeof templatesData.data != "undefined") { templatesData = templatesData.data; }
 
+        for (const categorie of templatesData.Categories) {
+            await UtilityModel.createModelFromParseWithID("Categorie", categorie.Id, categorie);
+        }
+
         database.templates = {
             "Categories": templatesData.Categories,
             "Items": templatesData.Items,
@@ -110,10 +114,10 @@ class DatabaseLoader {
 
     static async loadLocations() {
         const maps = getFilesFrom('./database/locations/base');
-        for (let map of maps) {
-            let base = readParsed(`./database/locations/base/${map}`);
+        for (const map of maps) {
+            const base = readParsed(`./database/locations/base/${map}`);
             let loot = [];
-            let location = await UtilityModel.createModelFromParseWithID("Location", base._Id, { "base": {}, "loot": {} });
+            const location = await UtilityModel.createModelFromParseWithID("Location", base._Id, { "base": {}, "loot": {} });
 
             if (fileExist(`./database/locations/loot/${map}`)) {
                 loot = readParsed(`./database/locations/loot/${map}`);
@@ -165,7 +169,7 @@ class DatabaseLoader {
         const editionKeys = getDirectoriesFrom('./database/editions/');
         for (const editionType of editionKeys) {
             const path = `./database/editions/${editionType}/`;
-            let edition = await UtilityModel.createModelFromParseWithID('Edition', editionType, {});
+            const edition = await UtilityModel.createModelFromParseWithID('Edition', editionType, {});
             edition.id = editionType;
             edition.bear = await UtilityModel.createModelFromParse("Character", readParsed(`${path}character_bear.json`));
             await edition.bear.solve();
@@ -229,7 +233,7 @@ class DatabaseLoader {
             } else {
                 trader.base = [];
             }
-            
+
             if (fileExist(`${path}questassort.json`)) {
                 trader.questassort = readParsed(`${path}questassort.json`);
             }
@@ -239,9 +243,7 @@ class DatabaseLoader {
                 assort = assort.data;
             }
 
-
             trader.assort = await DatabaseUtils.convertAssortMongoID(assort);
-
 
             if (fileExist(`${path}suits.json`)) {
                 trader.suits = readParsed(`${path}suits.json`);
