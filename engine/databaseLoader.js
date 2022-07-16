@@ -293,6 +293,7 @@ class DatabaseLoader {
             if (fileExist(`${path}character.json`)) {
                 logger.logWarning(`Loading character data for profile ${profileID}`);
                 profile.character = await UtilityModel.createModelFromParse("Character", readParsed("./user/profiles/" + profileID + "/character.json"));
+                await profile.character.solve();
                 stats = fs.statSync(`./user/profiles/${profileID}/character.json`);
                 database.fileAge[profileID].character = stats.mtimeMs;
             }
