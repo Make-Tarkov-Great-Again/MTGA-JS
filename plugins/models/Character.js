@@ -271,6 +271,18 @@ class Character extends BaseModel {
         return false;
     }
 
+    async removeItems(itemCollection) {
+        const removedItems = {};
+        for (const item of itemCollection) {
+            if (item.Action === "Remove") {
+                await this.removeInventoryItemByID(item.item);
+                Object.assign(removedItems, {_id: item.item});
+            }
+        }
+        return removedItems;
+    }
+
+
     // Examine //
 
     async examineItem(itemId) {

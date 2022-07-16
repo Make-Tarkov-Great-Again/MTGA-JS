@@ -409,5 +409,17 @@ class GameController {
         }
     };
 
+    static clientGameRemoveItem = async (request = null, reply = null) => {
+        const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
+        const deletedItems = await playerProfile.character.removeItems(request.body.data);
+        if (deletedItems) {
+            if (await playerProfile.save()) {
+                return {
+                    items: { del: [deletedItems] }
+                };
+            }
+        }
+    };
+
 }
 module.exports.GameController = GameController;
