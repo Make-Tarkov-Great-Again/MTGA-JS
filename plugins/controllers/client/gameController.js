@@ -380,7 +380,7 @@ class GameController {
                 await trader.reduceStock(requestEntry.item_id, requestEntry.count);
             }
         }
-        
+
         //const currency = await trader.getCurrency();
         //const isPayed = await payTrade(playerProfile.character.Inventory, request.body.data[0].scheme_items, currency);
     };

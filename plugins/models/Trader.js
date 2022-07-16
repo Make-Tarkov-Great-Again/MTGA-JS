@@ -1,4 +1,5 @@
 const { BaseModel } = require("./BaseModel");
+const { Categorie } = require("./Categorie");
 const { findAndReturnChildrenByItems } = require("../utilities");
 
 class Trader extends BaseModel {
@@ -101,6 +102,8 @@ class Trader extends BaseModel {
                 continue;
             }
             output[item._id] = [[{ _tpl: currency, count: 1 }]];
+            const test = await Categorie.getAll()
+            console.log()
         }
         return output;
     }

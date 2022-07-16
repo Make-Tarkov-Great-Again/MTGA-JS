@@ -18,6 +18,7 @@ const Location= require('./Location');
 const Bot = require('./Bot');
 const Ragfair = require('./Ragfair');
 const Preset = require('./Preset');
+const Categorie  = require('./Categorie');
 
 module.exports = {
     ...Account,
@@ -39,5 +40,6 @@ module.exports = {
     ...Location,
     ...Bot,
     ...Ragfair,
-    ...Preset
+    ...Preset,
+    ...Categorie
 };
