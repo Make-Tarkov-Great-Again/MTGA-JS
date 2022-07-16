@@ -31,43 +31,51 @@ class Ragfair extends BaseModel {
     }
 
     async initialize() {
-        //will be used when we start creating offers from the Item database
-        /* 
-                const items = await Item.getAll();
-                const filteredItems = await this.bannedItemFilter(items);
-                let childlessList = [];
-        
-                for (const i in filteredItems) {
-                    const item = filteredItems[i];
-                    if (await Preset.itemHasPreset(item._id)) {
-                        const preset = await Preset.getPresetsForItem(item._id)
-                        for (const p in preset) {
-                            const family = preset[p]._items
-                            //console.log(family)
-                        }
-                    } else {
-                        childlessList.push(item._id);
-                    }
-                }
-         */
-
         let data = {
             offers: [],
             offersCount: 0,
             selectedCategory: "5b5f78dc86f77409407a7f8e",
             categories: {}
         }
-        logger.logError("hahahahah");
+
         data.offers = await this.formatTraderAssorts();
-        logger.logSuccess("hahah i load ragfair after server loads");
 
         data.offersCount = data.offers.length;
 
         const categories = await this.getAllCategories();
         data.categories = await this.formatCategories(categories, data.offers);
-
-        writeFile("./ragfair.json", stringify(FastifyResponse.applyBody(data), null, 2));
         return data;
+    }
+
+    /**
+     * ragfair/find has a bunch of different parameters that are used to generate the offers
+     * yee-fucking-haw
+     * @param {*} request 
+     * @returns 
+     */
+    async generateOffersBasedOnRequest(request) {
+        return "your mom gay"
+    }
+
+    async formatItems() {
+        //will be used when we start creating offers from the Item database
+
+        const items = await Item.getAll();
+        const filteredItems = await this.bannedItemFilter(items);
+        let childlessList = [];
+
+        for (const i in filteredItems) {
+            const item = filteredItems[i];
+            if (await Preset.itemHasPreset(item._id)) {
+                const preset = await Preset.getPresetsForItem(item._id)
+                for (const p in preset) {
+                    const family = preset[p]._items
+                    //console.log(family)
+                }
+            } else {
+                childlessList.push(item._id);
+            }
+        }
     }
 
     async bannedItemFilter(items) {
@@ -124,6 +132,12 @@ class Ragfair extends BaseModel {
         return categories;
     }
 
+    /**
+     * Ragfair categories are based on the amount of unique offerId's and the amount of individual items in offer array
+     * @param {*} categories pass categories from database
+     * @param {*} offers pass offers from database
+     * @returns 
+     */
     async formatCategories(categories, offers) {
         let countedCategories = {};
         for (let offer of offers) {
@@ -186,7 +200,6 @@ class Ragfair extends BaseModel {
     }
 
 
-
     async convertItemDataForRagfairConversion(item, assort) {
         let data = [];
         const childlessList = readParsed(getAbsolutePathFrom(`/childlessList.json`));
@@ -217,6 +230,7 @@ class Ragfair extends BaseModel {
         return data;
     }
 
+
     async cleanseItem(item) {
 
         let soiledItem = item;
@@ -229,6 +243,7 @@ class Ragfair extends BaseModel {
 
         return item
     }
+
 
     async convertItemFromTraderToRagfairOffer(traderTemplate, itemsToSell, barter_scheme, loyal_level) {
 
@@ -311,6 +326,7 @@ class Ragfair extends BaseModel {
         }
     }
 
+
     async getCustomCurrencyTemplate(currency, amount) {
         let templateId;
 
@@ -336,6 +352,7 @@ class Ragfair extends BaseModel {
         ];
     }
 
+
     async getTraderTemplate(traderName) {
         let trader = await Trader.getTraderByName(traderName);
         if (trader) {
@@ -348,6 +365,7 @@ class Ragfair extends BaseModel {
         return false;
     }
 
+
     async addItemByTemplateId(user, templateId, requirements, amount, childItems = undefined, sellInOnePiece = false, loyaltyLevel = undefined) {
         let tempItem = {
             _id: await generateItemId(),
@@ -355,6 +373,7 @@ class Ragfair extends BaseModel {
         }
         return this.addItem(user, tempItem, requirements, amount, childItems, sellInOnePiece, loyaltyLevel);
     }
+
 
     async addItem(user, parentItem, requirements, amount, childItems = undefined, sellInOnePiece = false, loyaltyLevel = undefined) {
         let offer = {}
@@ -449,6 +468,7 @@ class Ragfair extends BaseModel {
         return offers;
     }
 
+
     static async getSelectedCategory(request) {
         const body = request.body;
         switch (true) {
@@ -459,11 +479,6 @@ class Ragfair extends BaseModel {
             case body.neededSearchId != "":
                 return request.body.neededSearchId;
         }
-    }
-
-    static async getLimit(request) {
-        const body = request.body;
-        return body.limit;
     }
 }
 
