@@ -294,6 +294,10 @@ class DatabaseLoader {
                 logger.logWarning(`Loading character data for profile ${profileID}`);
                 profile.character = await UtilityModel.createModelFromParse("Character", readParsed("./user/profiles/" + profileID + "/character.json"));
                 await profile.character.solve();
+
+                const vogGrenade = await Item.get("5e340dcdcb6d5863cc5e5efb");
+                await profile.character.addItem(await profile.character.getStashContainer(), await vogGrenade.createAsNewItem());
+
                 stats = fs.statSync(`./user/profiles/${profileID}/character.json`);
                 database.fileAge[profileID].character = stats.mtimeMs;
             }
