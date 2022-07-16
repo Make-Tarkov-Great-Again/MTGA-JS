@@ -5,8 +5,9 @@ const { Preset } = require("./Preset");
 const cloneDeep = require("rfdc")();
 
 const {
-    FastifyResponse, generateUniqueId, getCurrentTimestamp, generateItemId,
-    logger, findChildren, writeFile, readParsed, getAbsolutePathFrom, stringify, fileExist } = require("../utilities");
+    FastifyResponse, getCurrentTimestamp, generateItemId,
+    logger, findChildren, writeFile, readParsed,
+    getAbsolutePathFrom, stringify, fileExist } = require("../utilities");
 
 class Ragfair extends BaseModel {
     constructor() {
@@ -31,8 +32,9 @@ class Ragfair extends BaseModel {
 
     async initialize() {
         //will be used when we start creating offers from the Item database
-        /*         const items = await Item.getAll();
-                const filteredItems = await this.bannedItemFilter(items); 
+        /* 
+                const items = await Item.getAll();
+                const filteredItems = await this.bannedItemFilter(items);
                 let childlessList = [];
         
                 for (const i in filteredItems) {
@@ -46,8 +48,8 @@ class Ragfair extends BaseModel {
                     } else {
                         childlessList.push(item._id);
                     }
-                } */
-
+                }
+         */
 
         let data = {
             offers: [],
@@ -61,9 +63,10 @@ class Ragfair extends BaseModel {
 
         data.offersCount = data.offers.length;
 
-        data.categories = await this.getCategories();
-        writeFile("./ragfair.json", stringify(FastifyResponse.applyBody(data), null, 2));
+        const categories = await this.getAllCategories();
+        data.categories = await this.formatCategories(categories, data.offers);
 
+        writeFile("./ragfair.json", stringify(FastifyResponse.applyBody(data), null, 2));
         return data;
     }
 
@@ -111,20 +114,32 @@ class Ragfair extends BaseModel {
             1); // add a vog to offers
     }
 
-    async getCategories() {
+    async getAllCategories() {
         const traders = await Trader.getAll();
         let categories = {};
         for (const t in traders) {
             if (traders[t].isRagfair() || traders[t].isFence()) continue;
-            const loyal_level_items = traders[t].assort.loyal_level_items;
-            for (const l in loyal_level_items) {
-                if (categories.hasOwnProperty(l)) continue;
-                categories[l] = 1;
-                //console.log(Object.keys(categories).length);
-            }
-
+            Object.assign(categories, traders[t].assort.loyal_level_items);
         }
         return categories;
+    }
+
+    async formatCategories(categories, offers) {
+        let countedCategories = {};
+        for (let offer of offers) {
+            let item = offer.items[0];
+
+            countedCategories[item._tpl] = countedCategories[item._tpl] || 0;
+            countedCategories[item._tpl]++;
+        }
+
+        for (let c in categories) {
+            if (!countedCategories[c]) {
+                countedCategories[c] = 1;
+            }
+        }
+
+        return countedCategories;
     }
 
     async formatTraderAssorts() {
@@ -237,11 +252,11 @@ class Ragfair extends BaseModel {
         offer.itemsCost = cost; // calculate
         offer.requirements = barter_scheme;
 
-        offer.requirementsCost =cost; //calculate
+        offer.requirementsCost = cost; //calculate
         offer.summaryCost = cost; // calculate
         offer.sellInOnePiece = false;
 
-        const currentTime = Math.floor(Date.now() / 1000);
+        const currentTime = getCurrentTimestamp();
         offer.startTime = currentTime - 3600;
         offer.endTime = currentTime + 3600;
 
