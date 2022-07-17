@@ -21,15 +21,6 @@ class Ragfair extends BaseModel {
         //await this.initialize();
     }
 
-    async getRagfair() {
-        return {
-            categories: this.categories,
-            offers: this.offers,
-            offersCount: this.offersCount,
-            selectedCategory: this.selectedCategory,
-        }
-    }
-
     async initialize() {
         let data = {
             offers: [],
@@ -53,7 +44,17 @@ class Ragfair extends BaseModel {
      * @param {*} request 
      * @returns 
      */
-    async generateOffersBasedOnRequest(request) {
+    static async generateOffersBasedOnRequest(request = null) {
+        const { database } = require("../../app");
+        const ragfair = cloneDeep(database.ragfair);
+
+        ragfair.categories = {};
+        // prepare categories
+        for (const c of ragfair.offers) {
+            ragfair.categories[c.items[0]._tpl] = 1;
+        }
+
+        if (request) return "your mom built like a fucking house"; //buildCount
         return "your mom gay"
     }
 
@@ -136,24 +137,35 @@ class Ragfair extends BaseModel {
      * Ragfair categories are based on the amount of unique offerId's and the amount of individual items in offer array
      * @param {*} categories pass categories from database
      * @param {*} offers pass offers from database
+     * @param {*} filters pass selected filter to add to categories
      * @returns 
      */
-    async formatCategories(categories, offers) {
-        let countedCategories = {};
-        for (let offer of offers) {
-            let item = offer.items[0];
+    async formatCategories(categories, offers, filters = null) {
 
-            countedCategories[item._tpl] = countedCategories[item._tpl] || 0;
-            countedCategories[item._tpl]++;
-        }
-
-        for (let c in categories) {
-            if (!countedCategories[c]) {
-                countedCategories[c] = 1;
+        if (filters) {
+            let filteredCategories = {};
+            for (let filter of filters) {
+                filteredCategories[filter] = 1;
             }
-        }
+            return filteredCategories;
+        } else {
+            let countedCategories = {};
 
-        return countedCategories;
+            for (let offer of offers) {
+                let item = offer.items[0];
+
+                countedCategories[item._tpl] = countedCategories[item._tpl] || 0;
+                countedCategories[item._tpl]++;
+            }
+
+            for (let c in categories) {
+                if (!countedCategories[c]) {
+                    countedCategories[c] = 1;
+                }
+            }
+
+            return countedCategories;
+        }
     }
 
     async formatTraderAssorts() {
