@@ -1,5 +1,7 @@
 const { logger, generateItemId } = require("../utilities");
+const { logError } = require("../utilities/logger");
 const { BaseModel } = require("./BaseModel");
+
 
 class Item extends BaseModel {
     constructor(id) {
@@ -7,7 +9,115 @@ class Item extends BaseModel {
 
         this.createDatabase(id);
     }
+
+    async isFolded() {
+        return !!(this.upd && this.upd.Foldable && this.upd.Foldable.Folded === true);
+    }
+
+    async getSize(childItems = undefined) {
+        const itemTemplate = await Item.get(this._tpl);
+        let itemWidth = itemTemplate._props.Width;
+        let itemHeight = itemTemplate._props.Height;
+        let outWidth;
+        let outHeight;
+        let SizeUp = 0,
+            SizeDown = 0,
+            SizeLeft = 0,
+            SizeRight = 0;
+        let ForcedUp = 0,
+            ForcedDown = 0,
+            ForcedLeft = 0,
+            ForcedRight = 0;
+
+        if(childItems) {
+            for (const childItem of childItems) {
+                const childItemTemplate = await Item.get(childItem._tpl);
     
+                if(childItem.slotId.indexOf('mod_') < 0 ) {
+                    continue;
+                }
+    
+    
+                // this has to be cleaned up // 
+                if(
+                    (
+                        itemTemplate._props.Foldable && 
+                        itemTemplate._props.FoldedSlot == childItem.slotId && 
+                        (this.isFolded() || childItem.isFolded())
+                    ) 
+                    || 
+                    (
+                        childItemTemplate._props.Foldable && 
+                        this.isFolded() && 
+                        childItem.isFolded()
+                    )
+                ) {
+                    continue;
+                }
+    
+    
+                // is this even good?
+                if (childItemTemplate._props.ExtraSizeForceAdd === true) {
+                    ForcedUp += childItemTemplate._props.ExtraSizeUp;
+                    ForcedDown += childItemTemplate._props.ExtraSizeDown;
+                    ForcedLeft += childItemTemplate._props.ExtraSizeLeft;
+                    ForcedRight += childItemTemplate._props.ExtraSizeRight;
+                } else {
+                    SizeUp = SizeUp < childItemTemplate._props.ExtraSizeUp ? childItemTemplate._props.ExtraSizeUp : SizeUp;
+                    SizeDown = SizeDown < childItemTemplate._props.ExtraSizeDown ? childItemTemplate._props.ExtraSizeDown : SizeDown;
+                    SizeLeft = SizeLeft < childItemTemplate._props.ExtraSizeLeft ? childItemTemplate._props.ExtraSizeLeft : SizeLeft;
+                    SizeRight = SizeRight < childItemTemplate._props.ExtraSizeRight ? childItemTemplate._props.ExtraSizeRight : SizeRight;
+                }
+            }
+        }
+
+        itemWidth = itemWidth + SizeLeft + SizeRight + ForcedLeft + ForcedRight;
+        itemHeight = itemHeight + SizeUp + SizeDown + ForcedUp + ForcedDown;
+
+        // Rotate based on rotation variable //
+        if (typeof this.location === "undefined" || this.location.r == 0) {
+            outWidth = itemWidth;
+            outHeight = itemHeight;
+        } else {
+            outWidth = itemHeight
+            outHeight = itemWidth;
+        }
+
+        return { width: outWidth, height: outHeight};
+    }
+    
+    async getAllChildItemsInInventory(itemArray) {
+        if(!itemArray) {
+            return false;
+        }
+
+        let parentReference = []; // Will contain parentIDs and all child objects of that parent
+
+        for (const thisItemObj of itemArray) { // Loop through inventory items to create the parentReference object
+            if (typeof thisItemObj._id != 'undefined' && typeof thisItemObj.parentId != 'undefined') {
+                if (typeof parentReference[thisItemObj.parentId] == 'undefined') { // This parent hasn't yet been defined
+                    parentReference[thisItemObj.parentId] = [thisItemObj]; // Add this item as the only child of this parent
+                } else {
+                    parentReference[thisItemObj.parentId].push(thisItemObj); // Add this item to the children of of this parent
+                }
+            }
+        }
+
+        if (typeof parentReference[this._id] == 'undefined') { // The input parentId has no children in the itemArray
+            return [];
+        } else {
+            let returnArray = [...parentReference[this._id]]; // Shallow copy the initial children of the input parentId
+
+            for (const thisChild of returnArray) {
+                if (typeof parentReference[thisChild._id] != 'undefined') { // If this child ID has children defined
+                    returnArray.push(...parentReference[thisChild._id]); // Add this ID's children to the returnArray, which will also be checked by further iterations of this loop
+                }
+            }
+            
+            return returnArray;
+        }
+    }
+
     static async bannedItems() {
         return [
             "Pockets",
@@ -24,34 +134,37 @@ class Item extends BaseModel {
     }
 
     async createAsNewItem() {
+        const { UtilityModel } = require("./UtilityModel");
         let newItem = {};
 
         newItem._id = await generateItemId();
         newItem._tpl = this._id;
 
-        return newItem;
+        return UtilityModel.createModelFromParse("Item", newItem);
     }
 
     async createAsNewItemWithParent(parentId) {
+        const { UtilityModel } = require("./UtilityModel");
+
         let newItem = {};
 
         newItem._id = await generateItemId();
         newItem._tpl = this._id;
         newItem.parentId = parentId;
 
-        return newItem;
+        return UtilityModel.createModelFromParse("Item", newItem);
     }
 
     /**
      * Tries to look for an item with the provided container as base, the storage location for items of the container and the item dimensions
      * @param {* item - The needle} container 
      * @param {* itemInventory - The heystack} itemInventory 
-     * @param {* sizeX - The required size in X} sizeX 
-     * @param {* sizeY - The required size in Y} sizeY 
+     * @param {* itemWidth - The required size horizontally} itemWidth 
+     * @param {* itemHeight - The required size vertically} itemHeight 
      * @returns 
      */
-    static async getFreeSlot(container, itemInventory, sizeX, sizeY) {
-        if(!container || !itemInventory || !sizeX || !sizeY) {
+    static async getFreeSlot(container, itemInventory, itemWidth, itemHeight) {
+        if(!container || !itemInventory || !itemWidth || !itemHeight) {
             return false;
         }
 
@@ -60,8 +173,80 @@ class Item extends BaseModel {
             return false;
         }
 
-        //let containerMap = await Item.createContainerMap(container, itemInventory);
-        //logger.logDebug(containerMap);
+        const containerMap = await Item.createContainerMap(container, itemInventory);
+        let freeSlot = false;
+        findSlot:
+        for (const grid in containerMap) {
+            if (containerMap[grid].width == itemWidth && containerMap[grid].height == itemHeight) { // Check slots that are the exact size we need, horizontally
+                if (containerMap[grid][0][0] != null) {
+                    //logger.logDebug(`Exact horizontal: Occupied G${grid} R${0} C${0}`);
+                    continue;
+                }
+                // If this loop hasn't been continued then this slot is empty. Place the item here
+                logger.logDebug(`Exact horizontal: Free slot found at (x${itemWidth} y${itemHeight}) at G${grid} R${0} C${0}`);
+
+                freeSlot = {x: 0, y: 0, r: 0, slotId: grid};
+                break findSlot;
+            }
+
+            if(!freeSlot) {
+                if (containerMap[grid].height == itemWidth && containerMap[grid].width == itemHeight) { // Check slots that are the exact size we need, vertical
+                    if (containerMap[grid][0][0] != null) {
+                        //logger.logDebug(`Exact vertical: Occupied G${grid} R${0} C${0}`);
+                        continue;
+                    }
+                    // If this loop hasn't been continued then this slot is empty. Place the item here
+                    logger.logDebug(`Exact vertical: Free slot found at (x${itemWidth} y${itemHeight}) at G${grid} R${0} C${0}`);
+    
+                    freeSlot = {x: 0, y: 0, r: 1, slotId: grid};
+                    break findSlot;
+                }
+            }
+
+            if (!freeSlot) { // If the item hasn't been placed, try fitting it horizontally in a grid that's larger than the size of this item
+                if (containerMap[grid].width >= itemWidth && containerMap[grid].height >= itemHeight) { // Check slots that are larger than the size we need, horizontally
+                    for (let row = 0; row <= (containerMap[grid].height - itemHeight); row++) {
+                        columnSearch: for (let column = 0; column <= (containerMap[grid].width - itemWidth); column++) {
+                            for (let searchRow = row; searchRow < (row + itemHeight); searchRow++) { // Search the surrounding squares in the shape of this item
+                                for (let searchColumn = column; searchColumn < (column + itemWidth); searchColumn++) {
+                                    if (containerMap[grid][searchRow][searchColumn] != null) {
+                                        //logger.logDebug(`Larger horizontal: Occupied G${grid} R${searchRow} C${searchColumn}`);
+                                        continue columnSearch; // Search the next column to the right
+                                    }
+                                }
+                            }
+                            logger.logDebug(`Larger horizontal: Free slot found at (${itemHeight}x${itemWidth}) at G${grid} R${row} C${column}`);
+
+                            freeSlot = {x: column, y: row, r: 0, slotId: grid};
+                            break findSlot;
+                        }
+                    }
+                }
+            }
+
+            if (!freeSlot) { // If the item hasn't been placed, try fitting it horizontally in a grid that's larger than the size of this item
+                if (containerMap[grid].width >= itemHeight && containerMap[grid].height >= itemWidth) { // Check slots that are larger than the size we need, horizontally
+                    for (let row = 0; row <= (containerMap[grid].height - itemWidth); row++) {
+                        columnSearch: for (let column = 0; column <= (containerMap[grid].width - itemHeight); column++) {
+                            for (let searchRow = row; searchRow < (row + itemWidth); searchRow++) { // Search the surrounding squares in the shape of this item
+                                for (let searchColumn = column; searchColumn < (column + itemHeight); searchColumn++) {
+                                    if (containerMap[grid][searchRow][searchColumn] != null) {
+                                        //logger.logDebug(`Larger vertical: Occupied G${grid} R${searchRow} C${searchColumn}`);
+                                        continue columnSearch; // Search the next column to the right
+                                    }
+                                }
+                            }
+                            logger.logDebug(`Larger vetical: Free slot found at (${itemHeight}x${itemWidth}) at G${grid} R${row} C${column}`);
+
+                            freeSlot = {x: column, y: row, r: 1, slotId: grid};
+                            break findSlot;
+                        }
+                    }
+                }
+            }
+        }
+
+        return freeSlot
     }
 
     /**
@@ -99,27 +284,17 @@ class Item extends BaseModel {
         }
         
         for (const item of items) {
-            const itemTemplate = await Item.get(item._tpl);
-            let itemWidth;
-            let itemHeight;
+            let childItems = await item.getAllChildItemsInInventory(itemInventory);
+            let itemSize = await item.getSize(childItems);
 
-            // FIX for child items, specially attachments
-            if (item.location.r == 0) {
-                itemWidth = itemTemplate._props.Width
-                itemHeight = itemTemplate._props.Height;
-            } else {
-                itemWidth = itemTemplate._props.Height
-                itemHeight = itemTemplate._props.Width;
-            }
-
-            for (let row = item.location.y; row < (item.location.y + itemHeight); row++) { // Iterate item height in relation to inventory squares
-                for (let column = item.location.x; column < (item.location.x + itemWidth); column++) { // Iterate item width in relation to inventory squares
+            for (let row = item.location.y; row < (item.location.y + itemSize.height); row++) { // Iterate item height in relation to inventory squares
+                for (let column = item.location.x; column < (item.location.x + itemSize.width); column++) { // Iterate item width in relation to inventory squares
                     if (typeof containerMap[item.slotId][row][column] !== "undefined") { // If the grid square this item occupies exists in the container
-                        logger.logDebug(`Read inventory: Item ${item._id} (${itemHeight}x${itemWidth}) at ${item.parentId} slotId: ${item.slotId} R${row} C${column}`);
+                        //logger.logDebug(`Read inventory: Item ${item._id} (${itemSize.height}x${itemSize.width}) at ${item.parentId} slotId: ${item.slotId} R${row} C${column}`);
                         containerMap[item.slotId][row][column] = item._id; // Mark this grid square as occupied by this item
                     } else {
                         logger.logDebug(item);
-                        logger.logError(`Inventory item occupies invalid slot: _id: ${item._id} _tpl: ${item._tpl} parentId: ${item.parentId} slotId: ${item.slotId} y: ${row} x: ${column} - width: ${itemWidth} height: ${itemHeight}`);
+                        logger.logError(`Inventory item occupies invalid slot: _id: ${item._id} _tpl: ${item._tpl} parentId: ${item.parentId} slotId: ${item.slotId} y: ${row} x: ${column} - width: ${itemSize.width} height: ${itemSize.height}`);
                         return [];
                     }
                 }
@@ -127,42 +302,6 @@ class Item extends BaseModel {
         }
 
         return containerMap;
-    }
-
-    static async calculateSize(item, childItems = undefined) {
-        const parentItem = await Item.get(item._tpl);
-
-        let sizeX = parentItem._props.Width,
-            sizeXLeft = 0,
-            sizeXRight = 0,
-            sizeXForcedLeft = 0,
-            sizeXForcedRight = 0;
-
-        let sizeY = parentItem._props.Height,
-            sizeYUp = 0,
-            sizeYDown = 0,
-            sizeYForcedUp = 0,
-            sizeYForcedDown = 0;
-
-        if(childItems) {
-            for (let childItem of childItems) {
-                const childItemTemplate = await Item.get(childItem._tpl);
-    
-                if(childItem.slotId.indexOf('mod_') < 0 ) {
-                    continue;
-                }
-    
-                // do size //
-            }
-        }
-
-        let combinedSizeX = sizeX + sizeXLeft + sizeXRight + sizeXForcedLeft + sizeXForcedRight;
-        let combinedSizeY = sizeY + sizeYUp + sizeYDown + sizeYForcedUp + sizeYForcedDown;
-
-        return {
-            "sizeX": combinedSizeX,
-            "sizeY": combinedSizeY
-        }
     }
 
     static async generatePriceTable(templatesItems) {

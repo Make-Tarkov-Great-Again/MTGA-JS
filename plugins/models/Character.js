@@ -9,6 +9,177 @@ class Character extends BaseModel {
         super();
     }
 
+    async addTestPistol() {
+        let weaponTemplate = "5cadc190ae921500103bb3b6";
+        let customUpd = {
+            "upd": {
+                "Repairable": {
+                    "MaxDurability": 100,
+                    "Durability": 100
+                },
+                "FireMode": {
+                    "FireMode": "single"
+                }
+            }
+        }
+
+        let children = [
+            {
+                "_tpl": "5cadc1c6ae9215000f2775a4",
+                "slotId": "mod_barrel",
+                "children": [
+                    {
+                        "_tpl": "5cadc390ae921500126a77f1",
+                        "slotId": "mod_muzzle"
+                    },
+                ]
+            },
+            {
+                "_tpl": "5cadc431ae921500113bb8d5",
+                "slotId": "mod_pistol_grip"
+            },
+            {
+                "_tpl": "5cadc55cae921500103bb3be",
+                "slotId": "mod_reciever",
+                "children": [
+                    {
+                        "_tpl": "5cadd940ae9215051e1c2316",
+                        "slotId": "mod_sight_rear",
+                        "upd": {
+                            "Sight": {
+                                "ScopesCurrentCalibPointIndexes": [
+                                    0
+                                ],
+                                "ScopesSelectedModes": [
+                                    0
+                                ],
+                                "SelectedScope": 0
+                            }
+                        }
+                    },
+                    {
+                        "_tpl": "5cadd919ae921500126a77f3",
+                        "slotId": "mod_sight_front",
+                        "upd": {
+                            "Sight": {
+                                "ScopesCurrentCalibPointIndexes": [
+                                    0
+                                ],
+                                "ScopesSelectedModes": [
+                                    0
+                                ],
+                                "SelectedScope": 0
+                            }
+                        }
+                    },
+                ]
+            },
+            {
+                "_tpl": "5cadc2e0ae9215051e1c21e7",
+                "slotId": "mod_magazine",
+                "children": [
+                    {
+                        "_tpl": "56d59d3ad2720bdb418b4577",
+                        "slotId": "cartridges",
+                        "amount": 17
+                    },
+                ]
+            },
+        ]
+
+        await this.addItem(await this.getStashContainer(), weaponTemplate, children, 1, false, customUpd);
+    }
+
+    async addTestRifle() {
+        let weaponTemplate = "5447a9cd4bdc2dbd208b4567";
+        let customUpd = {
+            "upd": {
+                "Repairable": {
+                    "MaxDurability": 100,
+                    "Durability": 100
+                },
+                "FireMode": {
+                    "FireMode": "single"
+                }
+            }
+        }
+
+        let children = [
+            {
+                "_tpl": "55d4b9964bdc2d1d4e8b456e",
+                "slotId": "mod_pistol_grip"
+            },
+            {
+                "_tpl": "55d4887d4bdc2d962f8b4570",
+                "slotId": "mod_magazine",
+                "children": [
+                    {
+                        "_tpl": "54527a984bdc2d4e668b4567",
+                        "slotId": "cartridges",
+                        "upd": {
+                            "StackObjectsCount": 30
+                        }
+                    },
+                ]
+            },
+            {
+                "_tpl": "55d355e64bdc2d962f8b4569",
+                "slotId": "mod_reciever",
+                "children": [
+                    {
+                        "_tpl": "55d3632e4bdc2d972f8b4569",
+                        "slotId": "mod_barrel",
+                        "children": [
+                            {
+                                "_tpl": "544a38634bdc2d58388b4568",
+                                "slotId": "mod_muzzle"
+                            },
+                            {
+                                "_tpl": "5ae30e795acfc408fb139a0b",
+                                "slotId": "mod_gas_block"
+                            },
+                        ]
+                    },
+                    {
+                        "_tpl": "5ae30db85acfc408fb139a05",
+                        "slotId": "mod_handguard"
+                    },
+                    {
+                        "_tpl": "5ae30bad5acfc400185c2dc4",
+                        "slotId": "mod_sight_rear",
+                        "upd": {
+                            "Sight": {
+                                "ScopesCurrentCalibPointIndexes": [
+                                    0
+                                ],
+                                "ScopesSelectedModes": [
+                                    0
+                                ],
+                                "SelectedScope": 0
+                            }
+                        }
+                    },
+                ]
+            },
+            {
+                "_tpl": "5649be884bdc2d79388b4577",
+                "slotId": "mod_stock",
+                "children": [
+                    {
+                        "_tpl": "55d4ae6c4bdc2d8b2f8b456e",
+                        "slotId": "mod_stock_000"
+                    },
+                ]
+            },
+            {
+                "_tpl": "55d44fd14bdc2d962f8b456e",
+                "slotId": "mod_charge"
+            },
+        ]
+
+        await this.addItem(await this.getStashContainer(), weaponTemplate, children, 2, false, customUpd);
+    }
+
     async solve() {
         const { UtilityModel } = require("./UtilityModel");
         logger.logDebug("Solving Character with ID:" + this._id);
@@ -88,18 +259,153 @@ class Character extends BaseModel {
 
     // Inventory Functionality //
 
-    async addItem(container, item, childItems = undefined, amount = 1, foundInRaid = false) {
-        if( !container || !item) {
+    /**
+     * Adds and Item into the players inventory. Requires the container to place the item in, the itemId of the template item, the childItems as a array of objects with {templateId, slotId, amount, foundInRaid, customUpd, children} (if required), the amount (if more than one) and if the item is found in raid (default is false)
+     * @param {*} container 
+     * @param {*} itemId 
+     * @param {*} childItems 
+     * @param {*} amount 
+     * @param {*} foundInRaid 
+     * @returns 
+     */
+    async addItem(container, itemId, children = undefined, amount = 1, foundInRaid = false, customUpd = false) {
+        if( !container || !itemId) {
             return false;
         }
-        
-        const itemSize = await Item.calculateSize(item, childItems);
-        logger.logDebug(itemSize);
 
-        const freeSlot = await Item.getFreeSlot(container, this.Inventory.items, itemSize['sizeX'], itemSize['sizeY']);
-        if(freeSlot) {
-            
+        const itemTemplate = await Item.get(itemId);
+        if(!itemTemplate){
+            return false;
+        }        
+        
+        let itemsAdded = [];
+
+        let stackAmount = (amount - ~~(amount / itemTemplate._props.StackMaxSize) * itemTemplate._props.StackMaxSize) > 0 ? 1 + ~~(amount / itemTemplate._props.StackMaxSize) : ~~(amount / itemTemplate._props.StackMaxSize);
+        logger.logDebug(stackAmount);
+        for(let itemsToAdd = 0; itemsToAdd < stackAmount; itemsToAdd ++) {
+            if(amount > 0) {
+                let itemSize = false;
+                let item = await itemTemplate.createAsNewItem();
+
+                if(children) {
+                    let childItemArray = []
+                    for(let childItem of children) {
+                        let childrenAdded = await this.addItemToParent(item, childItem._tpl, childItem.slotId, childItem.amount, childItem.foundInRaid, childItem.upd, childItem.children);
+                        for (let childAdded of childrenAdded) {
+                            childItemArray.push(childAdded)
+                        } 
+                    }
+                    itemSize = await item.getSize(childItemArray);
+                } else {
+                    itemSize = await item.getSize();
+                }
+                
+                
+                const freeSlot = await Item.getFreeSlot(container, this.Inventory.items, itemSize.width, itemSize.height);
+                if(freeSlot) {
+                    item.parentId = container._id;
+                    item.slotId = freeSlot.slotId;
+                    item.location = {
+                        x: freeSlot.x,
+                        y: freeSlot.y,
+                        r: freeSlot.r
+                    }
+
+                    if(amount > itemTemplate._props.StackMaxSize) {
+                        amount = amount - itemTemplate._props.StackMaxSize;
+                        item.upd = {}
+                        item.upd.StackObjectsCount = itemTemplate._props.StackMaxSize;
+                    } else {
+                        if(amount > 1) {
+                            item.upd = {}
+                            item.upd.StackObjectsCount = amount;
+                        }
+                    }
+
+                    if(foundInRaid) {
+                        if(typeof item.upd === "undefined") {
+                            item.upd = {}
+                        }
+                        item.upd.SpawnedInSession = true;
+                    }
+
+                    if(customUpd) {
+                        if(typeof item.upd === "undefined") {
+                            item.upd = {}
+                        }
+
+                        Object.assign(item.upd, customUpd);
+                    }
+
+                    this.Inventory.items.push(item);
+                    itemsAdded.push(item);
+                } else {
+                    logger.logDebug(`Unable to add item ${itemId}. No space.`);
+                    return false;
+                }
+            }        
         }
+
+        if(itemsAdded.length > 0) {
+            return itemsAdded;
+        } else {
+            logger.logDebug(`Unable to add item ${itemId}. Unknown cause.`);
+            return false;
+        }
+    }
+
+    async addItemToParent(parent, itemId, slotId, amount = 1, foundInRaid = false, customUpd = false, children = false) {
+        if(!parent || !itemId || !slotId) {
+            return false;
+        }
+
+        const itemTemplate = await Item.get(itemId);
+        if(!itemTemplate){
+            return false;
+        }
+
+        let item = await itemTemplate.createAsNewItem();
+        item.parentId = parent._id
+        item.slotId = slotId;
+        
+        if(amount > 1 && amount <= itemTemplate._props.StackMaxSize) {
+            item.upd = {}
+            item.upd.StackObjectsCount = amount;
+        } else {
+            item.upd = {}
+            item.upd.StackObjectsCount = itemTemplate._props.StackMaxSize;
+        }
+
+        if(foundInRaid) {
+            if(typeof item.upd === "undefined") {
+                item.upd = {}
+            }
+
+            item.upd.SpawnedInSession = true;
+        }
+
+        if(customUpd) {
+            if(typeof item.upd === "undefined") {
+                item.upd = {}
+            }
+
+            Object.assign(item.upd, customUpd);
+        }
+        
+        let itemsAdded = [];
+
+        if(children) {
+            for(let childItem of children) {
+                let childrenAdded = await this.addItemToParent(item, childItem._tpl, childItem.slotId, childItem.amount, childItem.foundInRaid, childItem.upd, childItem.children);
+                for (let childAdded of childrenAdded) {
+                    itemsAdded.push(childAdded)
+                } 
+            }
+        }
+
+        this.Inventory.items.push(item);
+        itemsAdded.push(item);
+        return itemsAdded;
     }
 
     async removeItem(itemId, amount = 1) {
