@@ -9,6 +9,9 @@ class Character extends BaseModel {
         super();
     }
 
+    /**
+     * Example function on how to add items.
+     */
     async addTestPistol() {
         let weaponTemplate = "5cadc190ae921500103bb3b6";
         let customUpd = {
@@ -90,6 +93,9 @@ class Character extends BaseModel {
         await this.addItem(await this.getStashContainer(), weaponTemplate, children, 1, false, customUpd);
     }
 
+    /**
+     * Example function on how to add items.
+     */
     async addTestRifle() {
         let weaponTemplate = "5447a9cd4bdc2dbd208b4567";
         let customUpd = {
@@ -235,7 +241,7 @@ class Character extends BaseModel {
     }
 
 
-    
+
     // Container Translation //
     async getEquipmentContainer() {
         return this.Inventory.equipment;
@@ -260,49 +266,48 @@ class Character extends BaseModel {
     // Inventory Functionality //
 
     /**
-     * Adds and Item into the players inventory. Requires the container to place the item in, the itemId of the template item, the childItems as a array of objects with {templateId, slotId, amount, foundInRaid, customUpd, children} (if required), the amount (if more than one) and if the item is found in raid (default is false)
+     * Adds and Item into the players inventory.
      * @param {*} container 
      * @param {*} itemId 
-     * @param {*} childItems 
+     * @param {*} children 
      * @param {*} amount 
      * @param {*} foundInRaid 
-     * @returns 
+     * @param {*} customUpd 
+     * @returns An array of all the items that were added.
      */
     async addItem(container, itemId, children = undefined, amount = 1, foundInRaid = false, customUpd = false) {
-        if( !container || !itemId) {
+        if (!container || !itemId) {
             return false;
         }
 
         const itemTemplate = await Item.get(itemId);
-        if(!itemTemplate){
+        if (!itemTemplate) {
             return false;
-        }        
-        
-        let itemsAdded = [];
+        }
 
+        let itemsAdded = [];
         let stackAmount = (amount - ~~(amount / itemTemplate._props.StackMaxSize) * itemTemplate._props.StackMaxSize) > 0 ? 1 + ~~(amount / itemTemplate._props.StackMaxSize) : ~~(amount / itemTemplate._props.StackMaxSize);
-        logger.logDebug(stackAmount);
-        for(let itemsToAdd = 0; itemsToAdd < stackAmount; itemsToAdd ++) {
-            if(amount > 0) {
+
+        for (let itemsToAdd = 0; itemsToAdd < stackAmount; itemsToAdd++) {
+            if (amount > 0) {
                 let itemSize = false;
                 let item = await itemTemplate.createAsNewItem();
 
-                if(children) {
+                if (children) {
                     let childItemArray = []
-                    for(let childItem of children) {
+                    for (let childItem of children) {
                         let childrenAdded = await this.addItemToParent(item, childItem._tpl, childItem.slotId, childItem.amount, childItem.foundInRaid, childItem.upd, childItem.children);
                         for (let childAdded of childrenAdded) {
                             childItemArray.push(childAdded)
-                        } 
+                        }
                     }
                     itemSize = await item.getSize(childItemArray);
                 } else {
                     itemSize = await item.getSize();
                 }
-                
-                
+
                 const freeSlot = await Item.getFreeSlot(container, this.Inventory.items, itemSize.width, itemSize.height);
-                if(freeSlot) {
+                if (freeSlot) {
                     item.parentId = container._id;
                     item.slotId = freeSlot.slotId;
                     item.location = {
@@ -311,26 +316,26 @@ class Character extends BaseModel {
                         r: freeSlot.r
                     }
 
-                    if(amount > itemTemplate._props.StackMaxSize) {
+                    if (amount > itemTemplate._props.StackMaxSize) {
                         amount = amount - itemTemplate._props.StackMaxSize;
                         item.upd = {}
                         item.upd.StackObjectsCount = itemTemplate._props.StackMaxSize;
                     } else {
-                        if(amount > 1) {
+                        if (amount > 1) {
                             item.upd = {}
                             item.upd.StackObjectsCount = amount;
                         }
                     }
 
-                    if(foundInRaid) {
-                        if(typeof item.upd === "undefined") {
+                    if (foundInRaid) {
+                        if (typeof item.upd === "undefined") {
                             item.upd = {}
                         }
                         item.upd.SpawnedInSession = true;
                     }
 
-                    if(customUpd) {
-                        if(typeof item.upd === "undefined") {
+                    if (customUpd) {
+                        if (typeof item.upd === "undefined") {
                             item.upd = {}
                         }
 
@@ -343,10 +348,10 @@ class Character extends BaseModel {
                     logger.logDebug(`Unable to add item ${itemId}. No space.`);
                     return false;
                 }
-            }        
+            }
         }
 
-        if(itemsAdded.length > 0) {
+        if (itemsAdded.length > 0) {
             return itemsAdded;
         } else {
             logger.logDebug(`Unable to add item ${itemId}. Unknown cause.`);
@@ -354,21 +359,32 @@ class Character extends BaseModel {
         }
     }
 
+    /**
+     * Adds an Item to a parent item. This can not be used with containers.
+     * @param {*} parent 
+     * @param {*} itemId 
+     * @param {*} slotId 
+     * @param {*} amount 
+     * @param {*} foundInRaid 
+     * @param {*} customUpd 
+     * @param {*} children 
+     * @returns 
+     */
     async addItemToParent(parent, itemId, slotId, amount = 1, foundInRaid = false, customUpd = false, children = false) {
-        if(!parent || !itemId || !slotId) {
+        if (!parent || !itemId || !slotId) {
             return false;
         }
 
         const itemTemplate = await Item.get(itemId);
-        if(!itemTemplate){
+        if (!itemTemplate) {
             return false;
         }
 
         let item = await itemTemplate.createAsNewItem();
         item.parentId = parent._id
         item.slotId = slotId;
-        
-        if(amount > 1 && amount <= itemTemplate._props.StackMaxSize) {
+
+        if (amount > 1 && amount <= itemTemplate._props.StackMaxSize) {
             item.upd = {}
             item.upd.StackObjectsCount = amount;
         } else {
@@ -376,30 +392,30 @@ class Character extends BaseModel {
             item.upd.StackObjectsCount = itemTemplate._props.StackMaxSize;
         }
 
-        if(foundInRaid) {
-            if(typeof item.upd === "undefined") {
+        if (foundInRaid) {
+            if (typeof item.upd === "undefined") {
                 item.upd = {}
             }
 
             item.upd.SpawnedInSession = true;
         }
 
-        if(customUpd) {
-            if(typeof item.upd === "undefined") {
+        if (customUpd) {
+            if (typeof item.upd === "undefined") {
                 item.upd = {}
             }
 
             Object.assign(item.upd, customUpd);
         }
-        
+
         let itemsAdded = [];
 
-        if(children) {
-            for(let childItem of children) {
+        if (children) {
+            for (let childItem of children) {
                 let childrenAdded = await this.addItemToParent(item, childItem._tpl, childItem.slotId, childItem.amount, childItem.foundInRaid, childItem.upd, childItem.children);
                 for (let childAdded of childrenAdded) {
                     itemsAdded.push(childAdded)
-                } 
+                }
             }
         }
 
@@ -588,7 +604,7 @@ class Character extends BaseModel {
         for (const item of itemCollection) {
             if (item.Action === "Remove") {
                 await this.removeInventoryItemByID(item.item);
-                Object.assign(removedItems, {_id: item.item});
+                Object.assign(removedItems, { _id: item.item });
             }
         }
         return removedItems;

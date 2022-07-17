@@ -183,7 +183,7 @@ class Item extends BaseModel {
                     continue;
                 }
                 // If this loop hasn't been continued then this slot is empty. Place the item here
-                logger.logDebug(`Exact horizontal: Free slot found at (x${itemWidth} y${itemHeight}) at G${grid} R${0} C${0}`);
+                //logger.logDebug(`Exact horizontal: Free slot found at (x${itemWidth} y${itemHeight}) at G${grid} R${0} C${0}`);
 
                 freeSlot = {x: 0, y: 0, r: 0, slotId: grid};
                 break findSlot;
@@ -196,7 +196,7 @@ class Item extends BaseModel {
                         continue;
                     }
                     // If this loop hasn't been continued then this slot is empty. Place the item here
-                    logger.logDebug(`Exact vertical: Free slot found at (x${itemWidth} y${itemHeight}) at G${grid} R${0} C${0}`);
+                    //logger.logDebug(`Exact vertical: Free slot found at (x${itemWidth} y${itemHeight}) at G${grid} R${0} C${0}`);
     
                     freeSlot = {x: 0, y: 0, r: 1, slotId: grid};
                     break findSlot;
@@ -215,7 +215,7 @@ class Item extends BaseModel {
                                     }
                                 }
                             }
-                            logger.logDebug(`Larger horizontal: Free slot found at (${itemHeight}x${itemWidth}) at G${grid} R${row} C${column}`);
+                            //logger.logDebug(`Larger horizontal: Free slot found at (${itemHeight}x${itemWidth}) at G${grid} R${row} C${column}`);
 
                             freeSlot = {x: column, y: row, r: 0, slotId: grid};
                             break findSlot;
@@ -236,7 +236,7 @@ class Item extends BaseModel {
                                     }
                                 }
                             }
-                            logger.logDebug(`Larger vetical: Free slot found at (${itemHeight}x${itemWidth}) at G${grid} R${row} C${column}`);
+                            //logger.logDebug(`Larger vetical: Free slot found at (${itemHeight}x${itemWidth}) at G${grid} R${row} C${column}`);
 
                             freeSlot = {x: column, y: row, r: 1, slotId: grid};
                             break findSlot;
@@ -250,7 +250,7 @@ class Item extends BaseModel {
     }
 
     /**
-     * Creates a used slot map for the specified grid. Requires the container and the item inventory to look for used slots.
+     * Creates a used slot map. Requires the container and the item inventory to look for used slots.
      * @param {*} container 
      * @param {*} itemInventory 
      * @returns 
