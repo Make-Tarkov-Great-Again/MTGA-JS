@@ -2,7 +2,7 @@ const {
     Account, Trader, Locale, Language,
     Edition, Profile, Customization, Character,
     HideoutArea, HideoutProduction, HideoutSetting,
-    HideoutScavcase, Location, Quest, Item, Ragfair, Preset, Categorie } = require('../models');
+    HideoutScavcase, Location, Quest, Item, Ragfair, Preset, Categorie, Price } = require('../models');
 
 class UtilityModel {
 

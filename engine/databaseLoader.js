@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { Ragfair, Preset, Item, Profile, Categorie } = require('../plugins/models');
+const { Ragfair, Preset, Item } = require('../plugins/models');
 const { UtilityModel } = require('../plugins/models/UtilityModel');
 const {
     logger, readParsed, fileExist, stringify,
@@ -20,7 +20,7 @@ class DatabaseLoader {
             this.loadTemplates(),
             this.loadTraders(),
             this.loadCustomization(),
-            this.loadLocations(),
+            this.loadLocations()
             // Model Data //
         ]);
         await this.loadEditions();
@@ -29,7 +29,7 @@ class DatabaseLoader {
         await this.loadQuests();
         await this.loadPresets();
         await this.loadRagfair();
-        await Ragfair.generateOffersBasedOnRequest() //for testing
+        await Ragfair.generateOffersBasedOnRequest(); //for testing
     }
 
     /**
@@ -106,11 +106,14 @@ class DatabaseLoader {
             await UtilityModel.createModelFromParseWithID("Categorie", categorie.Id, categorie);
         }
 
-        database.templates = {
-            "Categories": templatesData.Categories,
-            "Items": templatesData.Items,
-            "PriceTable": await Item.generatePriceTable(templatesData.Items)
-        };
+        for (const item of templatesData.Items) {
+            await UtilityModel.createModelFromParseWithID("Price", item.Id, item);
+        }
+
+        //database.templates = {
+        //    "Items": templatesData.Items,
+        //    "PriceTable": await Item.generatePriceTable(templatesData.Items)
+        //};
     }
 
     static async loadLocations() {

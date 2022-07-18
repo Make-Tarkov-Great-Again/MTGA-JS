@@ -19,6 +19,7 @@ const Bot = require('./Bot');
 const Ragfair = require('./Ragfair');
 const Preset = require('./Preset');
 const Categorie  = require('./Categorie');
+const Price = require('./Price');
 
 module.exports = {
     ...Account,
@@ -41,5 +42,6 @@ module.exports = {
     ...Bot,
     ...Ragfair,
     ...Preset,
-    ...Categorie
+    ...Categorie,
+    ...Price
 };
