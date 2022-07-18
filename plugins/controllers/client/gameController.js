@@ -277,7 +277,6 @@ class GameController {
             maxStorageTime: database.core.gameplay.other.RedeemTime * 3600
         };
         await playerProfile.addDialogue(quest.traderId, messageContent, questReward);
-        await playerProfile.save();
         return {};
     };
 
@@ -292,11 +291,7 @@ class GameController {
 
         const movedItems = await playerProfile.character.moveItems(request.body.data);
         if (movedItems) {
-            if (await playerProfile.save()) {
-                return {};
-            } else {
-                // display error
-            }
+            return {}
         } else {
             // display error
         }
@@ -350,11 +345,7 @@ class GameController {
             }
         }
 
-        if (await playerProfile.save()) {
-            return {};
-        } else {
-            // display error
-        }
+        return {};
     };
 
     static clientGameTradingConfirm = async (request = null, reply = null) => {
@@ -423,8 +414,6 @@ class GameController {
                     } else {
                         logger.logDebug(`Unable to add items`);
                     }
-
-                    await playerProfile.save();
                     return output;
                 }
             }
@@ -435,11 +424,9 @@ class GameController {
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
         const splittedItems = await playerProfile.character.splitItems(request.body.data);
         if (splittedItems) {
-            if (await playerProfile.save()) {
-                return {
-                    items: { new: [splittedItems] }
-                };
-            }
+            return {
+                items: { new: [splittedItems] }
+            };
         }
     };
 
@@ -447,11 +434,9 @@ class GameController {
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
         const mergedItems = await playerProfile.character.mergeItems(request.body.data);
         if (mergedItems) {
-            if (await playerProfile.save()) {
-                return {
-                    items: { del: [mergedItems] }
-                };
-            }
+            return {
+                items: { del: [mergedItems] }
+            };
         }
     };
 
@@ -459,11 +444,9 @@ class GameController {
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
         const deletedItems = await playerProfile.character.removeItems(request.body.data);
         if (deletedItems) {
-            if (await playerProfile.save()) {
-                return {
-                    items: { del: [deletedItems] }
-                };
-            }
+            return {
+                items: { del: [deletedItems] }
+            };
         }
     };
 
@@ -483,11 +466,34 @@ class GameController {
                         }
 
                         item.upd.Foldable.Folded = requestEntry.value;
-                        await playerProfile.save();
                     }
                 }
             }
         }
     }
+
+    static clientGameTagItem = async (request = null, reply = null) => {
+        for (const requestEntry of request.body.data) {
+            if (requestEntry.Action === "Tag") {
+                const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
+                if (playerProfile) {
+                    let item = await playerProfile.character.getInventoryItemByID(requestEntry.item);
+                    if (item) {
+                        if (typeof item.upd === "undefined") {
+                            item.upd = {}
+                        }
+
+                        if (typeof item.upd.Tag === "undefined") {
+                            item.upd.Tag = {}
+                        }
+
+                        item.upd.Tag.Color = requestEntry.TagColor;
+                        item.upd.Tag.Name = requestEntry.TagName;
+                    }
+                }
+            }
+        }
+    }
+
 }
 module.exports.GameController = GameController;
