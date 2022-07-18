@@ -348,7 +348,7 @@ class GameController {
         return {};
     };
 
-    static clientGameTradingConfirm = async (request = null, reply = null) => {
+    static clientGameProfileTradingConfirm = async (request = null, reply = null) => {
         logger.logDebug("Trading request:");
         logger.logDebug(request.body.data);
 
@@ -420,7 +420,7 @@ class GameController {
         }
     };
 
-    static clientGameSplitItem = async (request = null, reply = null) => {
+    static clientGameProfileSplitItem = async (request = null, reply = null) => {
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
         const splittedItems = await playerProfile.character.splitItems(request.body.data);
         if (splittedItems) {
@@ -430,7 +430,7 @@ class GameController {
         }
     };
 
-    static clientGameMergeItem = async (request = null, reply = null) => {
+    static clientGameProfileMergeItem = async (request = null, reply = null) => {
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
         const mergedItems = await playerProfile.character.mergeItems(request.body.data);
         if (mergedItems) {
@@ -440,7 +440,7 @@ class GameController {
         }
     };
 
-    static clientGameRemoveItem = async (request = null, reply = null) => {
+    static clientGameProfileRemoveItem = async (request = null, reply = null) => {
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
         const deletedItems = await playerProfile.character.removeItems(request.body.data);
         if (deletedItems) {
@@ -450,7 +450,7 @@ class GameController {
         }
     };
 
-    static clientGameFoldItem = async (request = null, reply = null) => {
+    static clientGameProfileFoldItem = async (request = null, reply = null) => {
         for (const requestEntry of request.body.data) {
             if (requestEntry.Action === "Fold") {
                 const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
@@ -472,7 +472,7 @@ class GameController {
         }
     }
 
-    static clientGameTagItem = async (request = null, reply = null) => {
+    static clientGameProfileTagItem = async (request = null, reply = null) => {
         for (const requestEntry of request.body.data) {
             if (requestEntry.Action === "Tag") {
                 const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
@@ -489,6 +489,28 @@ class GameController {
 
                         item.upd.Tag.Color = requestEntry.TagColor;
                         item.upd.Tag.Name = requestEntry.TagName;
+                    }
+                }
+            }
+        }
+    }
+
+    static clientGameProfileToggleItem = async (request = null, reply = null) => {
+        for (const requestEntry of request.body.data) {
+            if (requestEntry.Action === "Toggle") {
+                const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
+                if (playerProfile) {
+                    let item = await playerProfile.character.getInventoryItemByID(requestEntry.item);
+                    if (item) {
+                        if (typeof item.upd === "undefined") {
+                            item.upd = {}
+                        }
+
+                        if (typeof item.upd.Togglable === "undefined") {
+                            item.upd.Togglable = {}
+                        }
+
+                        item.upd.Togglable.On = requestEntry.value;
                     }
                 }
             }

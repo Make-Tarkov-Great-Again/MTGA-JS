@@ -94,32 +94,37 @@ module.exports = async function gameRoutes(app, _opts) {
                     break;
 
                 case "TradingConfirm":
-                    actionResult = await GameController.clientGameTradingConfirm(request, reply);
+                    actionResult = await GameController.clientGameProfileTradingConfirm(request, reply);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
                 case "Split":
-                    actionResult = await GameController.clientGameSplitItem(request, reply);
+                    actionResult = await GameController.clientGameProfileSplitItem(request, reply);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
                 case "Merge":
-                    actionResult = await GameController.clientGameMergeItem(request, reply);
+                    actionResult = await GameController.clientGameProfileMergeItem(request, reply);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
                 case "Remove":
-                    actionResult = await GameController.clientGameRemoveItem(request, reply);
+                    actionResult = await GameController.clientGameProfileRemoveItem(request, reply);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
                 case "Fold":
-                    actionResult = await GameController.clientGameFoldItem(request, reply);
+                    actionResult = await GameController.clientGameProfileFoldItem(request, reply);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
                 case "Tag":
-                    actionResult = await GameController.clientGameTagItem(request, reply);
+                    actionResult = await GameController.clientGameProfileTagItem(request, reply);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+
+                case "Toggle":
+                    actionResult = await GameController.clientGameProfileToggleItem(request, reply);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                     
