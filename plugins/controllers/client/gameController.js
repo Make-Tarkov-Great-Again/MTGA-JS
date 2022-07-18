@@ -452,5 +452,27 @@ class GameController {
         }
     };
 
+    static clientGameFoldItem = async (request = null, reply = null ) => {
+        for (const requestEntry of request.body.data) {
+            if (requestEntry.Action === "Fold") {
+                const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
+                if(playerProfile) {
+                    let item = await playerProfile.character.getInventoryItemByID(requestEntry.item);
+                    if(item) {
+                        if(typeof item.upd === "undefined") {
+                            item.upd = {}
+                        }
+
+                        if(typeof item.upd.Foldable === "undefined") {
+                            item.upd.Foldable = {}
+                        }
+
+                        item.upd.Foldable.Folded = requestEntry.value;
+                        await playerProfile.save();
+                    }
+                }
+            }
+        }
+    }
 }
 module.exports.GameController = GameController;
