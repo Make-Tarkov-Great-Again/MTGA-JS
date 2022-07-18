@@ -127,6 +127,16 @@ module.exports = async function gameRoutes(app, _opts) {
                     actionResult = await GameController.clientGameProfileToggleItem(request, reply);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
+
+                case "Bind":
+                    actionResult = await GameController.clientGameProfileBindItem(request, reply);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+
+                case "ReadEncyclopedia":
+                    actionResult = await GameController.clientGameProfileReadEncyclopedia(request, reply);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
                     
                 // more, MOOOOOOOOOOOOOOORE
                 default:
