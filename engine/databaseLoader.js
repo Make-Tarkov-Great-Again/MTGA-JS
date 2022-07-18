@@ -29,7 +29,6 @@ class DatabaseLoader {
         await this.loadQuests();
         await this.loadPresets();
         await this.loadRagfair();
-        await Ragfair.generateOffersBasedOnRequest() //for testing
     }
 
     /**

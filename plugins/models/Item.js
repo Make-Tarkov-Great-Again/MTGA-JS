@@ -50,7 +50,7 @@ class Item extends BaseModel {
                         childItemTemplate._props.Foldable &&
                         await this.isFolded() &&
                         await childItem.isFolded()
-                    )                    
+                    )
                 ) {
                     continue;
                 }
@@ -401,7 +401,6 @@ class Item extends BaseModel {
             case "5447b5fc4bdc2d87278b4567": // AssaultCarbine
             case "5447b5f14bdc2d61278b4567": // AssaultRifle
             case "5447b5e04bdc2d62278b4567": // Smg
-            case "5447b5cf4bdc2d65278b4567": // Pistol
             case "617f1ef5e8b54b0998387733": // Revolver
                 return {
                     "Repairable": {
@@ -415,7 +414,16 @@ class Item extends BaseModel {
                         "FireMode": "single"
                     }
                 }
-
+            case "5447b5cf4bdc2d65278b4567": // Pistol
+                return {
+                    "Repairable": {
+                        "MaxDurability": item._props.MaxDurability,
+                        "Durability": item._props.Durability
+                    },
+                    "FireMode": {
+                        "FireMode": "single"
+                    }
+                }
             case "616eb7aea207f41933308f46": // RepairKits
                 return {
                     "RepairKit": {
@@ -423,6 +431,10 @@ class Item extends BaseModel {
                         "MaxRepairResource": item._props.MaxRepairResource
                     }
                 }
+            case "5485a8684bdc2da71d8b4567": // Ammo
+            return {
+                "StackObjectsCount": item._props.StackMaxSize
+            }
 
             default:
                 console.log(`Unable to create fresh UPD from parent [${item._parent}] for item [${item._tpl}]`);
