@@ -20,7 +20,7 @@ class DatabaseLoader {
             this.loadTemplates(),
             this.loadTraders(),
             this.loadCustomization(),
-            this.loadLocations()
+            this.loadLocations(),
             // Model Data //
         ]);
         await this.loadEditions();
@@ -29,7 +29,7 @@ class DatabaseLoader {
         await this.loadQuests();
         await this.loadPresets();
         await this.loadRagfair();
-        await Ragfair.generateOffersBasedOnRequest(); //for testing
+        await Ragfair.generateOffersBasedOnRequest() //for testing
     }
 
     /**
@@ -102,18 +102,11 @@ class DatabaseLoader {
         let templatesData = readParsed('./database/templates.json')
         if (typeof templatesData.data != "undefined") { templatesData = templatesData.data; }
 
-        for (const categorie of templatesData.Categories) {
-            await UtilityModel.createModelFromParseWithID("Categorie", categorie.Id, categorie);
-        }
-
-        for (const item of templatesData.Items) {
-            await UtilityModel.createModelFromParseWithID("Price", item.Id, item);
-        }
-
-        //database.templates = {
-        //    "Items": templatesData.Items,
-        //    "PriceTable": await Item.generatePriceTable(templatesData.Items)
-        //};
+        database.templates = {
+            "Categories": templatesData.Categories,
+            "Items": templatesData.Items,
+            "PriceTable": await Item.generatePriceTable(templatesData.Items)
+        };
     }
 
     static async loadLocations() {
