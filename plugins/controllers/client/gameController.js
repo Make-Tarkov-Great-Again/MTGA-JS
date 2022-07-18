@@ -363,7 +363,7 @@ class GameController {
                     const traderItemChildren = await traderItem.getAllChildItemsInInventory(traderAssort.items);
                     const traderItemTemplate = await Item.get(traderItem._tpl);
 
-                    let preparedChildren = false
+                    let preparedChildren = false;
                     if (traderItemChildren) {
                         preparedChildren = await Item.prepareChildrenForAddItem(traderItem, traderItemChildren);
                     } else {
@@ -414,7 +414,30 @@ class GameController {
                     } else {
                         logger.logDebug(`Unable to add items`);
                     }
+                } else if ( requestEntry.type === 'sell_to_trader') {
+                    // TODO: LOAD TRADER PLAYER LOYALTY FOR COEF
+                    let output = {
+                        items: { 
+                            new: [],
+                            change: [],
+                            del: []
+                        }
+                    };
+                    let itemPrice;
+                    for (const itemSelling of requestEntry.items) {
+                        logger.logDebug(itemSelling);
+                        const item =  await playerProfile.character.getInventoryItemByID(itemSelling.id);
+                        itemPrice = database.templates.PriceTable[item._tpl];
+                        itemPrice = itemPrice * itemSelling.count;
+                        await playerProfile.character.removeItems([item]);
+                        output.items.del.push({_id: item._id});
+                    }
+                    const itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), await trader.getBaseCurrency(), false, itemPrice);
+                    output.items.new = itemsAdded;
+                    await playerProfile.save();
                     return output;
+                } else {
+                    logger.logError(`My brother in christ what are you trying to do ? ${requestEntry.type} ? That shit is not done lmao pay me now.`);
                 }
             }
         }
@@ -511,6 +534,35 @@ class GameController {
                         }
 
                         item.upd.Togglable.On = requestEntry.value;
+                    }
+                }
+            }
+        }
+    }
+
+    static clientGameProfileBindItem = async (request = null, reply = null) => {
+        for (const requestEntry of request.body.data) {
+            if (requestEntry.Action === "Bind") {
+                const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
+                if (playerProfile) {
+                    for (let index in playerProfile.character.Inventory.fastPanel) {
+                        if(playerProfile.character.Inventory.fastPanel[index] === requestEntry.item) {
+                            playerProfile.character.Inventory.fastPanel[index] = "";
+                        }
+                    }
+                    playerProfile.character.Inventory.fastPanel[requestEntry.index] = requestEntry.item;
+                }
+            }
+        }
+    }
+
+    static clientGameProfileReadEncyclopedia = async (request = null, reply = null) => {
+        for (const requestEntry of request.body.data) {
+            if (requestEntry.Action === "ReadEncyclopedia") {
+                const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
+                if (playerProfile) {
+                    for (let id of requestEntry.ids) {
+                        playerProfile.character.Encyclopedia[id] = true;
                     }
                 }
             }
