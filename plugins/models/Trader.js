@@ -1,6 +1,4 @@
 const { BaseModel } = require("./BaseModel");
-const { Categorie } = require("./Categorie");
-const { Price } = require("./Price");
 const { findAndReturnChildrenByItems, logger } = require("../utilities");
 
 
@@ -112,22 +110,31 @@ class Trader extends BaseModel {
         }
 
         for (const item of profile.character.Inventory.items) {
-            // skip: idk what the first is, rubble, euro and dollars
-            if (["544901bf4bdc2ddf018b456d", "5449016a4bdc2d6f028b456f", "569668774bdc2da2298b4568", "5696686a4bdc2da3298b456a"].includes(item._tpl)) {
-                continue;
+            // Skip money items
+            if (!["544901bf4bdc2ddf018b456d", "5449016a4bdc2d6f028b456f", "569668774bdc2da2298b4568", "5696686a4bdc2da3298b456a"].includes(item._tpl)) {
+                if (await this.itemInPurchaseCategories(item)) {
+                    // Skip items that aren't part of a category buyable by trader (therapist don't buy bullets for example)
+                    const priceModel = await Price.get(item._tpl);
+                    if (priceModel) {
+                        output[item._id] = [[{ _tpl: currency, count: priceModel.Price }]];
+                    }
+                }
             }
-            const priceModel = await Price.get(item._tpl);
-            if (priceModel) {
-                output[item._id] = [[{ _tpl: currency, count: priceModel.Price }]];
-            }
-            const test = await Categorie.getAll();
-            console.log();
         }
         return output;
     }
 
+    async itemInPurchaseCategories(item) {
+        for (const purchaseCategorie of this.base.sell_category) {
+            const categorieModel = await Categorie.get(purchaseCategorie);
+            const itemCategorie = await Categorie.get(item._tpl);
+            return false;
+        }
+        return true;
+    }
+
     static async getTraderByName(traderName) {
-        let traders = await Trader.getAll()
+        let traders = await Trader.getAll();
         for (const [index, trader] of Object.entries(traders)) {
             if (trader.base.nickname === traderName) {
                 return trader;
