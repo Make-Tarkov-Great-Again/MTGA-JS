@@ -1,6 +1,8 @@
 const { BaseModel } = require("./BaseModel");
 const { Categorie } = require("./Categorie");
+const { Price } = require("./Price");
 const { findAndReturnChildrenByItems, logger } = require("../utilities");
+
 
 class Trader extends BaseModel {
     constructor(id) {
@@ -114,7 +116,10 @@ class Trader extends BaseModel {
             if (["544901bf4bdc2ddf018b456d", "5449016a4bdc2d6f028b456f", "569668774bdc2da2298b4568", "5696686a4bdc2da3298b456a"].includes(item._id)) {
                 continue;
             }
-            output[item._id] = [[{ _tpl: currency, count: 30 }]];
+            const priceModel = await Price.get(item._tpl);
+            if (priceModel) {
+                output[item._id] = [[{ _tpl: currency, count: priceModel.Price }]];
+            }
             const test = await Categorie.getAll();
             console.log();
         }
