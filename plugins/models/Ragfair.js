@@ -34,7 +34,7 @@ class Ragfair extends BaseModel {
         data.offersCount = data.offers.length;
 
         const categories = await this.getAllCategories();
-        data.categories = await this.formatCategories(categories, data.offers);
+        data.categories = await Ragfair.formatCategories(categories, data.offers);
         return data;
     }
 
@@ -54,9 +54,78 @@ class Ragfair extends BaseModel {
             ragfair.categories[c.items[0]._tpl] = 1;
         }
 
-        if (request) return "your mom built like a fucking house"; //buildCount
-        return "your mom gay"
+        // weapon builds??? I don't know
+
+        switch (true) {
+            case request.buildCount:
+                filter.push(Object.keys(request.buildCount));
+                ragfair.categories = await this.formatCategories(
+                    ragfair.categories,
+                    ragfair.offers, filter
+                );
+
+            case request.linkedSearchId !== "":
+                ragfair.categories = await this.formatCategories(
+                    ragfair.categories,
+                    ragfair.offers,
+                    await this.getLinkedSearch(request.linkedSearchId)
+                );
+
+                ragfair.offers = await this.reduceOffersBasedOnCategories(ragfair.offers, ragfair.categories);
+            //need to now filter the offers based on the linked search
+
+            case request.neededSearchId !== "":
+            case request.removedBartering === true:
+            case request.handbookId !== "":
+                //figure out what to do with handbookId
+                break;
+        }
+
+        return ragfair;
     }
+
+    static async reduceOffersBasedOnCategories(offers, categories) {
+        let filter = offers.filter(function (ragfairOffer) {
+            return ragfairOffer.items[0]._tpl in categories;
+        });
+
+        filter.forEach(function(offer) {
+            const index = offers.indexOf(offer);
+            offers.splice(index, 1);
+        })
+    
+        return filter;
+    }
+
+    static async getLinkedSearch(searchId) {
+        const item = await Item.get(searchId);
+        const linked = new Set(
+            [
+                ...await this.getFilters(item, "Slots"),
+                ...await this.getFilters(item, "Chambers"),
+                ...await this.getFilters(item, "Cartridges"),
+            ]
+        )
+        return Array.from(linked);
+    }
+
+    static async getFilters(item, slot) {
+        let result = new Set();
+        if (slot in item._props && item._props[slot].length) {
+            for (let sub of item._props[slot]) {
+                if ("_props" in sub && "filters" in sub._props) {
+                    for (let filter of sub._props.filters) {
+                        for (let f of filter.Filter) {
+                            result.add(f);
+                        }
+                    }
+                }
+            }
+        }
+
+        return result;
+    }
+
 
     async formatItems() {
         //will be used when we start creating offers from the Item database
@@ -140,7 +209,7 @@ class Ragfair extends BaseModel {
      * @param {*} filters pass selected filter to add to categories
      * @returns 
      */
-    async formatCategories(categories, offers, filters = null) {
+    static async formatCategories(categories, offers, filters = null) {
 
         if (filters) {
             let filteredCategories = {};
