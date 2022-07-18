@@ -286,6 +286,7 @@ class Character extends BaseModel {
         }
 
         let itemsAdded = [];
+        let noSpace = false;
         let stackAmount = (amount - ~~(amount / itemTemplate._props.StackMaxSize) * itemTemplate._props.StackMaxSize) > 0 ? 1 + ~~(amount / itemTemplate._props.StackMaxSize) : ~~(amount / itemTemplate._props.StackMaxSize);
 
         for (let itemsToAdd = 0; itemsToAdd < stackAmount; itemsToAdd++) {
@@ -299,6 +300,7 @@ class Character extends BaseModel {
                         let childrenAdded = await this.addItemToParent(item, childItem._tpl, childItem.slotId, childItem.amount, childItem.foundInRaid, childItem.upd, childItem.children);
                         for (let childAdded of childrenAdded) {
                             childItemArray.push(childAdded)
+                            itemsAdded.push(childAdded);
                         }
                     }
                     itemSize = await item.getSize(childItemArray);
@@ -345,13 +347,21 @@ class Character extends BaseModel {
                     this.Inventory.items.push(item);
                     itemsAdded.push(item);
                 } else {
+                    noSpace = true;
                     logger.logDebug(`Unable to add item ${itemId}. No space.`);
-                    return false;
+                    break;
                 }
             }
         }
-
-        if (itemsAdded.length > 0) {
+        
+        if(noSpace) {
+            if (itemsAdded.length > 0) {
+                for (let itemAdded of itemsAdded) {
+                    await this.removeItem(itemAdded, -1);
+                }
+            }
+            return false
+        } else if (itemsAdded.length > 0) {
             return itemsAdded;
         } else {
             logger.logDebug(`Unable to add item ${itemId}. Unknown cause.`);
@@ -430,7 +440,8 @@ class Character extends BaseModel {
         }
 
         let output = {
-            change: []
+            changed: [],
+            removed: []
         }
 
         try {
@@ -439,29 +450,21 @@ class Character extends BaseModel {
             
             if(children) {
                 for (let child of children) {
-                    this.Inventory.items.find(function(value, index) {
-                        if(value._id === child._id) {
-                            delete this.Inventory.items[index];
-                        }
-                    })
+                    await this.removeInventoryItemByID(child._id);
+                    output.removed.push(child);
+                    return output;
                 }
             }
 
-            if(item.upd !== "undefined" && amount < item.upd.StackObjectsCount) {
+            if(amount != -1 && item.upd !== "undefined" && amount < item.upd.StackObjectsCount) {
                 item.upd.StackObjectsCount = item.upd.StackObjectsCount - amount;
-                output.change.push(item);
+                output.changed.push(item);
                 return output;
             } else {
-                this.Inventory.items.find(function(value, index) {
-                    if(value._id === itemId) {
-                        delete this.Inventory.items[index];
-                        return output;
-                    }
-                })
-                
-            }
-
-            return false;            
+                await this.removeInventoryItemByID(item._id);
+                output.removed.push(item);
+                return output;
+            }        
         } catch (e) {
             logger.logError(`Unable to delete item with itemId ${itemId}: ${e.message}`);
             return false;
@@ -606,7 +609,8 @@ class Character extends BaseModel {
 
     async removeInventoryItemByID(itemId) {
         const indexOfItem = this.Inventory.items.findIndex(item => item._id === itemId);
-        this.Inventory.items.splice(indexOfItem, 1);
+        const removedItems = this.Inventory.items.splice(indexOfItem, 1);
+        return removedItems.length > 0;
     }
 
     async mergeItems(itemCollection) {

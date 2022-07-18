@@ -1,3 +1,4 @@
+const { forEach } = require("lodash");
 const { database } = require("../../../app");
 const { Profile, Language, Account, Edition, Customization, Storage, Character, Health, Weaponbuild, Quest, Locale, Trader, Item } = require("../../models");
 const { generateUniqueId ,getCurrentTimestamp, logger, FastifyResponse, writeFile, stringify, readParsed, payTrade } = require("../../utilities");
@@ -373,34 +374,40 @@ class GameController {
                     preparedChildren = await Item.prepareChildrenForAddItem(traderItem, traderItemChildren);
                 }
 
-                const moneyTaken = await playerProfile.character.removeItem(requestEntry.scheme_items[0].id, requestEntry.scheme_items[0].count);
-                if(moneyTaken) {
-                    const itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), traderItem._tpl, preparedChildren, requestEntry.count);
-                    if(itemsAdded) {
-                        await playerProfile.save();
-                        let output = {
-                            items: { 
-                                new: itemsAdded,
+                let output = {
+                    items: { 
+                        new: [],
+                        change: [],
+                        del: []
+                    }
+                };
+
+                const itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), traderItem._tpl, preparedChildren, requestEntry.count);
+                if(itemsAdded) {
+                    logger.logDebug(itemsAdded);
+                    output.items.new = itemsAdded;
+
+                    for(const scheme of requestEntry.scheme_items) {
+                        const itemsTaken = await playerProfile.character.removeItem(scheme.id, scheme.count);
+                        if(itemsTaken) {
+                            if(typeof itemsTaken.changed !== "undefined") {
+                                output.items.change = output.items.change.concat(itemsTaken.changed);
                             }
-                        };
 
-                        if(typeof moneyTaken.change !== "undefined") {
-                            output.items.change = moneyTaken.change;
+                            if(typeof itemsTaken.removed !== "undefined") {
+                                output.items.del = output.items.del.concat(itemsTaken.removed);
+                            }
+                        } else {
+                            logger.logDebug(`Unable to take items`);
                         }
-
-                        if(typeof moneyTaken.remove !== "undefined") {
-                            output.items.remove = moneyTaken.remove;
-                        }
-
-                        return output;
-                    } else {
-                        // oh no adding the items failed!
-
+                    /*await trader.reduceStock(requestEntry.item_id, requestEntry.count);*/
                     }
                 } else {
-                    // poor
+                    logger.logDebug(`Unable to add items`);
                 }
-                /*await trader.reduceStock(requestEntry.item_id, requestEntry.count);*/
+
+                await playerProfile.save();
+                return output;
             }
         }
     };

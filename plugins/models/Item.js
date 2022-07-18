@@ -43,14 +43,14 @@ class Item extends BaseModel {
                     (
                         itemTemplate._props.Foldable &&
                         itemTemplate._props.FoldedSlot == childItem.slotId &&
-                        (this.isFolded() || childItem.isFolded())
+                        (await this.isFolded() || await childItem.isFolded())
                     )
                     ||
                     (
                         childItemTemplate._props.Foldable &&
-                        this.isFolded() &&
-                        childItem.isFolded()
-                    )
+                        await this.isFolded() &&
+                        await childItem.isFolded()
+                    )                    
                 ) {
                     continue;
                 }
@@ -82,7 +82,6 @@ class Item extends BaseModel {
             outWidth = itemHeight
             outHeight = itemWidth;
         }
-
         return { width: outWidth, height: outHeight };
     }
 
