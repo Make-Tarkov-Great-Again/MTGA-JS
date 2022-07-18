@@ -29,33 +29,33 @@ class Item extends BaseModel {
             ForcedLeft = 0,
             ForcedRight = 0;
 
-        if(childItems) {
+        if (childItems) {
             for (const childItem of childItems) {
                 const childItemTemplate = await Item.get(childItem._tpl);
-    
-                if(childItem.slotId.indexOf('mod_') < 0 ) {
+
+                if (childItem.slotId.indexOf('mod_') < 0) {
                     continue;
                 }
-    
-    
+
+
                 // this has to be cleaned up // 
-                if(
+                if (
                     (
-                        itemTemplate._props.Foldable && 
-                        itemTemplate._props.FoldedSlot == childItem.slotId && 
+                        itemTemplate._props.Foldable &&
+                        itemTemplate._props.FoldedSlot == childItem.slotId &&
                         (this.isFolded() || childItem.isFolded())
-                    ) 
-                    || 
+                    )
+                    ||
                     (
-                        childItemTemplate._props.Foldable && 
-                        this.isFolded() && 
+                        childItemTemplate._props.Foldable &&
+                        this.isFolded() &&
                         childItem.isFolded()
                     )
                 ) {
                     continue;
                 }
-    
-    
+
+
                 // is this even good?
                 if (childItemTemplate._props.ExtraSizeForceAdd === true) {
                     ForcedUp += childItemTemplate._props.ExtraSizeUp;
@@ -83,11 +83,11 @@ class Item extends BaseModel {
             outHeight = itemWidth;
         }
 
-        return { width: outWidth, height: outHeight};
+        return { width: outWidth, height: outHeight };
     }
 
     async getAllChildItemsInInventory(itemArray) {
-        if(!itemArray) {
+        if (!itemArray) {
             return false;
         }
 
@@ -113,7 +113,7 @@ class Item extends BaseModel {
                     returnArray.push(...parentReference[thisChild._id]); // Add this ID's children to the returnArray, which will also be checked by further iterations of this loop
                 }
             }
-            
+
             return returnArray;
         }
     }
@@ -152,15 +152,15 @@ class Item extends BaseModel {
 
     static async prepareChildrenForAddItem(parentItem, childItemArray) {
         let children = []
-        for(let childItem of childItemArray) {
-            if(childItem.parentId == parentItem._id) {
+        for (let childItem of childItemArray) {
+            if (childItem.parentId == parentItem._id) {
                 let grandchildren = await Item.prepareChildrenForAddItem(childItem, childItemArray);
                 let newChild = {
                     _tpl: childItem._tpl,
                     slotId: childItem.slotId,
                 }
 
-                if(grandchildren) {
+                if (grandchildren) {
                     newChild.children = grandchildren;
                 }
 
@@ -168,11 +168,11 @@ class Item extends BaseModel {
             }
         }
 
-        if(children.length > 0) {
+        if (children.length > 0) {
             return children;
         } else {
             return false;
-        }    
+        }
     }
 
 
@@ -186,12 +186,12 @@ class Item extends BaseModel {
      * Tranks Nevermind for your help. - Bude
      */
     static async getFreeSlot(container, itemInventory, itemWidth, itemHeight) {
-        if(!container || !itemInventory || !itemWidth || !itemHeight) {
+        if (!container || !itemInventory || !itemWidth || !itemHeight) {
             return false;
         }
 
         const containerTemplate = await Item.get(container._tpl);
-        if(!containerTemplate) {
+        if (!containerTemplate) {
             return false;
         }
 
@@ -207,11 +207,11 @@ class Item extends BaseModel {
                 // If this loop hasn't been continued then this slot is empty. Place the item here
                 //logger.logDebug(`Exact horizontal: Free slot found at (x${itemWidth} y${itemHeight}) at G${grid} R${0} C${0}`);
 
-                freeSlot = {x: 0, y: 0, r: 0, slotId: grid};
+                freeSlot = { x: 0, y: 0, r: 0, slotId: grid };
                 break findSlot;
             }
 
-            if(!freeSlot) {
+            if (!freeSlot) {
                 if (containerMap[grid].height == itemWidth && containerMap[grid].width == itemHeight) { // Check slots that are the exact size we need, vertical
                     if (containerMap[grid][0][0] != null) {
                         //logger.logDebug(`Exact vertical: Occupied G${grid} R${0} C${0}`);
@@ -219,8 +219,8 @@ class Item extends BaseModel {
                     }
                     // If this loop hasn't been continued then this slot is empty. Place the item here
                     //logger.logDebug(`Exact vertical: Free slot found at (x${itemWidth} y${itemHeight}) at G${grid} R${0} C${0}`);
-    
-                    freeSlot = {x: 0, y: 0, r: 1, slotId: grid};
+
+                    freeSlot = { x: 0, y: 0, r: 1, slotId: grid };
                     break findSlot;
                 }
             }
@@ -239,7 +239,7 @@ class Item extends BaseModel {
                             }
                             //logger.logDebug(`Larger horizontal: Free slot found at (${itemHeight}x${itemWidth}) at G${grid} R${row} C${column}`);
 
-                            freeSlot = {x: column, y: row, r: 0, slotId: grid};
+                            freeSlot = { x: column, y: row, r: 0, slotId: grid };
                             break findSlot;
                         }
                     }
@@ -260,7 +260,7 @@ class Item extends BaseModel {
                             }
                             //logger.logDebug(`Larger vetical: Free slot found at (${itemHeight}x${itemWidth}) at G${grid} R${row} C${column}`);
 
-                            freeSlot = {x: column, y: row, r: 1, slotId: grid};
+                            freeSlot = { x: column, y: row, r: 1, slotId: grid };
                             break findSlot;
                         }
                     }
@@ -278,12 +278,12 @@ class Item extends BaseModel {
      * @returns 
      */
     static async createContainerMap(container, itemInventory) {
-        if(!container || !itemInventory) {
+        if (!container || !itemInventory) {
             return false;
         }
 
         const containerTemplate = await Item.get(container._tpl);
-        if(!containerTemplate) {
+        if (!containerTemplate) {
             return false;
         }
 
@@ -292,7 +292,7 @@ class Item extends BaseModel {
         })
 
         let containerMap = {} // define the container
-        for(const grid of containerTemplate._props.Grids) {
+        for (const grid of containerTemplate._props.Grids) {
             containerMap[grid._name] = {}; // define the grid
             containerMap[grid._name].height = grid._props.cellsV; // set grid height (props vertical)
             containerMap[grid._name].width = grid._props.cellsH; // set grid width (props horizontal)
@@ -304,7 +304,7 @@ class Item extends BaseModel {
                 }
             }
         }
-        
+
         for (const item of items) {
             let childItems = await item.getAllChildItemsInInventory(itemInventory);
             let itemSize = await item.getSize(childItems);
@@ -339,6 +339,97 @@ class Item extends BaseModel {
         const database = require("../../engine/database");
         const priceTable = database.templates.PriceTable;
         return priceTable[itemId];
+    }
+
+    static async createFreshBaseItemUpd(item) {
+        // probably could loop through item nodes for their parents, if they exist
+        // and make UPD based on that... but this is a start
+
+        switch (item._parent) {
+            case "590c745b86f7743cc433c5f2": // "Other"
+                return {
+                    "Resource": {
+                        "Value": item._props.Resource
+                    }
+                }
+            case "5448f3ac4bdc2dce718b4569": // Medical
+                return {
+                    "MedKit": {
+                        "HpResource": item._props.MaxHpResource
+                    }
+                }
+            case "5448e8d04bdc2ddf718b4569": // Food
+            case "5448e8d64bdc2dce718b4568": // Drink
+                return {
+                    "FoodDrink": {
+                        "HpPercent": item._props.MaxResource
+                    }
+                }
+            case "5a341c4086f77401f2541505": // Headwear
+            case "5448e5284bdc2dcb718b4567": // Vest
+            case "5a341c4686f77469e155819e": // FaceCover
+            case "5447e1d04bdc2dff2f8b4567": // Knife
+            case "5448e54d4bdc2dcc718b4568": // Armor
+            case "5448e5724bdc2ddf718b4568": // Visor
+                return {
+                    "Repairable": {
+                        "MaxDurability": item._props.MaxDurability,
+                        "Durability": item._props.Durability
+                    }
+                }
+            case "55818ae44bdc2dde698b456c": // OpticScope
+            case "55818ac54bdc2d5b648b456e": // IronSight
+            case "55818acf4bdc2dde698b456b": // CompactCollimator
+            case "55818ad54bdc2ddc698b4569": // Collimator
+            case "55818add4bdc2d5b648b456f": // AssaultScope
+            case "55818aeb4bdc2ddc698b456a": // SpecialScope
+                return {
+                    "Sight": {
+                        "ScopesCurrentCalibPointIndexes": [
+                            0
+                        ],
+                        "ScopesSelectedModes": [
+                            0
+                        ],
+                        "SelectedScope": 0
+                    }
+                }
+            case "5447bee84bdc2dc3278b4569": // SpecialWeapon
+            case "5447bedf4bdc2d87278b4568": // GrenadeLauncher
+            case "5447bed64bdc2d97278b4568": // MachineGun
+            case "5447b6254bdc2dc3278b4568": // SniperRifle
+            case "5447b6194bdc2d67278b4567": // MarksmanRifle
+            case "5447b6094bdc2dc3278b4567": // Shotgun
+            case "5447b5fc4bdc2d87278b4567": // AssaultCarbine
+            case "5447b5f14bdc2d61278b4567": // AssaultRifle
+            case "5447b5e04bdc2d62278b4567": // Smg
+            case "5447b5cf4bdc2d65278b4567": // Pistol
+            case "617f1ef5e8b54b0998387733": // Revolver
+                return {
+                    "Repairable": {
+                        "MaxDurability": item._props.MaxDurability,
+                        "Durability": item._props.Durability
+                    },
+                    "Foldable": {
+                        "Folded": false
+                    },
+                    "FireMode": {
+                        "FireMode": "single"
+                    }
+                }
+
+            case "616eb7aea207f41933308f46": // RepairKits
+                return {
+                    "RepairKit": {
+                        "Resource": item._props.MaxRepairResource,
+                        "MaxRepairResource": item._props.MaxRepairResource
+                    }
+                }
+
+            default:
+                console.log(`Unable to create fresh UPD from parent [${item._parent}] for item [${item._tpl}]`);
+                return "your mom gay"
+        }
     }
 }
 
