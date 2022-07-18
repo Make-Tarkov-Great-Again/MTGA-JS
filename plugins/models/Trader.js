@@ -97,7 +97,7 @@ class Trader extends BaseModel {
 
     async getPurchasesData(profile) {
         let currency;
-        const output = [];
+        const output = {};
         switch (this.base.currency) {
             case "EUR":
                 currency = "569668774bdc2da2298b4568";
@@ -114,9 +114,9 @@ class Trader extends BaseModel {
             if (["544901bf4bdc2ddf018b456d", "5449016a4bdc2d6f028b456f", "569668774bdc2da2298b4568", "5696686a4bdc2da3298b456a"].includes(item._id)) {
                 continue;
             }
-            output[item._id] = [[{ _tpl: currency, count: 1 }]];
-            const test = await Categorie.getAll()
-            console.log()
+            output[item._id] = [[{ _tpl: currency, count: 30 }]];
+            const test = await Categorie.getAll();
+            console.log();
         }
         return output;
     }
