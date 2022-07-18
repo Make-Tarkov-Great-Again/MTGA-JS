@@ -134,26 +134,19 @@ class Trader extends BaseModel {
                 if (!traderCategorie.ParentId) {
                     const subCategories = database.templates.Categories.filter(categorie => categorie.ParentId === traderCategorie.Id );
                     for (const subCategorie of subCategories) {
-                        const itemModel = await Item.get(item._tpl);
                         const itemData = database.templates.Items.filter(dbItem => dbItem.Id === item._tpl )[0];
                         if (itemData) {
                             if (subCategorie.Id === itemData.ParentId) {
                                 return true;
                             }
-                        } else {
-                            console.log()
                         }
-                        
                     }
                 } else {
                     const itemData = database.templates.Items.filter(dbItem => dbItem.Id === item._tpl )[0];
-                    const itemModel = await Item.get(item._tpl);
                     if (itemData) {
                         if (traderCategorie.Id === itemData.ParentId) {
                             return true;
                         }
-                    } else {
-                        console.log()
                     }
                 }
             }
