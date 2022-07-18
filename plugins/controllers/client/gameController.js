@@ -312,39 +312,41 @@ class GameController {
         logger.logDebug(request.body.data);
 
         for (const requestEntry of request.body.data) {
-            let templateItem;
-            if (requestEntry.fromOwner && requestEntry.fromOwner.type === "Trader") {
-                const trader = await Trader.get(requestEntry.fromOwner.id);
-                if (trader) {
-                    const inventoryItem = await trader.getAssortItemByID(requestEntry.item);
-                    if (inventoryItem) {
-                        templateItem = await Item.get(inventoryItem._tpl);
+            if (requestEntry.Action === "Examine") {
+                let templateItem;
+                if (requestEntry.fromOwner && requestEntry.fromOwner.type === "Trader") {
+                    const trader = await Trader.get(requestEntry.fromOwner.id);
+                    if (trader) {
+                        const inventoryItem = await trader.getAssortItemByID(requestEntry.item);
+                        if (inventoryItem) {
+                            templateItem = await Item.get(inventoryItem._tpl);
+                        } else {
+                            logger.logError(`Examine Request failed: Unable to find item database template of itemId ${requestEntry.item}`);
+                            return false;
+                        }
+                    } else {
+                        logger.logError("Examine Request failed: Unable to get trader data.");
+                        return false;
+                    }
+                } else {
+                    const item = await playerProfile.character.getInventoryItemByID(requestEntry.item);
+                    if (item) {
+                        templateItem = await Item.get(item._tpl);
                     } else {
                         logger.logError(`Examine Request failed: Unable to find item database template of itemId ${requestEntry.item}`);
                         return false;
                     }
-                } else {
-                    logger.logError("Examine Request failed: Unable to get trader data.");
-                    return false;
                 }
-            } else {
-                const item = await playerProfile.character.getInventoryItemByID(requestEntry.item);
-                if (item) {
-                    templateItem = await Item.get(item._tpl);
-                } else {
-                    logger.logError(`Examine Request failed: Unable to find item database template of itemId ${requestEntry.item}`);
-                    return false;
-                }
-            }
 
-            if (templateItem) {
-                if (await playerProfile.character.examineItem(templateItem._id)) {
-                    await playerProfile.character.addExperience(templateItem._props.ExamineExperience);
+                if (templateItem) {
+                    if (await playerProfile.character.examineItem(templateItem._id)) {
+                        await playerProfile.character.addExperience(templateItem._props.ExamineExperience);
+                    } else {
+                        logger.logError(`Examine Request failed: Unable to examine itemId ${templateItem._id}`);
+                    }
                 } else {
-                    logger.logError(`Examine Request failed: Unable to examine itemId ${templateItem._id}`);
+                    logger.logError(`Examine Request failed: Unable to find item database template of itemId ${inventoryItem._tpl}`);
                 }
-            } else {
-                logger.logError(`Examine Request failed: Unable to find item database template of itemId ${inventoryItem._tpl}`);
             }
         }
 
@@ -361,53 +363,55 @@ class GameController {
 
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
         for (const requestEntry of request.body.data) {
-            logger.logDebug(requestEntry)
-            const trader = await Trader.get(requestEntry.tid);
+            if (requestEntry.Action === "TradingConfirm") {
+                logger.logDebug(requestEntry);
+                const trader = await Trader.get(requestEntry.tid);
 
-            if(requestEntry.type === 'buy_from_trader') {
-                const traderItem = await trader.getAssortItemByID(requestEntry.item_id);
-                const traderAssort = await trader.getFilteredAssort(playerProfile);
-                const traderItemChildren = await traderItem.getAllChildItemsInInventory(traderAssort.items);
-                
-                let preparedChildren = false
-                if(traderItemChildren) {
-                    preparedChildren = await Item.prepareChildrenForAddItem(traderItem, traderItemChildren);
-                }
-
-                let output = {
-                    items: { 
-                        new: [],
-                        change: [],
-                        del: []
+                if(requestEntry.type === 'buy_from_trader') {
+                    const traderItem = await trader.getAssortItemByID(requestEntry.item_id);
+                    const traderAssort = await trader.getFilteredAssort(playerProfile);
+                    const traderItemChildren = await traderItem.getAllChildItemsInInventory(traderAssort.items);
+                    
+                    let preparedChildren = false
+                    if(traderItemChildren) {
+                        preparedChildren = await Item.prepareChildrenForAddItem(traderItem, traderItemChildren);
                     }
-                };
 
-                const itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), traderItem._tpl, preparedChildren, requestEntry.count);
-                if(itemsAdded) {
-                    logger.logDebug(itemsAdded);
-                    output.items.new = itemsAdded;
-
-                    for(const scheme of requestEntry.scheme_items) {
-                        const itemsTaken = await playerProfile.character.removeItem(scheme.id, scheme.count);
-                        if(itemsTaken) {
-                            if(typeof itemsTaken.changed !== "undefined") {
-                                output.items.change = output.items.change.concat(itemsTaken.changed);
-                            }
-
-                            if(typeof itemsTaken.removed !== "undefined") {
-                                output.items.del = output.items.del.concat(itemsTaken.removed);
-                            }
-                        } else {
-                            logger.logDebug(`Unable to take items`);
+                    let output = {
+                        items: { 
+                            new: [],
+                            change: [],
+                            del: []
                         }
-                    /*await trader.reduceStock(requestEntry.item_id, requestEntry.count);*/
-                    }
-                } else {
-                    logger.logDebug(`Unable to add items`);
-                }
+                    };
 
-                await playerProfile.save();
-                return output;
+                    const itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), traderItem._tpl, preparedChildren, requestEntry.count);
+                    if(itemsAdded) {
+                        logger.logDebug(itemsAdded);
+                        output.items.new = itemsAdded;
+
+                        for(const scheme of requestEntry.scheme_items) {
+                            const itemsTaken = await playerProfile.character.removeItem(scheme.id, scheme.count);
+                            if(itemsTaken) {
+                                if(typeof itemsTaken.changed !== "undefined") {
+                                    output.items.change = output.items.change.concat(itemsTaken.changed);
+                                }
+
+                                if(typeof itemsTaken.removed !== "undefined") {
+                                    output.items.del = output.items.del.concat(itemsTaken.removed);
+                                }
+                            } else {
+                                logger.logDebug(`Unable to take items`);
+                            }
+                        /*await trader.reduceStock(requestEntry.item_id, requestEntry.count);*/
+                        }
+                    } else {
+                        logger.logDebug(`Unable to add items`);
+                    }
+
+                    await playerProfile.save();
+                    return output;
+                }
             }
         }
     };
