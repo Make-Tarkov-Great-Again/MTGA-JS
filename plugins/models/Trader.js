@@ -113,7 +113,7 @@ class Trader extends BaseModel {
 
         for (const item of profile.character.Inventory.items) {
             // skip: idk what the first is, rubble, euro and dollars
-            if (["544901bf4bdc2ddf018b456d", "5449016a4bdc2d6f028b456f", "569668774bdc2da2298b4568", "5696686a4bdc2da3298b456a"].includes(item._id)) {
+            if (["544901bf4bdc2ddf018b456d", "5449016a4bdc2d6f028b456f", "569668774bdc2da2298b4568", "5696686a4bdc2da3298b456a"].includes(item._tpl)) {
                 continue;
             }
             const priceModel = await Price.get(item._tpl);
