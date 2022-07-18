@@ -331,7 +331,7 @@ module.exports = async function gameRoutes(app, _opts) {
         logger.logWarning("Find not implemented yet");
         console.log(request.body);
 
-        let ragfair = cloneDeep(database.ragfair);
+        const ragfair = await Ragfair.generateOffersBasedOnRequest(request.body);
 
         return FastifyResponse.zlibJsonReply(
             reply,
