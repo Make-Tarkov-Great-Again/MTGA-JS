@@ -425,7 +425,47 @@ class Character extends BaseModel {
     }
 
     async removeItem(itemId, amount = 1) {
+        if (!itemId) {
+            return false;
+        }
 
+        let output = {
+            change: []
+        }
+
+        try {
+            let item = await this.getInventoryItemByID(itemId);
+            let children = await item.getAllChildItemsInInventory(this.Inventory.items)
+            
+            if(children) {
+                for (let child of children) {
+                    this.Inventory.items.find(function(value, index) {
+                        if(value._id === child._id) {
+                            delete this.Inventory.items[index];
+                        }
+                    })
+                }
+            }
+
+            if(item.upd !== "undefined" && amount < item.upd.StackObjectsCount) {
+                item.upd.StackObjectsCount = item.upd.StackObjectsCount - amount;
+                output.change.push(item);
+                return output;
+            } else {
+                this.Inventory.items.find(function(value, index) {
+                    if(value._id === itemId) {
+                        delete this.Inventory.items[index];
+                        return output;
+                    }
+                })
+                
+            }
+
+            return false;            
+        } catch (e) {
+            logger.logError(`Unable to delete item with itemId ${itemId}: ${e.message}`);
+            return false;
+        }
     }
 
     async moveItems(itemCollection) {

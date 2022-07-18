@@ -1,12 +1,26 @@
 const { BaseModel } = require("./BaseModel");
 const { Categorie } = require("./Categorie");
-const { findAndReturnChildrenByItems } = require("../utilities");
+const { findAndReturnChildrenByItems, logger } = require("../utilities");
 
 class Trader extends BaseModel {
     constructor(id) {
         super();
 
         this.createDatabase(id);
+    }
+
+    async solve() {
+        const { UtilityModel } = require("./UtilityModel");
+        for (const [index, item] of Object.entries(this.assort.items)) {
+            this.assort.items[index] = await UtilityModel.createModelFromParse("Item", item);
+        }
+    }
+
+    async dissolve() {
+        const dissolvedClone = await this.clone();
+        for (const [index, item] of Object.entries(dissolvedClone.assort.items)) {
+            dissolvedClone.assort.items[index] = Object.assign({}, item)
+        }
     }
 
     isRagfair() {
@@ -25,7 +39,6 @@ class Trader extends BaseModel {
             loyal_level_items: {}
         };
         const loyalty = await profile.getLoyalty(this.base._id, this.base);
-
         const traderClone = await this.clone();
 
         if (this.isRagfair()) {

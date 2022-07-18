@@ -85,7 +85,7 @@ class Item extends BaseModel {
 
         return { width: outWidth, height: outHeight};
     }
-    
+
     async getAllChildItemsInInventory(itemArray) {
         if(!itemArray) {
             return false;
@@ -104,7 +104,7 @@ class Item extends BaseModel {
         }
 
         if (typeof parentReference[this._id] == 'undefined') { // The input parentId has no children in the itemArray
-            return [];
+            return false;
         } else {
             let returnArray = [...parentReference[this._id]]; // Shallow copy the initial children of the input parentId
 
@@ -155,6 +155,32 @@ class Item extends BaseModel {
         return UtilityModel.createModelFromParse("Item", newItem);
     }
 
+    static async prepareChildrenForAddItem(parentItem, childItemArray) {
+        let children = []
+        for(let childItem of childItemArray) {
+            if(childItem.parentId == parentItem._id) {
+                let grandchildren = await Item.prepareChildrenForAddItem(childItem, childItemArray);
+                let newChild = {
+                    _tpl: childItem._tpl,
+                    slotId: childItem.slotId,
+                }
+
+                if(grandchildren) {
+                    newChild.children = grandchildren;
+                }
+
+                children.push(newChild);
+            }
+        }
+
+        if(children.length > 0) {
+            return children;
+        } else {
+            return false;
+        }    
+    }
+    
+
     /**
      * Tries to look for an item with the provided container as base, the storage location for items of the container and the item dimensions
      * @param {* item - The needle} container 
@@ -162,6 +188,7 @@ class Item extends BaseModel {
      * @param {* itemWidth - The required size horizontally} itemWidth 
      * @param {* itemHeight - The required size vertically} itemHeight 
      * @returns 
+     * Tranks Nevermind for your help. - Bude
      */
     static async getFreeSlot(container, itemInventory, itemWidth, itemHeight) {
         if(!container || !itemInventory || !itemWidth || !itemHeight) {
