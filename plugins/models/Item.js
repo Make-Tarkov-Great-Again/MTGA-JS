@@ -325,21 +325,6 @@ class Item extends BaseModel {
 
         return containerMap;
     }
-
-    static async generatePriceTable(templatesItems) {
-        const priceTable = {};
-        for (const item of templatesItems) {
-            if (item.Price === 0) continue;
-            priceTable[item.Id] = item.Price;
-        }
-        return priceTable;
-    }
-
-    static async getItemPrice(itemId) {
-        const database = require("../../engine/database");
-        const priceTable = database.templates.PriceTable;
-        return priceTable[itemId];
-    }
 }
 
 module.exports.Item = Item;
