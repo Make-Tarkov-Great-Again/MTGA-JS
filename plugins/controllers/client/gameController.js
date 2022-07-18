@@ -540,5 +540,34 @@ class GameController {
         }
     }
 
+    static clientGameProfileBindItem = async (request = null, reply = null) => {
+        for (const requestEntry of request.body.data) {
+            if (requestEntry.Action === "Bind") {
+                const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
+                if (playerProfile) {
+                    for (let index in playerProfile.character.Inventory.fastPanel) {
+                        if(playerProfile.character.Inventory.fastPanel[index] === requestEntry.item) {
+                            playerProfile.character.Inventory.fastPanel[index] = "";
+                        }
+                    }
+                    playerProfile.character.Inventory.fastPanel[requestEntry.index] = requestEntry.item;
+                }
+            }
+        }
+    }
+
+    static clientGameProfileReadEncyclopedia = async (request = null, reply = null) => {
+        for (const requestEntry of request.body.data) {
+            if (requestEntry.Action === "ReadEncyclopedia") {
+                const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
+                if (playerProfile) {
+                    for (let id of requestEntry.ids) {
+                        playerProfile.character.Encyclopedia[id] = true;
+                    }
+                }
+            }
+        }
+    }
+
 }
 module.exports.GameController = GameController;
