@@ -319,11 +319,13 @@ class Character extends BaseModel {
                     }
 
                     if (amount > itemTemplate._props.StackMaxSize) {
-                        amount = amount - itemTemplate._props.StackMaxSize;
-                        item.upd = {}
-                        item.upd.StackObjectsCount = itemTemplate._props.StackMaxSize;
+                        amount = amount - itemTemplate._props.StackMaxSize;                     
+                        if (itemTemplate._props.StackMaxSize > 1) {
+                            item.upd = {}
+                            item.upd.StackObjectsCount = itemTemplate._props.StackMaxSize;
+                        }
                     } else {
-                        if (amount > 1) {
+                        if (itemTemplate._props.StackMaxSize > 1) {
                             item.upd = {}
                             item.upd.StackObjectsCount = amount;
                         }
@@ -394,12 +396,15 @@ class Character extends BaseModel {
         item.parentId = parent._id
         item.slotId = slotId;
 
-        if (amount > 1 && amount <= itemTemplate._props.StackMaxSize) {
+        if (amount > 1 && amount <= itemTemplate._props.StackMaxSize && itemTemplate._props.StackMaxSize > 1) {
             item.upd = {}
             item.upd.StackObjectsCount = amount;
         } else {
-            item.upd = {}
-            item.upd.StackObjectsCount = itemTemplate._props.StackMaxSize;
+            if(itemTemplate._props.StackMaxSize > 1)
+            {
+                item.upd = {}
+                item.upd.StackObjectsCount = itemTemplate._props.StackMaxSize;
+            }
         }
 
         if (foundInRaid) {
@@ -444,31 +449,26 @@ class Character extends BaseModel {
             removed: []
         }
 
-        try {
-            let item = await this.getInventoryItemByID(itemId);
-            let children = await item.getAllChildItemsInInventory(this.Inventory.items)
-            
-            if(children) {
-                for (let child of children) {
-                    await this.removeInventoryItemByID(child._id);
-                    output.removed.push(child);
-                    return output;
-                }
+        let item = await this.getInventoryItemByID(itemId);
+        let children = await item.getAllChildItemsInInventory(this.Inventory.items)
+        
+        if(children) {
+            for (let child of children) {
+                await this.removeInventoryItemByID(child._id);
+                output.removed.push(child);
+                return output;
             }
-
-            if(amount != -1 && item.upd !== "undefined" && amount < item.upd.StackObjectsCount) {
-                item.upd.StackObjectsCount = item.upd.StackObjectsCount - amount;
-                output.changed.push(item);
-                return output;
-            } else {
-                await this.removeInventoryItemByID(item._id);
-                output.removed.push(item);
-                return output;
-            }        
-        } catch (e) {
-            logger.logError(`Unable to delete item with itemId ${itemId}: ${e.message}`);
-            return false;
         }
+
+        if(amount != -1 && typeof item.upd !== "undefined" && typeof item.upd.StackObjectsCount !== "undefined" && amount < item.upd.StackObjectsCount) {
+            item.upd.StackObjectsCount = item.upd.StackObjectsCount - amount;
+            output.changed.push(item);
+            return output;
+        } else {
+            await this.removeInventoryItemByID(item._id);
+            output.removed.push(item);
+            return output;
+        }        
     }
 
     async moveItems(itemCollection) {

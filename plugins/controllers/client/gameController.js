@@ -1,7 +1,7 @@
 const { forEach } = require("lodash");
 const { database } = require("../../../app");
 const { Profile, Language, Account, Edition, Customization, Storage, Character, Health, Weaponbuild, Quest, Locale, Trader, Item } = require("../../models");
-const { generateUniqueId ,getCurrentTimestamp, logger, FastifyResponse, writeFile, stringify, readParsed, payTrade } = require("../../utilities");
+const { generateUniqueId, getCurrentTimestamp, logger, FastifyResponse, writeFile, stringify, readParsed, payTrade } = require("../../utilities");
 
 
 class GameController {
@@ -277,7 +277,6 @@ class GameController {
             maxStorageTime: database.core.gameplay.other.RedeemTime * 3600
         };
         await playerProfile.addDialogue(quest.traderId, messageContent, questReward);
-        await playerProfile.save();
         return {};
     };
 
@@ -292,11 +291,7 @@ class GameController {
 
         const movedItems = await playerProfile.character.moveItems(request.body.data);
         if (movedItems) {
-            if (await playerProfile.save()) {
-                return {};
-            } else {
-                // display error
-            }
+            return {}
         } else {
             // display error
         }
@@ -350,35 +345,48 @@ class GameController {
             }
         }
 
-        if (await playerProfile.save()) {
-            return {};
-        } else {
-            // display error
-        }
+        return {};
     };
 
-    static clientGameTradingConfirm = async (request = null, reply = null) => {
+    static clientGameProfileTradingConfirm = async (request = null, reply = null) => {
         logger.logDebug("Trading request:");
         logger.logDebug(request.body.data);
 
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
         for (const requestEntry of request.body.data) {
             if (requestEntry.Action === "TradingConfirm") {
-                logger.logDebug(requestEntry);
                 const trader = await Trader.get(requestEntry.tid);
 
                 if (requestEntry.type === 'buy_from_trader') {
                     const traderItem = await trader.getAssortItemByID(requestEntry.item_id);
                     const traderAssort = await trader.getFilteredAssort(playerProfile);
                     const traderItemChildren = await traderItem.getAllChildItemsInInventory(traderAssort.items);
+                    const traderItemTemplate = await Item.get(traderItem._tpl);
 
                     let preparedChildren = false;
                     if (traderItemChildren) {
                         preparedChildren = await Item.prepareChildrenForAddItem(traderItem, traderItemChildren);
+                    } else {
+                        // Handle Ammoboxes //
+                        if (traderItemTemplate._parent === "543be5cb4bdc2deb348b4568") {
+                            if (typeof traderItemTemplate._props.StackSlots !== "undefined") {
+                                preparedChildren = []
+                                for (let stackedSlot of traderItemTemplate._props.StackSlots) {
+                                    let childToAdd = {
+                                        "_tpl": stackedSlot._props.filters[0].Filter[0],
+                                        "slotId": stackedSlot._name,
+                                        "upd": {
+                                            "StackObjectsCount": stackedSlot._max_count
+                                        }
+                                    }
+                                    preparedChildren.push(childToAdd);
+                                }
+                            }
+                        }
                     }
 
                     let output = {
-                        items: { 
+                        items: {
                             new: [],
                             change: [],
                             del: []
@@ -387,29 +395,26 @@ class GameController {
 
                     const itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), traderItem._tpl, preparedChildren, requestEntry.count);
                     if (itemsAdded) {
-                        logger.logDebug(itemsAdded);
                         output.items.new = itemsAdded;
-
-                        for(const scheme of requestEntry.scheme_items) {
+                        for (const scheme of requestEntry.scheme_items) {
                             const itemsTaken = await playerProfile.character.removeItem(scheme.id, scheme.count);
-                            if(itemsTaken) {
-                                if(typeof itemsTaken.changed !== "undefined") {
+                            if (itemsTaken) {
+                                if (typeof itemsTaken.changed !== "undefined") {
                                     output.items.change = output.items.change.concat(itemsTaken.changed);
                                 }
 
-                                if(typeof itemsTaken.removed !== "undefined") {
+                                if (typeof itemsTaken.removed !== "undefined") {
                                     output.items.del = output.items.del.concat(itemsTaken.removed);
                                 }
                             } else {
                                 logger.logDebug(`Unable to take items`);
                             }
-                        /*await trader.reduceStock(requestEntry.item_id, requestEntry.count);*/
+                            /*await trader.reduceStock(requestEntry.item_id, requestEntry.count);*/
                         }
                     } else {
                         logger.logDebug(`Unable to add items`);
                     }
                 } else if ( requestEntry.type === 'sell_to_trader') {
-                    logger.logDebug(requestEntry);
                     // TODO: LOAD TRADER PLAYER LOYALTY FOR COEF
                     let output = {
                         items: { 
@@ -424,7 +429,6 @@ class GameController {
                         const item =  await playerProfile.character.getInventoryItemByID(itemSelling.id);
                         itemPrice = database.templates.PriceTable[item._tpl];
                         itemPrice = itemPrice * itemSelling.count;
-                        logger.logDebug(itemPrice);
                         await playerProfile.character.removeItems([item]);
                         output.items.del.push({_id: item._id});
                     }
@@ -439,41 +443,102 @@ class GameController {
         }
     };
 
-    static clientGameSplitItem = async (request = null, reply = null) => {
+    static clientGameProfileSplitItem = async (request = null, reply = null) => {
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
         const splittedItems = await playerProfile.character.splitItems(request.body.data);
         if (splittedItems) {
-            if (await playerProfile.save()) {
-                return {
-                    items: { new: [splittedItems] }
-                };
-            }
+            return {
+                items: { new: [splittedItems] }
+            };
         }
     };
 
-    static clientGameMergeItem = async (request = null, reply = null) => {
+    static clientGameProfileMergeItem = async (request = null, reply = null) => {
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
         const mergedItems = await playerProfile.character.mergeItems(request.body.data);
         if (mergedItems) {
-            if (await playerProfile.save()) {
-                return {
-                    items: { del: [mergedItems] }
-                };
-            }
+            return {
+                items: { del: [mergedItems] }
+            };
         }
     };
 
-    static clientGameRemoveItem = async (request = null, reply = null) => {
+    static clientGameProfileRemoveItem = async (request = null, reply = null) => {
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
         const deletedItems = await playerProfile.character.removeItems(request.body.data);
         if (deletedItems) {
-            if (await playerProfile.save()) {
-                return {
-                    items: { del: [deletedItems] }
-                };
-            }
+            return {
+                items: { del: [deletedItems] }
+            };
         }
     };
+
+    static clientGameProfileFoldItem = async (request = null, reply = null) => {
+        for (const requestEntry of request.body.data) {
+            if (requestEntry.Action === "Fold") {
+                const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
+                if (playerProfile) {
+                    let item = await playerProfile.character.getInventoryItemByID(requestEntry.item);
+                    if (item) {
+                        if (typeof item.upd === "undefined") {
+                            item.upd = {}
+                        }
+
+                        if (typeof item.upd.Foldable === "undefined") {
+                            item.upd.Foldable = {}
+                        }
+
+                        item.upd.Foldable.Folded = requestEntry.value;
+                    }
+                }
+            }
+        }
+    }
+
+    static clientGameProfileTagItem = async (request = null, reply = null) => {
+        for (const requestEntry of request.body.data) {
+            if (requestEntry.Action === "Tag") {
+                const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
+                if (playerProfile) {
+                    let item = await playerProfile.character.getInventoryItemByID(requestEntry.item);
+                    if (item) {
+                        if (typeof item.upd === "undefined") {
+                            item.upd = {}
+                        }
+
+                        if (typeof item.upd.Tag === "undefined") {
+                            item.upd.Tag = {}
+                        }
+
+                        item.upd.Tag.Color = requestEntry.TagColor;
+                        item.upd.Tag.Name = requestEntry.TagName;
+                    }
+                }
+            }
+        }
+    }
+
+    static clientGameProfileToggleItem = async (request = null, reply = null) => {
+        for (const requestEntry of request.body.data) {
+            if (requestEntry.Action === "Toggle") {
+                const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
+                if (playerProfile) {
+                    let item = await playerProfile.character.getInventoryItemByID(requestEntry.item);
+                    if (item) {
+                        if (typeof item.upd === "undefined") {
+                            item.upd = {}
+                        }
+
+                        if (typeof item.upd.Togglable === "undefined") {
+                            item.upd.Togglable = {}
+                        }
+
+                        item.upd.Togglable.On = requestEntry.value;
+                    }
+                }
+            }
+        }
+    }
 
 }
 module.exports.GameController = GameController;
