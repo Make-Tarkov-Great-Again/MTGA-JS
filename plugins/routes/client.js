@@ -128,8 +128,6 @@ module.exports = async function gameRoutes(app, _opts) {
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
-<<<<<<< Updated upstream
-=======
                 case "Bind":
                     actionResult = await GameController.clientGameProfileBindItem(request, reply);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
@@ -140,7 +138,6 @@ module.exports = async function gameRoutes(app, _opts) {
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                     
->>>>>>> Stashed changes
                 // more, MOOOOOOOOOOOOOOORE
                 default:
                     logger.logWarning("Action " + action + " is not yet implemented.");
