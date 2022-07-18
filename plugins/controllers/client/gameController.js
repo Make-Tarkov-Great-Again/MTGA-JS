@@ -367,13 +367,13 @@ class GameController {
                 logger.logDebug(requestEntry);
                 const trader = await Trader.get(requestEntry.tid);
 
-                if(requestEntry.type === 'buy_from_trader') {
+                if (requestEntry.type === 'buy_from_trader') {
                     const traderItem = await trader.getAssortItemByID(requestEntry.item_id);
                     const traderAssort = await trader.getFilteredAssort(playerProfile);
                     const traderItemChildren = await traderItem.getAllChildItemsInInventory(traderAssort.items);
-                    
-                    let preparedChildren = false
-                    if(traderItemChildren) {
+
+                    let preparedChildren = false;
+                    if (traderItemChildren) {
                         preparedChildren = await Item.prepareChildrenForAddItem(traderItem, traderItemChildren);
                     }
 
@@ -386,7 +386,7 @@ class GameController {
                     };
 
                     const itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), traderItem._tpl, preparedChildren, requestEntry.count);
-                    if(itemsAdded) {
+                    if (itemsAdded) {
                         logger.logDebug(itemsAdded);
                         output.items.new = itemsAdded;
 
@@ -408,9 +408,32 @@ class GameController {
                     } else {
                         logger.logDebug(`Unable to add items`);
                     }
-
+                } else if ( requestEntry.type === 'sell_to_trader') {
+                    logger.logDebug(requestEntry);
+                    // TODO: LOAD TRADER PLAYER LOYALTY FOR COEF
+                    let output = {
+                        items: { 
+                            new: [],
+                            change: [],
+                            del: []
+                        }
+                    };
+                    let itemPrice;
+                    for (const itemSelling of requestEntry.items) {
+                        logger.logDebug(itemSelling);
+                        const item =  await playerProfile.character.getInventoryItemByID(itemSelling.id);
+                        itemPrice = database.templates.PriceTable[item._tpl];
+                        itemPrice = itemPrice * itemSelling.count;
+                        logger.logDebug(itemPrice);
+                        await playerProfile.character.removeItems([item]);
+                        output.items.del.push({_id: item._id});
+                    }
+                    const itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), await trader.getBaseCurrency(), false, itemPrice);
+                    output.items.new = itemsAdded;
                     await playerProfile.save();
                     return output;
+                } else {
+                    logger.logError(`My brother in christ what are you trying to do ? ${requestEntry.type} ? That shit is not done lmao pay me now.`);
                 }
             }
         }
