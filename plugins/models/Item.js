@@ -118,6 +118,23 @@ class Item extends BaseModel {
         }
     }
 
+    async createAsNewItemWithParent(parentId) {
+        const { UtilityModel } = require("./UtilityModel");
+        const newItem = {};
+        newItem._id = await generateItemId();
+        newItem._tpl = this._id;
+        newItem.parentId = parentId;
+        return UtilityModel.createModelFromParse("Item", newItem);
+    }
+
+    async createAsNewItem() {
+        const { UtilityModel } = require("./UtilityModel");
+        const newItem = {};
+        newItem._id = await generateItemId();
+        newItem._tpl = this._id;
+        return UtilityModel.createModelFromParse("Item", newItem);
+    }
+
     static async bannedItems() {
         return [
             "Pockets",
@@ -131,28 +148,6 @@ class Item extends BaseModel {
             "Edge of darkness stash 10x68",
             "Стандартный инвентарь" //default inventory
         ];
-    }
-
-    async createAsNewItem() {
-        const { UtilityModel } = require("./UtilityModel");
-        let newItem = {};
-
-        newItem._id = await generateItemId();
-        newItem._tpl = this._id;
-
-        return UtilityModel.createModelFromParse("Item", newItem);
-    }
-
-    async createAsNewItemWithParent(parentId) {
-        const { UtilityModel } = require("./UtilityModel");
-
-        let newItem = {};
-
-        newItem._id = await generateItemId();
-        newItem._tpl = this._id;
-        newItem.parentId = parentId;
-
-        return UtilityModel.createModelFromParse("Item", newItem);
     }
 
     static async prepareChildrenForAddItem(parentItem, childItemArray) {
@@ -179,7 +174,7 @@ class Item extends BaseModel {
             return false;
         }    
     }
-    
+
 
     /**
      * Tries to look for an item with the provided container as base, the storage location for items of the container and the item dimensions
@@ -332,7 +327,7 @@ class Item extends BaseModel {
     }
 
     static async generatePriceTable(templatesItems) {
-        let priceTable = {};
+        const priceTable = {};
         for (const item of templatesItems) {
             if (item.Price === 0) continue;
             priceTable[item.Id] = item.Price;
@@ -342,7 +337,7 @@ class Item extends BaseModel {
 
     static async getItemPrice(itemId) {
         const database = require("../../engine/database");
-        const priceTable = database.templates.PriceTable
+        const priceTable = database.templates.PriceTable;
         return priceTable[itemId];
     }
 }
