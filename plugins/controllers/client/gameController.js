@@ -358,31 +358,51 @@ class GameController {
         logger.logDebug("Trading request:");
         logger.logDebug(request.body.data);
 
-
         const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
-        
-
         for (const requestEntry of request.body.data) {
             logger.logDebug(requestEntry)
             const trader = await Trader.get(requestEntry.tid);
 
             if(requestEntry.type === 'buy_from_trader') {
-                const itemAdded = await playerProfile.character.addItem(requestEntry.item_id, requestEntry.count);
-                if(itemAdded) {
-                    const moneyTaken = await playerProfile.character.removeItem(requestEntry.scheme_items[0].id, requestEntry.scheme_items[0].count);
-                    if(moneyTaken) {
+                const traderItem = await trader.getAssortItemByID(requestEntry.item_id);
+                const traderAssort = await trader.getFilteredAssort(playerProfile);
+                const traderItemChildren = await traderItem.getAllChildItemsInInventory(traderAssort.items);
+                
+                let preparedChildren = false
+                if(traderItemChildren) {
+                    preparedChildren = await Item.prepareChildrenForAddItem(traderItem, traderItemChildren);
+                }
+
+                const moneyTaken = await playerProfile.character.removeItem(requestEntry.scheme_items[0].id, requestEntry.scheme_items[0].count);
+                if(moneyTaken) {
+                    const itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), traderItem._tpl, preparedChildren, requestEntry.count);
+                    if(itemsAdded) {
+                        await playerProfile.save();
+                        let output = {
+                            items: { 
+                                new: itemsAdded,
+                            }
+                        };
+
+                        if(typeof moneyTaken.change !== "undefined") {
+                            output.items.change = moneyTaken.change;
+                        }
+
+                        if(typeof moneyTaken.remove !== "undefined") {
+                            output.items.remove = moneyTaken.remove;
+                        }
+
+                        return output;
+                    } else {
+                        // oh no adding the items failed!
 
                     }
                 } else {
-                    /// suck dick
+                    // poor
                 }
-
-                await trader.reduceStock(requestEntry.item_id, requestEntry.count);
+                /*await trader.reduceStock(requestEntry.item_id, requestEntry.count);*/
             }
         }
-
-        //const currency = await trader.getCurrency();
-        //const isPayed = await payTrade(playerProfile.character.Inventory, request.body.data[0].scheme_items, currency);
     };
 
     static clientGameSplitItem = async (request = null, reply = null) => {

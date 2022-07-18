@@ -257,6 +257,8 @@ class DatabaseLoader {
             } else {
                 trader.dialogue = [];
             }
+
+            trader.solve();
         }
     }
 
