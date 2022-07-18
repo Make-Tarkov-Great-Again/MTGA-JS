@@ -329,7 +329,6 @@ class Item extends BaseModel {
     static async generatePriceTable(templatesItems) {
         const priceTable = {};
         for (const item of templatesItems) {
-            if (item.Price === 0) continue;
             priceTable[item.Id] = item.Price;
         }
         return priceTable;

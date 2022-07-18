@@ -1,5 +1,7 @@
 const { BaseModel } = require("./BaseModel");
+const database = require("../../engine/database");
 const { findAndReturnChildrenByItems, logger } = require("../utilities");
+const { Item } = require("./Item");
 
 
 class Trader extends BaseModel {
@@ -79,7 +81,6 @@ class Trader extends BaseModel {
         return assort;
     }
 
-
     async getBaseCurrency() {
         let currency;
         switch (this.base.currency) {
@@ -110,13 +111,15 @@ class Trader extends BaseModel {
         }
 
         for (const item of profile.character.Inventory.items) {
-            // Skip money items
-            if (!["544901bf4bdc2ddf018b456d", "5449016a4bdc2d6f028b456f", "569668774bdc2da2298b4568", "5696686a4bdc2da3298b456a"].includes(item._tpl)) {
+            // Skip money items, sorting table, default inventory, pockets, stashs
+            if (!["5449016a4bdc2d6f028b456f", "569668774bdc2da2298b4568", "5696686a4bdc2da3298b456a",
+            "602543c13fee350cd564d032", "55d7217a4bdc2d86028b456d", "627a4e6b255f7527fb05a0f6",
+            "5811ce772459770e9e5f9532", "5963866b86f7747bfa1c4462", "5963866286f7747bf429b572"].includes(item._tpl)) {
                 if (await this.itemInPurchaseCategories(item)) {
                     // Skip items that aren't part of a category buyable by trader (therapist don't buy bullets for example)
-                    const priceModel = await Price.get(item._tpl);
-                    if (priceModel) {
-                        output[item._id] = [[{ _tpl: currency, count: priceModel.Price }]];
+                    const price = database.templates.PriceTable[item._tpl];
+                    if (price) {
+                        output[item._id] = [[{ _tpl: currency, count: price }]];
                     }
                 }
             }
@@ -126,11 +129,36 @@ class Trader extends BaseModel {
 
     async itemInPurchaseCategories(item) {
         for (const purchaseCategorie of this.base.sell_category) {
-            const categorieModel = await Categorie.get(purchaseCategorie);
-            const itemCategorie = await Categorie.get(item._tpl);
-            return false;
+            const traderCategories = database.templates.Categories.filter(categorie => categorie.Id === purchaseCategorie );
+            for (const traderCategorie of traderCategories) {
+                if (!traderCategorie.ParentId) {
+                    const subCategories = database.templates.Categories.filter(categorie => categorie.ParentId === traderCategorie.Id );
+                    for (const subCategorie of subCategories) {
+                        const itemModel = await Item.get(item._tpl);
+                        const itemData = database.templates.Items.filter(dbItem => dbItem.Id === item._tpl )[0];
+                        if (itemData) {
+                            if (subCategorie.Id === itemData.ParentId) {
+                                return true;
+                            }
+                        } else {
+                            console.log()
+                        }
+                        
+                    }
+                } else {
+                    const itemData = database.templates.Items.filter(dbItem => dbItem.Id === item._tpl )[0];
+                    const itemModel = await Item.get(item._tpl);
+                    if (itemData) {
+                        if (traderCategorie.Id === itemData.ParentId) {
+                            return true;
+                        }
+                    } else {
+                        console.log()
+                    }
+                }
+            }
         }
-        return true;
+        return false;
     }
 
     static async getTraderByName(traderName) {
