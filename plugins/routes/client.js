@@ -112,7 +112,7 @@ module.exports = async function gameRoutes(app, _opts) {
                     actionResult = await GameController.clientGameRemoveItem(request, reply);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
-                    
+
                 // more, MOOOOOOOOOOOOOOORE
                 default:
                     logger.logWarning("Action " + action + " is not yet implemented.");
