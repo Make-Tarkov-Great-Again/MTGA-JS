@@ -50,13 +50,27 @@ class Ragfair extends BaseModel {
         const ragfair = cloneDeep(database.ragfair);
 
         switch (true) {
-            //case request.removedBartering === true:
-            //case  request.neededSearchId !== "":
+            case request.neededSearchId !== "":
+                ragfair.categories = await this.formatCategories(
+                    ragfair.categories,
+                    ragfair.offers,
+                    await this.getNeededSearch(request.neededSearchId)
+                );
+
+                ragfair.offers = await this.reduceOffersBasedOnCategories(
+                    ragfair.offers,
+                    ragfair.categories
+                )
+                ragfair.offers = ragfair.offers.slice(
+                    request.page * request.limit,
+                    (request.page + 1) * request.limit
+                );
+                return ragfair;
 
             case request.linkedSearchId == "" && request.updateOfferCount === true:
                 return ragfair;
 
-            case request.buildCount !== 0:
+            case request.buildCount !== 0: // i still have no idea wtf this is - King
                 let filter = [];
                 filter.push(Object.keys(request.buildCount));
                 ragfair.categories = await this.formatCategories(
@@ -82,8 +96,17 @@ class Ragfair extends BaseModel {
                     );
                 }
 
-                ragfair.offers = await this.reduceOffersBasedOnCategories(ragfair.offers, ragfair.categories);
+                ragfair.offers = await this.reduceOffersBasedOnCategories(
+                    ragfair.offers,
+                    ragfair.categories
+                )
+                ragfair.offers = ragfair.offers.slice(
+                    request.page * request.limit,
+                    (request.page + 1) * request.limit
+                );
+
                 return ragfair;
+
             case request.linkedSearchId == "" && request.handbookId !== "":
                 ragfair.categories = await this.formatCategories(
                     ragfair.categories,
@@ -91,14 +114,20 @@ class Ragfair extends BaseModel {
                     await this.investigateHandbookId(request.handbookId)
                 );
 
-                ragfair.offers = await this.reduceOffersBasedOnCategories(ragfair.offers, ragfair.categories);
+                ragfair.offers = await this.reduceOffersBasedOnCategories(
+                    ragfair.offers,
+                    ragfair.categories
+                )
+                ragfair.offers = ragfair.offers.slice(
+                    request.page * request.limit,
+                    (request.page + 1) * request.limit
+                );
                 return ragfair;
-
         }
     }
 
     /**
-     * Temporary solution until I build my own - King
+     * 
      * @param {*} handbookId 
      * @returns 
      */
@@ -134,19 +163,19 @@ class Ragfair extends BaseModel {
      * @returns 
      */
     static async reduceOffersBasedOnCategories(offers, categories) {
-/*      will keep this code just incase something happens - King
-
-        // grab all offers that are in categories and return new list
-        let filter = offers.filter(function (ragfairOffer) {
-            return ragfairOffer.items[0]._tpl in categories;
-        });
-
-        // remove the offers from original list that are not in the categories
-        filter.forEach(function (offer) {
-            const index = offers.indexOf(offer);
-            offers.splice(index, 1);
-        })
-*/
+        /*      will keep this code just incase something happens - King
+        
+                // grab all offers that are in categories and return new list
+                let filter = offers.filter(function (ragfairOffer) {
+                    return ragfairOffer.items[0]._tpl in categories;
+                });
+        
+                // remove the offers from original list that are not in the categories
+                filter.forEach(function (offer) {
+                    const index = offers.indexOf(offer);
+                    offers.splice(index, 1);
+                })
+        */
 
         /**
          *  filter offers based on TPL in categories
@@ -160,29 +189,67 @@ class Ragfair extends BaseModel {
         const item = await Item.get(searchId);
         const linked = new Set(
             [
-                ...await this.getFilters(item, "Slots"),
-                ...await this.getFilters(item, "Chambers"),
-                ...await this.getFilters(item, "Cartridges"),
+                ...await this.checkFilters(item, "Slots"),
+                ...await this.checkFilters(item, "Chambers"),
+                ...await this.checkFilters(item, "Cartridges"),
             ]
         )
         return Array.from(linked);
     }
 
-    static async getFilters(item, slot) {
-        let result = new Set();
-        if (slot in item._props && item._props[slot].length) {
-            for (let sub of item._props[slot]) {
-                if ("_props" in sub && "filters" in sub._props) {
-                    for (let filter of sub._props.filters) {
-                        for (let f of filter.Filter) {
-                            result.add(f);
+    static async getNeededSearch(neededSearchId) {
+        const { database } = require("../../app");
+        const items = await this.bannedItemFilter(database.items);
+        let needed = [];
+        // search through all items and push ID of items that are in the filter(s)
+        for (const item of items) {
+            if (
+                await this.checkFilters(item, "Slots", neededSearchId) ||
+                await this.checkFilters(item, "Chambers", neededSearchId) ||
+                await this.checkFilters(item, "Cartridges", neededSearchId)
+            )
+                needed.push(item._id);
+        }
+        return needed;
+    }
+
+    /**
+     * I can't think of a clever way to reduce this footprint - King
+     * @param {*} item 
+     * @param {*} slot 
+     * @param {*} id 
+     * @returns 
+     */
+    static async checkFilters(item, slot, id = null) {
+        if (id) {
+            if (slot in item._props && item._props[slot].length) {
+                for (let sub of item._props[slot]) {
+                    if ("_props" in sub && "filters" in sub._props) {
+                        for (let filter of sub._props.filters) {
+                            if (filter.Filter.includes(id)) {
+                                return true;
+                            }
                         }
                     }
                 }
             }
-        }
+            return false;
+        } else {
+            let result = new Set();
+            if (slot in item._props && item._props[slot].length) {
+                for (let sub of item._props[slot]) {
+                    if ("_props" in sub && "filters" in sub._props) {
+                        for (let filter of sub._props.filters) {
+                            for (let f of filter.Filter) {
+                                result.add(f);
+                            }
+                        }
+                    }
+                }
+            }
 
-        return result;
+            return result;
+        }
     }
 
 
@@ -190,7 +257,7 @@ class Ragfair extends BaseModel {
         //will be used when we start creating offers from the Item database
 
         const items = await Item.getAll();
-        const filteredItems = await this.bannedItemFilter(items);
+        const filteredItems = await Ragfair.bannedItemFilter(items);
         let childlessList = [];
 
         for (const i in filteredItems) {
@@ -207,7 +274,7 @@ class Ragfair extends BaseModel {
         }
     }
 
-    async bannedItemFilter(items) {
+    static async bannedItemFilter(items) {
         let filteredItems = [];
         let bannedItems = [];
         if (fileExist("./bannedItems.json")) {
