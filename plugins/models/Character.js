@@ -94,6 +94,15 @@ class Character extends BaseModel {
     }
 
     /**
+     * Example function on how to add items. Merge stacks.
+     */
+    async addTestRubbles() {
+        const itemTemplate = "5449016a4bdc2d6f028b456f";
+
+        await this.addItem(await this.getStashContainer(), itemTemplate, false, 2500, false, false);
+    }
+
+    /**
      * Example function on how to add items.
      */
     async addTestRifle() {
@@ -267,12 +276,12 @@ class Character extends BaseModel {
 
     /**
      * Adds and Item into the players inventory.
-     * @param {*} container 
-     * @param {*} itemId 
-     * @param {*} children 
-     * @param {*} amount 
-     * @param {*} foundInRaid 
-     * @param {*} customUpd 
+     * @param {*} container
+     * @param {*} itemId
+     * @param {*} children
+     * @param {*} amount
+     * @param {*} foundInRaid
+     * @param {*} customUpd
      * @returns An array of all the items that were added.
      */
     async addItem(container, itemId, children = undefined, amount = 1, foundInRaid = false, customUpd = false) {
@@ -285,21 +294,20 @@ class Character extends BaseModel {
             return false;
         }
 
-        let itemsAdded = [];
+        const itemsAdded = [];
         let noSpace = false;
-        let stackAmount = (amount - ~~(amount / itemTemplate._props.StackMaxSize) * itemTemplate._props.StackMaxSize) > 0 ? 1 + ~~(amount / itemTemplate._props.StackMaxSize) : ~~(amount / itemTemplate._props.StackMaxSize);
-
+        const stackAmount = (amount - ~~(amount / itemTemplate._props.StackMaxSize) * itemTemplate._props.StackMaxSize) > 0 ? 1 + ~~(amount / itemTemplate._props.StackMaxSize) : ~~(amount / itemTemplate._props.StackMaxSize);
         for (let itemsToAdd = 0; itemsToAdd < stackAmount; itemsToAdd++) {
             if (amount > 0) {
                 let itemSize = false;
-                let item = await itemTemplate.createAsNewItem();
+                const item = await itemTemplate.createAsNewItem();
 
                 if (children) {
-                    let childItemArray = []
-                    for (let childItem of children) {
-                        let childrenAdded = await this.addItemToParent(item, childItem._tpl, childItem.slotId, childItem.amount, childItem.foundInRaid, childItem.upd, childItem.children);
-                        for (let childAdded of childrenAdded) {
-                            childItemArray.push(childAdded)
+                    const childItemArray = []
+                    for (const childItem of children) {
+                        const childrenAdded = await this.addItemToParent(item, childItem._tpl, childItem.slotId, childItem.amount, childItem.foundInRaid, childItem.upd, childItem.children);
+                        for (const childAdded of childrenAdded) {
+                            childItemArray.push(childAdded);
                             itemsAdded.push(childAdded);
                         }
                     }
@@ -316,31 +324,31 @@ class Character extends BaseModel {
                         x: freeSlot.x,
                         y: freeSlot.y,
                         r: freeSlot.r
-                    }
+                    };
 
                     if (amount > itemTemplate._props.StackMaxSize) {
-                        amount = amount - itemTemplate._props.StackMaxSize;                     
+                        amount = amount - itemTemplate._props.StackMaxSize;
                         if (itemTemplate._props.StackMaxSize > 1) {
-                            item.upd = {}
+                            item.upd = {};
                             item.upd.StackObjectsCount = itemTemplate._props.StackMaxSize;
                         }
                     } else {
                         if (itemTemplate._props.StackMaxSize > 1) {
-                            item.upd = {}
+                            item.upd = {};
                             item.upd.StackObjectsCount = amount;
                         }
                     }
 
                     if (foundInRaid) {
                         if (typeof item.upd === "undefined") {
-                            item.upd = {}
+                            item.upd = {};
                         }
                         item.upd.SpawnedInSession = true;
                     }
 
                     if (customUpd) {
                         if (typeof item.upd === "undefined") {
-                            item.upd = {}
+                            item.upd = {};
                         }
 
                         Object.assign(item.upd, customUpd);
@@ -355,20 +363,43 @@ class Character extends BaseModel {
                 }
             }
         }
-        
+
         if(noSpace) {
             if (itemsAdded.length > 0) {
-                for (let itemAdded of itemsAdded) {
+                for (const itemAdded of itemsAdded) {
                     await this.removeItem(itemAdded, -1);
                 }
             }
-            return false
+            return false;
         } else if (itemsAdded.length > 0) {
             return itemsAdded;
         } else {
             logger.logDebug(`Unable to add item ${itemId}. Unknown cause.`);
             return false;
         }
+    }
+
+    async addItemToStack(inventoryItems, stackMaxSize, itemToAddStack) {
+        let remainingRequestStack = itemToAddStack;
+        const modifiedItems = [];
+        for (const inventoryItem of inventoryItems) {
+            if (inventoryItem.slotId === "hideout") {
+                if (inventoryItem.upd.StackObjectsCount < stackMaxSize) {
+                    inventoryItem.upd.StackObjectsCount += remainingRequestStack;
+                    if (inventoryItem.upd.StackObjectsCount > stackMaxSize) {
+                        inventoryItem.upd.StackObjectsCount = stackMaxSize;
+                    }
+                    modifiedItems.push(inventoryItem);
+                    remainingRequestStack = inventoryItem.upd.StackObjectsCount + remainingRequestStack - stackMaxSize;
+                    if (remainingRequestStack <= 0) {
+                        remainingRequestStack = 0;
+                        break;
+                    }
+                }
+            }
+            
+        }
+        return [modifiedItems, remainingRequestStack];
     }
 
     /**
@@ -450,7 +481,8 @@ class Character extends BaseModel {
         }
 
         let item = await this.getInventoryItemByID(itemId);
-        let children = await item.getAllChildItemsInInventory(this.Inventory.items)
+        logger.logDebug(item);
+        let children = await item.getAllChildItemsInInventory(this.Inventory.items);
         
         if(children) {
             for (let child of children) {
@@ -468,7 +500,7 @@ class Character extends BaseModel {
             await this.removeInventoryItemByID(item._id);
             output.removed.push(item);
             return output;
-        }        
+        }
     }
 
     async moveItems(itemCollection) {
@@ -605,6 +637,10 @@ class Character extends BaseModel {
 
     async getInventoryItemByID(itemId) {
         return this.Inventory.items.find(item => item._id === itemId);
+    }
+
+    async getInventoryItemsByTpl(itemTpl) {
+        return this.Inventory.items.filter(item => item._tpl === itemTpl);
     }
 
     async removeInventoryItemByID(itemId) {
