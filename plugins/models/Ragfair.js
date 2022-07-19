@@ -7,7 +7,8 @@ const cloneDeep = require("rfdc")();
 const {
     FastifyResponse, getCurrentTimestamp, generateItemId,
     logger, findChildren, writeFile, readParsed,
-    getAbsolutePathFrom, stringify, fileExist } = require("../utilities");
+    getAbsolutePathFrom, stringify, fileExist,
+    templatesWithParent, childrenCategories, isCategory } = require("../utilities");
 
 class Ragfair extends BaseModel {
     constructor() {
@@ -48,21 +49,22 @@ class Ragfair extends BaseModel {
         const { database } = require("../../app");
         const ragfair = cloneDeep(database.ragfair);
 
-        ragfair.categories = {};
-        // prepare categories
-        for (const c of ragfair.offers) {
-            ragfair.categories[c.items[0]._tpl] = 1;
-        }
-
-        // weapon builds??? I don't know
-
         switch (true) {
-            case request.buildCount:
+            //case request.removedBartering === true:
+            //case  request.neededSearchId !== "":
+
+            case request.linkedSearchId == "" && request.updateOfferCount === true:
+                return ragfair;
+
+            case request.buildCount !== 0:
+                let filter = [];
                 filter.push(Object.keys(request.buildCount));
                 ragfair.categories = await this.formatCategories(
                     ragfair.categories,
-                    ragfair.offers, filter
+                    ragfair.offers,
+                    filter
                 );
+                break; //unsure if we need to continue the switch after this
 
             case request.linkedSearchId !== "":
                 ragfair.categories = await this.formatCategories(
@@ -71,17 +73,57 @@ class Ragfair extends BaseModel {
                     await this.getLinkedSearch(request.linkedSearchId)
                 );
 
+                if (request.handbookId !== "") {
+                    const list = await this.investigateHandbookId(request.handbookId);
+                    ragfair.categories = await this.formatCategories(
+                        ragfair.categories,
+                        ragfair.offers,
+                        list
+                    );
+                }
+
                 ragfair.offers = await this.reduceOffersBasedOnCategories(ragfair.offers, ragfair.categories);
-            //need to now filter the offers based on the linked search
+                return ragfair;
+            case request.linkedSearchId == "" && request.handbookId !== "":
+                ragfair.categories = await this.formatCategories(
+                    ragfair.categories,
+                    ragfair.offers,
+                    await this.investigateHandbookId(request.handbookId)
+                );
 
-            case request.neededSearchId !== "":
-            case request.removedBartering === true:
-            case request.handbookId !== "":
-                //figure out what to do with handbookId
-                break;
+                ragfair.offers = await this.reduceOffersBasedOnCategories(ragfair.offers, ragfair.categories);
+                return ragfair;
+
         }
+    }
 
-        return ragfair;
+    /**
+     * Temporary solution until I build my own - King
+     * @param {*} handbookId 
+     * @returns 
+     */
+    static async investigateHandbookId(handbookId) {
+        let result = [];
+        if (handbookId === "5b5f71a686f77447ed5636ab") {
+            for (const categ2 of childrenCategories(handbookId)) {
+                for (const categ3 of childrenCategories(categ2)) {
+                    result = result.concat(templatesWithParent(categ3));
+                }
+            }
+        } else {
+            if (isCategory(handbookId)) {
+                // list all item of the category
+                result = result.concat(templatesWithParent(handbookId));
+
+                for (const categ of childrenCategories(handbookId)) {
+                    result = result.concat(templatesWithParent(categ));
+                }
+            } else {
+                // its a specific item searched then
+                result.push(handbookId);
+            }
+        }
+        return result;
     }
 
     static async reduceOffersBasedOnCategories(offers, categories) {
@@ -89,11 +131,11 @@ class Ragfair extends BaseModel {
             return ragfairOffer.items[0]._tpl in categories;
         });
 
-        filter.forEach(function(offer) {
+        filter.forEach(function (offer) {
             const index = offers.indexOf(offer);
             offers.splice(index, 1);
         })
-    
+
         return filter;
     }
 
