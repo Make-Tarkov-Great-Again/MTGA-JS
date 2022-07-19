@@ -108,23 +108,23 @@ const findChildren = async (idToFind, listToSearch) => {
 }
 
 /* all items in template with the given parent category */
-function templatesWithParent(x) {
-    const {database} = require("../../app")
+const templatesWithParent = async (x) => {
+    const { database } = require("../../app")
     const TplLookup = database.templates.TplLookup;
     return x in TplLookup.items.byParent ? TplLookup.items.byParent[x] : [];
-  }
-  
-  function isCategory(x) {
-    const {database} = require("../../app")
+}
+
+const isCategory = async (x) => {
+    const { database } = require("../../app")
     const TplLookup = database.templates.TplLookup;
     return x in TplLookup.categories.byId;
-  }
-  
-  function childrenCategories(x) {
-    const {database} = require("../../app")
+}
+
+const childrenCategories = async (x) => {
+    const { database } = require("../../app")
     const TplLookup = database.templates.TplLookup;
     return x in TplLookup.categories.byParent ? TplLookup.categories.byParent[x] : [];
-  }
+}
 
 // This bullshit handle both currency & barters
 // since I'm a lazy cunt I only did currency for now :)
