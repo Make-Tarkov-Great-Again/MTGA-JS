@@ -144,6 +144,49 @@ class Ragfair extends BaseModel {
     }
 
     static async reduceOffersBasedOnFilterRequest(offers, request) {
+        for (let offerIndex = offers.length - 1; offerIndex >= 0; offerIndex--) {
+            const thisOfferObj = offers[offerIndex];
+
+            if (request.removeBartering && !checkIfMoney(thisOfferObj.requirements[0]._tpl)) { // If removeBartering is true and this item is sold for something other than money, remove it 
+                offers.splice(offerIndex, 1); // Remove this offer
+                continue;
+            } else if (request.offerOwnerType != 0 && thisOfferObj.user.memberType == 4) { // If filtering out some kind of offer sources? Perhaps players or traders?
+                offers.splice(offerIndex, 1); // Remove this offer
+                continue;
+            } else if (request.currency != 0) { // If the request specifies a currency
+                const currencies = {
+                    1: "5449016a4bdc2d6f028b456f", // RUB
+                    2: "5696686a4bdc2da3298b456a", // USD
+                    3: "569668774bdc2da2298b4568" // EUR
+                };
+
+                if (currencies[request.currency] != thisOfferObj.requirements[0]._tpl) { // If the currency required for this offer doesn't match the currency specified in the request
+                    offers.splice(offerIndex, 1); // Remove this offer
+                    continue;
+                }
+            } else if (request.onlyFunctional) {
+                // do stuff
+            } else if (request.oneHourExpiration) {
+                // do stuff
+            } else if (request.priceFrom) {
+                // do stuff
+            } else if (request.priceTo) {
+                // do stuff
+            } else if (request.quantityFrom) {
+                // do stuff
+            } else if (request.quantityTo) {
+                // do stuff
+            } else if (request.conditionFrom) {
+                // do stuff
+            } else if (request.conditionTo) {
+                // do stuff
+            }
+        }
+
+        return offers;
+    }
+
+    static async reduceOffersBasedOnFilterRequest_original(offers, request) {
         let filtered = [];
         switch (true) {
             case request.removeBartering === true:
@@ -152,7 +195,7 @@ class Ragfair extends BaseModel {
                 })
 
             case request.offerOwnerType !== 0:
-                filtered.filter(function (offer) {
+                offers.filter(function (offer) {
                     if (offer.user.memberType !== 4) filtered.push(offer);
                 })
 
@@ -162,9 +205,9 @@ class Ragfair extends BaseModel {
                     2: "5696686a4bdc2da3298b456a", // USD
                     3: "569668774bdc2da2298b4568" // EUR
                 }
-                console.log(request)
-                filtered.filter(function (offer) {
-                    if (offer.items[0]._tpl == currency[request.currency]) filtered.push(offer);
+                console.log(request.currency)
+                offers.filter(function (offer) {
+                    if (offer.requirements._tpl == currency[request.currency]) filtered.push(offer);
                 });
 
             case !!request.onlyFunctional: //boolean
