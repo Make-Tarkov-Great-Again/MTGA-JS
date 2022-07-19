@@ -134,6 +134,16 @@ class Item extends BaseModel {
         return UtilityModel.createModelFromParse("Item", newItem);
     }
 
+    /**
+     * Check if object is stackable
+     * @returns false if it's not, size of stack otherwise
+     */
+    async getStackInfo() {
+        if (this._props.StackMaxSize && this._props.StackMaxSize !== 1)
+            return this._props.StackMaxSize;
+        return false;
+    }
+
     static async bannedItems() {
         return [
             "Pockets",
