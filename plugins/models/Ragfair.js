@@ -7,7 +7,8 @@ const cloneDeep = require("rfdc")();
 const {
     FastifyResponse, getCurrentTimestamp, generateItemId,
     logger, findChildren, writeFile, readParsed,
-    getAbsolutePathFrom, stringify, fileExist } = require("../utilities");
+    getAbsolutePathFrom, stringify, fileExist,
+    templatesWithParent, childrenCategories, isCategory } = require("../utilities");
 
 class Ragfair extends BaseModel {
     constructor() {
@@ -34,7 +35,7 @@ class Ragfair extends BaseModel {
         data.offersCount = data.offers.length;
 
         const categories = await this.getAllCategories();
-        data.categories = await this.formatCategories(categories, data.offers);
+        data.categories = await Ragfair.formatCategories(categories, data.offers);
         return data;
     }
 
@@ -48,15 +49,142 @@ class Ragfair extends BaseModel {
         const { database } = require("../../app");
         const ragfair = cloneDeep(database.ragfair);
 
-        ragfair.categories = {};
-        // prepare categories
-        for (const c of ragfair.offers) {
-            ragfair.categories[c.items[0]._tpl] = 1;
+        switch (true) {
+            //case request.removedBartering === true:
+            //case  request.neededSearchId !== "":
+
+            case request.linkedSearchId == "" && request.updateOfferCount === true:
+                return ragfair;
+
+            case request.buildCount !== 0:
+                let filter = [];
+                filter.push(Object.keys(request.buildCount));
+                ragfair.categories = await this.formatCategories(
+                    ragfair.categories,
+                    ragfair.offers,
+                    filter
+                );
+                break; //unsure if we need to continue the switch after this
+
+            case request.linkedSearchId !== "":
+                ragfair.categories = await this.formatCategories(
+                    ragfair.categories,
+                    ragfair.offers,
+                    await this.getLinkedSearch(request.linkedSearchId)
+                );
+
+                if (request.handbookId !== "") {
+                    const list = await this.investigateHandbookId(request.handbookId);
+                    ragfair.categories = await this.formatCategories(
+                        ragfair.categories,
+                        ragfair.offers,
+                        list
+                    );
+                }
+
+                ragfair.offers = await this.reduceOffersBasedOnCategories(ragfair.offers, ragfair.categories);
+                return ragfair;
+            case request.linkedSearchId == "" && request.handbookId !== "":
+                ragfair.categories = await this.formatCategories(
+                    ragfair.categories,
+                    ragfair.offers,
+                    await this.investigateHandbookId(request.handbookId)
+                );
+
+                ragfair.offers = await this.reduceOffersBasedOnCategories(ragfair.offers, ragfair.categories);
+                return ragfair;
+
+        }
+    }
+
+    /**
+     * Temporary solution until I build my own - King
+     * @param {*} handbookId 
+     * @returns 
+     */
+    static async investigateHandbookId(handbookId) {
+        let result = [];
+        if (handbookId === "5b5f71a686f77447ed5636ab") {
+            for (const categ2 of await childrenCategories(handbookId)) {
+                for (const categ3 of await childrenCategories(categ2)) {
+                    result = result.concat(await templatesWithParent(categ3));
+                }
+            }
+        } else {
+            if (await isCategory(handbookId)) {
+                // list all item of the category
+                result = result.concat(await templatesWithParent(handbookId));
+
+                for (const categ of await childrenCategories(handbookId)) {
+                    result = result.concat(await templatesWithParent(categ));
+                }
+            } else {
+                // its a specific item searched then
+                result.push(handbookId);
+            }
+        }
+        return result;
+    }
+
+
+    /**
+     * Remove offers that are not in the categories, return filtered offers (if array)
+     * @param {*} offers filter the offers based on the categories
+     * @param {*} categories the categories to filter the offers
+     * @returns 
+     */
+    static async reduceOffersBasedOnCategories(offers, categories) {
+/*      will keep this code just incase something happens - King
+
+        // grab all offers that are in categories and return new list
+        let filter = offers.filter(function (ragfairOffer) {
+            return ragfairOffer.items[0]._tpl in categories;
+        });
+
+        // remove the offers from original list that are not in the categories
+        filter.forEach(function (offer) {
+            const index = offers.indexOf(offer);
+            offers.splice(index, 1);
+        })
+*/
+
+        /**
+         *  filter offers based on TPL in categories
+         */
+        return offers.filter(function (ragfairOffer) {
+            return ragfairOffer.items[0]._tpl in categories;
+        });
+    }
+
+    static async getLinkedSearch(searchId) {
+        const item = await Item.get(searchId);
+        const linked = new Set(
+            [
+                ...await this.getFilters(item, "Slots"),
+                ...await this.getFilters(item, "Chambers"),
+                ...await this.getFilters(item, "Cartridges"),
+            ]
+        )
+        return Array.from(linked);
+    }
+
+    static async getFilters(item, slot) {
+        let result = new Set();
+        if (slot in item._props && item._props[slot].length) {
+            for (let sub of item._props[slot]) {
+                if ("_props" in sub && "filters" in sub._props) {
+                    for (let filter of sub._props.filters) {
+                        for (let f of filter.Filter) {
+                            result.add(f);
+                        }
+                    }
+                }
+            }
         }
 
-        if (request) return "your mom built like a fucking house"; //buildCount
-        return "your mom gay"
+        return result;
     }
+
 
     async formatItems() {
         //will be used when we start creating offers from the Item database
@@ -140,7 +268,7 @@ class Ragfair extends BaseModel {
      * @param {*} filters pass selected filter to add to categories
      * @returns 
      */
-    async formatCategories(categories, offers, filters = null) {
+    static async formatCategories(categories, offers, filters = null) {
 
         if (filters) {
             let filteredCategories = {};
