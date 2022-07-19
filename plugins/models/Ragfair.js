@@ -105,18 +105,18 @@ class Ragfair extends BaseModel {
     static async investigateHandbookId(handbookId) {
         let result = [];
         if (handbookId === "5b5f71a686f77447ed5636ab") {
-            for (const categ2 of childrenCategories(handbookId)) {
-                for (const categ3 of childrenCategories(categ2)) {
-                    result = result.concat(templatesWithParent(categ3));
+            for (const categ2 of await childrenCategories(handbookId)) {
+                for (const categ3 of await childrenCategories(categ2)) {
+                    result = result.concat(await templatesWithParent(categ3));
                 }
             }
         } else {
-            if (isCategory(handbookId)) {
+            if (await isCategory(handbookId)) {
                 // list all item of the category
-                result = result.concat(templatesWithParent(handbookId));
+                result = result.concat(await templatesWithParent(handbookId));
 
-                for (const categ of childrenCategories(handbookId)) {
-                    result = result.concat(templatesWithParent(categ));
+                for (const categ of await childrenCategories(handbookId)) {
+                    result = result.concat(await templatesWithParent(categ));
                 }
             } else {
                 // its a specific item searched then
@@ -126,17 +126,34 @@ class Ragfair extends BaseModel {
         return result;
     }
 
+
+    /**
+     * Remove offers that are not in the categories, return filtered offers (if array)
+     * @param {*} offers filter the offers based on the categories
+     * @param {*} categories the categories to filter the offers
+     * @returns 
+     */
     static async reduceOffersBasedOnCategories(offers, categories) {
+/*      will keep this code just incase something happens - King
+
+        // grab all offers that are in categories and return new list
         let filter = offers.filter(function (ragfairOffer) {
             return ragfairOffer.items[0]._tpl in categories;
         });
 
+        // remove the offers from original list that are not in the categories
         filter.forEach(function (offer) {
             const index = offers.indexOf(offer);
             offers.splice(index, 1);
         })
+*/
 
-        return filter;
+        /**
+         *  filter offers based on TPL in categories
+         */
+        return offers.filter(function (ragfairOffer) {
+            return ragfairOffer.items[0]._tpl in categories;
+        });
     }
 
     static async getLinkedSearch(searchId) {
