@@ -325,8 +325,8 @@ class DatabaseLoader {
                 profile.character = await UtilityModel.createModelFromParse("Character", readParsed("./user/profiles/" + profileID + "/character.json"));
                 await profile.character.solve();
 
-                await profile.character.addTestPistol();
-                await profile.character.addTestRifle();
+                //await profile.character.addTestPistol();
+                //await profile.character.addTestRifle();
 
                 stats = fs.statSync(`./user/profiles/${profileID}/character.json`);
                 database.fileAge[profileID].character = stats.mtimeMs;
