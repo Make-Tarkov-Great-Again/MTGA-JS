@@ -8,7 +8,8 @@ const {
     FastifyResponse, getCurrentTimestamp, generateItemId,
     logger, findChildren, writeFile, readParsed,
     getAbsolutePathFrom, stringify, fileExist,
-    templatesWithParent, childrenCategories, isCategory } = require("../utilities");
+    templatesWithParent, childrenCategories, isCategory,
+    checkIfMoney } = require("../utilities");
 
 class Ragfair extends BaseModel {
     constructor() {
@@ -60,15 +61,11 @@ class Ragfair extends BaseModel {
                 ragfair.offers = await this.reduceOffersBasedOnCategories(
                     ragfair.offers,
                     ragfair.categories
-                )
-                ragfair.offers = ragfair.offers.slice(
-                    request.page * request.limit,
-                    (request.page + 1) * request.limit
                 );
-                return ragfair;
+                break;
 
             case request.linkedSearchId == "" && request.updateOfferCount === true:
-                return ragfair;
+                break;
 
             case request.buildCount !== 0: // i still have no idea wtf this is - King
                 let filter = [];
@@ -100,12 +97,7 @@ class Ragfair extends BaseModel {
                     ragfair.offers,
                     ragfair.categories
                 )
-                ragfair.offers = ragfair.offers.slice(
-                    request.page * request.limit,
-                    (request.page + 1) * request.limit
-                );
-
-                return ragfair;
+                break;
 
             case request.linkedSearchId == "" && request.handbookId !== "":
                 ragfair.categories = await this.formatCategories(
@@ -118,71 +110,83 @@ class Ragfair extends BaseModel {
                     ragfair.offers,
                     ragfair.categories
                 )
-                ragfair.offers = ragfair.offers.slice(
-                    request.page * request.limit,
-                    (request.page + 1) * request.limit
-                );
-                return ragfair;
+                break;
         }
-    }
 
-    /**
-     * 
-     * @param {*} handbookId 
-     * @returns 
-     */
-    static async investigateHandbookId(handbookId) {
-        let result = [];
-        if (handbookId === "5b5f71a686f77447ed5636ab") {
-            for (const categ2 of await childrenCategories(handbookId)) {
-                for (const categ3 of await childrenCategories(categ2)) {
-                    result = result.concat(await templatesWithParent(categ3));
-                }
-            }
-        } else {
-            if (await isCategory(handbookId)) {
-                // list all item of the category
-                result = result.concat(await templatesWithParent(handbookId));
-
-                for (const categ of await childrenCategories(handbookId)) {
-                    result = result.concat(await templatesWithParent(categ));
-                }
-            } else {
-                // its a specific item searched then
-                result.push(handbookId);
-            }
-        }
-        return result;
+        ragfair.offers = await this.reduceOffersBasedOnFilterRequest(
+            ragfair.offers,
+            request
+        );
+        ragfair.categories = await this.formatCategories(
+            ragfair.categories,
+            ragfair.offers
+        );
+        ragfair.offers = await this.sortOffers(
+            request,
+            ragfair.offers.slice(
+                request.page * request.limit,
+                (request.page + 1) * request.limit
+            ));
+        return ragfair;
     }
 
 
-    /**
+    /** This can probably be combined with reduceOffersBasedOnFilterRequest
      * Remove offers that are not in the categories, return filtered offers (if array)
      * @param {*} offers filter the offers based on the categories
      * @param {*} categories the categories to filter the offers
      * @returns 
      */
     static async reduceOffersBasedOnCategories(offers, categories) {
-        /*      will keep this code just incase something happens - King
-        
-                // grab all offers that are in categories and return new list
-                let filter = offers.filter(function (ragfairOffer) {
-                    return ragfairOffer.items[0]._tpl in categories;
-                });
-        
-                // remove the offers from original list that are not in the categories
-                filter.forEach(function (offer) {
-                    const index = offers.indexOf(offer);
-                    offers.splice(index, 1);
-                })
-        */
-
-        /**
-         *  filter offers based on TPL in categories
-         */
         return offers.filter(function (ragfairOffer) {
             return ragfairOffer.items[0]._tpl in categories;
         });
+    }
+
+    static async reduceOffersBasedOnFilterRequest(offers, request) {
+        let filtered = [];
+        switch (true) {
+            case request.removeBartering === true:
+                offers.filter(function (offer) {
+                    if (checkIfMoney(offer.items[0]._tpl) === false) filtered.push(offer)
+                })
+
+            case request.offerOwnerType !== 0:
+                filtered.filter(function (offer) {
+                    if (offer.user.memberType !== 4) filtered.push(offer);
+                })
+
+            case request.currency !== 0:
+                const currency = {
+                    1: "5449016a4bdc2d6f028b456f", // RUB
+                    2: "5696686a4bdc2da3298b456a", // USD
+                    3: "569668774bdc2da2298b4568" // EUR
+                }
+                console.log(request)
+                filtered.filter(function (offer) {
+                    if (offer.items[0]._tpl == currency[request.currency]) filtered.push(offer);
+                });
+
+            case !!request.onlyFunctional: //boolean
+                logger.logWarning("[Show only functional items] is not implemented yet");
+                break;
+            case !!request.oneHourExpiration: //boolean
+                logger.logWarning("[Only show items expiring in less than 1 hour] is not implemented yet");
+                break;
+            case request.priceFrom !== 0:
+            case request.priceTo !== 0:
+                logger.logWarning("[Approx. price from] is not implemented yet");
+                break;
+            case request.quantityFrom !== 0:
+            case request.quantityTo !== 0:
+                logger.logWarning("[Quantity from] is not implemented yet");
+                break;
+            case request.conditionFrom !== 0:
+            case request.conditionTo !== 100:
+                logger.logWarning("[Condition from] is not implemented yet");
+                break;
+        }
+        return filtered;
     }
 
     static async getLinkedSearch(searchId) {
@@ -250,6 +254,35 @@ class Ragfair extends BaseModel {
 
             return result;
         }
+    }
+
+    /**
+ * 
+ * @param {*} handbookId 
+ * @returns 
+ */
+    static async investigateHandbookId(handbookId) {
+        let result = [];
+        if (handbookId === "5b5f71a686f77447ed5636ab") {
+            for (const categ2 of await childrenCategories(handbookId)) {
+                for (const categ3 of await childrenCategories(categ2)) {
+                    result = result.concat(await templatesWithParent(categ3));
+                }
+            }
+        } else {
+            if (await isCategory(handbookId)) {
+                // list all item of the category
+                result = result.concat(await templatesWithParent(handbookId));
+
+                for (const categ of await childrenCategories(handbookId)) {
+                    result = result.concat(await templatesWithParent(categ));
+                }
+            } else {
+                // its a specific item searched then
+                result.push(handbookId);
+            }
+        }
+        return result;
     }
 
 
@@ -626,9 +659,9 @@ class Ragfair extends BaseModel {
         this.nextOfferId += 1;
     }
 
-    async sortOffers(request, offers) {
+    static async sortOffers(request, offers) {
         // Sort results
-        switch (request.body.sortType) {
+        switch (request.sortType) {
             case 0: // ID
                 offers.sort((a, b) => { return a.intId - b.intId }
                 );
@@ -640,12 +673,11 @@ class Ragfair extends BaseModel {
                 break;
 
             case 4: // Offer (title)
+                const { database } = require('../../app');
                 offers.sort((a, b) => {
-                    // @TODO: Get localized item names
-                    // i just hijacked this from SIT/AE/JET/Balle
                     try {
-                        let aa = helper_f.tryGetItem(a._id)[1]._name;
-                        let bb = helper_f.tryGetItem(b._id)[1]._name;
+                        let aa = database.items[a._id][1]._name;
+                        let bb = database.items[b._id][1]._name;
 
                         aa = aa.substring(aa.indexOf("_") + 1);
                         bb = bb.substring(bb.indexOf("_") + 1);
@@ -663,7 +695,7 @@ class Ragfair extends BaseModel {
                 break;
 
             case 6: // Expires in
-                offers.sort((a, b) => { return a.endTime - b.endTime;; })
+                offers.sort((a, b) => { return a.endTime - b.endTime; })
                 break;
         }
 
@@ -673,19 +705,6 @@ class Ragfair extends BaseModel {
         }
 
         return offers;
-    }
-
-
-    static async getSelectedCategory(request) {
-        const body = request.body;
-        switch (true) {
-            case body.handbookId != "":
-                return request.body.handbookId;
-            case body.linkedSearchId != "":
-                return request.body.linkedSearchId;
-            case body.neededSearchId != "":
-                return request.body.neededSearchId;
-        }
     }
 }
 
