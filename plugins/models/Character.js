@@ -503,14 +503,10 @@ class Character extends BaseModel {
         }
     }
 
-    async moveItems(itemCollection) {
+    async moveItems(item) {
         const movedItems = {};
-        for (const item of itemCollection) {
-            if (item.Action === "Move") {
-                const movedItem = await this.moveItem(item.to.id, item.to.container, item.item, item.to.location);
-                Object.assign(movedItems, movedItem);
-            }
-        }
+        const movedItem = await this.moveItem(item.to.id, item.to.container, item.item, item.to.location);
+        Object.assign(movedItems, movedItem);
         return movedItems;
     }
 
@@ -592,18 +588,14 @@ class Character extends BaseModel {
         return this.moveItemUsingSlotID(itemId, locationData, "main", containerID);
     }
 
-    async splitItems(itemCollection) {
+    async splitItems(item) {
         const splitedItems = {};
-        for (const item of itemCollection) {
-            if (item.Action === "Split") {
-                const splitedItem = await this.splitItem(item.item, item.count, item.container.container, item.container.id, item.container.location);
-                const newItems = cloneDeep(splitedItem);
-                delete newItems.location;
-                delete newItems.slotId;
-                delete newItems.parentId;
-                Object.assign(splitedItems, newItems);
-            }
-        }
+        const splitedItem = await this.splitItem(item.item, item.count, item.container.container, item.container.id, item.container.location);
+        const newItems = cloneDeep(splitedItem);
+        delete newItems.location;
+        delete newItems.slotId;
+        delete newItems.parentId;
+        Object.assign(splitedItems, newItems);
         return splitedItems;
     }
 
@@ -649,14 +641,10 @@ class Character extends BaseModel {
         return removedItems.length > 0;
     }
 
-    async mergeItems(itemCollection) {
+    async mergeItems(item) {
         const mergedItems = {};
-        for (const item of itemCollection) {
-            if (item.Action === "Merge") {
-                const mergedItem = await this.mergeItem(item.item, item.with);
-                Object.assign(mergedItems, mergedItem);
-            }
-        }
+        const mergedItem = await this.mergeItem(item.item, item.with);
+        Object.assign(mergedItems, mergedItem);
         return mergedItems;
     }
 
@@ -679,14 +667,10 @@ class Character extends BaseModel {
         return false;
     }
 
-    async removeItems(itemCollection) {
+    async removeItems(item) {
         const removedItems = {};
-        for (const item of itemCollection) {
-            if (item.Action === "Remove") {
-                await this.removeInventoryItemByID(item.item);
-                Object.assign(removedItems, { _id: item.item });
-            }
-        }
+        await this.removeInventoryItemByID(item.item);
+        Object.assign(removedItems, { _id: item.item });
         return removedItems;
     }
 

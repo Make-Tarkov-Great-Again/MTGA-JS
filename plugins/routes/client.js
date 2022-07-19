@@ -75,66 +75,66 @@ module.exports = async function gameRoutes(app, _opts) {
         const playerProfile = await Profile.get(sessionID);
         const outputData = await playerProfile.getProfileChangesBase();
         let actionResult;
-        for (const moveActions of request.body.data) {
-            const action = moveActions.Action;
+        for (const moveAction of request.body.data) {
+            const action = moveAction.Action;
             switch (action) {
                 case "QuestAccept":
-                    actionResult = await GameController.clientGameProfileAcceptQuest(request, reply);
+                    actionResult = await GameController.clientGameProfileAcceptQuest(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
                 case "Move":
-                    actionResult = await GameController.clientGameProfileMoveItem(request, reply);
+                    actionResult = await GameController.clientGameProfileMoveItem(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
                 case "Examine":
-                    actionResult = await GameController.clientGameProfileExamine(request, reply);
+                    actionResult = await GameController.clientGameProfileExamine(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
                 case "TradingConfirm":
-                    actionResult = await GameController.clientGameProfileTradingConfirm(request, reply);
+                    actionResult = await GameController.clientGameProfileTradingConfirm(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
                 case "Split":
-                    actionResult = await GameController.clientGameProfileSplitItem(request, reply);
+                    actionResult = await GameController.clientGameProfileSplitItem(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
                 case "Merge":
-                    actionResult = await GameController.clientGameProfileMergeItem(request, reply);
+                    actionResult = await GameController.clientGameProfileMergeItem(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
                 case "Remove":
-                    actionResult = await GameController.clientGameProfileRemoveItem(request, reply);
+                    actionResult = await GameController.clientGameProfileRemoveItem(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
                 case "Fold":
-                    actionResult = await GameController.clientGameProfileFoldItem(request, reply);
+                    actionResult = await GameController.clientGameProfileFoldItem(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
                 case "Tag":
-                    actionResult = await GameController.clientGameProfileTagItem(request, reply);
+                    actionResult = await GameController.clientGameProfileTagItem(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
                 case "Toggle":
-                    actionResult = await GameController.clientGameProfileToggleItem(request, reply);
+                    actionResult = await GameController.clientGameProfileToggleItem(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
                 case "Bind":
-                    actionResult = await GameController.clientGameProfileBindItem(request, reply);
+                    actionResult = await GameController.clientGameProfileBindItem(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
                 case "ReadEncyclopedia":
-                    actionResult = await GameController.clientGameProfileReadEncyclopedia(request, reply);
+                    actionResult = await GameController.clientGameProfileReadEncyclopedia(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                     
