@@ -104,8 +104,38 @@ class DatabaseLoader {
         database.templates = {
             "Categories": templatesData.Categories,
             "Items": templatesData.Items,
-            "PriceTable": await Item.generatePriceTable(templatesData.Items)
+            "PriceTable": await Item.generatePriceTable(templatesData.Items),
+            "TplLookup": await this.generateTplLookup(templatesData.Items, templatesData.Categories)
         };
+    }
+
+    static async generateTplLookup(items, categories) {
+        const lookup = {
+            items: {
+                byId: {},
+                byParent: {},
+            },
+            categories: {
+                byId: {},
+                byParent: {},
+            },
+        };
+
+        for (let x of items) {
+            lookup.items.byId[x.Id] = x.Price;
+            lookup.items.byParent[x.ParentId] || (lookup.items.byParent[x.ParentId] = []);
+            lookup.items.byParent[x.ParentId].push(x.Id);
+        }
+
+        for (let x of categories) {
+            lookup.categories.byId[x.Id] = x.ParentId ? x.ParentId : null;
+            if (x.ParentId) {
+                // root as no parent
+                lookup.categories.byParent[x.ParentId] || (lookup.categories.byParent[x.ParentId] = []);
+                lookup.categories.byParent[x.ParentId].push(x.Id);
+            }
+        }
+        return lookup;
     }
 
     static async loadLocations() {
