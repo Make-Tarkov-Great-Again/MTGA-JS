@@ -393,9 +393,27 @@ class GameController {
                         }
                     };
 
-                    const itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), traderItem._tpl, preparedChildren, requestEntry.count);
-                    if (itemsAdded) {
-                        output.items.new = itemsAdded;
+                    // Merge existing item to reach max stack
+                    let itemsAdded;
+                    let itemsMerged;
+                    let remainingStack = requestEntry.count;
+                    const maxStack = await traderItemTemplate.getStackInfo();
+                    if (maxStack) {
+                        const existingStacks = await playerProfile.character.getInventoryItemsByTpl(traderItemTemplate._id);
+                        [itemsMerged, remainingStack] = await playerProfile.character.addItemToStack(existingStacks, maxStack, requestEntry.count);
+                        console.log(itemsMerged);
+                        console.log(remainingStack);
+                    }
+                    if (remainingStack) {
+                        itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), traderItem._tpl, preparedChildren, remainingStack);
+                    }
+                    if (itemsAdded || itemsMerged) {
+                        if (itemsAdded) {
+                            output.items.new = itemsAdded;
+                        }
+                        if (itemsMerged) {
+                            output.items.change = itemsMerged;
+                        }
                         for (const scheme of requestEntry.scheme_items) {
                             const itemsTaken = await playerProfile.character.removeItem(scheme.id, scheme.count);
                             if (itemsTaken) {
@@ -414,6 +432,11 @@ class GameController {
                     } else {
                         logger.logDebug(`Unable to add items`);
                     }
+                    await playerProfile.save();
+                    logger.logDebug(output);
+                    logger.logDebug(output.items);
+                    logger.logDebug(output.items.change[0].upd);
+                    return output;
                 } else if ( requestEntry.type === 'sell_to_trader') {
                     // TODO: LOAD TRADER PLAYER LOYALTY FOR COEF
                     let output = {
@@ -526,11 +549,11 @@ class GameController {
                     let item = await playerProfile.character.getInventoryItemByID(requestEntry.item);
                     if (item) {
                         if (typeof item.upd === "undefined") {
-                            item.upd = {}
+                            item.upd = {};
                         }
 
                         if (typeof item.upd.Togglable === "undefined") {
-                            item.upd.Togglable = {}
+                            item.upd.Togglable = {};
                         }
 
                         item.upd.Togglable.On = requestEntry.value;
