@@ -139,7 +139,7 @@ class Item extends BaseModel {
      * @returns false if it's not, size of stack otherwise
      */
     async getStackInfo() {
-        if (this._props.StackMaxSize && this._props.StackMaxSize !== 1)
+        if (this._props && this._props.StackMaxSize && this._props.StackMaxSize !== 1)
             return this._props.StackMaxSize;
         return false;
     }

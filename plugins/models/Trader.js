@@ -112,7 +112,7 @@ class Trader extends BaseModel {
         /**
          * BEWARE DEAR ADVENTURER, WHAT YOU ARE ABOUT TO SEE IS ONE HELL OF A SHITTY IMPLEMENTATION TO FILTER ITEMS
          * PLAYER CAN SELL TO TRADER.
-         * 
+         *
          * balls
          */
         for (const item of profile.character.Inventory.items) {
@@ -122,7 +122,11 @@ class Trader extends BaseModel {
             "5811ce772459770e9e5f9532", "5963866b86f7747bfa1c4462", "5963866286f7747bf429b572"].includes(item._tpl)) {
                 if (await this.itemInPurchaseCategories(item)) {
                     // Skip items that aren't part of a category buyable by trader (therapist don't buy bullets for example)
-                    const price = database.templates.PriceTable[item._tpl];
+                    let price = database.templates.PriceTable[item._tpl];
+                    let itemStackCount = 1;
+                    if (item.upd && item.upd.StackObjectsCount)
+                        itemStackCount = item.upd.StackObjectsCount;
+                    price = price * itemStackCount;
                     if (price) {
                         output[item._id] = [[{ _tpl: currency, count: price }]];
                     }
