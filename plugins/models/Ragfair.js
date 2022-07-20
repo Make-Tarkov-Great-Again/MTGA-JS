@@ -8,8 +8,7 @@ const {
     FastifyResponse, getCurrentTimestamp, generateItemId,
     logger, findChildren, writeFile, readParsed,
     getAbsolutePathFrom, stringify, fileExist,
-    templatesWithParent, childrenCategories, isCategory,
-    checkIfMoney } = require("../utilities");
+    templatesWithParent, childrenCategories, isCategory } = require("../utilities");
 
 class Ragfair extends BaseModel {
     constructor() {
@@ -20,8 +19,8 @@ class Ragfair extends BaseModel {
         this.offersCount = 0;
         this.selectedCategory = "";
         this.nextOfferId = 1;
-        //await this.initialize();
     }
+
 
     async initialize() {
         let data = {
@@ -41,86 +40,79 @@ class Ragfair extends BaseModel {
     }
 
     /**
-     * ragfair/find has a bunch of different parameters that are used to generate the offers
-     * yee-fucking-haw
+     * EFT always defaults to `weapon category` so that's all that should show first
+     * I think instead what should happen is that we load `nothing` and let the user
+     * filter based on the thing they want to see
      * @param {*} request 
      * @returns 
      */
-    static async generateOffersBasedOnRequest(request = null) {
+    static async generateOffersBasedOnRequest(request) {
         const { database } = require("../../app");
         const ragfair = cloneDeep(database.ragfair);
 
-        switch (true) {
-            case request.neededSearchId !== "":
+
+        // only way to refresh page after removing a filter
+        if (request.updateOfferCount !== false) {
+            const list = await this.investigateHandbookId(request.handbookId);
+            ragfair.categories = await this.formatCategories(
+                ragfair.categories,
+                ragfair.offers,
+                list
+            );
+            ragfair.offers = await this.reduceOffersBasedOnCategories(
+                ragfair.offers,
+                ragfair.categories
+            );
+        }
+
+        // handbookId is main request to get the initial offers
+        if (request.handbookId != null) {
+            const list = await this.investigateHandbookId(request.handbookId);
+            ragfair.categories = await this.formatCategories(
+                ragfair.categories,
+                ragfair.offers,
+                list
+            );
+            ragfair.offers = await this.reduceOffersBasedOnCategories(
+                ragfair.offers,
+                ragfair.categories
+            );
+            if (request.neededSearchId != null) {
                 ragfair.categories = await this.formatCategories(
                     ragfair.categories,
                     ragfair.offers,
                     await this.getNeededSearch(request.neededSearchId)
                 );
-
-                ragfair.offers = await this.reduceOffersBasedOnCategories(
-                    ragfair.offers,
-                    ragfair.categories
-                );
-                break;
-
-            case request.linkedSearchId == "" && request.updateOfferCount === true:
-                break;
-
-            case request.buildCount !== 0: // i still have no idea wtf this is - King
-                let filter = [];
-                filter.push(Object.keys(request.buildCount));
-                ragfair.categories = await this.formatCategories(
-                    ragfair.categories,
-                    ragfair.offers,
-                    filter
-                );
-                break; //unsure if we need to continue the switch after this
-
-            case request.linkedSearchId !== "":
+            } else if (request.linkedSearchId != null) {
                 ragfair.categories = await this.formatCategories(
                     ragfair.categories,
                     ragfair.offers,
                     await this.getLinkedSearch(request.linkedSearchId)
                 );
-
-                if (request.handbookId !== "") {
-                    const list = await this.investigateHandbookId(request.handbookId);
-                    ragfair.categories = await this.formatCategories(
-                        ragfair.categories,
-                        ragfair.offers,
-                        list
-                    );
-                }
-
-                ragfair.offers = await this.reduceOffersBasedOnCategories(
-                    ragfair.offers,
-                    ragfair.categories
-                )
-                break;
-
-            case request.linkedSearchId == "" && request.handbookId !== "":
-                ragfair.categories = await this.formatCategories(
-                    ragfair.categories,
-                    ragfair.offers,
-                    await this.investigateHandbookId(request.handbookId)
-                );
-
-                ragfair.offers = await this.reduceOffersBasedOnCategories(
-                    ragfair.offers,
-                    ragfair.categories
-                )
-                break;
+            }
         }
 
+        if (request.linkedSearchId != null) {
+            ragfair.categories = await this.formatCategories(
+                ragfair.categories,
+                ragfair.offers,
+                await this.getLinkedSearch(request.linkedSearchId)
+            );
+        } else if (request.neededSearchId != null) {
+            ragfair.categories = await this.formatCategories(
+                ragfair.categories,
+                ragfair.offers,
+                await this.getNeededSearch(request.neededSearchId)
+            );
+        }
+
+        /*
         ragfair.offers = await this.reduceOffersBasedOnFilterRequest(
             ragfair.offers,
             request
         );
-        ragfair.categories = await this.formatCategories(
-            ragfair.categories,
-            ragfair.offers
-        );
+        */
+
         ragfair.offers = await this.sortOffers(
             request,
             ragfair.offers.slice(
@@ -144,46 +136,60 @@ class Ragfair extends BaseModel {
     }
 
     static async reduceOffersBasedOnFilterRequest(offers, request) {
+        //let offers = cloneDeep(offers); // Deep copy offers array    
+        const currentTime = getCurrentTimestamp(); // Get current time, in seconds since epoch
+        const currencies = {
+            1: "5449016a4bdc2d6f028b456f", // RUB
+            2: "5696686a4bdc2da3298b456a", // USD
+            3: "569668774bdc2da2298b4568"  // EUR
+        };
+
         for (let offerIndex = offers.length - 1; offerIndex >= 0; offerIndex--) {
             const thisOfferObj = offers[offerIndex];
 
-            if (request.removeBartering && !checkIfMoney(thisOfferObj.requirements[0]._tpl)) { // If removeBartering is true and this item is sold for something other than money, remove it 
+            // Exclude offers if they meet any of these conditions
+            if ((request.currency != 0
+                && currencies[request.currency] != thisOfferObj.requirements[0]._tpl)  // If the request specifies a currency which doesn't match the currency for this offer
+                || (request.priceFrom > 0
+                    && thisOfferObj.requirements[0].count < request.priceFrom) // If this item's price is less than the requested priceFrom
+                || (request.priceTo > 0
+                    && thisOfferObj.requirements[0].count > request.priceTo) // If this item's price is greater than the requested priceTo
+                || (request.quantityFrom > 0
+                    && typeof thisOfferObj.items[0].upd?.StackObjectsCount != 'undefined'
+                    && thisOfferObj.items[0].upd.StackObjectsCount < request.quantityFrom) // If this item's quantity is less than the requested quantityFrom
+                || (request.quantityTo > 0
+                    && typeof thisOfferObj.items[0].upd?.StackObjectsCount != 'undefined'
+                    && thisOfferObj.items[0].upd.StackObjectsCount > request.quantityTo) // If this item's quantity is greater than the requested quantityFrom
+                || (request.conditionFrom > 0
+                    && typeof thisOfferObj.items[0].upd?.Repairable?.Durability != 'undefined'
+                    && thisOfferObj.items[0].upd.Repairable.Durability < request.conditionFrom) // If this item's condition is less than the requested conditionFrom
+                || (request.conditionTo < 100
+                    && typeof thisOfferObj.items[0].upd?.Repairable?.Durability != 'undefined'
+                    && thisOfferObj.items[0].upd.Repairable.Durability > request.conditionTo) // If this item's condition is greater than the requested conditionTo
+                || (request.oneHourExpiration
+                    && currentTime - thisOfferObj.endTime > 3600) // If oneHourExpiration is true and the offer has more than one hour left
+                || (request.removeBartering
+                    && !this.checkIfMoney(thisOfferObj.requirements[0]._tpl)) // If removeBartering is true and this item is sold for something other than money
+                || (request.offerOwnerType == 1
+                    && (thisOfferObj.user.memberType == 0
+                        || thisOfferObj.user.memberType == 2)) // If filtering by trader and the offer is from a player
+                || (request.offerOwnerType == 2
+                    && thisOfferObj.user.memberType == 4) // If filtering by players and the offer is from a trader
+            ) {
                 offers.splice(offerIndex, 1); // Remove this offer
                 continue;
-            } else if (request.offerOwnerType != 0 && thisOfferObj.user.memberType == 4) { // If filtering out some kind of offer sources? Perhaps players or traders?
-                offers.splice(offerIndex, 1); // Remove this offer
-                continue;
-            } else if (request.currency != 0) { // If the request specifies a currency
-                const currencies = {
-                    1: "5449016a4bdc2d6f028b456f", // RUB
-                    2: "5696686a4bdc2da3298b456a", // USD
-                    3: "569668774bdc2da2298b4568" // EUR
-                };
-
-                if (currencies[request.currency] != thisOfferObj.requirements[0]._tpl) { // If the currency required for this offer doesn't match the currency specified in the request
-                    offers.splice(offerIndex, 1); // Remove this offer
-                    continue;
-                }
-            } else if (request.onlyFunctional) {
-                // do stuff
-            } else if (request.oneHourExpiration) {
-                // do stuff
-            } else if (request.priceFrom) {
-                // do stuff
-            } else if (request.priceTo) {
-                // do stuff
-            } else if (request.quantityFrom) {
-                // do stuff
-            } else if (request.quantityTo) {
-                // do stuff
-            } else if (request.conditionFrom) {
-                // do stuff
-            } else if (request.conditionTo) {
-                // do stuff
             }
         }
 
         return offers;
+    }
+
+    static checkIfMoney(input) {
+        return [
+            "5449016a4bdc2d6f028b456f", // RUB
+            "5696686a4bdc2da3298b456a", // USD
+            "569668774bdc2da2298b4568"  // EUR
+        ].includes(input); // Return true if the input ID matches anything in this array, false if it doesn't
     }
 
     static async reduceOffersBasedOnFilterRequest_original(offers, request) {
