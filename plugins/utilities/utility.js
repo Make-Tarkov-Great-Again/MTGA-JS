@@ -126,15 +126,6 @@ const childrenCategories = async (x) => {
     return x in TplLookup.categories.byParent ? TplLookup.categories.byParent[x] : [];
 }
 
-const checkIfMoney = (x) => {
-    const currency = [
-        "569668774bdc2da2298b4568",
-        "5696686a4bdc2da3298b456a",
-        "5449016a4bdc2d6f028b456f"
-    ];
-    return currency.findIndex((money) => money === x) > -1;
-}
-
 // This bullshit handle both currency & barters
 // since I'm a lazy cunt I only did currency for now :)
 const payTrade = async (playerInventory, body, currency = null) => {
@@ -229,6 +220,5 @@ module.exports = {
     generateItemId,
     templatesWithParent,
     isCategory,
-    childrenCategories,
-    checkIfMoney
+    childrenCategories
 };
