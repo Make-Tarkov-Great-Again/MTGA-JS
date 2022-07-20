@@ -1,4 +1,3 @@
-const { forEach } = require("lodash");
 const { database } = require("../../../app");
 const { Profile, Language, Account, Edition, Customization, Storage, Character, Health, Weaponbuild, Quest, Locale, Trader, Item } = require("../../models");
 const { generateUniqueId, getCurrentTimestamp, logger, FastifyResponse, writeFile, stringify, readParsed, payTrade } = require("../../utilities");
@@ -296,7 +295,7 @@ class GameController {
             // display error
         }
 
-        logger.logDebug("Examin request:");
+        logger.logDebug("Examine request:");
         logger.logDebug(moveAction);
 
         let templateItem;
