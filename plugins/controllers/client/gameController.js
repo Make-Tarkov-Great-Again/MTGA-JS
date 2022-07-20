@@ -434,24 +434,24 @@ class GameController {
         } else if ( moveAction.type === 'sell_to_trader') {
             // TODO: LOAD TRADER PLAYER LOYALTY FOR COEF
             let output = {
-                items: { 
+                items: {
                     new: [],
                     change: [],
                     del: []
                 }
             };
-            let itemPrice;
+            let itemPrice = 0;
             for (const itemSelling of moveAction.items) {
                 logger.logDebug(itemSelling);
                 const item =  await playerProfile.character.getInventoryItemByID(itemSelling.id);
-                itemPrice = database.templates.PriceTable[item._tpl];
-                itemPrice = itemPrice * itemSelling.count;
+                const currentItemPrice = database.templates.PriceTable[item._tpl];
+                itemPrice += currentItemPrice * itemSelling.count;
                 await playerProfile.character.removeItems([item]);
                 output.items.del.push({_id: item._id});
             }
                 // Merge existing item to reach max stack
-            let itemsAdded = []
-            let itemsMerged = []
+            let itemsAdded = [];
+            let itemsMerged = [];
             let remainingStack = itemPrice;
             const currency = await trader.getBaseCurrency();
             const itemModel = await Item.get(currency);
