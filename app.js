@@ -22,17 +22,11 @@ const app = require('fastify')({
                 return {
                     method: request.method,
                     url: request.url,
-                    headers: request.headers,
-                    params: request.params,
-                    body: request.body,
-                    query: request.query
-                    /*
-                    hostname: request.hostname,
-                    remoteAddress: request.ip,
-                    remotePort: request.socket.remotePort,
-                    routerMethod: request.routerMethod,
-                    routerPath: request.routerPath
-                    */
+                    "content-length": request.headers['content-length'],
+                    accept: request.headers["accept"],
+                    "app-version": request.headers['app-version'],
+                    cookie: request.headers['cookie'],
+                    body: request.body
                 };
             }
         }

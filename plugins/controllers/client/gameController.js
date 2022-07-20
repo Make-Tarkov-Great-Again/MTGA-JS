@@ -71,13 +71,6 @@ class GameController {
             reportAvailable: true,
             twitchEventMember: false,
         };
-        /* 
-        nickname: "user",
-        token: sessionID,
-        queued: false,
-        banTime: 0,
-        hash: "BAN0",
-        */
 
         await FastifyResponse.zlibJsonReply
             (

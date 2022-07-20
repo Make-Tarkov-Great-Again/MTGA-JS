@@ -90,9 +90,7 @@ class Ragfair extends BaseModel {
                     await this.getLinkedSearch(request.linkedSearchId)
                 );
             }
-        }
-
-        if (request.linkedSearchId != null) {
+        } else if (request.linkedSearchId != null) {
             ragfair.categories = await this.formatCategories(
                 ragfair.categories,
                 ragfair.offers,
@@ -106,12 +104,10 @@ class Ragfair extends BaseModel {
             );
         }
 
-        /*
         ragfair.offers = await this.reduceOffersBasedOnFilterRequest(
             ragfair.offers,
             request
         );
-        */
 
         ragfair.offers = await this.sortOffers(
             request,
@@ -192,52 +188,6 @@ class Ragfair extends BaseModel {
         ].includes(input); // Return true if the input ID matches anything in this array, false if it doesn't
     }
 
-    static async reduceOffersBasedOnFilterRequest_original(offers, request) {
-        let filtered = [];
-        switch (true) {
-            case request.removeBartering === true:
-                offers.filter(function (offer) {
-                    if (checkIfMoney(offer.items[0]._tpl) === false) filtered.push(offer)
-                })
-
-            case request.offerOwnerType !== 0:
-                offers.filter(function (offer) {
-                    if (offer.user.memberType !== 4) filtered.push(offer);
-                })
-
-            case request.currency !== 0:
-                const currency = {
-                    1: "5449016a4bdc2d6f028b456f", // RUB
-                    2: "5696686a4bdc2da3298b456a", // USD
-                    3: "569668774bdc2da2298b4568" // EUR
-                }
-                console.log(request.currency)
-                offers.filter(function (offer) {
-                    if (offer.requirements._tpl == currency[request.currency]) filtered.push(offer);
-                });
-
-            case !!request.onlyFunctional: //boolean
-                logger.logWarning("[Show only functional items] is not implemented yet");
-                break;
-            case !!request.oneHourExpiration: //boolean
-                logger.logWarning("[Only show items expiring in less than 1 hour] is not implemented yet");
-                break;
-            case request.priceFrom !== 0:
-            case request.priceTo !== 0:
-                logger.logWarning("[Approx. price from] is not implemented yet");
-                break;
-            case request.quantityFrom !== 0:
-            case request.quantityTo !== 0:
-                logger.logWarning("[Quantity from] is not implemented yet");
-                break;
-            case request.conditionFrom !== 0:
-            case request.conditionTo !== 100:
-                logger.logWarning("[Condition from] is not implemented yet");
-                break;
-        }
-        return filtered;
-    }
-
     static async getLinkedSearch(searchId) {
         const item = await Item.get(searchId);
         const linked = new Set(
@@ -275,6 +225,7 @@ class Ragfair extends BaseModel {
      */
     static async checkFilters(item, slot, id = null) {
         if (id) {
+            //console.log(`Slot: ${slot} in item: ${item._id} does not exist?`);
             if (slot in item._props && item._props[slot].length) {
                 for (let sub of item._props[slot]) {
                     if ("_props" in sub && "filters" in sub._props) {
@@ -289,6 +240,7 @@ class Ragfair extends BaseModel {
             return false;
         } else {
             let result = new Set();
+            //console.log(`Slot: ${slot} in item: ${item._id} does not exist?`);
             if (slot in item._props && item._props[slot].length) {
                 for (let sub of item._props[slot]) {
                     if ("_props" in sub && "filters" in sub._props) {
