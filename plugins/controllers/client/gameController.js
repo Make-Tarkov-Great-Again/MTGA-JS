@@ -465,6 +465,14 @@ class GameController {
             output.items.change = itemsMerged;
             await playerProfile.save();
             return output;
+        } else if (moveAction.Action === 'RagFairBuyOffer') {
+            console.log(moveAction);
+            const ragfairOffers = database.ragfair.offers;
+            const item = ragfairOffers.find(function (i) {
+                if (i._id === moveAction.offers[0].id) return i;
+            });
+            if (item != null) logger.logError(`${moveAction.Action} not implemented fully, at least the item is found???? yay!`);
+            else logger.logError(`${moveAction.Action} item is not found???? yay!?????`);
         } else {
             logger.logError(`My brother in christ what are you trying to do ? ${moveAction.type} ? That shit is not done lmao pay me now.`);
         }
