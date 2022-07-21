@@ -1,5 +1,5 @@
 const { database } = require("../../../app");
-const { Profile, Language, Account, Edition, Customization, Storage, Character, Health, Weaponbuild, Quest, Locale, Trader, Item } = require("../../models");
+const { Profile, Language, Account, Edition, Customization, Storage, Character, Health, Weaponbuild, Quest, Locale, Trader, Item, HideoutArea } = require("../../models");
 const { generateUniqueId, getCurrentTimestamp, logger, FastifyResponse, writeFile, stringify, readParsed, payTrade } = require("../../utilities");
 
 
@@ -580,6 +580,113 @@ class GameController {
         if (playerProfile) {
             for (let id of moveAction.ids) {
                 playerProfile.character.Encyclopedia[id] = true;
+            }
+        }
+    }
+
+    static clientGameProfileHideoutUpgrade = async (moveAction = null, reply = null, sessionID = null) => {
+        logger.logDebug(moveAction);
+        const playerProfile = await Profile.get(sessionID);
+        if (playerProfile) {
+            const templateHideoutArea = await HideoutArea.getBy("type", moveAction.areaType);
+            let characterHideoutArea = await playerProfile.character.getHideoutAreaByType(moveAction.areaType);
+
+            if(!templateHideoutArea) {
+                logger.logError(`Upgrading HideoutArea failed. Unknown hideout area ${moveAction.areaType} in hideoutArea database.`);
+                return;
+            }
+
+            if(!characterHideoutArea) {
+                logger.logError(`Upgrading HideoutArea failed. Unknown hideout area ${moveAction.areaType} in character profile.`);
+                return;
+            }
+
+            //logger.logDebug(templateHideoutArea);
+            //logger.logDebug(characterHideoutArea);
+
+            const nextLevel = characterHideoutArea.level + 1;
+            if(typeof templateHideoutArea.stages[nextLevel] === "undefined") {
+                logger.logError(`Upgrading HideoutArea ${templateHideoutArea._id} for character ${playerProfile.character._id} failed. The level ${nextLevel} doesn't exist.`);
+                return;
+            }
+
+            let output = {
+                items: {
+                    new: [],
+                    change: [],
+                    del: []
+                }
+            };
+
+            let allItemsTaken = true;
+            for (const itemToTake of moveAction.items) {
+                const itemTaken = await playerProfile.character.removeItem(itemToTake.id, itemToTake.count);
+                if (itemTaken) {
+                    if (typeof itemTaken.changed !== "undefined") {
+                        output.items.change = output.items.change.concat(itemTaken.changed);
+                    }
+
+                    if (typeof itemTaken.removed !== "undefined") {
+                        output.items.del = output.items.del.concat(itemTaken.removed);
+                    }
+                } else {
+                    allItemsTaken = false;
+                }
+                /*await trader.reduceStock(requestEntry.item_id, requestEntry.count);*/
+            }
+
+            if(allItemsTaken) {
+                const templateHideoutAreaStage = templateHideoutArea.stages[nextLevel];
+                if(templateHideoutAreaStage.constructionTime > 0) {
+                    const currentTime = ~~ (Date.now() / 1000);
+                    characterHideoutArea.completeTime = ~~ (currentTime + templateHideoutAreaStage.constructionTime);
+                    characterHideoutArea.constructing = true;
+                }
+
+                //logger.logDebug(output);
+                return output;
+            } else {
+                // How do return custom error to client!!1!1!!!111!elf?
+                logger.logError(`Upgrading HideoutArea ${templateHideoutArea._id} for character ${playerProfile.character._id} failed. Unable to take required items.`);
+                return;
+            }
+        }
+    }
+
+    static clientGameProfileHideoutUpgradeComplete = async (moveAction = null, reply = null, sessionID = null) => {
+        const playerProfile = await Profile.get(sessionID);
+        if (playerProfile) {
+            const templateHideoutArea = await HideoutArea.getBy("type", moveAction.areaType);
+            let characterHideoutArea = await playerProfile.character.getHideoutAreaByType(moveAction.areaType);
+
+            if(!templateHideoutArea) {
+                logger.logError(`Upgrading HideoutArea failed. Unknown hideout area ${moveAction.areaType} in hideoutArea database.`);
+                return;
+            }
+
+            if(!characterHideoutArea) {
+                logger.logError(`Upgrading HideoutArea failed. Unknown hideout area ${moveAction.areaType} in character profile.`);
+                return;
+            }
+            const nextLevel = characterHideoutArea.level + 1;
+            const templateHideoutAreaStage = templateHideoutArea.stages[nextLevel];
+            if(typeof templateHideoutAreaStage === "undefined") {
+                logger.logError(`Upgrading HideoutArea ${templateHideoutArea._id} for character ${playerProfile.character._id} failed. The level ${nextLevel} doesn't exist.`);
+                return;
+            }
+
+            characterHideoutArea.level = nextLevel;
+            characterHideoutArea.completeTime = 0;
+            characterHideoutArea.constructing = false;
+
+            const hideoutBonuses = templateHideoutAreaStage.bonuses;
+
+            if(typeof hideoutBonuses !== "undefined" && hideoutBonuses.length > 0) {
+                for (const hideoutBonus of hideoutBonuses) {
+                    if(await playerProfile.character.applyHideoutBonus(hideoutBonus)) {
+
+                    }
+                }
             }
         }
     }
