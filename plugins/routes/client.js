@@ -135,11 +135,12 @@ module.exports = async function gameRoutes(app, _opts) {
                     actionResult = await GameController.clientGameProfileReadEncyclopedia(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
-               
+
                 // more, MOOOOOOOOOOOOOOORE
                 case "RagFairBuyOffer":
                 case "Insure":
                 case "RagFairAddOffer":
+                case "AddToWishList":
                 default:
                     logger.logWarning("Action " + action + " is not yet implemented.");
             }
