@@ -132,7 +132,6 @@ class Ragfair extends BaseModel {
     }
 
     static async reduceOffersBasedOnFilterRequest(offers, request) {
-        //let offers = cloneDeep(offers); // Deep copy offers array    
         const currentTime = getCurrentTimestamp(); // Get current time, in seconds since epoch
         const currencies = {
             1: "5449016a4bdc2d6f028b456f", // RUB
