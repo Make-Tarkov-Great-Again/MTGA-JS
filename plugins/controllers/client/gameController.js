@@ -117,12 +117,12 @@ class GameController {
         );
     };
 
-    static clientProfileSelect = async (request = null, reply = null) => {
+    static clientProfileSelect = async (request, reply) => {
         const sessionID = await FastifyResponse.getSessionID(request);
         const output = {
             "status": "ok",
             "notifier": FastifyResponse.getNotifier(sessionID),
-            "notifierServer": FastifyResponse.getNotifier(sessionID).notifierServer
+            "notifierServer": ""
         };
         return FastifyResponse.zlibJsonReply(
             reply,
