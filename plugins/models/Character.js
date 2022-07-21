@@ -206,10 +206,24 @@ class Character extends BaseModel {
             }
         }
 
-        for (const [index, item] of Object.entries(this.Inventory.items)) {
-            this.Inventory.items[index] = await UtilityModel.createModelFromParse("Item", item);
+        if(this.Inventory.items.length > 0) {
+            for (const [index, item] of Object.entries(this.Inventory.items)) {
+                this.Inventory.items[index] = await UtilityModel.createModelFromParse("Item", item);
+            }
         }
 
+        if(this.Hideout.Production.length > 0) {
+            for (const [index, production] of Object.entries(this.Hideout.Production)) {
+                this.Hideout.Production[index] = await UtilityModel.createModelFromParse("HideoutProduction", production);
+            }
+        }
+
+        if(this.Hideout.Areas.length > 0) {
+            for (const [index, area] of Object.entries(this.Hideout.Areas)) {
+                this.Hideout.Areas[index] = await UtilityModel.createModelFromParse("HideoutArea", area);
+            }
+        }
+        
         this.Inventory.equipment = await this.getInventoryItemByID(this.Inventory.equipment);
         this.Inventory.stash = await this.getInventoryItemByID(this.Inventory.stash);
         this.Inventory.sortingTable = await this.getInventoryItemByID(this.Inventory.sortingTable);
@@ -228,8 +242,22 @@ class Character extends BaseModel {
             }
         }
 
-        for (const [index, item] of Object.entries(dissolvedClone.Inventory.items)) {
-            dissolvedClone.Inventory.items[index] = Object.assign({}, item)
+        if(dissolvedClone.Inventory.items.length > 0) {
+            for (const [index, item] of Object.entries(dissolvedClone.Inventory.items)) {
+                dissolvedClone.Inventory.items[index] = Object.assign({}, item)
+            }
+        }
+
+        if(dissolvedClone.Hideout.Production.length > 0) {
+            for (const [index, production] of Object.entries(dissolvedClone.Hideout.Production)) {
+                dissolvedClone.Hideout.Production[index] = Object.assign({}, production)
+            }
+        }
+
+        if(dissolvedClone.Hideout.Areas.length > 0) {
+            for (const [index, area] of Object.entries(dissolvedClone.Hideout.Areas)) {
+                dissolvedClone.Hideout.Areas[index] = Object.assign({}, area)
+            }
         }
 
         dissolvedClone.Inventory.equipment = this.Inventory.equipment._id;
@@ -674,6 +702,21 @@ class Character extends BaseModel {
         return removedItems;
     }
 
+    // Hideout //
+
+    async getHideoutAreaByType(areaTypeId) {
+        return this.Hideout.Areas.find(area => area.type === areaTypeId);
+    }
+
+    async applyHideoutBonus(bonus) {
+        switch(bonus.type) {
+            default:
+                logger.logError(`Unable to add hideout bonus ${bonus.type} to character ${this._id}. Bonus not yet implemented.` )
+                logger.logDebug(bonus);
+        }
+
+        return false;
+    }
 
     // Examine //
 

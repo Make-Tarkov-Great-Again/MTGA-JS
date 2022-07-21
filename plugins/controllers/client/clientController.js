@@ -105,6 +105,7 @@ class ClientController {
     }
 
     static clientHideoutAreas = async (_request = null, reply = null) => {
+        //logger.logDebug(stringify(FastifyResponse.applyBody(await HideoutArea.getAllWithoutKeys())));
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(await HideoutArea.getAllWithoutKeys())
@@ -112,6 +113,7 @@ class ClientController {
     };
 
     static clientHideoutSettings = async (_request = null, reply = null) => {
+        //logger.logDebug(stringify(FastifyResponse.applyBody(database.core.hideoutSettings)));
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(database.core.hideoutSettings)
@@ -119,6 +121,7 @@ class ClientController {
     };
 
     static clientHideoutProductionRecipes = async (_request = null, reply = null) => {
+        //logger.logDebug(stringify(FastifyResponse.applyBody(await HideoutProduction.getAllWithoutKeys())));
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(await HideoutProduction.getAllWithoutKeys())
@@ -126,6 +129,7 @@ class ClientController {
     };
 
     static clientHideoutProductionScavcaseRecipes = async (_request = null, reply = null) => {
+        //logger.logDebug(stringify(FastifyResponse.applyBody(await HideoutScavcase.getAllWithoutKeys())));
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(await HideoutScavcase.getAllWithoutKeys())

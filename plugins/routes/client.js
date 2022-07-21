@@ -79,63 +79,73 @@ module.exports = async function gameRoutes(app, _opts) {
                 case "QuestAccept":
                     actionResult = await GameController.clientGameProfileAcceptQuest(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
+                break;
 
                 case "Move":
                     actionResult = await GameController.clientGameProfileMoveItem(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
+                break;
 
                 case "Examine":
                     actionResult = await GameController.clientGameProfileExamine(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
+                break;
                 
                 case "RagFairBuyOffer":
                 case "TradingConfirm":
                     actionResult = await GameController.clientGameProfileTradingConfirm(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
+                break;
 
                 case "Split":
                     actionResult = await GameController.clientGameProfileSplitItem(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
+                break;
 
                 case "Merge":
                     actionResult = await GameController.clientGameProfileMergeItem(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
+                break;
 
                 case "Remove":
                     actionResult = await GameController.clientGameProfileRemoveItem(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
+                break;
 
                 case "Fold":
                     actionResult = await GameController.clientGameProfileFoldItem(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
+                break;
 
                 case "Tag":
                     actionResult = await GameController.clientGameProfileTagItem(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
+                break;
 
                 case "Toggle":
                     actionResult = await GameController.clientGameProfileToggleItem(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
+                break;
 
                 case "Bind":
                     actionResult = await GameController.clientGameProfileBindItem(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
+                break;
 
                 case "ReadEncyclopedia":
                     actionResult = await GameController.clientGameProfileReadEncyclopedia(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
+                break;
+
+                case "HideoutUpgrade":
+                    actionResult = await GameController.clientGameProfileHideoutUpgrade(moveAction, reply, sessionID);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                break;
+
+                case "HideoutUpgradeComplete":
+                    actionResult = await GameController.clientGameProfileHideoutUpgradeComplete(moveAction, reply, sessionID);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                break;
 
                 // more, MOOOOOOOOOOOOOOORE
                 case "Insure":
