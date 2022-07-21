@@ -165,6 +165,8 @@ class DatabaseLoader {
         const database = require('./database');
         database.ragfair = new Ragfair;
         database.ragfair = await database.ragfair.initialize();
+        //writeFile(`./ragfair.json`, JSON.stringify(database.ragfair, null, 2));
+
     }
 
     // Load Customization 

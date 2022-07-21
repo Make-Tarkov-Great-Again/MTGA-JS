@@ -174,7 +174,7 @@ class Ragfair extends BaseModel {
             ) {
                 offers.splice(offerIndex, 1); // Remove this offer
                 continue;
-            }
+            } else continue;
         }
 
         return offers;
