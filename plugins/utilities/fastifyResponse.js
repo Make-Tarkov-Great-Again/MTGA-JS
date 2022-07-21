@@ -16,11 +16,11 @@ class FastifyResponse {
 
     static getNotifier(sessionID) {
         return {
-            "server": this.getBackendURL(),
+            "server": this.getWebSocketURL(),
             "channel_id": sessionID,
-            "url": `${this.getBackendURL()}/notifierServer/get/${sessionID}`,
-            "notifierServer": `${this.getBackendURL()}/notifierServer/get/${sessionID}`,
-            "ws": `${this.getWebSocketURL()}/notifierServer/getwebsocket/${sessionID}`
+            "url": ``,
+            "notifierServer": `${this.getWebSocketURL()}/push/notifier/get/${sessionID}`,
+            "ws": `${this.getWebSocketURL()}/push/notifier/getwebsocket/${sessionID}`
         }
     }
 

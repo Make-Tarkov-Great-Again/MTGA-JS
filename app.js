@@ -101,8 +101,6 @@ app.addContentTypeParser('*', (req, payload, done) => {
 */
 app.register(require('./plugins/register.js'));
 
-
-
 /**
 * Start the server
 */
