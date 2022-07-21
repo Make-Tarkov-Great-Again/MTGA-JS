@@ -313,6 +313,12 @@ class GameController {
                 logger.logError("Examine Request failed: Unable to get trader data.");
                 return false;
             }
+        } else if (moveAction.fromOwner && moveAction.fromOwner.type === "RagFair") {
+            const ragfairOffers = database.ragfair.offers;
+            const item = ragfairOffers.find(function (i) {
+                if (i._id === moveAction.fromOwner.id) return i;
+            });
+            templateItem = await Item.get(item.items[0]._tpl);
         } else {
             const item = await playerProfile.character.getInventoryItemByID(moveAction.item);
             if (item) {
@@ -423,7 +429,7 @@ class GameController {
             logger.logDebug(output.items);
             logger.logDebug(output.items.change[0].upd);
             return output;
-        } else if ( moveAction.type === 'sell_to_trader') {
+        } else if (moveAction.type === 'sell_to_trader') {
             // TODO: LOAD TRADER PLAYER LOYALTY FOR COEF
             let output = {
                 items: {
@@ -435,13 +441,13 @@ class GameController {
             let itemPrice = 0;
             for (const itemSelling of moveAction.items) {
                 logger.logDebug(itemSelling);
-                const item =  await playerProfile.character.getInventoryItemByID(itemSelling.id);
+                const item = await playerProfile.character.getInventoryItemByID(itemSelling.id);
                 const currentItemPrice = database.templates.PriceTable[item._tpl];
                 itemPrice += currentItemPrice * itemSelling.count;
                 await playerProfile.character.removeItems([item]);
-                output.items.del.push({_id: item._id});
+                output.items.del.push({ _id: item._id });
             }
-                // Merge existing item to reach max stack
+            // Merge existing item to reach max stack
             let itemsAdded = [];
             let itemsMerged = [];
             let remainingStack = itemPrice;
@@ -553,7 +559,7 @@ class GameController {
         const playerProfile = await Profile.get(sessionID);
         if (playerProfile) {
             for (let index in playerProfile.character.Inventory.fastPanel) {
-                if(playerProfile.character.Inventory.fastPanel[index] === moveAction.item) {
+                if (playerProfile.character.Inventory.fastPanel[index] === moveAction.item) {
                     playerProfile.character.Inventory.fastPanel[index] = "";
                 }
             }
