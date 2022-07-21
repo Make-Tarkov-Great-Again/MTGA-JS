@@ -1,3 +1,4 @@
+const { default: stringify } = require("fast-safe-stringify");
 const { database } = require("../../app");
 const cloneDeep = require("rfdc")();
 const { ClientController, GameController, MenuController, TradingController, FriendController } = require("../controllers/client");
@@ -362,5 +363,22 @@ module.exports = async function gameRoutes(app, _opts) {
             FastifyResponse.applyBody(await Ragfair.generateOffersBasedOnRequest(request.body))
         );
     });
+
+    // Client Raid Routes //
+    app.post(`/client/raid/person/killed/showMessage`, async (request, reply) => {
+        return logger.logDebug("Raid person killed show message not implemented yet");
+    });
+    app.post(`/client/raid/createFriendlyAI`, async (request, reply) => {
+        return logger.logDebug("Raid create friendly AI not implemented yet");
+    });
+
+    app.post(`/client/raid/bots/getNewProfile`, async (request, reply) => {
+        return logger.logDebug("Raid bots get new profile not implemented yet");
+    });
+
+    app.post(`/client/raid/person/lootingContainer`, async (request, reply) => {
+        return stringify("")
+    });
+    
 
 }
