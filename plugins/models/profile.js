@@ -327,10 +327,6 @@ class Profile extends BaseModel {
         const mergedData = Object.assign({}, outputData.profileChanges[this.character._id], profileChanges);
         outputData.profileChanges[this.character._id] = mergedData;
     }
-
-    async removeItemFromProfile(itemId) {
-        const removeIds = await findAndReturnChildrenByItems(this.getPmc(), itemId);
-    }
 }
 
 module.exports.Profile = Profile;
