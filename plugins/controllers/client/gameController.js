@@ -459,11 +459,14 @@ class GameController {
                 [itemsMerged, remainingStack] = await playerProfile.character.addItemToStack(existingStacks, maxStack, remainingStack);
             }
             if (remainingStack) {
-                itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), itemModel, false, remainingStack);
+                itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), currency, false, remainingStack);
             }
             output.items.new = itemsAdded;
             output.items.change = itemsMerged;
-            await playerProfile.save();
+            logger.logDebug(output)
+            logger.logDebug(output.items.change)
+            logger.logDebug(output.items.new)
+            
             return output;
         } else if (moveAction.Action === 'RagFairBuyOffer') {
             console.log(moveAction);
