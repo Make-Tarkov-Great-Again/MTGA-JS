@@ -147,12 +147,17 @@ module.exports = async function gameRoutes(app, _opts) {
                 case "HideoutUpgrade":
                     actionResult = await GameController.clientGameProfileHideoutUpgrade(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                break;
+                    break;
 
                 case "HideoutUpgradeComplete":
                     actionResult = await GameController.clientGameProfileHideoutUpgradeComplete(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                break;
+                    break;
+
+                case "HideoutPutItemsInAreaSlots":
+                    actionResult = await GameController.clientGameProfileHideoutAreaSlot(moveAction, reply, sessionID);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
 
                 // more, MOOOOOOOOOOOOOOORE
                 case "Insure":
