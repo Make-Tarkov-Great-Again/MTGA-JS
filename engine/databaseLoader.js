@@ -4,7 +4,7 @@ const { UtilityModel } = require('../plugins/models/UtilityModel');
 const {
     logger, readParsed, fileExist, stringify,
     writeFile, getDirectoriesFrom, createDirectory,
-    getFilesFrom, generateItemId } = require('./../plugins/utilities/');
+    getFilesFrom, generateItemId, clearString, getAbsolutePathFrom } = require('./../plugins/utilities/');
 
 
 class DatabaseLoader {
@@ -29,6 +29,7 @@ class DatabaseLoader {
         await this.loadQuests();
         await this.loadPresets();
         await this.loadRagfair();
+        await this.formatAndWriteNewLocationDataToDisk();
     }
 
     /**
@@ -154,6 +155,93 @@ class DatabaseLoader {
         }
     }
 
+    static async changeFileExtensionOnTextAssetLocations() {
+        const filenames = getFilesFrom('./TextAsset');
+        let files = [];
+        for (let file of filenames) {
+            /**
+             * In this I need to compare if there are new files, compare their modified date and if they are different,
+             * then I need to update the file.
+             */
+            if (file.endsWith('.json')) continue;
+            const path = getAbsolutePathFrom(`./TextAsset/${file}`);
+
+            let txtStats = fs.statSync(path);
+            txtStats = txtStats.mtimeMs;
+            let jsonStats;
+            const check = file.replace('.txt', '.json');
+            if (fileExist(`./TextAsset/${check}`)) {
+                jsonStats = fs.statSync(`./TextAsset/${check}`);
+                jsonStats = jsonStats.mtimeMs;
+            }
+            if (jsonStats != null && jsonStats < txtStats) {
+                let changeFileExtension = path.replace('.txt', '.json')
+                fs.rename(path, changeFileExtension, (err) => {
+                    if (err) {
+                        logger.logError(`Error renaming ${path} to ${changeFileExtension}`);
+                    }
+                });
+                files.push(check)
+            } else {
+                continue;
+            }
+        }
+        return files;
+    }
+
+    static async formatAndWriteNewLocationDataToDisk() {
+        logger.logWarning("Loading new locations into proper format...");
+
+        const files = await this.changeFileExtensionOnTextAssetLocations();
+        if (files.length > 0) {
+            for (let file of files) {
+                const path = getAbsolutePathFrom(`./TextAsset/${file}`);
+                if (file.includes("hideout") || file.includes("develop")) continue;
+
+                let directoryName;
+                if (!file.includes("factory4")) {
+                    directoryName = file.replace('.json', '').replace(/\d+/g, '').toLowerCase();
+                } else {
+                    directoryName = file.replace('.json', '').replace(/\d+/g, '').replace('factory', 'factory4').toLowerCase();
+                }
+
+                let locationsDirectory;
+                if (fileExist(`./database/locationsNew`)) {
+                    locationsDirectory = `./database/locationsNew/`;
+                } else {
+                    fs.mkdirSync(`./database/locationsNew`);
+                    locationsDirectory = `./database/locationsNew/`;
+                }
+
+                let locationPath;
+                if (!fileExist(`./database/locationsNew/${directoryName}`)) {
+                    locationPath = `${locationsDirectory}${directoryName}`;
+                    fs.mkdirSync(locationPath);
+                } else {
+                    locationPath = `${locationsDirectory}${directoryName}`;
+                }
+
+                let uppercase;
+                let filename;
+                if (file.includes("RezervBase")) {
+                    uppercase = "RezervBase";
+                    filename = file.replace(directoryName, '').replace(".json", "").replace(uppercase, "");
+                } else {
+                    uppercase = directoryName.charAt(0).toUpperCase() + directoryName.slice(1);
+                    filename = file.replace(directoryName, '').replace(".json", "").replace(uppercase, "");
+                }
+
+                if (fileExist(`${locationPath}/${filename}.json`)) {
+                    const map = readParsed(path);
+                    let location = map
+                    if (typeof map.Location != "undefined") { location = map.Location; }
+                    console.log(`${directoryName}${filename}`);
+                    writeFile(locationPath + `/${filename}.json`, stringify(location));
+                }
+            }
+        }
+    }
+
     static async loadPresets() {
         const presets = await Preset.initialize()
         for (const [index, preset] of Object.entries(presets)) {
@@ -165,7 +253,7 @@ class DatabaseLoader {
         const database = require('./database');
         database.ragfair = new Ragfair;
         database.ragfair = await database.ragfair.initialize();
-        //writeFile(`./ragfair.json`, JSON.stringify(database.ragfair, null, 2));
+        //writeFile(`./ragfair.json`, stringify(database.ragfair));
 
     }
 
