@@ -432,7 +432,7 @@ class GameController {
                 const item = await playerProfile.character.getInventoryItemByID(itemSelling.id);
                 const currentItemPrice = database.templates.PriceTable[item._tpl];
                 itemPrice += currentItemPrice * itemSelling.count;
-                await playerProfile.character.removeItem(item);
+                await playerProfile.character.removeItem(item._id);
                 output.items.del.push({ _id: item._id });
             }
             // Merge existing item to reach max stack
