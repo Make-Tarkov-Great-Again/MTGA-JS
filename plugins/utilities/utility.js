@@ -1,5 +1,6 @@
 const logger = require('./logger');
 const ObjectID = require("bson-objectid");
+const fs = require('fs');
 
 
 /** Generate Unique ID used in the server by using nanoid
@@ -24,6 +25,16 @@ const generateItemId = async () => {
 const isUndefined = async (value) => {
     return typeof value === 'undefined';
 }
+
+/**
+ * Get files updated date
+ * @param {*} path 
+ * @returns 
+ */
+const getFileUpdatedDate = (path) => {
+    const stats = fs.statSync(path)
+    return stats.mtimeMs;
+  }
 
 const getIsoDateString = async (useFormatted = false) => {
     if (useFormatted) {
@@ -220,5 +231,6 @@ module.exports = {
     generateItemId,
     templatesWithParent,
     isCategory,
-    childrenCategories
+    childrenCategories,
+    getFileUpdatedDate
 };

@@ -4,7 +4,8 @@ const { UtilityModel } = require('../plugins/models/UtilityModel');
 const {
     logger, readParsed, fileExist, stringify,
     writeFile, getDirectoriesFrom, createDirectory,
-    getFilesFrom, generateItemId, clearString, getAbsolutePathFrom } = require('./../plugins/utilities/');
+    getFilesFrom, generateItemId, clearString, getAbsolutePathFrom,
+    getFileUpdatedDate } = require('./../plugins/utilities/');
 
 
 class DatabaseLoader {
@@ -20,7 +21,7 @@ class DatabaseLoader {
             this.loadTemplates(),
             this.loadTraders(),
             this.loadCustomization(),
-            this.loadLocations(),
+            //this.loadLocations(), need help on this @budey
             // Model Data //
         ]);
         await this.loadEditions();
@@ -29,7 +30,6 @@ class DatabaseLoader {
         await this.loadQuests();
         await this.loadPresets();
         await this.loadRagfair();
-        await this.formatAndWriteNewLocationDataToDisk();
     }
 
     /**
@@ -50,6 +50,13 @@ class DatabaseLoader {
             location_base: readParsed(`./database/configs/locations.json`),
             hideoutSettings: readParsed(`./database/hideout/settings.json`).data
         };
+
+        const directoryTimers = database.core.serverConfig.directoryTimers
+        database.core.serverConfig.directoryTimers = await DatabaseUtils.checkDirectoryDates(directoryTimers);
+        const check = await DatabaseUtils.checkDirectoryDates(directoryTimers, true)
+        if (check === true) {
+            writeFile("./database/configs/server.json", stringify(serverConfig));
+        }
     }
 
     /**
@@ -106,40 +113,34 @@ class DatabaseLoader {
             "Categories": templatesData.Categories,
             "Items": templatesData.Items,
             "PriceTable": await Item.generatePriceTable(templatesData.Items),
-            "TplLookup": await this.generateTplLookup(templatesData.Items, templatesData.Categories)
+            "TplLookup": await DatabaseUtils.generateTplLookup(templatesData.Items, templatesData.Categories)
         };
-    }
-
-    static async generateTplLookup(items, categories) {
-        const lookup = {
-            items: {
-                byId: {},
-                byParent: {},
-            },
-            categories: {
-                byId: {},
-                byParent: {},
-            },
-        };
-
-        for (let x of items) {
-            lookup.items.byId[x.Id] = x.Price;
-            lookup.items.byParent[x.ParentId] || (lookup.items.byParent[x.ParentId] = []);
-            lookup.items.byParent[x.ParentId].push(x.Id);
-        }
-
-        for (let x of categories) {
-            lookup.categories.byId[x.Id] = x.ParentId ? x.ParentId : null;
-            if (x.ParentId) {
-                // root as no parent
-                lookup.categories.byParent[x.ParentId] || (lookup.categories.byParent[x.ParentId] = []);
-                lookup.categories.byParent[x.ParentId].push(x.Id);
-            }
-        }
-        return lookup;
     }
 
     static async loadLocations() {
+        /* bude i need this commented out portion adjusted to the new locations system
+        
+        const { database } = require('../app');
+        const checkForUpdate = await DatabaseUtils.checkDirectoryDates(database.core.serverConfig.directoryTimers, true);
+        if (checkForUpdate === true) {
+            await DatabaseUtils.formatAndWriteNewLocationDataToDisk();
+        }
+
+        const db = require('./database');
+        const maps = getDirectoriesFrom('./database/locationsNew');
+        for (const map of maps) {
+            const location = await UtilityModel.createModelFromParseWithID("Location", map, {})
+            const variants = getFilesFrom(`./database/locationsNew/${map}`);
+            for (const variant of variants) {
+                const path = getAbsolutePathFrom(`./database/locationsNew/${map}/${variant}`);
+                const name = variant.replace(".json", "");
+                location.map = await UtilityModel.createModelFromParse(`${name}`, readParsed(path))
+            }
+            console.log("balle")
+        }
+        */
+
+         
         const maps = getFilesFrom('./database/locations/base');
         for (const map of maps) {
             const base = readParsed(`./database/locations/base/${map}`);
@@ -152,94 +153,7 @@ class DatabaseLoader {
 
             location.base = base;
             location.loot = loot;
-        }
-    }
-
-    static async changeFileExtensionOnTextAssetLocations() {
-        const filenames = getFilesFrom('./TextAsset');
-        let files = [];
-        for (let file of filenames) {
-            /**
-             * In this I need to compare if there are new files, compare their modified date and if they are different,
-             * then I need to update the file.
-             */
-            if (file.endsWith('.json')) continue;
-            const path = getAbsolutePathFrom(`./TextAsset/${file}`);
-
-            let txtStats = fs.statSync(path);
-            txtStats = txtStats.mtimeMs;
-            let jsonStats;
-            const check = file.replace('.txt', '.json');
-            if (fileExist(`./TextAsset/${check}`)) {
-                jsonStats = fs.statSync(`./TextAsset/${check}`);
-                jsonStats = jsonStats.mtimeMs;
-            }
-            if (jsonStats != null && jsonStats < txtStats) {
-                let changeFileExtension = path.replace('.txt', '.json')
-                fs.rename(path, changeFileExtension, (err) => {
-                    if (err) {
-                        logger.logError(`Error renaming ${path} to ${changeFileExtension}`);
-                    }
-                });
-                files.push(check)
-            } else {
-                continue;
-            }
-        }
-        return files;
-    }
-
-    static async formatAndWriteNewLocationDataToDisk() {
-        logger.logWarning("Loading new locations into proper format...");
-
-        const files = await this.changeFileExtensionOnTextAssetLocations();
-        if (files.length > 0) {
-            for (let file of files) {
-                const path = getAbsolutePathFrom(`./TextAsset/${file}`);
-                if (file.includes("hideout") || file.includes("develop")) continue;
-
-                let directoryName;
-                if (!file.includes("factory4")) {
-                    directoryName = file.replace('.json', '').replace(/\d+/g, '').toLowerCase();
-                } else {
-                    directoryName = file.replace('.json', '').replace(/\d+/g, '').replace('factory', 'factory4').toLowerCase();
-                }
-
-                let locationsDirectory;
-                if (fileExist(`./database/locationsNew`)) {
-                    locationsDirectory = `./database/locationsNew/`;
-                } else {
-                    fs.mkdirSync(`./database/locationsNew`);
-                    locationsDirectory = `./database/locationsNew/`;
-                }
-
-                let locationPath;
-                if (!fileExist(`./database/locationsNew/${directoryName}`)) {
-                    locationPath = `${locationsDirectory}${directoryName}`;
-                    fs.mkdirSync(locationPath);
-                } else {
-                    locationPath = `${locationsDirectory}${directoryName}`;
-                }
-
-                let uppercase;
-                let filename;
-                if (file.includes("RezervBase")) {
-                    uppercase = "RezervBase";
-                    filename = file.replace(directoryName, '').replace(".json", "").replace(uppercase, "");
-                } else {
-                    uppercase = directoryName.charAt(0).toUpperCase() + directoryName.slice(1);
-                    filename = file.replace(directoryName, '').replace(".json", "").replace(uppercase, "");
-                }
-
-                if (fileExist(`${locationPath}/${filename}.json`)) {
-                    const map = readParsed(path);
-                    let location = map
-                    if (typeof map.Location != "undefined") { location = map.Location; }
-                    console.log(`${directoryName}${filename}`);
-                    writeFile(locationPath + `/${filename}.json`, stringify(location));
-                }
-            }
-        }
+        } 
     }
 
     static async loadPresets() {
@@ -504,6 +418,139 @@ class DatabaseUtils {
         traderAssort.barter_scheme = newBarter;
 
         return traderAssort;
+    }
+
+    static async checkDirectoryDates(serverConfig, bool = false) {
+        if (typeof serverConfig.TextAsset != "undefined" && bool === false) {
+            const date = getFileUpdatedDate(getAbsolutePathFrom('./TextAsset'));
+            if (date > serverConfig.TextAsset) {
+                serverConfig.TextAsset = date;
+                return serverConfig;
+            }
+            return serverConfig
+        }
+
+        if (typeof serverConfig.TextAsset != "undefined" && bool !== false) {
+            const date = getFileUpdatedDate(getAbsolutePathFrom('./TextAsset'));
+            if (date > serverConfig.TextAsset) {
+                serverConfig.TextAsset = date;
+                return true;
+            }
+            return false;
+        }
+    }
+
+    static async changeFileExtensionOnTextAssetLocations() {
+        const filenames = getFilesFrom('./TextAsset');
+        let files = [];
+        for (const file of filenames) {
+
+            if (file.endsWith('.json')) continue;
+            const path = getAbsolutePathFrom(`./TextAsset/${file}`);
+
+            const txtStats = getFileUpdatedDate(path)
+            let jsonStats;
+            const check = file.replace('.txt', '.json');
+            if (fileExist(`./TextAsset/${check}`)) {
+                jsonStats = getFileUpdatedDate(`./TextAsset/${check}`)
+            }
+            if (jsonStats != null && jsonStats < txtStats) {
+                const changeFileExtension = path.replace('.txt', '.json')
+                fs.rename(path, changeFileExtension, (err) => {
+                    if (err) {
+                        logger.logError(
+                            `Error renaming ${path}`
+                        );
+                    }
+                });
+                files.push(check)
+            } else {
+                continue;
+            }
+        }
+        return files;
+    }
+
+    static async formatAndWriteNewLocationDataToDisk() {
+        logger.logWarning("Loading new locations into proper format...");
+
+        const files = await this.changeFileExtensionOnTextAssetLocations();
+        if (files.length > 0) {
+            for (let file of files) {
+                const path = getAbsolutePathFrom(`./TextAsset/${file}`);
+                if (file.includes("hideout") || file.includes("develop")) continue;
+
+                let directoryName;
+                if (!file.includes("factory4")) {
+                    directoryName = file.replace('.json', '').replace(/\d+/g, '').toLowerCase();
+                } else {
+                    directoryName = file.replace('.json', '').replace(/\d+/g, '').replace('factory', 'factory4').toLowerCase();
+                }
+
+                let locationsDirectory;
+                if (fileExist(`./database/locationsNew`)) {
+                    locationsDirectory = `./database/locationsNew/`;
+                } else {
+                    fs.mkdirSync(`./database/locationsNew`);
+                    locationsDirectory = `./database/locationsNew/`;
+                }
+
+                let locationPath;
+                if (!fileExist(`./database/locationsNew/${directoryName}`)) {
+                    locationPath = `${locationsDirectory}${directoryName}`;
+                    fs.mkdirSync(locationPath);
+                } else {
+                    locationPath = `${locationsDirectory}${directoryName}`;
+                }
+
+                let uppercase;
+                let filename;
+                if (file.includes("RezervBase")) {
+                    uppercase = "RezervBase";
+                    filename = file.replace(directoryName, '').replace(".json", "").replace(uppercase, "");
+                } else {
+                    uppercase = directoryName.charAt(0).toUpperCase() + directoryName.slice(1);
+                    filename = file.replace(directoryName, '').replace(".json", "").replace(uppercase, "");
+                }
+
+                if (fileExist(`${locationPath}/${filename}.json`)) {
+                    const map = readParsed(path);
+                    let location = map
+                    if (typeof map.Location != "undefined") { location = map.Location; }
+                    console.log(`${directoryName}${filename}`);
+                    writeFile(locationPath + `/${filename}.json`, stringify(location));
+                }
+            }
+        }
+    }
+
+    static async generateTplLookup(items, categories) {
+        const lookup = {
+            items: {
+                byId: {},
+                byParent: {},
+            },
+            categories: {
+                byId: {},
+                byParent: {},
+            },
+        };
+
+        for (let x of items) {
+            lookup.items.byId[x.Id] = x.Price;
+            lookup.items.byParent[x.ParentId] || (lookup.items.byParent[x.ParentId] = []);
+            lookup.items.byParent[x.ParentId].push(x.Id);
+        }
+
+        for (let x of categories) {
+            lookup.categories.byId[x.Id] = x.ParentId ? x.ParentId : null;
+            if (x.ParentId) {
+                // root as no parent
+                lookup.categories.byParent[x.ParentId] || (lookup.categories.byParent[x.ParentId] = []);
+                lookup.categories.byParent[x.ParentId].push(x.Id);
+            }
+        }
+        return lookup;
     }
 }
 
