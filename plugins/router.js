@@ -8,8 +8,6 @@ module.exports = async function router(app, _opts) {
     /* Register the routes for files */
     await app.register(require("./routes/resources"));
 
-    /**
-     * Register the routes for bundles??????
-     */
+    /* Register the routes for bundles?????? */
     await app.register(require("./routes/bundles"));
 }
