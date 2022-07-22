@@ -333,7 +333,7 @@ class Ragfair extends BaseModel {
         }
         if (counter != 0) {
             logger.logError(`Banned items updated by ${counter}`);
-            writeFile("./bannedItems.json", stringify(bannedItems, false), true);
+            writeFile("./bannedItems.json", stringify(bannedItems), true);
         }
         return filteredItems;
     }
