@@ -256,7 +256,7 @@ class Character extends BaseModel {
 
         if(dissolvedClone.Hideout.Areas.length > 0) {
             for (const [index, area] of Object.entries(dissolvedClone.Hideout.Areas)) {
-                dissolvedClone.Hideout.Areas[index] = Object.assign({}, area)
+                dissolvedClone.Hideout.Areas[index] = Object.assign({}, area);
             }
         }
 
@@ -503,24 +503,22 @@ class Character extends BaseModel {
             return false;
         }
 
-        let output = {
+        const output = {
             changed: [],
             removed: []
-        }
+        };
 
-        let item = await this.getInventoryItemByID(itemId);
+        const item = await this.getInventoryItemByID(itemId);
         logger.logDebug(item);
-        let children = await item.getAllChildItemsInInventory(this.Inventory.items);
-        
+        const children = await item.getAllChildItemsInInventory(this.Inventory.items);
         if(children) {
-            for (let child of children) {
+            for (const child of children) {
                 await this.removeInventoryItemByID(child._id);
                 output.removed.push(child);
-                return output;
             }
         }
 
-        if(amount != -1 && typeof item.upd !== "undefined" && typeof item.upd.StackObjectsCount !== "undefined" && amount < item.upd.StackObjectsCount) {
+        if(amount !== -1 && typeof item.upd !== "undefined" && typeof item.upd.StackObjectsCount !== "undefined" && amount < item.upd.StackObjectsCount) {
             item.upd.StackObjectsCount = item.upd.StackObjectsCount - amount;
             output.changed.push(item);
             return output;
@@ -549,8 +547,8 @@ class Character extends BaseModel {
         switch (containerType) {
             case "hideout":
                 logger.logDebug(`Trying to move item to/in hideout`);
-                let stashContainer = await this.getStashContainer();
-                if (containerID == stashContainer._id) {
+                const stashContainer = await this.getStashContainer();
+                if (containerID === stashContainer._id) {
                     return this.moveItemToHideout(itemId, locationData);
                 } else {
                     logger.logError(`Move request failed: Invalid container with ID ${containerID}`);
@@ -589,7 +587,7 @@ class Character extends BaseModel {
 
             if (locationData) {
                 itemSearch.location = locationData;
-                itemSearch.location.r = (locationData.r = "Vertical" ? 1 : 0)
+                itemSearch.location.r = (locationData.r = "Vertical" ? 1 : 0);
             } else if (!locationData && itemSearch.location) {
                 delete itemSearch.location;
             }
@@ -752,6 +750,17 @@ class Character extends BaseModel {
     async setExperience(experiencePoints) {
         this.Info.Experience = experiencePoints;
         return this.Info.Experience;
+    }
+
+    async clearOrphans() {
+        for (const item of this.Inventory.items) {
+            if (item.parentId) {
+                if (!await this.getInventoryItemByID(item.parentId)) {
+                    logger.logWarning(`Removing orphan item ${item._id} (Missing parent: ${item.parentId})`);
+                    this.Inventory.items.splice(this.Inventory.items.indexOf(item), 1);
+                }
+            }
+        }
     }
 }
 
