@@ -704,6 +704,7 @@ class GameController {
                 } else {
                     hideoutArea.slots.splice(itemPosition, 1, slotData);
                 }
+                await playerProfile.character.removeItem(item._id);
                 output.items.del.push(item);
             }
         }
