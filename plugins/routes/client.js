@@ -379,6 +379,30 @@ module.exports = async function gameRoutes(app, _opts) {
     app.post(`/client/raid/person/lootingContainer`, async (request, reply) => {
         return stringify("")
     });
+
+
+    // Client Match Routes //
+    app.post(`/client/match/offline/start`, async (request, reply) => {
+        console.log(request.body)
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody(null, 0, null)
+        );
+    });
+
+    app.post(`/client/match/offline/end`, async (request, reply) => {
+        console.log(request.body)
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody(null, 0, null)
+        );
+    });
+
+
+    // Client Location Routes //
+    app.post(`/client/location/getLocalloot`, async (request, reply) => {
+        return logger.logDebug("Location get local loot not implemented yet");
+    });
     
 
 }
