@@ -424,7 +424,6 @@ class GameController {
             } else {
                 logger.logDebug(`Unable to add items`);
             }
-            await playerProfile.save();
             logger.logDebug(output);
             logger.logDebug(output.items);
             logger.logDebug(output.items.change[0].upd);
