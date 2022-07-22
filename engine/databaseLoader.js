@@ -325,6 +325,8 @@ class DatabaseLoader {
             if (fileExist(`${path}character.json`)) {
                 logger.logWarning(`Loading character data for profile ${profileID}`);
                 profile.character = await UtilityModel.createModelFromParse("Character", readParsed("./user/profiles/" + profileID + "/character.json"));
+                await profile.character.clearOrphans();
+                await profile.character.save();
                 await profile.character.solve();
 
                 //await profile.character.addTestPistol();
