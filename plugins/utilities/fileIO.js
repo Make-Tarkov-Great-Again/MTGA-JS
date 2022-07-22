@@ -40,8 +40,8 @@ const fileExist = (filePath) => {
  * @param {*} oneLiner 
  * @returns 
  */
-const stringify = (data, oneLiner = false) => {
-    return (oneLiner) ? safeStringify(data, null, "\t") : safeStringify(data);
+const stringify = (data) => {
+    return safeStringify(data, null, "\t");
 };
 
 /**
