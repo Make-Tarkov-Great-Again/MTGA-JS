@@ -515,7 +515,6 @@ class Character extends BaseModel {
             for (const child of children) {
                 await this.removeInventoryItemByID(child._id);
                 output.removed.push(child);
-                return output;
             }
         }
 
