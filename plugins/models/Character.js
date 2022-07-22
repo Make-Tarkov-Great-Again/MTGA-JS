@@ -756,7 +756,7 @@ class Character extends BaseModel {
     async clearOrphans() {
         for (const item of this.Inventory.items) {
             if (item.parentId) {
-                if (! await this.getInventoryItemByID(item.parentId)) {
+                if (!await this.getInventoryItemByID(item.parentId)) {
                     logger.logWarning(`Removing orphan item ${item._id} (Missing parent: ${item.parentId})`);
                     this.Inventory.items.splice(this.Inventory.items.indexOf(item), 1);
                 }
