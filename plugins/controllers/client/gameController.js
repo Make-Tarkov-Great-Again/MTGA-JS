@@ -348,7 +348,13 @@ class GameController {
 
         const playerProfile = await Profile.get(sessionID);
         const trader = await Trader.get(moveAction.tid);
-
+        const output = {
+            items: {
+                new: [],
+                change: [],
+                del: []
+            }
+        };
         if (moveAction.type === 'buy_from_trader') {
             const traderItem = await trader.getAssortItemByID(moveAction.item_id);
             const traderAssort = await trader.getFilteredAssort(playerProfile);
@@ -376,15 +382,6 @@ class GameController {
                     }
                 }
             }
-
-            let output = {
-                items: {
-                    new: [],
-                    change: [],
-                    del: []
-                }
-            };
-
             // Merge existing item to reach max stack
             let itemsAdded;
             let itemsMerged;
@@ -427,23 +424,15 @@ class GameController {
             logger.logDebug(output);
             logger.logDebug(output.items);
             logger.logDebug(output.items.change[0].upd);
-            return output;
         } else if (moveAction.type === 'sell_to_trader') {
             // TODO: LOAD TRADER PLAYER LOYALTY FOR COEF
-            let output = {
-                items: {
-                    new: [],
-                    change: [],
-                    del: []
-                }
-            };
             let itemPrice = 0;
             for (const itemSelling of moveAction.items) {
                 logger.logDebug(itemSelling);
                 const item = await playerProfile.character.getInventoryItemByID(itemSelling.id);
                 const currentItemPrice = database.templates.PriceTable[item._tpl];
                 itemPrice += currentItemPrice * itemSelling.count;
-                await playerProfile.character.removeItems([item]);
+                await playerProfile.character.removeItem(item);
                 output.items.del.push({ _id: item._id });
             }
             // Merge existing item to reach max stack
@@ -462,11 +451,10 @@ class GameController {
             }
             output.items.new = itemsAdded;
             output.items.change = itemsMerged;
-            logger.logDebug(output)
-            logger.logDebug(output.items.change)
-            logger.logDebug(output.items.new)
+            logger.logDebug(output);
+            logger.logDebug(output.items.change);
+            logger.logDebug(output.items.new);
             
-            return output;
         } else if (moveAction.Action === 'RagFairBuyOffer') {
             console.log(moveAction);
             const ragfairOffers = database.ragfair.offers;
@@ -478,6 +466,7 @@ class GameController {
         } else {
             logger.logError(`My brother in christ what are you trying to do ? ${moveAction.type} ? That shit is not done lmao pay me now.`);
         }
+        return output;
     };
 
     static clientGameProfileSplitItem = async (moveAction = null, reply = null, sessionID = null) => {
