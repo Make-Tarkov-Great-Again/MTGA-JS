@@ -12,20 +12,15 @@ const app = require('fastify')({
         },
         serializers: {
             res(reply) {
-                // The default
                 return {
                     statusCode: reply.statusCode
-
                 };
             },
             req(request) {
                 return {
                     method: request.method,
                     url: request.url,
-                    "content-length": request.headers['content-length'],
-                    accept: request.headers["accept"],
-                    "app-version": request.headers['app-version'],
-                    cookie: request.headers['cookie'],
+                    headers: request.headers,
                     body: request.body
                 };
             }
