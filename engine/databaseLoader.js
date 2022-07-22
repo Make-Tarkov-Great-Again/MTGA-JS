@@ -119,7 +119,7 @@ class DatabaseLoader {
 
     static async loadLocations() {
         /* bude i need this commented out portion adjusted to the new locations system
-        
+
         const { database } = require('../app');
         const checkForUpdate = await DatabaseUtils.checkDirectoryDates(database.core.serverConfig.directoryTimers, true);
         if (checkForUpdate === true) {
@@ -420,6 +420,13 @@ class DatabaseUtils {
         return traderAssort;
     }
 
+    /**
+     * Check if the file is older than the last time we checked it
+     * If it is, we need to update it it
+     * @param {*} serverConfig 
+     * @param {*} bool change to true if you want to know if the dates are different or not
+     * @returns 
+     */
     static async checkDirectoryDates(serverConfig, bool = false) {
         if (typeof serverConfig.TextAsset != "undefined" && bool === false) {
             const date = getFileUpdatedDate(getAbsolutePathFrom('./TextAsset'));
