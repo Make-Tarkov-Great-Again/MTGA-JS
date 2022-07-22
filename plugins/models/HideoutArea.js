@@ -6,6 +6,7 @@ class HideoutArea extends BaseModel {
 
         this.createDatabase(id);
     }
+
 }
 
 module.exports.HideoutArea = HideoutArea;

@@ -682,5 +682,33 @@ class GameController {
         }
     }
 
+    static clientGameProfileHideoutAreaSlot = async (moveAction = null, reply = null, sessionID = null) => {
+        const playerProfile = await Profile.get(sessionID);
+        const output = { items: { new: [], change: [], del: [] } };
+        if (playerProfile) {
+            const hideoutArea = await playerProfile.character.getHideoutAreaByType(moveAction.areaType);
+            for (const itemPosition in moveAction.items) {
+                const itemData = moveAction.items[itemPosition];
+                const item = await playerProfile.character.getInventoryItemByID(itemData.id);
+                const slotData = {
+                    item: [
+                        {
+                            _id: item._id,
+                            _tpl: item._tpl,
+                            upd: item.upd
+                        }
+                    ]
+                };
+                if (!(itemPosition in hideoutArea.slots)) {
+                    hideoutArea.slots.push(slotData);
+                } else {
+                    hideoutArea.slots.splice(itemPosition, 1, slotData);
+                }
+                output.items.del.push(item);
+            }
+        }
+        return output;
+    }
+
 }
 module.exports.GameController = GameController;
