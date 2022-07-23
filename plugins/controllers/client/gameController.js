@@ -492,10 +492,10 @@ class GameController {
             console.log(item.items[0]._tpl)
             const itemTemplate = await Item.get(item.items[0]._tpl);
 
-            const unpreparedChildren = await Item.getAllChildItemsInInventory(item.items);
+            //const unpreparedChildren = await Item.getAllChildItemsInInventory(item.items);
             let preparedChildren = false;
-            if (unpreparedChildren) {
-                preparedChildren = await Item.prepareChildrenForAddItem(item.items[0], unpreparedChildren);
+            if (item.items.length > 0) {
+                preparedChildren = await Item.prepareChildrenForAddItem(item.items[0], item.items);
             }
 
 
