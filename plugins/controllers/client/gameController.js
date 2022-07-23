@@ -326,6 +326,7 @@ class GameController {
                 break;
 
                 case "HideoutUpgrade":
+                case "HideoutProduction":
                     templateItem = await Item.get(moveAction.item);
                 break;
 
