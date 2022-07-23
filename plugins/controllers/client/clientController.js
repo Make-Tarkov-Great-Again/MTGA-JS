@@ -86,18 +86,7 @@ class ClientController {
     }
 
     static clientLocations = async (_request = null, reply = null) => {
-        let locations = await Location.getAll();
-        let baseResponse = database.core.location_base;
-        let dissolvedLocations = {};
-
-        for (const [id, data] of Object.entries(locations)) {
-            let newData = await data.dissolve();
-            dissolvedLocations[id] = newData.base;
-            dissolvedLocations[id].Loot = [];
-        }
-
-        baseResponse.locations = dissolvedLocations;
-
+        const baseResponse = database.core.locations;
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(baseResponse)
