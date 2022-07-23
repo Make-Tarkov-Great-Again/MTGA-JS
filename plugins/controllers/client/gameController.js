@@ -316,7 +316,7 @@ class GameController {
                         return false;
                     }
                 break;
-            
+
                 case "RagFair":
                     const ragfairOffers = database.ragfair.offers;
                     const item = ragfairOffers.find(function (i) {
@@ -327,6 +327,7 @@ class GameController {
 
                 case "HideoutUpgrade":
                 case "HideoutProduction":
+                case "ScavCase":
                     templateItem = await Item.get(moveAction.item);
                 break;
 
