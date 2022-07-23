@@ -14,13 +14,13 @@ class FastifyResponse {
         json: "application/json"
     };
 
-    static getNotifier(sessionID) {
+    static async getNotifier(sessionID) {
         return {
-            "server": this.getWebSocketURL(),
+            "server": await this.getURL(),
             "channel_id": sessionID,
             "url": ``,
-            "notifierServer": `${this.getWebSocketURL()}/push/notifier/get/${sessionID}`,
-            "ws": `${this.getWebSocketURL()}/push/notifier/getwebsocket/${sessionID}`
+            "notifierServer": `${await this.getBackendURL()}/push/notifier/get/${sessionID}`,
+            "ws": `${await await this.getWebSocketURL()}/push/notifier/getwebsocket/${sessionID}`
         }
     }
 
@@ -28,13 +28,16 @@ class FastifyResponse {
         return request.headers["app-version"].replace("EFT Client ", "");
     }
 
+    static async getURL() {
+        return database.core.serverConfig.ip + ":" + database.core.serverConfig.port
+    }
 
-    static getBackendURL() {
+    static async getBackendURL() {
         const { database } = require("../../app");
         return "https://" + database.core.serverConfig.ip + ":" + database.core.serverConfig.port;
     }
 
-    static getWebSocketURL() {
+    static async getWebSocketURL() {
         return this.getBackendURL().replace("https", "ws")
     }
 
