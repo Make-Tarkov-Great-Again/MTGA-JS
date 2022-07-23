@@ -126,12 +126,12 @@ class DatabaseLoader {
             await DatabaseUtils.formatAndWriteNewLocationDataToDisk();
         }
 
-        const maps = getDirectoriesFrom('./database/locationsNew');
+        const maps = getDirectoriesFrom('./database/locations');
         for (const map of maps) {
             const location = await UtilityModel.createModelFromParseWithID('Location', map, {});
-            const variants = getFilesFrom(`./database/locationsNew/${map}`);
+            const variants = getFilesFrom(`./database/locations/${map}`);
             for (const [index, variant] of Object.entries(variants)) {
-                const pathData = readParsed(`./database/locationsNew/${map}/${variant}`);
+                const pathData = readParsed(`./database/locations/${map}/${variant}`);
                 //const name = variant.replace(".json", "");
                 location[index] = await UtilityModel.createModelFromParse(`Location`, pathData);
             }
@@ -493,15 +493,15 @@ class DatabaseUtils {
                 }
 
                 let locationsDirectory;
-                if (fileExist(`./database/locationsNew`)) {
-                    locationsDirectory = `./database/locationsNew/`;
+                if (fileExist(`./database/locations`)) {
+                    locationsDirectory = `./database/locations/`;
                 } else {
-                    fs.mkdirSync(`./database/locationsNew`);
-                    locationsDirectory = `./database/locationsNew/`;
+                    fs.mkdirSync(`./database/locations`);
+                    locationsDirectory = `./database/locations/`;
                 }
 
                 let locationPath;
-                if (!fileExist(`./database/locationsNew/${directoryName}`)) {
+                if (!fileExist(`./database/locations/${directoryName}`)) {
                     locationPath = `${locationsDirectory}${directoryName}`;
                     fs.mkdirSync(locationPath);
                 } else {
