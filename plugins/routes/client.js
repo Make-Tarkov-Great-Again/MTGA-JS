@@ -97,7 +97,7 @@ module.exports = async function gameRoutes(app, _opts) {
                     actionResult = await GameController.clientGameProfileExamine(moveAction, reply, sessionID);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
-                
+
                 case "RagFairBuyOffer":
                 case "TradingConfirm":
                     actionResult = await GameController.clientGameProfileTradingConfirm(moveAction, reply, sessionID);
@@ -171,6 +171,14 @@ module.exports = async function gameRoutes(app, _opts) {
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(outputData));
+    });
+
+    app.post('/client/game/bot/generate', async (request, reply) => {
+        logger.logDebug("Generating bot profiles not implemented yet - sending empty []");
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody([])
+        );
     });
 
 
@@ -403,11 +411,40 @@ module.exports = async function gameRoutes(app, _opts) {
         );
     });
 
+    app.post("/client/match/available", async (request, reply) => {
+        logger.logDebug("Match available not implemented yet");
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody(true)
+        );
+    });
+
+    app.post(`/client/match/join`, async (_request, reply) => {
+        logger.logDebug("Match join not implemented yet");
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody(null)
+        );
+    });
+
+
 
     // Client Location Routes //
     app.post(`/client/location/getLocalloot`, async (request, reply) => {
+        console.log(request.body)
+
+        const name = request.body.locationId.toLowerCase();
+        const variant = request.body.variantId;
+        const locations = database.locations;
+        if (locations[name]) {
+            const location = locations[name][variant];
+            return FastifyResponse.zlibJsonReply(
+                reply,
+                FastifyResponse.applyBody(location)
+            );
+        }
         return logger.logDebug("Location get local loot not implemented yet");
     });
-    
+
 
 }
