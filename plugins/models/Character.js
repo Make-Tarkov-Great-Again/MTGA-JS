@@ -587,7 +587,7 @@ class Character extends BaseModel {
 
             if (locationData) {
                 itemSearch.location = locationData;
-                itemSearch.location.r = (locationData.r = "Vertical" ? 1 : 0);
+                itemSearch.location.r = (locationData.r === "Vertical" ? 1 : 0);
             } else if (!locationData && itemSearch.location) {
                 delete itemSearch.location;
             }
@@ -695,7 +695,7 @@ class Character extends BaseModel {
 
     async removeItems(item) {
         const removedItems = {};
-        await this.removeInventoryItemByID(item.item);
+        await this.removeItem(item.item, -1)
         Object.assign(removedItems, { _id: item.item });
         return removedItems;
     }
@@ -742,6 +742,13 @@ class Character extends BaseModel {
         return this.Info.Experience;
     }
 
+    async getSkills() {
+        if (this.Skills.length === 0) {
+            this.Skills = {};
+        }
+        return this.Skills;
+    }
+
     async addExperience(experiencePoints) {
         // Required! This will create the object as an integer, otherwise the response will error out.
         if (!this.Info.Experience) {
@@ -758,14 +765,23 @@ class Character extends BaseModel {
     }
 
     async clearOrphans() {
+        let noOrphans = true;
         for (const item of this.Inventory.items) {
             if (item.parentId) {
                 if (!await this.getInventoryItemByID(item.parentId)) {
                     logger.logWarning(`Removing orphan item ${item._id} (Missing parent: ${item.parentId})`);
                     this.Inventory.items.splice(this.Inventory.items.indexOf(item), 1);
+                    noOrphans = false;
                 }
             }
         }
+        
+        
+        if(!noOrphans) {
+            await this.clearOrphans();
+        }
+
+        return true;
     }
 }
 
