@@ -313,7 +313,7 @@ class Profile extends BaseModel {
             builds: [], // are those current weapon builds ??
             items: { },
             production: null,
-            skills: {},
+            skills: await this.character.getSkills(),
             traderRelations: [] //_profile.TradersInfo
         };
 
