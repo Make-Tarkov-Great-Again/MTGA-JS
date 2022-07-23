@@ -21,7 +21,7 @@ class DatabaseLoader {
             this.loadTemplates(),
             this.loadTraders(),
             this.loadCustomization(),
-            this.loadLocations(), need help on this @budey
+            this.loadLocations(), //need help on this @budey
             // Model Data //
         ]);
         await this.loadEditions();
