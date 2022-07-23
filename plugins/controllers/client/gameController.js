@@ -134,18 +134,13 @@ class GameController {
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody("")
-        )
+        );
     };
 
     static clientGameProfileNicknameValidate = async (request = null, reply = null) => {
         const validate = await Profile.ifAvailableNickname(request.body.nickname);
 
         switch (validate) {
-            case "ok":
-                return FastifyResponse.zlibJsonReply(
-                    reply,
-                    FastifyResponse.applyBody({ status: "ok" })
-                );
             case "tooshort":
                 return FastifyResponse.zlibJsonReply(
                     reply,
@@ -155,6 +150,11 @@ class GameController {
                 return FastifyResponse.zlibJsonReply(
                     reply,
                     FastifyResponse.applyBody(null, 255, "255 - ")
+                );
+            default:
+                return FastifyResponse.zlibJsonReply(
+                    reply,
+                    FastifyResponse.applyBody({ status: "ok" })
                 );
         }
     };
@@ -229,18 +229,6 @@ class GameController {
 
 
         switch (validate) {
-            case "ok":
-                playerProfile.character.Info.Nickname = request.body.nickname;
-                playerProfile.character.Info.LowerNickname = request.body.nickname.toLowerCase();
-                await playerProfile.saveCharacter();
-
-                return FastifyResponse.zlibJsonReply(
-                    reply,
-                    FastifyResponse.applyBody({
-                        status: 0,
-                        nicknamechangedate: ~~(new Date() / 1000)
-                    })
-                );
             case "tooshort":
                 return FastifyResponse.zlibJsonReply(
                     reply,
@@ -250,6 +238,17 @@ class GameController {
                 return FastifyResponse.zlibJsonReply(
                     reply,
                     FastifyResponse.applyBody(null, 255, "255 - ")
+                );
+            default:
+                playerProfile.character.Info.Nickname = request.body.nickname;
+                playerProfile.character.Info.LowerNickname = request.body.nickname.toLowerCase();
+                await playerProfile.saveCharacter();
+                return FastifyResponse.zlibJsonReply(
+                    reply,
+                    FastifyResponse.applyBody({
+                        status: 0,
+                        nicknamechangedate: ~~(new Date() / 1000)
+                    })
                 );
         }
     };
@@ -299,26 +298,41 @@ class GameController {
         logger.logDebug(moveAction);
 
         let templateItem;
-        if (moveAction.fromOwner && moveAction.fromOwner.type === "Trader") {
-            const trader = await Trader.get(moveAction.fromOwner.id);
-            if (trader) {
-                const inventoryItem = await trader.getAssortItemByID(moveAction.item);
-                if (inventoryItem) {
-                    templateItem = await Item.get(inventoryItem._tpl);
-                } else {
-                    logger.logError(`Examine Request failed: Unable to find item database template of itemId ${moveAction.item}`);
+
+        if(typeof moveAction.fromOwner !== "undefined") {
+            switch(moveAction.fromOwner.type) {
+                case "Trader":
+                    const trader = await Trader.get(moveAction.fromOwner.id);
+                    if (trader) {
+                        const inventoryItem = await trader.getAssortItemByID(moveAction.item);
+                        if (inventoryItem) {
+                            templateItem = await Item.get(inventoryItem._tpl);
+                        } else {
+                            logger.logError(`Examine Request failed: Unable to find item database template of itemId ${moveAction.item}`);
+                            return false;
+                        }
+                    } else {
+                        logger.logError("Examine Request failed: Unable to get trader data.");
+                        return false;
+                    }
+                break;
+            
+                case "RagFair":
+                    const ragfairOffers = database.ragfair.offers;
+                    const item = ragfairOffers.find(function (i) {
+                        if (i._id === moveAction.fromOwner.id) return i;
+                    });
+                    templateItem = await Item.get(item.items[0]._tpl);
+                break;
+
+                case "HideoutUpgrade":
+                    templateItem = await Item.get(moveAction.item);
+                break;
+
+                default:
+                    logger.logError(`Examine Request failed: Unknown moveAction.fromOwner.Type: ${moveAction.fromOwner.type}`);
                     return false;
-                }
-            } else {
-                logger.logError("Examine Request failed: Unable to get trader data.");
-                return false;
             }
-        } else if (moveAction.fromOwner && moveAction.fromOwner.type === "RagFair") {
-            const ragfairOffers = database.ragfair.offers;
-            const item = ragfairOffers.find(function (i) {
-                if (i._id === moveAction.fromOwner.id) return i;
-            });
-            templateItem = await Item.get(item.items[0]._tpl);
         } else {
             const item = await playerProfile.character.getInventoryItemByID(moveAction.item);
             if (item) {
@@ -336,13 +350,14 @@ class GameController {
                 logger.logError(`Examine Request failed: Unable to examine itemId ${templateItem._id}`);
             }
         } else {
+            // this will crash because inventoryItem can't be reached
             logger.logError(`Examine Request failed: Unable to find item database template of itemId ${inventoryItem._tpl}`);
         }
 
         return {};
     };
 
-    static clientGameProfileTradingConfirm = async (moveAction = null, reply = null, sessionID = null) => {
+    static clientGameProfileTradingConfirm = async (moveAction = null, _reply = null, sessionID = null) => {
         logger.logDebug("Trading request:");
         logger.logDebug(moveAction);
 
@@ -469,7 +484,7 @@ class GameController {
         return output;
     };
 
-    static clientGameProfileSplitItem = async (moveAction = null, reply = null, sessionID = null) => {
+    static clientGameProfileSplitItem = async (moveAction = null, _reply = null, sessionID = null) => {
         const playerProfile = await Profile.get(sessionID);
         const splittedItems = await playerProfile.character.splitItems(moveAction);
         if (splittedItems) {
@@ -479,7 +494,7 @@ class GameController {
         }
     };
 
-    static clientGameProfileMergeItem = async (moveAction = null, reply = null, sessionID = null) => {
+    static clientGameProfileMergeItem = async (moveAction = null, _reply = null, sessionID = null) => {
         const playerProfile = await Profile.get(sessionID);
         const mergedItems = await playerProfile.character.mergeItems(moveAction);
         if (mergedItems) {
@@ -489,7 +504,7 @@ class GameController {
         }
     };
 
-    static clientGameProfileRemoveItem = async (moveAction = null, reply = null, sessionID = null) => {
+    static clientGameProfileRemoveItem = async (moveAction = null, _reply = null, sessionID = null) => {
         const playerProfile = await Profile.get(sessionID);
         const deletedItems = await playerProfile.character.removeItems(moveAction);
         if (deletedItems) {
@@ -499,17 +514,17 @@ class GameController {
         }
     };
 
-    static clientGameProfileFoldItem = async (moveAction = null, reply = null, sessionID = null) => {
+    static clientGameProfileFoldItem = async (moveAction = null, _reply = null, sessionID = null) => {
         const playerProfile = await Profile.get(sessionID);
         if (playerProfile) {
             let item = await playerProfile.character.getInventoryItemByID(moveAction.item);
             if (item) {
                 if (typeof item.upd === "undefined") {
-                    item.upd = {}
+                    item.upd = {};
                 }
 
                 if (typeof item.upd.Foldable === "undefined") {
-                    item.upd.Foldable = {}
+                    item.upd.Foldable = {};
                 }
 
                 item.upd.Foldable.Folded = moveAction.value;
@@ -517,17 +532,17 @@ class GameController {
         }
     }
 
-    static clientGameProfileTagItem = async (moveAction = null, reply = null, sessionID = null) => {
+    static clientGameProfileTagItem = async (moveAction = null, _reply = null, sessionID = null) => {
         const playerProfile = await Profile.get(sessionID);
         if (playerProfile) {
-            let item = await playerProfile.character.getInventoryItemByID(moveAction.item);
+            const item = await playerProfile.character.getInventoryItemByID(moveAction.item);
             if (item) {
                 if (typeof item.upd === "undefined") {
-                    item.upd = {}
+                    item.upd = {};
                 }
 
                 if (typeof item.upd.Tag === "undefined") {
-                    item.upd.Tag = {}
+                    item.upd.Tag = {};
                 }
 
                 item.upd.Tag.Color = moveAction.TagColor;
@@ -536,7 +551,7 @@ class GameController {
         }
     }
 
-    static clientGameProfileToggleItem = async (moveAction = null, reply = null, sessionID = null) => {
+    static clientGameProfileToggleItem = async (moveAction = null, _reply = null, sessionID = null) => {
         const playerProfile = await Profile.get(sessionID);
         if (playerProfile) {
             let item = await playerProfile.character.getInventoryItemByID(moveAction.item);
@@ -554,7 +569,7 @@ class GameController {
         }
     }
 
-    static clientGameProfileBindItem = async (moveAction = null, reply = null, sessionID = null) => {
+    static clientGameProfileBindItem = async (moveAction = null, _reply = null, sessionID = null) => {
         const playerProfile = await Profile.get(sessionID);
         if (playerProfile) {
             for (let index in playerProfile.character.Inventory.fastPanel) {
@@ -566,7 +581,7 @@ class GameController {
         }
     }
 
-    static clientGameProfileReadEncyclopedia = async (moveAction = null, reply = null, sessionID = null) => {
+    static clientGameProfileReadEncyclopedia = async (moveAction = null, _reply = null, sessionID = null) => {
         const playerProfile = await Profile.get(sessionID);
         if (playerProfile) {
             for (let id of moveAction.ids) {
@@ -575,7 +590,7 @@ class GameController {
         }
     }
 
-    static clientGameProfileHideoutUpgrade = async (moveAction = null, reply = null, sessionID = null) => {
+    static clientGameProfileHideoutUpgrade = async (moveAction = null, _reply = null, sessionID = null) => {
         logger.logDebug(moveAction);
         const playerProfile = await Profile.get(sessionID);
         if (playerProfile) {
@@ -644,11 +659,11 @@ class GameController {
         }
     }
 
-    static clientGameProfileHideoutUpgradeComplete = async (moveAction = null, reply = null, sessionID = null) => {
+    static clientGameProfileHideoutUpgradeComplete = async (moveAction = null, _reply = null, sessionID = null) => {
         const playerProfile = await Profile.get(sessionID);
         if (playerProfile) {
             const templateHideoutArea = await HideoutArea.getBy("type", moveAction.areaType);
-            let characterHideoutArea = await playerProfile.character.getHideoutAreaByType(moveAction.areaType);
+            const characterHideoutArea = await playerProfile.character.getHideoutAreaByType(moveAction.areaType);
 
             if(!templateHideoutArea) {
                 logger.logError(`Upgrading HideoutArea failed. Unknown hideout area ${moveAction.areaType} in hideoutArea database.`);
@@ -682,30 +697,32 @@ class GameController {
         }
     }
 
-    static clientGameProfileHideoutAreaSlot = async (moveAction = null, reply = null, sessionID = null) => {
+    static clientGameProfileHideoutAreaSlot = async (moveAction = null, _reply = null, sessionID = null) => {
         const playerProfile = await Profile.get(sessionID);
         const output = { items: { new: [], change: [], del: [] } };
         if (playerProfile) {
             const hideoutArea = await playerProfile.character.getHideoutAreaByType(moveAction.areaType);
             for (const itemPosition in moveAction.items) {
-                const itemData = moveAction.items[itemPosition];
-                const item = await playerProfile.character.getInventoryItemByID(itemData.id);
-                const slotData = {
-                    item: [
-                        {
-                            _id: item._id,
-                            _tpl: item._tpl,
-                            upd: item.upd
-                        }
-                    ]
-                };
-                if (!(itemPosition in hideoutArea.slots)) {
-                    hideoutArea.slots.push(slotData);
-                } else {
-                    hideoutArea.slots.splice(itemPosition, 1, slotData);
+                if (moveAction.items.hasOwnProperty(itemPosition)) {
+                    const itemData = moveAction.items[itemPosition];
+                    const item = await playerProfile.character.getInventoryItemByID(itemData.id);
+                    const slotData = {
+                        item: [
+                            {
+                                _id: item._id,
+                                _tpl: item._tpl,
+                                upd: item.upd
+                            }
+                        ]
+                    };
+                    if (!(itemPosition in hideoutArea.slots)) {
+                        hideoutArea.slots.push(slotData);
+                    } else {
+                        hideoutArea.slots.splice(itemPosition, 1, slotData);
+                    }
+                    await playerProfile.character.removeItem(item._id);
+                    output.items.del.push(item);
                 }
-                await playerProfile.character.removeItem(item._id);
-                output.items.del.push(item);
             }
         }
         return output;
