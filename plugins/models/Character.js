@@ -707,13 +707,18 @@ class Character extends BaseModel {
     }
 
     async applyHideoutBonus(bonus) {
+        // Special bonuses //
         switch(bonus.type) {
-            default:
-                logger.logError(`Unable to add hideout bonus ${bonus.type} to character ${this._id}. Bonus not yet implemented.` )
-                logger.logDebug(bonus);
+            case "MaximumEnergyReserve":
+                this.Health.Energy.Maximum += bonus.value;
+            break;
         }
 
-        return false;
+        logger.logDebug(`Bonus ${bonus.type} added to character ${this._id}.` )
+        logger.logDebug(bonus);
+        
+        this.Bonuses.push(bonus);
+        return true;
     }
 
     // Examine //
