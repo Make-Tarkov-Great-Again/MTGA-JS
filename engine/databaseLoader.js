@@ -47,7 +47,7 @@ class DatabaseLoader {
             botCore: readParsed(`./database/bots/botCore.json`),
             clientSettings: readParsed(`./database/configs/client.settings.json`).data,
             gameplay: readParsed(`./database/configs/gameplay.json`),
-            location_base: readParsed(`./database/configs/locations.json`),
+            locations: readParsed(`./database/configs/locations.json`),
             hideoutSettings: readParsed(`./database/hideout/settings.json`).data
         };
 
@@ -118,7 +118,7 @@ class DatabaseLoader {
     }
 
     static async loadLocations() {
-        /* bude i need this commented out portion adjusted to the new locations system
+        //bude i need this commented out portion adjusted to the new locations system
 
         const { database } = require('../app');
         const checkForUpdate = await DatabaseUtils.checkDirectoryDates(database.core.serverConfig.directoryTimers, true);
@@ -126,34 +126,32 @@ class DatabaseLoader {
             await DatabaseUtils.formatAndWriteNewLocationDataToDisk();
         }
 
-        const db = require('./database');
         const maps = getDirectoriesFrom('./database/locationsNew');
         for (const map of maps) {
-            const location = await UtilityModel.createModelFromParseWithID("Location", map, {})
+            const location = await UtilityModel.createModelFromParseWithID('Location', map, {});
             const variants = getFilesFrom(`./database/locationsNew/${map}`);
-            for (const variant of variants) {
-                const path = getAbsolutePathFrom(`./database/locationsNew/${map}/${variant}`);
-                const name = variant.replace(".json", "");
-                location.map = await UtilityModel.createModelFromParse(`${name}`, readParsed(path))
+            for (const [index, variant] of Object.entries(variants)) {
+                const pathData = readParsed(`./database/locationsNew/${map}/${variant}`);
+                //const name = variant.replace(".json", "");
+                location[index] = await UtilityModel.createModelFromParse(`Location`, pathData);
             }
-            console.log("balle")
         }
-        */
 
-         
-        const maps = getFilesFrom('./database/locations/base');
-        for (const map of maps) {
-            const base = readParsed(`./database/locations/base/${map}`);
-            let loot = [];
-            const location = await UtilityModel.createModelFromParseWithID("Location", base._Id, { "base": {}, "loot": {} });
 
-            if (fileExist(`./database/locations/loot/${map}`)) {
-                loot = readParsed(`./database/locations/loot/${map}`);
-            }
+        /*
+       const maps = getFilesFrom('./database/locations/base');
+       for (const map of maps) {
+           const base = readParsed(`./database/locations/base/${map}`);
+           let loot = [];
+           const location = await UtilityModel.createModelFromParseWithID("Location", base._Id, { "base": {}, "loot": {} });
 
-            location.base = base;
-            location.loot = loot;
-        } 
+           if (fileExist(`./database/locations/loot/${map}`)) {
+               loot = readParsed(`./database/locations/loot/${map}`);
+           }
+
+           location.base = base;
+           location.loot = loot;
+       } */
     }
 
     static async loadPresets() {
