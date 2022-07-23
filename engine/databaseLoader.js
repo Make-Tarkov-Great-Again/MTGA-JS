@@ -80,7 +80,7 @@ class DatabaseLoader {
         let hideoutProductions = readParsed('./database/hideout/productions.json');
         if (typeof hideoutProductions.data != "undefined") { hideoutProductions = hideoutProductions.data; }
         for (const [index, production] of Object.entries(hideoutProductions)) {
-            await UtilityModel.createModelFromParseWithID('HideoutProduction', index, production);
+            await UtilityModel.createModelFromParseWithID('HideoutProduction', production._id, production);
         }
 
 
