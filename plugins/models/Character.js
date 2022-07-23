@@ -206,24 +206,24 @@ class Character extends BaseModel {
             }
         }
 
-        if(this.Inventory.items.length > 0) {
+        if (this.Inventory.items.length > 0) {
             for (const [index, item] of Object.entries(this.Inventory.items)) {
                 this.Inventory.items[index] = await UtilityModel.createModelFromParse("Item", item);
             }
         }
 
-        if(this.Hideout.Production.length > 0) {
+        if (this.Hideout.Production.length > 0) {
             for (const [index, production] of Object.entries(this.Hideout.Production)) {
                 this.Hideout.Production[index] = await UtilityModel.createModelFromParse("HideoutProduction", production);
             }
         }
 
-        if(this.Hideout.Areas.length > 0) {
+        if (this.Hideout.Areas.length > 0) {
             for (const [index, area] of Object.entries(this.Hideout.Areas)) {
                 this.Hideout.Areas[index] = await UtilityModel.createModelFromParse("HideoutArea", area);
             }
         }
-        
+
         this.Inventory.equipment = await this.getInventoryItemByID(this.Inventory.equipment);
         this.Inventory.stash = await this.getInventoryItemByID(this.Inventory.stash);
         this.Inventory.sortingTable = await this.getInventoryItemByID(this.Inventory.sortingTable);
@@ -242,19 +242,19 @@ class Character extends BaseModel {
             }
         }
 
-        if(dissolvedClone.Inventory.items.length > 0) {
+        if (dissolvedClone.Inventory.items.length > 0) {
             for (const [index, item] of Object.entries(dissolvedClone.Inventory.items)) {
                 dissolvedClone.Inventory.items[index] = Object.assign({}, item)
             }
         }
 
-        if(dissolvedClone.Hideout.Production.length > 0) {
+        if (dissolvedClone.Hideout.Production.length > 0) {
             for (const [index, production] of Object.entries(dissolvedClone.Hideout.Production)) {
                 dissolvedClone.Hideout.Production[index] = Object.assign({}, production)
             }
         }
 
-        if(dissolvedClone.Hideout.Areas.length > 0) {
+        if (dissolvedClone.Hideout.Areas.length > 0) {
             for (const [index, area] of Object.entries(dissolvedClone.Hideout.Areas)) {
                 dissolvedClone.Hideout.Areas[index] = Object.assign({}, area);
             }
@@ -324,7 +324,10 @@ class Character extends BaseModel {
 
         const itemsAdded = [];
         let noSpace = false;
-        const stackAmount = (amount - ~~(amount / itemTemplate._props.StackMaxSize) * itemTemplate._props.StackMaxSize) > 0 ? 1 + ~~(amount / itemTemplate._props.StackMaxSize) : ~~(amount / itemTemplate._props.StackMaxSize);
+        const stackAmount = (amount - ~~(amount / itemTemplate._props.StackMaxSize) * itemTemplate._props.StackMaxSize) > 0
+            ? 1 + ~~(amount / itemTemplate._props.StackMaxSize)
+            : ~~(amount / itemTemplate._props.StackMaxSize);
+
         for (let itemsToAdd = 0; itemsToAdd < stackAmount; itemsToAdd++) {
             if (amount > 0) {
                 let itemSize = false;
@@ -333,7 +336,16 @@ class Character extends BaseModel {
                 if (children) {
                     const childItemArray = []
                     for (const childItem of children) {
-                        const childrenAdded = await this.addItemToParent(item, childItem._tpl, childItem.slotId, childItem.amount, childItem.foundInRaid, childItem.upd, childItem.children);
+                        const childrenAdded = await this.addItemToParent(
+                            item,
+                            childItem._tpl,
+                            childItem.slotId,
+                            childItem.amount,
+                            childItem.foundInRaid,
+                            childItem.upd,
+                            childItem.children
+                        );
+
                         for (const childAdded of childrenAdded) {
                             childItemArray.push(childAdded);
                             itemsAdded.push(childAdded);
@@ -344,7 +356,12 @@ class Character extends BaseModel {
                     itemSize = await item.getSize();
                 }
 
-                const freeSlot = await Item.getFreeSlot(container, this.Inventory.items, itemSize.width, itemSize.height);
+                const freeSlot = await Item.getFreeSlot(
+                    container,
+                    this.Inventory.items,
+                    itemSize.width,
+                    itemSize.height
+                );
                 if (freeSlot) {
                     item.parentId = container._id;
                     item.slotId = freeSlot.slotId;
@@ -392,7 +409,7 @@ class Character extends BaseModel {
             }
         }
 
-        if(noSpace) {
+        if (noSpace) {
             if (itemsAdded.length > 0) {
                 for (const itemAdded of itemsAdded) {
                     await this.removeItem(itemAdded, -1);
@@ -425,7 +442,7 @@ class Character extends BaseModel {
                     }
                 }
             }
-            
+
         }
         return [modifiedItems, remainingRequestStack];
     }
@@ -459,8 +476,7 @@ class Character extends BaseModel {
             item.upd = {}
             item.upd.StackObjectsCount = amount;
         } else {
-            if(itemTemplate._props.StackMaxSize > 1)
-            {
+            if (itemTemplate._props.StackMaxSize > 1) {
                 item.upd = {}
                 item.upd.StackObjectsCount = itemTemplate._props.StackMaxSize;
             }
@@ -511,14 +527,14 @@ class Character extends BaseModel {
         const item = await this.getInventoryItemByID(itemId);
         logger.logDebug(item);
         const children = await item.getAllChildItemsInInventory(this.Inventory.items);
-        if(children) {
+        if (children) {
             for (const child of children) {
                 await this.removeInventoryItemByID(child._id);
                 output.removed.push(child);
             }
         }
 
-        if(amount !== -1 && typeof item.upd !== "undefined" && typeof item.upd.StackObjectsCount !== "undefined" && amount < item.upd.StackObjectsCount) {
+        if (amount !== -1 && typeof item.upd !== "undefined" && typeof item.upd.StackObjectsCount !== "undefined" && amount < item.upd.StackObjectsCount) {
             item.upd.StackObjectsCount = item.upd.StackObjectsCount - amount;
             output.changed.push(item);
             return output;
@@ -708,15 +724,15 @@ class Character extends BaseModel {
 
     async applyHideoutBonus(bonus) {
         // Special bonuses //
-        switch(bonus.type) {
+        switch (bonus.type) {
             case "MaximumEnergyReserve":
                 this.Health.Energy.Maximum += bonus.value;
-            break;
+                break;
         }
 
-        logger.logDebug(`Bonus ${bonus.type} added to character ${this._id}.` )
+        logger.logDebug(`Bonus ${bonus.type} added to character ${this._id}.`)
         logger.logDebug(bonus);
-        
+
         this.Bonuses.push(bonus);
         return true;
     }

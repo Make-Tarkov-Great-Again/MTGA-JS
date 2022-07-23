@@ -1,8 +1,8 @@
 const { default: stringify } = require("fast-safe-stringify");
 const { database } = require("../../app");
 const cloneDeep = require("rfdc")();
-const { ClientController, GameController, MenuController, TradingController, FriendController } = require("../controllers/client");
-const { Weaponbuild, Ragfair, Profile } = require("../models");
+const { ClientController, GameController, MenuController, TradingController, FriendController, LocationController } = require("../controllers/client");
+const { Weaponbuild, Ragfair, Profile} = require("../models");
 const { logger, FastifyResponse, writeFile } = require("../utilities");
 
 module.exports = async function gameRoutes(app, _opts) {
@@ -436,19 +436,7 @@ module.exports = async function gameRoutes(app, _opts) {
 
     // Client Location Routes //
     app.post(`/client/location/getLocalloot`, async (request, reply) => {
-        console.log(request.body)
-
-        const name = request.body.locationId.toLowerCase();
-        const variant = request.body.variantId;
-        const locations = database.locations;
-        if (locations[name]) {
-            const location = locations[name][variant];
-            return FastifyResponse.zlibJsonReply(
-                reply,
-                FastifyResponse.applyBody(location)
-            );
-        }
-        return logger.logDebug("Location get local loot not implemented yet");
+        await LocationController.clientLocationGetLocalloot(request, reply);
     });
 
 
