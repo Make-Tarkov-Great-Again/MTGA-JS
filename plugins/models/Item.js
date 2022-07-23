@@ -315,6 +315,7 @@ class Item extends BaseModel {
         }
 
         for (const item of items) {
+            logger.logDebug(item);
             let childItems = await item.getAllChildItemsInInventory(itemInventory);
             let itemSize = await item.getSize(childItems);
 
