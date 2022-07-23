@@ -298,26 +298,41 @@ class GameController {
         logger.logDebug(moveAction);
 
         let templateItem;
-        if (moveAction.fromOwner && moveAction.fromOwner.type === "Trader") {
-            const trader = await Trader.get(moveAction.fromOwner.id);
-            if (trader) {
-                const inventoryItem = await trader.getAssortItemByID(moveAction.item);
-                if (inventoryItem) {
-                    templateItem = await Item.get(inventoryItem._tpl);
-                } else {
-                    logger.logError(`Examine Request failed: Unable to find item database template of itemId ${moveAction.item}`);
+
+        if(typeof moveAction.fromOwner !== "undefined") {
+            switch(moveAction.fromOwner.type) {
+                case "Trader":
+                    const trader = await Trader.get(moveAction.fromOwner.id);
+                    if (trader) {
+                        const inventoryItem = await trader.getAssortItemByID(moveAction.item);
+                        if (inventoryItem) {
+                            templateItem = await Item.get(inventoryItem._tpl);
+                        } else {
+                            logger.logError(`Examine Request failed: Unable to find item database template of itemId ${moveAction.item}`);
+                            return false;
+                        }
+                    } else {
+                        logger.logError("Examine Request failed: Unable to get trader data.");
+                        return false;
+                    }
+                break;
+            
+                case "RagFair":
+                    const ragfairOffers = database.ragfair.offers;
+                    const item = ragfairOffers.find(function (i) {
+                        if (i._id === moveAction.fromOwner.id) return i;
+                    });
+                    templateItem = await Item.get(item.items[0]._tpl);
+                break;
+
+                case "HideoutUpgrade":
+                    templateItem = await Item.get(moveAction.item);
+                break;
+
+                default:
+                    logger.logError(`Examine Request failed: Unknown moveAction.fromOwner.Type: ${moveAction.fromOwner.type}`);
                     return false;
-                }
-            } else {
-                logger.logError("Examine Request failed: Unable to get trader data.");
-                return false;
             }
-        } else if (moveAction.fromOwner && moveAction.fromOwner.type === "RagFair") {
-            const ragfairOffers = database.ragfair.offers;
-            const item = ragfairOffers.find(function (i) {
-                if (i._id === moveAction.fromOwner.id) return i;
-            });
-            templateItem = await Item.get(item.items[0]._tpl);
         } else {
             const item = await playerProfile.character.getInventoryItemByID(moveAction.item);
             if (item) {

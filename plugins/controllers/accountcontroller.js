@@ -165,15 +165,77 @@ class AccountController {
             reply.redirect('/webinterface/account/login');
         }
 
+        let editionsHTML = "";
+            for (const [name, value] of Object.entries(Object.keys(await Edition.getAll()))) {
+                if(userAccount.edition.id === value) {
+                    editionsHTML = editionsHTML + '<option value="' + value + '" selected>' + value + '</option>'
+                } else {
+                    editionsHTML = editionsHTML + '<option value="' + value + '">' + value + '</option>'
+                }
+            }
+
         let pageVariables = {
-            "tarkovPath": ((userAccount.tarkovPath) ? userAccount.tarkovPath : '')
+            "tarkovPath": ((userAccount.tarkovPath) ? userAccount.tarkovPath : ''),
+            "editions": editionsHTML
         }
 
         return webinterface.renderPage("/account/settings.html", pageVariables);
     }
 
-    static update = async (request = null, reply = null) => {
+    static wipe = async (request = null, reply = null) => {
+        reply.type("text/html")
 
+        const sessionID = await webinterface.checkForSessionID(request);
+        if (!sessionID) {
+            reply.redirect('/webinterface/account/login');
+        }
+
+        const userAccount = await Account.get(sessionID);
+        if (!userAccount) {
+            reply.redirect('/webinterface/account/login');
+        }
+
+        userAccount.wipe = true;
+        await userAccount.save();
+
+        return webinterface.renderMessage("OK", "Your account was wiped.");
+    }
+
+    static update = async (request = null, reply = null) => {
+        reply.type("text/html")
+
+        const sessionID = await webinterface.checkForSessionID(request);
+        if (!sessionID) {
+            reply.redirect('/webinterface/account/login');
+        }
+
+        const userAccount = await Account.get(sessionID);
+        if (!userAccount) {
+            reply.redirect('/webinterface/account/login');
+        }
+
+        if(request.body.password && request.body.password_retype) {
+            if(request.body.password === request.body.password_retype) {
+                userAccount.password = request.body.password;
+            } else {
+                return webinterface.renderMessage("Error", "The passwords did not match.");
+            }
+        }
+
+        if(request.body.edition) {
+            userAccount.edition = await Edition.get(request.body.edition);
+        }
+
+        if(request.body.wipe) {
+            userAccount.wipe = true;
+        }
+
+        userAccount.save();
+
+        logger.logDebug(userAccount)
+
+
+        reply.redirect('/webinterface/account/settings');
     }
 
     static delete = async (request = null, reply = null) => {
