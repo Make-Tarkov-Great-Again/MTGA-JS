@@ -87,6 +87,7 @@ class ClientController {
 
     static clientLocations = async (_request = null, reply = null) => {
         const baseResponse = database.core.locations;
+        logger.logDebug(`Using dumps for locations - will work out a better way later.`);
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(baseResponse)
