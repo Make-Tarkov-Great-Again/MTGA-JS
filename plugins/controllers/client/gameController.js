@@ -1,5 +1,5 @@
 const { database } = require("../../../app");
-const { Profile, Language, Account, Edition, Customization, Storage, Character, Health, Weaponbuild, Quest, Locale, Trader, Item, HideoutArea } = require("../../models");
+const { Profile, Language, Account, Edition, Customization, Storage, Character, Health, Weaponbuild, Quest, Locale, Trader, Item, HideoutArea, HideoutProduction } = require("../../models");
 const { generateUniqueId, getCurrentTimestamp, logger, FastifyResponse, writeFile, stringify, readParsed, payTrade } = require("../../utilities");
 
 
@@ -726,6 +726,68 @@ class GameController {
             }
         }
         return output;
+    }
+
+    static clientGameProfileHideoutSingleProductionStart = async (moveAction = null, _reply = null, sessionID = null) => {
+        logger.logDebug(moveAction);
+        const playerProfile = await Profile.get(sessionID);
+        if (playerProfile) {
+            const hideoutProductionTemplate = await HideoutProduction.get(moveAction.recipeId);
+            if(!hideoutProductionTemplate) {
+                logger.logError(`Starting hideout production failed. Unknown hideout production with Id ${moveAction.recipeId} in hideoutProduction database.`);
+                return;
+            }
+
+            let output = {
+                items: {
+                    new: [],
+                    change: [],
+                    del: []
+                }
+            };
+
+            let allItemsTaken = true;
+            for (const itemToTake of moveAction.items) {
+                const itemTaken = await playerProfile.character.removeItem(itemToTake.id, itemToTake.count);
+                if (itemTaken) {
+                    if (typeof itemTaken.changed !== "undefined") {
+                        output.items.change = output.items.change.concat(itemTaken.changed);
+                    }
+
+                    if (typeof itemTaken.removed !== "undefined") {
+                        output.items.del = output.items.del.concat(itemTaken.removed);
+                    }
+                } else {
+                    allItemsTaken = false;
+                }
+                /*await trader.reduceStock(requestEntry.item_id, requestEntry.count);*/
+            }
+
+            if(allItemsTaken) {
+                let productionTime = 0
+
+                if(typeof hideoutProductionTemplate.ProductionTime !== "undefined") {
+                    productionTime = hideoutProductionTemplate.ProductionTime;
+                } else if (typeof hideoutProductionTemplate.productionTime !== "undefined") {
+                    productionTime = hideoutProductionTemplate.productionTime;
+                }
+
+                playerProfile.character.Hideout.Production = {
+                    Progress: 0,
+                    inProgress: true,
+                    RecipeId: moveAction.recepieId,
+                    SkipTime: 0,
+                    ProductionTime: parseInt(productionTime),
+                    StartTimestamp: getCurrentTimestamp()
+                }
+
+                return output;
+            } else {
+                // How do return custom error to client!!1!1!!!111!elf?
+                logger.logError(`Upgrading HideoutArea ${templateHideoutArea._id} for character ${playerProfile.character._id} failed. Unable to take required items.`);
+                return;
+            }
+        }
     }
 
 }

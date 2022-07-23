@@ -159,6 +159,11 @@ module.exports = async function gameRoutes(app, _opts) {
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
+                case "HideoutSingleProductionStart":
+                    actionResult = await GameController.clientGameProfileHideoutSingleProductionStart(moveAction, reply, sessionID);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+
                 // more, MOOOOOOOOOOOOOOORE
                 case "Insure":
                 case "RagFairAddOffer":
