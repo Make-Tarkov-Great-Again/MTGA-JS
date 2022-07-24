@@ -79,13 +79,13 @@ module.exports = async function gameRoutes(app, _opts) {
     app.post(`/client/game/profile/items/moving`, async (request, reply) => {
         const sessionId = await FastifyResponse.getSessionID(request);
         if(!sessionId) {
-            logger.logError(`[moving] Could not get session Id from request.`)
+            logger.logError(`[/client/game/profile/items/moving] Could not get session Id from request.`)
             return false;
         }
 
         const playerProfile = await Profile.get(sessionId);
         if(!playerProfile) {
-            logger.logError(`[moving] Unable to get player profile for sessionId ${sessionId}.`)
+            logger.logError(`[/client/game/profile/items/moving] Unable to get player profile for sessionId ${sessionId}.`)
             return false;
         }
 
@@ -185,7 +185,7 @@ module.exports = async function gameRoutes(app, _opts) {
                 case "RagFairAddOffer":
                 case "AddToWishList":
                 default:
-                    logger.logWarning("Action " + action + " is not yet implemented.");
+                    logger.logWarning("[/client/game/profile/items/moving] Action " + action + " is not yet implemented.");
             }
         }
         await playerProfile.save();
