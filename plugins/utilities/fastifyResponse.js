@@ -35,7 +35,6 @@ class FastifyResponse {
 
 
     static getBackendURL() {
-        const { database } = require("../../app");
         return "https://" + this.getUrl();
     }
 
