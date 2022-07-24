@@ -9,8 +9,9 @@ module.exports = async function gameRoutes(app, _opts) {
 
     app.get('/*', { websocket: true }, async (connection, request) => {
         connection.socket.on('message', message => {
-            connection.socket.send('hi from wildcard route')
-        })
+            logger.logError("MESSAGE RECEIVED");
+            connection.socket.send('hi from wildcard route');
+        });
     })
 
     // Initial entry points for tarkov //
@@ -186,19 +187,9 @@ module.exports = async function gameRoutes(app, _opts) {
         );
     });
 
-
     // Client Account Routes //
     app.post("/client/account/customization", async (request, reply) => {
         await ClientController.clientAccountCustomization(request, reply);
-    });
-
-
-    // Client Notifier Routes //
-    app.post("/client/notifier/channel/create", async (request, reply) => {
-        return FastifyResponse.zlibJsonReply(
-            reply,
-            FastifyResponse.applyBody(FastifyResponse.getNotifier(await FastifyResponse.getSessionID(request)))
-        );
     });
 
     // Client Profile Routes //
