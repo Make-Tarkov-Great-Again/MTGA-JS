@@ -166,7 +166,12 @@ module.exports = async function gameRoutes(app, _opts) {
                     break;
 
                 case "HideoutPutItemsInAreaSlots":
-                    actionResult = await GameController.clientGameProfileHideoutAreaSlot(moveAction, reply, playerProfile);
+                    actionResult = await GameController.clientGameProfileHideoutPutItemsInAreaSlots(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+
+                case "HideoutTakeItemsFromAreaSlots":
+                    actionResult = await GameController.clientGameProfileHideoutTakeItemsFromAreaSlots(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
@@ -177,6 +182,11 @@ module.exports = async function gameRoutes(app, _opts) {
 
                 case "HideoutSingleProductionStart":
                     actionResult = await GameController.clientGameProfileHideoutSingleProductionStart(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+
+                case "HideoutContinuousProductionStart":
+                    actionResult = await GameController.clientGameProfileHideoutContinuousProductionStart(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 

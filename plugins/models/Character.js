@@ -314,11 +314,13 @@ class Character extends BaseModel {
      */
     async addItem(container, itemId, children = undefined, amount = 1, foundInRaid = false, customUpd = false) {
         if (!container || !itemId) {
+            logger.logError(`[addItem] Unable to add item, the container or itemId wasn't provided.`);
             return false;
         }
 
         const itemTemplate = await Item.get(itemId);
         if (!itemTemplate) {
+            logger.logError(`[addItem] Unable to add item, can't get the itemTemplate for itemId ${itemid}.`);
             return false;
         }
 
@@ -415,11 +417,12 @@ class Character extends BaseModel {
                     await this.removeItem(itemAdded, -1);
                 }
             }
+            logger.logError(`[addItem] Unable to add item, there is not space left.`);
             return false;
         } else if (itemsAdded.length > 0) {
             return itemsAdded;
         } else {
-            logger.logDebug(`Unable to add item ${itemId}. Unknown cause.`);
+            logger.logDebug(`[addItem] Unable to add item ${itemId}. Unknown cause.`);
             return false;
         }
     }
