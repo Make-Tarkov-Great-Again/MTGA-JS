@@ -18,26 +18,26 @@
 			},
 			"FramerateLimit": {
 				"MinFramerateLimit": 30,
-				"MaxFramerateLobbyLimit": 60,
+				"MaxFramerateLobbyLimit": 96,
 				"MaxFramerateGameLimit": 144
 			},
-			"ClientSendRateLimit": 120,
+			"ClientSendRateLimit": 60,
 			"TurnOffLogging": false,
 			"NVidiaHighlights": false,
-			"WebDiagnosticsEnabled": false,
-			"KeepAliveInterval": 140,
-			"GroupStatusInterval": 60,
+			"WebDiagnosticsEnabled": true,
+			"KeepAliveInterval": 60,
+			"GroupStatusInterval": 20,
 			"PingServersInterval": 5,
 			"PingServerResultSendInterval": -1,
-			"WeaponOverlapDistanceCulling": 50,
+			"WeaponOverlapDistanceCulling": -1,
 			"FirstCycleDelaySeconds": 20,
 			"SecondCycleDelaySeconds": 40,
 			"NextCycleDelaySeconds": 60,
-			"AdditionalRandomDelaySeconds": 13,
+			"AdditionalRandomDelaySeconds": 10,
 			"Mark502and504AsNonImportant": true,
 			"DefaultRetriesCount": 1,
 			"CriticalRetriesCount": 1,
-			"AFKTimeoutSeconds": 1800
+			"AFKTimeoutSeconds": 604800
 		}
 	},
 	"crc": 251050423

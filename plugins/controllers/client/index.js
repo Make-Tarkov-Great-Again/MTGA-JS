@@ -4,6 +4,7 @@ const GameController = require("./GameController");
 const MenuController = require("./MenuController");
 const TradingController = require("./TradingController");
 const BundlesController = require("./BundlesController");
+const LocationController = require("./LocationController");
 
 module.exports = {
     ...ClientController,
@@ -11,5 +12,6 @@ module.exports = {
     ...GameController,
     ...MenuController,
     ...TradingController,
-    ...BundlesController
+    ...BundlesController,
+    ...LocationController
 }

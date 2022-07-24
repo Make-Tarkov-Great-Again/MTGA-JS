@@ -1,6 +1,16 @@
 const { database } = require("../../../app");
-const { Profile, Language, Account, Edition, Customization, Storage, Character, Health, Weaponbuild, Quest, Locale, Trader, Item, HideoutArea, HideoutProduction } = require("../../models");
-const { generateUniqueId, getCurrentTimestamp, logger, FastifyResponse, writeFile, stringify, readParsed, payTrade } = require("../../utilities");
+const {
+    Profile, Language, Account,
+    Edition, Customization, Storage,
+    Character, Health,
+    Weaponbuild, Quest, Locale,
+    Trader, Item, HideoutArea
+} = require("../../models");
+const {
+    generateUniqueId, getCurrentTimestamp, logger,
+    FastifyResponse, writeFile, stringify, readParsed,
+    payTrade
+} = require("../../utilities");
 
 
 class GameController {
@@ -299,8 +309,8 @@ class GameController {
 
         let templateItem;
 
-        if(typeof moveAction.fromOwner !== "undefined") {
-            switch(moveAction.fromOwner.type) {
+        if (typeof moveAction.fromOwner !== "undefined") {
+            switch (moveAction.fromOwner.type) {
                 case "Trader":
                     const trader = await Trader.get(moveAction.fromOwner.id);
                     if (trader) {
@@ -315,7 +325,7 @@ class GameController {
                         logger.logError("Examine Request failed: Unable to get trader data.");
                         return false;
                     }
-                break;
+                    break;
 
                 case "RagFair":
                     const ragfairOffers = database.ragfair.offers;
@@ -323,13 +333,13 @@ class GameController {
                         if (i._id === moveAction.fromOwner.id) return i;
                     });
                     templateItem = await Item.get(item.items[0]._tpl);
-                break;
+                    break;
 
                 case "HideoutUpgrade":
                 case "HideoutProduction":
                 case "ScavCase":
                     templateItem = await Item.get(moveAction.item);
-                break;
+                    break;
 
                 default:
                     logger.logError(`Examine Request failed: Unknown moveAction.fromOwner.Type: ${moveAction.fromOwner.type}`);
@@ -471,15 +481,80 @@ class GameController {
             logger.logDebug(output);
             logger.logDebug(output.items.change);
             logger.logDebug(output.items.new);
-            
+
         } else if (moveAction.Action === 'RagFairBuyOffer') {
             console.log(moveAction);
             const ragfairOffers = database.ragfair.offers;
             const item = ragfairOffers.find(function (i) {
                 if (i._id === moveAction.offers[0].id) return i;
             });
-            if (item != null) logger.logError(`${moveAction.Action} not implemented fully, at least the item is found???? yay!`);
-            else logger.logError(`${moveAction.Action} item is not found???? yay!?????`);
+
+            console.log(item.items[0]._tpl)
+            const itemTemplate = await Item.get(item.items[0]._tpl);
+
+            //const unpreparedChildren = await Item.getAllChildItemsInInventory(item.items);
+            let preparedChildren = false;
+            if (item.items.length > 0) {
+                preparedChildren = await Item.prepareChildrenForAddItem(item.items[0], item.items);
+            }
+
+
+            // Merge existing item to reach max stack
+            let itemsAdded;
+            let itemsMerged;
+            let remainingStack = moveAction.offers[0].count;
+            const maxStack = await itemTemplate.getStackInfo();
+            if (maxStack) {
+                const existingStacks = await playerProfile.character.getInventoryItemsByTpl(itemTemplate._id);
+
+                [itemsMerged, remainingStack] = await playerProfile.character.addItemToStack(
+                    existingStacks,
+                    maxStack,
+                    moveAction.offers[0].count
+                );
+
+                console.log(itemsMerged);
+                console.log(remainingStack);
+            }
+            if (remainingStack) {
+                itemsAdded = await playerProfile.character.addItem(
+                    await playerProfile.character.getStashContainer(),
+                    item.items[0]._tpl,
+                    preparedChildren,
+                    remainingStack
+                );
+            }
+            if (itemsAdded || itemsMerged) {
+                if (itemsAdded) {
+                    output.items.new = itemsAdded;
+                }
+                if (itemsMerged) {
+                    output.items.change = itemsMerged;
+                }
+                for (const scheme of moveAction.offers[0].items) {
+                    const itemsTaken = await playerProfile.character.removeItem(
+                        scheme.id,
+                        scheme.count
+                    );
+
+                    if (itemsTaken) {
+                        if (typeof itemsTaken.changed !== "undefined") {
+                            output.items.change = output.items.change.concat(itemsTaken.changed);
+                        }
+
+                        if (typeof itemsTaken.removed !== "undefined") {
+                            output.items.del = output.items.del.concat(itemsTaken.removed);
+                        }
+                    } else {
+                        logger.logDebug(`Unable to take items`);
+                    }
+                    /*await trader.reduceStock(requestEntry.item_id, requestEntry.count);*/
+                }
+            } else { logger.logDebug(`Unable to add items`); }
+
+            logger.logDebug(output);
+            logger.logDebug(output.items);
+            logger.logDebug(output.items.change[0].upd);
         } else {
             logger.logError(`My brother in christ what are you trying to do ? ${moveAction.type} ? That shit is not done lmao pay me now.`);
         }
@@ -599,12 +674,12 @@ class GameController {
             const templateHideoutArea = await HideoutArea.getBy("type", moveAction.areaType);
             let characterHideoutArea = await playerProfile.character.getHideoutAreaByType(moveAction.areaType);
 
-            if(!templateHideoutArea) {
+            if (!templateHideoutArea) {
                 logger.logError(`Upgrading HideoutArea failed. Unknown hideout area ${moveAction.areaType} in hideoutArea database.`);
                 return;
             }
 
-            if(!characterHideoutArea) {
+            if (!characterHideoutArea) {
                 logger.logError(`Upgrading HideoutArea failed. Unknown hideout area ${moveAction.areaType} in character profile.`);
                 return;
             }
@@ -613,7 +688,7 @@ class GameController {
             //logger.logDebug(characterHideoutArea);
 
             const nextLevel = characterHideoutArea.level + 1;
-            if(typeof templateHideoutArea.stages[nextLevel] === "undefined") {
+            if (typeof templateHideoutArea.stages[nextLevel] === "undefined") {
                 logger.logError(`Upgrading HideoutArea ${templateHideoutArea._id} for character ${playerProfile.character._id} failed. The level ${nextLevel} doesn't exist.`);
                 return;
             }
@@ -643,11 +718,11 @@ class GameController {
                 /*await trader.reduceStock(requestEntry.item_id, requestEntry.count);*/
             }
 
-            if(allItemsTaken) {
+            if (allItemsTaken) {
                 const templateHideoutAreaStage = templateHideoutArea.stages[nextLevel];
-                if(templateHideoutAreaStage.constructionTime > 0) {
-                    const currentTime = ~~ (Date.now() / 1000);
-                    characterHideoutArea.completeTime = ~~ (currentTime + templateHideoutAreaStage.constructionTime);
+                if (templateHideoutAreaStage.constructionTime > 0) {
+                    const currentTime = ~~(Date.now() / 1000);
+                    characterHideoutArea.completeTime = ~~(currentTime + templateHideoutAreaStage.constructionTime);
                     characterHideoutArea.constructing = true;
                 }
 
@@ -667,18 +742,18 @@ class GameController {
             const templateHideoutArea = await HideoutArea.getBy("type", moveAction.areaType);
             const characterHideoutArea = await playerProfile.character.getHideoutAreaByType(moveAction.areaType);
 
-            if(!templateHideoutArea) {
+            if (!templateHideoutArea) {
                 logger.logError(`Upgrading HideoutArea failed. Unknown hideout area ${moveAction.areaType} in hideoutArea database.`);
                 return;
             }
 
-            if(!characterHideoutArea) {
+            if (!characterHideoutArea) {
                 logger.logError(`Upgrading HideoutArea failed. Unknown hideout area ${moveAction.areaType} in character profile.`);
                 return;
             }
             const nextLevel = characterHideoutArea.level + 1;
             const templateHideoutAreaStage = templateHideoutArea.stages[nextLevel];
-            if(typeof templateHideoutAreaStage === "undefined") {
+            if (typeof templateHideoutAreaStage === "undefined") {
                 logger.logError(`Upgrading HideoutArea ${templateHideoutArea._id} for character ${playerProfile.character._id} failed. The level ${nextLevel} doesn't exist.`);
                 return;
             }
@@ -689,9 +764,9 @@ class GameController {
 
             const hideoutBonuses = templateHideoutAreaStage.bonuses;
 
-            if(typeof hideoutBonuses !== "undefined" && hideoutBonuses.length > 0) {
+            if (typeof hideoutBonuses !== "undefined" && hideoutBonuses.length > 0) {
                 for (const hideoutBonus of hideoutBonuses) {
-                    if(await playerProfile.character.applyHideoutBonus(hideoutBonus)) {
+                    if (await playerProfile.character.applyHideoutBonus(hideoutBonus)) {
 
                     }
                 }
@@ -735,7 +810,7 @@ class GameController {
         const playerProfile = await Profile.get(sessionID);
         if (playerProfile) {
             const hideoutProductionTemplate = await HideoutProduction.get(moveAction.recipeId);
-            if(!hideoutProductionTemplate) {
+            if (!hideoutProductionTemplate) {
                 logger.logError(`Starting hideout production failed. Unknown hideout production with Id ${moveAction.recipeId} in hideoutProduction database.`);
                 return;
             }
@@ -765,10 +840,10 @@ class GameController {
                 /*await trader.reduceStock(requestEntry.item_id, requestEntry.count);*/
             }
 
-            if(allItemsTaken) {
+            if (allItemsTaken) {
                 let productionTime = 0
 
-                if(typeof hideoutProductionTemplate.ProductionTime !== "undefined") {
+                if (typeof hideoutProductionTemplate.ProductionTime !== "undefined") {
                     productionTime = hideoutProductionTemplate.ProductionTime;
                 } else if (typeof hideoutProductionTemplate.productionTime !== "undefined") {
                     productionTime = hideoutProductionTemplate.productionTime;
