@@ -7,11 +7,13 @@ const { logger, FastifyResponse, writeFile } = require("../utilities");
 
 module.exports = async function gameRoutes(app, _opts) {
 
-    app.get('/*', { websocket: true }, async (connection, request) => {
+    app.get('/*', {
+        websocket: true
+    }, (connection /* SocketStream */ , req /* FastifyRequest */ ) => {
         connection.socket.on('message', message => {
-            logger.logError("MESSAGE RECEIVED");
-            connection.socket.send('hi from wildcard route');
-        });
+            // message.toString() === 'hi from client'
+            connection.socket.send('hi from wildcard route')
+        })
     })
 
     // Initial entry points for tarkov //

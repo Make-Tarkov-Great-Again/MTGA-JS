@@ -3,8 +3,6 @@ const fp = require('fastify-plugin');
 
 module.exports = fp(async function (app, _opts) {
 
-  await app.register(require('@fastify/websocket'));
-
   /**
    * Adds compression utils to the Fastify reply object
    * and a hook to decompress requests payloads.

@@ -1,6 +1,5 @@
 const { certificate } = require("./engine/certificategenerator");
 const cert = certificate.generate("127.0.0.1");
-const WebSocket = require('ws');
 const zlib = require("node:zlib");
 
 /**
@@ -97,19 +96,41 @@ app.addContentTypeParser('*', (req, payload, done) => {
 * Register Handler
 */
 app.register(require('./plugins/register.js'));
+app.register(require('@fastify/websocket'), {
+    options: {
+        maxPayload: 1048576
+    }
+});
 
+//app.register(async function (fastify) {
+//    fastify.get('/*', {
+//        websocket: true
+//    }, (connection /* SocketStream */ , req /* FastifyRequest */ ) => {
+//        connection.socket.on('message', message => {
+//            // message.toString() === 'hi from client'
+//            connection.socket.send('hi from wildcard route')
+//        })
+//    })
+//
+//    fastify.get('/', {
+//        websocket: true
+//    }, (connection /* SocketStream */ , req /* FastifyRequest */ ) => {
+//        connection.socket.on('message', message => {
+//            // message.toString() === 'hi from client'
+//            connection.socket.send('hi from server')
+//        })
+//    })
+//});
 /**
 * Start the server
 */
-async function start() {
+function start() {
     try {
-        await app.listen({ port: 443, host: '127.0.0.1' });
-        app.log.info(`Server listening on ${app.server.address().port}`);
-
-        //app.log.info(`Websocket listening on ${app.websocketServer.address().port}`);
+        app.listen({ port: 443, host: '127.0.0.1' });
     } catch (err) {
         app.log.info(err);
         process.exit(1);
     }
 }
 start();
+
