@@ -4,7 +4,7 @@ const {
     Edition, Customization, Storage,
     Character, Health,
     Weaponbuild, Quest, Locale,
-    Trader, Item, HideoutArea
+    Trader, Item, HideoutArea, HideoutProduction
 } = require("../../models");
 const {
     generateUniqueId, getCurrentTimestamp, logger,
@@ -751,11 +751,14 @@ class GameController {
         }
     }
 
-    static clientGameProfileHideoutAreaSlot = async (moveAction = null, _reply = null, playerProfile = null) => {
+    static clientGameProfileHideoutPutItemsInAreaSlots = async (moveAction = null, _reply = null, playerProfile = null) => {
         const output = { items: { new: [], change: [], del: [] } };
         if (playerProfile) {
             const hideoutArea = await playerProfile.character.getHideoutAreaByType(moveAction.areaType);
             for (const itemPosition in moveAction.items) {
+                logger.logDebug(moveAction.items);
+                logger.logDebug(itemPosition);
+
                 if (moveAction.items.hasOwnProperty(itemPosition)) {
                     const itemData = moveAction.items[itemPosition];
                     const item = await playerProfile.character.getInventoryItemByID(itemData.id);
@@ -768,13 +771,31 @@ class GameController {
                             }
                         ]
                     };
-                    if (!(itemPosition in hideoutArea.slots)) {
-                        hideoutArea.slots.push(slotData);
-                    } else {
-                        hideoutArea.slots.splice(itemPosition, 1, slotData);
-                    }
+                    hideoutArea.slots[itemPosition] = slotData;
                     await playerProfile.character.removeItem(item._id);
                     output.items.del.push(item);
+                }
+            }
+        }
+        return output;
+    }
+
+    static clientGameProfileHideoutTakeItemsFromAreaSlots = async (moveAction = null, _reply = null, playerProfile = null) => {
+        const output = { items: { new: [], change: [], del: [] } };
+        if (playerProfile) {
+            const hideoutArea = await playerProfile.character.getHideoutAreaByType(moveAction.areaType);
+            if(!hideoutArea) {
+                logger.logError(`[clientGameProfileHideoutTakeItemsFromAreaSlots] Unable to find hideout area type ${moveAction.areaType} for playerProfile ${playerProfile.character._id}.`);
+                return output;
+            }
+
+            for (const slot in moveAction.slots) {
+                for(const item of hideoutArea.slots[slot].item) {
+                    const itemAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), item._tpl, false, 1);
+                    if(itemAdded) {
+                        output.items.new = [...output.items.new, ...itemAdded];
+                        hideoutArea.slots.splice(slot, 1);
+                    }
                 }
             }
         }
@@ -788,7 +809,7 @@ class GameController {
                 logger.logError(`[clientGameProfileHideoutToggleArea] Unable to find hideout area type ${moveAction.areaType} for playerProfile ${playerProfile.character._id}.`);
                 return;
             }
-            hideoutArea
+            hideoutArea.active = moveAction.enabled;
         }
     }
 
@@ -835,7 +856,7 @@ class GameController {
                     productionTime = hideoutProductionTemplate.productionTime;
                 }
 
-                playerProfile.character.Hideout.Production = {
+                playerProfile.character.Hideout.Production[hideoutProductionTemplate._id] = {
                     Progress: 0,
                     inProgress: true,
                     RecipeId: moveAction.recepieId,
@@ -847,11 +868,36 @@ class GameController {
                 return output;
             } else {
                 // How do return custom error to client!!1!1!!!111!elf?
-                logger.logError(`[clientGameProfileHideoutSingleProductionStart] Upgrading HideoutArea ${templateHideoutArea._id} for character ${playerProfile.character._id} failed. Unable to take required items.`);
+                logger.logError(`[clientGameProfileHideoutSingleProductionStart] Starting hideout production for recepie with Id ${moveAction.recipeId} failed. Unable to take required items.`);
                 return;
             }
         }
     }
 
+    static clientGameProfileHideoutContinuousProductionStart = async (moveAction = null, _reply = null, playerProfile = null) => {
+        if (playerProfile) {
+            const hideoutProductionTemplate = await HideoutProduction.get(moveAction.recipeId);
+            if (!hideoutProductionTemplate) {
+                logger.logError(`[clientGameProfileHideoutContinuousProductionStart] Starting hideout production failed. Unknown hideout production with Id ${moveAction.recipeId} in hideoutProduction database.`);
+                return;
+            }
+
+            let productionTime = 0
+            if (typeof hideoutProductionTemplate.ProductionTime !== "undefined") {
+                productionTime = hideoutProductionTemplate.ProductionTime;
+            } else if (typeof hideoutProductionTemplate.productionTime !== "undefined") {
+                productionTime = hideoutProductionTemplate.productionTime;
+            }
+
+            playerProfile.character.Hideout.Production[hideoutProductionTemplate._id] = {
+                Progress: 0,
+                inProgress: true,
+                RecipeId: moveAction.recepieId,
+                SkipTime: 0,
+                ProductionTime: parseInt(productionTime),
+                StartTimestamp: getCurrentTimestamp()
+            }
+        }
+    }
 }
 module.exports.GameController = GameController;
