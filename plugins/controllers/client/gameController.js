@@ -263,8 +263,7 @@ class GameController {
         }
     };
 
-    static clientGameProfileAcceptQuest = async (moveAction = null, reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
+    static clientGameProfileAcceptQuest = async (moveAction = null, reply = null, playerProfile = null) => {
         const quest = await Quest.get(moveAction.qid);
         const questReward = await quest.getRewards(playerProfile, "Started");
         await playerProfile.character.addQuest(quest);
@@ -281,12 +280,7 @@ class GameController {
         return {};
     };
 
-    static clientGameProfileMoveItem = async (moveAction = null, reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
-        if (!playerProfile) {
-            // display error
-        }
-
+    static clientGameProfileMoveItem = async (moveAction = null, reply = null, playerProfile = null) => {
         logger.logDebug("Move request:");
         logger.logDebug(moveAction);
 
@@ -298,12 +292,7 @@ class GameController {
         }
     };
 
-    static clientGameProfileExamine = async (moveAction = null, reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
-        if (!playerProfile) {
-            // display error
-        }
-
+    static clientGameProfileExamine = async (moveAction = null, reply = null, playerProfile = null) => {
         logger.logDebug("Examine request:");
         logger.logDebug(moveAction);
 
@@ -369,11 +358,9 @@ class GameController {
         return {};
     };
 
-    static clientGameProfileTradingConfirm = async (moveAction = null, _reply = null, sessionID = null) => {
+    static clientGameProfileTradingConfirm = async (moveAction = null, _reply = null, playerProfile = null) => {
         logger.logDebug("Trading request:");
         logger.logDebug(moveAction);
-
-        const playerProfile = await Profile.get(sessionID);
         const trader = await Trader.get(moveAction.tid);
         const output = {
             items: {
@@ -561,8 +548,7 @@ class GameController {
         return output;
     };
 
-    static clientGameProfileSplitItem = async (moveAction = null, _reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
+    static clientGameProfileSplitItem = async (moveAction = null, _reply = null, playerProfile = null) => {
         const splittedItems = await playerProfile.character.splitItems(moveAction);
         if (splittedItems) {
             return {
@@ -571,8 +557,7 @@ class GameController {
         }
     };
 
-    static clientGameProfileMergeItem = async (moveAction = null, _reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
+    static clientGameProfileMergeItem = async (moveAction = null, _reply = null, playerProfile = null) => {
         const mergedItems = await playerProfile.character.mergeItems(moveAction);
         if (mergedItems) {
             return {
@@ -581,8 +566,7 @@ class GameController {
         }
     };
 
-    static clientGameProfileRemoveItem = async (moveAction = null, _reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
+    static clientGameProfileRemoveItem = async (moveAction = null, _reply = null, playerProfile = null) => {
         const deletedItems = await playerProfile.character.removeItems(moveAction);
         if (deletedItems) {
             return {
@@ -591,8 +575,7 @@ class GameController {
         }
     };
 
-    static clientGameProfileFoldItem = async (moveAction = null, _reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
+    static clientGameProfileFoldItem = async (moveAction = null, _reply = null, playerProfile = null) => {
         if (playerProfile) {
             let item = await playerProfile.character.getInventoryItemByID(moveAction.item);
             if (item) {
@@ -609,8 +592,7 @@ class GameController {
         }
     }
 
-    static clientGameProfileTagItem = async (moveAction = null, _reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
+    static clientGameProfileTagItem = async (moveAction = null, _reply = null, playerProfile = null) => {
         if (playerProfile) {
             const item = await playerProfile.character.getInventoryItemByID(moveAction.item);
             if (item) {
@@ -628,8 +610,7 @@ class GameController {
         }
     }
 
-    static clientGameProfileToggleItem = async (moveAction = null, _reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
+    static clientGameProfileToggleItem = async (moveAction = null, _reply = null, playerProfile = null) => {
         if (playerProfile) {
             let item = await playerProfile.character.getInventoryItemByID(moveAction.item);
             if (item) {
@@ -646,8 +627,7 @@ class GameController {
         }
     }
 
-    static clientGameProfileBindItem = async (moveAction = null, _reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
+    static clientGameProfileBindItem = async (moveAction = null, _reply = null, playerProfile = null) => {
         if (playerProfile) {
             for (let index in playerProfile.character.Inventory.fastPanel) {
                 if (playerProfile.character.Inventory.fastPanel[index] === moveAction.item) {
@@ -658,8 +638,7 @@ class GameController {
         }
     }
 
-    static clientGameProfileReadEncyclopedia = async (moveAction = null, _reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
+    static clientGameProfileReadEncyclopedia = async (moveAction = null, _reply = null, playerProfile = null) => {
         if (playerProfile) {
             for (let id of moveAction.ids) {
                 playerProfile.character.Encyclopedia[id] = true;
@@ -667,9 +646,8 @@ class GameController {
         }
     }
 
-    static clientGameProfileHideoutUpgrade = async (moveAction = null, _reply = null, sessionID = null) => {
+    static clientGameProfileHideoutUpgrade = async (moveAction = null, _reply = null, playerProfile = null) => {
         logger.logDebug(moveAction);
-        const playerProfile = await Profile.get(sessionID);
         if (playerProfile) {
             const templateHideoutArea = await HideoutArea.getBy("type", moveAction.areaType);
             let characterHideoutArea = await playerProfile.character.getHideoutAreaByType(moveAction.areaType);
@@ -736,8 +714,7 @@ class GameController {
         }
     }
 
-    static clientGameProfileHideoutUpgradeComplete = async (moveAction = null, _reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
+    static clientGameProfileHideoutUpgradeComplete = async (moveAction = null, _reply = null, playerProfile = null) => {
         if (playerProfile) {
             const templateHideoutArea = await HideoutArea.getBy("type", moveAction.areaType);
             const characterHideoutArea = await playerProfile.character.getHideoutAreaByType(moveAction.areaType);
@@ -774,8 +751,7 @@ class GameController {
         }
     }
 
-    static clientGameProfileHideoutAreaSlot = async (moveAction = null, _reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
+    static clientGameProfileHideoutAreaSlot = async (moveAction = null, _reply = null, playerProfile = null) => {
         const output = { items: { new: [], change: [], del: [] } };
         if (playerProfile) {
             const hideoutArea = await playerProfile.character.getHideoutAreaByType(moveAction.areaType);
@@ -805,9 +781,14 @@ class GameController {
         return output;
     }
 
-    static clientGameProfileHideoutSingleProductionStart = async (moveAction = null, _reply = null, sessionID = null) => {
+    static clientGameProfileHideoutToggleArea = async (moveAction = null, _reply = null, playerProfile = null) => {
+        if (playerProfile) {
+
+        }
+    }
+
+    static clientGameProfileHideoutSingleProductionStart = async (moveAction = null, _reply = null, playerProfile = null) => {
         logger.logDebug(moveAction);
-        const playerProfile = await Profile.get(sessionID);
         if (playerProfile) {
             const hideoutProductionTemplate = await HideoutProduction.get(moveAction.recipeId);
             if (!hideoutProductionTemplate) {
