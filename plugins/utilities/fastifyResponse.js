@@ -39,7 +39,7 @@ class FastifyResponse {
     }
 
     static getWebSocketURL() {
-        return `ws://${this.getUrl()}`;
+        return `ws://${this.getUrl()}`; //.replace("443", "8080")
     }
 
     static getSessionID = async (request) => {

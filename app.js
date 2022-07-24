@@ -99,31 +99,13 @@ app.addContentTypeParser('*', (req, payload, done) => {
 app.register(require('./plugins/register.js'));
 
 /**
- * Websocket
- */
-//const wss = new WebSocket.Server({ port: 443, host: '127.0.0.1' }, () => {
-//    logger.logError("Websocket started")
-//});
-//
-//wss.on('connection', (ws) => {
-//    ws.on('message', (data) => {
-//        logger.logError(data);
-//        ws.send(data);
-//    });
-//});
-//
-//wss.on('listening', () => {
-//    console.log("Websocket is listening on port 443");
-//});
-
-/**
 * Start the server
 */
 async function start() {
     try {
         await app.listen({ port: 443, host: '127.0.0.1' });
         app.log.info(`Server listening on ${app.server.address().port}`);
-        
+
         //app.log.info(`Websocket listening on ${app.websocketServer.address().port}`);
     } catch (err) {
         app.log.info(err);

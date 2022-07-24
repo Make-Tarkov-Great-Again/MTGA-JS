@@ -14,7 +14,7 @@ module.exports = async function notifierRoutes(app, opt) {
 
     app.route({
         method: "GET",
-        url: '/push/notifier/get/:sessionID',
+        url: '/push/notifier/get/',
         handler: async (request, reply) => {
             logger.logError("NOTIFIER GET HIT");
             return FastifyResponse.zlibJsonReply(
@@ -22,18 +22,17 @@ module.exports = async function notifierRoutes(app, opt) {
                 FastifyResponse.applyBody([])
             );
         },
-        wsHandler: (conn, req) => {
+        wsHandler: (connection, req) => {
             logger.logError("NOTIFIER GET WS HIT");
-            conn.write("wassup nigga");
-            conn.once('data', chunk => {
-                conn.end();
-            })
+            connection.socket.on('message', message => {
+                connection.socket.send('Hello Fastify WebSockets');
+            });
         }
     })
 
     app.route({
         method: "GET",
-        url: '/push/notifier/getwebsocket/:sessionID',
+        url: '/push/notifier/getwebsocket/',
         handler: async (request, reply) => {
             logger.logError("NOTIFIER getwebsocket GET HIT");
             return FastifyResponse.zlibJsonReply(
@@ -41,12 +40,11 @@ module.exports = async function notifierRoutes(app, opt) {
                 FastifyResponse.applyBody([])
             );
         },
-        wsHandler: (conn, req) => {
+        wsHandler: (connection, req) => {
             logger.logError("NOTIFIER getwebsocket GET WS HIT");
-            conn.write("wassup nigga");
-            conn.once('data', chunk => {
-                conn.end();
-            })
+            connection.socket.on('message', message => {
+                connection.socket.send('Hello Fastify WebSockets');
+            });
         }
     })
 };
