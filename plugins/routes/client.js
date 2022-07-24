@@ -9,10 +9,10 @@ module.exports = async function gameRoutes(app, _opts) {
 
     app.get('/*', {
         websocket: true
-    }, (connection /* SocketStream */ , req /* FastifyRequest */ ) => {
+    }, async (connection /* SocketStream */ , req /* FastifyRequest */ ) => {
         connection.socket.on('message', message => {
             // message.toString() === 'hi from client'
-            connection.socket.send('hi from wildcard route')
+            connection.socket.send('hi from wildcard route');
         })
     })
 
