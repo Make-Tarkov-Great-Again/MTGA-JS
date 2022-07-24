@@ -4,7 +4,7 @@ const {
     Edition, Customization, Storage,
     Character, Health,
     Weaponbuild, Quest, Locale,
-    Trader, Item, HideoutArea
+    Trader, Item, HideoutArea, HideoutProduction
 } = require("../../models");
 const {
     generateUniqueId, getCurrentTimestamp, logger,
@@ -263,8 +263,7 @@ class GameController {
         }
     };
 
-    static clientGameProfileAcceptQuest = async (moveAction = null, reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
+    static clientGameProfileAcceptQuest = async (moveAction = null, reply = null, playerProfile = null) => {
         const quest = await Quest.get(moveAction.qid);
         const questReward = await quest.getRewards(playerProfile, "Started");
         await playerProfile.character.addQuest(quest);
@@ -281,12 +280,7 @@ class GameController {
         return {};
     };
 
-    static clientGameProfileMoveItem = async (moveAction = null, reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
-        if (!playerProfile) {
-            // display error
-        }
-
+    static clientGameProfileMoveItem = async (moveAction = null, reply = null, playerProfile = null) => {
         logger.logDebug("Move request:");
         logger.logDebug(moveAction);
 
@@ -298,12 +292,7 @@ class GameController {
         }
     };
 
-    static clientGameProfileExamine = async (moveAction = null, reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
-        if (!playerProfile) {
-            // display error
-        }
-
+    static clientGameProfileExamine = async (moveAction = null, reply = null, playerProfile = null) => {
         logger.logDebug("Examine request:");
         logger.logDebug(moveAction);
 
@@ -318,11 +307,11 @@ class GameController {
                         if (inventoryItem) {
                             templateItem = await Item.get(inventoryItem._tpl);
                         } else {
-                            logger.logError(`Examine Request failed: Unable to find item database template of itemId ${moveAction.item}`);
+                            logger.logError(`[clientGameProfileExamine] Examine Request failed: Unable to find item database template of itemId ${moveAction.item}`);
                             return false;
                         }
                     } else {
-                        logger.logError("Examine Request failed: Unable to get trader data.");
+                        logger.logError("[clientGameProfileExamine] Examine Request failed: Unable to get trader data.");
                         return false;
                     }
                     break;
@@ -342,7 +331,7 @@ class GameController {
                     break;
 
                 default:
-                    logger.logError(`Examine Request failed: Unknown moveAction.fromOwner.Type: ${moveAction.fromOwner.type}`);
+                    logger.logError(`[clientGameProfileExamine] Examine Request failed: Unknown moveAction.fromOwner.Type: ${moveAction.fromOwner.type}`);
                     return false;
             }
         } else {
@@ -350,7 +339,7 @@ class GameController {
             if (item) {
                 templateItem = await Item.get(item._tpl);
             } else {
-                logger.logError(`Examine Request failed: Unable to find item database template of itemId ${moveAction.item}`);
+                logger.logError(`[clientGameProfileExamine] Examine Request failed: Unable to find item database template of itemId ${moveAction.item}`);
                 return false;
             }
         }
@@ -359,21 +348,19 @@ class GameController {
             if (await playerProfile.character.examineItem(templateItem._id)) {
                 await playerProfile.character.addExperience(templateItem._props.ExamineExperience);
             } else {
-                logger.logError(`Examine Request failed: Unable to examine itemId ${templateItem._id}`);
+                logger.logError(`[clientGameProfileExamine] Examine Request failed: Unable to examine itemId ${templateItem._id}`);
             }
         } else {
             // this will crash because inventoryItem can't be reached
-            logger.logError(`Examine Request failed: Unable to find item database template of itemId ${inventoryItem._tpl}`);
+            logger.logError(`[clientGameProfileExamine] Examine Request failed: Unable to find item database template of itemId ${inventoryItem._tpl}`);
         }
 
         return {};
     };
 
-    static clientGameProfileTradingConfirm = async (moveAction = null, _reply = null, sessionID = null) => {
-        logger.logDebug("Trading request:");
+    static clientGameProfileTradingConfirm = async (moveAction = null, _reply = null, playerProfile = null) => {
+        logger.logDebug("[clientGameProfileTradingConfirm] Trading request:");
         logger.logDebug(moveAction);
-
-        const playerProfile = await Profile.get(sessionID);
         const trader = await Trader.get(moveAction.tid);
         const output = {
             items: {
@@ -441,12 +428,12 @@ class GameController {
                             output.items.del = output.items.del.concat(itemsTaken.removed);
                         }
                     } else {
-                        logger.logDebug(`Unable to take items`);
+                        logger.logError(`[clientGameProfileTradingConfirm] Unable to take items`);
                     }
                     /*await trader.reduceStock(requestEntry.item_id, requestEntry.count);*/
                 }
             } else {
-                logger.logDebug(`Unable to add items`);
+                logger.logDebug(`[clientGameProfileTradingConfirm] Unable to add items`);
             }
             logger.logDebug(output);
             logger.logDebug(output.items);
@@ -546,23 +533,22 @@ class GameController {
                             output.items.del = output.items.del.concat(itemsTaken.removed);
                         }
                     } else {
-                        logger.logDebug(`Unable to take items`);
+                        logger.logError(`[clientGameProfileTradingConfirm] Unable to take items`);
                     }
                     /*await trader.reduceStock(requestEntry.item_id, requestEntry.count);*/
                 }
-            } else { logger.logDebug(`Unable to add items`); }
+            } else { logger.logError(`[clientGameProfileTradingConfirm] Unable to add items`); }
 
             logger.logDebug(output);
             logger.logDebug(output.items);
             logger.logDebug(output.items.change[0].upd);
         } else {
-            logger.logError(`My brother in christ what are you trying to do ? ${moveAction.type} ? That shit is not done lmao pay me now.`);
+            logger.logError(`[clientGameProfileTradingConfirm] My brother in christ what are you trying to do ? ${moveAction.type} ? That shit is not done lmao pay me now.`);
         }
         return output;
     };
 
-    static clientGameProfileSplitItem = async (moveAction = null, _reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
+    static clientGameProfileSplitItem = async (moveAction = null, _reply = null, playerProfile = null) => {
         const splittedItems = await playerProfile.character.splitItems(moveAction);
         if (splittedItems) {
             return {
@@ -571,8 +557,7 @@ class GameController {
         }
     };
 
-    static clientGameProfileMergeItem = async (moveAction = null, _reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
+    static clientGameProfileMergeItem = async (moveAction = null, _reply = null, playerProfile = null) => {
         const mergedItems = await playerProfile.character.mergeItems(moveAction);
         if (mergedItems) {
             return {
@@ -581,8 +566,7 @@ class GameController {
         }
     };
 
-    static clientGameProfileRemoveItem = async (moveAction = null, _reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
+    static clientGameProfileRemoveItem = async (moveAction = null, _reply = null, playerProfile = null) => {
         const deletedItems = await playerProfile.character.removeItems(moveAction);
         if (deletedItems) {
             return {
@@ -591,8 +575,7 @@ class GameController {
         }
     };
 
-    static clientGameProfileFoldItem = async (moveAction = null, _reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
+    static clientGameProfileFoldItem = async (moveAction = null, _reply = null, playerProfile = null) => {
         if (playerProfile) {
             let item = await playerProfile.character.getInventoryItemByID(moveAction.item);
             if (item) {
@@ -609,8 +592,7 @@ class GameController {
         }
     }
 
-    static clientGameProfileTagItem = async (moveAction = null, _reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
+    static clientGameProfileTagItem = async (moveAction = null, _reply = null, playerProfile = null) => {
         if (playerProfile) {
             const item = await playerProfile.character.getInventoryItemByID(moveAction.item);
             if (item) {
@@ -628,8 +610,7 @@ class GameController {
         }
     }
 
-    static clientGameProfileToggleItem = async (moveAction = null, _reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
+    static clientGameProfileToggleItem = async (moveAction = null, _reply = null, playerProfile = null) => {
         if (playerProfile) {
             let item = await playerProfile.character.getInventoryItemByID(moveAction.item);
             if (item) {
@@ -646,8 +627,7 @@ class GameController {
         }
     }
 
-    static clientGameProfileBindItem = async (moveAction = null, _reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
+    static clientGameProfileBindItem = async (moveAction = null, _reply = null, playerProfile = null) => {
         if (playerProfile) {
             for (let index in playerProfile.character.Inventory.fastPanel) {
                 if (playerProfile.character.Inventory.fastPanel[index] === moveAction.item) {
@@ -658,8 +638,7 @@ class GameController {
         }
     }
 
-    static clientGameProfileReadEncyclopedia = async (moveAction = null, _reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
+    static clientGameProfileReadEncyclopedia = async (moveAction = null, _reply = null, playerProfile = null) => {
         if (playerProfile) {
             for (let id of moveAction.ids) {
                 playerProfile.character.Encyclopedia[id] = true;
@@ -667,20 +646,19 @@ class GameController {
         }
     }
 
-    static clientGameProfileHideoutUpgrade = async (moveAction = null, _reply = null, sessionID = null) => {
+    static clientGameProfileHideoutUpgrade = async (moveAction = null, _reply = null, playerProfile = null) => {
         logger.logDebug(moveAction);
-        const playerProfile = await Profile.get(sessionID);
         if (playerProfile) {
             const templateHideoutArea = await HideoutArea.getBy("type", moveAction.areaType);
             let characterHideoutArea = await playerProfile.character.getHideoutAreaByType(moveAction.areaType);
 
             if (!templateHideoutArea) {
-                logger.logError(`Upgrading HideoutArea failed. Unknown hideout area ${moveAction.areaType} in hideoutArea database.`);
+                logger.logError(`[clientGameProfileHideoutUpgrade] Upgrading HideoutArea failed. Unknown hideout area ${moveAction.areaType} in hideoutArea database.`);
                 return;
             }
 
             if (!characterHideoutArea) {
-                logger.logError(`Upgrading HideoutArea failed. Unknown hideout area ${moveAction.areaType} in character profile.`);
+                logger.logError(`[clientGameProfileHideoutUpgrade] Upgrading HideoutArea failed. Unknown hideout area ${moveAction.areaType} in character profile.`);
                 return;
             }
 
@@ -689,7 +667,7 @@ class GameController {
 
             const nextLevel = characterHideoutArea.level + 1;
             if (typeof templateHideoutArea.stages[nextLevel] === "undefined") {
-                logger.logError(`Upgrading HideoutArea ${templateHideoutArea._id} for character ${playerProfile.character._id} failed. The level ${nextLevel} doesn't exist.`);
+                logger.logError(`[clientGameProfileHideoutUpgrade] Upgrading HideoutArea ${templateHideoutArea._id} for character ${playerProfile.character._id} failed. The level ${nextLevel} doesn't exist.`);
                 return;
             }
 
@@ -730,31 +708,30 @@ class GameController {
                 return output;
             } else {
                 // How do return custom error to client!!1!1!!!111!elf?
-                logger.logError(`Upgrading HideoutArea ${templateHideoutArea._id} for character ${playerProfile.character._id} failed. Unable to take required items.`);
+                logger.logError(`[clientGameProfileHideoutUpgrade] Upgrading HideoutArea ${templateHideoutArea._id} for character ${playerProfile.character._id} failed. Unable to take required items.`);
                 return;
             }
         }
     }
 
-    static clientGameProfileHideoutUpgradeComplete = async (moveAction = null, _reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
+    static clientGameProfileHideoutUpgradeComplete = async (moveAction = null, _reply = null, playerProfile = null) => {
         if (playerProfile) {
             const templateHideoutArea = await HideoutArea.getBy("type", moveAction.areaType);
             const characterHideoutArea = await playerProfile.character.getHideoutAreaByType(moveAction.areaType);
 
             if (!templateHideoutArea) {
-                logger.logError(`Upgrading HideoutArea failed. Unknown hideout area ${moveAction.areaType} in hideoutArea database.`);
+                logger.logError(`[clientGameProfileHideoutUpgradeComplete] Upgrading HideoutArea failed. Unknown hideout area ${moveAction.areaType} in hideoutArea database.`);
                 return;
             }
 
             if (!characterHideoutArea) {
-                logger.logError(`Upgrading HideoutArea failed. Unknown hideout area ${moveAction.areaType} in character profile.`);
+                logger.logError(`[clientGameProfileHideoutUpgradeComplete] Upgrading HideoutArea failed. Unknown hideout area ${moveAction.areaType} in character profile.`);
                 return;
             }
             const nextLevel = characterHideoutArea.level + 1;
             const templateHideoutAreaStage = templateHideoutArea.stages[nextLevel];
             if (typeof templateHideoutAreaStage === "undefined") {
-                logger.logError(`Upgrading HideoutArea ${templateHideoutArea._id} for character ${playerProfile.character._id} failed. The level ${nextLevel} doesn't exist.`);
+                logger.logError(`[clientGameProfileHideoutUpgradeComplete] Upgrading HideoutArea ${templateHideoutArea._id} for character ${playerProfile.character._id} failed. The level ${nextLevel} doesn't exist.`);
                 return;
             }
 
@@ -774,12 +751,14 @@ class GameController {
         }
     }
 
-    static clientGameProfileHideoutAreaSlot = async (moveAction = null, _reply = null, sessionID = null) => {
-        const playerProfile = await Profile.get(sessionID);
+    static clientGameProfileHideoutPutItemsInAreaSlots = async (moveAction = null, _reply = null, playerProfile = null) => {
         const output = { items: { new: [], change: [], del: [] } };
         if (playerProfile) {
             const hideoutArea = await playerProfile.character.getHideoutAreaByType(moveAction.areaType);
             for (const itemPosition in moveAction.items) {
+                logger.logDebug(moveAction.items);
+                logger.logDebug(itemPosition);
+
                 if (moveAction.items.hasOwnProperty(itemPosition)) {
                     const itemData = moveAction.items[itemPosition];
                     const item = await playerProfile.character.getInventoryItemByID(itemData.id);
@@ -792,11 +771,7 @@ class GameController {
                             }
                         ]
                     };
-                    if (!(itemPosition in hideoutArea.slots)) {
-                        hideoutArea.slots.push(slotData);
-                    } else {
-                        hideoutArea.slots.splice(itemPosition, 1, slotData);
-                    }
+                    hideoutArea.slots[itemPosition] = slotData;
                     await playerProfile.character.removeItem(item._id);
                     output.items.del.push(item);
                 }
@@ -805,13 +780,45 @@ class GameController {
         return output;
     }
 
-    static clientGameProfileHideoutSingleProductionStart = async (moveAction = null, _reply = null, sessionID = null) => {
+    static clientGameProfileHideoutTakeItemsFromAreaSlots = async (moveAction = null, _reply = null, playerProfile = null) => {
+        const output = { items: { new: [], change: [], del: [] } };
+        if (playerProfile) {
+            const hideoutArea = await playerProfile.character.getHideoutAreaByType(moveAction.areaType);
+            if(!hideoutArea) {
+                logger.logError(`[clientGameProfileHideoutTakeItemsFromAreaSlots] Unable to find hideout area type ${moveAction.areaType} for playerProfile ${playerProfile.character._id}.`);
+                return output;
+            }
+
+            for (const slot in moveAction.slots) {
+                for(const item of hideoutArea.slots[slot].item) {
+                    const itemAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), item._tpl, false, 1);
+                    if(itemAdded) {
+                        output.items.new = [...output.items.new, ...itemAdded];
+                        hideoutArea.slots.splice(slot, 1);
+                    }
+                }
+            }
+        }
+        return output;
+    }
+
+    static clientGameProfileHideoutToggleArea = async (moveAction = null, _reply = null, playerProfile = null) => {
+        if (playerProfile) {
+            const hideoutArea = await playerProfile.character.getHideoutAreaByType(moveAction.areaType);
+            if(!hideoutArea) {
+                logger.logError(`[clientGameProfileHideoutToggleArea] Unable to find hideout area type ${moveAction.areaType} for playerProfile ${playerProfile.character._id}.`);
+                return;
+            }
+            hideoutArea.active = moveAction.enabled;
+        }
+    }
+
+    static clientGameProfileHideoutSingleProductionStart = async (moveAction = null, _reply = null, playerProfile = null) => {
         logger.logDebug(moveAction);
-        const playerProfile = await Profile.get(sessionID);
         if (playerProfile) {
             const hideoutProductionTemplate = await HideoutProduction.get(moveAction.recipeId);
             if (!hideoutProductionTemplate) {
-                logger.logError(`Starting hideout production failed. Unknown hideout production with Id ${moveAction.recipeId} in hideoutProduction database.`);
+                logger.logError(`[clientGameProfileHideoutSingleProductionStart] Starting hideout production failed. Unknown hideout production with Id ${moveAction.recipeId} in hideoutProduction database.`);
                 return;
             }
 
@@ -849,7 +856,7 @@ class GameController {
                     productionTime = hideoutProductionTemplate.productionTime;
                 }
 
-                playerProfile.character.Hideout.Production = {
+                playerProfile.character.Hideout.Production[hideoutProductionTemplate._id] = {
                     Progress: 0,
                     inProgress: true,
                     RecipeId: moveAction.recepieId,
@@ -861,11 +868,36 @@ class GameController {
                 return output;
             } else {
                 // How do return custom error to client!!1!1!!!111!elf?
-                logger.logError(`Upgrading HideoutArea ${templateHideoutArea._id} for character ${playerProfile.character._id} failed. Unable to take required items.`);
+                logger.logError(`[clientGameProfileHideoutSingleProductionStart] Starting hideout production for recepie with Id ${moveAction.recipeId} failed. Unable to take required items.`);
                 return;
             }
         }
     }
 
+    static clientGameProfileHideoutContinuousProductionStart = async (moveAction = null, _reply = null, playerProfile = null) => {
+        if (playerProfile) {
+            const hideoutProductionTemplate = await HideoutProduction.get(moveAction.recipeId);
+            if (!hideoutProductionTemplate) {
+                logger.logError(`[clientGameProfileHideoutContinuousProductionStart] Starting hideout production failed. Unknown hideout production with Id ${moveAction.recipeId} in hideoutProduction database.`);
+                return;
+            }
+
+            let productionTime = 0
+            if (typeof hideoutProductionTemplate.ProductionTime !== "undefined") {
+                productionTime = hideoutProductionTemplate.ProductionTime;
+            } else if (typeof hideoutProductionTemplate.productionTime !== "undefined") {
+                productionTime = hideoutProductionTemplate.productionTime;
+            }
+
+            playerProfile.character.Hideout.Production[hideoutProductionTemplate._id] = {
+                Progress: 0,
+                inProgress: true,
+                RecipeId: moveAction.recepieId,
+                SkipTime: 0,
+                ProductionTime: parseInt(productionTime),
+                StartTimestamp: getCurrentTimestamp()
+            }
+        }
+    }
 }
 module.exports.GameController = GameController;
