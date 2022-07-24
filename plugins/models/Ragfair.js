@@ -8,7 +8,8 @@ const {
     FastifyResponse, getCurrentTimestamp, generateItemId,
     logger, findChildren, writeFile, readParsed,
     getAbsolutePathFrom, stringify, fileExist,
-    templatesWithParent, childrenCategories, isCategory } = require("../utilities");
+    templatesWithParent, childrenCategories, isCategory,
+    getFileUpdatedDate } = require("../utilities");
 
 class Ragfair extends BaseModel {
     constructor() {
@@ -48,11 +49,12 @@ class Ragfair extends BaseModel {
      */
     static async generateOffersBasedOnRequest(request) {
         const { database } = require("../../app");
-        const ragfair = cloneDeep(database.ragfair);
+        let ragfair = cloneDeep(database.ragfair);
 
 
-        // only way to refresh page after removing a filter
-        if (request.updateOfferCount !== false) {
+        // only way to refresh page after removing a filter (maybe)
+        /*
+        if (request.updateOfferCount === true) {
             const list = await this.investigateHandbookId(request.handbookId);
             ragfair.categories = await this.formatCategories(
                 ragfair.categories,
@@ -64,43 +66,77 @@ class Ragfair extends BaseModel {
                 ragfair.categories
             );
         }
+        */
 
-        // handbookId is main request to get the initial offers
-        if (request.handbookId != null) {
+        if (database.core.serverConfig.directoryTimers.FleaMarket > 0) {
+            ragfair = await this.applyRequestReturnRagfair(request, ragfair);
+        } else {
+            database.core.serverConfig.directoryTimers.FleaMarket = 1;
+            ragfair.categories = await this.formatCategories(
+                ragfair.categories,
+                ragfair.offers
+            );
+            ragfair.offers = [];
+            ragfair.offersCount = ragfair.offers.length;
+        }
+        return ragfair;
+    }
+
+    static async applyRequestReturnRagfair(request, ragfair) {
+        if (request.handbookId != "") {
             const list = await this.investigateHandbookId(request.handbookId);
             ragfair.categories = await this.formatCategories(
                 ragfair.categories,
                 ragfair.offers,
                 list
             );
-            ragfair.offers = await this.reduceOffersBasedOnCategories(
-                ragfair.offers,
-                ragfair.categories
-            );
-            if (request.neededSearchId != null) {
+            if (request.neededSearchId != "") {
                 ragfair.categories = await this.formatCategories(
                     ragfair.categories,
                     ragfair.offers,
                     await this.getNeededSearch(request.neededSearchId)
                 );
-            } else if (request.linkedSearchId != null) {
+                ragfair.offers = await this.reduceOffersBasedOnCategories(
+                    ragfair.offers,
+                    ragfair.categories
+                );
+            } else if (request.linkedSearchId != "") {
                 ragfair.categories = await this.formatCategories(
                     ragfair.categories,
                     ragfair.offers,
                     await this.getLinkedSearch(request.linkedSearchId)
                 );
+                ragfair.offers = await this.reduceOffersBasedOnCategories(
+                    ragfair.offers,
+                    ragfair.categories
+                );
+            } else {
+                ragfair.offers = await this.reduceOffersBasedOnCategories(
+                    ragfair.offers,
+                    ragfair.categories
+                );
             }
-        } else if (request.linkedSearchId != null) {
+        } else if (request.linkedSearchId != "") {
             ragfair.categories = await this.formatCategories(
                 ragfair.categories,
                 ragfair.offers,
                 await this.getLinkedSearch(request.linkedSearchId)
             );
-        } else if (request.neededSearchId != null) {
+
+            ragfair.offers = await this.reduceOffersBasedOnCategories(
+                ragfair.offers,
+                ragfair.categories
+            );
+        } else if (request.neededSearchId != "") {
             ragfair.categories = await this.formatCategories(
                 ragfair.categories,
                 ragfair.offers,
                 await this.getNeededSearch(request.neededSearchId)
+            );
+
+            ragfair.offers = await this.reduceOffersBasedOnCategories(
+                ragfair.offers,
+                ragfair.categories
             );
         }
 
@@ -115,6 +151,8 @@ class Ragfair extends BaseModel {
                 request.page * request.limit,
                 (request.page + 1) * request.limit
             ));
+
+        ragfair.offersCount = ragfair.offers.length;
         return ragfair;
     }
 

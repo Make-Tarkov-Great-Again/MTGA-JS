@@ -131,7 +131,7 @@ class GameController {
         const sessionID = await FastifyResponse.getSessionID(request);
         const output = {
             "status": "ok",
-            "notifier": await FastifyResponse.getNotifier(sessionID),
+            "notifier": FastifyResponse.getNotifier(sessionID),
             "notifierServer": ""
         };
         return FastifyResponse.zlibJsonReply(
