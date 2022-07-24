@@ -103,7 +103,7 @@
       },
       {
         "_id": "5fe49444ae6628187a2e77b6",
-        "_tpl": "557ffd194bdc2d28148b457f",
+        "_tpl": "5af99e9186f7747c447120b8",
         "parentId": "61b7367440281631fc83f199",
         "slotId": "Pockets"
       },
@@ -125,7 +125,7 @@
         "parentId": "61b7367440281631fc83f197",
         "slotId": "hideout",
         "location": {
-          "x": 2,
+          "x": 0,
           "y": 0,
           "r": "Horizontal"
         },
@@ -135,12 +135,12 @@
       },
       {
         "_id": "I-39ed1cea-13e2-4c10-ab34-ed4eb0bbab47",
-        "_tpl": "5c093ca986f7740a1867ab12",
+        "_tpl": "5c0a794586f77461c458f892",
         "parentId": "61b7367440281631fc83f199",
         "slotId": "SecuredContainer",
         "upd": {
           "StackObjectsCount": 1,
-          "SpawnedInSession": true
+          "SpawnedInSession": false
         }
       }
     ],
@@ -909,18 +909,6 @@
     {
       "type": "StashSize",
       "templateId": "566abbc34bdc2d92178b4576"
-    },
-    {
-      "type": "StashSize",
-      "templateId": "5811ce572459770cba1a34ea"
-    },
-    {
-      "type": "StashSize",
-      "templateId": "5811ce662459770f6f490f32"
-    },
-    {
-      "type": "StashSize",
-      "templateId": "5811ce772459770e9e5f9532"
     }
   ],
   "Notes": {
