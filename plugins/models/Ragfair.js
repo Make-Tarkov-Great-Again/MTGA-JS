@@ -41,9 +41,6 @@ class Ragfair extends BaseModel {
     }
 
     /**
-     * EFT always defaults to `weapon category` so that's all that should show first
-     * I think instead what should happen is that we load `nothing` and let the user
-     * filter based on the thing they want to see
      * @param {*} request 
      * @returns 
      */
@@ -67,20 +64,6 @@ class Ragfair extends BaseModel {
             );
         }
         */
-
-
-        /**
-         * EFT always defaults to `weapon category` on load but shows all item offers.
-         * Instead what should happen is that we load `nothing` and let the user
-         * filter based on the thing they want to see.
-         * We can't do that because of the way the EFT works by defaulting to `weapon category`
-         * and if we show `nothing` then the user can't filter by `weapon category` unless they
-         * hit the refresh button. Why? I don't know man.
-         * Instead I am showing only the `weapon category` but loading all the categories so they
-         * show in the side-bar, upon first load of Ragfair based on directoryTimers.FleaMarket.
-         * This resets (to 0) every time the server reloads.
-         * This should improve the user experience.
-         */
         
         if (database.core.serverConfig.directoryTimers.FleaMarket > 0) {
             ragfair = await this.applyRequestReturnRagfair(request, ragfair);
