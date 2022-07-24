@@ -197,7 +197,7 @@ module.exports = async function gameRoutes(app, _opts) {
     app.post("/client/notifier/channel/create", async (request, reply) => {
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody(await FastifyResponse.getNotifier(await FastifyResponse.getSessionID(request)))
+            FastifyResponse.applyBody(FastifyResponse.getNotifier(await FastifyResponse.getSessionID(request)))
         );
     });
 

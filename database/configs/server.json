@@ -73,6 +73,7 @@
     "RagFair": "https://127.0.0.1:443"
   },
   "directoryTimers":{
-    "TextAsset": 0
+    "TextAsset": 0,
+    "FleaMarket": 0
   }
 }
