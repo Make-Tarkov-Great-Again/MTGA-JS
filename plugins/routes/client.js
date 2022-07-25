@@ -7,15 +7,6 @@ const { logger, FastifyResponse, writeFile } = require("../utilities");
 
 module.exports = async function gameRoutes(app, _opts) {
 
-    app.get('/*', {
-        websocket: true
-    }, async (connection /* SocketStream */, req /* FastifyRequest */) => {
-        connection.socket.on('message', message => {
-            // message.toString() === 'hi from client'
-            connection.socket.send('hi from wildcard route');
-        })
-    })
-
     // Initial entry points for tarkov //
     app.get(`/mode/offline`, async (request, reply) => {
         await GameController.modeOfflinePatches(request, reply);
