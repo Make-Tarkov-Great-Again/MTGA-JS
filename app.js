@@ -21,7 +21,8 @@ const app = require('fastify')({
                     method: request.method,
                     url: request.url,
                     headers: request.headers,
-                    body: request.body
+                    body: request.body,
+                    params: request.params
                 };
             }
         }

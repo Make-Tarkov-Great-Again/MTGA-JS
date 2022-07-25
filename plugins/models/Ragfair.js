@@ -64,11 +64,22 @@ class Ragfair extends BaseModel {
             );
         }
         */
-        
-        if (database.core.serverConfig.directoryTimers.FleaMarket > 0) {
+
+        /**
+         * Probably need to start saving the last request so it can be 
+         * compared.... fuck if i know
+         */
+        if (database.core.serverConfig.directoryTimers.FleaMarket === 1) {
+
             ragfair = await this.applyRequestReturnRagfair(request, ragfair);
-        } else {
-            database.core.serverConfig.directoryTimers.FleaMarket = 1;
+
+        } else if (database.core.serverConfig.directoryTimers.FleaMarket === 0) {
+
+            if (database.core.serverConfig.directoryTimers.FleaMarket === 0) {
+                database.core.serverConfig.directoryTimers.FleaMarket = 1;
+            } else if (database.core.serverConfig.directoryTimers.FleaMarket === 1) {
+                database.core.serverConfig.directoryTimers.FleaMarket = 2;
+            }
 
             const list = await this.investigateHandbookId(request.handbookId);
             const tempCateories = await this.formatCategories(
@@ -99,7 +110,7 @@ class Ragfair extends BaseModel {
                 ragfair.categories = await this.formatCategories(
                     ragfair.categories,
                     ragfair.offers,
-                    await this.getNeededSearch(request.neededSearchId)
+                    await this.getNeededOrLinkedearch(request.neededSearchId)
                 );
                 ragfair.offers = await this.reduceOffersBasedOnCategories(
                     ragfair.offers,
@@ -109,7 +120,7 @@ class Ragfair extends BaseModel {
                 ragfair.categories = await this.formatCategories(
                     ragfair.categories,
                     ragfair.offers,
-                    await this.getLinkedSearch(request.linkedSearchId)
+                    await this.getNeededOrLinkedearch(request.linkedSearchId)
                 );
                 ragfair.offers = await this.reduceOffersBasedOnCategories(
                     ragfair.offers,
@@ -125,7 +136,7 @@ class Ragfair extends BaseModel {
             ragfair.categories = await this.formatCategories(
                 ragfair.categories,
                 ragfair.offers,
-                await this.getLinkedSearch(request.linkedSearchId)
+                await this.getNeededOrLinkedearch(request.linkedSearchId)
             );
 
             ragfair.offers = await this.reduceOffersBasedOnCategories(
@@ -136,7 +147,7 @@ class Ragfair extends BaseModel {
             ragfair.categories = await this.formatCategories(
                 ragfair.categories,
                 ragfair.offers,
-                await this.getNeededSearch(request.neededSearchId)
+                await this.getNeededOrLinkedearch(request.neededSearchId)
             );
 
             ragfair.offers = await this.reduceOffersBasedOnCategories(
@@ -230,28 +241,16 @@ class Ragfair extends BaseModel {
         ].includes(input); // Return true if the input ID matches anything in this array, false if it doesn't
     }
 
-    static async getLinkedSearch(searchId) {
-        const item = await Item.get(searchId);
-        const linked = new Set(
-            [
-                ...await this.checkFilters(item, "Slots"),
-                ...await this.checkFilters(item, "Chambers"),
-                ...await this.checkFilters(item, "Cartridges"),
-            ]
-        )
-        return Array.from(linked);
-    }
-
-    static async getNeededSearch(neededSearchId) {
+    static async getNeededOrLinkedearch(searchId) {
         const { database } = require("../../app");
         const items = await this.bannedItemFilter(database.items);
         let needed = [];
         // search through all items and push ID of items that are in the filter(s)
         for (const item of items) {
             if (
-                await this.checkFilters(item, "Slots", neededSearchId) ||
-                await this.checkFilters(item, "Chambers", neededSearchId) ||
-                await this.checkFilters(item, "Cartridges", neededSearchId)
+                await this.checkFilters(item, "Slots", searchId) ||
+                await this.checkFilters(item, "Chambers", searchId) ||
+                await this.checkFilters(item, "Cartridges", searchId)
             )
                 needed.push(item._id);
         }
