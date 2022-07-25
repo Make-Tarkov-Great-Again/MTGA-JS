@@ -2,14 +2,14 @@ const { default: stringify } = require("fast-safe-stringify");
 const { database } = require("../../app");
 const cloneDeep = require("rfdc")();
 const { ClientController, GameController, MenuController, TradingController, FriendController, LocationController } = require("../controllers/client");
-const { Weaponbuild, Ragfair, Profile} = require("../models");
+const { Weaponbuild, Ragfair, Profile } = require("../models");
 const { logger, FastifyResponse, writeFile } = require("../utilities");
 
 module.exports = async function gameRoutes(app, _opts) {
 
     app.get('/*', {
         websocket: true
-    }, async (connection /* SocketStream */ , req /* FastifyRequest */ ) => {
+    }, async (connection /* SocketStream */, req /* FastifyRequest */) => {
         connection.socket.on('message', message => {
             // message.toString() === 'hi from client'
             connection.socket.send('hi from wildcard route');
@@ -80,13 +80,13 @@ module.exports = async function gameRoutes(app, _opts) {
 
     app.post(`/client/game/profile/items/moving`, async (request, reply) => {
         const sessionId = await FastifyResponse.getSessionID(request);
-        if(!sessionId) {
+        if (!sessionId) {
             logger.logError(`[/client/game/profile/items/moving] Could not get session Id from request.`)
             return false;
         }
 
         const playerProfile = await Profile.get(sessionId);
-        if(!playerProfile) {
+        if (!playerProfile) {
             logger.logError(`[/client/game/profile/items/moving] Unable to get player profile for sessionId ${sessionId}.`)
             return false;
         }
@@ -284,6 +284,11 @@ module.exports = async function gameRoutes(app, _opts) {
 
     app.post(`/client/trading/customization/storage`, async (request, reply) => {
         await TradingController.getStoragePath(request, reply);
+    });
+
+    app.post(`/client/trading/customization/:id/offers`, async (request, reply) => {
+        await TradingController.getTraderOutfitOffers(request, reply);
+        logger.logError("[/client/trading/customization/:id/offers] not implemented yet");
     });
 
     app.post(`/client/trading/api/getTraderAssort/:traderId`, async (request, reply) => {
