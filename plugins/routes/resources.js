@@ -1,9 +1,14 @@
 const { webinterface } = require('../../app');
-const { read, logger } = require('../utilities');
+const { read, logger, fileExist } = require('../utilities');
 
 module.exports = async function resourcesRoutes(app, opts) {
     app.get(`/files/*`, async (request, reply) => {
-        const file = request.params['*'].replace("jpg", "png");
+        let file = request.params['*'].replace("jpg", "png");
+        if (fileExist(file) === false) file = request.params['*'].replace("png", "jpg");
+        if (fileExist(file) === false) {
+            file = `/noimage/quest.png`;
+        }
+
         const fs = require('fs');
         const stream = fs.createReadStream("./database/res/" + file);
 
