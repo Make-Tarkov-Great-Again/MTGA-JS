@@ -98,7 +98,10 @@ app.addContentTypeParser('*', (req, payload, done) => {
 
 app.register(require('@fastify/websocket'), {
     options: {
-        maxPayload: 1048576
+        verifyClient: (info, next) => {
+            logger.logInfo(info);
+            next(true);
+        }
     }
 });
 app.register(require('./plugins/register.js'));

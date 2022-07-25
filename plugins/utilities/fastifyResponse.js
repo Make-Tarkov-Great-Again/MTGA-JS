@@ -16,7 +16,7 @@ class FastifyResponse {
 
     static getNotifier(sessionID) {
         return {
-            "server": this.getUrl(),
+            "server": this.getBackendURL(),
             "channel_id": sessionID,
             "url": `${this.getBackendURL()}/push/notifier/get/${sessionID}`,
             "notifierServer": `${this.getBackendURL()}/push/notifier/get/${sessionID}`,
@@ -39,7 +39,7 @@ class FastifyResponse {
     }
 
     static getWebSocketURL() {
-        return `wss://${this.getUrl()}`; //.replace("443", "8080")
+        return `ws://${this.getUrl()}`;
     }
 
     static getSessionID = async (request) => {
