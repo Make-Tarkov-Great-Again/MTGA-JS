@@ -4,8 +4,8 @@ const { read, logger, fileExist } = require('../utilities');
 module.exports = async function resourcesRoutes(app, opts) {
     app.get(`/files/*`, async (request, reply) => {
         let file = request.params['*'].replace("jpg", "png");
-        if (fileExist(file) === false) file = request.params['*'].replace("png", "jpg");
-        if (fileExist(file) === false) {
+        if (fileExist("./database/res/" + file) === false) file = request.params['*'].replace("png", "jpg");
+        if (fileExist("./database/res/" + file) === false) {
             file = `/noimage/quest.png`;
         }
 
