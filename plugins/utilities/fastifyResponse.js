@@ -21,7 +21,7 @@ class FastifyResponse {
             "url": `${this.getBackendURL()}/push/notifier/get/${sessionID}`,
             "notifierServer": `${this.getBackendURL()}/push/notifier/get/${sessionID}`,
             "ws": `${this.getWebSocketURL()}/push/notifier/getwebsocket/${sessionID}`
-        }
+        };
     }
 
     static getVersion = async (request) => {
@@ -39,7 +39,7 @@ class FastifyResponse {
     }
 
     static getWebSocketURL() {
-        return `ws://${this.getUrl()}`; //.replace("443", "8080")
+        return `wss://${this.getUrl()}`; //.replace("443", "8080")
     }
 
     static getSessionID = async (request) => {

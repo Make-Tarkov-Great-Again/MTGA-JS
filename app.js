@@ -95,12 +95,13 @@ app.addContentTypeParser('*', (req, payload, done) => {
 /**
 * Register Handler
 */
-app.register(require('./plugins/register.js'));
+
 app.register(require('@fastify/websocket'), {
     options: {
         maxPayload: 1048576
     }
 });
+app.register(require('./plugins/register.js'));
 
 //app.register(async function (fastify) {
 //    fastify.get('/*', {
