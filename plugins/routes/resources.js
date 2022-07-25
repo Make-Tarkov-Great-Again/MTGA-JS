@@ -1,14 +1,20 @@
 const { webinterface } = require('../../app');
 const { read, logger, fileExist } = require('../utilities');
 
+
+async function returnProperIconPath(request){
+    let file = request.params['*'].replace("jpg", "png");
+    if (fileExist("./database/res/" + file) === false) file = request.params['*'].replace("png", "jpg");
+    if (fileExist("./database/res/" + file) === false) {
+        file = `/noimage/quest.png`;
+    }
+    return file;
+}
+
 module.exports = async function resourcesRoutes(app, opts) {
     app.get(`/files/*`, async (request, reply) => {
-        let file = request.params['*'].replace("jpg", "png");
-        if (fileExist("./database/res/" + file) === false) file = request.params['*'].replace("png", "jpg");
-        if (fileExist("./database/res/" + file) === false) {
-            file = `/noimage/quest.png`;
-        }
-
+        
+        const file = await returnProperIconPath(request);
         const fs = require('fs');
         const stream = fs.createReadStream("./database/res/" + file);
 
