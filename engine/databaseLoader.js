@@ -433,7 +433,10 @@ class DatabaseUtils {
         }
 
         if (typeof serverConfig.TextAsset != "undefined" && bool !== false) {
-            const date = getFileUpdatedDate(getAbsolutePathFrom('./TextAsset'));
+            if (!getAbsolutePathFrom('./TextAsset')) { logger.logDebug("TextAsset folder doesn't exist"); return false; } 
+            else if (getFilesFrom('./TextAsset').length === 0) { logger.logDebug("TextAsset folder is empty"); return false; }
+
+            const date = getFileUpdatedDate('./TextAsset');
             if (date > serverConfig.TextAsset) {
                 serverConfig.TextAsset = date;
                 return true;

@@ -12,7 +12,7 @@ const readParsed = (file) => {
 }
 
 const wipeDepend = (data) => {
-	return JSON.parse(stringify(data));
+    return JSON.parse(stringify(data));
 }
 
 const read = (file) => {

@@ -94,7 +94,7 @@ class Quest extends BaseModel {
                     break;
                 }
 
-                const cleanQuestConditions  = async (_quest) => {
+                const cleanQuestConditions = async (_quest) => {
                     _quest = await _quest.dissolve()
                     _quest.conditions.AvailableForStart = _quest.conditions.AvailableForStart.filter(q => q._parent == "Level");
 
@@ -159,11 +159,11 @@ class Quest extends BaseModel {
         // add mods to the base items, fix ids
         //for (const target of targets) {
         //    let questItems = [target];
-//
+        //
         //    for (let mod of mods) {
         //        questItems.push(utility.DeepCopy(mod));
         //    }
-//
+        //
         //    rewardItems = rewardItems.concat(helper_f.replaceIDs(null, questItems));
         //}
 
@@ -174,7 +174,7 @@ class Quest extends BaseModel {
         const rewards = [];
 
         for (const reward of this.rewards[state]) {
-            switch(reward.type) {
+            switch (reward.type) {
                 case "Item":
                     rewards = rewards.concat("BALLS");
                     break;

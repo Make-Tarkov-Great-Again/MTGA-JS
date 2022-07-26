@@ -16,7 +16,7 @@ class Notification extends BaseModel {
                 message
             }
         };
-        if(!this.queue) {
+        if (!this.queue) {
             this.queue = [];
         }
         this.queue.push(newNotification);
