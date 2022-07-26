@@ -37,4 +37,12 @@ module.exports = async function notifierRoutes(app, opt) {
                 FastifyResponse.applyBody("ok")
         );
     });
+
+    app.post("/getNotifier", async (request, reply) => {
+        logger.logError("NOTIFIER getwebsocket GET HIT");
+            return FastifyResponse.zlibJsonReply(
+                reply,
+                FastifyResponse.applyBody("ok")
+        );
+    });
 };

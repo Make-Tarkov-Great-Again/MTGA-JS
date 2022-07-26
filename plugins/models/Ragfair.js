@@ -275,7 +275,6 @@ class Ragfair extends BaseModel {
      */
     static async checkFilters(item, slot, id = null) {
         if (id) {
-            //console.log(`Slot: ${slot} in item: ${item._id} does not exist?`);
             if (slot in item._props && item._props[slot].length) {
                 for (let sub of item._props[slot]) {
                     if ("_props" in sub && "filters" in sub._props) {
@@ -290,7 +289,6 @@ class Ragfair extends BaseModel {
             return false;
         } else {
             let result = new Set();
-            //console.log(`Slot: ${slot} in item: ${item._id} does not exist?`);
             if (slot in item._props && item._props[slot].length) {
                 for (let sub of item._props[slot]) {
                     if ("_props" in sub && "filters" in sub._props) {
