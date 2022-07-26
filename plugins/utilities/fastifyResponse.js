@@ -35,11 +35,11 @@ class FastifyResponse {
 
 
     static getBackendURL() {
-        return `https://${this.getUrl()}/`;
+        return `https://localhost:443/`;
     }
 
     static getWebSocketURL() {
-        return `wss://${this.getUrl()}/`;
+        return `wss://localhost:443/`;
     }
 
     static getSessionID = async (request) => {
@@ -55,7 +55,7 @@ class FastifyResponse {
 
     static zlibJsonReply = async (reply, data) => {
         const header = {
-            'Content-Type': this.mime["json"]
+            'Content-Type': this.mime["json"],
         };
         const deflatedData = zlib.deflateSync(stringify(data, true));
         reply.raw.writeHead(200, header);

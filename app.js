@@ -68,10 +68,10 @@ app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (re
                         done(null, json);
                         return;
                     }
-                    done(null, body);
+                    done(null, false);
                     return;
                 } else {
-                    done(null, body);
+                    done(null, false);
                     return;
                 }
             });
@@ -105,48 +105,8 @@ app.addContentTypeParser('*', (req, payload, done) => {
 * Register Handler
 */
 
-
-const websocketServer = new WebSocket.Server({ host: '127.0.0.1', port: 80 });
-
-
-websocketServer.on('connection', function (ws) {
-    logger.logInfo("HELLO BROTHER");
-
-    ws.on("message", function (message) {
-        logger.logInfo("you got mail")
-        logger.logInfo(message)
-    })
-
-    ws.on("upgrade", function(request) {
-        logger.logInfo("upgrade")
-        logger.logInfo(request)
-    })
-})
-
-websocketServer.on("headers", function (headers) {
-    logger.logInfo(headers)
-})
-
-websocketServer.on('listening', ()=>{
-    logger.logInfo('listening on 443')
-})
-
-websocketServer.on("upgrade", function (request, socket, head) {
-    logger.logInfo("upgrade")
-    logger.logInfo(request)
-    logger.logInfo(socket)
-    logger.logInfo(head)
-})
-
-websocketServer.on("error", function (error) {
-    logger.logError(error)
-})
-
 app.server.on("upgrade", function (request, socket, head) {
     logger.logInfo("upgrade")
-    logger.logInfo(request)
-    logger.logInfo(socket)
-    logger.logInfo(head)
 })
 
 app.server.on("error", function (error) {
@@ -157,4 +117,3 @@ app.register(require('./plugins/register.js'));
 
 
 app.listen({ port: 443, host: '127.0.0.1' });
-

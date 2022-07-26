@@ -30,12 +30,12 @@ module.exports = async function notifierRoutes(app, opt) {
         );
     });
 
-    app.post("/push/notifier/getwebsocket/:sessionID", async (request, reply) => {
+    app.get("/push/notifier/getwebsocket/:sessionID", { websocket: true }, async (connection, request, reply) => {
         logger.logError("NOTIFIER getwebsocket GET HIT");
-            return FastifyResponse.zlibJsonReply(
-                reply,
-                FastifyResponse.applyBody("ok")
-        );
+        connection.socket.on('message', message => {
+            // message.toString() === 'hi from client'
+            connection.socket.send('NOTIFIER getwebsocket GET HIT')
+        })
     });
 
     app.post("/getNotifier", async (request, reply) => {
