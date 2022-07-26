@@ -1,6 +1,5 @@
 const cloneDeep = require("rfdc")();
 const { logger, getCurrentTimestamp, generateItemId } = require("../utilities");
-const { logDebug, logError } = require("../utilities/logger");
 const { BaseModel } = require("./BaseModel");
 const { Customization, Item } = require("./Index");
 
@@ -794,9 +793,9 @@ class Character extends BaseModel {
                 }
             }
         }
-        
-        
-        if(!noOrphans) {
+
+
+        if (!noOrphans) {
             await this.clearOrphans();
         }
 

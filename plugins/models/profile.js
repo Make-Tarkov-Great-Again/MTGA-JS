@@ -245,7 +245,7 @@ class Profile extends BaseModel {
         return calculatedLoyalty;
     }
 
-    async addDialogue(id, messageContent, rewards=[]) {
+    async addDialogue(id, messageContent, rewards = []) {
         let dialogue;
         if (!dialogue) {
             dialogue = await new Dialogue(id);
@@ -311,7 +311,7 @@ class Profile extends BaseModel {
             quests: [], // are those current accepted quests ?? -- seems like thoose are completed/failed quests -Nehax
             ragFairOffers: [], // are those current ragfair requests ?
             builds: [], // are those current weapon builds ??
-            items: { },
+            items: {},
             production: null,
             skills: await this.character.getSkills(),
             traderRelations: [] //_profile.TradersInfo
@@ -321,7 +321,7 @@ class Profile extends BaseModel {
     }
 
     async getProfileChangesResponse(profileChanges, outputData) {
-        if(!profileChanges) {
+        if (!profileChanges) {
             return false;
         }
         const mergedData = Object.assign({}, outputData.profileChanges[this.character._id], profileChanges);

@@ -784,15 +784,15 @@ class GameController {
         const output = { items: { new: [], change: [], del: [] } };
         if (playerProfile) {
             const hideoutArea = await playerProfile.character.getHideoutAreaByType(moveAction.areaType);
-            if(!hideoutArea) {
+            if (!hideoutArea) {
                 logger.logError(`[clientGameProfileHideoutTakeItemsFromAreaSlots] Unable to find hideout area type ${moveAction.areaType} for playerProfile ${playerProfile.character._id}.`);
                 return output;
             }
 
             for (const slot in moveAction.slots) {
-                for(const item of hideoutArea.slots[slot].item) {
+                for (const item of hideoutArea.slots[slot].item) {
                     const itemAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), item._tpl, false, 1);
-                    if(itemAdded) {
+                    if (itemAdded) {
                         output.items.new = [...output.items.new, ...itemAdded];
                         hideoutArea.slots.splice(slot, 1);
                     }
@@ -805,7 +805,7 @@ class GameController {
     static clientGameProfileHideoutToggleArea = async (moveAction = null, _reply = null, playerProfile = null) => {
         if (playerProfile) {
             const hideoutArea = await playerProfile.character.getHideoutAreaByType(moveAction.areaType);
-            if(!hideoutArea) {
+            if (!hideoutArea) {
                 logger.logError(`[clientGameProfileHideoutToggleArea] Unable to find hideout area type ${moveAction.areaType} for playerProfile ${playerProfile.character._id}.`);
                 return;
             }

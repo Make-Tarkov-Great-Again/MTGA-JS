@@ -118,8 +118,8 @@ class Trader extends BaseModel {
         for (const item of profile.character.Inventory.items) {
             // Skip money items, sorting table, default inventory, pockets & stashs
             if (!["5449016a4bdc2d6f028b456f", "569668774bdc2da2298b4568", "5696686a4bdc2da3298b456a",
-            "602543c13fee350cd564d032", "55d7217a4bdc2d86028b456d", "627a4e6b255f7527fb05a0f6",
-            "5811ce772459770e9e5f9532", "5963866b86f7747bfa1c4462", "5963866286f7747bf429b572"].includes(item._tpl)) {
+                "602543c13fee350cd564d032", "55d7217a4bdc2d86028b456d", "627a4e6b255f7527fb05a0f6",
+                "5811ce772459770e9e5f9532", "5963866b86f7747bfa1c4462", "5963866286f7747bf429b572"].includes(item._tpl)) {
                 if (await this.itemInPurchaseCategories(item)) {
                     // Skip items that aren't part of a category buyable by trader (therapist don't buy bullets for example)
                     let price = database.templates.PriceTable[item._tpl];
@@ -143,17 +143,17 @@ class Trader extends BaseModel {
      */
     async itemInPurchaseCategories(item) {
         for (const purchaseCategorie of this.base.sell_category) {
-            const traderCategories = database.templates.Categories.filter(categorie => categorie.Id === purchaseCategorie );
+            const traderCategories = database.templates.Categories.filter(categorie => categorie.Id === purchaseCategorie);
             for (const traderCategorie of traderCategories) {
                 /**
                  * If there is no ParentId for the parrent category, that mean it's a main category (weapons, meds, food...).
                  * we retrieve every subcategory (shotgun, rifle, snipers would be some of the subs for WEAPON)
                  */
                 if (!traderCategorie.ParentId) {
-                    const subCategories = database.templates.Categories.filter(categorie => categorie.ParentId === traderCategorie.Id );
+                    const subCategories = database.templates.Categories.filter(categorie => categorie.ParentId === traderCategorie.Id);
                     for (const subCategorie of subCategories) {
                         // Retrieve the item from the templates database since it contains the parentId (category)
-                        const itemData = database.templates.Items.filter(dbItem => dbItem.Id === item._tpl )[0];
+                        const itemData = database.templates.Items.filter(dbItem => dbItem.Id === item._tpl)[0];
                         if (itemData) {
                             if (subCategorie.Id === itemData.ParentId) {
                                 return true;
@@ -161,7 +161,7 @@ class Trader extends BaseModel {
                         }
                     }
                 } else {
-                    const itemData = database.templates.Items.filter(dbItem => dbItem.Id === item._tpl )[0];
+                    const itemData = database.templates.Items.filter(dbItem => dbItem.Id === item._tpl)[0];
                     if (itemData) {
                         if (traderCategorie.Id === itemData.ParentId) {
                             return true;

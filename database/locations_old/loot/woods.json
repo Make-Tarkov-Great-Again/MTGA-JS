@@ -103,8 +103,8 @@
             "Root": null,
             "Items": [
                 {
-                "_id": "618940000000000000000015",
-                "_tpl": "61a89e5445a2672acf66c877"
+                    "_id": "618940000000000000000015",
+                    "_tpl": "61a89e5445a2672acf66c877"
                 }
             ]
         },
@@ -114,23 +114,23 @@
             "useGravity": true,
             "randomRotation": false,
             "Position": {
-             "x": 0,
-             "y": 0,
-             "z": 0
+                "x": 0,
+                "y": 0,
+                "z": 0
             },
             "Rotation": {
-             "x": 0,
-             "y": 0,
-             "z": 0
+                "x": 0,
+                "y": 0,
+                "z": 0
             },
             "IsGroupPosition": false,
             "GroupPositions": [],
             "Root": null,
             "Items": [
-             {
-              "_id": "618940000000000000000014",
-              "_tpl": "61a89e5445a2672acf66c877"
-             }
+                {
+                    "_id": "618940000000000000000014",
+                    "_tpl": "61a89e5445a2672acf66c877"
+                }
             ]
         },
         {
@@ -139,23 +139,23 @@
             "useGravity": true,
             "randomRotation": false,
             "Position": {
-             "x": 0,
-             "y": 0,
-             "z": 0
+                "x": 0,
+                "y": 0,
+                "z": 0
             },
             "Rotation": {
-             "x": 0,
-             "y": 0,
-             "z": 0
+                "x": 0,
+                "y": 0,
+                "z": 0
             },
             "IsGroupPosition": false,
             "GroupPositions": [],
             "Root": null,
             "Items": [
-             {
-              "_id": "618940000000000000000013",
-              "_tpl": "61a89e5445a2672acf66c877"
-             }
+                {
+                    "_id": "618940000000000000000013",
+                    "_tpl": "61a89e5445a2672acf66c877"
+                }
             ]
         },
         {
@@ -164,48 +164,48 @@
             "useGravity": true,
             "randomRotation": false,
             "Position": {
-             "x": 0,
-             "y": 0,
-             "z": 0
+                "x": 0,
+                "y": 0,
+                "z": 0
             },
             "Rotation": {
-             "x": 0,
-             "y": 0,
-             "z": 0
+                "x": 0,
+                "y": 0,
+                "z": 0
             },
             "IsGroupPosition": false,
             "GroupPositions": [],
             "Root": null,
             "Items": [
-             {
-              "_id": "618940000000000000000012",
-              "_tpl": "61a89e5445a2672acf66c877"
-             }
+                {
+                    "_id": "618940000000000000000012",
+                    "_tpl": "61a89e5445a2672acf66c877"
+                }
             ]
-           },
-           {
+        },
+        {
             "id": "container_shoreline_scripts_00005",
             "IsStatic": true,
             "useGravity": true,
             "randomRotation": false,
             "Position": {
-             "x": 0,
-             "y": 0,
-             "z": 0
+                "x": 0,
+                "y": 0,
+                "z": 0
             },
             "Rotation": {
-             "x": 0,
-             "y": 0,
-             "z": 0
+                "x": 0,
+                "y": 0,
+                "z": 0
             },
             "IsGroupPosition": false,
             "GroupPositions": [],
             "Root": null,
             "Items": [
-             {
-              "_id": "618940000000000000000011",
-              "_tpl": "61a89e5445a2672acf66c877"
-             }
+                {
+                    "_id": "618940000000000000000011",
+                    "_tpl": "61a89e5445a2672acf66c877"
+                }
             ]
         },
         {
@@ -357,14 +357,14 @@
             "useGravity": true,
             "randomRotation": false,
             "Position": {
-            "x": 0,
-            "y": 0,
-            "z": 0
+                "x": 0,
+                "y": 0,
+                "z": 0
             },
             "Rotation": {
-            "x": 0,
-            "y": 0,
-            "z": 0
+                "x": 0,
+                "y": 0,
+                "z": 0
             },
             "IsGroupPosition": false,
             "GroupPositions": [],

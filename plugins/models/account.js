@@ -26,7 +26,7 @@ class Account extends BaseModel {
 
     async save() {
         const { database } = require("../../app");
-        if(!database.fileAge[this.id]) {
+        if (!database.fileAge[this.id]) {
             database.fileAge[this.id] = {};
         }
 
@@ -63,9 +63,9 @@ class Account extends BaseModel {
             } else {
                 logger.logWarning(`[CLUSTER] Account file for account ${this.id} was modified, reloading.`);
                 // Change
-                    /* Reload the account from disk.
-                    this.accounts[this.id] = readParsed(`./user/profiles/${this.id}/account.json`);
-                    Reset the file age for this users account file.*/
+                /* Reload the account from disk.
+                this.accounts[this.id] = readParsed(`./user/profiles/${this.id}/account.json`);
+                Reset the file age for this users account file.*/
                 database.fileAge[this.id].account = stats.mtimeMs;
             }
         }
