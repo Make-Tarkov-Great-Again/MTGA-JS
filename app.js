@@ -54,9 +54,9 @@ app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (re
         try {
             zlib.inflate(body, function (err, data) {
                 if (!err && data !== undefined) {
-                    var inflatedString = data.toString('utf-8');
+                    const inflatedString = data.toString('utf-8');
                     if (inflatedString.length > 0) {
-                        var json = JSON.parse(inflatedString);
+                        const json = JSON.parse(inflatedString);
                         done(null, json);
                         return;
                     }
@@ -74,7 +74,7 @@ app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (re
         }
     } else {
         try {
-            var json = JSON.parse(body);
+            const json = JSON.parse(body);
             done(null, json);
         } catch (err) {
             err.statusCode = 400;
@@ -98,11 +98,17 @@ app.addContentTypeParser('*', (req, payload, done) => {
 */
 
 app.register(require('@fastify/websocket'), {
+    errorHandler: function (error, conn /* SocketStream */, req /* FastifyRequest */, reply /* FastifyReply */) {
+        // Do stuff
+        // destroy/close connection
+        conn.destroy(error)
+    },
     options: {
         verifyClient: (info, next) => {
             logger.logInfo(info);
             next(true);
-        }
+        },
+        perMessageDeflate: true,
     }
 });
 app.register(require('./plugins/register.js'));
