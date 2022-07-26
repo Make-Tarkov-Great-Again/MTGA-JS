@@ -18,9 +18,9 @@ class FastifyResponse {
         return {
             "server": this.getBackendURL(),
             "channel_id": sessionID,
-            "url": `${this.getBackendURL()}/push/notifier/get/${sessionID}`,
-            "notifierServer": `${this.getBackendURL()}/push/notifier/get/${sessionID}`,
-            "ws": `${this.getWebSocketURL()}/push/notifier/getwebsocket/${sessionID}`
+            "url": `${this.getWebSocketURL()}`,
+            "notifierServer": `${this.getWebSocketURL()}`,
+            "ws": `${this.getWebSocketURL()}`
         };
     }
 
@@ -35,11 +35,11 @@ class FastifyResponse {
 
 
     static getBackendURL() {
-        return "https://" + this.getUrl();
+        return "https://" + this.getUrl() + "/";
     }
 
     static getWebSocketURL() {
-        return `ws://${this.getUrl()}`;
+        return `ws://127.0.0.1:80/`;
     }
 
     static getSessionID = async (request) => {

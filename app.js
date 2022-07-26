@@ -1,6 +1,8 @@
 const { certificate } = require("./engine/certificategenerator");
 const cert = certificate.generate("127.0.0.1");
+const WebSocket = require("ws");
 const zlib = require("node:zlib");
+const crypto = require("crypto")
 
 /**
  * Fastify instance
@@ -26,7 +28,7 @@ const app = require('fastify')({
             }
         }
     },
-    http2: true,
+    //http2: true,
     https: {
         allowHTTP1: true,
         key: cert.key,
@@ -96,45 +98,56 @@ app.addContentTypeParser('*', (req, payload, done) => {
 * Register Handler
 */
 
-app.register(require('@fastify/websocket'), {
-    options: {
-        verifyClient: (info, next) => {
-            logger.logInfo(info);
-            next(true);
-        }
-    }
-});
+
+const websocketServer = new WebSocket.Server({ host: '127.0.0.1', port: 80 });
+
+
+websocketServer.on('connection', function (ws) {
+    logger.logInfo("HELLO BROTHER");
+
+    ws.on("message", function (message) {
+        logger.logInfo("you got mail")
+        logger.logInfo(message)
+    })
+
+    ws.on("upgrade", function(request) {
+        logger.logInfo("upgrade")
+        logger.logInfo(request)
+    })
+})
+
+websocketServer.on("headers", function (headers) {
+    logger.logInfo(headers)
+})
+
+websocketServer.on('listening', ()=>{
+    logger.logInfo('listening on 443')
+})
+
+websocketServer.on("upgrade", function (request, socket, head) {
+    logger.logInfo("upgrade")
+    logger.logInfo(request)
+    logger.logInfo(socket)
+    logger.logInfo(head)
+})
+
+websocketServer.on("error", function (error) {
+    logger.logError(error)
+})
+
+app.server.on("upgrade", function (request, socket, head) {
+    logger.logInfo("upgrade")
+    logger.logInfo(request)
+    logger.logInfo(socket)
+    logger.logInfo(head)
+})
+
+app.server.on("error", function (error) {
+    logger.logError(error)
+})
+
 app.register(require('./plugins/register.js'));
 
-//app.register(async function (fastify) {
-//    fastify.get('/*', {
-//        websocket: true
-//    }, (connection /* SocketStream */ , req /* FastifyRequest */ ) => {
-//        connection.socket.on('message', message => {
-//            // message.toString() === 'hi from client'
-//            connection.socket.send('hi from wildcard route')
-//        })
-//    })
-//
-//    fastify.get('/', {
-//        websocket: true
-//    }, (connection /* SocketStream */ , req /* FastifyRequest */ ) => {
-//        connection.socket.on('message', message => {
-//            // message.toString() === 'hi from client'
-//            connection.socket.send('hi from server')
-//        })
-//    })
-//});
-/**
-* Start the server
-*/
-function start() {
-    try {
-        app.listen({ port: 443, host: '127.0.0.1' });
-    } catch (err) {
-        app.log.info(err);
-        process.exit(1);
-    }
-}
-start();
+
+app.listen({ port: 443, host: '127.0.0.1' });
 
