@@ -121,150 +121,150 @@
             "useGravity": true,
             "randomRotation": false,
             "Position": {
-             "x": 0,
-             "y": 0,
-             "z": 0
+                "x": 0,
+                "y": 0,
+                "z": 0
             },
             "Rotation": {
-             "x": 0,
-             "y": 0,
-             "z": 0
+                "x": 0,
+                "y": 0,
+                "z": 0
             },
             "IsGroupPosition": false,
             "GroupPositions": [],
             "Root": null,
             "Items": [
-             {
-              "_id": null,
-              "_tpl": "61a89e5445a2672acf66c877"
-             }
+                {
+                    "_id": null,
+                    "_tpl": "61a89e5445a2672acf66c877"
+                }
             ]
-           },
-           {
+        },
+        {
             "Id": "container_shoreline_scripts_00001",
             "IsStatic": true,
             "useGravity": true,
             "randomRotation": false,
             "Position": {
-             "x": 0,
-             "y": 0,
-             "z": 0
+                "x": 0,
+                "y": 0,
+                "z": 0
             },
             "Rotation": {
-             "x": 0,
-             "y": 0,
-             "z": 0
+                "x": 0,
+                "y": 0,
+                "z": 0
             },
             "IsGroupPosition": false,
             "GroupPositions": [],
             "Root": null,
             "Items": [
-             {
-              "_id": null,
-              "_tpl": "61a89e5445a2672acf66c877"
-             }
+                {
+                    "_id": null,
+                    "_tpl": "61a89e5445a2672acf66c877"
+                }
             ]
-           },
-           {
+        },
+        {
             "Id": "container_shoreline_scripts_00002",
             "IsStatic": true,
             "useGravity": true,
             "randomRotation": false,
             "Position": {
-             "x": 0,
-             "y": 0,
-             "z": 0
+                "x": 0,
+                "y": 0,
+                "z": 0
             },
             "Rotation": {
-             "x": 0,
-             "y": 0,
-             "z": 0
+                "x": 0,
+                "y": 0,
+                "z": 0
             },
             "IsGroupPosition": false,
             "GroupPositions": [],
             "Root": null,
             "Items": [
-             {
-              "_id": null,
-              "_tpl": "61a89e5445a2672acf66c877"
-             }
+                {
+                    "_id": null,
+                    "_tpl": "61a89e5445a2672acf66c877"
+                }
             ]
-           },
-           {
+        },
+        {
             "Id": "container_shoreline_scripts_00003",
             "IsStatic": true,
             "useGravity": true,
             "randomRotation": false,
             "Position": {
-             "x": 0,
-             "y": 0,
-             "z": 0
+                "x": 0,
+                "y": 0,
+                "z": 0
             },
             "Rotation": {
-             "x": 0,
-             "y": 0,
-             "z": 0
+                "x": 0,
+                "y": 0,
+                "z": 0
             },
             "IsGroupPosition": false,
             "GroupPositions": [],
             "Root": null,
             "Items": [
-             {
-              "_id": null,
-              "_tpl": "61a89e5445a2672acf66c877"
-             }
+                {
+                    "_id": null,
+                    "_tpl": "61a89e5445a2672acf66c877"
+                }
             ]
-           },
-           {
+        },
+        {
             "Id": "container_shoreline_scripts_00004",
             "IsStatic": true,
             "useGravity": true,
             "randomRotation": false,
             "Position": {
-             "x": 0,
-             "y": 0,
-             "z": 0
+                "x": 0,
+                "y": 0,
+                "z": 0
             },
             "Rotation": {
-             "x": 0,
-             "y": 0,
-             "z": 0
+                "x": 0,
+                "y": 0,
+                "z": 0
             },
             "IsGroupPosition": false,
             "GroupPositions": [],
             "Root": null,
             "Items": [
-             {
-              "_id": null,
-              "_tpl": "61a89e5445a2672acf66c877"
-             }
+                {
+                    "_id": null,
+                    "_tpl": "61a89e5445a2672acf66c877"
+                }
             ]
-           },
-           {
+        },
+        {
             "Id": "container_shoreline_scripts_00005",
             "IsStatic": true,
             "useGravity": true,
             "randomRotation": false,
             "Position": {
-             "x": 0,
-             "y": 0,
-             "z": 0
+                "x": 0,
+                "y": 0,
+                "z": 0
             },
             "Rotation": {
-             "x": 0,
-             "y": 0,
-             "z": 0
+                "x": 0,
+                "y": 0,
+                "z": 0
             },
             "IsGroupPosition": false,
             "GroupPositions": [],
             "Root": null,
             "Items": [
-             {
-              "_id": null,
-              "_tpl": "61a89e5445a2672acf66c877"
-             }
+                {
+                    "_id": null,
+                    "_tpl": "61a89e5445a2672acf66c877"
+                }
             ]
-           },
+        },
         {
             "id": "00947",
             "Position": 0,

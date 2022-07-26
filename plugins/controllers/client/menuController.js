@@ -18,7 +18,7 @@ class MenuController {
         } else {
             return FastifyResponse.zlibJsonReply(
                 reply,
-                FastifyResponse.applyBody("ERROR",999,"ERROR SHIT")
+                FastifyResponse.applyBody("ERROR", 999, "ERROR SHIT")
             )
         }
     }

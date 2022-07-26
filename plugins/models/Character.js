@@ -794,9 +794,9 @@ class Character extends BaseModel {
                 }
             }
         }
-        
-        
-        if(!noOrphans) {
+
+
+        if (!noOrphans) {
             await this.clearOrphans();
         }
 

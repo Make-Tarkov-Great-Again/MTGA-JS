@@ -35,8 +35,7 @@
             "BotPreset": "normal",
             "WildSpawnType": "assault",
             "isPlayers": false
-        }
-        ,
+        },
         {
             "number": 1,
             "time_min": 5,
@@ -2466,17 +2465,17 @@
         }
     ],
     "BossLocationSpawn": [
-  {
-    "BossName": "pmcBot",
-    "BossChance": 100,
-    "BossZone": "BotZone",
-    "BossPlayer": false,
-    "BossDifficult": "normal",
-    "BossEscortType": "pmcBot",
-    "BossEscortDifficult": "normal",
-    "BossEscortAmount": "2",
-    "Time": 5
-  }
+        {
+            "BossName": "pmcBot",
+            "BossChance": 100,
+            "BossZone": "BotZone",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "pmcBot",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "2",
+            "Time": 5
+        }
     ],
     "Id": "factory4_day",
     "_Id": "55f2d3fd4bdc2d5f408b4567",

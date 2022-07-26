@@ -61,7 +61,7 @@ class AccountController {
         if (await webinterface.checkForSessionID(request)) {
             return webinterface.renderMessage("Error", "Incorrect call.");
         } else {
-            
+
             if (request.body.email != (undefined || null) && request.body.password != (undefined || null)) {
                 logger.logDebug(await Account.getBy('email', request.body.email));
                 let userAccount = await Account.getBy('email', request.body.email);
@@ -126,7 +126,7 @@ class AccountController {
             newAccount.wipe = true;
             newAccount.edition = await Edition.get(request.body.edition);
             await newAccount.save();
-            
+
             if (newAccount.id != (undefined || null || false)) {
                 logger.logDebug('[WEBINTERFACE] Registration successful for account ID: ' + newAccount.id);
                 reply.setCookie('PHPSESSID', newAccount.id, { path: '/' });
@@ -166,13 +166,13 @@ class AccountController {
         }
 
         let editionsHTML = "";
-            for (const [name, value] of Object.entries(Object.keys(await Edition.getAll()))) {
-                if(userAccount.edition.id === value) {
-                    editionsHTML = editionsHTML + '<option value="' + value + '" selected>' + value + '</option>'
-                } else {
-                    editionsHTML = editionsHTML + '<option value="' + value + '">' + value + '</option>'
-                }
+        for (const [name, value] of Object.entries(Object.keys(await Edition.getAll()))) {
+            if (userAccount.edition.id === value) {
+                editionsHTML = editionsHTML + '<option value="' + value + '" selected>' + value + '</option>'
+            } else {
+                editionsHTML = editionsHTML + '<option value="' + value + '">' + value + '</option>'
             }
+        }
 
         let pageVariables = {
             "tarkovPath": ((userAccount.tarkovPath) ? userAccount.tarkovPath : ''),
@@ -214,19 +214,19 @@ class AccountController {
             reply.redirect('/webinterface/account/login');
         }
 
-        if(request.body.password && request.body.password_retype) {
-            if(request.body.password === request.body.password_retype) {
+        if (request.body.password && request.body.password_retype) {
+            if (request.body.password === request.body.password_retype) {
                 userAccount.password = request.body.password;
             } else {
                 return webinterface.renderMessage("Error", "The passwords did not match.");
             }
         }
 
-        if(request.body.edition) {
+        if (request.body.edition) {
             userAccount.edition = await Edition.get(request.body.edition);
         }
 
-        if(request.body.wipe) {
+        if (request.body.wipe) {
             userAccount.wipe = true;
         }
 

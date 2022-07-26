@@ -14,7 +14,7 @@ module.exports = async function notifierRoutes(app, opt) {
 
     app.route({
         method: "POST",
-        url:'/:lastID',
+        url: '/:lastID',
         handler: async (request, reply) => {
             logger.logError("NOTIFIER HIT");
             return FastifyResponse.zlibJsonReply(
@@ -22,12 +22,12 @@ module.exports = async function notifierRoutes(app, opt) {
                 FastifyResponse.applyBody("NOTIFY")
             );
         },
-       //wsHandler: (connection, req) => {
-       //    logger.logError("NOTIFIER WS HIT");
-       //    connection.socket.on('message', message => {
-       //        connection.socket.send('Hello Fastify WebSockets');
-       //    });
-       //}
+        //wsHandler: (connection, req) => {
+        //    logger.logError("NOTIFIER WS HIT");
+        //    connection.socket.on('message', message => {
+        //        connection.socket.send('Hello Fastify WebSockets');
+        //    });
+        //}
     });
 
     app.route({
