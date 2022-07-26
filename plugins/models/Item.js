@@ -1,5 +1,4 @@
 const { logger, generateItemId } = require("../utilities");
-const { logError } = require("../utilities/logger");
 const { BaseModel } = require("./BaseModel");
 
 
@@ -443,9 +442,9 @@ class Item extends BaseModel {
                     }
                 }
             case "5485a8684bdc2da71d8b4567": // Ammo
-            return {
-                "StackObjectsCount": item._props.StackMaxSize
-            }
+                return {
+                    "StackObjectsCount": item._props.StackMaxSize
+                }
 
             default:
                 console.log(`Unable to create fresh UPD from parent [${item._parent}] for item [${item._tpl}]`);

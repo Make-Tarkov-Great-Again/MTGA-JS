@@ -56,9 +56,7 @@ class TradingController {
     static getTraderAssort = async (request = null, reply = null) => {
         const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
         const profile = await playerAccount.getProfile();
-        let splittedUrl = request.raw.url.split("/");
-        splittedUrl = splittedUrl[splittedUrl.length - 1].split("?");
-        const traderId = splittedUrl[0];
+        const traderId = request.params.traderId
         const trader = await Trader.get(traderId);
         const res = await trader.getFilteredAssort(profile);
         await FastifyResponse.zlibJsonReply
@@ -68,12 +66,20 @@ class TradingController {
             );
     };
 
+    static getTraderOutfitOffers = async (request = null, reply = null) => {
+        const trader = await Trader.get(request.params.id);
+        logger.logInfo(`Shows outfits for all sides, we'll decide if we care or not`);
+        await FastifyResponse.zlibJsonReply
+            (
+                reply,
+                FastifyResponse.applyBody(trader.suits)
+            );
+    }
+
     static getUserAssortPrice = async (request = null, reply = null) => {
         const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
         const profile = await playerAccount.getProfile();
-        let splittedUrl = request.raw.url.split("/");
-        splittedUrl = splittedUrl[splittedUrl.length - 1].split("?");
-        const traderId = splittedUrl[0];
+        const traderId = request.params.traderId;
         const trader = await Trader.get(traderId);
         await FastifyResponse.zlibJsonReply
             (

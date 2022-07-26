@@ -69,7 +69,7 @@
     --bs-border-radius-xl: 1rem;
     --bs-border-radius-2xl: 2rem;
     --bs-border-radius-pill: 50rem;
-    --bs-heading-color: ;
+    --bs-heading-color: whitesmoke;
     --bs-link-color: #0d6efd;
     --bs-link-hover-color: #0a58ca;
     --bs-code-color: #d63384;
@@ -192,7 +192,7 @@ h6 {
 
 p {
     margin-top: 0;
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
 }
 
 abbr[title] {

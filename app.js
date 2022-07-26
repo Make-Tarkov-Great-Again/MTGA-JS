@@ -23,7 +23,14 @@ const app = require('fastify')({
                     method: request.method,
                     url: request.url,
                     headers: request.headers,
-                    body: request.body
+                    params: request.params,
+                    body: request.body,
+                    query: request.query,
+                    hostname: request.hostname,
+                    remoteAddress: request.ip,
+                    remotePort: request.socket.remotePort,
+                    routerMethod: request.routerMethod,
+                    routerPath: request.routerPath
                 };
             }
         }
@@ -55,9 +62,9 @@ app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (re
         try {
             zlib.inflate(body, function (err, data) {
                 if (!err && data !== undefined) {
-                    var inflatedString = data.toString('utf-8');
+                    const inflatedString = data.toString('utf-8');
                     if (inflatedString.length > 0) {
-                        var json = JSON.parse(inflatedString);
+                        const json = JSON.parse(inflatedString);
                         done(null, json);
                         return;
                     }
@@ -75,7 +82,7 @@ app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (re
         }
     } else {
         try {
-            var json = JSON.parse(body);
+            const json = JSON.parse(body);
             done(null, json);
         } catch (err) {
             err.statusCode = 400;

@@ -34,7 +34,7 @@ const isUndefined = async (value) => {
 const getFileUpdatedDate = (path) => {
     const stats = fs.statSync(path)
     return stats.mtimeMs;
-  }
+}
 
 const getIsoDateString = async (useFormatted = false) => {
     if (useFormatted) {
