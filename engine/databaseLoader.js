@@ -422,6 +422,10 @@ class DatabaseUtils {
      * @returns 
      */
     static async checkDirectoryDates(serverConfig, bool = false) {
+        if(!fs.existsSync('./TextAsset')) {
+            return false;
+        }
+
         if (!getAbsolutePathFrom('./TextAsset') || getFilesFrom('./TextAsset').length === 0) { return false; }
 
         if (typeof serverConfig.TextAsset != "undefined" && bool) {
