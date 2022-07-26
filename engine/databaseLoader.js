@@ -52,7 +52,6 @@ class DatabaseLoader {
         };
 
         const directoryTimers = database.core.serverConfig.directoryTimers
-        database.core.serverConfig.directoryTimers = await DatabaseUtils.checkDirectoryDates(directoryTimers);
         const check = await DatabaseUtils.checkDirectoryDates(directoryTimers, true)
         if (check === true) {
             writeFile("./database/configs/server.json", stringify(serverConfig));
@@ -121,7 +120,7 @@ class DatabaseLoader {
         //bude i need this commented out portion adjusted to the new locations system
 
         const { database } = require('../app');
-        const checkForUpdate = await DatabaseUtils.checkDirectoryDates(database.core.serverConfig.directoryTimers, true);
+        const checkForUpdate = await DatabaseUtils.checkDirectoryDates(database.core.serverConfig.directoryTimers);
         if (checkForUpdate === true) {
             await DatabaseUtils.formatAndWriteNewLocationDataToDisk();
         }
@@ -423,7 +422,9 @@ class DatabaseUtils {
      * @returns 
      */
     static async checkDirectoryDates(serverConfig, bool = false) {
-        if (typeof serverConfig.TextAsset != "undefined" && bool === false) {
+        if (!getAbsolutePathFrom('./TextAsset') || getFilesFrom('./TextAsset').length === 0) { return false; }
+
+        if (typeof serverConfig.TextAsset != "undefined" && bool) {
             const date = getFileUpdatedDate(getAbsolutePathFrom('./TextAsset'));
             if (date > serverConfig.TextAsset) {
                 serverConfig.TextAsset = date;
@@ -432,10 +433,7 @@ class DatabaseUtils {
             return serverConfig
         }
 
-        if (typeof serverConfig.TextAsset != "undefined" && bool !== false) {
-            if (!getAbsolutePathFrom('./TextAsset')) { logger.logDebug("TextAsset folder doesn't exist"); return false; } 
-            else if (getFilesFrom('./TextAsset').length === 0) { logger.logDebug("TextAsset folder is empty"); return false; }
-
+        if (typeof serverConfig.TextAsset != "undefined" && !bool) {
             const date = getFileUpdatedDate('./TextAsset');
             if (date > serverConfig.TextAsset) {
                 serverConfig.TextAsset = date;
