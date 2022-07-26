@@ -21,8 +21,14 @@ const app = require('fastify')({
                     method: request.method,
                     url: request.url,
                     headers: request.headers,
+                    params: request.params,
                     body: request.body,
-                    params: request.params
+                    query: request.query,
+                    hostname: request.hostname,
+                    remoteAddress: request.ip,
+                    remotePort: request.socket.remotePort,
+                    routerMethod: request.routerMethod,
+                    routerPath: request.routerPath
                 };
             }
         }
@@ -108,7 +114,10 @@ app.register(require('@fastify/websocket'), {
             logger.logInfo(info);
             next(true);
         },
-        perMessageDeflate: true,
+        perMessageDeflate: false,
+    },
+    connectionOptions: {
+        allowHalfOpen: false,
     }
 });
 app.register(require('./plugins/register.js'));

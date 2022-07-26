@@ -1,5 +1,4 @@
 const { logger, generateItemId } = require("../utilities");
-const { logError } = require("../utilities/logger");
 const { BaseModel } = require("./BaseModel");
 
 

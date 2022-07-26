@@ -1,4 +1,3 @@
-const BaseModel = require('./BaseModel');
 const Character = require('./Character');
 const Account = require('./Account');
 const Trader = require('./Trader');
@@ -32,7 +31,6 @@ module.exports = {
     ...Dialogue,
     ...Quest,
     ...Weaponbuild,
-    ...BaseModel,
     ...HideoutArea,
     ...HideoutProduction,
     ...HideoutScavcase,
