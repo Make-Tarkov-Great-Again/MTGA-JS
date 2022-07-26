@@ -28,6 +28,8 @@ module.exports = fp(async function (app, _opts) {
    */
   await app.register(require('@fastify/formbody'));
 
+  await app.register(require('@fastify/websocket'));
+
   /**
 * Register Handler
 */
