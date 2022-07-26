@@ -70,15 +70,12 @@ class Ragfair extends BaseModel {
          * compared.... fuck if i know
          */
         if (database.core.serverConfig.directoryTimers.FleaMarket === 1) {
-
             ragfair = await this.applyRequestReturnRagfair(request, ragfair);
 
         } else if (database.core.serverConfig.directoryTimers.FleaMarket === 0) {
 
             if (database.core.serverConfig.directoryTimers.FleaMarket === 0) {
                 database.core.serverConfig.directoryTimers.FleaMarket = 1;
-            } else if (database.core.serverConfig.directoryTimers.FleaMarket === 1) {
-                database.core.serverConfig.directoryTimers.FleaMarket = 2;
             }
 
             const list = await this.investigateHandbookId(request.handbookId);
@@ -110,7 +107,7 @@ class Ragfair extends BaseModel {
                 ragfair.categories = await this.formatCategories(
                     ragfair.categories,
                     ragfair.offers,
-                    await this.getNeededOrLinkedearch(request.neededSearchId)
+                    await this.getNeededSearch(request.neededSearchId)
                 );
                 ragfair.offers = await this.reduceOffersBasedOnCategories(
                     ragfair.offers,
@@ -120,7 +117,7 @@ class Ragfair extends BaseModel {
                 ragfair.categories = await this.formatCategories(
                     ragfair.categories,
                     ragfair.offers,
-                    await this.getNeededOrLinkedearch(request.linkedSearchId)
+                    await this.getLinkedSearch(request.linkedSearchId)
                 );
                 ragfair.offers = await this.reduceOffersBasedOnCategories(
                     ragfair.offers,
@@ -136,7 +133,7 @@ class Ragfair extends BaseModel {
             ragfair.categories = await this.formatCategories(
                 ragfair.categories,
                 ragfair.offers,
-                await this.getNeededOrLinkedearch(request.linkedSearchId)
+                await this.getLinkedSearch(request.linkedSearchId)
             );
 
             ragfair.offers = await this.reduceOffersBasedOnCategories(
@@ -147,7 +144,7 @@ class Ragfair extends BaseModel {
             ragfair.categories = await this.formatCategories(
                 ragfair.categories,
                 ragfair.offers,
-                await this.getNeededOrLinkedearch(request.neededSearchId)
+                await this.getNeededSearch(request.neededSearchId)
             );
 
             ragfair.offers = await this.reduceOffersBasedOnCategories(
@@ -241,7 +238,7 @@ class Ragfair extends BaseModel {
         ].includes(input); // Return true if the input ID matches anything in this array, false if it doesn't
     }
 
-    static async getNeededOrLinkedearch(searchId) {
+    static async getNeededSearch(searchId) {
         const { database } = require("../../app");
         const items = await this.bannedItemFilter(database.items);
         let needed = [];
@@ -255,6 +252,18 @@ class Ragfair extends BaseModel {
                 needed.push(item._id);
         }
         return needed;
+    }
+
+    static async getLinkedSearch(searchId) {
+        const item = await Item.get(searchId);
+        const linked = new Set(
+            [
+                ...await this.checkFilters(item, "Slots"),
+                ...await this.checkFilters(item, "Chambers"),
+                ...await this.checkFilters(item, "Cartridges"),
+            ]
+        )
+        return Array.from(linked);
     }
 
     /**
