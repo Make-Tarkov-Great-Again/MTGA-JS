@@ -170,12 +170,17 @@ class DatabaseLoader {
 
     // Load Customization 
     static async loadCustomization() {
+        const { database } = require('../app');
         let customizations = readParsed("./database/customization.json");
         if (typeof customizations.data != "undefined") customizations = customizations.data;
         for (const [index, customization] of Object.entries(customizations)) {
+            if (database.core.gameplay.customization.allHeadsOnCharacterCreation === true) {
+                if (customization._type != "Node" && customization._props.BodyPart === "Head") {
+                    customization._props.Side = ["Bear", "Usec", "Savage"]
+                }
+            }
             await UtilityModel.createModelFromParseWithID('Customization', index, customization);
         }
-
     }
 
     static async loadQuests() {
@@ -226,6 +231,7 @@ class DatabaseLoader {
 
     // Load language
     static async loadLocales() {
+        const { database } = require('../app');
         const localeKeys = getDirectoriesFrom(`./database/locales`);
         this.locales = {};
         for (const locale in localeKeys) {
@@ -234,6 +240,10 @@ class DatabaseLoader {
             if (fileExist(`${currentLocalePath}locale.json`) && fileExist(`${currentLocalePath}menu.json`)) {
                 let localeCopy = readParsed(`${currentLocalePath}locale.json`);
                 if (typeof localeCopy.data != "undefined") { localeCopy = localeCopy.data; }
+
+                if (database.core.gameplay.customization.allHeadsOnCharacterCreation === true) {
+                    localeCopy = await DatabaseUtils.addHeadsToLocale(localeCopy);
+                }
 
                 let menuCopy = readParsed(`${currentLocalePath}menu.json`);
                 if (typeof menuCopy.data != "undefined") { menuCopy = menuCopy.data; }
@@ -422,11 +432,8 @@ class DatabaseUtils {
      * @returns 
      */
     static async checkDirectoryDates(serverConfig, bool = false) {
-        if(!fs.existsSync('./TextAsset')) {
-            return false;
-        }
-
-        if (!getAbsolutePathFrom('./TextAsset') || getFilesFrom('./TextAsset').length === 0) { return false; }
+        if (!fs.existsSync('./TextAsset')
+            || getFilesFrom('./TextAsset').length === 0) { return false; }
 
         if (typeof serverConfig.TextAsset != "undefined" && bool) {
             const date = getFileUpdatedDate(getAbsolutePathFrom('./TextAsset'));
@@ -529,6 +536,35 @@ class DatabaseUtils {
                 }
             }
         }
+    }
+
+    static async addHeadsToLocale(locales) {
+        const extraHeads = readParsed(`./database/locales/extras.json`).Heads
+        let customization = locales.customization;
+
+        // Search through customization and see 
+        // if there is a head with the same name
+        // check if the data from customization is the same as the data from extra heads
+        // if it is, then add the head to the customization
+        // if the head is not in the customization, then add it to the customization
+        for (let head in extraHeads) {
+            let found = false;
+            for (let custo in customization) {
+                if (head === custo) {
+                    found = true;
+                    if (extraHeads[head] === customization[custo]) {
+                        continue;
+                    } else {
+                        customization[custo] = extraHeads[head];
+                    }
+                }
+            }
+            if (!found) {
+                customization[head] = extraHeads[head];
+            }
+        }
+
+        return customization;
     }
 
     static async generateTplLookup(items, categories) {
