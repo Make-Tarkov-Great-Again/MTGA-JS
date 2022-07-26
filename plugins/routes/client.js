@@ -279,7 +279,6 @@ module.exports = async function gameRoutes(app, _opts) {
 
     app.post(`/client/trading/customization/:id/offers`, async (request, reply) => {
         await TradingController.getTraderOutfitOffers(request, reply);
-        logger.logError("[/client/trading/customization/:id/offers] not implemented yet");
     });
 
     app.post(`/client/trading/api/getTraderAssort/:traderId`, async (request, reply) => {

@@ -1,0 +1,20 @@
+{
+    "_id": "CHANGEME",
+    "tid": "5ac3b934156ae10c4430e83c",
+    "suiteId": "CHANGEME",
+    "isActive": true,
+    "requirements": {
+        "loyaltyLevel": 0,
+        "profileLevel": 0,
+        "standing": 0,
+        "skillRequirements": [],
+        "questRequirements": [],
+        "itemRequirements": [
+            {
+                "count": 0,
+                "_tpl": "MONEY",
+                "onlyFunctional": true
+            }
+        ]
+    }
+}
