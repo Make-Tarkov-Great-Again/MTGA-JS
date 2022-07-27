@@ -5,7 +5,8 @@ const {
     logger, readParsed, fileExist, stringify,
     writeFile, getDirectoriesFrom, createDirectory,
     getFilesFrom, generateItemId, clearString, getAbsolutePathFrom,
-    getFileUpdatedDate } = require('./../plugins/utilities/');
+    getFileUpdatedDate,
+    generateUniqueId } = require('./../plugins/utilities/');
 
 
 class DatabaseLoader {
@@ -215,6 +216,8 @@ class DatabaseLoader {
     static async loadItems() {
         let items = readParsed('./database/items.json');
         if (typeof items.data != "undefined") { items = items.data; }
+
+        items = await DatabaseUtils.addSpecialSlotToAllPockets(items);
 
         for (const [index, item] of Object.entries(items)) {
             await UtilityModel.createModelFromParseWithID('Item', index, item);
@@ -535,6 +538,90 @@ class DatabaseUtils {
                 }
             }
         }
+    }
+
+    static async addSpecialSlotToAllPockets(items) {
+        for (const item in items) {
+            if (items[item]._parent === "557596e64bdc2dc2118b4571") {
+                if (items[item]._props.Slots) {
+                    items[item]._props.Slots = [
+                        {
+                            "_name": "SpecialSlot1",
+                            "_id": generateUniqueId,
+                            "_parent": items[item]._id,
+                            "_props": {
+                                "filters": [
+                                    {
+                                        "Filter": [
+                                            "5f4fbaaca5573a5ac31db429",
+                                            "5f4f9eb969cdc30ff33f09db",
+                                            "61605ddea09d851a0a0c1bbc",
+                                            "61605e13ffa6e502ac5e7eef",
+                                            "5991b51486f77447b112d44f",
+                                            "5ac78a9b86f7741cca0bbd8d",
+                                            "5b4391a586f7745321235ab2",
+                                            "544fb5454bdc2df8738b456a"
+                                        ]
+                                    }
+                                ]
+                            },
+                            "_required": false,
+                            "_mergeSlotWithChildren": false,
+                            "_proto": "55d721144bdc2d89028b456f"
+                        },
+                        {
+                            "_name": "SpecialSlot2",
+                            "_id": generateUniqueId,
+                            "_parent": items[item]._id,
+                            "_props": {
+                                "filters": [
+                                    {
+                                        "Filter": [
+                                            "5f4fbaaca5573a5ac31db429",
+                                            "5f4f9eb969cdc30ff33f09db",
+                                            "61605ddea09d851a0a0c1bbc",
+                                            "61605e13ffa6e502ac5e7eef",
+                                            "5991b51486f77447b112d44f",
+                                            "5ac78a9b86f7741cca0bbd8d",
+                                            "5b4391a586f7745321235ab2",
+                                            "544fb5454bdc2df8738b456a"
+                                        ]
+                                    }
+                                ]
+                            },
+                            "_required": false,
+                            "_mergeSlotWithChildren": false,
+                            "_proto": "55d721144bdc2d89028b456f"
+                        },
+                        {
+                            "_name": "SpecialSlot3",
+                            "_id": generateUniqueId,
+                            "_parent": items[item]._id,
+                            "_props": {
+                                "filters": [
+                                    {
+                                        "Filter": [
+                                            "5f4fbaaca5573a5ac31db429",
+                                            "5f4f9eb969cdc30ff33f09db",
+                                            "61605ddea09d851a0a0c1bbc",
+                                            "61605e13ffa6e502ac5e7eef",
+                                            "5991b51486f77447b112d44f",
+                                            "5ac78a9b86f7741cca0bbd8d",
+                                            "5b4391a586f7745321235ab2",
+                                            "544fb5454bdc2df8738b456a"
+                                        ]
+                                    }
+                                ]
+                            },
+                            "_required": false,
+                            "_mergeSlotWithChildren": false,
+                            "_proto": "55d721144bdc2d89028b456f"
+                        }
+                    ]
+                }
+            }
+        }
+        return items;
     }
 
     static async addHeadsToLocale(locales) {

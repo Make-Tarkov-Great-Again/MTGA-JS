@@ -65,21 +65,27 @@ class Ragfair extends BaseModel {
         }
         */
 
-        /**
-         * Probably need to start saving the last request so it can be 
-         * compared.... fuck if i know
-         */
-        if (database.core.serverConfig.directoryTimers.FleaMarket === 1) {
-            ragfair = await this.applyRequestReturnRagfair(request, ragfair);
+        const list = await this.investigateHandbookId(request.handbookId);
+        const tempCateories = await this.formatCategories(
+            ragfair.categories,
+            ragfair.offers,
+            list
+        );
 
-        } else if (database.core.serverConfig.directoryTimers.FleaMarket === 0) {
+        ragfair.offers = await this.reduceOffersBasedOnCategories(
+            ragfair.offers,
+            tempCateories
+        );
 
-            if (database.core.serverConfig.directoryTimers.FleaMarket === 0) {
-                database.core.serverConfig.directoryTimers.FleaMarket = 1;
-            }
+        ragfair.offersCount = ragfair.offers.length;
+        return ragfair;
+    }
 
+    static async applyRequestReturnRagfair(request, ragfair) {
+        let tempCategories;
+        if (request.handbookId != "") {
             const list = await this.investigateHandbookId(request.handbookId);
-            const tempCateories = await this.formatCategories(
+            tempCategories = await this.formatCategories(
                 ragfair.categories,
                 ragfair.offers,
                 list
@@ -87,55 +93,15 @@ class Ragfair extends BaseModel {
 
             ragfair.offers = await this.reduceOffersBasedOnCategories(
                 ragfair.offers,
-                tempCateories
+                tempCategories
             );
 
-            ragfair.offersCount = ragfair.offers.length;
-        }
-        return ragfair;
-    }
-
-    static async applyRequestReturnRagfair(request, ragfair) {
-        if (request.handbookId != "") {
-            const list = await this.investigateHandbookId(request.handbookId);
-            ragfair.categories = await this.formatCategories(
-                ragfair.categories,
-                ragfair.offers,
-                list
-            );
-            if (request.neededSearchId != "") {
-                ragfair.categories = await this.formatCategories(
-                    ragfair.categories,
-                    ragfair.offers,
-                    await this.getNeededSearch(request.neededSearchId)
-                );
-                ragfair.offers = await this.reduceOffersBasedOnCategories(
-                    ragfair.offers,
-                    ragfair.categories
-                );
-            } else if (request.linkedSearchId != "") {
-                ragfair.categories = await this.formatCategories(
-                    ragfair.categories,
-                    ragfair.offers,
-                    await this.getLinkedSearch(request.linkedSearchId)
-                );
-                ragfair.offers = await this.reduceOffersBasedOnCategories(
-                    ragfair.offers,
-                    ragfair.categories
-                );
-            } else {
-                ragfair.offers = await this.reduceOffersBasedOnCategories(
-                    ragfair.offers,
-                    ragfair.categories
-                );
-            }
         } else if (request.linkedSearchId != "") {
             ragfair.categories = await this.formatCategories(
                 ragfair.categories,
                 ragfair.offers,
                 await this.getLinkedSearch(request.linkedSearchId)
             );
-
             ragfair.offers = await this.reduceOffersBasedOnCategories(
                 ragfair.offers,
                 ragfair.categories
