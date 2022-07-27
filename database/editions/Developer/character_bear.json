@@ -12,7 +12,7 @@
     "RegistrationDate": 1641932568,
     "GameVersion": "developer",
     "AccountType": 0,
-    "MemberCategory": 2,
+    "MemberCategory": 1,
     "lockedMoveCommands": false,
     "SavageLockTime": 0,
     "LastTimePlayedAsSavage": 0,
@@ -917,44 +917,44 @@
   "Quests": [],
   "TradersInfo": {
     "5c0647fdd443bc2504c2d371": {
-      "unlocked": false,
+      "unlocked": true,
       "salesSum": 100000000,
-      "standing": 10
+      "standing": 99
     },
     "5935c25fb3acc3127c3d8cd9": {
-      "unlocked": false,
+      "unlocked": true,
       "salesSum": 100000000,
-      "standing": 10
+      "standing": 99
     },
     "58330581ace78e27b8b10cee": {
-      "unlocked": false,
+      "unlocked": true,
       "salesSum": 100000000,
-      "standing": 10
+      "standing": 99
     },
     "5a7c2eca46aef81a7ca2145d": {
-      "unlocked": false,
+      "unlocked": true,
       "salesSum": 100000000,
-      "standing": 10
+      "standing": 99
     },
     "579dc571d53a0658a154fbec": {
-      "unlocked": false,
+      "unlocked": true,
       "salesSum": 100000000,
-      "standing": 10
+      "standing": 99
     },
     "5ac3b934156ae10c4430e83c": {
-      "unlocked": false,
+      "unlocked": true,
       "salesSum": 100000000,
-      "standing": 10
+      "standing": 99
     },
     "54cb50c76803fa8b248b4571": {
-      "unlocked": false,
+      "unlocked": true,
       "salesSum": 100000000,
-      "standing": 10
+      "standing": 99
     },
     "54cb57776803fa99248b456e": {
-      "unlocked": false,
+      "unlocked": true,
       "salesSum": 100000000,
-      "standing": 10
+      "standing": 99
     }
   },
   "RagfairInfo": {

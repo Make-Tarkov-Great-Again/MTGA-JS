@@ -188,7 +188,6 @@ class GameController {
         character._id = "pmc" + newID;
         character.aid = playerAccount.id;
         character.savage = "scav" + newID;
-        character.Info = {};
         character.Info.Side = chosenSideCapital;
         character.Info.Nickname = request.body.nickname;
         character.Info.LowerNickname = request.body.nickname.toLowerCase();
