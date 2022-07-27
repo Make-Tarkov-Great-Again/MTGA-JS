@@ -244,7 +244,6 @@ class DatabaseLoader {
                 if (database.core.gameplay.customization.allHeadsOnCharacterCreation === true) {
                     localeCopy = await DatabaseUtils.addHeadsToLocale(localeCopy);
                 }
-
                 let menuCopy = readParsed(`${currentLocalePath}menu.json`);
                 if (typeof menuCopy.data != "undefined") { menuCopy = menuCopy.data; }
 
@@ -539,32 +538,23 @@ class DatabaseUtils {
     }
 
     static async addHeadsToLocale(locales) {
-        const extraHeads = readParsed(`./database/locales/extras.json`).Heads
-        let customization = locales.customization;
-
-        // Search through customization and see 
-        // if there is a head with the same name
-        // check if the data from customization is the same as the data from extra heads
-        // if it is, then add the head to the customization
-        // if the head is not in the customization, then add it to the customization
-        for (let head in extraHeads) {
-            let found = false;
-            for (let custo in customization) {
-                if (head === custo) {
-                    found = true;
-                    if (extraHeads[head] === customization[custo]) {
-                        continue;
-                    } else {
-                        customization[custo] = extraHeads[head];
-                    }
-                }
+        const extraHeads = readParsed(`./database/locales/extras.json`)
+        for (let [key, value] of Object.entries(extraHeads.templates)) {
+            if (typeof locales.templates[key] != "undefined") {
+                locales.templates[key] = value;
+            } else {
+                locales.templates[key] = value;
             }
-            if (!found) {
-                customization[head] = extraHeads[head];
+        }
+        for (let [key, value] of Object.entries(extraHeads.customization)) {
+            if (typeof locales.customization[key] != "undefined") {
+                locales.customization[key] = value;
+            } else {
+                locales.customization[key] = value;
             }
         }
 
-        return customization;
+        return locales;
     }
 
     static async generateTplLookup(items, categories) {

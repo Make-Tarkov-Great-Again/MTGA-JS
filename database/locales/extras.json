@@ -1,5 +1,5 @@
 {
-    "Heads": {
+    "customization": {
         "5f68c4c217d579077152a252": {
             "Name": "Misha",
             "ShortName": "Misha",
@@ -64,7 +64,9 @@
             "Name": "Drozd",
             "ShortName": "Drozd",
             "Description": "Drozd"
-        },
+        }
+    },
+    "templates": {
         "62875ad50828252c7a28b95c": {
             "Name": "Black Knight",
             "ShortName": "Black Knight",
