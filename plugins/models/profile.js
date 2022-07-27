@@ -242,7 +242,7 @@ class Profile extends BaseModel {
         } else {
             return "ragfair";
         }
-        return calculatedLoyalty;
+        return (calculatedLoyalty - 1);
     }
 
     async addDialogue(id, messageContent, rewards = []) {

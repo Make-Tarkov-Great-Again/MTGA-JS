@@ -40,7 +40,7 @@ class Trader extends BaseModel {
             barter_scheme: {},
             loyal_level_items: {}
         };
-        const loyalty = await profile.getLoyalty(this.base._id, this.base);
+        const loyalty = (await profile.getLoyalty(this.base._id, this.base) + 1);
         const traderClone = await this.clone();
 
         if (this.isRagfair()) {
