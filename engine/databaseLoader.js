@@ -52,10 +52,13 @@ class DatabaseLoader {
             hideoutSettings: readParsed(`./database/hideout/settings.json`).data
         };
 
-        const directoryTimers = database.core.serverConfig.directoryTimers
-        const check = await DatabaseUtils.checkDirectoryDates(directoryTimers, true)
-        if (check === true) {
-            writeFile("./database/configs/server.json", stringify(serverConfig));
+        const core = database.core;
+        if (core.gameplay.development.updateLocations === true) {
+            const directoryTimers = core.serverConfig.directoryTimers
+            const check = await DatabaseUtils.checkDirectoryDates(directoryTimers, true)
+            if (check === true) {
+                writeFile("./database/configs/server.json", stringify(serverConfig));
+            }
         }
     }
 
@@ -118,12 +121,13 @@ class DatabaseLoader {
     }
 
     static async loadLocations() {
-        //bude i need this commented out portion adjusted to the new locations system
-
         const { database } = require('../app');
-        const checkForUpdate = await DatabaseUtils.checkDirectoryDates(database.core.serverConfig.directoryTimers);
-        if (checkForUpdate === true) {
-            await DatabaseUtils.formatAndWriteNewLocationDataToDisk();
+        const gameplay = database.core.gameplay;
+        if (gameplay.development.updateLocations === true) {
+            const checkForUpdate = await DatabaseUtils.checkDirectoryDates(database.core.serverConfig.directoryTimers);
+            if (checkForUpdate === true) {
+                await DatabaseUtils.formatAndWriteNewLocationDataToDisk();
+            }
         }
 
         const maps = getDirectoriesFrom('./database/locations');
@@ -136,22 +140,6 @@ class DatabaseLoader {
                 location[index] = await UtilityModel.createModelFromParse(`Location`, pathData);
             }
         }
-
-
-        /*
-       const maps = getFilesFrom('./database/locations/base');
-       for (const map of maps) {
-           const base = readParsed(`./database/locations/base/${map}`);
-           let loot = [];
-           const location = await UtilityModel.createModelFromParseWithID("Location", base._Id, { "base": {}, "loot": {} });
-
-           if (fileExist(`./database/locations/loot/${map}`)) {
-               loot = readParsed(`./database/locations/loot/${map}`);
-           }
-
-           location.base = base;
-           location.loot = loot;
-       } */
     }
 
     static async loadPresets() {
@@ -172,10 +160,11 @@ class DatabaseLoader {
     // Load Customization 
     static async loadCustomization() {
         const { database } = require('../app');
+        const gameplay = database.core.gameplay;
         let customizations = readParsed("./database/customization.json");
         if (typeof customizations.data != "undefined") customizations = customizations.data;
         for (const [index, customization] of Object.entries(customizations)) {
-            if (database.core.gameplay.customization.allHeadsOnCharacterCreation === true) {
+            if (gameplay.customization.allHeadsOnCharacterCreation === true) {
                 if (customization._type != "Node" && customization._props.BodyPart === "Head") {
                     customization._props.Side = ["Bear", "Usec", "Savage"]
                 }
@@ -214,10 +203,14 @@ class DatabaseLoader {
 
     // Load Items
     static async loadItems() {
+        const { database } = require('../app');
+        const gameplay = database.core.gameplay;
         let items = readParsed('./database/items.json');
         if (typeof items.data != "undefined") { items = items.data; }
 
-        items = await DatabaseUtils.addSpecialSlotToAllPockets(items);
+        if (gameplay.customization.allPocketsHaveSpecialSlots === true) {
+            items = await DatabaseUtils.addSpecialSlotToAllPockets(items);
+        }
 
         for (const [index, item] of Object.entries(items)) {
             await UtilityModel.createModelFromParseWithID('Item', index, item);
