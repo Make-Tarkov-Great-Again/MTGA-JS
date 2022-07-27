@@ -1,4 +1,8 @@
 {
+    "development": {
+        "updateLocations": false,
+        "updateBotDifficulties": false
+    },
     "inRaid": {
         "showDeathMessage": true,
         "createFriendlyAI": true,
@@ -38,7 +42,8 @@
     },
     "hideout": {},
     "customization": {
-        "allHeadsOnCharacterCreation": true
+        "allHeadsOnCharacterCreation": true,
+        "allPocketsHaveSpecialSlots": true
     },
     "trading": {
         "drip": true

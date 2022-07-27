@@ -48,42 +48,62 @@ class Ragfair extends BaseModel {
         const { database } = require("../../app");
         let ragfair = cloneDeep(database.ragfair);
 
-
-        // only way to refresh page after removing a filter (maybe)
-        /*
-        if (request.updateOfferCount === true) {
-            const list = await this.investigateHandbookId(request.handbookId);
-            ragfair.categories = await this.formatCategories(
-                ragfair.categories,
-                ragfair.offers,
-                list
-            );
-            ragfair.offers = await this.reduceOffersBasedOnCategories(
-                ragfair.offers,
-                ragfair.categories
-            );
-        }
-        */
-
-        const list = await this.investigateHandbookId(request.handbookId);
-        const tempCateories = await this.formatCategories(
-            ragfair.categories,
-            ragfair.offers,
-            list
-        );
-
-        ragfair.offers = await this.reduceOffersBasedOnCategories(
-            ragfair.offers,
-            tempCateories
-        );
-
-        ragfair.offersCount = ragfair.offers.length;
+        ragfair = await this.applyRequestReturnRagfair(request, ragfair);
         return ragfair;
     }
 
     static async applyRequestReturnRagfair(request, ragfair) {
         let tempCategories;
-        if (request.handbookId != "") {
+        if (request.neededSearchId != "") {
+            ragfair.categories = await this.formatCategories(
+                ragfair.categories,
+                ragfair.offers,
+                await this.getNeededSearch(request.neededSearchId)
+            );
+
+            ragfair.offers = await this.reduceOffersBasedOnCategories(
+                ragfair.offers,
+                ragfair.categories
+            );
+        } else if (request.linkedSearchId != "") {
+            if (request.handbookId != "") {
+                const list = await this.investigateHandbookId(request.handbookId);
+                ragfair.categories = await this.formatCategories(
+                    ragfair.categories,
+                    ragfair.offers,
+                    list
+                );
+
+                ragfair.offers = await this.reduceOffersBasedOnCategories(
+                    ragfair.offers,
+                    ragfair.categories
+                );
+                
+                tempCategories = await this.formatCategories(
+                    ragfair.categories,
+                    ragfair.offers,
+                    await this.getNeededSearch(request.linkedSearchId)
+                );
+
+                ragfair.offers = await this.reduceOffersBasedOnCategories(
+                    ragfair.offers,
+                    tempCategories
+                );
+            } else if (request.handbookId == "") {
+                ragfair.categories = await this.formatCategories(
+                    ragfair.categories,
+                    ragfair.offers,
+                    await this.getNeededSearch(request.linkedSearchId)
+                );
+
+                ragfair.offers = await this.reduceOffersBasedOnCategories(
+                    ragfair.offers,
+                    ragfair.categories
+                );
+            }
+
+
+        } else {
             const list = await this.investigateHandbookId(request.handbookId);
             tempCategories = await this.formatCategories(
                 ragfair.categories,
@@ -94,28 +114,6 @@ class Ragfair extends BaseModel {
             ragfair.offers = await this.reduceOffersBasedOnCategories(
                 ragfair.offers,
                 tempCategories
-            );
-
-        } else if (request.linkedSearchId != "") {
-            ragfair.categories = await this.formatCategories(
-                ragfair.categories,
-                ragfair.offers,
-                await this.getLinkedSearch(request.linkedSearchId)
-            );
-            ragfair.offers = await this.reduceOffersBasedOnCategories(
-                ragfair.offers,
-                ragfair.categories
-            );
-        } else if (request.neededSearchId != "") {
-            ragfair.categories = await this.formatCategories(
-                ragfair.categories,
-                ragfair.offers,
-                await this.getNeededSearch(request.neededSearchId)
-            );
-
-            ragfair.offers = await this.reduceOffersBasedOnCategories(
-                ragfair.offers,
-                ragfair.categories
             );
         }
 
@@ -136,7 +134,7 @@ class Ragfair extends BaseModel {
     }
 
 
-    /** This can probably be combined with reduceOffersBasedOnFilterRequest
+    /**
      * Remove offers that are not in the categories, return filtered offers (if array)
      * @param {*} offers filter the offers based on the categories
      * @param {*} categories the categories to filter the offers
@@ -208,16 +206,17 @@ class Ragfair extends BaseModel {
         const { database } = require("../../app");
         const items = await this.bannedItemFilter(database.items);
         let needed = [];
+        let linked = await this.getLinkedSearch(searchId);
         // search through all items and push ID of items that are in the filter(s)
-        for (const item of items) {
+        for (const i of items) {
             if (
-                await this.checkFilters(item, "Slots", searchId) ||
-                await this.checkFilters(item, "Chambers", searchId) ||
-                await this.checkFilters(item, "Cartridges", searchId)
+                await this.checkFilters(i, "Slots", searchId) ||
+                await this.checkFilters(i, "Chambers", searchId) ||
+                await this.checkFilters(i, "Cartridges", searchId)
             )
-                needed.push(item._id);
+                needed.push(i._id);
         }
-        return needed;
+        return [...needed, ...linked];
     }
 
     static async getLinkedSearch(searchId) {
@@ -377,7 +376,12 @@ class Ragfair extends BaseModel {
     }
 
     /**
-     * Ragfair categories are based on the amount of unique offerId's and the amount of individual items in offer array
+     * Ragfair categories are based on the amount of unique offerId's and 
+     * the amount of individual items in offer array
+     * 
+     * Probably need to beef up because all shit isn't showing
+     * 
+     * 
      * @param {*} categories pass categories from database
      * @param {*} offers pass offers from database
      * @param {*} filters pass selected filter to add to categories
