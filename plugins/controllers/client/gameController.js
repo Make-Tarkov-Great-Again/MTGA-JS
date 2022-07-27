@@ -78,7 +78,7 @@ class GameController {
             utc_time: getCurrentTimestamp(),
             totalInGame: 0,
             reportAvailable: true,
-            twitchEventMember: false,
+            twitchEventMember: false
         };
 
         await FastifyResponse.zlibJsonReply
@@ -106,7 +106,7 @@ class GameController {
         // Implement with offline raiding //
         const dummyScavData = readParsed("./scavDummy.json");
 
-
+        dummyScavData.RegistrationDate = await getCurrentTimestamp();
         dummyScavData.aid = "scav" + await FastifyResponse.getSessionID(request);
 
         const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
@@ -192,8 +192,8 @@ class GameController {
         character.Info.Nickname = request.body.nickname;
         character.Info.LowerNickname = request.body.nickname.toLowerCase();
         character.Info.Voice = voice._name;
-        character.Info.RegistrationDate = ~~(new Date() / 1000);
-        character.Health.UpdateTime = ~~(Date.now() / 1000);
+        character.Info.RegistrationDate = await getCurrentTimestamp();
+        character.Health.UpdateTime = await getCurrentTimestamp();
 
         character.Customization.Head = await Customization.get(request.body.headId);
 
@@ -256,7 +256,7 @@ class GameController {
                     reply,
                     FastifyResponse.applyBody({
                         status: 0,
-                        nicknamechangedate: ~~(new Date() / 1000)
+                        nicknamechangedate: await getCurrentTimestamp()
                     })
                 );
         }
@@ -576,7 +576,7 @@ class GameController {
 
     static clientGameProfileFoldItem = async (moveAction = null, _reply = null, playerProfile = null) => {
         if (playerProfile) {
-            let item = await playerProfile.character.getInventoryItemByID(moveAction.item);
+            const item = await playerProfile.character.getInventoryItemByID(moveAction.item);
             if (item) {
                 if (typeof item.upd === "undefined") {
                     item.upd = {};
@@ -589,7 +589,7 @@ class GameController {
                 item.upd.Foldable.Folded = moveAction.value;
             }
         }
-    }
+    };
 
     static clientGameProfileTagItem = async (moveAction = null, _reply = null, playerProfile = null) => {
         if (playerProfile) {
@@ -607,11 +607,11 @@ class GameController {
                 item.upd.Tag.Name = moveAction.TagName;
             }
         }
-    }
+    };
 
     static clientGameProfileToggleItem = async (moveAction = null, _reply = null, playerProfile = null) => {
         if (playerProfile) {
-            let item = await playerProfile.character.getInventoryItemByID(moveAction.item);
+            const item = await playerProfile.character.getInventoryItemByID(moveAction.item);
             if (item) {
                 if (typeof item.upd === "undefined") {
                     item.upd = {};
@@ -624,32 +624,32 @@ class GameController {
                 item.upd.Togglable.On = moveAction.value;
             }
         }
-    }
+    };
 
     static clientGameProfileBindItem = async (moveAction = null, _reply = null, playerProfile = null) => {
         if (playerProfile) {
-            for (let index in playerProfile.character.Inventory.fastPanel) {
+            for (const index in playerProfile.character.Inventory.fastPanel) {
                 if (playerProfile.character.Inventory.fastPanel[index] === moveAction.item) {
                     playerProfile.character.Inventory.fastPanel[index] = "";
                 }
             }
             playerProfile.character.Inventory.fastPanel[moveAction.index] = moveAction.item;
         }
-    }
+    };
 
     static clientGameProfileReadEncyclopedia = async (moveAction = null, _reply = null, playerProfile = null) => {
         if (playerProfile) {
-            for (let id of moveAction.ids) {
+            for (const id of moveAction.ids) {
                 playerProfile.character.Encyclopedia[id] = true;
             }
         }
-    }
+    };
 
     static clientGameProfileHideoutUpgrade = async (moveAction = null, _reply = null, playerProfile = null) => {
         logger.logDebug(moveAction);
         if (playerProfile) {
             const templateHideoutArea = await HideoutArea.getBy("type", moveAction.areaType);
-            let characterHideoutArea = await playerProfile.character.getHideoutAreaByType(moveAction.areaType);
+            const characterHideoutArea = await playerProfile.character.getHideoutAreaByType(moveAction.areaType);
 
             if (!templateHideoutArea) {
                 logger.logError(`[clientGameProfileHideoutUpgrade] Upgrading HideoutArea failed. Unknown hideout area ${moveAction.areaType} in hideoutArea database.`);
@@ -670,7 +670,7 @@ class GameController {
                 return;
             }
 
-            let output = {
+            const output = {
                 items: {
                     new: [],
                     change: [],
@@ -821,7 +821,7 @@ class GameController {
                 return;
             }
 
-            let output = {
+            const output = {
                 items: {
                     new: [],
                     change: [],
@@ -847,7 +847,7 @@ class GameController {
             }
 
             if (allItemsTaken) {
-                let productionTime = 0
+                let productionTime = 0;
 
                 if (typeof hideoutProductionTemplate.ProductionTime !== "undefined") {
                     productionTime = hideoutProductionTemplate.ProductionTime;
@@ -862,7 +862,7 @@ class GameController {
                     SkipTime: 0,
                     ProductionTime: parseInt(productionTime),
                     StartTimestamp: getCurrentTimestamp()
-                }
+                };
 
                 return output;
             } else {
@@ -871,7 +871,7 @@ class GameController {
                 return;
             }
         }
-    }
+    };
 
     static clientGameProfileHideoutContinuousProductionStart = async (moveAction = null, _reply = null, playerProfile = null) => {
         if (playerProfile) {
@@ -895,8 +895,8 @@ class GameController {
                 SkipTime: 0,
                 ProductionTime: parseInt(productionTime),
                 StartTimestamp: getCurrentTimestamp()
-            }
+            };
         }
-    }
+    };
 }
 module.exports.GameController = GameController;

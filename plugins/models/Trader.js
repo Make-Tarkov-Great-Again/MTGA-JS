@@ -109,6 +109,9 @@ class Trader extends BaseModel {
             default:
                 currency = "5449016a4bdc2d6f028b456f";
         }
+
+        const playerTraderStanding = await profile.getLoyalty(this.base._id, this.base);
+        const buyCoef = this.base.loyaltyLevels[playerTraderStanding].buy_price_coef / 100;
         /**
          * BEWARE DEAR ADVENTURER, WHAT YOU ARE ABOUT TO SEE IS ONE HELL OF A SHITTY IMPLEMENTATION TO FILTER ITEMS
          * PLAYER CAN SELL TO TRADER.
@@ -127,6 +130,7 @@ class Trader extends BaseModel {
                     if (item.upd && item.upd.StackObjectsCount)
                         itemStackCount = item.upd.StackObjectsCount;
                     price = price * itemStackCount;
+                    price = price * buyCoef;
                     if (price) {
                         output[item._id] = [[{ _tpl: currency, count: price }]];
                     }
