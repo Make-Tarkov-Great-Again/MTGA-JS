@@ -184,12 +184,12 @@ const findAndReturnChildrenByItems = async (items, itemId) => {
     let list = [];
 
     for (let childitem of items) {
-        if (childitem.parentId === itemID) {
+        if (childitem.parentId === itemId) {
             list.push.apply(list, findAndReturnChildrenByItems(items, childitem._id));
         }
     }
 
-    list.push(itemID); // it's required
+    list.push(itemId); // it's required
     return list;
 }
 

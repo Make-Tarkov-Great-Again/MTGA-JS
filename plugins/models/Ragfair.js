@@ -67,7 +67,7 @@ class Ragfair extends BaseModel {
             );
         } else if (request.linkedSearchId != "") {
             if (request.handbookId != "") {
-                const list = await this.investigateHandbookId(request.handbookId);
+                const list = await this.getTplFromHandbook(request.handbookId);
                 ragfair.categories = await this.formatCategories(
                     ragfair.categories,
                     ragfair.offers,
@@ -104,7 +104,7 @@ class Ragfair extends BaseModel {
 
 
         } else {
-            const list = await this.investigateHandbookId(request.handbookId);
+            const list = await this.getTplFromHandbook(request.handbookId);
             tempCategories = await this.formatCategories(
                 ragfair.categories,
                 ragfair.offers,
@@ -271,13 +271,19 @@ class Ragfair extends BaseModel {
     }
 
     /**
- * 
- * @param {*} handbookId 
- * @returns 
- */
-    static async investigateHandbookId(handbookId) {
+     * Iterate through TplLookup category database and return item ID
+     * if the item is found in the database under correct category
+     * @param {*} handbookId 
+     * @returns 
+     */
+    static async getTplFromHandbook(handbookId) {
         let result = [];
-        if (handbookId === "5b5f71a686f77447ed5636ab") {
+        const bastards = [
+            "5b5f71b386f774093f2ecf11", // functional mods (not sure why this isn't blanketed)
+            "5b5f71a686f77447ed5636ab" //mods grandparent
+
+        ]
+        if (bastards.includes(handbookId)) {
             for (const categ2 of await childrenCategories(handbookId)) {
                 for (const categ3 of await childrenCategories(categ2)) {
                     result = result.concat(await templatesWithParent(categ3));
