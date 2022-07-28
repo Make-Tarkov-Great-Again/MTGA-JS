@@ -58,8 +58,14 @@ class Ragfair extends BaseModel {
             ragfair.categories = await this.formatCategories(
                 ragfair.categories,
                 ragfair.offers,
-                await this.getNeededSearch(request.neededSearchId)
+                await this.getLinkedTo(request.neededSearchId)
             );
+
+            /**
+             * neededSearchId is used to find if the item being searched
+             * is required/needed for a barter offer within ragfair.offers.requirements
+             * Logic is not written
+             */ 
 
             ragfair.offers = await this.reduceOffersBasedOnCategories(
                 ragfair.offers,
@@ -82,7 +88,7 @@ class Ragfair extends BaseModel {
                 tempCategories = await this.formatCategories(
                     ragfair.categories,
                     ragfair.offers,
-                    await this.getNeededSearch(request.linkedSearchId)
+                    await this.getLinkedTo(request.linkedSearchId)
                 );
 
                 ragfair.offers = await this.reduceOffersBasedOnCategories(
@@ -93,7 +99,7 @@ class Ragfair extends BaseModel {
                 ragfair.categories = await this.formatCategories(
                     ragfair.categories,
                     ragfair.offers,
-                    await this.getNeededSearch(request.linkedSearchId)
+                    await this.getLinkedTo(request.linkedSearchId)
                 );
 
                 ragfair.offers = await this.reduceOffersBasedOnCategories(
@@ -202,7 +208,7 @@ class Ragfair extends BaseModel {
         ].includes(input); // Return true if the input ID matches anything in this array, false if it doesn't
     }
 
-    static async getNeededSearch(searchId) {
+    static async getLinkedTo(searchId) {
         const { database } = require("../../app");
         const items = await this.bannedItemFilter(database.items);
         let needed = [];
