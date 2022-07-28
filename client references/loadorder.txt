@@ -37,3 +37,106 @@
 :POST: :/client/server/list
 :POST: :/client/quest/list
 :POST: :/client/repeatalbeQuests/activityPeriods
+
+NEW CLIENT START: AFTER /client/game/profile/list
+:POST: :/client/account/customization
+:POST: :/client/locale/en
+:POST: :/client/locale/ru
+:POST: :/client/locale/ge
+:POST: :/client/locale/fr
+:POST: :/client/game/profile/nickname/reserved
+:POST: :/client/game/profile/nickname/validate
+:POST: :/client/game/profile/create
+:POST: :/client/game/profile/list
+:POST: :/client/game/profile/select
+:POST: :/client/profile/status
+:POST: :/client/weather
+:POST: :/client/locations
+NEW CLIENT END | CONTINUE BY Line 23
+
+
+MOVING ITEM START
+:POST: :/client/game/profile/items/moving
+JSONDATA:
+{
+  data: [
+    {
+        Action: 'Eat',
+        item: '5fe49444ae6628187a2e77af',
+        count: 4,
+        time: 1659019323
+    },
+    {
+        Action: 'Move',
+        item: '7385ab809b37110000004487',
+        to: {
+            id: '61b7367440281631fc83f197',
+            container: 'hideout',
+            location: { x: 6, y: 43, r: 'Horizontal', isSearched: true }
+        }
+    }
+  ],
+  tm: 4,
+  reload: 19
+}
+MOVING ITEM END
+
+MORE:
+:POST: :/client/checkVersion
+:POST::/client/notifier/channel/create
+:GET: :/singleplayer/settings/raid/menu
+:POST: :/client/match/offline/start
+:POST: :/client/location/getLocalloot
+:GET::/singleplayer/settings/bot/difficulty/marksman/easy
+:GET: :/singleplayer/settings/bot/difficulty/{botname}>/{botdifficulty}
+:POST: :/client/game/bot/generate
+:POST: :/client/raid/person/lootingContainer
+(DATA Example:
+    {
+    Id: '00151',
+    'ItemOwner.Id': '26eee19d049f110000003766',
+    'ItemOwner.Name': '578f87ad245977356274f2cc ShortName',
+    'ItemOwner.ContainerName': 'WOODEN CRATE'
+    }
+)
+:POST: :/client/raid/person/killed
+(DATA Example:
+    {
+    diedAID: '74f59bc89380110000004488',
+    diedFaction: 'Savage',
+    diedWST: 'assault',
+    killedByAID: 'AID4ba4e0903a32110000003516',
+    killerFaction: 'Bear'
+    }
+)
+:POST: :/client/match/offline/end
+(DATA Example:
+    {
+    crc: 0,
+    exitStatus: 'Survived',
+    exitName: 'Gate 3',
+    raidSeconds: 173.225
+    }
+)
+:POST: :/raid/profile/save [ONLY SIT?]
+
+:POST: :/client/match/offline/start
+{
+  locationName: 'Factory',
+  startTime: 1659026871,
+  dateTime: 'CURR',
+  gameSettings: {
+    timeAndWeatherSettings: { isRandomTime: false, isRandomWeather: false },
+    botsSettings: { isEnabled: true, isScavWars: false, botAmount: 'Low' },
+    wavesSettings: {
+      botDifficulty: 'Easy',
+      isBosses: true,
+      isTaggedAndCursed: false,
+      wavesBotAmount: 'Low'
+    }
+  }
+}
+
+:POST: :/client/game/logout
+
+
