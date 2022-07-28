@@ -186,7 +186,28 @@ module.exports = async function gameRoutes(app, _opts) {
                 // more, MOOOOOOOOOOOOOOORE
                 case "Insure":
                 case "RagFairAddOffer":
+                case "AddNote":
+                case "DeleteNote":
+                case "EditNote":
                 case "AddToWishList":
+                case "RemoveFromWishList":
+                case "ApplyInventoryChanges":
+                case "RemoveBuild":
+                case "SaveBuild":
+                case "Swap":
+                case "Transfer":
+                case "Eat":
+                case "Heal":
+                case "RestoreHealth":
+                case "HideoutScavCaseProductionStart":
+                case "HideoutTakeProduction":
+                case "CustomizationBuy":
+                case "CustomizationWear":
+                case "CreateMapMarker":
+                case "QuestComplete":
+                case "QuestHandover":
+                case "Repair":
+                case "TraderRepair":
                 default:
                     logger.logWarning("[/client/game/profile/items/moving] Action " + action + " is not yet implemented.");
             }
