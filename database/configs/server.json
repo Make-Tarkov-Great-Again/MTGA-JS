@@ -1,6 +1,7 @@
 {
-  "ip": "localhost",
-  "ip_backend": "localhost",
+  "ip": "127.0.0.1",
+  "ip_backend": "127.0.0.1",
+  "hostname": "localhost",
   "port": 443,
   "eventPollIntervalSec": 60,
   "rebuildCache": true,
