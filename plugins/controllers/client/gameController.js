@@ -898,5 +898,47 @@ class GameController {
             };
         }
     };
+
+    static clientGameProfileAddNote = async (moveAction = null, _reply = null, playerProfile = null) => {
+        if (playerProfile) {
+            const playerPMC = await playerProfile.getPmc();
+            //[Slejm] Printing the index because I dont know it used that
+            // or it can be used like :  playerPMC.Notes.Notes.Count() + 1 ? | Idk if count() or just count.
+            logger.logConsole(moveAction.index);
+            playerPMC.Notes.Notes[moveAction.index] = {
+                "Time": moveAction.note.Time,
+                "Text": moveAction.note.Text
+            };
+            playerPMC.save()
+        }
+    };
+
+    static clientGameProfileEditNote = async (moveAction = null, _reply = null, playerProfile = null) => {
+        if (playerProfile) {
+            const playerPMC = await playerProfile.getPmc();
+            playerPMC.Notes.Notes[moveAction.index] = {
+                "Time": moveAction.note.Time,
+                "Text": moveAction.note.Text
+            };
+            playerPMC.save()
+        }
+    };
+
+    static clientGameProfileRemoveNote = async (moveAction = null, _reply = null, playerProfile = null) => {
+        if (playerProfile) {
+            const playerPMC = await playerProfile.getPmc();
+            //[Slejm] this can be done like playerPMC.Notes.Notes.Remove(moveAction.index); ?
+            playerPMC.Notes.Notes[moveAction.index] = {}; 
+            playerPMC.save()
+        }
+    };
+
+    static clientGameProfileResetWishList = async (moveAction = null, _reply = null, playerProfile = null) => {
+        if (playerProfile) {
+            const playerPMC = await playerProfile.getPmc();
+            playerPMC.WishList = []; 
+            playerPMC.save()
+        }
+    };
 }
 module.exports.GameController = GameController;
