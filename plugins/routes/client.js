@@ -183,12 +183,28 @@ module.exports = async function gameRoutes(app, _opts) {
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
+                case "AddNote":
+                    actionResult = await GameController.clientGameProfileAddNote(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+
+                case "EditNote":
+                    actionResult = await GameController.clientGameProfileEditNote(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+
+                case "DeleteNote":
+                    actionResult = await GameController.clientGameProfileRemoveNote(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+
+                case "ResetWishList":
+                    actionResult = await GameController.clientGameProfileResetWishList(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
                 // more, MOOOOOOOOOOOOOOORE
                 case "Insure":
                 case "RagFairAddOffer":
-                case "AddNote":
-                case "DeleteNote":
-                case "EditNote":
                 case "AddToWishList":
                 case "RemoveFromWishList":
                 case "ApplyInventoryChanges":
