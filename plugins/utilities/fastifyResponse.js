@@ -16,11 +16,9 @@ class FastifyResponse {
 
     static getNotifier(sessionID) {
         return {
-            "server": this.getUrl(),
+            "server": FastifyResponse.getUrl(),
             "channel_id": sessionID,
-            "url": `${this.getBackendURL()}`,
-            "notifierServer": `${this.getBackendURL()}push/notifier/get/${sessionID}`,
-            "ws": `${this.getWebSocketURL()}push/notifier/getwebsocket/${sessionID}`
+            "ws": `${FastifyResponse.getWebSocketDirectUrl()}`
         };
     }
 
@@ -34,12 +32,16 @@ class FastifyResponse {
     }
 
 
-    static getBackendURL() {
-        return `https://localhost:443/`;
+    static getBackendUrl() {
+        return `https://${FastifyResponse.getUrl()}/`;
     }
 
-    static getWebSocketURL() {
-        return `wss://localhost:443/`;
+    static getWebSocketUrl() {
+        return `wss://${FastifyResponse.getUrl()}/socket`;
+    }
+
+    static getWebSocketDirectUrl() {
+        return `${FastifyResponse.getUrl()}`;
     }
 
     static getSessionID = async (request) => {
@@ -59,6 +61,13 @@ class FastifyResponse {
         };
         const deflatedData = zlib.deflateSync(stringify(data, true));
         reply.raw.writeHead(200, header);
+        reply.raw.write(deflatedData);
+        reply.raw.end();
+    };
+
+    static zlibReply = async (reply, data) => {
+        const deflatedData = zlib.deflateSync(data);
+        reply.raw.writeHead(200);
         reply.raw.write(deflatedData);
         reply.raw.end();
     };
