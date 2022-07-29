@@ -172,12 +172,13 @@ module.exports = async function gameRoutes(app, _opts) {
                     actionResult = await GameController.clientGameProfileHideoutToggleArea(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
-
+                
                 case "HideoutSingleProductionStart":
                     actionResult = await GameController.clientGameProfileHideoutSingleProductionStart(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
+                
                 case "HideoutContinuousProductionStart":
                     actionResult = await GameController.clientGameProfileHideoutContinuousProductionStart(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
@@ -202,7 +203,12 @@ module.exports = async function gameRoutes(app, _opts) {
                     actionResult = await GameController.clientGameProfileResetWishList(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
-                // more, MOOOOOOOOOOOOOOORE
+
+                case "HideoutScavCaseProductionStart":
+                    actionResult = await GameController.clientGameProfileHideoutScavCaseProductionStart(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                    // more, MOOOOOOOOOOOOOOORE
                 case "Insure":
                 case "RagFairAddOffer":
                 case "AddToWishList":
@@ -400,7 +406,7 @@ module.exports = async function gameRoutes(app, _opts) {
 
     // Client Friends Routes //
     app.post(`/client/friend/list`, async (request, reply) => {
-        logger.logWarning("Friend List not implemented yet")
+        logger.logWarning("Friend List not implemented yet");
         await FriendController.clientFriendRequestList(request, reply);
     });
     app.post(`/client/friend/request/list/inbox`, async (request, reply) => {

@@ -157,6 +157,16 @@ app.server.on("error", function (error) {
     logger.logError(error)
 })
 
-app.register(require('./plugins/register.js'));
-
+app.register(require('./plugins/register.js'));                                              
 app.listen({ port: database.core.serverConfig.port, host: database.core.serverConfig.ip });
+logger.logConsole(`
+
+█▀▄▀█    ▄▄▄▄▀   ▄▀  ██   
+█ █ █ ▀▀▀ █    ▄▀    █ █  
+█ ▄ █     █    █ ▀▄  █▄▄█ 
+█   █    █     █   █ █  █ 
+   █    ▀       ███     █ 
+  ▀                    █  
+                      ▀`)
+logger.logConsole(` Make Tarkov Great Again
+`)
