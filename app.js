@@ -130,5 +130,5 @@ logger.logConsole(`
    █    ▀       ███     █ 
   ▀                    █  
                       ▀`)
-logger.logConsole(`Make Tarkov Great Again
+logger.logConsole(` Make Tarkov Great Again
 `)
