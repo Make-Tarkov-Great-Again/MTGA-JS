@@ -4,7 +4,7 @@ const {
     Edition, Customization, Storage,
     Character, Health,
     Weaponbuild, Quest, Locale,
-    Trader, Item, HideoutArea, HideoutProduction
+    Trader, Item, HideoutArea, HideoutProduction, HideoutScavcase
 } = require("../../models");
 const {
     generateUniqueId, getCurrentTimestamp, logger,
@@ -891,7 +891,7 @@ class GameController {
             playerProfile.character.Hideout.Production[hideoutProductionTemplate._id] = {
                 Progress: 0,
                 inProgress: true,
-                RecipeId: moveAction.recepieId,
+                RecipeId: moveAction.recipeId,
                 SkipTime: 0,
                 ProductionTime: parseInt(productionTime),
                 StartTimestamp: getCurrentTimestamp()
@@ -909,7 +909,7 @@ class GameController {
                     "Text": moveAction.note.Text
                 }
             );
-            playerPMC.save()
+            playerPMC.save();
         }
     };
 
@@ -921,7 +921,7 @@ class GameController {
                 "Time": moveAction.note.Time,
                 "Text": moveAction.note.Text
             };
-            playerPMC.save()
+            playerPMC.save();
         }
     };
 
@@ -931,7 +931,7 @@ class GameController {
             const playerPMC = await playerProfile.getPmc();
             //[Slejm] this can be done like playerPMC.Notes.Notes.Remove(moveAction.index); ?
             playerPMC.Notes.Notes.splice(moveAction.index, 1);
-            playerPMC.save()
+            playerPMC.save();
         }
     };
 
@@ -940,8 +940,26 @@ class GameController {
             logger.logConsole(moveAction);
             const playerPMC = await playerProfile.getPmc();
             playerPMC.WishList = [];
-            playerPMC.save()
+            playerPMC.save();
         }
     };
+
+    static clientGameProfileHideoutScavCaseProductionStart = async (moveAction = null, _reply = null, playerProfile = null) => {
+        if (playerProfile) {
+            const hideoutScavcaseProduction = await HideoutScavcase.get(moveAction.recipeId);
+            if (!hideoutScavcaseProduction) {
+                logger.logError(`[clientGameProfileHideoutScavCaseProductionStart] Starting hideout scavcase production failed. Unknown hideout scavcase production with Id ${moveAction.recipeId} in hideoutScavcase database.`);
+            }
+
+            playerProfile.character.Hideout.Production[hideoutScavcaseProduction._id] = {
+                Progress: 0,
+                inProgress: true,
+                RecipeId: moveAction.recipeId,
+                SkipTime: 0,
+                ProductionTime: parseInt(hideoutScavcaseProduction.ProductionTime),
+                StartTimestamp: getCurrentTimestamp()
+            }
+        }
+    }
 }
 module.exports.GameController = GameController;
