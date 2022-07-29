@@ -6,7 +6,7 @@ const {
     writeFile, getDirectoriesFrom, createDirectory,
     getFilesFrom, generateItemId, clearString, getAbsolutePathFrom,
     getFileUpdatedDate,
-    generateUniqueId } = require('./../plugins/utilities/');
+    generateUniqueId } = require('../plugins/utilities');
 
 
 class DatabaseLoader {
@@ -90,7 +90,10 @@ class DatabaseLoader {
         let hideoutScavcase = readParsed('./database/hideout/scavcase.json');
         if (typeof hideoutScavcase.data != "undefined") { hideoutScavcase = hideoutScavcase.data; }
         for (const [index, scavcase] of Object.entries(hideoutScavcase)) {
-            await UtilityModel.createModelFromParseWithID('HideoutScavcase', index, scavcase);
+            if (database.core.gameplay.hideout.fastScavcase === true) {
+                scavcase.ProductionTime = 120;
+            }
+            await UtilityModel.createModelFromParseWithID('HideoutScavcase', scavcase._id, scavcase);
         }
     }
 

@@ -40,7 +40,9 @@
         "scavWars": false,
         "taggedAndCursed": false
     },
-    "hideout": {},
+    "hideout": {
+        "fastScavcase": true
+    },
     "customization": {
         "allHeadsOnCharacterCreation": true,
         "allPocketsHaveSpecialSlots": true
