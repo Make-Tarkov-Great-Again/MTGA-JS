@@ -119,9 +119,19 @@ app.server.on("error", function (error) {
     logger.logError(error)
 })
 
-app.register(require('./plugins/register.js'));
-
-
-
-
+app.register(require('./plugins/register.js'));                                              
 app.listen({ port: database.core.serverConfig.port, host: database.core.serverConfig.ip });
+logger.logConsole(`
+
+        ███▄ ▄███▓▄▄▄█████▓  ▄████  ▄▄▄      
+        ▓██▒▀█▀ ██▒▓  ██▒ ▓▒ ██▒ ▀█▒▒████▄    
+        ▓██    ▓██░▒ ▓██░ ▒░▒██░▄▄▄░▒██  ▀█▄  
+        ▒██    ▒██ ░ ▓██▓ ░ ░▓█  ██▓░██▄▄▄▄██ 
+        ▒██▒   ░██▒  ▒██▒ ░ ░▒▓███▀▒ ▓█   ▓██▒
+        ░ ▒░   ░  ░  ▒ ░░    ░▒   ▒  ▒▒   ▓▒█░
+        ░  ░      ░    ░      ░   ░   ▒   ▒▒ ░
+        ░      ░     ░      ░ ░   ░   ░   ▒   
+            ░                  ░       ░  ░
+                                            
+`)
+logger.logConsole(`Your server is powered by MTGA - Make Tarkov Great Again`)
