@@ -1,5 +1,4 @@
 const { certificate } = require("./engine/certificategenerator");
-const cert = certificate.generate("127.0.0.1");
 const WebSocket = require("ws");
 const zlib = require("node:zlib");
 const crypto = require("crypto")
@@ -7,6 +6,20 @@ const crypto = require("crypto")
 /**
  * Fastify instance
  */
+
+const database = require('./engine/database');
+const webinterface = require("./engine/webinterface");
+
+module.exports = {
+    database
+};
+
+const { DatabaseLoader } = require("./engine/databaseLoader");
+const { logger } = require("./plugins/utilities");
+DatabaseLoader.loadDatabase();
+
+const cert = certificate.generate(database.core.serverConfig.ip, database.core.serverConfig.hostname);
+
 const app = require('fastify')({
     logger: {
         transport: {
@@ -43,18 +56,11 @@ const app = require('fastify')({
     }
 });
 
-const database = require('./engine/database');
-const webinterface = require("./engine/webinterface");
-
 module.exports = {
     app,
     database,
     webinterface
 };
-
-const { DatabaseLoader } = require("./engine/databaseLoader");
-const { logger } = require("./plugins/utilities");
-DatabaseLoader.loadDatabase();
 
 app.removeContentTypeParser("application/json");
 app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (req, body, done) {
@@ -116,4 +122,6 @@ app.server.on("error", function (error) {
 app.register(require('./plugins/register.js'));
 
 
-app.listen({ port: 443, host: '127.0.0.1' });
+
+
+app.listen({ port: database.core.serverConfig.port, host: database.core.serverConfig.ip });
