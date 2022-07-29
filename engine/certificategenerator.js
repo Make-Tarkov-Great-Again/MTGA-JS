@@ -57,7 +57,7 @@ class CertificateGenerator {
             fingerprint,
         } = selfsigned.generate(attributes, {
             keySize: 2048, // the size for the private key in bits (default: 1024)
-            days: 365, // how long till expiry of the signed certificate (default: 365)
+            days: 3, // how long till expiry of the signed certificate (default: 365)
             algorithm: "sha256", // sign the certificate with specified algorithm (default: 'sha1')
             extensions: extensions,
             // extensions: [{ name: "commonName", cA: true, value: this.ip + "/" }], // certificate extensions array // certificate extensions array
@@ -66,12 +66,12 @@ class CertificateGenerator {
             clientCertificateCN: "MTGA", // client certificate's common name (default: 'John Doe jdoe123')
         }));
 
-        logger.logInfo(`Generated self-signed sha256/2048 certificate ${fingerprint}, valid 365 days`);
+        logger.logInfo(`Generated self-signed sha256/2048 certificate ${fingerprint}, valid 3 day`);
 
         fs.writeFileSync(this.certFile, cert);
         fs.writeFileSync(this.keyFile, key);
 
-        return { cert, key };
+        return { cert, key, fingerprint };
     }
 }
 module.exports.certificate = new CertificateGenerator();
