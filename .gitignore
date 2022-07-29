@@ -56,4 +56,5 @@ jspm_packages
 *flamegraph*
 package-lock.json
 user/profiles/*
+user/certs/*
 ragfair.json
