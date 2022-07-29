@@ -70,10 +70,10 @@ class GameController {
             taxonomy: 6,
             activeProfileId: "pmc" + sessionID,
             backend: {
-                Trading: FastifyResponse.getBackendURL(),
-                Messaging: FastifyResponse.getBackendURL(),
-                Main: FastifyResponse.getBackendURL(),
-                RagFair: FastifyResponse.getBackendURL()
+                Trading: FastifyResponse.getBackendUrl(),
+                Messaging: FastifyResponse.getBackendUrl(),
+                Main: FastifyResponse.getBackendUrl(),
+                RagFair: FastifyResponse.getBackendUrl()
             },
             utc_time: getCurrentTimestamp(),
             totalInGame: 0,

@@ -55,22 +55,31 @@ class Ragfair extends BaseModel {
     static async applyRequestReturnRagfair(request, ragfair) {
         let tempCategories;
         if (request.neededSearchId != "") {
+            const tempOffers = await this.getNeededFor(request.neededSearchId, ragfair.offers);
+            
+            if (request.handbookId != "") {
+            const list = await this.getTplFromHandbook(request.handbookId);
             ragfair.categories = await this.formatCategories(
                 ragfair.categories,
                 ragfair.offers,
-                await this.getLinkedTo(request.neededSearchId)
+                list
             );
-
-            /**
-             * neededSearchId is used to find if the item being searched
-             * is required/needed for a barter offer within ragfair.offers.requirements
-             * Logic is not written
-             */ 
 
             ragfair.offers = await this.reduceOffersBasedOnCategories(
-                ragfair.offers,
+                tempOffers,
                 ragfair.categories
             );
+        } else {
+            ragfair.categories = await this.formatCategories(
+                ragfair.categories,
+                ragfair.offers
+            );
+
+            ragfair.offers = await this.reduceOffersBasedOnCategories(
+                tempOffers,
+                ragfair.categories
+            );
+        }
         } else if (request.linkedSearchId != "") {
             if (request.handbookId != "") {
                 const list = await this.getTplFromHandbook(request.handbookId);
@@ -84,7 +93,7 @@ class Ragfair extends BaseModel {
                     ragfair.offers,
                     ragfair.categories
                 );
-                
+
                 tempCategories = await this.formatCategories(
                     ragfair.categories,
                     ragfair.offers,
@@ -274,6 +283,12 @@ class Ragfair extends BaseModel {
 
             return result;
         }
+    }
+
+    static async getNeededFor(searchId, offers) {
+        return offers.filter(function (ragfairOffer) {
+            return ragfairOffer.requirements[0]._tpl === searchId;
+        });
     }
 
     /**
