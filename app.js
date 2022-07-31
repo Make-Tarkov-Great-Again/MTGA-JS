@@ -1,7 +1,7 @@
 const { certificate } = require("./engine/certificategenerator");
 const WebSocket = require("ws");
 const zlib = require("node:zlib");
-const crypto = require("crypto")
+const crypto = require("crypto");
 const open = require("open");
 
 /**
