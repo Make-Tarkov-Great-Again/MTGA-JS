@@ -86,6 +86,7 @@ module.exports = async function gameRoutes(app, _opts) {
         let actionResult;
         for (const moveAction of request.body.data) {
             const action = moveAction.Action;
+            //aaaa
             switch (action) {
                 case "QuestAccept":
                     actionResult = await GameController.clientGameProfileAcceptQuest(moveAction, reply, playerProfile);
