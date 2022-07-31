@@ -739,6 +739,14 @@ class Character extends BaseModel {
         return true;
     }
 
+    async getHideoutProductionById(recipeId) {
+        return this.Hideout.Production[recipeId];
+    }
+
+    async removeHideoutProductionById(recipeId) {
+        delete this.Hideout.Production[recipeId];
+    }
+
     // Examine //
 
     async examineItem(itemId) {
