@@ -4,7 +4,7 @@ const {
     Edition, Customization, Storage,
     Character, Health,
     Weaponbuild, Quest, Locale,
-    Trader, Item, HideoutArea, HideoutProduction, HideoutScavcase
+    Trader, Item, HideoutArea, HideoutProduction, HideoutScavcase, Preset
 } = require("../../models");
 const {
     generateUniqueId, getCurrentTimestamp, logger,
@@ -993,16 +993,26 @@ class GameController {
             }
         };
         if (playerProfile) {
+            let itemsAdded;
             const production = await playerProfile.character.getHideoutProductionById(moveAction.recipeId);
+            if (!production.Products) {
+                logger.logError(`[clientGameProfileHideoutTakeProduction] Remanent productions error: no products for production with Id ${moveAction.recipeId}`);
+                await playerProfile.character.removeHideoutProductionById(moveAction.recipeId);
+                return output;
+            }
             for(const product of production.Products) {
                 const itemTemplate = await Item.get(product._tpl);
-                let itemChildren;
-                let itemsAdded;
-                if (itemTemplate._props.Slots) {
-                    itemChildren = await Item.prepareChildrenForAddItem(itemTemplate, itemTemplate._props.Slots);
-                }
-                if (!product.count) {
-                    itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), itemTemplate._id, itemChildren, 1);
+                if (await Preset.itemHasPreset(itemTemplate._id)) {
+                    const itemPresets = await Preset.getPresetsForItem(itemTemplate._id);
+                    const itemPreset = Object.values(itemPresets).find(preset => preset._encyclopedia);
+                    //const children = itemPreset._items.filter(item => item.parentId);
+                    const basedChildren = await Item.prepareChildrenForAddItem(itemPreset._parent, itemPreset._items);
+                    itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), itemTemplate._id, basedChildren, 1);
+                
+                } else {
+                    if (!product.count) {
+                        itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), itemTemplate._id, undefined, 1);
+                    }
                 }
                 if (itemsAdded) {
                     output.items.new = itemsAdded;
