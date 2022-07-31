@@ -86,7 +86,6 @@ module.exports = async function gameRoutes(app, _opts) {
         let actionResult;
         for (const moveAction of request.body.data) {
             const action = moveAction.Action;
-            //aaaa
             switch (action) {
                 case "QuestAccept":
                     actionResult = await GameController.clientGameProfileAcceptQuest(moveAction, reply, playerProfile);
@@ -209,7 +208,13 @@ module.exports = async function gameRoutes(app, _opts) {
                     actionResult = await GameController.clientGameProfileHideoutScavCaseProductionStart(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
-                    // more, MOOOOOOOOOOOOOOORE
+
+                case "HideoutTakeProduction":
+                    actionResult = await GameController.clientGameProfileHideoutTakeProduction(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+
+                // more, MOOOOOOOOOOOOOOORE
                 case "Insure":
                 case "RagFairAddOffer":
                 case "AddToWishList":

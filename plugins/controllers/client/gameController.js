@@ -389,7 +389,7 @@ class GameController {
                                 "upd": {
                                     "StackObjectsCount": stackedSlot._max_count
                                 }
-                            }
+                            };
                             preparedChildren.push(childToAdd);
                         }
                     }
@@ -980,6 +980,35 @@ class GameController {
             } else {
                 logger.logError(`[clientGameProfileHideoutScavCaseProductionStart] Couldn't take money with id ${moveAction.items[0].id}`);
             }
+        }
+        return output;
+    };
+
+    static clientGameProfileHideoutTakeProduction = async (moveAction = null, _reply = null, playerProfile = null) => {
+        const output = {
+            items: {
+                new: [],
+                change: [],
+                del: []
+            }
+        };
+        if (playerProfile) {
+            const production = await playerProfile.character.getHideoutProductionById(moveAction.recipeId);
+            for(const product of production.Products) {
+                const itemTemplate = await Item.get(product._tpl);
+                let itemChildren;
+                let itemsAdded;
+                if (itemTemplate._props.Slots) {
+                    itemChildren = await Item.prepareChildrenForAddItem(itemTemplate, itemTemplate._props.Slots);
+                }
+                if (!product.count) {
+                    itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), itemTemplate._id, itemChildren, 1);
+                }
+                if (itemsAdded) {
+                    output.items.new = itemsAdded;
+                }
+            }
+            await playerProfile.character.removeHideoutProductionById(moveAction.recipeId);
         }
         return output;
     };

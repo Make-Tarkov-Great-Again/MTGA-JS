@@ -159,14 +159,14 @@ class Item extends BaseModel {
     }
 
     static async prepareChildrenForAddItem(parentItem, childItemArray) {
-        let children = []
-        for (let childItem of childItemArray) {
-            if (childItem.parentId == parentItem._id) {
-                let grandchildren = await Item.prepareChildrenForAddItem(childItem, childItemArray);
-                let newChild = {
+        const children = []
+        for (const childItem of childItemArray) {
+            if (childItem.parentId === parentItem._id) {
+                const grandchildren = await Item.prepareChildrenForAddItem(childItem, childItemArray);
+                const newChild = {
                     _tpl: childItem._tpl,
-                    slotId: childItem.slotId,
-                }
+                    slotId: childItem.slotId
+                };
 
                 if (grandchildren) {
                     newChild.children = grandchildren;
