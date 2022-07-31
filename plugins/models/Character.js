@@ -319,7 +319,7 @@ class Character extends BaseModel {
 
         const itemTemplate = await Item.get(itemId);
         if (!itemTemplate) {
-            logger.logError(`[addItem] Unable to add item, can't get the itemTemplate for itemId ${itemid}.`);
+            logger.logError(`[addItem] Unable to add item, can't get the itemTemplate for itemId ${itemId}.`);
             return false;
         }
 
