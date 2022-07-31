@@ -877,7 +877,7 @@ class GameController {
         if (playerProfile) {
             const hideoutProductionTemplate = await HideoutProduction.get(moveAction.recipeId);
             if (!hideoutProductionTemplate) {
-                logger.logError(`[clientGameProfileHideoutContinuousProductionStart] Starting hideout production failed. Unknown hideout production with Id ${moveAction.recipeId} in hideoutProduction database.`);
+                logger.logError(`[clientGameProfileHideoutContinuousProductionStart] Couldn't start hideout production. Unknown production with Id ${moveAction.recipeId}`);
                 return;
             }
 
@@ -945,21 +945,43 @@ class GameController {
     };
 
     static clientGameProfileHideoutScavCaseProductionStart = async (moveAction = null, _reply = null, playerProfile = null) => {
+        const output = {
+            items: {
+                new: [],
+                change: [],
+                del: []
+            }
+        };
         if (playerProfile) {
             const hideoutScavcaseProduction = await HideoutScavcase.get(moveAction.recipeId);
             if (!hideoutScavcaseProduction) {
-                logger.logError(`[clientGameProfileHideoutScavCaseProductionStart] Starting hideout scavcase production failed. Unknown hideout scavcase production with Id ${moveAction.recipeId} in hideoutScavcase database.`);
+                logger.logError(`[clientGameProfileHideoutScavCaseProductionStart] Couldn't start scavcase. Unknown hideout scavcase with Id ${moveAction.recipeId}`);
             }
+            const itemTaken = await playerProfile.character.removeItem(moveAction.items[0].id, moveAction.items[0].count);
 
-            playerProfile.character.Hideout.Production[hideoutScavcaseProduction._id] = {
-                Progress: 0,
-                inProgress: true,
-                RecipeId: moveAction.recipeId,
-                SkipTime: 0,
-                ProductionTime: parseInt(hideoutScavcaseProduction.ProductionTime),
-                StartTimestamp: getCurrentTimestamp()
+            const products = [];
+
+            products.push({
+                _id: await generateUniqueId(),
+                _tpl: "5447a9cd4bdc2dbd208b4567"
+            });
+            if (itemTaken) {
+                output.items.change = itemTaken.changed;
+                output.items.removed = itemTaken.removed;
+                playerProfile.character.Hideout.Production[hideoutScavcaseProduction._id] = {
+                    Progress: 0,
+                    inProgress: true,
+                    RecipeId: moveAction.recipeId,
+                    Products: products,
+                    SkipTime: 0,
+                    ProductionTime: parseInt(hideoutScavcaseProduction.ProductionTime),
+                    StartTimestamp: getCurrentTimestamp()
+                };
+            } else {
+                logger.logError(`[clientGameProfileHideoutScavCaseProductionStart] Couldn't take money with id ${moveAction.items[0].id}`);
             }
         }
-    }
+        return output;
+    };
 }
 module.exports.GameController = GameController;

@@ -713,7 +713,7 @@ class Character extends BaseModel {
 
     async removeItems(item) {
         const removedItems = {};
-        await this.removeItem(item.item, -1)
+        await this.removeItem(item.item, -1);
         Object.assign(removedItems, { _id: item.item });
         return removedItems;
     }
