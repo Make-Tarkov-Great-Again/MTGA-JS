@@ -159,7 +159,7 @@ class Item extends BaseModel {
     }
 
     static async prepareChildrenForAddItem(parentItem, childItemArray) {
-        const children = []
+        const children = [];
         for (const childItem of childItemArray) {
             if (childItem.parentId === parentItem._id) {
                 const grandchildren = await Item.prepareChildrenForAddItem(childItem, childItemArray);
