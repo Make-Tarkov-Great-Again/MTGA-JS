@@ -196,7 +196,10 @@ class Character extends BaseModel {
 
     async solve() {
         const { UtilityModel } = require("./UtilityModel");
-        logger.logDebug("Solving Character with ID:" + this._id);
+
+        // fuckin solve
+        if(this._id) logger.logDebug("Solving Character with ID:" + this._id);
+
         if (this.Customization !== undefined) {
             for (const [bodyPart, id] of Object.entries(this.Customization)) {
                 if (typeof id === "string") {
