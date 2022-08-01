@@ -382,10 +382,10 @@ class Character extends BaseModel {
                             item.upd.StackObjectsCount = itemTemplate._props.StackMaxSize;
                         }
                     } else {
-                        if (itemTemplate._props.StackMaxSize > 1) {
+                        if (typeof item.upd === "undefined") {
                             item.upd = {};
-                            item.upd.StackObjectsCount = amount;
                         }
+                        item.upd.StackObjectsCount = amount;
                     }
 
                     if (foundInRaid) {
@@ -393,6 +393,11 @@ class Character extends BaseModel {
                             item.upd = {};
                         }
                         item.upd.SpawnedInSession = true;
+                    } else {
+                        if (typeof item.upd === "undefined") {
+                            item.upd = {};
+                        }
+                        item.upd.SpawnedInSession = false;
                     }
 
                     if (customUpd) {
