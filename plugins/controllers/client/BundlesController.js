@@ -1,3 +1,5 @@
+const { FastifyResponse } = require("../../utilities");
+
 class BundlesController {
     constructor() {
         this.bundles = [];
@@ -7,8 +9,11 @@ class BundlesController {
      * Return all bundles
      * @returns 
      */
-    static async getBundles() {
-        return this.bundles;
+    static async getBundles(reply) {
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            []
+        );
     }
 }
 module.exports.BundlesController = BundlesController;
