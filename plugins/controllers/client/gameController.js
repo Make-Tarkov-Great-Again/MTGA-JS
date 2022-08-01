@@ -1040,9 +1040,9 @@ class GameController {
                     const itemPresets = await Preset.getPresetsForItem(itemTemplate._id);
                     const itemPreset = Object.values(itemPresets).find(preset => preset._encyclopedia);
                     const basedChildren = await Item.prepareChildrenForAddItem(itemPreset._items[0], itemPreset._items);
-                    itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), itemTemplate._id, basedChildren, product.count);
+                    itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), itemTemplate._id, basedChildren, product.count, true);
                 } else {
-                    itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), itemTemplate._id, undefined, product.count);
+                    itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), itemTemplate._id, undefined, product.count, true);
                 }
                 if (itemsAdded) {
                     output.items.new = itemsAdded;
