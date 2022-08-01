@@ -855,9 +855,15 @@ class GameController {
                     productionTime = hideoutProductionTemplate.productionTime;
                 }
 
+                const products = [{
+                    _id: await generateUniqueId(),
+                    _tpl: hideoutProductionTemplate.endProduct
+                }];
+
                 playerProfile.character.Hideout.Production[hideoutProductionTemplate._id] = {
                     Progress: 0,
                     inProgress: true,
+                    Products: products,
                     RecipeId: moveAction.recepieId,
                     SkipTime: 0,
                     ProductionTime: parseInt(productionTime),
