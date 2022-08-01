@@ -74,7 +74,7 @@ class DatabaseLoader {
             settings: []
         };
 
-        let hideoutAreas = readParsed('./database/hideout/areas.json')
+        let hideoutAreas = readParsed('./database/hideout/areas.json');
         if (typeof hideoutAreas.data != "undefined") { hideoutAreas = hideoutAreas.data; }
         for (const [index, area] of Object.entries(hideoutAreas)) {
             await UtilityModel.createModelFromParseWithID('HideoutArea', index, area);
@@ -83,6 +83,9 @@ class DatabaseLoader {
         let hideoutProductions = readParsed('./database/hideout/productions.json');
         if (typeof hideoutProductions.data != "undefined") { hideoutProductions = hideoutProductions.data; }
         for (const [index, production] of Object.entries(hideoutProductions)) {
+            if (database.core.gameplay.hideout.fastProduction === true) {
+                production.productionTime = 100;
+            }
             await UtilityModel.createModelFromParseWithID('HideoutProduction', production._id, production);
         }
 
@@ -91,7 +94,7 @@ class DatabaseLoader {
         if (typeof hideoutScavcase.data != "undefined") { hideoutScavcase = hideoutScavcase.data; }
         for (const [index, scavcase] of Object.entries(hideoutScavcase)) {
             if (database.core.gameplay.hideout.fastScavcase === true) {
-                scavcase.ProductionTime = 120;
+                scavcase.ProductionTime = 100;
             }
             await UtilityModel.createModelFromParseWithID('HideoutScavcase', scavcase._id, scavcase);
         }
@@ -160,7 +163,7 @@ class DatabaseLoader {
 
     }
 
-    // Load Customization 
+    // Load Customization
     static async loadCustomization() {
         const { database } = require('../app');
         const gameplay = database.core.gameplay;
