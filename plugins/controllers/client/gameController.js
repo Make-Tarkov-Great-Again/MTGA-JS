@@ -855,9 +855,20 @@ class GameController {
                     productionTime = hideoutProductionTemplate.productionTime;
                 }
 
+                if(! hideoutProductionTemplate.count) {
+                    hideoutProductionTemplate.count = 1;
+                }
+
+                const products = [{
+                    _id: await generateUniqueId(),
+                    _tpl: hideoutProductionTemplate.endProduct,
+                    count: hideoutProductionTemplate.count
+                }];
+
                 playerProfile.character.Hideout.Production[hideoutProductionTemplate._id] = {
                     Progress: 0,
                     inProgress: true,
+                    Products: products,
                     RecipeId: moveAction.recepieId,
                     SkipTime: 0,
                     ProductionTime: parseInt(productionTime),
@@ -961,9 +972,21 @@ class GameController {
 
             const products = [];
 
+
+            /**
+             * M4A1 TEST
+             */
+            //products.push({
+            //    _id: await generateUniqueId(),
+            //    _tpl: "5447a9cd4bdc2dbd208b4567"
+            //});
+
+            /**
+             * Casque TEST
+             */
             products.push({
                 _id: await generateUniqueId(),
-                _tpl: "5447a9cd4bdc2dbd208b4567"
+                _tpl: "5b432b965acfc47a8774094e"
             });
             if (itemTaken) {
                 output.items.change = itemTaken.changed;
@@ -995,24 +1018,23 @@ class GameController {
         if (playerProfile) {
             let itemsAdded;
             const production = await playerProfile.character.getHideoutProductionById(moveAction.recipeId);
-            if (!production.Products) {
+            if (!production) {
                 logger.logError(`[clientGameProfileHideoutTakeProduction] Remanent productions error: no products for production with Id ${moveAction.recipeId}`);
                 await playerProfile.character.removeHideoutProductionById(moveAction.recipeId);
                 return output;
             }
             for(const product of production.Products) {
+                if (!product.count) {
+                    product.count = 1;
+                }
                 const itemTemplate = await Item.get(product._tpl);
                 if (await Preset.itemHasPreset(itemTemplate._id)) {
                     const itemPresets = await Preset.getPresetsForItem(itemTemplate._id);
                     const itemPreset = Object.values(itemPresets).find(preset => preset._encyclopedia);
-                    //const children = itemPreset._items.filter(item => item.parentId);
-                    const basedChildren = await Item.prepareChildrenForAddItem(itemPreset._parent, itemPreset._items);
-                    itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), itemTemplate._id, basedChildren, 1);
-                
+                    const basedChildren = await Item.prepareChildrenForAddItem(itemPreset._items[0], itemPreset._items);
+                    itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), itemTemplate._id, basedChildren, product.count);
                 } else {
-                    if (!product.count) {
-                        itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), itemTemplate._id, undefined, 1);
-                    }
+                    itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), itemTemplate._id, undefined, product.count);
                 }
                 if (itemsAdded) {
                     output.items.new = itemsAdded;

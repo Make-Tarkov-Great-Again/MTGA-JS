@@ -172,13 +172,13 @@ module.exports = async function gameRoutes(app, _opts) {
                     actionResult = await GameController.clientGameProfileHideoutToggleArea(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
-                
+
                 case "HideoutSingleProductionStart":
                     actionResult = await GameController.clientGameProfileHideoutSingleProductionStart(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
-                
+
                 case "HideoutContinuousProductionStart":
                     actionResult = await GameController.clientGameProfileHideoutContinuousProductionStart(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);

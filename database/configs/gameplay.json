@@ -41,7 +41,8 @@
         "taggedAndCursed": false
     },
     "hideout": {
-        "fastScavcase": true
+        "fastScavcase": true,
+        "fastProduction": true
     },
     "customization": {
         "allHeadsOnCharacterCreation": true,
