@@ -5,7 +5,7 @@ const { logger, FastifyResponse, writeFile } = require("../utilities");
 module.exports = async function notifierRoutes(app, opt) {
 
     // Client Notifier Routes //
-    app.post("/client/WebSocketAddress", async (request, reply) => {
+    app.post("/client/WebSocketAddress", async (_request, reply) => {
         return FastifyResponse.zlibReply(
             reply,
             FastifyResponse.getWebSocketUrl()
@@ -20,7 +20,7 @@ module.exports = async function notifierRoutes(app, opt) {
         );
     });
 
-    app.post("/:sessionID", async (request, reply) => {
+    app.post("/:sessionID", async (_request, reply) => {
         logger.logError("NOTIFIER GET HIT");
             return FastifyResponse.zlibJsonReply(
                 reply,
@@ -28,13 +28,13 @@ module.exports = async function notifierRoutes(app, opt) {
         );
     });
 
-    app.get("/socket", { websocket: true }, async (connection, request, reply) => {
+    app.get("/socket", { websocket: true }, async (connection, _request, _reply) => {
         logger.logError("NOTIFIER getwebsocket GET HIT");
-        connection.socket.on('message', message => {
+        connection.socket.on('message', _message => {
             connection.socket.send('NOTIFIER message HIT')
         })
 
-        connection.socket.on('upgrade', message => {
+        connection.socket.on('upgrade', _message => {
             connection.socket.send('NOTIFIER upgrade HIT')
         })
     });
