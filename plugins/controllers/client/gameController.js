@@ -961,9 +961,21 @@ class GameController {
 
             const products = [];
 
+
+            /**
+             * M4A1 TEST
+             */
+            //products.push({
+            //    _id: await generateUniqueId(),
+            //    _tpl: "5447a9cd4bdc2dbd208b4567"
+            //});
+
+            /**
+             * Casque TEST
+             */
             products.push({
                 _id: await generateUniqueId(),
-                _tpl: "5447a9cd4bdc2dbd208b4567"
+                _tpl: "5b432b965acfc47a8774094e"
             });
             if (itemTaken) {
                 output.items.change = itemTaken.changed;
@@ -1005,10 +1017,8 @@ class GameController {
                 if (await Preset.itemHasPreset(itemTemplate._id)) {
                     const itemPresets = await Preset.getPresetsForItem(itemTemplate._id);
                     const itemPreset = Object.values(itemPresets).find(preset => preset._encyclopedia);
-                    //const children = itemPreset._items.filter(item => item.parentId);
-                    const basedChildren = await Item.prepareChildrenForAddItem(itemPreset._parent, itemPreset._items);
+                    const basedChildren = await Item.prepareChildrenForAddItem(itemPreset._items[0], itemPreset._items);
                     itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), itemTemplate._id, basedChildren, 1);
-                
                 } else {
                     if (!product.count) {
                         itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), itemTemplate._id, undefined, 1);
