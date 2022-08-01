@@ -106,18 +106,26 @@ class GameController {
         // Implement with offline raiding //
         const dummyScavData = readParsed("./scavDummy.json");
 
-        dummyScavData.RegistrationDate = await getCurrentTimestamp();
-        dummyScavData.aid = "scav" + await FastifyResponse.getSessionID(request);
+        dummyScavData.RegistrationDate = getCurrentTimestamp();
+        dummyScavData.aid = await FastifyResponse.getSessionID(request); // AIDs need to be the same
 
         const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
         if (!playerAccount.wipe) {
             const profile = await playerAccount.getProfile();
             if (profile.character.length !== 0) {
-                const character = await profile.getPmc();
-                const pmc = await character.dissolve();
-                output.push(pmc);
+
+                /**
+                 * Generate scav and assign 
+                 */
                 //output.push(await profile.getScav());
                 output.push(dummyScavData);
+
+
+                const character = await profile.getPmc();
+                const pmc = await character.dissolve();
+                pmc.savage = dummyScavData._id //set pmc.savage var to scav id
+                
+                output.push(pmc);
             }
         }
         //console.log(output);
