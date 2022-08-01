@@ -855,9 +855,14 @@ class GameController {
                     productionTime = hideoutProductionTemplate.productionTime;
                 }
 
+                if(! hideoutProductionTemplate.count) {
+                    hideoutProductionTemplate.count = 1;
+                }
+
                 const products = [{
                     _id: await generateUniqueId(),
-                    _tpl: hideoutProductionTemplate.endProduct
+                    _tpl: hideoutProductionTemplate.endProduct,
+                    count: hideoutProductionTemplate.count
                 }];
 
                 playerProfile.character.Hideout.Production[hideoutProductionTemplate._id] = {
@@ -1019,16 +1024,17 @@ class GameController {
                 return output;
             }
             for(const product of production.Products) {
+                if (!product.count) {
+                    product.count = 1;
+                }
                 const itemTemplate = await Item.get(product._tpl);
                 if (await Preset.itemHasPreset(itemTemplate._id)) {
                     const itemPresets = await Preset.getPresetsForItem(itemTemplate._id);
                     const itemPreset = Object.values(itemPresets).find(preset => preset._encyclopedia);
                     const basedChildren = await Item.prepareChildrenForAddItem(itemPreset._items[0], itemPreset._items);
-                    itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), itemTemplate._id, basedChildren, 1);
+                    itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), itemTemplate._id, basedChildren, product.count);
                 } else {
-                    if (!product.count) {
-                        itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), itemTemplate._id, undefined, 1);
-                    }
+                    itemsAdded = await playerProfile.character.addItem(await playerProfile.character.getStashContainer(), itemTemplate._id, undefined, product.count);
                 }
                 if (itemsAdded) {
                     output.items.new = itemsAdded;
