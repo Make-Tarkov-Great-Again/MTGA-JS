@@ -1007,7 +1007,7 @@ class GameController {
         if (playerProfile) {
             let itemsAdded;
             const production = await playerProfile.character.getHideoutProductionById(moveAction.recipeId);
-            if (!production.Products) {
+            if (!production) {
                 logger.logError(`[clientGameProfileHideoutTakeProduction] Remanent productions error: no products for production with Id ${moveAction.recipeId}`);
                 await playerProfile.character.removeHideoutProductionById(moveAction.recipeId);
                 return output;
