@@ -13,4 +13,7 @@ module.exports = async function router(app, _opts) {
 
     /* Register the routes for bundles?????? */
     await app.register(require("./routes/bundles"));
+
+    /* Register the routes for SIT */
+    await app.register(require("./routes/sit"));
 }
