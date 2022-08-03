@@ -193,26 +193,9 @@ const findAndReturnChildrenByItems = async (items, itemId) => {
     return list;
 }
 
-/**const splitStack = async (item) => {
-    if (!("upd" in item) || !("StackObjectsCount" in item.upd)) {
-        return [item];
-    }
- 
-    const maxStack = global._database.items[item._tpl]._props.StackMaxSize;
-    let count = item.upd.StackObjectsCount;
-    let stacks = [];
- 
-    while (count) {
-        let amount = Math.min(count, maxStack);
-        let newStack = clone(item);
- 
-        newStack.upd.StackObjectsCount = amount;
-        count -= amount;
-        stacks.push(newStack);
-    }
- 
-    return stacks;
-}*/
+const generateRandomInt = async (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 
 module.exports = {
@@ -232,5 +215,6 @@ module.exports = {
     templatesWithParent,
     isCategory,
     childrenCategories,
-    getFileUpdatedDate
+    getFileUpdatedDate,
+    generateRandomInt
 };
