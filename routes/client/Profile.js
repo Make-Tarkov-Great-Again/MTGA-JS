@@ -1,5 +1,5 @@
 const { GameController } = require("../../lib/controllers");
-const {  Profile } = require("../../lib/models");
+const {  Profile } = require("../../lib/models/Profile");
 const { logger, FastifyResponse } = require("../../utilities");
 
 module.exports = async function profileRoutes(app, _opts) {
