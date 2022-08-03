@@ -1,5 +1,5 @@
 const { default: stringify } = require("fast-safe-stringify");
-const { database } = require("../app");
+
 const cloneDeep = require("rfdc")();
 const { ClientController, GameController, MenuController, TradingController, FriendController, LocationController } = require("../lib/controllers");
 const { Weaponbuild, Ragfair, Profile } = require("../lib/models");
@@ -292,6 +292,7 @@ module.exports = async function gameRoutes(app, _opts) {
 
     // Client Handbook Routes //
     app.post("/client/handbook/templates", async (_request, reply) => {
+        const { database } = require("../app");
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(database.templates));
@@ -379,6 +380,7 @@ module.exports = async function gameRoutes(app, _opts) {
     });
 
     app.post(`/client/server/list`, async (request, reply) => {
+        const { database } = require("../app");
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody([{ ip: database.core.serverConfig.ip, port: database.core.serverConfig.port }]));
