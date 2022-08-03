@@ -215,7 +215,6 @@ app.server.on("listening", function (){
     logger.logConsole(`                           ▀`);
     logger.logConsole(`     Make Tarkov Great Again`);
     logger.logConsole(``);
-    console.log(app.routes)
 });
 
 app.register(require('./plugins/register.js'));
