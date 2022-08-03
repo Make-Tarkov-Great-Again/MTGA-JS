@@ -33,5 +33,5 @@ module.exports = fp(async function (app, _opts) {
   /**
 * Register Handler
 */
-  await app.register(require('./router.js'));
+  await app.register(require('../routes/router.js'));
 });

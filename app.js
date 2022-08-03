@@ -1,33 +1,31 @@
-const { certificate } = require("./engine/certificategenerator");
-const WebSocket = require("ws");
+const { certificate } = require("./lib/engine/CertificateGenerator");
 const zlib = require("node:zlib");
-const crypto = require("crypto");
 const open = require("open");
 
 /**
  * Fastify instance
  */
 
-const database = require('./engine/database');
-const webinterface = require("./engine/webinterface");
+const database = require('./lib/engine/Database');
+const webinterface = require("./lib/engine/WebInterface");
 
 module.exports = {
     database
 };
 
-const { DatabaseLoader } = require("./engine/databaseLoader");
-const { logger } = require("./plugins/utilities");
+const { DatabaseLoader } = require("./lib/engine/DatabaseLoader");
+const { logger } = require("./utilities");
 
 DatabaseLoader.loadDatabase();
 
 const cert = certificate.generate(database.core.serverConfig.ip, database.core.serverConfig.hostname);
 if (process.platform === 'win32' || process.platform === 'win64') {
     const fs = require('fs');
-    const powerShellPath = `${__dirname}/scripts/install-certificate.ps1`
+    const powerShellPath = `${__dirname}/scripts/install-certificate.ps1`;
     const powerShellScript = fs.readFileSync(powerShellPath);
     let spawn = require('child_process').spawn;
     let powerShell = spawn('powershell', [powerShellScript]);
-    
+
     let userCancelOrError = false;
 
     // Redirect stdout and stderr to our script output.
@@ -198,23 +196,26 @@ app.addContentTypeParser('*', (req, payload, done) => {
 */
 
 app.server.on("upgrade", function (request, socket, head) {
-    logger.logInfo("upgrade")
-})
+    logger.logInfo("upgrade");
+});
 
 app.server.on("error", function (error) {
-    logger.logError(error)
-})
+    logger.logError(error);
+});
 
-app.register(require('./plugins/register.js'));                                              
+app.server.on("listening", function (){
+    logger.logConsole(``);
+    logger.logConsole(``);
+    logger.logConsole(`     █▀▄▀█    ▄▄▄▄▀   ▄▀  ██   `);
+    logger.logConsole(`     █ █ █ ▀▀▀ █    ▄▀    █ █  `);
+    logger.logConsole(`     █ ▄ █     █    █ ▀▄  █▄▄█ `);
+    logger.logConsole(`     █   █    █     █   █ █  █ `);
+    logger.logConsole(`        █    ▀       ███     █ `);
+    logger.logConsole(`       ▀                    █  `);
+    logger.logConsole(`                           ▀`);
+    logger.logConsole(`     Make Tarkov Great Again`);
+    logger.logConsole(``);
+});
+
+app.register(require('./plugins/register.js'));
 app.listen({ port: database.core.serverConfig.port, host: database.core.serverConfig.ip });
-logger.logConsole(``)
-logger.logConsole(``)
-logger.logConsole(`     █▀▄▀█    ▄▄▄▄▀   ▄▀  ██   `)
-logger.logConsole(`     █ █ █ ▀▀▀ █    ▄▀    █ █  `)
-logger.logConsole(`     █ ▄ █     █    █ ▀▄  █▄▄█ `)
-logger.logConsole(`     █   █    █     █   █ █  █ `)
-logger.logConsole(`        █    ▀       ███     █ `)
-logger.logConsole(`       ▀                    █  `)
-logger.logConsole(`                           ▀`)
-logger.logConsole(`     Make Tarkov Great Again`)
-logger.logConsole(``)
