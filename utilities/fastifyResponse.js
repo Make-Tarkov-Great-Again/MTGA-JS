@@ -1,6 +1,5 @@
 const zlib = require("zlib");
 const { stringify } = require("./fileIO");
-const logger = require("./logger");
 
 
 class FastifyResponse {
