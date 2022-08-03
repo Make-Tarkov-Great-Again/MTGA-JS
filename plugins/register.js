@@ -33,5 +33,8 @@ module.exports = fp(async function (app, _opts) {
   /**
 * Register Handler
 */
+  await app.register(require('@fastify/routes'));
   await app.register(require('../routes/router.js'));
+
+  
 });

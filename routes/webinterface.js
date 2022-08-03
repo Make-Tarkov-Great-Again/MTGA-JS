@@ -1,19 +1,11 @@
-'use strict'
 const { webinterface } = require('../app');
-const fs = require('fs');
 const { AccountController, WeblauncherController } = require('../lib/controllers');
-//const {  } = require('../lib/controllers/WebLauncherController');
 
-const {
-    database: {
-        profiles,
-        core
-    }
-} = require('../app');
 module.exports = async function webinterfaceRoutes(app, opts) {
+    
     app.get(`/`, async (request, reply) => {
         return AccountController.home(request, reply);
-    })
+    });
 
     app.get(`/message`, async (request, reply) => {
         await webinterface.checkForSessionID(request);
