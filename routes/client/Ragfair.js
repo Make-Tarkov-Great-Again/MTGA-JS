@@ -1,4 +1,4 @@
-const { Ragfair } = require("../../lib/models");
+const { Ragfair } = require("../../lib/models/Ragfair");
 const { FastifyResponse } = require("../../utilities");
 
 

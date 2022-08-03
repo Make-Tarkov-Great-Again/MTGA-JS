@@ -1,4 +1,4 @@
-const {  Weaponbuild } = require("../../lib/models");
+const { Weaponbuild } = require('../../lib/models/Weaponbuild');
 const { FastifyResponse } = require("../../utilities");
 
 module.exports = async function handbookRoutes(app, _opts) {

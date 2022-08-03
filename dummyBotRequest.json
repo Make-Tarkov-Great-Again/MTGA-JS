@@ -1,0 +1,59 @@
+{
+    "conditions": [
+        {
+            "Role": "assault",
+            "Limit": 30,
+            "Difficulty": "normal"
+        },
+        {
+            "Role": "assault",
+            "Limit": 13,
+            "Difficulty": "hard"
+        },
+        {
+            "Role": "marksman",
+            "Limit": 1,
+            "Difficulty": "normal"
+        },
+        {
+            "Role": "assault",
+            "Limit": 5,
+            "Difficulty": "easy"
+        },
+        {
+            "Role": "marksman",
+            "Limit": 1,
+            "Difficulty": "easy"
+        },
+        {
+            "Role": "marksman",
+            "Limit": 2,
+            "Difficulty": "hard"
+        },
+        {
+            "Role": "exUsec",
+            "Limit": 3,
+            "Difficulty": "normal"
+        },
+        {
+            "Role": "sectantPriest",
+            "Limit": 1,
+            "Difficulty": "normal"
+        },
+        {
+            "Role": "sectantWarrior",
+            "Limit": 4,
+            "Difficulty": "normal"
+        },
+        {
+            "Role": "bossBully",
+            "Limit": 1,
+            "Difficulty": "normal"
+        },
+        {
+            "Role": "followerBully",
+            "Limit": 4,
+            "Difficulty": "normal"
+        }
+    ]
+}
