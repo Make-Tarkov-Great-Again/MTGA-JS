@@ -27,7 +27,7 @@ class FastifyResponse {
     }
 
     static getUrl() {
-        const { database } = require("../../app");
+        const { database } = require("../app");
         return `${database.core.serverConfig.ip}:${database.core.serverConfig.port}`;
     }
 
