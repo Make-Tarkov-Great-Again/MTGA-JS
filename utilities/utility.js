@@ -120,19 +120,19 @@ const findChildren = async (idToFind, listToSearch) => {
 
 /* all items in template with the given parent category */
 const templatesWithParent = async (x) => {
-    const { database } = require("../../app")
+    const { database } = require("../app");
     const TplLookup = database.templates.TplLookup;
     return x in TplLookup.items.byParent ? TplLookup.items.byParent[x] : [];
 }
 
 const isCategory = async (x) => {
-    const { database } = require("../../app")
+    const { database } = require("../app");
     const TplLookup = database.templates.TplLookup;
     return x in TplLookup.categories.byId;
 }
 
 const childrenCategories = async (x) => {
-    const { database } = require("../../app")
+    const { database } = require("../app");
     const TplLookup = database.templates.TplLookup;
     return x in TplLookup.categories.byParent ? TplLookup.categories.byParent[x] : [];
 }
