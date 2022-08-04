@@ -92,7 +92,7 @@ const getFilesFrom = (path, useRelative = true) => {
 };
 
 const createDirectory = (filePath) => {
-    return fs.mkdirSync(getAbsolutePathFrom(filePath));
+    return fs.mkdirSync(getAbsolutePathFrom(filePath), { recursive: true });
 };
 
 module.exports = {
