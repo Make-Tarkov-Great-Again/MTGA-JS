@@ -45,7 +45,7 @@ module.exports = async function clientRoutes(app, _opts) {
             reply,
             FastifyResponse.applyBody([{ ip: database.core.serverConfig.ip, port: database.core.serverConfig.port }]));
     });
-    
+
     app.post(`/client/menu/locale/:language`, async (request, reply) => {
         await MenuController.clientMenuLocale(request, reply);
     });
