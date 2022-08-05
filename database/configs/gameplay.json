@@ -30,6 +30,10 @@
         "killingPMCsFenceLevelChange": 0.02,
         "fenceLevelAssortModifier": 1.05
     },
+    "flea": {
+        "unlockFlea": true,
+        "removeBlacklist": true
+    },
     "other": {
         "RedeemTime": 72
     },
