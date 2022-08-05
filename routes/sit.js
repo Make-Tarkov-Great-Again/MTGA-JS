@@ -1,5 +1,6 @@
- const { readParsed, logger, FastifyResponse } = require("../utilities");
- 
+ const { logger, FastifyResponse } = require("../utilities");
+ const {database} = require ("../app");
+
  module.exports = async function sitRoutes(app, _opts) {
    //[Slejm] Post or Get? probably POST
    app.post(`/client/sit-validator`, async (_request, reply) => {
@@ -9,10 +10,9 @@
     );
   })
    app.get(`/server/config/server`, async (_request, reply) => {
-    const server = readParsed("./database/configs/server.json");
       await FastifyResponse.zlibJsonReply(
       reply,
-      server
+      database.core.serverConfig
     );
   })
 }
