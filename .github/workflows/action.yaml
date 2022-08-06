@@ -1,0 +1,6 @@
+- name: Discord Commits
+  uses: Sniddl/discord-commits@v1.5
+  with:
+    webhook: ${{ secrets.DISCORD_WEBHOOK }}
+    template: 'avatar-with-link'
+    include-extras: true
