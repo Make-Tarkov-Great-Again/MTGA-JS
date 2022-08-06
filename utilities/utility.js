@@ -13,7 +13,7 @@ const generateUniqueId = async (prefix = "", idLength = 21) => {
     return `${prefix}${nanoid()}`;
 }
 
-const generateItemId = async () => {
+const generateMongoID = async () => {
     return ObjectID.createFromTime(process.hrtime.bigint()).toHexString();
 }
 
@@ -211,7 +211,7 @@ module.exports = {
     findChildren,
     payTrade,
     findAndReturnChildrenByItems,
-    generateItemId,
+    generateMongoID,
     templatesWithParent,
     isCategory,
     childrenCategories,
