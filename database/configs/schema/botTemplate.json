@@ -95,7 +95,28 @@
         "UpdateTime": 0
     },
     "Inventory": {
-        "items": [],
+        "items": [
+            {
+                "_id": "62bd99befd08e69ad30f651e",
+                "_tpl": "55d7217a4bdc2d86028b456d"
+            },
+            {
+                "_id": "62bd99befd08e69ad30f651c",
+                "_tpl": "566abbc34bdc2d92178b4576"
+            },
+            {
+                "_id": "62bd99befd08e69ad30f651d",
+                "_tpl": "602543c13fee350cd564d032"
+            },
+            {
+                "_id": "62bd99befd08e69ad30f651f",
+                "_tpl": "5963866286f7747bf429b572"
+            },
+            {
+                "_id": "62bd99befd08e69ad30f6520",
+                "_tpl": "5963866b86f7747bfa1c4462"
+            }
+        ],
         "equipment": "62bd99befd08e69ad30f651e",
         "stash": "62bd99befd08e69ad30f651c",
         "sortingTable": "62bd99befd08e69ad30f651d",
