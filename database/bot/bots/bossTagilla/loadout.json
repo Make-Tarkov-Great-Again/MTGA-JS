@@ -1,0 +1,40 @@
+{
+    "FaceCover": [
+        "60a7ad3a0c5cb24b0134664a",
+        "60a7ad2a2198820d95707a2e"
+    ],
+    "Headwear": "60a7acf20c5cb24b01346648",
+    "TacticalVest": [
+        "609e860ebd219504d8507525",
+        "61bcc89aef0f505f0c6cd0fc"
+    ],
+    "FirstPrimaryWeapon": {
+        "545x39": {
+            "0": {},
+            "1": {}
+        },
+        "12ga": {
+            "0": {},
+            "1": {},
+            "2": {}
+        }
+    },
+    "Ammo": {
+        "12ga": [
+            "Magnum",
+            "AP-20",
+            "CSP",
+            "SP"
+        ],
+        "545x39": [
+            "PPBS",
+            "BT"
+        ]
+    },
+    "Scabbard": "6087e570b998180e9f76dc24",
+    "SpecialDrops": [
+        "59faff1d86f7746c51718c9c",
+        "544fb45d4bdc2dee738b4568",
+        "5ed515e03a40a50460332579"
+    ]
+}
