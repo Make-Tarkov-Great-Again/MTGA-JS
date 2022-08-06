@@ -16,4 +16,9 @@ module.exports = async function sitRoutes(app, _opts) {
       database.core.serverConfig
     );
   });
+
+  app.get(`/singleplayer/settings/bot/difficulty`, async (request, reply) => {
+    logger.logError(`singleplayer/settings/bot/difficulty not implemented`);
+    return "your mom gay";
+  });
 }
