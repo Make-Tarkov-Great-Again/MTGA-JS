@@ -53,7 +53,7 @@ module.exports = async function launcherRoutes(app, opts) {
     });
 
     app.get('/launcher/server/connect', async (request, reply) => {
-        const data = getEditions(profiles)
+        const data = getEditions(profiles);
         const server = core.serverConfig;
         const connectSchema = fastJson({
             backendURL: 'string',
