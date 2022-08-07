@@ -17,8 +17,11 @@
         "SavageLockTime": 0,
         "LastTimePlayedAsSavage": 0,
         "Settings": {
-            "StandingForKill": -0.1,
-            "AggressorBonus": 0.03
+            "Role": "",
+            "BotDifficulty": "",
+            "Experience": 0,
+            "StandingForKill": 0.00,
+            "AggressorBonus": 0.00
         },
         "NicknameChangeDate": 0,
         "NeedWipeOptions": [],
