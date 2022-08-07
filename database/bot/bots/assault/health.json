@@ -1,0 +1,186 @@
+{
+    "easy": {
+        "BodyParts": {
+            "Head": {
+                "Health": {
+                    "Current": 35,
+                    "Maximum": 35
+                }
+            },
+            "Chest": {
+                "Health": {
+                    "Current": 85,
+                    "Maximum": 85
+                }
+            },
+            "Stomach": {
+                "Health": {
+                    "Current": 70,
+                    "Maximum": 70
+                }
+            },
+            "LeftArm": {
+                "Health": {
+                    "Current": 60,
+                    "Maximum": 60
+                }
+            },
+            "RightArm": {
+                "Health": {
+                    "Current": 60,
+                    "Maximum": 60
+                }
+            },
+            "LeftLeg": {
+                "Health": {
+                    "Current": 65,
+                    "Maximum": 65
+                }
+            },
+            "RightLeg": {
+                "Health": {
+                    "Current": 65,
+                    "Maximum": 65
+                }
+            }
+        }
+    },
+    "normal": {
+        "BodyParts": {
+            "Head": {
+                "Health": {
+                    "Current": 40,
+                    "Maximum": 40
+                }
+            },
+            "Chest": {
+                "Health": {
+                    "Current": 100,
+                    "Maximum": 100
+                }
+            },
+            "Stomach": {
+                "Health": {
+                    "Current": 100,
+                    "Maximum": 100
+                }
+            },
+            "LeftArm": {
+                "Health": {
+                    "Current": 70,
+                    "Maximum": 70
+                }
+            },
+            "RightArm": {
+                "Health": {
+                    "Current": 70,
+                    "Maximum": 70
+                }
+            },
+            "LeftLeg": {
+                "Health": {
+                    "Current": 80,
+                    "Maximum": 80
+                }
+            },
+            "RightLeg": {
+                "Health": {
+                    "Current": 80,
+                    "Maximum": 80
+                }
+            }
+        }
+    },
+    "hard": {
+        "BodyParts": {
+            "Head": {
+                "Health": {
+                    "Current": 40,
+                    "Maximum": 40
+                }
+            },
+            "Chest": {
+                "Health": {
+                    "Current": 150,
+                    "Maximum": 150
+                }
+            },
+            "Stomach": {
+                "Health": {
+                    "Current": 150,
+                    "Maximum": 150
+                }
+            },
+            "LeftArm": {
+                "Health": {
+                    "Current": 100,
+                    "Maximum": 100
+                }
+            },
+            "RightArm": {
+                "Health": {
+                    "Current": 100,
+                    "Maximum": 100
+                }
+            },
+            "LeftLeg": {
+                "Health": {
+                    "Current": 100,
+                    "Maximum": 100
+                }
+            },
+            "RightLeg": {
+                "Health": {
+                    "Current": 100,
+                    "Maximum": 100
+                }
+            }
+        }
+    },
+    "impossible": {
+        "BodyParts": {
+            "Head": {
+                "Health": {
+                    "Current": 40,
+                    "Maximum": 40
+                }
+            },
+            "Chest": {
+                "Health": {
+                    "Current": 150,
+                    "Maximum": 150
+                }
+            },
+            "Stomach": {
+                "Health": {
+                    "Current": 150,
+                    "Maximum": 150
+                }
+            },
+            "LeftArm": {
+                "Health": {
+                    "Current": 100,
+                    "Maximum": 100
+                }
+            },
+            "RightArm": {
+                "Health": {
+                    "Current": 100,
+                    "Maximum": 100
+                }
+            },
+            "LeftLeg": {
+                "Health": {
+                    "Current": 100,
+                    "Maximum": 100
+                }
+            },
+            "RightLeg": {
+                "Health": {
+                    "Current": 100,
+                    "Maximum": 100
+                }
+            }
+        }
+    }
+}
