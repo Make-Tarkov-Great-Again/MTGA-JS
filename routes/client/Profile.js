@@ -209,6 +209,16 @@ module.exports = async function profileRoutes(app, _opts) {
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
+                case "CustomizationBuy":
+                    actionResult = await GameController.clientGameProfileCustomizationBuy(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesBase(actionResult, outputData);
+                    break;
+
+                case "CustomizationWear":
+                    actionResult = await GameController.clientGameProfileCustomizationWear(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesBase(actionResult, outputData);
+                    break;
+
                 // more, MOOOOOOOOOOOOOOORE
                 case "Insure":
                 case "RagFairAddOffer":
@@ -222,10 +232,6 @@ module.exports = async function profileRoutes(app, _opts) {
                 case "Eat":
                 case "Heal":
                 case "RestoreHealth":
-                case "HideoutScavCaseProductionStart":
-                case "HideoutTakeProduction":
-                case "CustomizationBuy":
-                case "CustomizationWear":
                 case "CreateMapMarker":
                 case "QuestComplete":
                 case "QuestHandover":
