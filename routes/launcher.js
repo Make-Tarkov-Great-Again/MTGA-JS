@@ -1,5 +1,3 @@
-'use strict'
-const fastJson = require('fast-json-stringify');
 const {
     account: {
         find,
@@ -55,16 +53,11 @@ module.exports = async function launcherRoutes(app, opts) {
     app.get('/launcher/server/connect', async (request, reply) => {
         const data = getEditions(profiles);
         const server = core.serverConfig;
-        const connectSchema = fastJson({
-            backendURL: 'string',
-            name: 'string',
-            editions: 'array'
-        });
-        const output = connectSchema({
+        const output = {
             backendURL: "https://" + server.ip + ":" + server.port,
             name: server.name,
             editions: data
-        })
+        }
         app.log.info(output);
         return noBody(output);
     });
