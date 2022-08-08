@@ -58,7 +58,6 @@ module.exports = async function profileRoutes(app, _opts) {
         await GameController.clientGameProfileCreate(request, reply);
     });
 
-    
 
     app.post("/client/game/profile/voice/change", async (request, reply) => {
         await GameController.clientGameProfileVoiceChange(request, reply);
