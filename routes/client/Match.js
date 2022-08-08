@@ -3,7 +3,7 @@ const { logger, FastifyResponse } = require("../../utilities");
 module.exports = async function matchRoutes(app, _opts) {
 
     app.post(`/client/match/offline/start`, async (request, reply) => {
-        console.log(request.body)
+        console.log(request.body);
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(null, 0, null)
