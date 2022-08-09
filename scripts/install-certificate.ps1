@@ -9,7 +9,12 @@ foreach($cert in $certs) {
         $certificateToInstall = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2 $certificateToInstallPath
         if($cert.Thumbprint -eq $certificateToInstall.Thumbprint) {
             if(Test-Certificate -AllowUntrustedRoot -Cert $certPath) {
-                $found = $true
+                if((get-date $cert.NotAfter) -lt (Get-Date)) {
+                    $msgBoxInput =  [System.Windows.Forms.MessageBox]::Show("The certificate has to be renewed, after closing this popup box, you will be askted to remove the old certificate. Please press yes so a new one can be installed.","Certificate invalid.",0)
+                    Remove-Item -Path $certPath
+                } else {
+                    $found = $true
+                }
             } else {
                 $msgBoxInput =  [System.Windows.Forms.MessageBox]::Show("The certificate has to be renewed, after closing this popup box, you will be askted to remove the old certificate. Please press yes so a new one can be installed.","Certificate invalid.",0)
                 Remove-Item -Path $certPath
