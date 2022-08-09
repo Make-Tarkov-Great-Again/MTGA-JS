@@ -148,7 +148,7 @@ module.exports = {
 
 app.removeContentTypeParser("application/json");
 app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (req, body, done) {
-    if (req.headers['user-agent'].includes('Unity')) {
+    if (typeof req.headers['user-agent'].includes('Unity') !== 'undefined') {
         try {
             zlib.inflate(body, function (err, data) {
                 if (!err && data !== undefined) {
