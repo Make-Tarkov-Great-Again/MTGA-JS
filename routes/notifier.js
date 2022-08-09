@@ -22,9 +22,9 @@ module.exports = async function notifierRoutes(app, opt) {
 
     app.post("/:sessionID", async (_request, reply) => {
         logger.logError("NOTIFIER GET HIT");
-            return FastifyResponse.zlibJsonReply(
-                reply,
-                FastifyResponse.applyBody("ok")
+        return FastifyResponse.zlibJsonReply(
+            reply,
+            FastifyResponse.applyBody("ok")
         );
     });
 

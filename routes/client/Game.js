@@ -22,7 +22,7 @@ module.exports = async function gameRoutes(app, _opts) {
 
 
     app.post('/client/game/bot/generate', async (request, reply) => {
-        logger.logDebug("Generating bot profiles not implemented yet - sending empty []");
+        //logger.logDebug("Generating bot profiles not implemented yet - sending empty []");
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(await Bot.generateBots(request, reply))

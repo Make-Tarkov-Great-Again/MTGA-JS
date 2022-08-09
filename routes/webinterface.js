@@ -2,7 +2,7 @@ const { webinterface } = require('../app');
 const { AccountController, WeblauncherController } = require('../lib/controllers');
 
 module.exports = async function webinterfaceRoutes(app, opts) {
-    
+
     app.get(`/`, async (request, reply) => {
         return AccountController.home(request, reply);
     });

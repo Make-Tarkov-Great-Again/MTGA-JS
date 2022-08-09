@@ -1,4 +1,4 @@
-const {  LocationController } = require("../../lib/controllers");
+const { LocationController } = require("../../lib/controllers");
 
 
 module.exports = async function locationRoutes(app, _opts) {
