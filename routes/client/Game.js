@@ -1,4 +1,5 @@
 const { GameController } = require("../../lib/controllers");
+const { Bot } = require("../../lib/models/Bot");
 const { logger, FastifyResponse } = require("../../utilities");
 
 module.exports = async function gameRoutes(app, _opts) {
@@ -24,7 +25,7 @@ module.exports = async function gameRoutes(app, _opts) {
         logger.logDebug("Generating bot profiles not implemented yet - sending empty []");
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody([])
+            FastifyResponse.applyBody(await Bot.generateBots(request, reply))
         );
     });
 
