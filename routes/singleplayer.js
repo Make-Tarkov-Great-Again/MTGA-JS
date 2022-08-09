@@ -1,26 +1,29 @@
 const { logger, FastifyResponse } = require("../utilities");
 
 module.exports = async function singleplayerRoutes(app, _opts) {
-    
-    app.get(`/singleplayer/settings/bot/difficulty/:botInfo`, async (request, reply) => {
-        const { database } = require('../../app')
 
-        console.log(request.params['botInfo'])
+    app.get(`/singleplayer/settings/bot/difficulty/*`, async (request, reply) => {
+        const { database } = require("../app");
+        const keys = request.params['*'].split("/");
 
-        const keys = request.url.replace("/singleplayer/settings/bot/difficulty/", "").split("/");
-
-        if (database.bot.bots.includes(keys[0])) {
-            if (database.bots.bots[keys[0]].difficulties.includes(keys[1])) {
+        if (keys[0] in database.bot.bots) {
+            if (keys[1] in database.bot.bots[keys[0]].difficulty) {
                 return FastifyResponse.zlibJsonReply(
                     reply,
-                    FastifyResponse.applyBody(database.bots.bots[keys[0]].difficulties[keys[1]])
+                    FastifyResponse.applyBody(database.bot.bots[keys[0]].difficulty[keys[1]])
                 );
             }
+        } else {
+            logger.logError(`Bot: ${keys[0]} does not have a difficulty: ${keys[1]}`);
+            return FastifyResponse.zlibJsonReply(
+                reply,
+                FastifyResponse.applyBody(database.bot.core)
+            );
         }
     });
 
-    app.get(`/singleplayer/settings/raid/menu`, async (request, reply) => {
-        const { database } = require('../../app')
+    app.get(`/singleplayer/settings/raid/menu`, async (_request, reply) => {
+        const { database } = require("../app");
 
         return FastifyResponse.zlibJsonReply(
             reply,

@@ -29,4 +29,7 @@ module.exports = async function router(app, _opts) {
 
     /* Register the routes for SIT */
     await app.register(require("./sit"));
+
+    /* Register the routes for the singleplayer */
+    await app.register(require("./singleplayer"));
 };
