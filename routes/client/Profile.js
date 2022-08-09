@@ -1,5 +1,5 @@
 const { GameController } = require("../../lib/controllers");
-const {  Profile } = require("../../lib/models/Profile");
+const { Profile } = require("../../lib/models/Profile");
 const { Trader } = require("../../lib/models/Trader");
 const { logger, FastifyResponse } = require("../../utilities");
 
