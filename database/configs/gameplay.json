@@ -38,8 +38,8 @@
         "RedeemTime": 72
     },
     "defaultRaidSettings": {
-        "aiAmount": "High",
-        "aiDifficulty": "Medium",
+        "aiAmount": "AsOnline",
+        "aiDifficulty": "AsOnline",
         "bossEnabled": true,
         "scavWars": false,
         "taggedAndCursed": false
