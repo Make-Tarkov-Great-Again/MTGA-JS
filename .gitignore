@@ -55,6 +55,7 @@ jspm_packages
 *clinic*
 *flamegraph*
 package-lock.json
+TextAsset
 user/profiles/*
 user/certs/*
 ragfair.json
