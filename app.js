@@ -24,7 +24,7 @@ if (process.platform === 'win32' || process.platform === 'win64') {
 
     const clearCertificateScriptPath = `${__dirname}/scripts/clear-certificate.ps1`;
     const execSync = require('child_process').execSync;
-    let code = execSync(`powershell.exe -File "${clearCertificateScriptPath}"`);
+    let code = execSync(`powershell.exe -ExecutionPolicy Bypass -File "${clearCertificateScriptPath}"`);
     
     cert = certificate.generate(database.core.serverConfig.ip, database.core.serverConfig.hostname, 3);
 
