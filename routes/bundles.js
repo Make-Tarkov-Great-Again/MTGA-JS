@@ -6,8 +6,9 @@ const { logger } = require("../utilities");
 
 
 module.exports = async function bundlesRoutes(app, _opts) {
-  logger.logWarning("Bundles not implemented yet")
-  app.get(`/getBundleList`, async (_request, reply) => {
+  app.get(`/getBundleList`, async (request, reply) => {
+    console.log(request.body);
+    logger.logWarning("Bundles not implemented yet")
     await BundlesController.getBundles(reply);
   })
 }
