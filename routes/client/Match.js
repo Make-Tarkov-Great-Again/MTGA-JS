@@ -19,6 +19,7 @@ module.exports = async function matchRoutes(app, _opts) {
     });
 
     app.post("/client/match/available", async (request, reply) => {
+        console.log(request.body);
         logger.logDebug("Match available not implemented yet");
         return FastifyResponse.zlibJsonReply(
             reply,
@@ -26,7 +27,8 @@ module.exports = async function matchRoutes(app, _opts) {
         );
     });
 
-    app.post(`/client/match/join`, async (_request, reply) => {
+    app.post(`/client/match/join`, async (request, reply) => {
+        console.log(request.body);
         logger.logDebug("Match join not implemented yet");
         return FastifyResponse.zlibJsonReply(
             reply,

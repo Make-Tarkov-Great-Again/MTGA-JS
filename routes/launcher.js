@@ -16,41 +16,41 @@ const {
 } = require('../../app');
 const { noBody } = require('../utilities');
 
-module.exports = async function launcherRoutes(app, opts) {
-    app.get('/launcher/profile/change/email', async (request, reply) => {
+module.exports = async function launcherRoutes(app, _opts) {
+    app.get('/launcher/profile/change/email', async (request, _reply) => {
         const output = await changeEmail(request.body);
         return (output === "" ? "FAILED" : "OK");
     });
 
-    app.get('/launcher/profile/change/password', async (request, reply) => {
+    app.get('/launcher/profile/change/password', async (request, _reply) => {
         const output = await changePassword(request.body);
         return (output === "" ? "FAILED" : "OK");
     });
 
-    app.post('/launcher/profile/wipe', async (request, reply) => {
+    app.post('/launcher/profile/wipe', async (request, _reply) => {
         const output = await wipe(request.body);
         return (output === "" ? "FAILED" : "OK");
     });
 
-    app.post('/launcher/profile/register', async (request, reply) => {
+    app.post('/launcher/profile/register', async (request, _reply) => {
         const output = await register(request.body);
         app.log.info(output);
         return (output === "" ? "FAILED" : output);
     });
 
-    app.post('/launcher/profile/remove', async (request, reply) => {
+    app.post('/launcher/profile/remove', async (request, _reply) => {
         const output = await remove(request.body)
         return (output === "" ? "FAILED" : "OK");
     });
 
-    app.get('/launcher/profile/get', async (request, reply) => {
+    app.get('/launcher/profile/get', async (request, _reply) => {
         const serverConfig = database.core.serverConfig
         const accountID = await reloadAccountByLogin(request.body);
         const output = find(accountID);
         return noBody(output["server"] = serverConfig.name);
     });
 
-    app.get('/launcher/server/connect', async (request, reply) => {
+    app.get('/launcher/server/connect', async (_request, _reply) => {
         const data = getEditions(profiles);
         const server = core.serverConfig;
         const output = {
@@ -62,7 +62,7 @@ module.exports = async function launcherRoutes(app, opts) {
         return noBody(output);
     });
 
-    app.post('/launcher/profile/login', async (request, reply) => {
+    app.post('/launcher/profile/login', async (request, _reply) => {
         return noBody(reloadAccountByLogin(request.body));
     });
 }

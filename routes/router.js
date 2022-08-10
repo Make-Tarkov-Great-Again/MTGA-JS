@@ -27,6 +27,9 @@ module.exports = async function router(app, _opts) {
     /* Register the routes for bundles?????? */
     await app.register(require("./bundles"));
 
+    /* Register the routes for raids */
+    await app.register(require("./raid"));
+
     /* Register the routes for SIT */
     await app.register(require("./sit"));
 
