@@ -53,7 +53,7 @@
         "allPocketsHaveSpecialSlots": true
     },
     "trading": {
-        "refreshTimeInMinutes": 5,
+        "refreshTimeInMinutes": 2,
         "drip": true
     },
     "location": {
