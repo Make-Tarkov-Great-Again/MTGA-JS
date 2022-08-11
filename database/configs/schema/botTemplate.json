@@ -26,6 +26,7 @@
         "NicknameChangeDate": 0,
         "NeedWipeOptions": [],
         "lastCompletedWipe": null,
+        "lastCompletedEvent": null,
         "BannedState": false,
         "BannedUntil": 0,
         "IsStreamerModeAvailable": false
@@ -136,7 +137,24 @@
         },
         "OverallCounters": {
             "Items": []
-        }
+        },
+        "SessionExperienceMult": 0,
+        "ExperienceBonusMult": 0,
+        "TotalSessionExperience": 0,
+        "LastSessionDate": 0,
+        "Aggressor": null,
+        "DroppedItems": [],
+        "FoundInRaidItems": [],
+        "Victims": [],
+        "CarriedQuestItems": [],
+        "DamageHistory": {
+            "LethalDamagePart": "Head",
+            "LethalDamage": null,
+            "BodyParts": []
+        },
+        "LastPlayerState": null,
+        "TotalInGameTime": 0,
+        "SurvivorClass": "Unknown"
     },
     "Encyclopedia": null,
     "ConditionCounters": {
@@ -144,9 +162,6 @@
     },
     "BackendCounters": {},
     "InsuredItems": [],
-    "Hideout": {
-        "Production": {},
-        "Areas": []
-    },
+    "Hideout": null,
     "Bonuses": []
 }
