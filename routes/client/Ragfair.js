@@ -1,4 +1,4 @@
-const { Ragfair } = require("../../lib/models/Ragfair");
+const { database } = require("../../app");
 const { FastifyResponse } = require("../../utilities");
 
 
@@ -8,7 +8,7 @@ module.exports = async function ragfairRoutes(app, _opts) {
         console.log(request.body);
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody(await Ragfair.generateOffersBasedOnRequest(request.body))
+            FastifyResponse.applyBody(await database.ragfair.generateOffersBasedOnRequest(request.body))
         );
     });
 };
