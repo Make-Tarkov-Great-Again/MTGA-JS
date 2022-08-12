@@ -5,7 +5,7 @@ module.exports = async function serverRoutes(app, _opts) {
 
         writeFile("./saveInformation.json", stringify(request.body));
         logger.logDebug("/raid/profile/save not implemented yet");
-        await FastifyResponse.zlibJsonReply(
+        return FastifyResponse.zlibJsonReply(
             reply,
             null
         );
