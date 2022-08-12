@@ -3,11 +3,11 @@ const { TradingController } = require("../../lib/controllers");
 module.exports = async function tradingRoutes(app, _opts) {
 
     app.post(`/client/trading/api/getTradersList`, async (request, reply) => {
-        await TradingController.clientTradingApiGetTradersList(request, reply);
+        await TradingController.clientTradingApiGetTradersInfo(request, reply);
     });
 
     app.post(`/client/trading/api/traderSettings`, async (request, reply) => {
-        await TradingController.clientTradingApiTraderSettings(request, reply);
+        await TradingController.clientTradingApiGetTradersInfo(request, reply);
     });
 
     app.post(`/client/trading/customization/storage`, async (request, reply) => {
