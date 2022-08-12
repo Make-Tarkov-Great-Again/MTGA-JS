@@ -50,6 +50,7 @@
     },
     "customization": {
         "allHeadsOnCharacterCreation": true,
+        "allVoicesOnCharacterCreation": true,
         "allPocketsHaveSpecialSlots": true
     },
     "trading": {
