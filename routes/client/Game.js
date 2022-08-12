@@ -23,7 +23,7 @@ module.exports = async function gameRoutes(app, _opts) {
 
     app.post('/client/game/bot/generate', async (request, reply) => {
         const bots = await Bot.generateBots(request, reply)
-        writeFile("./generatedBots.json", stringify(bots));
+        //writeFile("./generatedBots.json", stringify(FastifyResponse.applyBody(bots)));
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(bots)
