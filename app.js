@@ -16,7 +16,7 @@ module.exports = {
 const { DatabaseLoader } = require("./lib/engine/DatabaseLoader");
 const { logger } = require("./utilities");
 
-DatabaseLoader.loadDatabase();
+DatabaseLoader.setDatabase();
 let cert;
 if (process.platform === 'win32' || process.platform === 'win64') {
     
@@ -102,7 +102,6 @@ const app = require('fastify')({
 
 module.exports = {
     app,
-    database,
     webinterface
 };
 

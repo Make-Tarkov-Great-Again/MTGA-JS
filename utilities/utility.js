@@ -62,7 +62,7 @@ const getServerUptimeInSeconds = async () => {
 /**
  * @returns Current Date timestamp in seconds
  */
-const getCurrentTimestamp = () => {
+const getCurrentTimestamp = async () => {
     return ~~(new Date().getTime() / 1000);
 }
 /**
@@ -173,8 +173,6 @@ const payTrade = async (playerInventory, body, currency = null) => {
                 }
             }
         }
-
-        console.log()
     } else {
         logger.logDebug("That's barter, barter not done yet, pay me Leffe and I'll do it");
     }
