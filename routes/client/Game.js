@@ -20,10 +20,8 @@ module.exports = async function gameRoutes(app, _opts) {
         await GameController.clientGameVersionValidate(request, reply);
     });
 
-
     app.post('/client/game/bot/generate', async (request, reply) => {
         const bots = await Bot.generateBots(request, reply)
-        //writeFile("./generatedBots.json", stringify(FastifyResponse.applyBody(bots)));
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(bots)
@@ -36,4 +34,5 @@ module.exports = async function gameRoutes(app, _opts) {
             FastifyResponse.applyBody({ status: "ok" })
         );
     });
+    
 };

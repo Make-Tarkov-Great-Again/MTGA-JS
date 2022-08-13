@@ -17,4 +17,5 @@ module.exports = async function hideoutRoutes(app, _opts) {
     app.post(`/client/hideout/settings`, async (request, reply) => {
         await ClientController.clientHideoutSettings(request, reply);
     });
+    
 };

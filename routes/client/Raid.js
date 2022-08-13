@@ -27,7 +27,6 @@ module.exports = async function raidRoutes(app, _opts) {
         return stringify({});
     });
 
-
     app.post(`/client/raid/person/killed`, async (request, _reply) => {
         console.log(request.body);
         const { database } = require("../../app");
@@ -37,7 +36,6 @@ module.exports = async function raidRoutes(app, _opts) {
             return stringify(showMessage)
         } else return stringify(false);
     });
-
 
     app.post(`/client/raid/createFriendlyAI`, async (request, _reply) => {
         console.log(request.body);
@@ -58,4 +56,5 @@ module.exports = async function raidRoutes(app, _opts) {
         console.log(request.body);
         return stringify("")
     });
+    
 }

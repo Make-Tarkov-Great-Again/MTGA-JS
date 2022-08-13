@@ -25,4 +25,5 @@ module.exports = async function tradingRoutes(app, _opts) {
     app.post(`/client/trading/api/getUserAssortPrice/trader/:traderId`, async (request, reply) => {
         await TradingController.getUserAssortPrice(request, reply);
     });
+    
 }
