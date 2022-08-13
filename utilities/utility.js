@@ -3,16 +3,6 @@ const ObjectID = require("bson-objectid");
 const fs = require('fs');
 
 
-/** Generate Unique ID used in the server by using nanoid
- * @param {string} prefix
- * @returns Unique ID as string
- */
-const generateUniqueId = async (prefix = "", idLength = 21) => {
-    const { customAlphabet } = await import('nanoid');
-    const nanoid = customAlphabet('abcdefghijklmnopqrstuvwxyz123456789ABCDEFGHYJKLMNOPQRSTUVWXYZ', idLength);
-    return `${prefix}${nanoid()}`;
-}
-
 const generateMongoID = async () => {
     return ObjectID.createFromTime(process.hrtime.bigint()).toHexString();
 }
