@@ -187,7 +187,6 @@ const generateRandomInt = async (min, max) => {
 
 
 module.exports = {
-    generateUniqueId,
     makeSign,
     getCurrentTimestamp,
     getServerUptimeInSeconds,
