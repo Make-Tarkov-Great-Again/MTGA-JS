@@ -68,7 +68,7 @@ const valueBetween = (value, minInput, maxInput, minOutput, maxOutput) => {
  * @returns rolled value
  */
 const getRandomFromArray = async (array) => {
-    return array[await this.getRandomInt(0, array.length - 1)];
+    return array[await getRandomInt(0, array.length - 1)];
 }
 module.exports = {
     clamp,
