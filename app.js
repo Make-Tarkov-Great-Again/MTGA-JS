@@ -102,6 +102,7 @@ const app = require('fastify')({
 
 module.exports = {
     app,
+    database,
     webinterface
 };
 
