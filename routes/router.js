@@ -1,38 +1,42 @@
 module.exports = async function router(app, _opts) {
-    /* Register the routes for the webinterface */
-    await app.register(require("./webinterface"));
 
-    /* Register the routes for the client */
-    await app.register(require("./client/Account"));
-    await app.register(require("./client/Client"));
-    await app.register(require("./client/Friend"));
-    await app.register(require("./client/Game"));
-    await app.register(require("./client/Handbook"));
-    await app.register(require("./client/Hideout"));
-    await app.register(require("./client/Location"));
-    await app.register(require("./client/Mail"));
-    await app.register(require("./client/Match"));
-    await app.register(require("./client/Mode"));
-    await app.register(require("./client/Profile"));
-    await app.register(require("./client/Quest"));
-    await app.register(require("./client/Ragfair"));
-    await app.register(require("./client/Raid"));
-    await app.register(require("./client/Trading"));
-    /* Register the routes for the tarkov notifier */
-    await app.register(require("./notifier"));
+    await Promise.allSettled([
+        /* Register the routes for the webinterface */
+        app.register(require("./webinterface")),
 
-    /* Register the routes for files */
-    await app.register(require("./resources"));
+        /* Register the routes for the client */
+        app.register(require("./client/Account")),
+        app.register(require("./client/Client")),
+        app.register(require("./client/Friend")),
+        app.register(require("./client/Game")),
+        app.register(require("./client/Handbook")),
+        app.register(require("./client/Hideout")),
+        app.register(require("./client/Location")),
+        app.register(require("./client/Mail")),
+        app.register(require("./client/Match")),
+        app.register(require("./client/Mode")),
+        app.register(require("./client/Profile")),
+        app.register(require("./client/Quest")),
+        app.register(require("./client/Ragfair")),
+        app.register(require("./client/Raid")),
+        app.register(require("./client/Trading")),
+        /* Register the routes for the tarkov notifier */
+        app.register(require("./notifier")),
 
-    /* Register the routes for bundles?????? */
-    await app.register(require("./bundles"));
+        /* Register the routes for files */
+        app.register(require("./resources")),
 
-    /* Register the routes for raids */
-    await app.register(require("./raid"));
+        /* Register the routes for bundles?????? */
+        app.register(require("./bundles")),
 
-    /* Register the routes for SIT */
-    await app.register(require("./sit"));
+        /* Register the routes for raids */
+        app.register(require("./raid")),
 
-    /* Register the routes for the singleplayer */
-    await app.register(require("./singleplayer"));
+        /* Register the routes for SIT */
+        app.register(require("./sit")),
+
+        /* Register the routes for the singleplayer */
+        app.register(require("./singleplayer")),
+    ]);
+
 };

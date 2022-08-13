@@ -38,4 +38,5 @@ module.exports = async function notifierRoutes(app, opt) {
             connection.socket.send('NOTIFIER upgrade HIT')
         })
     });
+    
 };
