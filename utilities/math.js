@@ -10,7 +10,7 @@ const clamp = (value, min, max) => {
     return Math.min(Math.max(value, min), max);
 }
 
-const getRandomInt = (min = 0, max = 100) => {
+const getRandomInt = async (min = 0, max = 100) => {
     min = ~~(min);
     max = ~~(max);
     return (max > min) ? ~~(Math.random() * (max - min + 1) + min) : min;
@@ -53,7 +53,6 @@ const getRandomIntEx = (max) => {
  * @param {number} max 
  * @returns 
  */
-
 const getRandomIntInc = (min, max) => {
     min = ~~(min);
     max = ~~(max);
@@ -68,8 +67,8 @@ const valueBetween = (value, minInput, maxInput, minOutput, maxOutput) => {
  * @param {any[]} array 
  * @returns rolled value
  */
-const getRandomFromArray = (array) => {
-    return array[this.getRandomInt(0, array.length - 1)];
+const getRandomFromArray = async (array) => {
+    return array[await this.getRandomInt(0, array.length - 1)];
 }
 module.exports = {
     clamp,
