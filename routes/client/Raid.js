@@ -4,7 +4,6 @@ const { Profile } = require("../../lib/models/Profile");
 module.exports = async function raidRoutes(app, _opts) {
 
     app.post(`/client/raid/person/killed/showMessage`, async (request, _reply) => {
-        console.log(request.body);
         const { database } = require("../../app");
         const sessionID = await FastifyResponse.getSessionID(request)
 
@@ -28,7 +27,6 @@ module.exports = async function raidRoutes(app, _opts) {
     });
 
     app.post(`/client/raid/person/killed`, async (request, _reply) => {
-        console.log(request.body);
         const { database } = require("../../app");
         const showMessage = database.core.gameplay.inRaid.showDeathMessage;
 
@@ -38,7 +36,6 @@ module.exports = async function raidRoutes(app, _opts) {
     });
 
     app.post(`/client/raid/createFriendlyAI`, async (request, _reply) => {
-        console.log(request.body);
         const { database } = require("../../app");
         const createFriendlyAI = database.core.gameplay.inRaid.createFriendlyAI;
 
@@ -48,12 +45,10 @@ module.exports = async function raidRoutes(app, _opts) {
     });
 
     app.post(`/client/raid/bots/getNewProfile`, async (request, _reply) => {
-        console.log(request.body);
         return stringify({});
     });
 
     app.post(`/client/raid/person/lootingContainer`, async (request, _reply) => {
-        console.log(request.body);
         return stringify("")
     });
     
