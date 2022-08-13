@@ -210,5 +210,338 @@
 			"5f68c4a7c174a17c0f4c8945",
 			"5f68c4c217d579077152a252"
 		]
+	},
+	"scav": {
+		"Voice": {
+			"5fc613c80b735e7b024c76e2": "Scav_1",
+			"5fc613e10b735e7b024c76e3": "Scav_2",
+			"5fc614130b735e7b024c76e4": "Scav_3",
+			"5fc614290b735e7b024c76e5": "Scav_4",
+			"5fc614390b735e7b024c76e6": "Scav_5",
+			"5fc6144b0b735e7b024c76e7": "Scav_6"
+		},
+		"Body": [
+			"5cc2e59214c02e000f16684e",
+			"5df8a10486f77412672a1e3a",
+			"5e9da1d086f774054a667134",
+			"5fd22d311add82653b5a704c",
+			"5d28ad6986f77429275dba22",
+			"5cde9f337d6c8b0474535da8",
+			"5fd1eb3fbe3b7107d66cb645",
+			"5e4bb3ee86f77406975c934e",
+			"5d28ad7286f7742926686182",
+			"619238266c614e6d15792bca",
+			"618d1af10a5a59657e5f56f3"
+		],
+		"Head": [
+			"5cc2e4d014c02e000d0115f8",
+			"5cde9ff17d6c8b0474535daa",
+			"5f68c4a7c174a17c0f4c8945",
+			"5f68c4c217d579077152a252",
+			"5d28afe786f774292668618d"
+		],
+		"Hands": [
+			"5cc2e68f14c02e28b47de290",
+			"5df8eac086f77412640e2ea7",
+			"5e9da2dd86f774054e7d0f63",
+			"5fd7901bdd870108a754c0e6",
+			"5fd78fe9e3bfcf6cab4c9f54",
+			"5e4bb49586f77406a313ec5a",
+			"618cf9540a5a59657e5f5677",
+			"6197aca964ae5436d76c1f98"
+		],
+		"Feet": [
+			"5cde9fb87d6c8b0474535da9",
+			"5d28af3486f774292364a6e7",
+			"5cc2e5d014c02e15d53d9c03",
+			"5f5e41366760b4138443b343",
+			"5df8a15186f77412640e2e6a",
+			"5f5e41576760b4138443b344",
+			"5f5e410c6bdad616ad46d60b",
+			"61922589bb2cea6f7a22d964",
+			"6193be546e5968395b260157"
+		]
+	},
+	"exUsec": {
+		"Voice": {
+			"5fc1223595572123ae7384a3": "Usec_1",
+			"5fc614f40b735e7b024c76e9": "Usec_2",
+			"5fc615110b735e7b024c76ea": "Usec_3",
+			"6284d6a28e4092597733b7a6": "Usec_4",
+			"6284d6ab8e4092597733b7a7": "Usec_5"
+		},
+		"Body": [
+			"618109c96d7ca35d076b3363",
+			"5cde95d97d6c8b647a3769b0",
+			"5d1f56c686f7744bcd13459c",
+			"5d4da0cb86f77450fe0a6629",
+			"5d1f56e486f7744bce0ee9ed",
+			"5e9da17386f774054b6f79a3",
+			"5d1f56f186f7744bcb0acd1a",
+			"5d1f56ff86f7743f8362bcd7",
+			"5d1f56a686f7744bce0ee9eb",
+			"5e4bb35286f77406a511c9bc",
+			"5f5e4075df4f3100376a8138",
+			"5fd3e9f71b735718c25cd9f8",
+			"5fcf63da5c287f01f22bf245",
+			"6033a35f80ae5e2f970ba6bb"
+		],
+		"Head": [
+			"5fdb5950f5264a66150d1c6e",
+			"5cde96047d6c8b20b577f016",
+			"60a6aaad42fd2735e4589978",
+			"60a6aa8fd559ae040d0d951f"
+		],
+		"Hands": "5cde95fa7d6c8b04737c2d13",
+		"Feet": [
+			"617c02e24013b06b0b78df80",
+			"5cde95ef7d6c8b04713c4f2d",
+			"5e4bb3b586f77406812bd579",
+			"5e9dcadd86f7743e20652f23",
+			"5d1f591186f7744bcc048755",
+			"5d1f592286f7743f8362bcdb",
+			"5d1f590486f7744bcd13459e",
+			"5d1f58ed86f7744bcb0acd1c",
+			"5d1f593286f7743014162044",
+			"5df8a08886f7740bfe6df775",
+			"5f5e40a06760b4138443b341",
+			"5fcf940bce1ba36a513bb9cc",
+			"6033a3fee29c9f6c9b14e74e"
+		]
+	},
+	"bossBully": {
+		"Voice": "BossBully",
+		"Body": "5d28adcb86f77429242fc893",
+		"Head": "5d28b01486f77429242fc898",
+		"Hands": "5cc2e68f14c02e28b47de290",
+		"Feet": "5d28b3a186f7747f7e69ab8c"
+	},
+	"followerBully": {
+		"Voice": {
+			"5fc613c80b735e7b024c76e2": "Scav_1",
+			"5fc613e10b735e7b024c76e3": "Scav_2",
+			"5fc614130b735e7b024c76e4": "Scav_3",
+			"5fc614290b735e7b024c76e5": "Scav_4",
+			"5fc614390b735e7b024c76e6": "Scav_5",
+			"5fc6144b0b735e7b024c76e7": "Scav_6"
+		},
+		"Body": [
+			"5d28ae2986f7742926686185",
+			"5d28adfd86f774292364a6e5"
+		],
+		"Head": [
+			"5cc2e4d014c02e000d0115f8",
+			"5d28afe786f774292668618d",
+			"5f68c4c217d579077152a252",
+			"5f68c4a7c174a17c0f4c8945",
+			"5cde9ff17d6c8b0474535daa"
+		],
+		"Hands": "5cc2e68f14c02e28b47de290",
+		"Feet": "5d28af5386f774292364a6e8"
+	},
+	"bossGluhar": {
+		"Voice": "BossGluhar",
+		"Body": "5d5e7dd786f7744a7a274322",
+		"Head": "5d5e805d86f77439eb4c2d0e",
+		"Hands": "5cc2e68f14c02e28b47de290",
+		"Feet": "5d5e7f2a86f77427997cfb80"
+	},
+	"followerGluhar": {
+		"Voice": {
+			"5fc613c80b735e7b024c76e2": "Scav_1",
+			"5fc613e10b735e7b024c76e3": "Scav_2",
+			"5fc614130b735e7b024c76e4": "Scav_3",
+			"5fc614290b735e7b024c76e5": "Scav_4",
+			"5fc614390b735e7b024c76e6": "Scav_5",
+			"5fc6144b0b735e7b024c76e7": "Scav_6"
+		},
+		"Body": [
+			"5d5e7e5d86f774279b4f4b01",
+			"5d28ae2986f7742926686185",
+			"5d5e7e4a86f774279a21cc0d"
+		],
+		"Head": [
+			"5f68c4c217d579077152a252",
+			"5cc2e4d014c02e000d0115f8",
+			"5f68c4a7c174a17c0f4c8945",
+			"5cde9ff17d6c8b0474535daa",
+			"5d28afe786f774292668618d"
+		],
+		"Hands": "5cc2e68f14c02e28b47de290",
+		"Feet": [
+			"5d5e7f8986f7742798716582",
+			"5d28af3486f774292364a6e7",
+			"5d28af5386f774292364a6e8"
+		]
+	},
+	"bossKilla": {
+		"Voice": {
+			"5fc613c80b735e7b024c76e2": "Scav_1",
+			"5fc613e10b735e7b024c76e3": "Scav_2",
+			"5fc614130b735e7b024c76e4": "Scav_3",
+			"5fc614290b735e7b024c76e5": "Scav_4",
+			"5fc614390b735e7b024c76e6": "Scav_5",
+			"5fc6144b0b735e7b024c76e7": "Scav_6"
+		},
+		"Body": "5cdea33e7d6c8b0474535dac",
+		"Head": "5d28b03e86f7747f7e69ab8a",
+		"Hands": "5cc2e68f14c02e28b47de290",
+		"Feet": "5cdea3c47d6c8b0475341734"
+	},
+	"bossKnight": {
+		"Voice": {
+			"5fc1223595572123ae7384a3": "Usec_1",
+			"5fc614f40b735e7b024c76e9": "Usec_2",
+			"5fc615110b735e7b024c76ea": "Usec_3"
+		},
+		"Body": "628796f2af0a053a6672c29a",
+		"Head": "62875ad50828252c7a28b95c",
+		"Hands": "5cc2e68f14c02e28b47de290",
+		"Feet": "628771f70828252c7a28b961"
+	},
+	"followerBigPipe": {
+		"Voice": {
+			"5fc1223595572123ae7384a3": "Usec_1",
+			"5fc614f40b735e7b024c76e9": "Usec_2",
+			"5fc615110b735e7b024c76ea": "Usec_3"
+		},
+		"Body": "6287b16b05846043f15a790d",
+		"Head": "6287b0d239d8207cb27d66c7",
+		"Hands": "5cc2e68f14c02e28b47de290",
+		"Feet": "6287b14b66bb7d4a3c32bc94"
+	},
+	"followerBirdEye": {
+		"Voice": "SectantPriest",
+		"Body": "628a6801805c5b6c100cc200",
+		"Head": "628b57d800f171376e7b2634",
+		"Hands": "5cc2e68f14c02e28b47de290",
+		"Feet": "628a4645c9327c7587388849"
+	},
+	"bossKojaniy": {
+		"Voice": {
+			"5fc613c80b735e7b024c76e2": "Scav_1",
+			"5fc613e10b735e7b024c76e3": "Scav_2",
+			"5fc614130b735e7b024c76e4": "Scav_3",
+			"5fc614290b735e7b024c76e5": "Scav_4",
+			"5fc614390b735e7b024c76e6": "Scav_5",
+			"5fc6144b0b735e7b024c76e7": "Scav_6"
+		},
+		"Body": "5d5e7c9186f774393602d6f9",
+		"Head": "5d5f8ba486f77431254e7fd2",
+		"Hands": "5cc2e68f14c02e28b47de290",
+		"Feet": "5d5e7f3c86f7742797262063"
+	},
+	"followerKojaniy": {
+		"Voice": {
+			"5fc613c80b735e7b024c76e2": "Scav_1",
+			"5fc613e10b735e7b024c76e3": "Scav_2",
+			"5fc614130b735e7b024c76e4": "Scav_3",
+			"5fc614290b735e7b024c76e5": "Scav_4",
+			"5fc614390b735e7b024c76e6": "Scav_5",
+			"5fc6144b0b735e7b024c76e7": "Scav_6"
+		},
+		"Body": [
+			"5d5e7e8386f774393602d6fa",
+			"5d5e7e7586f77427997cfb7f",
+			"5fd1eb3fbe3b7107d66cb645"
+		],
+		"Head": [
+			"5f68c4a7c174a17c0f4c8945",
+			"5cc2e4d014c02e000d0115f8",
+			"5f68c4c217d579077152a252",
+			"5cde9ff17d6c8b0474535daa",
+			"5d28afe786f774292668618d"
+		],
+		"Hands": [
+			"5cc2e68f14c02e28b47de290",
+			"5fd78fe9e3bfcf6cab4c9f54"
+		],
+		"Feet": [
+			"5d5e7f4986f7746956659f8a",
+			"5cc2e5d014c02e15d53d9c03",
+			"5cde9fb87d6c8b0474535da9",
+			"5f5e41366760b4138443b343"
+		]
+	},
+	"bossSanitar": {
+		"Voice": "BossSanitar",
+		"Body": "5e9975c486f774382b6320cb",
+		"Head": "5e99767c86f7741ac7399393",
+		"Hands": "5cc2e68f14c02e28b47de290",
+		"Feet": "5e99762586f77466320ff9a9"
+	},
+	"followerSanitar": {
+		"Voice": {
+			"5fc613c80b735e7b024c76e2": "Scav_1",
+			"5fc613e10b735e7b024c76e3": "Scav_2",
+			"5fc614130b735e7b024c76e4": "Scav_3",
+			"5fc614290b735e7b024c76e5": "Scav_4",
+			"5fc614390b735e7b024c76e6": "Scav_5",
+			"5fc6144b0b735e7b024c76e7": "Scav_6"
+		},
+		"Body": "5df8a10486f77412672a1e3a",
+		"Head": [
+			"5d28afe786f774292668618d",
+			"5cc2e4d014c02e000d0115f8",
+			"5f68c4c217d579077152a252",
+			"5cde9ff17d6c8b0474535daa",
+			"5f68c4a7c174a17c0f4c8945"
+		],
+		"Hands": "5df8eac086f77412640e2ea7",
+		"Feet": [
+			"5df8a15186f77412640e2e6a",
+			"5f5e410c6bdad616ad46d60b",
+			"5f5e41366760b4138443b343",
+			"5cc2e5d014c02e15d53d9c03",
+			"5cde9fb87d6c8b0474535da9",
+			"5f5e41576760b4138443b344",
+			"5d28af3486f774292364a6e7",
+			"6193be546e5968395b260157",
+			"61922589bb2cea6f7a22d964"
+		]
+	},
+	"bossTagilla": {
+		"Voice": "SectantPriest",
+		"Body": "609e86926e8078716f600883",
+		"Head": "5d5f8ba486f77431254e7fd2",
+		"Hands": "5cc2e68f14c02e28b47de290",
+		"Feet": "609e86c09776a947754429b2"
+	},
+	"followerTagilla": {
+		"Voice": "SectantPriest",
+		"Body": "609e86926e8078716f600883",
+		"Head": "5d5f8ba486f77431254e7fd2",
+		"Hands": "5cc2e68f14c02e28b47de290",
+		"Feet": "609e86c09776a947754429b2"
+	},
+	"gifter": {
+		"Voice": "SectantPriest",
+		"Body": "619238266c614e6d15792bca",
+		"Head": "5f68c4a7c174a17c0f4c8945",
+		"Hands": "618cf9540a5a59657e5f5677",
+		"Feet": "61922589bb2cea6f7a22d964"
+	},
+	"sectantPriest": {
+		"Voice": "SectantPriest",
+		"Body": "5fb53cc97b5d1342ee24bd63",
+		"Head": "5fb52a3a1c69e5198e234118",
+		"Hands": "5cc2e68f14c02e28b47de290",
+		"Feet": [
+			"5fb535cf1c69e5198e234126",
+			"5fb535bd1c69e5198e234125"
+		]
+	},
+	"sectantWarrior": {
+		"Voice": "SectantWarrior",
+		"Body": "5fb53d0b7b5d1342ee24bd64",
+		"Head": [
+			"5fb5297a0359a84b77066e56",
+			"5fb52a537b5d1342ee24bd57"
+		],
+		"Hands": "5cc2e68f14c02e28b47de290",
+		"Feet": [
+			"5fb535cf1c69e5198e234126",
+			"5fb535bd1c69e5198e234125"
+		]
 	}
 }
