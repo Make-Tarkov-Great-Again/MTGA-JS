@@ -1,6 +1,7 @@
 'use strict'
 const fs = require('fs');
 const safeStringify = require('fast-safe-stringify');
+const sjson = require('secure-json-parse')
 
 /**
  * Read file and parse it.
@@ -8,11 +9,15 @@ const safeStringify = require('fast-safe-stringify');
  * @returns 
  */
 const readParsed = (file) => {
-    return JSON.parse(fs.readFileSync(file, 'utf8'));
+    return parse(fs.readFileSync(file, 'utf8'));
 }
 
 const wipeDepend = (data) => {
-    return JSON.parse(stringify(data));
+    return parse(stringify(data));
+}
+
+const parse = (data) => {
+    return sjson.parse(data);
 }
 
 const read = (file) => {
@@ -98,6 +103,7 @@ const createDirectory = (filePath) => {
 module.exports = {
     createDirectory,
     writeFile,
+    parse,
     readParsed,
     read,
     fileExist,

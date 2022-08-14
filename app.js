@@ -14,7 +14,7 @@ module.exports = {
 };
 
 const { DatabaseLoader } = require("./lib/engine/DatabaseLoader");
-const { logger } = require("./utilities");
+const { logger, parse } = require("./utilities");
 
 DatabaseLoader.setDatabase();
 let cert;
@@ -114,7 +114,7 @@ app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (re
                 if (!err && data !== undefined) {
                     const inflatedString = data.toString('utf-8');
                     if (inflatedString.length > 0) {
-                        const json = JSON.parse(inflatedString);
+                        const json = parse(inflatedString);
                         done(null, json);
                         return;
                     }
@@ -132,7 +132,7 @@ app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (re
         }
     } else {
         try {
-            const json = JSON.parse(body);
+            const json = parse(body);
             done(null, json);
         } catch (err) {
             err.statusCode = 400;
