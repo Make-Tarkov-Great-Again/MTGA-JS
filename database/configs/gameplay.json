@@ -1,7 +1,8 @@
 {
     "development": {
         "updateLocations": false,
-        "updateBotDifficulties": false
+        "updateBotDifficulties": false,
+        "quickExamine": true
     },
     "inRaid": {
         "showDeathMessage": true,
