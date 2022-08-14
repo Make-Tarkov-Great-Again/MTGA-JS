@@ -4,7 +4,7 @@ const { Profile } = require("../../lib/models/Profile");
 module.exports = async function raidRoutes(app, _opts) {
 
     app.post(`/client/raid/person/killed/showMessage`, async (request, _reply) => {
-        if (request.body == undefined) return stringify({}); //this pops on start for some reason
+        if (typeof request.body.killedByAID === "undefined") return stringify({}); //this pops on start for some reason
 
         const { database } = require("../../app");
         const sessionID = await FastifyResponse.getSessionID(request)
@@ -23,7 +23,7 @@ module.exports = async function raidRoutes(app, _opts) {
             else if (request.body.diedFaction === "Usec" || request.body.diedFaction === "Bear")
                 profile.TradersInfo["579dc571d53a0658a154fbec"].standing += killPmcChange;
 
-            await profile.saveCharacter();
+            await profile.save();
         }
         return stringify({});
     });
