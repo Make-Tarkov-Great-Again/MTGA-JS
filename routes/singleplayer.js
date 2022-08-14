@@ -1,4 +1,4 @@
-const { logger, FastifyResponse } = require("../utilities");
+const { logger, FastifyResponse, stringify } = require("../utilities");
 
 module.exports = async function singleplayerRoutes(app, _opts) {
 
@@ -30,4 +30,10 @@ module.exports = async function singleplayerRoutes(app, _opts) {
             FastifyResponse.applyBody(database.core.gameplay.defaultRaidSettings)
         );
     });
+
+    app.get(`/singleplayer/airdrop/config`, async (_request, _reply) => {
+        const { database } = require("../app");
+        return stringify(database.core.gameplay.inRaid.airdropSettings)
+    });
+
 }
