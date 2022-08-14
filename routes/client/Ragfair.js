@@ -1,5 +1,5 @@
-const { Ragfair } = require("../../lib/models/Ragfair");
-const { FastifyResponse, logger } = require("../../utilities");
+const { database } = require("../../app");
+const { FastifyResponse } = require("../../utilities");
 
 
 module.exports = async function ragfairRoutes(app, _opts) {
@@ -8,7 +8,7 @@ module.exports = async function ragfairRoutes(app, _opts) {
         logger.logConsole("[ragfair/find]: " + request.body);
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody(await Ragfair.generateOffersBasedOnRequest(request.body))
+            FastifyResponse.applyBody(await database.ragfair.generateOffersBasedOnRequest(request.body))
         );
     });
     
