@@ -1,5 +1,6 @@
 const { database } = require("../../app");
 const { FastifyResponse } = require("../../utilities");
+const { logger } = require("../../utilities");
 
 
 module.exports = async function ragfairRoutes(app, _opts) {
