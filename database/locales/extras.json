@@ -1,69 +1,118 @@
 {
     "customization": {
-        "5f68c4c217d579077152a252": {
-            "Name": "Misha",
-            "ShortName": "Misha",
-            "Description": "Misha"
+        "Heads": {
+            "5f68c4c217d579077152a252": {
+                "Name": "Misha",
+                "ShortName": "Misha",
+                "Description": "Misha"
+            },
+            "5d5e805d86f77439eb4c2d0e": {
+                "Name": "Gluhar",
+                "ShortName": "Gluhar",
+                "Description": "Gluhar"
+            },
+            "5e99767c86f7741ac7399393": {
+                "Name": "Sanitar",
+                "ShortName": "Sanitar",
+                "Description": "Sanitar"
+            },
+            "5d28b01486f77429242fc898": {
+                "Name": "Reshala",
+                "ShortName": "Reshala",
+                "Description": "Reshala"
+            },
+            "5d5f8ba486f77431254e7fd2": {
+                "Name": "Wild Head Non-Mesh",
+                "ShortName": "Wild Head Non-Mesh",
+                "Description": "Wild Head Non-Mesh"
+            },
+            "5d28b03e86f7747f7e69ab8a": {
+                "Name": "Killa",
+                "ShortName": "Killa",
+                "Description": "Killa"
+            },
+            "5fb5297a0359a84b77066e56": {
+                "Name": "Cultist 1",
+                "ShortName": "Cultist 1",
+                "Description": "Cultist 1"
+            },
+            "5fb52a3a1c69e5198e234118": {
+                "Name": "Cultist 2",
+                "ShortName": "Cultist 2",
+                "Description": "Cultist 2"
+            },
+            "5fb52a537b5d1342ee24bd57": {
+                "Name": "Cultist 3",
+                "ShortName": "Cultist 3",
+                "Description": "Cultist 3"
+            },
+            "5cc2e4d014c02e000d0115f8": {
+                "Name": "Wild Head 1",
+                "ShortName": "Wild Head 1",
+                "Description": "Wild Head 1"
+            },
+            "5cde9ff17d6c8b0474535daa": {
+                "Name": "Wild Head 2",
+                "ShortName": "Wild Head 2",
+                "Description": "Wild Head 2"
+            },
+            "5d28afe786f774292668618d": {
+                "Name": "Wild Head 3",
+                "ShortName": "Wild Head 3",
+                "Description": "Wild Head 3"
+            },
+            "5f68c4a7c174a17c0f4c8945": {
+                "Name": "Drozd",
+                "ShortName": "Drozd",
+                "Description": "Drozd"
+            }
         },
-        "5d5e805d86f77439eb4c2d0e": {
-            "Name": "Gluhar",
-            "ShortName": "Gluhar",
-            "Description": "Gluhar"
-        },
-        "5e99767c86f7741ac7399393": {
-            "Name": "Sanitar",
-            "ShortName": "Sanitar",
-            "Description": "Sanitar"
-        },
-        "5d28b01486f77429242fc898": {
-            "Name": "Reshala",
-            "ShortName": "Reshala",
-            "Description": "Reshala"
-        },
-        "5d5f8ba486f77431254e7fd2": {
-            "Name": "Wild Head Non-Mesh",
-            "ShortName": "Wild Head Non-Mesh",
-            "Description": "Wild Head Non-Mesh"
-        },
-        "5d28b03e86f7747f7e69ab8a": {
-            "Name": "Killa",
-            "ShortName": "Killa",
-            "Description": "Killa"
-        },
-        "5fb5297a0359a84b77066e56": {
-            "Name": "Cultist 1",
-            "ShortName": "Cultist 1",
-            "Description": "Cultist 1"
-        },
-        "5fb52a3a1c69e5198e234118": {
-            "Name": "Cultist 2",
-            "ShortName": "Cultist 2",
-            "Description": "Cultist 2"
-        },
-        "5fb52a537b5d1342ee24bd57": {
-            "Name": "Cultist 3",
-            "ShortName": "Cultist 3",
-            "Description": "Cultist 3"
-        },
-        "5cc2e4d014c02e000d0115f8": {
-            "Name": "Wild Head 1",
-            "ShortName": "Wild Head 1",
-            "Description": "Wild Head 1"
-        },
-        "5cde9ff17d6c8b0474535daa": {
-            "Name": "Wild Head 2",
-            "ShortName": "Wild Head 2",
-            "Description": "Wild Head 2"
-        },
-        "5d28afe786f774292668618d": {
-            "Name": "Wild Head 3",
-            "ShortName": "Wild Head 3",
-            "Description": "Wild Head 3"
-        },
-        "5f68c4a7c174a17c0f4c8945": {
-            "Name": "Drozd",
-            "ShortName": "Drozd",
-            "Description": "Drozd"
+        "Voices": {
+            "5fc6155b0b735e7b024c76ec": {
+                "Name": "Gluhar",
+                "ShortName": "Gluhar",
+                "Description": "Gluhar"
+            },
+            "5fc615710b735e7b024c76ed": {
+                "Name": "Sanitar",
+                "ShortName": "Sanitar",
+                "Description": "Sanitar"
+            },
+            "5fc615460b735e7b024c76eb": {
+                "Name": "Reshala",
+                "ShortName": "Reshala",
+                "Description": "Reshala"
+            },
+            "5fc613c80b735e7b024c76e2": {
+                "Name": "Scav_1",
+                "ShortName": "Scav_1",
+                "Description": "Scav_1"
+            },
+            "5fc613e10b735e7b024c76e3": {
+                "Name": "Scav_2",
+                "ShortName": "Scav_2",
+                "Description": "Scav_2"
+            },
+            "5fc614130b735e7b024c76e4": {
+                "Name": "Scav_3",
+                "ShortName": "Scav_3",
+                "Description": "Scav_3"
+            },
+            "5fc614290b735e7b024c76e5": {
+                "Name": "Scav_4",
+                "ShortName": "Scav_4",
+                "Description": "Scav_4"
+            },
+            "5fc614390b735e7b024c76e6": {
+                "Name": "Scav_5",
+                "ShortName": "Scav_5",
+                "Description": "Scav_5"
+            },
+            "5fc6144b0b735e7b024c76e7": {
+                "Name": "Scav_6",
+                "ShortName": "Scav_6",
+                "Description": "Scav_6"
+            }
         }
     },
     "templates": {

@@ -3,16 +3,6 @@ const ObjectID = require("bson-objectid");
 const fs = require('fs');
 
 
-/** Generate Unique ID used in the server by using nanoid
- * @param {string} prefix
- * @returns Unique ID as string
- */
-const generateUniqueId = async (prefix = "", idLength = 21) => {
-    const { customAlphabet } = await import('nanoid');
-    const nanoid = customAlphabet('abcdefghijklmnopqrstuvwxyz123456789ABCDEFGHYJKLMNOPQRSTUVWXYZ', idLength);
-    return `${prefix}${nanoid()}`;
-}
-
 const generateMongoID = async () => {
     return ObjectID.createFromTime(process.hrtime.bigint()).toHexString();
 }
@@ -62,7 +52,7 @@ const getServerUptimeInSeconds = async () => {
 /**
  * @returns Current Date timestamp in seconds
  */
-const getCurrentTimestamp = () => {
+const getCurrentTimestamp = async () => {
     return ~~(new Date().getTime() / 1000);
 }
 /**
@@ -173,8 +163,6 @@ const payTrade = async (playerInventory, body, currency = null) => {
                 }
             }
         }
-
-        console.log()
     } else {
         logger.logDebug("That's barter, barter not done yet, pay me Leffe and I'll do it");
     }
@@ -199,7 +187,6 @@ const generateRandomInt = async (min, max) => {
 
 
 module.exports = {
-    generateUniqueId,
     makeSign,
     getCurrentTimestamp,
     getServerUptimeInSeconds,

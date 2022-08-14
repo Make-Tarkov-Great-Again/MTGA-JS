@@ -17,6 +17,7 @@ const {
 const { noBody } = require('../utilities');
 
 module.exports = async function launcherRoutes(app, _opts) {
+
     app.get('/launcher/profile/change/email', async (request, _reply) => {
         const output = await changeEmail(request.body);
         return (output === "" ? "FAILED" : "OK");
@@ -65,4 +66,5 @@ module.exports = async function launcherRoutes(app, _opts) {
     app.post('/launcher/profile/login', async (request, _reply) => {
         return noBody(reloadAccountByLogin(request.body));
     });
+    
 }
