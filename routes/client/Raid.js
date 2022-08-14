@@ -4,7 +4,7 @@ const { Profile } = require("../../lib/models/Profile");
 module.exports = async function raidRoutes(app, _opts) {
 
     app.post(`/client/raid/person/killed/showMessage`, async (request, _reply) => {
-        if (typeof request.body.killedByAID === "undefined") {
+        if (typeof request.body === "undefined") {
             logger.logDebug("/client/raid/person/killed/showMessage", "No killedByAID provided");
             return stringify({}); //this pops on start for some reason
         }

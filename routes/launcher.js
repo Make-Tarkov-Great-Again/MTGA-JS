@@ -1,20 +1,11 @@
 const {
     account: {
-        find,
-        register,
-        getEditions,
-        remove,
-        changeEmail,
-        changePassword,
-        reloadAccountByLogin,
-        wipe
-    },
-    database: {
-        profiles,
-        core
-    }
+        find, register, getEditions, remove,
+        changeEmail, changePassword, reloadAccountByLogin,
+        wipe },
+    database: { profiles, core }
 } = require('../../app');
-const { noBody } = require('../utilities');
+const { noBody, logger } = require('../utilities');
 
 module.exports = async function launcherRoutes(app, _opts) {
 
@@ -35,7 +26,7 @@ module.exports = async function launcherRoutes(app, _opts) {
 
     app.post('/launcher/profile/register', async (request, _reply) => {
         const output = await register(request.body);
-        app.log.info(output);
+        logger.logDebug("[LAUNCHER REGISTER]: " + output);
         return (output === "" ? "FAILED" : output);
     });
 
@@ -59,12 +50,12 @@ module.exports = async function launcherRoutes(app, _opts) {
             name: server.name,
             editions: data
         }
-        app.log.info(output);
+        logger.logDebug("[LAUNCHER CONNECT]: " + output);
         return noBody(output);
     });
 
     app.post('/launcher/profile/login', async (request, _reply) => {
         return noBody(reloadAccountByLogin(request.body));
     });
-    
+
 }

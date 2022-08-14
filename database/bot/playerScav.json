@@ -1,0 +1,148 @@
+{
+    "_id": "5c25cb5c8ed23921c37196c7",
+    "aid": 1947538,
+    "savage": null,
+    "Info": {
+        "Nickname": "Джонни Мультик",
+        "LowerNickname": "Джонни Мультик",
+        "Side": "Savage",
+        "Voice": "Bear_1_Eng",
+        "Level": 1,
+        "Experience": 0,
+        "RegistrationDate": 1656592830,
+        "GameVersion": "developer",
+        "AccountType": 0,
+        "MemberCategory": 2,
+        "lockedMoveCommands": true,
+        "SavageLockTime": 0,
+        "LastTimePlayedAsSavage": 0,
+        "Settings": {
+            "StandingForKill": -0.1,
+            "AggressorBonus": 0.03
+        },
+        "NicknameChangeDate": 0,
+        "NeedWipeOptions": [],
+        "lastCompletedWipe": {},
+        "lastCompletedEvent": null,
+        "BannedState": false,
+        "BannedUntil": 0,
+        "IsStreamerModeAvailable": false,
+        "Bans": []
+    },
+    "Customization": {
+        "Head": "5d5f8ba486f77431254e7fd2",
+        "Body": "609e86926e8078716f600883",
+        "Feet": "609e86c09776a947754429b2",
+        "Hands": "5cc2e68f14c02e28b47de290"
+    },
+    "Health": {
+        "Hydration": {
+            "Current": 100,
+            "Maximum": 100
+        },
+        "Energy": {
+            "Current": 100,
+            "Maximum": 100
+        },
+        "Temperature": {
+            "Current": 36.6,
+            "Maximum": 40
+        },
+        "BodyParts": {
+            "Head": {
+                "Health": {
+                    "Current": 999999,
+                    "Maximum": 999999
+                }
+            },
+            "Chest": {
+                "Health": {
+                    "Current": 999999,
+                    "Maximum": 999999
+                }
+            },
+            "Stomach": {
+                "Health": {
+                    "Current": 999999,
+                    "Maximum": 999999
+                }
+            },
+            "LeftArm": {
+                "Health": {
+                    "Current": 999999,
+                    "Maximum": 999999
+                }
+            },
+            "RightArm": {
+                "Health": {
+                    "Current": 999999,
+                    "Maximum": 999999
+                }
+            },
+            "LeftLeg": {
+                "Health": {
+                    "Current": 999999,
+                    "Maximum": 999999
+                }
+            },
+            "RightLeg": {
+                "Health": {
+                    "Current": 999999,
+                    "Maximum": 999999
+                }
+            }
+        },
+        "UpdateTime": 1641932568
+    },
+    "Inventory": {
+        "items": [
+            {
+                "_id": "62bd99befd08e69ad30f651e",
+                "_tpl": "55d7217a4bdc2d86028b456d"
+            },
+            {
+                "_id": "62bd99befd08e69ad30f651c",
+                "_tpl": "566abbc34bdc2d92178b4576"
+            },
+            {
+                "_id": "62bd99befd08e69ad30f651d",
+                "_tpl": "602543c13fee350cd564d032"
+            },
+            {
+                "_id": "62bd99befd08e69ad30f6520",
+                "_tpl": "5963866b86f7747bfa1c4462"
+            },
+            {
+                "_id": "62bd99befd08e69ad30f651f",
+                "_tpl": "5963866286f7747bf429b572"
+            }
+        ],
+        "equipment": "62bd99befd08e69ad30f651e",
+        "stash": "62bd99befd08e69ad30f651c",
+        "sortingTable": "62bd99befd08e69ad30f651d",
+        "questRaidItems": "62bd99befd08e69ad30f651f",
+        "questStashItems": "62bd99befd08e69ad30f6520",
+        "fastPanel": {}
+    },
+    "Skills": {
+        "Common": [],
+        "Mastering": [],
+        "Points": 0
+    },
+    "Stats": {
+        "SessionCounters": {
+            "Items": []
+        },
+        "OverallCounters": {
+            "Items": []
+        }
+    },
+    "Encyclopedia": null,
+    "ConditionCounters": {
+        "Counters": []
+    },
+    "BackendCounters": {},
+    "InsuredItems": [],
+    "Hideout": null,
+    "Bonuses": []
+}
