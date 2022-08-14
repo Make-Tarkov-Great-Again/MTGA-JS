@@ -4,7 +4,10 @@ const { Profile } = require("../../lib/models/Profile");
 module.exports = async function raidRoutes(app, _opts) {
 
     app.post(`/client/raid/person/killed/showMessage`, async (request, _reply) => {
-        if (typeof request.body.killedByAID === "undefined") return stringify({}); //this pops on start for some reason
+        if (typeof request.body.killedByAID === "undefined") {
+            logger.logDebug("/client/raid/person/killed/showMessage", "No killedByAID provided");
+            return stringify({}); //this pops on start for some reason
+        }
 
         const { database } = require("../../app");
         const sessionID = await FastifyResponse.getSessionID(request)
