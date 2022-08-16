@@ -70,6 +70,13 @@ const valueBetween = (value, minInput, maxInput, minOutput, maxOutput) => {
 const getRandomFromArray = async (array) => {
     return array[await getRandomInt(0, array.length - 1)];
 }
+
+const getRandomFromObject = async (obj) => {
+    const keys = Object.keys(obj);
+    return obj[keys[keys.length * Math.random() << 0]]
+}
+
+
 module.exports = {
     clamp,
     getRandomInt,
@@ -79,5 +86,6 @@ module.exports = {
     getPercentOf,
     getPercentRandomBool,
     getRandomFromArray,
+    getRandomFromObject,
     valueBetween
 };
