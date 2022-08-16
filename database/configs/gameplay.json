@@ -2,7 +2,11 @@
     "development": {
         "updateLocations": false,
         "updateBotDifficulties": false,
-        "quickExamine": true
+        "quickExamine": true,
+        "stacksize": {
+            "ammo": 0,
+            "money": 0
+        }
     },
     "inRaid": {
         "showDeathMessage": true,
