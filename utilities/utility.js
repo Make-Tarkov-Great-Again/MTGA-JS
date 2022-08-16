@@ -181,10 +181,6 @@ const findAndReturnChildrenByItems = async (items, itemId) => {
     return list;
 }
 
-const generateRandomInt = async (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
 
 module.exports = {
     makeSign,
@@ -202,6 +198,5 @@ module.exports = {
     templatesWithParent,
     isCategory,
     childrenCategories,
-    getFileUpdatedDate,
-    generateRandomInt
+    getFileUpdatedDate
 };
