@@ -21,7 +21,7 @@ class FastifyResponse {
         };
     }
 
-    static getVersion = async (request) => {
+    static async getVersion(request) {
         return request.headers["app-version"].replace("EFT Client ", "");
     }
 
@@ -43,7 +43,7 @@ class FastifyResponse {
         return `${FastifyResponse.getUrl()}`;
     }
 
-    static getSessionID = async (request) => {
+    static async getSessionID(request) {
         const sessionID = request.cookies.PHPSESSID;
         if (sessionID) {
             return sessionID;
@@ -54,9 +54,9 @@ class FastifyResponse {
 
     // HTTP Data Processing functionality //
 
-    static zlibJsonReply = async (reply, data) => {
+    static async zlibJsonReply(reply, data) {
         const header = {
-            'Content-Type': this.mime["json"],
+            'Content-Type': this.mime["json"]
         };
         const deflatedData = zlib.deflateSync(stringify(data, true));
         reply.raw.writeHead(200, header);
@@ -64,14 +64,14 @@ class FastifyResponse {
         reply.raw.end();
     };
 
-    static zlibReply = async (reply, data) => {
+    static async zlibReply(reply, data) {
         const deflatedData = zlib.deflateSync(data);
         reply.raw.writeHead(200);
         reply.raw.write(deflatedData);
         reply.raw.end();
     };
 
-    static applyBody = (data, err = 0, errmsg = null) => {
+    static applyBody(data, err = 0, errmsg = null) {
         return { "err": err, "errmsg": errmsg, "data": data };
     };
 }

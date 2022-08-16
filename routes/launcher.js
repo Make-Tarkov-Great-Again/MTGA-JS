@@ -36,7 +36,7 @@ module.exports = async function launcherRoutes(app, _opts) {
     });
 
     app.get('/launcher/profile/get', async (request, _reply) => {
-        const serverConfig = database.core.serverConfig
+        const serverConfig = database.core.serverConfig;
         const accountID = await reloadAccountByLogin(request.body);
         const output = find(accountID);
         return noBody(output["server"] = serverConfig.name);
@@ -49,7 +49,7 @@ module.exports = async function launcherRoutes(app, _opts) {
             backendURL: "https://" + server.ip + ":" + server.port,
             name: server.name,
             editions: data
-        }
+        };
         logger.logDebug("[LAUNCHER CONNECT]: " + output);
         return noBody(output);
     });
@@ -58,4 +58,4 @@ module.exports = async function launcherRoutes(app, _opts) {
         return noBody(reloadAccountByLogin(request.body));
     });
 
-}
+};

@@ -1,8 +1,7 @@
-'use strict'
-const { logger, FastifyResponse, writeFile } = require("../utilities");
+const { logger, FastifyResponse } = require("../utilities");
 
 
-module.exports = async function notifierRoutes(app, opt) {
+module.exports = async function notifierRoutes(app, _opt) {
 
     // Client Notifier Routes //
     app.post("/client/WebSocketAddress", async (_request, reply) => {
@@ -31,12 +30,12 @@ module.exports = async function notifierRoutes(app, opt) {
     app.get("/socket", { websocket: true }, async (connection, _request, _reply) => {
         logger.logError("NOTIFIER getwebsocket GET HIT");
         connection.socket.on('message', _message => {
-            connection.socket.send('NOTIFIER message HIT')
-        })
+            connection.socket.send('NOTIFIER message HIT');
+        });
 
         connection.socket.on('upgrade', _message => {
-            connection.socket.send('NOTIFIER upgrade HIT')
-        })
+            connection.socket.send('NOTIFIER upgrade HIT');
+        });
     });
-    
+
 };
