@@ -1,12 +1,16 @@
 {
     "development": {
         "updateLocations": false,
-        "updateBotDifficulties": false,
+        "updateBotDifficulties": false
+        
+    },
+    "items": {
         "quickExamine": true,
-        "stacksize": {
-            "ammo": 0,
-            "money": 0
-        }
+        "stackSize": {
+            "ammo": 120,
+            "money": 1000000
+        },
+        "stimMaxUses": 3
     },
     "inRaid": {
         "showDeathMessage": true,
