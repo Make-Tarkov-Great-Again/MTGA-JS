@@ -1,0 +1,1064 @@
+{
+	"Chance": {
+		"Global": {
+			"Common": 100,
+			"Uncommon": 50,
+			"Rare": 25,
+			"Superrare": 2
+		}
+	},
+	"TacticalVest": {
+		"Common": [
+			"5e4abfed86f77406a2713cf7",
+			"5d5d8ca986f7742798716522",
+			"6034d0230ca681766b6a0fb5",
+			"5e4abc1f86f774069619fbaa",
+			"5929a2a086f7744f4b234d43",
+			"5fd4c4fa16cac650092f6771",
+			"59e7643b86f7742cbf2c109a",
+			"572b7adb24597762ae139821"
+		],
+		"Uncommon": [
+			"6034cf5fffd42c541047f72e",
+			"5f5f41f56760b4138443b352",
+			"5fd4c5477a8d854fa0105061",
+			"5b44c8ea86f7742d1627baf1",
+			"5ca20abf86f77418567a43f2",
+			"603648ff5a45383c122086ac",
+			"6040dd4ddcf9592f401632d2"
+		],
+		"Rare": [
+			"5df8a42886f77412640e2e75",
+			"592c2d1a86f7746dbe2af32a",
+			"5c0e6a1586f77404597b4965",
+			"5fd4c60f875c30179f5d04c2",
+			"5d5d85c586f774279a21cbdb",
+			"5648a69d4bdc2ded0b8b457b",
+			"5ab8dab586f77441cd04f2a2",
+			"60a621c49c197e4e8c4455e6",
+			"60a6220e953894617404b00a"
+		],
+		"Superrare": [
+			"5c0e3eb886f7742015526062",
+			"5d5d646386f7742797261fd9",
+			"5c0e722886f7740458316a57",
+			"5c0e446786f7742013381639",
+			"544a5caa4bdc2d1a388b4568",
+			"609e860ebd219504d8507525",
+			"5ab8dced86f774646209ec87",
+			"5c0e746986f7741453628fe5",
+			"5d5d87f786f77427997cfaef",
+			"628baf0b967de16aab5a4f36",
+			"5e4ac41886f77406a511c9a8",
+			"5e9db13186f7742f845ee9d3",
+			"5b44cad286f77402a54ae7e5",
+			"5c0e9f2c86f77432297fe0a3",
+			"60a3c70cde5f453f634816a3",
+			"60a3c68c37ea821725773ef5"
+		]
+	},
+	"ArmorVest": {
+		"Common": [
+			"5df8a2ca86f7740bfe6df777",
+			"607f20859ee58b18e41ecd90",
+			"5c0e5edb86f77461f55ed1f7",
+			"59e7635f86f7742cbf2c1095",
+			"5648a7494bdc2d9d488b4583"
+		],
+		"Uncommon": [
+			"5ab8e4ed86f7742d8e50c7fa",
+			"5c0e53c886f7747fa54205c7",
+			"5c0e51be86f774598e797894",
+			"5c0e5bab86f77461f55ed1f3",
+			"5c0e57ba86f7747fa141986d",
+			"609e8540d5c319764c2bc2e9",
+			"62a09d79de7ac81993580530",
+			"5b44d22286f774172b0c9de8"
+		],
+		"Rare": [
+			"5b44cf1486f77431723e3d05",
+			"5b44d0de86f774503d30cba8",
+			"5f5f41476bdad616ad46d631",
+			"5ca2151486f774244a3b8d30",
+			"5c0e655586f774045612eeb2"
+		],
+		"Superrare": [
+			"5ab8e79e86f7742d8b372e78",
+			"545cdb794bdc2d3a198b456a",
+			"5c0e541586f7747fa54205c9",
+			"5fd4c474dd870108a754b241",
+			"60a283193cb70855c43a381d",
+			"5e9dacf986f774054d6b89f4",
+			"5b44cd8b86f774503d30cba2",
+			"5ca21c6986f77479963115a7",
+			"5e4abb5086f77406975c9342",
+			"6038b4ca92ec1c3103795a0d",
+			"6038b4b292ec1c3103795a0b",
+			"5c0e625a86f7742d77340f62"
+		]
+	},
+	"Scabbard": {
+		"Common": [
+			"57e26fc7245977162a14b800",
+			"57e26ea924597715ca604a09",
+			"5bead2e00db834001c062938"
+		],
+		"Uncommon": [
+			"54491bb74bdc2d09088b4567",
+			"5c07df7f0db834001b73588a"
+		],
+		"Rare": [
+			"57cd379a24597778e7682ecf",
+			"5c012ffc0db834001d23f03f"
+		],
+		"Superrare": [
+			"5bffe7930db834001b734a39",
+			"5bffdc370db834001d23eca8",
+			"5bffdd7e0db834001b734a1a",
+			"5c0126f40db834002a125382",
+			"5c010e350db83400232feec7",
+			"601948682627df266209af05",
+			"5fc64ea372b0dd78d51159dc",
+			"5bc9c1e2d4351e00367fbcf0"
+		]
+	},
+	"Eyewear": {
+		"Common": [
+			"557ff21e4bdc2d89578b4586",
+			"5aa2b986e5b5b00014028f4c",
+			"5b432be65acfc433000ed01f",
+			"5d6d2ef3a4b93618084f58bd",
+			"5d5fca1ea4b93635fd598c07",
+			"5d6d2e22a4b9361bd5780d05",
+			"5c1a1cc52e221602b3136e3d",
+			"5c0d32fcd174af02a1659c75"
+		],
+		"Uncommon": [
+			"5aa2b923e5b5b000137b7589",
+			"5aa2b9aee5b5b00015693121",
+			"61c18d83b00456371a66814b",
+			"59e770b986f7742cbd762754"
+		],
+		"Rare": [
+			"62a61c988ec41a51b34758d5",
+			"603409c80ca681766b6a0fb2"
+		],
+		"Superrare": [
+			"5e71f70186f77429ee09f183",
+			"62a09e410b9d3c46de5b6e78"
+		]
+	},
+	"Earpiece": {
+		"Common": [
+			"5b432b965acfc47a8774094e"
+		],
+		"Uncommon": [
+			"6033fa48ffd42c541047f728",
+			"5c165d832e2216398b5a7e36"
+		],
+		"Rare": [
+			"5a16b9fffcdbcb0176308b34",
+			"5e4d34ca86f774264f758330",
+			"5f60cd6cf2bcbb675b00dac6"
+		],
+		"Superrare": [
+			"5645bcc04bdc2d363b8b4572",
+			"5aa2ba71e5b5b000137b758f",
+			"628e4e576d783146b124c64d"
+		]
+	},
+	"FaceCover": {
+		"Common": [
+			"572b7f1624597762ae139822",
+			"5ab8f39486f7745cd93a1cca",
+			"5c1a1e3f2e221602b66cc4c2",
+			"5b432f3d5acfc4704b4a1dfb",
+			"5e71f6be86f77429f2683c44",
+			"5b4325355acfc40019478126",
+			"5b432b6c5acfc4001a599bf0",
+			"572b7fa524597762b747ce82",
+			"59e7715586f7742ee5789605"
+		],
+		"Uncommon": [
+			"5ab8f4ff86f77431c60d91ba",
+			"5bd071d786f7747e707b93a3",
+			"5bd0716d86f774171822ef4b",
+			"5bd06f5d86f77427101ad47c",
+			"6176a48d732a664031271438",
+			"62a5c2c98ec41a51b34739c0",
+			"62a5c333ec21e50cad3b5dc6",
+			"62a5c41e8ec41a51b34739c3",
+			"5b4326435acfc433000ed01d",
+			"5bd073a586f7747e6f135799",
+			"5ab8f85d86f7745cd93a1cf5"
+		],
+		"Rare": [
+			"62a09dd4621468534a797ac7",
+			"607f201b3c672b3b3a24a800",
+			"5b432c305acfc40019478128",
+			"60363c0c92ec1c31037959f5",
+			"62a09e08de7ac81993580532",
+			"6176a40f0b8c0312ac75a3d3",
+			"5b432b2f5acfc4771e1c6622",
+			"5e54f76986f7740366043752",
+			"5fd8d28367cb5e077335170f"
+		],
+		"Superrare": [
+			"5e54f79686f7744022011103",
+			"5e71fad086f77422443d4604",
+			"60a7ad3a0c5cb24b0134664a",
+			"60a7ad2a2198820d95707a2e"
+		]
+	},
+	"ArmBand": {
+		"Common": [],
+		"Uncommon": [],
+		"Rare": [],
+		"Superrare": []
+	},
+	"Backpack": {
+		"Common": [
+			"56e33634d2720bd8058b456b",
+			"5ab8f04f86f774585f4237d8",
+			"56e335e4d2720b6c058b456d",
+			"5f5e45cc5021ce62144be7aa",
+			"56e33680d2720be2748b4576",
+			"5ab8ee7786f7742d8f33f0b9",
+			"544a5cde4bdc2d39388b456b"
+		],
+		"Uncommon": [
+			"5ca20d5986f774331e7c9602",
+			"5e9dcf5986f7746c417435b3",
+			"60a272cc93ef783291411d8e",
+			"60a2828e8689911a226117f9",
+			"5e997f0b86f7741ac73993e2",
+			"618bb76513f5097c8d5aa2d5",
+			"6038d614d10cbf667352dd44",
+			"619cf0335771dd3c390269ae"
+		],
+		"Rare": [
+			"618cfae774bb2d036a049e7c",
+			"59e763f286f7742ee57895da",
+			"6034d103ca006d2dca39b3f0",
+			"5d5d940f86f7742797262046",
+			"5c0e805e86f774683f3dd637",
+			"5f5e467b0bc58666c37e7821"
+		],
+		"Superrare": [
+			"545cdae64bdc2d39198b4568",
+			"5b44c6ae86f7742d1627baea",
+			"5df8a4d786f77412672a1e3b",
+			"5c0e774286f77468413cc5b2",
+			"6034d2d697633951dc245ea6",
+			"5e4abc6786f77406812bd572",
+			"5ab8ebf186f7742d8b372e80",
+			"628e1ffc83ec92260c0f437f",
+			"5f5e46b96bdad616ad46d613",
+			"628bc7fb408e2b2e9c0801b1",
+			"62a1b7fbc30cfa1d366af586"
+		]
+	},
+	"Headwear": {
+		"Common": [
+			"6040de02647ad86262233012",
+			"5bd073c986f7747f627e796c",
+			"60a7acf20c5cb24b01346648",
+			"5aa2ba19e5b5b00014028f4e",
+			"5b40e5e25acfc4001a599bea",
+			"5a43943586f77416ad2f06e2",
+			"59e7711e86f7746cae05fbe1",
+			"5c08f87c0db8340019124324",
+			"572b7fa124597762b472f9d2",
+			"603619720ca681766b6a0fc4",
+			"5b43271c5acfc432ff4dce65",
+			"5d96141523f0ea1b7f2aacab",
+			"618aef6d0a5a59657e5f55ee",
+			"603618feffd42c541047f771",
+			"5f60e7788adaa7100c3adb49",
+			"60bf74184a63fc79b60c57f6",
+			"5aa2ba46e5b5b000137b758d",
+			"5b40e61f5acfc4001a599bec",
+			"5ab8f20c86f7745cdb629fb2",
+			"59e7708286f7742cbd762753",
+			"59e770f986f7742cbe3164ef",
+			"5aa2b8d7e5b5b00014028f4a",
+			"5a16bb52fcdbcb001a3b00dc",
+			"60361b5a9a15b10d96792291",
+			"572b7d8524597762b472f9d1",
+			"5df8a58286f77412631087ed",
+			"5f60e784f2bcbb675b00dac7",
+			"5aa2a7e8e5b5b00016327c16",
+			"59ef13ca86f77445fd0e2483",
+			"5aa2b9ede5b5b000137b758b",
+			"61c18db6dfd64163ea78fbb4",
+			"5b4327aa5acfc400175496e0",
+			"5aa2b89be5b5b0001569311f",
+			"5a43957686f7742a2c2f11b0",
+			"5b4329075acfc400153b78ff",
+			"5f60e6403b85f6263c14558c",
+			"60361a7497633951dc245eb4",
+			"60b52e5bc7d8103275739d67",
+			"60361b0b5a45383c122086a1",
+			"5ea05cf85ad9772e6624305d"
+		],
+		"Uncommon": [
+			"5645bc214bdc2d363b8b4571",
+			"5aa7e4a4e5b5b000137b76f2",
+			"5b432d215acfc4771e1c6624",
+			"5aa7cfc0e5b5b00015693143",
+			"5f994730c91ed922dd355de3",
+			"5aa2b87de5b5b00016327c25",
+			"5aa7d03ae5b5b00016327db5",
+			"5f99418230835532b445e954",
+			"5c066ef40db834001966a595",
+			"5d5e7d28a4b936645d161203",
+			"5c06c6a80db834001b735491",
+			"5a7c4850e899ef00150be885",
+			"5c0d2727d174af02a012cf58"
+		],
+		"Rare": [
+			"628e4dd1f477aa12234918aa",
+			"5d5e9c74a4b9364855191c40",
+			"61bca7cda0eae612383adf57",
+			"5aa7e454e5b5b0214e506fa2",
+			"5aa7d193e5b5b000171d063f",
+			"5b40e3f35acfc40016388218",
+			"5b40e4035acfc47a87740943",
+			"5b40e2bc5acfc40016388216",
+			"5e4bfc1586f774264f7582d3"
+		],
+		"Superrare": [
+			"5aa7e276e5b5b000171d0647",
+			"5b4329f05acfc47a86086aa1",
+			"5d6d3716a4b9361bc8618872",
+			"5ac8d6885acfc400180ae7b0",
+			"5f60c74e3b85f6263c145586",
+			"5a154d5cfcdbcb001a3b00da",
+			"5c091a4e0db834001d5addc8",
+			"5b40e1525acfc4771e1c6611",
+			"5c17a7ed2e2216152142459c",
+			"5ea17ca01412a1425304d1c0",
+			"5f60b34a41e30a4ab12a6947",
+			"5c0e874186f7745dc7616606",
+			"5e00c1ad86f774747333222c",
+			"5e01ef6886f77445f643baa4",
+			"5ca20ee186f774799474abc2"
+		]
+	},
+	"Weapon": {
+		"AssaultCarbine": {
+			"Common": [],
+			"Uncommon": [
+				"587e02ff24597743df3deaeb",
+				"5c501a4d2e221602b412b540",
+				"574d967124597745970e7c94"
+			],
+			"Rare": [],
+			"Superrare": [
+				"57c44b372459772d2b39b8ce"
+			]
+		},
+		"AssaultRifle": {
+			"Common": [],
+			"Uncommon": [
+				"5bf3e0490db83400196199af",
+				"5bf3e03b0db834001d2c4a9c",
+				"57dc2fa62459775949412633",
+				"5ac4cd105acfc40016339859",
+				"5c07c60e0db834002330051f",
+				"59ff346386f77477562ff5e2",
+				"5ac66d9b5acfc4001633997a",
+				"59e6152586f77473dc057aa1"
+			],
+			"Rare": [
+				"5abcbc27d8ce8700182eceeb",
+				"5ab8e9fcd8ce870019439434",
+				"5ac66d2e5acfc43b321d4b53",
+				"5644bd2b4bdc2d3b4c8b4572",
+				"59d6088586f774275f37482f",
+				"5b0bbe4e5acfc40dc528a72d",
+				"583990e32459771419544dd2",
+				"5839a40f24597726f856b511",
+				"5447a9cd4bdc2dbd208b4567",
+				"5ac66d725acfc43b321d4b60",
+				"59e6687d86f77411d949b251"
+			],
+			"Superrare": [
+				"5ac66cb05acfc40198510a10",
+				"5ac66d015acfc400180ae6e4",
+				"5bb2475ed4351e00853264e3",
+				"6184055050224f204c1da540",
+				"618428466ef05c2ce828f218",
+				"5c488a752e221602b412af63",
+				"5dcbd56fdbd3d91b3e5468d5",
+				"6183afd850224f204c1da514",
+				"628b9c37a733087d0d7fe84b",
+				"6165ac306ef05c2ce828ef74",
+				"623063e994fc3f7b302a9696",
+				"5cadfbf7ae92152ac412eeef",
+				"606587252535c57a13424cfd",
+				"628b5638ad252a16da6dd245",
+				"5a0ec13bfcdbcb00165aa685",
+				"5fbcc1d9016cce60e8341ab3",
+				"5d43021ca4b9362eab4b5e25",
+				"628a60ae6b1d481ff772e9c8"
+			]
+		},
+		"GrenadeLauncher": {
+			"Common": [],
+			"Uncommon": [
+				"62178be9d0050232da3485d9"
+			],
+			"Rare": [],
+			"Superrare": [
+				"5e81ebcd8e146c7080625e15"
+			]
+		},
+		"MachineGun": {
+			"Common": [],
+			"Uncommon": [],
+			"Rare": [],
+			"Superrare": [
+				"5beed0f50db834001c062b12"
+			]
+		},
+		"MarksmanRifle": {
+			"Common": [],
+			"Uncommon": [],
+			"Rare": [
+				"57838ad32459774a17445cd2"
+			],
+			"Superrare": [
+				"6176aca650224f204c1da3fb",
+				"5c46fbd72e2216398b5a8c9c",
+				"5df8ce05b11454561e39243b",
+				"5f2a9575926fd9352339381f",
+				"5a367e5dc4a282000e49738f",
+				"5aafa857e5b5b00018480968",
+				"5fc22d7c187fea44d52eda44"
+			]
+		},
+		"Pistol": {
+			"Common": [
+				"5cadc190ae921500103bb3b6",
+				"5e81c3cbac2bb513793cdc75",
+				"5f36a0e5fbf956000b716b65",
+				"5a7ae0c351dfba0017554310",
+				"576a581d2459771e7b1bc4f1",
+				"5448bd6b4bdc2dfc2f8b4569",
+				"5a17f98cfcdbcb0980087290",
+				"56d59856d2720bd8418b456a",
+				"56e0598dd2720bb5668b45a6"
+			],
+			"Uncommon": [
+				"6193a720f8ee7e52e42109ed",
+				"602a9740da11d6478d5a06dc",
+				"59f98b4986f7746f546d2cef",
+				"5abccb7dd8ce87001773e277"
+			],
+			"Rare": [
+				"5d3eb3b0a4b93615055e84d2",
+				"5d67abc1a4b93614ec50137f",
+				"5b1fa9b25acfc40018633c01",
+				"579204f224597773d619e051"
+			],
+			"Superrare": [
+				"571a12c42459771f627b58a0",
+				"5b3b713c5acfc4330140bd8d"
+			]
+		},
+		"Revolver": {
+			"Common": [
+				"624c2e8614da335f1e034d8c",
+				"61a4c8884f95bc3b2c5dc96f"
+			],
+			"Uncommon": [
+				"60db29ce99594040e04c4a27"
+			],
+			"Rare": [],
+			"Superrare": []
+		},
+		"Shotgun": {
+			"Common": [
+				"5580223e4bdc2d1c128b457f",
+				"5a38e6bac4a2826c6e06d79b"
+			],
+			"Uncommon": [
+				"6259b864ebedf17603599e88",
+				"61f7c9e189e6fb1a5e3ea78d",
+				"576165642459773c7a400233",
+				"54491c4f4bdc2db1078b4568",
+				"606dae0ab0e443224b421bb7",
+				"5a7828548dc32e5a9c28b516"
+			],
+			"Rare": [
+				"56dee2bdd2720bc8328b4567",
+				"5e870397991fd70db46995c8"
+			],
+			"Superrare": [
+				"5e848cc2988a8701445df1e8"
+			]
+		},
+		"SniperRifle": {
+			"Common": [],
+			"Uncommon": [
+				"5de652c31b7e3716273428be"
+			],
+			"Rare": [
+				"5bfd297f0db834001a669119",
+				"5bfea6e90db834001b7347f3"
+			],
+			"Superrare": [
+				"5ae08f0a5acfc408fb1398a1",
+				"55801eed4bdc2d89578b4588",
+				"588892092459774ac91d4b11",
+				"5df24cf80dee1b22f862e9bc"
+			]
+		},
+		"Smg": {
+			"Common": [
+				"59f9cabd86f7743a10721f46",
+				"57d14d2524597714373db789"
+			],
+			"Uncommon": [
+				"5e00903ae9dc277128008b87",
+				"5de7bd7bfd6b4e6e2276dc25",
+				"5d2f0d8048f0356c925bc3b0",
+				"59984ab886f7743e98271174",
+				"60339954d62c9b14ed777c06",
+				"5ea03f7400685063ec28bfa8",
+				"57f3c6bd24597738e730fa2f",
+				"57f4c844245977379d5c14d1"
+			],
+			"Rare": [
+				"5926bb2186f7744b1c6c6e60",
+				"5ba26383d4351e00334c93d9",
+				"5fc3e272f8b6a877a729eac5"
+			],
+			"Superrare": [
+				"5cc82d76e24e8d00134b4b83",
+				"5bd70322209c4d00d7167b8f",
+				"58948c8e86f77409493f7266",
+				"5fb64bc92b1b027b1f50bcf2",
+				"5fc3f2d5900b1d5091531e57"
+			]
+		},
+		"SpecialWeapon": {
+			"Common": [],
+			"Uncommon": [],
+			"Rare": [],
+			"Superrare": []
+		}
+	},
+	"Ammo": {
+		"Caliber40mmRU": {
+			"Common": [],
+			"Uncommon": [],
+			"Rare": [],
+			"Superrare": [
+				"5656eb674bdc2d35148b457c",
+				"5656eb674bdc2d35148b457c"
+			]
+		},
+		"Caliber1143x23ACP": {
+			"Common": [],
+			"Uncommon": [
+				"5efb0cabfb3e451d70735af5",
+				"5efb0cabfb3e451d70735af5"
+			],
+			"Rare": [],
+			"Superrare": [
+				"5e81f423763d9f754677bf2e",
+				"5efb0fc6aeb21837e749c801",
+				"5efb0d4f4bc50b58e81710f3",
+				"5ea2a8e200685063ec28c05a",
+				"5e81f423763d9f754677bf2e",
+				"5efb0fc6aeb21837e749c801",
+				"5efb0d4f4bc50b58e81710f3",
+				"5ea2a8e200685063ec28c05a"
+			]
+		},
+		"Caliber127x55": {
+			"Common": [],
+			"Uncommon": [],
+			"Rare": [],
+			"Superrare": [
+				"5cadf6ddae9215051e1c23b2",
+				"5cadf6e5ae921500113bb973",
+				"5cadf6eeae921500134b2799",
+				"5cadf6ddae9215051e1c23b2",
+				"5cadf6e5ae921500113bb973",
+				"5cadf6eeae921500134b2799"
+			]
+		},
+		"Caliber12g": {
+			"Common": [
+				"560d5e524bdc2d25448b4571",
+				"58820d1224597753c90aeb13",
+				"560d5e524bdc2d25448b4571",
+				"58820d1224597753c90aeb13"
+			],
+			"Uncommon": [
+				"5d6e68a8a4b9360b6c0d54e2",
+				"5d6e6869a4b9361c140bcfde",
+				"5d6e68b3a4b9361bca7e50b5",
+				"5d6e6891a4b9361bd473feea",
+				"5d6e68d1a4b93622fe60e845",
+				"5d6e68a8a4b9360b6c0d54e2",
+				"5d6e6869a4b9361c140bcfde",
+				"5d6e68b3a4b9361bca7e50b5",
+				"5d6e6891a4b9361bd473feea",
+				"5d6e68d1a4b93622fe60e845"
+			],
+			"Rare": [
+				"5d6e6772a4b936088465b17c",
+				"5d6e67fba4b9361bc73bc779",
+				"5d6e6806a4b936088465b17e",
+				"5d6e68dea4b9361bcc29e659",
+				"5c0d591486f7744c505b416f",
+				"5d6e68e6a4b9361c140bcfe0",
+				"5d6e689ca4b9361bc8618956",
+				"5d6e6772a4b936088465b17c",
+				"5d6e67fba4b9361bc73bc779",
+				"5d6e6806a4b936088465b17e",
+				"5d6e68dea4b9361bcc29e659",
+				"5c0d591486f7744c505b416f",
+				"5d6e68e6a4b9361c140bcfe0",
+				"5d6e689ca4b9361bc8618956"
+			],
+			"Superrare": [
+				"5d6e6911a4b9361bd5780d52",
+				"5d6e68c4a4b9361b93413f79",
+				"5d6e6911a4b9361bd5780d52",
+				"5d6e68c4a4b9361b93413f79"
+			]
+		},
+		"Caliber20g": {
+			"Common": [
+				"5a38ebd9c4a282000d722a5b",
+				"5d6e695fa4b936359b35d852",
+				"5d6e69b9a4b9361bc8618958",
+				"5d6e69c7a4b9360b6c0d54e4",
+				"5a38ebd9c4a282000d722a5b",
+				"5d6e695fa4b936359b35d852",
+				"5d6e69b9a4b9361bc8618958",
+				"5d6e69c7a4b9360b6c0d54e4"
+			],
+			"Uncommon": [
+				"5d6e6a53a4b9361bd473feec",
+				"5d6e6a42a4b9364f07165f52",
+				"5d6e6a53a4b9361bd473feec",
+				"5d6e6a42a4b9364f07165f52"
+			],
+			"Rare": [
+				"5d6e6a5fa4b93614ec501745",
+				"5d6e6a05a4b93618084f58d0",
+				"5d6e6a5fa4b93614ec501745",
+				"5d6e6a05a4b93618084f58d0"
+			],
+			"Superrare": []
+		},
+		"Caliber23x75": {
+			"Common": [],
+			"Uncommon": [],
+			"Rare": [],
+			"Superrare": [
+				"5e85aa1a988a8701445df1f5",
+				"5e85a9f4add9fe03027d9bf1",
+				"5e85aa1a988a8701445df1f5",
+				"5e85a9f4add9fe03027d9bf1"
+			]
+		},
+		"Caliber26x75": {
+			"Common": [],
+			"Uncommon": [],
+			"Rare": [],
+			"Superrare": [
+				"62389bc9423ed1685422dc57",
+				"62389bc9423ed1685422dc57"
+			]
+		},
+		"Caliber30x29": {
+			"Common": [],
+			"Uncommon": [],
+			"Rare": [],
+			"Superrare": [
+				"5d70e500a4b9364de70d38ce",
+				"5d70e500a4b9364de70d38ce"
+			]
+		},
+		"Caliber366TKM": {
+			"Common": [
+				"59e6542b86f77411dc52a77a",
+				"59e6542b86f77411dc52a77a"
+			],
+			"Uncommon": [
+				"59e6658b86f77411d949b250",
+				"59e6658b86f77411d949b250"
+			],
+			"Rare": [
+				"59e655cb86f77411dc52a77b",
+				"59e655cb86f77411dc52a77b"
+			],
+			"Superrare": [
+				"5f0596629e22f464da6bbdd9",
+				"5f0596629e22f464da6bbdd9"
+			]
+		},
+		"Caliber40x46": {
+			"Common": [],
+			"Uncommon": [],
+			"Rare": [],
+			"Superrare": [
+				"5ede474b0c226a66f5402622",
+				"5ede475b549eed7c6d5c18fb",
+				"5ede4739e0350d05467f73e8",
+				"5f0c892565703e5c461894e9",
+				"5ede47405b097655935d7d16",
+				"5ede475339ee016e8c534742",
+				"5ede474b0c226a66f5402622",
+				"5ede475b549eed7c6d5c18fb",
+				"5ede4739e0350d05467f73e8",
+				"5f0c892565703e5c461894e9",
+				"5ede47405b097655935d7d16",
+				"5ede475339ee016e8c534742"
+			]
+		},
+		"Caliber46x30": {
+			"Common": [],
+			"Uncommon": [
+				"5ba26812d4351e003201fef1",
+				"5ba26844d4351e00334c9475",
+				"5ba26812d4351e003201fef1",
+				"5ba26844d4351e00334c9475"
+			],
+			"Rare": [
+				"5ba26835d4351e0035628ff5",
+				"5ba26835d4351e0035628ff5"
+			],
+			"Superrare": [
+				"5ba2678ad4351e44f824b344",
+				"5ba2678ad4351e44f824b344"
+			]
+		},
+		"Caliber545x39": {
+			"Common": [],
+			"Uncommon": [
+				"56dff216d2720bbd668b4568",
+				"56dff3afd2720bba668b4567",
+				"56dff421d2720b5f5a8b4567",
+				"56dff4a2d2720bbd668b456a",
+				"56dff4ecd2720b5f5a8b4568",
+				"56dff216d2720bbd668b4568",
+				"56dff3afd2720bba668b4567",
+				"56dff421d2720b5f5a8b4567",
+				"56dff4a2d2720bbd668b456a",
+				"56dff4ecd2720b5f5a8b4568"
+			],
+			"Rare": [
+				"56dff026d2720bb8668b4567",
+				"56dff0bed2720bb0668b4567",
+				"56dff2ced2720bb4668b4567",
+				"56dff338d2720bbd668b4569",
+				"56dff026d2720bb8668b4567",
+				"56dff0bed2720bb0668b4567",
+				"56dff2ced2720bb4668b4567",
+				"56dff338d2720bbd668b4569"
+			],
+			"Superrare": [
+				"5c0d5e4486f77478390952fe",
+				"56dfef82d2720bbd668b4567",
+				"56dff061d2720bb5668b4567",
+				"5c0d5e4486f77478390952fe",
+				"56dfef82d2720bbd668b4567",
+				"56dff061d2720bb5668b4567"
+			]
+		},
+		"Caliber556x45NATO": {
+			"Common": [],
+			"Uncommon": [
+				"59e6920f86f77411d82aa167",
+				"59e6927d86f77411da468256",
+				"54527ac44bdc2d36668b4567",
+				"59e6906286f7746c9f75e847",
+				"5c0d5ae286f7741e46554302",
+				"59e6920f86f77411d82aa167",
+				"59e6927d86f77411da468256",
+				"54527ac44bdc2d36668b4567",
+				"59e6906286f7746c9f75e847",
+				"5c0d5ae286f7741e46554302"
+			],
+			"Rare": [
+				"54527a984bdc2d4e668b4567",
+				"59e68f6f86f7746c9f75e846",
+				"59e690b686f7746c9f75e848",
+				"59e6918f86f7746c9f75e849",
+				"54527a984bdc2d4e668b4567",
+				"59e68f6f86f7746c9f75e846",
+				"59e690b686f7746c9f75e848",
+				"59e6918f86f7746c9f75e849"
+			],
+			"Superrare": [
+				"60194943740c5d77f6705eea",
+				"601949593ae8f707c4608daa",
+				"60194943740c5d77f6705eea",
+				"601949593ae8f707c4608daa"
+			]
+		},
+		"Caliber57x28": {
+			"Common": [],
+			"Uncommon": [
+				"5cc80f67e4a949035e43bbba",
+				"5cc80f38e4a949001152b560",
+				"5cc80f67e4a949035e43bbba",
+				"5cc80f38e4a949001152b560"
+			],
+			"Rare": [
+				"5cc86832d7f00c000d3a6e6c",
+				"5cc86832d7f00c000d3a6e6c"
+			],
+			"Superrare": [
+				"5cc80f53e4a949000e1ea4f8",
+				"5cc86840d7f00c002412c56c",
+				"5cc80f8fe4a949033b0224a2",
+				"5cc80f79e4a949033c7343b2",
+				"5cc80f53e4a949000e1ea4f8",
+				"5cc86840d7f00c002412c56c",
+				"5cc80f8fe4a949033b0224a2",
+				"5cc80f79e4a949033c7343b2"
+			]
+		},
+		"Caliber762x25TT": {
+			"Common": [
+				"573602322459776445391df1",
+				"573603562459776430731618",
+				"573603c924597764442bd9cb",
+				"5735fdcd2459776445391d61",
+				"573602322459776445391df1",
+				"573603562459776430731618",
+				"573603c924597764442bd9cb",
+				"5735fdcd2459776445391d61"
+			],
+			"Uncommon": [
+				"5735ff5c245977640e39ba7e",
+				"5736026a245977644601dc61",
+				"5735ff5c245977640e39ba7e",
+				"5736026a245977644601dc61"
+			],
+			"Rare": [],
+			"Superrare": [
+				"573601b42459776410737435",
+				"573601b42459776410737435"
+			]
+		},
+		"Caliber9x19PARA": {
+			"Common": [],
+			"Uncommon": [
+				"5c3df7d588a4501f290594e5",
+				"58864a4f2459770fcc257101",
+				"5c925fa22e221601da359b7b",
+				"5c3df7d588a4501f290594e5",
+				"58864a4f2459770fcc257101",
+				"5c925fa22e221601da359b7b"
+			],
+			"Rare": [
+				"5efb0da7a29a85116f6ea05f",
+				"5a3c16fe86f77452b62de32a",
+				"5efb0da7a29a85116f6ea05f",
+				"5a3c16fe86f77452b62de32a"
+			],
+			"Superrare": [
+				"56d59d3ad2720bdb418b4577",
+				"5efb0e16aeb21837e749c7ff",
+				"5c0d56a986f774449d5de529",
+				"56d59d3ad2720bdb418b4577",
+				"5efb0e16aeb21837e749c7ff",
+				"5c0d56a986f774449d5de529"
+			]
+		},
+		"Caliber762x35": {
+			"Common": [],
+			"Uncommon": [],
+			"Rare": [
+				"5fbe3ffdf8b6a877a729ea82",
+				"5fd20ff893a8961fc660a954",
+				"6196365d58ef8c428c287da1",
+				"5fbe3ffdf8b6a877a729ea82",
+				"5fd20ff893a8961fc660a954",
+				"6196365d58ef8c428c287da1"
+			],
+			"Superrare": [
+				"619636be6db0f2477964e710",
+				"6196364158ef8c428c287d9f",
+				"619636be6db0f2477964e710",
+				"6196364158ef8c428c287d9f"
+			]
+		},
+		"Caliber762x39": {
+			"Common": [],
+			"Uncommon": [
+				"5656d7c34bdc2d9d198b4587",
+				"59e4cf5286f7741778269d8a",
+				"5656d7c34bdc2d9d198b4587",
+				"59e4cf5286f7741778269d8a"
+			],
+			"Rare": [
+				"59e0d99486f7744a32234762",
+				"59e0d99486f7744a32234762"
+			],
+			"Superrare": [
+				"59e4d3d286f774176a36250a",
+				"59e4d24686f7741776641ac7",
+				"601aa3d2b2bcb34913271e6d",
+				"59e4d3d286f774176a36250a",
+				"59e4d24686f7741776641ac7",
+				"601aa3d2b2bcb34913271e6d"
+			]
+		},
+		"Caliber762x51": {
+			"Common": [],
+			"Uncommon": [],
+			"Rare": [
+				"5a6086ea4f39f99cd479502f",
+				"5a608bf24f39f98ffc77720e",
+				"5e023e6e34d52a55c3304f71",
+				"5a6086ea4f39f99cd479502f",
+				"5a608bf24f39f98ffc77720e",
+				"5e023e6e34d52a55c3304f71"
+			],
+			"Superrare": [
+				"58dd3ad986f77403051cba8f",
+				"5e023e53d4353e3302577c4c",
+				"5efb0c1bd79ff02a1f5e68d9",
+				"5e023e88277cce2b522ff2b1",
+				"58dd3ad986f77403051cba8f",
+				"5e023e53d4353e3302577c4c",
+				"5efb0c1bd79ff02a1f5e68d9",
+				"5e023e88277cce2b522ff2b1"
+			]
+		},
+		"Caliber762x54R": {
+			"Common": [],
+			"Uncommon": [],
+			"Rare": [
+				"5887431f2459777e1612938f",
+				"5887431f2459777e1612938f"
+			],
+			"Superrare": [
+				"5e023d34e8a400319a28ed44",
+				"5e023d48186a883be655e551",
+				"5e023cf8186a883be655e54f",
+				"59e77a2386f7742ee578960a",
+				"560d61e84bdc2da74d8b4571",
+				"5e023d34e8a400319a28ed44",
+				"5e023d48186a883be655e551",
+				"5e023cf8186a883be655e54f",
+				"59e77a2386f7742ee578960a",
+				"560d61e84bdc2da74d8b4571"
+			]
+		},
+		"Caliber86x70": {
+			"Common": [],
+			"Uncommon": [],
+			"Rare": [],
+			"Superrare": [
+				"5fc382a9d724d907e2077dab",
+				"5fc275cf85fd526b824a571a",
+				"5fc382c1016cce60e8341b20",
+				"5fc382b6d6fa9c00c571bbc3",
+				"5fc382a9d724d907e2077dab",
+				"5fc275cf85fd526b824a571a",
+				"5fc382c1016cce60e8341b20",
+				"5fc382b6d6fa9c00c571bbc3"
+			]
+		},
+		"Caliber9x18PM": {
+			"Common": [
+				"57371eb62459776125652ac1",
+				"573719762459775a626ccbc1",
+				"57371eb62459776125652ac1",
+				"573719762459775a626ccbc1"
+			],
+			"Uncommon": [
+				"57371b192459775a9f58a5e0",
+				"57371b192459775a9f58a5e0"
+			],
+			"Rare": [
+				"57371aab2459775a77142f22",
+				"57371e4124597760ff7b25f1",
+				"5737207f24597760ff7b25f2",
+				"573720e02459776143012541",
+				"5737218f245977612125ba51",
+				"57371aab2459775a77142f22",
+				"57371e4124597760ff7b25f1",
+				"5737207f24597760ff7b25f2",
+				"573720e02459776143012541",
+				"5737218f245977612125ba51"
+			],
+			"Superrare": [
+				"573718ba2459775a75491131",
+				"573719df2459775a626ccbc2",
+				"57371f8d24597761006c6a81",
+				"5737201124597760fc4431f1",
+				"57371f2b24597761224311f1",
+				"57372140245977611f70ee91",
+				"573718ba2459775a75491131",
+				"573719df2459775a626ccbc2",
+				"57371f8d24597761006c6a81",
+				"5737201124597760fc4431f1",
+				"57371f2b24597761224311f1",
+				"57372140245977611f70ee91"
+			]
+		},
+		"Caliber9x21": {
+			"Common": [],
+			"Uncommon": [],
+			"Rare": [
+				"5a26abfac4a28232980eabff",
+				"5a26abfac4a28232980eabff"
+			],
+			"Superrare": [
+				"5a269f97c4a282000b151807",
+				"5a26ac06c4a282000c5a90a8",
+				"5a26ac0ec4a28200741e1e18",
+				"5a269f97c4a282000b151807",
+				"5a26ac06c4a282000c5a90a8",
+				"5a26ac0ec4a28200741e1e18"
+			]
+		},
+		"Caliber9x33R": {
+			"Common": [],
+			"Uncommon": [],
+			"Rare": [
+				"62330bfadc5883093563729b",
+				"62330c40bdd19b369e1e53d1",
+				"62330bfadc5883093563729b",
+				"62330c40bdd19b369e1e53d1"
+			],
+			"Superrare": [
+				"62330b3ed4dc74626d570b95",
+				"62330c18744e5e31df12f516",
+				"62330b3ed4dc74626d570b95",
+				"62330c18744e5e31df12f516"
+			]
+		},
+		"Caliber9x39": {
+			"Common": [],
+			"Uncommon": [],
+			"Rare": [
+				"5c0d688c86f77413ae3407b2",
+				"57a0dfb82459774d3078b56c",
+				"5c0d668f86f7747ccb7f13b2",
+				"5c0d688c86f77413ae3407b2",
+				"57a0dfb82459774d3078b56c",
+				"5c0d668f86f7747ccb7f13b2"
+			],
+			"Superrare": [
+				"61962d879bb3d20b0946d385",
+				"57a0e5022459774d1673f889",
+				"61962d879bb3d20b0946d385",
+				"57a0e5022459774d1673f889"
+			]
+		}
+	}
+}
