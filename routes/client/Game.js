@@ -1,6 +1,6 @@
 const { GameController } = require("../../lib/controllers");
 const { Bot } = require("../../lib/models/Bot");
-const { logger, FastifyResponse, writeFile, stringify } = require("../../utilities");
+const { FastifyResponse, writeFile, stringify } = require("../../utilities");
 
 module.exports = async function gameRoutes(app, _opts) {
 
@@ -35,5 +35,5 @@ module.exports = async function gameRoutes(app, _opts) {
             FastifyResponse.applyBody({ status: "ok" })
         );
     });
-    
+
 };

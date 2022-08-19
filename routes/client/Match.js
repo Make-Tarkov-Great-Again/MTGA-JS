@@ -1,3 +1,4 @@
+const { GameController } = require("../../lib/controllers");
 const { logger, FastifyResponse } = require("../../utilities");
 
 module.exports = async function matchRoutes(app, _opts) {
@@ -11,7 +12,7 @@ module.exports = async function matchRoutes(app, _opts) {
     });
 
     app.post(`/client/match/offline/end`, async (request, reply) => {
-        logger.logConsole(`[match/offline/end] : ${request.body}`)
+        logger.logConsole(`[match/offline/end] : ${request.body}`);
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(null, 0, null)
@@ -35,5 +36,5 @@ module.exports = async function matchRoutes(app, _opts) {
             FastifyResponse.applyBody(null)
         );
     });
-    
+
 };
