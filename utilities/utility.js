@@ -18,7 +18,7 @@ const isUndefined = async (value) => {
 
 /**
  * Get files updated date
- * @param {*} path 
+ * @param {string} path 
  * @returns 
  */
 const getFileUpdatedDate = (path) => {
@@ -183,7 +183,7 @@ const findAndReturnChildrenByItems = async (items, itemId) => {
 
 /**
  * Remove duplicate items from array
- * @param {*} arr 
+ * @param {[]} arr 
  * @returns 
  */
 const removeDuplicatesFromArray = async (arr) => {
@@ -192,8 +192,8 @@ const removeDuplicatesFromArray = async (arr) => {
 
 /**
  * Group array by specific object property
- * @param {*} array 
- * @param {*} property 
+ * @param {[]} array 
+ * @param {string} property 
  * @returns 
  */
 const groupArrayByObjectProperty = async (array, property) => {
