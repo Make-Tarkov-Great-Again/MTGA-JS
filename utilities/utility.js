@@ -181,6 +181,51 @@ const findAndReturnChildrenByItems = async (items, itemId) => {
     return list;
 }
 
+/**
+ * Remove duplicate items from array
+ * @param {*} arr 
+ * @returns 
+ */
+const removeDuplicatesFromArray = async (arr) => {
+    return [...new Set(arr)];
+}
+
+/**
+ * Group array by specific object property
+ * @param {*} array 
+ * @param {*} property 
+ * @returns 
+ */
+const groupArrayByObjectProperty = async (array, property) => {
+    const grouped = {};
+    for (const object of array) {
+        const groupName = property(object);
+        if (!grouped[groupName]) {
+            grouped[groupName] = [];
+        }
+        grouped[groupName].push(object);
+    }
+    return grouped;
+}
+
+/**
+ * Return true or false if two arrays contain the same values
+ * @param {[]} one Array
+ * @param {[]} two Array
+ * @returns 
+ */
+const compareArrays = async (one, two) => {
+    if (one.length === two.length) {
+        for (const value of one) {
+            if (!two.includes(value)) {
+                return false;
+            }
+        }
+        return true;
+    }
+    return false;
+}
+
 
 module.exports = {
     makeSign,
@@ -198,5 +243,8 @@ module.exports = {
     templatesWithParent,
     isCategory,
     childrenCategories,
-    getFileUpdatedDate
+    getFileUpdatedDate,
+    removeDuplicatesFromArray,
+    groupArrayByObjectProperty,
+    compareArrays
 };
