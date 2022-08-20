@@ -181,6 +181,10 @@ const findAndReturnChildrenByItems = async (items, itemId) => {
     return list;
 }
 
+const removeDuplicatesFromArray = async (arr) => {
+    return [...new Set(arr)];
+}
+
 
 module.exports = {
     makeSign,
@@ -198,5 +202,6 @@ module.exports = {
     templatesWithParent,
     isCategory,
     childrenCategories,
-    getFileUpdatedDate
+    getFileUpdatedDate,
+    removeDuplicatesFromArray
 };
