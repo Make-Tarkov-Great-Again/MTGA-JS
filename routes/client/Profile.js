@@ -219,10 +219,13 @@ module.exports = async function profileRoutes(app, _opts) {
                     break;
 
                 case "RestoreHealth":
-                    actionResult = await GameController.clientGameProfileRestoreHealth(moveAction, reply, playerProfile);
+                    actionResult = await GameController.clientGameProfileTraderRestoreHealth(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
-
+                case "Heal":
+                    actionResult = await GameController.clientGameProfilePlayerRestoreHealth(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
                 // more, MOOOOOOOOOOOOOOORE
                 case "Insure":
                 case "RagFairAddOffer":
@@ -234,7 +237,7 @@ module.exports = async function profileRoutes(app, _opts) {
                 case "Swap":
                 case "Transfer":
                 case "Eat":
-                case "Heal":
+                
                 case "CreateMapMarker":
                 case "QuestComplete":
                 case "QuestHandover":
