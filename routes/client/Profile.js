@@ -202,6 +202,10 @@ module.exports = async function profileRoutes(app, _opts) {
                     actionResult = await GameController.clientGameProfileEat(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
+                case "TraderRepair":
+                    actionResult = await GameController.clientGameTraderRepair(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
                 // more, MOOOOOOOOOOOOOOORE
                 case "Insure":
                 case "RagFairAddOffer":
@@ -216,7 +220,6 @@ module.exports = async function profileRoutes(app, _opts) {
                 case "QuestComplete":
                 case "QuestHandover":
                 case "Repair":
-                case "TraderRepair":
                 default:
                     logger.logWarning("[/client/game/profile/items/moving] Action " + action + " is not yet implemented.");
             }
