@@ -17,7 +17,8 @@ class FastifyResponse {
         return {
             "server": FastifyResponse.getUrl(),
             "channel_id": sessionID,
-            "ws": `${FastifyResponse.getWebSocketDirectUrl()}`
+            "ws": `${FastifyResponse.getWebSocketDirectUrl()}`,
+            "url": `${FastifyResponse.getBackendUrl()}`
         };
     }
 
