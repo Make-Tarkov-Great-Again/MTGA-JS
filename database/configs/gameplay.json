@@ -6,6 +6,7 @@
     },
     "items": {
         "quickExamine": true,
+        "allExamined": true,
         "stackSize": {
             "ammo": 120,
             "money": 1000000
