@@ -1,5 +1,5 @@
 const { GameController } = require("../../lib/controllers");
-const { ItemController, HideoutController, ProfileController } = require("../../lib/controllers");
+const { ItemController, HideoutController, ProfileController, NoteController } = require("../../lib/controllers");
 const { Profile } = require("../../lib/models/Profile");
 const { logger, FastifyResponse } = require("../../utilities");
 
@@ -153,6 +153,30 @@ module.exports = async function profileRoutes(app, _opts) {
                     actionResult = await HideoutController.takeProduction(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
+                case "AddNote":
+                    actionResult = await NoteController.addNote(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "EditNote":
+                    actionResult = await NoteController.editNote(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "DeleteNote":
+                    actionResult = await NoteController.removeNote(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "RestoreHealth":
+                    actionResult = await ProfileController.playerHealTrader(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "Heal":
+                    actionResult = await ProfileController.playerHealItem(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "Eat":
+                    actionResult = await ProfileController.playerEat(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
                 case "QuestAccept":
                     actionResult = await GameController.clientGameProfileAcceptQuest(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
@@ -166,18 +190,6 @@ module.exports = async function profileRoutes(app, _opts) {
                     actionResult = await GameController.clientGameProfileReadEncyclopedia(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
-                case "AddNote":
-                    actionResult = await GameController.clientGameProfileAddNote(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "EditNote":
-                    actionResult = await GameController.clientGameProfileEditNote(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "DeleteNote":
-                    actionResult = await GameController.clientGameProfileRemoveNote(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
                 case "ResetWishList":
                     actionResult = await GameController.clientGameProfileResetWishList(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
@@ -189,18 +201,6 @@ module.exports = async function profileRoutes(app, _opts) {
                 case "CustomizationWear":
                     actionResult = await GameController.clientGameProfileCustomizationWear(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesBase(actionResult, outputData);
-                    break;
-                case "RestoreHealth":
-                    actionResult = await ProfileController.playerHealTrader(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "Heal":
-                    actionResult = await ProfileController.playerHealItem(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "Eat":
-                    actionResult = await ProfileController.playerEat(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "TraderRepair":
                     actionResult = await GameController.clientGameTraderRepair(moveAction, reply, playerProfile);
