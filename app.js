@@ -19,19 +19,17 @@ const { logger, parse } = require("./utilities");
 DatabaseLoader.setDatabase();
 let cert;
 if (process.platform === 'win32' || process.platform === 'win64') {
-    
     const fs = require('fs');
+    cert = certificate.generate(database.core.serverConfig.ip, database.core.serverConfig.hostname, 3);
 
     const clearCertificateScriptPath = `${__dirname}/scripts/clear-certificate.ps1`;
     const execSync = require('child_process').execSync;
-    let code = execSync(`powershell.exe -ExecutionPolicy Bypass -File "${clearCertificateScriptPath}"`);
-    
-    cert = certificate.generate(database.core.serverConfig.ip, database.core.serverConfig.hostname, 3);
+    const code = execSync(`powershell.exe -ExecutionPolicy Bypass -File "${clearCertificateScriptPath}"`);
 
     const installCertificateScriptPath = `${__dirname}/scripts/install-certificate.ps1`;
     const installCertificateScript = fs.readFileSync(installCertificateScriptPath);
-    let spawn = require('child_process').spawn;
-    let installCertificatePowerShell = spawn('powershell', [installCertificateScript]);
+    const spawn = require('child_process').spawn;
+    const installCertificatePowerShell = spawn('powershell', [installCertificateScript]);
 
     let userCancelOrError = false;
     // Redirect stdout and stderr to our script output.
@@ -50,11 +48,15 @@ if (process.platform === 'win32' || process.platform === 'win64') {
     });
 
     installCertificatePowerShell.on('close', function (_code) {
-        if(userCancelOrError) {
-            logger.logError(`Unable to install the certificate. Error occured or user canceled the installation.`)
-            logger.logError(`The certificate is required for Websockets to work, otherwise the tarkov client will not connect to the socket endpoint.`)
-            logger.logError(`If you have any security concerns, you can take a look at the script ${installCertificateScriptPath}. The certificate lifetime is 3 days.`)
-            logger.logError(`The certificate is generated on first start and will be saved to /user/certs/.`)
+        if (userCancelOrError) {
+            logger.logError(`HTTPS Certification Installation failed!`);
+            logger.logError(`If an error occured, report on Discord.`);
+            logger.logError(` 
+            If you chose not to allow the installation, read below:
+             `);
+            logger.logError(`The certificate is required for Websockets to work, otherwise the Client will not connect to the socket endpoint.`);
+            logger.logError(`If you have any security concerns, you can take a look at the script ${installCertificateScriptPath}.`);
+            logger.logError(`The certificate is generated on first start, has a lifetime of 3 days, and will is saved to /user/certs/.`);
             //logger.logDebug(scriptOutput);
         } else {
             //open(`https://${database.core.serverConfig.ip}:${database.core.serverConfig.port}`) Opens the weblauncher automatically if wanted.
@@ -160,12 +162,11 @@ app.server.on("upgrade", function (request, socket, head) {
 });
 
 app.server.on("error", function (error) {
-    logger.logError(error);
+    logger.logError(`[ERROR]` + error);
 });
 
-app.server.on("listening", function (){
-    logger.logConsole(``);
-    logger.logConsole(``);
+app.server.on("listening", function () {
+    logger.logConsole(` `);
     logger.logConsole(`     █▀▄▀█    ▄▄▄▄▀   ▄▀  ██   `);
     logger.logConsole(`     █ █ █ ▀▀▀ █    ▄▀    █ █  `);
     logger.logConsole(`     █ ▄ █     █    █ ▀▄  █▄▄█ `);
@@ -174,10 +175,9 @@ app.server.on("listening", function (){
     logger.logConsole(`       ▀                    █  `);
     logger.logConsole(`                           ▀`);
     logger.logConsole(`     Make Tarkov Great Again`);
-    logger.logConsole(``);
+    logger.logConsole(` `);
 });
 
 app.register(require('./plugins/register.js'));
-
 app.listen({ port: database.core.serverConfig.port, host: database.core.serverConfig.ip });
 
