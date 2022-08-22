@@ -1,5 +1,5 @@
-const { GameController, HideoutController } = require("../../lib/controllers");
-const { ItemController } = require("../../lib/controllers");
+const { GameController } = require("../../lib/controllers");
+const { ItemController, HideoutController, ProfileController } = require("../../lib/controllers");
 const { Profile } = require("../../lib/models/Profile");
 const { logger, FastifyResponse } = require("../../utilities");
 
@@ -36,31 +36,31 @@ module.exports = async function profileRoutes(app, _opts) {
     });
 
     app.post("/client/game/profile/list", async (request, reply) => {
-        await GameController.clientProfileList(request, reply);
+        await ProfileController.profileList(request, reply);
     });
 
     app.post("/client/game/profile/select", async (request, reply) => {
-        await GameController.clientProfileSelect(request, reply);
+        await ProfileController.ProfileSelect(request, reply);
     });
 
     app.post("/client/game/profile/nickname/reserved", async (request, reply) => {
-        await GameController.clientGameProfileNicknameReserved(request, reply);
+        await ProfileController.profileNicknameReserved(request, reply);
     });
 
     app.post("/client/game/profile/nickname/validate", async (request, reply) => {
-        await GameController.clientGameProfileNicknameValidate(request, reply);
+        await ProfileController.profileNicknameValidate(request, reply);
     });
 
     app.post("/client/game/profile/nickname/change", async (request, reply) => {
-        await GameController.clientGameProfileNicknameChange(request, reply);
+        await ProfileController.profileNicknameChange(request, reply);
     });
 
     app.post("/client/game/profile/create", async (request, reply) => {
-        await GameController.clientGameProfileCreate(request, reply);
+        await ProfileController.profileCreate(request, reply);
     });
 
     app.post("/client/game/profile/voice/change", async (request, reply) => {
-        await GameController.clientGameProfileVoiceChange(request, reply);
+        await ProfileController.profileVoiceChange(request, reply);
     });
 
     app.post(`/client/game/profile/items/moving`, async (request, reply) => {
@@ -191,15 +191,15 @@ module.exports = async function profileRoutes(app, _opts) {
                     await playerProfile.getProfileChangesBase(actionResult, outputData);
                     break;
                 case "RestoreHealth":
-                    actionResult = await GameController.clientGameProfileRestoreHealth(moveAction, reply, playerProfile);
+                    actionResult = await ProfileController.playerHealTrader(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "Heal":
-                    actionResult = await GameController.clientGameProfileHeal(moveAction, reply, playerProfile);
+                    actionResult = await ProfileController.playerHealItem(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "Eat":
-                    actionResult = await GameController.clientGameProfileEat(moveAction, reply, playerProfile);
+                    actionResult = await ProfileController.playerEat(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "TraderRepair":
