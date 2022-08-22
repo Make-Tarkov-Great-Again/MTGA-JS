@@ -82,7 +82,7 @@ module.exports = async function profileRoutes(app, _opts) {
             const action = moveAction.Action;
             switch (action) {
                 case "Split":
-                    actionResult = await ItemController.splititem(moveAction, reply, playerProfile);
+                    actionResult = await ItemController.splitItem(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "Merge":
