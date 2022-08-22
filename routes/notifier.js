@@ -12,7 +12,7 @@ module.exports = async function notifierRoutes(app, _opt) {
     });
 
     app.post("/client/notifier/channel/create", async (request, reply) => {
-        const sessionID = await FastifyResponse.getSessionID(request)
+        const sessionID = await FastifyResponse.getSessionID(request);
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(FastifyResponse.getNotifier(sessionID))

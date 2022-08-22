@@ -31,7 +31,6 @@ class FastifyResponse {
         return `${database.core.serverConfig.ip}:${database.core.serverConfig.port}`;
     }
 
-
     static getBackendUrl() {
         return `https://${FastifyResponse.getUrl()}/`;
     }
