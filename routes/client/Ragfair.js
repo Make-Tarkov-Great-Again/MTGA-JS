@@ -1,4 +1,3 @@
-const { database } = require("../../app");
 const { Ragfair } = require("../../lib/models/Ragfair");
 const { FastifyResponse, logger, stringify } = require("../../utilities");
 

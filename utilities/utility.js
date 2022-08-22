@@ -2,7 +2,6 @@ const logger = require('./logger');
 const ObjectID = require("bson-objectid");
 const fs = require('fs');
 
-
 const generateMongoID = async () => {
     return ObjectID.createFromTime(process.hrtime.bigint()).toHexString();
 }
@@ -110,21 +109,18 @@ const findChildren = async (idToFind, listToSearch) => {
 
 /* all items in template with the given parent category */
 const templatesWithParent = async (x) => {
-    const { database } = require("../app");
-    const TplLookup = database.templates.TplLookup;
-    return x in TplLookup.items.byParent ? TplLookup.items.byParent[x] : [];
+    const { database: { templates: { TplLookup: { items: { byParent } } } } } = require("../app");
+    return x in byParent ? byParent[x] : [];
 }
 
 const isCategory = async (x) => {
-    const { database } = require("../app");
-    const TplLookup = database.templates.TplLookup;
-    return x in TplLookup.categories.byId;
+    const { database: { templates: { TplLookup: { categories: { byId } } } } } = require("../app");
+    return x in byId;
 }
 
 const childrenCategories = async (x) => {
-    const { database } = require("../app");
-    const TplLookup = database.templates.TplLookup;
-    return x in TplLookup.categories.byParent ? TplLookup.categories.byParent[x] : [];
+    const { database: { templates: { TplLookup: { categories: { byParent } } } } } = require("../app");
+    return x in byParent ? byParent[x] : [];
 }
 
 // This bullshit handle both currency & barters
