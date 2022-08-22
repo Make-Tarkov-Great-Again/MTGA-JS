@@ -16,5 +16,5 @@ module.exports = async function handbookRoutes(app, _opts) {
             reply,
             FastifyResponse.applyBody(output));
     });
-    
+
 };
