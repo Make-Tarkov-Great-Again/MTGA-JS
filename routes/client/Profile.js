@@ -1,4 +1,4 @@
-const { GameController } = require("../../lib/controllers");
+const { GameController, HideoutController } = require("../../lib/controllers");
 const { ItemController } = require("../../lib/controllers");
 const { Profile } = require("../../lib/models/Profile");
 const { logger, FastifyResponse } = require("../../utilities");
@@ -117,6 +117,42 @@ module.exports = async function profileRoutes(app, _opts) {
                     actionResult = await ItemController.bindItem(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
+                case "HideoutUpgrade":
+                    actionResult = await HideoutController.startUpgradeArea(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "HideoutUpgradeComplete":
+                    actionResult = await HideoutController.completeUpgradeArea(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "HideoutPutItemsInAreaSlots":
+                    actionResult = await HideoutController.addItemToAreaSlot(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "HideoutTakeItemsFromAreaSlots":
+                    actionResult = await HideoutController.takeItemFromAreaSlot(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "HideoutToggleArea":
+                    actionResult = await HideoutController.toggleArea(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "HideoutSingleProductionStart":
+                    actionResult = await HideoutController.singleProductionStart(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "HideoutContinuousProductionStart":
+                    actionResult = await HideoutController.continuousProductionStart(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "HideoutScavCaseProductionStart":
+                    actionResult = await HideoutController.scavcaseProductionStart(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "HideoutTakeProduction":
+                    actionResult = await HideoutController.takeProduction(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
                 case "QuestAccept":
                     actionResult = await GameController.clientGameProfileAcceptQuest(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
@@ -128,34 +164,6 @@ module.exports = async function profileRoutes(app, _opts) {
                     break;
                 case "ReadEncyclopedia":
                     actionResult = await GameController.clientGameProfileReadEncyclopedia(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "HideoutUpgrade":
-                    actionResult = await GameController.clientGameProfileHideoutUpgrade(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "HideoutUpgradeComplete":
-                    actionResult = await GameController.clientGameProfileHideoutUpgradeComplete(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "HideoutPutItemsInAreaSlots":
-                    actionResult = await GameController.clientGameProfileHideoutPutItemsInAreaSlots(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "HideoutTakeItemsFromAreaSlots":
-                    actionResult = await GameController.clientGameProfileHideoutTakeItemsFromAreaSlots(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "HideoutToggleArea":
-                    actionResult = await GameController.clientGameProfileHideoutToggleArea(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "HideoutSingleProductionStart":
-                    actionResult = await GameController.clientGameProfileHideoutSingleProductionStart(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "HideoutContinuousProductionStart":
-                    actionResult = await GameController.clientGameProfileHideoutContinuousProductionStart(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "AddNote":
@@ -172,14 +180,6 @@ module.exports = async function profileRoutes(app, _opts) {
                     break;
                 case "ResetWishList":
                     actionResult = await GameController.clientGameProfileResetWishList(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "HideoutScavCaseProductionStart":
-                    actionResult = await GameController.clientGameProfileHideoutScavCaseProductionStart(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "HideoutTakeProduction":
-                    actionResult = await GameController.clientGameProfileHideoutTakeProduction(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "CustomizationBuy":
