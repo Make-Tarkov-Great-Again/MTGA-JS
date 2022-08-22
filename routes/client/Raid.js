@@ -33,10 +33,9 @@ module.exports = async function raidRoutes(app, _opts) {
 
     app.post(`/client/raid/person/killed`, async (request, _reply) => {
         const { database: { core: { gameplay: { inRaid: { showDeathMessage } } } } } = require("../../app");
-        const showMessage = showDeathMessage;
 
-        if (showMessage) {
-            return stringify(showMessage)
+        if (showDeathMessage) {
+            return stringify(showDeathMessage)
         } else return stringify(false);
     });
 
