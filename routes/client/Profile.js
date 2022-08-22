@@ -206,14 +206,21 @@ module.exports = async function profileRoutes(app, _opts) {
                     actionResult = await GameController.clientGameTraderRepair(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
+                case "SaveBuild":
+                    actionResult = await GameController.clientGameSaveBuildPreset(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "RemoveBuild":
+                    actionResult = await GameController.clientGameRemoveBuildPreset(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+
                 // more, MOOOOOOOOOOOOOOORE
                 case "Insure":
                 case "RagFairAddOffer":
                 case "AddToWishList":
                 case "RemoveFromWishList":
                 case "ApplyInventoryChanges":
-                case "RemoveBuild":
-                case "SaveBuild":
                 case "Swap":
                 case "Transfer":
                 case "CreateMapMarker":
