@@ -1,5 +1,5 @@
 const { GameController } = require("../../lib/controllers");
-const { ItemController, HideoutController, ProfileController, NoteController, PresetController } = require("../../lib/controllers");
+const { ItemController, TraderController, HideoutController, ProfileController, NoteController, PresetController } = require("../../lib/controllers");
 const { Profile } = require("../../lib/models/Profile");
 const { logger, FastifyResponse } = require("../../utilities");
 
@@ -183,7 +183,7 @@ module.exports = async function profileRoutes(app, _opts) {
                     break;
                 case "RagFairBuyOffer":
                 case "TradingConfirm":
-                    actionResult = await GameController.clientGameProfileTradingConfirm(moveAction, reply, playerProfile);
+                    actionResult = await TraderController.tradingConfirm(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "ReadEncyclopedia":
@@ -203,7 +203,7 @@ module.exports = async function profileRoutes(app, _opts) {
                     await playerProfile.getProfileChangesBase(actionResult, outputData);
                     break;
                 case "TraderRepair":
-                    actionResult = await GameController.clientGameTraderRepair(moveAction, reply, playerProfile);
+                    actionResult = await TraderController.traderRepair(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "SaveBuild":
