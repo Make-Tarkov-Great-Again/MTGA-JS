@@ -40,7 +40,7 @@ module.exports = async function profileRoutes(app, _opts) {
     });
 
     app.post("/client/game/profile/select", async (request, reply) => {
-        await ProfileController.ProfileSelect(request, reply);
+        await ProfileController.profileSelect(request, reply);
     });
 
     app.post("/client/game/profile/nickname/reserved", async (request, reply) => {
