@@ -1,5 +1,5 @@
-const { Weaponbuild } = require('../../lib/models/Weaponbuild');
 const { FastifyResponse } = require("../../utilities");
+const { Account } = require("../../lib/models/Account");
 
 module.exports = async function handbookRoutes(app, _opts) {
 
@@ -10,11 +10,19 @@ module.exports = async function handbookRoutes(app, _opts) {
             FastifyResponse.applyBody(templates));
     });
 
-    app.post(`/client/handbook/builds/my/list`, async (_request, reply) => {
-        const output = await Weaponbuild.getAllWithoutKeys();
+    app.post(`/client/handbook/builds/my/list`, async (request, reply) => {
+        const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
+        const profile = await playerAccount.getProfile();
+        const storageData = await profile.getStorage()
+
+        const builds = [];
+        for (const identifier of Object.keys(storageData.builds)) {
+            builds.push(storageData.builds[identifier]);
+        }
+
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody(output));
+            FastifyResponse.applyBody(builds));
     });
 
 };
