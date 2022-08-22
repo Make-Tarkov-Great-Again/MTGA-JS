@@ -1,5 +1,5 @@
 const { GameController } = require("../../lib/controllers");
-const { ItemController, HideoutController, ProfileController, NoteController } = require("../../lib/controllers");
+const { ItemController, HideoutController, ProfileController, NoteController, PresetController } = require("../../lib/controllers");
 const { Profile } = require("../../lib/models/Profile");
 const { logger, FastifyResponse } = require("../../utilities");
 
@@ -207,11 +207,11 @@ module.exports = async function profileRoutes(app, _opts) {
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "SaveBuild":
-                    actionResult = await GameController.clientGameSaveBuildPreset(moveAction, reply, playerProfile);
+                    actionResult = await PresetController.savePreset(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "RemoveBuild":
-                    actionResult = await GameController.clientGameRemoveBuildPreset(moveAction, reply, playerProfile);
+                    actionResult = await PresetController.removePreset(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
