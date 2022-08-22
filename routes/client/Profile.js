@@ -1,6 +1,6 @@
 const { GameController } = require("../../lib/controllers");
+const { ItemController, HideoutController, ProfileController } = require("../../lib/controllers");
 const { Profile } = require("../../lib/models/Profile");
-const { Trader } = require("../../lib/models/Trader");
 const { logger, FastifyResponse } = require("../../utilities");
 
 module.exports = async function profileRoutes(app, _opts) {
@@ -36,31 +36,31 @@ module.exports = async function profileRoutes(app, _opts) {
     });
 
     app.post("/client/game/profile/list", async (request, reply) => {
-        await GameController.clientProfileList(request, reply);
+        await ProfileController.profileList(request, reply);
     });
 
     app.post("/client/game/profile/select", async (request, reply) => {
-        await GameController.clientProfileSelect(request, reply);
+        await ProfileController.ProfileSelect(request, reply);
     });
 
     app.post("/client/game/profile/nickname/reserved", async (request, reply) => {
-        await GameController.clientGameProfileNicknameReserved(request, reply);
+        await ProfileController.profileNicknameReserved(request, reply);
     });
 
     app.post("/client/game/profile/nickname/validate", async (request, reply) => {
-        await GameController.clientGameProfileNicknameValidate(request, reply);
+        await ProfileController.profileNicknameValidate(request, reply);
     });
 
     app.post("/client/game/profile/nickname/change", async (request, reply) => {
-        await GameController.clientGameProfileNicknameChange(request, reply);
+        await ProfileController.profileNicknameChange(request, reply);
     });
 
     app.post("/client/game/profile/create", async (request, reply) => {
-        await GameController.clientGameProfileCreate(request, reply);
+        await ProfileController.profileCreate(request, reply);
     });
 
     app.post("/client/game/profile/voice/change", async (request, reply) => {
-        await GameController.clientGameProfileVoiceChange(request, reply);
+        await ProfileController.profileVoiceChange(request, reply);
     });
 
     app.post(`/client/game/profile/items/moving`, async (request, reply) => {
@@ -81,16 +81,80 @@ module.exports = async function profileRoutes(app, _opts) {
         for (const moveAction of request.body.data) {
             const action = moveAction.Action;
             switch (action) {
-                case "QuestAccept":
-                    actionResult = await GameController.clientGameProfileAcceptQuest(moveAction, reply, playerProfile);
+                case "Split":
+                    actionResult = await ItemController.splititem(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "Merge":
+                    actionResult = await ItemController.mergeItem(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "Remove":
+                    actionResult = await ItemController.removeItem(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "Fold":
+                    actionResult = await ItemController.foldItem(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "Move":
-                    actionResult = await GameController.clientGameProfileMoveItem(moveAction, reply, playerProfile);
+                    actionResult = await ItemController.moveItem(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "Examine":
-                    actionResult = await GameController.clientGameProfileExamine(moveAction, reply, playerProfile);
+                    actionResult = await ItemController.examineItem(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "Tag":
+                    actionResult = await ItemController.tagItem(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "Toggle":
+                    actionResult = await ItemController.toggleItem(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "Bind":
+                    actionResult = await ItemController.bindItem(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "HideoutUpgrade":
+                    actionResult = await HideoutController.startUpgradeArea(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "HideoutUpgradeComplete":
+                    actionResult = await HideoutController.completeUpgradeArea(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "HideoutPutItemsInAreaSlots":
+                    actionResult = await HideoutController.addItemToAreaSlot(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "HideoutTakeItemsFromAreaSlots":
+                    actionResult = await HideoutController.takeItemFromAreaSlot(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "HideoutToggleArea":
+                    actionResult = await HideoutController.toggleArea(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "HideoutSingleProductionStart":
+                    actionResult = await HideoutController.singleProductionStart(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "HideoutContinuousProductionStart":
+                    actionResult = await HideoutController.continuousProductionStart(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "HideoutScavCaseProductionStart":
+                    actionResult = await HideoutController.scavcaseProductionStart(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "HideoutTakeProduction":
+                    actionResult = await HideoutController.takeProduction(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "QuestAccept":
+                    actionResult = await GameController.clientGameProfileAcceptQuest(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "RagFairBuyOffer":
@@ -98,64 +162,8 @@ module.exports = async function profileRoutes(app, _opts) {
                     actionResult = await GameController.clientGameProfileTradingConfirm(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
-                case "Split":
-                    actionResult = await GameController.clientGameProfileSplitItem(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "Merge":
-                    actionResult = await GameController.clientGameProfileMergeItem(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "Remove":
-                    actionResult = await GameController.clientGameProfileRemoveItem(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "Fold":
-                    actionResult = await GameController.clientGameProfileFoldItem(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "Tag":
-                    actionResult = await GameController.clientGameProfileTagItem(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "Toggle":
-                    actionResult = await GameController.clientGameProfileToggleItem(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "Bind":
-                    actionResult = await GameController.clientGameProfileBindItem(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
                 case "ReadEncyclopedia":
                     actionResult = await GameController.clientGameProfileReadEncyclopedia(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "HideoutUpgrade":
-                    actionResult = await GameController.clientGameProfileHideoutUpgrade(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "HideoutUpgradeComplete":
-                    actionResult = await GameController.clientGameProfileHideoutUpgradeComplete(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "HideoutPutItemsInAreaSlots":
-                    actionResult = await GameController.clientGameProfileHideoutPutItemsInAreaSlots(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "HideoutTakeItemsFromAreaSlots":
-                    actionResult = await GameController.clientGameProfileHideoutTakeItemsFromAreaSlots(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "HideoutToggleArea":
-                    actionResult = await GameController.clientGameProfileHideoutToggleArea(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "HideoutSingleProductionStart":
-                    actionResult = await GameController.clientGameProfileHideoutSingleProductionStart(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "HideoutContinuousProductionStart":
-                    actionResult = await GameController.clientGameProfileHideoutContinuousProductionStart(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "AddNote":
@@ -174,14 +182,6 @@ module.exports = async function profileRoutes(app, _opts) {
                     actionResult = await GameController.clientGameProfileResetWishList(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
-                case "HideoutScavCaseProductionStart":
-                    actionResult = await GameController.clientGameProfileHideoutScavCaseProductionStart(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
-                case "HideoutTakeProduction":
-                    actionResult = await GameController.clientGameProfileHideoutTakeProduction(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
                 case "CustomizationBuy":
                     actionResult = await GameController.clientGameProfileCustomizationBuy(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesBase(actionResult, outputData);
@@ -191,15 +191,15 @@ module.exports = async function profileRoutes(app, _opts) {
                     await playerProfile.getProfileChangesBase(actionResult, outputData);
                     break;
                 case "RestoreHealth":
-                    actionResult = await GameController.clientGameProfileRestoreHealth(moveAction, reply, playerProfile);
+                    actionResult = await ProfileController.playerHealTrader(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "Heal":
-                    actionResult = await GameController.clientGameProfileHeal(moveAction, reply, playerProfile);
+                    actionResult = await ProfileController.playerHealItem(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "Eat":
-                    actionResult = await GameController.clientGameProfileEat(moveAction, reply, playerProfile);
+                    actionResult = await ProfileController.playerEat(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "TraderRepair":
