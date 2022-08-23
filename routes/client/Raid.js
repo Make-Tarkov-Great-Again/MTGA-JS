@@ -11,7 +11,7 @@ module.exports = async function raidRoutes(app, _opts) {
 
         const { database } = require("../../app");
         const sessionID = await FastifyResponse.getSessionID(request)
-        
+
         const fence = database.core.gameplay.fence;
         const killScavChange = fence.killingScavsFenceLevelChange;
         const killPmcChange = fence.killingPMCsFenceLevelChange;
@@ -32,18 +32,15 @@ module.exports = async function raidRoutes(app, _opts) {
     });
 
     app.post(`/client/raid/person/killed`, async (request, _reply) => {
-        const { database } = require("../../app");
-        const showMessage = database.core.gameplay.inRaid.showDeathMessage;
+        const { database: { core: { gameplay: { inRaid: { showDeathMessage } } } } } = require("../../app");
 
-        if (showMessage) {
-            return stringify(showMessage)
+        if (showDeathMessage) {
+            return stringify(showDeathMessage)
         } else return stringify(false);
     });
 
     app.post(`/client/raid/createFriendlyAI`, async (request, _reply) => {
-        const { database } = require("../../app");
-        const createFriendlyAI = database.core.gameplay.inRaid.createFriendlyAI;
-
+        const { database: { core: { gameplay: { inRaid: { createFriendlyAI } } } } } = require("../../app");
         if (createFriendlyAI) {
             return stringify(createFriendlyAI)
         } else return stringify(false);
@@ -54,7 +51,7 @@ module.exports = async function raidRoutes(app, _opts) {
     });
 
     app.post(`/client/raid/person/lootingContainer`, async (request, _reply) => {
-        return stringify("")
+        return stringify("");
     });
-    
+
 }
