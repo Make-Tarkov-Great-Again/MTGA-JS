@@ -1,4 +1,4 @@
-const { logger, FastifyResponse, stringify } = require("../utilities");
+const { stringify } = require("../utilities");
 
 module.exports = async function serverRoutes(app, _opts) {
 
