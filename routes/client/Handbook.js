@@ -13,9 +13,9 @@ module.exports = async function handbookRoutes(app, _opts) {
     app.post(`/client/handbook/builds/my/list`, async (request, reply) => {
         const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
         const profile = await playerAccount.getProfile();
-        const storageData = await profile.getStorage()
+        const builds = await profile.getStorageBuilds();
 
-        if (Object.keys(storageData.builds).length === 0) {
+        if (Object.keys(builds).length === 0) {
             return FastifyResponse.zlibJsonReply(
                 reply,
                 FastifyResponse.applyBody([]));
