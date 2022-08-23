@@ -214,16 +214,16 @@ module.exports = async function profileRoutes(app, _opts) {
                     actionResult = await PresetController.removePreset(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
+                case "ApplyInventoryChanges":
+                    actionResult = await GameController.clientGameApplyInventoryChanges(moveAction, reply, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
 
                 // more, MOOOOOOOOOOOOOOORE
                 case "Insure":
                 case "RagFairAddOffer":
                 case "AddToWishList":
                 case "RemoveFromWishList":
-                case "ApplyInventoryChanges":
-                    actionResult = await GameController.clientGameApplyInventoryChanges(moveAction, reply, playerProfile);
-                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
-                    break;
                 case "Swap":
                 case "Transfer":
                 case "CreateMapMarker":
