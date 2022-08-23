@@ -40,10 +40,10 @@ module.exports = async function clientRoutes(app, _opts) {
     });
 
     app.post(`/client/server/list`, async (request, reply) => {
-        const { database } = require("../../app");
+        const { database: { core: { serverConfig: { ip, port } } } } = require("../../app");
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody([{ ip: database.core.serverConfig.ip, port: database.core.serverConfig.port }]));
+            FastifyResponse.applyBody([{ ip: ip, port: port }]));
     });
 
     app.post(`/client/menu/locale/:language`, async (request, reply) => {

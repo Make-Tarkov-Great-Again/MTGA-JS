@@ -3,7 +3,7 @@ const {
         find, register, getEditions, remove,
         changeEmail, changePassword, reloadAccountByLogin,
         wipe },
-    database: { profiles, core }
+    database: { profiles, core: { serverConfig: { name } } }
 } = require('../../app');
 const { noBody, logger } = require('../utilities');
 
@@ -36,10 +36,9 @@ module.exports = async function launcherRoutes(app, _opts) {
     });
 
     app.get('/launcher/profile/get', async (request, _reply) => {
-        const serverConfig = database.core.serverConfig;
         const accountID = await reloadAccountByLogin(request.body);
         const output = find(accountID);
-        return noBody(output["server"] = serverConfig.name);
+        return noBody(output["server"] = name);
     });
 
     app.get('/launcher/server/connect', async (_request, _reply) => {
