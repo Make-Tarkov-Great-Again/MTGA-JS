@@ -1,5 +1,12 @@
-const { GameController } = require("../../lib/controllers");
-const { ItemController, TraderController, HideoutController, ProfileController, NoteController, PresetController } = require("../../lib/controllers");
+const {
+    GameController,
+    ItemController,
+    TraderController,
+    HideoutController,
+    ProfileController,
+    NoteController,
+    PresetController
+} = require("../../lib/controllers");
 const { Profile } = require("../../lib/models/Profile");
 const { logger, FastifyResponse } = require("../../utilities");
 
