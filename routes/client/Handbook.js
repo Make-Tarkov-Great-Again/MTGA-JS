@@ -15,14 +15,14 @@ module.exports = async function handbookRoutes(app, _opts) {
         const profile = await playerAccount.getProfile();
         const storageData = await profile.getStorage()
 
-        const builds = [];
-        for (const identifier of Object.keys(storageData.builds)) {
-            builds.push(storageData.builds[identifier]);
+        if (Object.keys(storageData.builds).length === 0) {
+            return FastifyResponse.zlibJsonReply(
+                reply,
+                FastifyResponse.applyBody([]));
         }
 
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody(builds));
+            FastifyResponse.applyBody(Object.values(storageData.builds)));
     });
-
 };
