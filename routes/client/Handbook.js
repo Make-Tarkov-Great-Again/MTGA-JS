@@ -23,6 +23,6 @@ module.exports = async function handbookRoutes(app, _opts) {
 
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody(Object.values(storageData.builds)));
+            FastifyResponse.applyBody(Object.values(builds)));
     });
 };
