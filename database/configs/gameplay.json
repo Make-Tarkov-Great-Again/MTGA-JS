@@ -1,8 +1,7 @@
 {
     "development": {
         "updateLocations": false,
-        "updateBotDifficulties": false
-        
+        "updateBotDifficulties": false  
     },
     "items": {
         "quickExamine": true,

@@ -3,7 +3,7 @@ const {
         find, register, getEditions, remove,
         changeEmail, changePassword, reloadAccountByLogin,
         wipe },
-    database: { profiles, core: { serverConfig: { name } } }
+    database: { profiles, core: { serverConfig: { name, ip, port } } }
 } = require('../../app');
 const { noBody, logger } = require('../utilities');
 
@@ -43,10 +43,9 @@ module.exports = async function launcherRoutes(app, _opts) {
 
     app.get('/launcher/server/connect', async (_request, _reply) => {
         const data = getEditions(profiles);
-        const server = core.serverConfig;
         const output = {
-            backendURL: "https://" + server.ip + ":" + server.port,
-            name: server.name,
+            backendURL: "https://" + ip + ":" + port,
+            name: name,
             editions: data
         };
         logger.logDebug("[LAUNCHER CONNECT]: " + output);
