@@ -15,7 +15,7 @@ class FastifyResponse {
 
     static getNotifier(sessionID) {
         return {
-            "server": FastifyResponse.getUrl(),
+            "server": FastifyResponse.getServerAddress(),
             "channel_id": sessionID,
             "ws": `${FastifyResponse.getWebSocketDirectUrl()}`,
             "url": `${FastifyResponse.getBackendUrl()}`
@@ -26,21 +26,21 @@ class FastifyResponse {
         return request.headers["app-version"].replace("EFT Client ", "");
     }
 
-    static getUrl() {
+    static getServerAddress() {
         const { database } = require("../app");
         return `${database.core.serverConfig.ip}:${database.core.serverConfig.port}`;
     }
 
     static getBackendUrl() {
-        return `https://${FastifyResponse.getUrl()}/`;
+        return `https://${FastifyResponse.getServerAddress()}/`;
     }
 
     static getWebSocketUrl() {
-        return `wss://${FastifyResponse.getUrl()}/socket`;
+        return `wss://${FastifyResponse.getServerAddress()}/socket`;
     }
 
     static getWebSocketDirectUrl() {
-        return `${FastifyResponse.getUrl()}`;
+        return `${FastifyResponse.getServerAddress()}`;
     }
 
     static async getSessionID(request) {
