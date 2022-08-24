@@ -24,6 +24,7 @@ module.exports = async function singleplayerRoutes(app, _opts) {
 
     app.get(`/singleplayer/settings/raid/menu`, async (_request, reply) => {
         const { database: { core: { gameplay: { defaultRaidSettings } } } } = require("../app");
+
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(defaultRaidSettings)
