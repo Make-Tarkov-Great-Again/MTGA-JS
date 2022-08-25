@@ -52,7 +52,7 @@ const getServerUptimeInSeconds = async () => {
  * @returns Current Date timestamp in seconds
  */
 const getCurrentTimestamp = async () => {
-    return ~~(new Date().getTime() / 1000);
+    return ~~(Date.now() / 1000);
 }
 /**
  * @param {Date} date 
@@ -60,18 +60,6 @@ const getCurrentTimestamp = async () => {
  */
 const formatTime = async (date) => {
     return `${("0" + date.getHours()).substr(-2)}-${("0" + date.getMinutes()).substr(-2)}-${("0" + date.getSeconds()).substr(-2)}`;
-}
-
-const makeSign = (Length) => {
-    let result = '';
-    let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let charactersLength = characters.length;
-
-    for (let i = 0; i < Length; i++) {
-        result += characters.charAt(~~(Math.random() * charactersLength));
-    }
-
-    return result;
 }
 
 /* Find And Return Children (TRegular)
@@ -237,7 +225,6 @@ const compareArrays = async (one, two) => {
 
 
 module.exports = {
-    makeSign,
     getCurrentTimestamp,
     getServerUptimeInSeconds,
     formatTime,
