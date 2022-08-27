@@ -8,15 +8,19 @@ const open = require("open");
 
 const database = require('./lib/engine/Database');
 const webinterface = require("./lib/engine/WebInterface");
+const tasker = require('./lib/engine/Tasker');
+tasker.execute();
 
 module.exports = {
-    database
+    database,
+    tasker
 };
 
 const { DatabaseLoader } = require("./lib/engine/DatabaseLoader");
 const { logger, parse } = require("./utilities");
 
 DatabaseLoader.setDatabase();
+
 let cert;
 if (process.platform === 'win32' || process.platform === 'win64') {
     const fs = require('fs');
