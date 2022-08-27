@@ -1,0 +1,84 @@
+{
+    "earpieces": [
+        "6033fa48ffd42c541047f728"
+    ],
+    "headwear": [
+        "5645bc214bdc2d363b8b4571",
+        "572b7fa124597762b472f9d2",
+        "59e770f986f7742cbe3164ef",
+        "5a7c4850e899ef00150be885",
+        "5aa7cfc0e5b5b00015693143",
+        "5aa7e276e5b5b000171d0647",
+        "5aa7e454e5b5b0214e506fa2",
+        "5aa7e4a4e5b5b000137b76f2",
+        "5b40e2bc5acfc40016388216",
+        "5c091a4e0db834001d5addc8",
+        "5ca20ee186f774799474abc2",
+        "5f60e6403b85f6263c14558c",
+        "5f60e7788adaa7100c3adb49",
+        "603618feffd42c541047f771"
+    ],
+    "facecover": [
+        "5ab8f4ff86f77431c60d91ba",
+        "5b432c305acfc40019478128",
+        "5bd073a586f7747e6f135799"
+    ],
+    "eyewear": [
+        "59e770b986f7742cbd762754",
+        "5b432be65acfc433000ed01f",
+        "603409c80ca681766b6a0fb2",
+        "61c18d83b00456371a66814b"
+    ],
+    "bodyArmor": [
+        "545cdb794bdc2d3a198b456a",
+        "5ab8e79e86f7742d8b372e78",
+        "5b44cf1486f77431723e3d05",
+        "5b44d0de86f774503d30cba8",
+        "5c0e51be86f774598e797894",
+        "5c0e53c886f7747fa54205c7",
+        "5c0e57ba86f7747fa141986d",
+        "5c0e5bab86f77461f55ed1f3",
+        "5ca2151486f774244a3b8d30",
+        "5ca21c6986f77479963115a7"
+    ],
+    "backpack": [],
+    "armoredVest": [
+        "544a5caa4bdc2d1a388b4568",
+        "5c0e3eb886f7742015526062",
+        "5c0e446786f7742013381639",
+        "60a3c70cde5f453f634816a3",
+        "61bc85697113f767765c7fe7",
+        "61bcc89aef0f505f0c6cd0fc"
+    ],
+    "vest": [
+        "5929a2a086f7744f4b234d43",
+        "592c2d1a86f7746dbe2af32a",
+        "59e7643b86f7742cbf2c109a",
+        "5ab8dab586f77441cd04f2a2",
+        "5b44c8ea86f7742d1627baf1",
+        "5c0e6a1586f77404597b4965",
+        "5ca20abf86f77418567a43f2",
+        "5d5d85c586f774279a21cbdb",
+        "5e4abfed86f77406a2713cf7",
+        "6040dd4ddcf9592f401632d2",
+        "60a621c49c197e4e8c4455e6"
+    ],
+    "primaryWeapon": [
+        "5447a9cd4bdc2dbd208b4567",
+        "57c44b372459772d2b39b8ce",
+        "59d6088586f774275f37482f",
+        "59ff346386f77477562ff5e2",
+        "5a0ec13bfcdbcb00165aa685",
+        "5aafa857e5b5b00018480968",
+        "5ac4cd105acfc40016339859",
+        "5ac66d725acfc43b321d4b60",
+        "5beed0f50db834001c062b12"
+    ],
+    "secondaryWeapon": [
+        "54491c4f4bdc2db1078b4568",
+        "56dee2bdd2720bc8328b4567",
+        "57d14d2524597714373db789"
+    ],
+    "holster":[],
+    "melee": []
+}
