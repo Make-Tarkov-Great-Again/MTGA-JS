@@ -35,8 +35,8 @@ class FastifyResponse {
         return `https://${FastifyResponse.getServerAddress()}/`;
     }
 
-    static getWebSocketUrl() {
-        return `wss://${FastifyResponse.getServerAddress()}/socket`;
+    static getWebSocketUrl(sessionID) {
+        return `wss://${FastifyResponse.getServerAddress()}/socket/${sessionID}`;
     }
 
     static getWebSocketDirectUrl() {
