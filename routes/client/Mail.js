@@ -10,6 +10,10 @@ module.exports = async function ragfairRoutes(app, _opts) {
         await ClientController.clientMailDialogView(request, reply)
     });
 
+    app.post('/client/mail/dialog/info', async (request, reply) => {
+        await ClientController.clientMailDialogInfo(request, reply);
+    })
+
     app.post(`/client/mail/dialog/remove`, async (request, reply) => {
         await ClientController.clientMailDialogRemove(request, reply);
     });

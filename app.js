@@ -160,15 +160,6 @@ app.addContentTypeParser('*', (req, payload, done) => {
 /**
 * Register Handler
 */
-
-app.server.on("upgrade", function (request, socket, head) {
-    logger.logInfo("upgrade");
-});
-
-app.server.on("error", function (error) {
-    logger.logError(`[ERROR]` + error);
-});
-
 app.server.on("listening", function () {
     logger.logConsole(` `);
     logger.logConsole(`     █▀▄▀█    ▄▄▄▄▀   ▄▀  ██   `);
@@ -184,4 +175,5 @@ app.server.on("listening", function () {
 
 app.register(require('./plugins/register.js'));
 app.listen({ port: database.core.serverConfig.port, host: database.core.serverConfig.ip });
+
 
