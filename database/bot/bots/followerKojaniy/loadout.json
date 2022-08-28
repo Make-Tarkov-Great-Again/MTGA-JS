@@ -1,0 +1,62 @@
+{
+    "earpieces": [
+        "6033fa48ffd42c541047f728"
+    ],
+    "headwear": [
+        "5a16bb52fcdbcb001a3b00dc",
+        "5c066ef40db834001966a595",
+        "5d96141523f0ea1b7f2aacab",
+        "60b52e5bc7d8103275739d67"
+    ],
+    "facecover": [
+        "5ab8f4ff86f77431c60d91ba",
+        "5ab8f85d86f7745cd93a1cf5",
+        "5b4325355acfc40019478126",
+        "5b432b6c5acfc4001a599bf0",
+        "5b432f3d5acfc4704b4a1dfb",
+        "5e54f76986f7740366043752",
+        "5e54f79686f7744022011103"
+    ],
+    "eyewear": [],
+    "bodyArmor": [
+        "545cdb794bdc2d3a198b456a",
+        "5b44d22286f774172b0c9de8",
+        "5c0e57ba86f7747fa141986d",
+        "5c0e5bab86f77461f55ed1f3",
+        "5c0e625a86f7742d77340f62",
+        "5ca2151486f774244a3b8d30"
+    ],
+    "backpack": [
+        "56e335e4d2720b6c058b456d",
+        "5ab8ee7786f7742d8f33f0b9",
+        "5ca20d5986f774331e7c9602"
+    ],
+    "armoredVest": [],
+    "vest": [
+        "5929a2a086f7744f4b234d43",
+        "592c2d1a86f7746dbe2af32a",
+        "59e7643b86f7742cbf2c109a",
+        "5ca20abf86f77418567a43f2",
+        "5e4abfed86f77406a2713cf7"
+    ],
+    "primaryWeapon": [
+        "57838ad32459774a17445cd2",
+        "587e02ff24597743df3deaeb",
+        "5ae08f0a5acfc408fb1398a1",
+        "5c46fbd72e2216398b5a8c9c",
+        "5c501a4d2e221602b412b540",
+        "5df8ce05b11454561e39243b"
+    ],
+    "secondaryWeapon": [
+        "54491c4f4bdc2db1078b4568",
+        "56dee2bdd2720bc8328b4567",
+        "606dae0ab0e443224b421bb7"
+    ],
+    "holster":[],
+    "melee": [
+        "5c012ffc0db834001d23f03f"
+    ],
+    "pocket": [
+        "5af99e9186f7747c447120b8"
+    ]
+}
