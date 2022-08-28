@@ -8,15 +8,19 @@ const open = require("open");
 
 const database = require('./lib/engine/Database');
 const webinterface = require("./lib/engine/WebInterface");
+const tasker = require('./lib/engine/Tasker');
+tasker.execute();
 
 module.exports = {
-    database
+    database,
+    tasker
 };
 
 const { DatabaseLoader } = require("./lib/engine/DatabaseLoader");
 const { logger, parse } = require("./utilities");
 
 DatabaseLoader.setDatabase();
+
 let cert;
 if (process.platform === 'win32' || process.platform === 'win64') {
     const fs = require('fs');
@@ -156,15 +160,6 @@ app.addContentTypeParser('*', (req, payload, done) => {
 /**
 * Register Handler
 */
-
-app.server.on("upgrade", function (request, socket, head) {
-    logger.logInfo("upgrade");
-});
-
-app.server.on("error", function (error) {
-    logger.logError(`[ERROR]` + error);
-});
-
 app.server.on("listening", function () {
     logger.logConsole(` `);
     logger.logConsole(`     █▀▄▀█    ▄▄▄▄▀   ▄▀  ██   `);
@@ -180,4 +175,5 @@ app.server.on("listening", function () {
 
 app.register(require('./plugins/register.js'));
 app.listen({ port: database.core.serverConfig.port, host: database.core.serverConfig.ip });
+
 

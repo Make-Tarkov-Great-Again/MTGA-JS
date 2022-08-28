@@ -52,7 +52,7 @@ const getServerUptimeInSeconds = async () => {
  * @returns Current Date timestamp in seconds
  */
 const getCurrentTimestamp = async () => {
-    return ~~(new Date().getTime() / 1000);
+    return ~~(Date.now() / 1000);
 }
 /**
  * @param {Date} date 
@@ -60,18 +60,6 @@ const getCurrentTimestamp = async () => {
  */
 const formatTime = async (date) => {
     return `${("0" + date.getHours()).substr(-2)}-${("0" + date.getMinutes()).substr(-2)}-${("0" + date.getSeconds()).substr(-2)}`;
-}
-
-const makeSign = (Length) => {
-    let result = '';
-    let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let charactersLength = characters.length;
-
-    for (let i = 0; i < Length; i++) {
-        result += characters.charAt(~~(Math.random() * charactersLength));
-    }
-
-    return result;
 }
 
 /* Find And Return Children (TRegular)
@@ -126,8 +114,10 @@ const childrenCategories = async (x) => {
 // This bullshit handle both currency & barters
 // since I'm a lazy cunt I only did currency for now :)
 const payTrade = async (playerInventory, body, currency = null) => {
-    if (body.length === 1) {
-        const moneyFiltered = playerInventory.items.filter((item) => {
+    if (playerInventory.items)  playerInventory = playerInventory.items;
+
+    if (body.length >= 1) {
+        const moneyFiltered = playerInventory.filter((item) => {
             return item._tpl === currency;
         });
         let totalPlayerMoney = 0;
@@ -135,32 +125,43 @@ const payTrade = async (playerInventory, body, currency = null) => {
             totalPlayerMoney += !moneyItem.hasOwnProperty("upd") ? 1 : moneyItem.upd.StackObjectsCount;
         }
 
-        if (!moneyFiltered || totalPlayerMoney < body[0].count) {
-            logger.logDebug("Boy you poor as fuck");
-            return false;
+        let totalCost = 0;
+        const getTotal = body.filter((cash) => {
+            return cash.count
+        })
+        for (const cost of getTotal) {
+            totalCost += cost.count
         }
 
-        let price = body[0].count;
+        if (!moneyFiltered || totalPlayerMoney < totalCost) {
+            logger.logDebug("bro you're broke, go do some runs without ai you weakling");
+            return false;
+        }
+        for (const trade of body) {
+            let price = trade.count;
 
-        for (const moneyItem of moneyFiltered) {
-            const itemAmount = !moneyItem.hasOwnProperty("upd") ? 1 : moneyItem.upd.StackObjectsCount;
+            for (const moneyItem of moneyFiltered) {
+                const itemAmount = !moneyItem.hasOwnProperty("upd") ? 1 : moneyItem.upd.StackObjectsCount;
 
-            if (price >= itemAmount) {
-                price = itemAmount;
-                // TODO remove the stack from player inv
-            } else {
-                if (!moneyItem.upd) {
-                    // TODO remove the item from player inv
-                    break;
+                if (price >= itemAmount) {
+                    price = itemAmount;
+                    // TODO remove the stack from player inv
                 } else {
-                    moneyItem.upd.StackObjectsCount -= price;
-                    // TODO changes output
-                    break;
+                    if (!moneyItem.upd) {
+                        // TODO remove the item from player inv
+                        break;
+                    } else {
+                        moneyItem.upd.StackObjectsCount -= price;
+                        // TODO changes output
+                        break;
+                    }
                 }
             }
         }
+        return true;
     } else {
         logger.logDebug("That's barter, barter not done yet, pay me Leffe and I'll do it");
+        return false;
     }
 }
 
@@ -224,7 +225,6 @@ const compareArrays = async (one, two) => {
 
 
 module.exports = {
-    makeSign,
     getCurrentTimestamp,
     getServerUptimeInSeconds,
     formatTime,

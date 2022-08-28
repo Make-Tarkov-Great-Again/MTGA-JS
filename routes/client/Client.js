@@ -39,7 +39,7 @@ module.exports = async function clientRoutes(app, _opts) {
         );
     });
 
-    app.post(`/client/server/list`, async (request, reply) => {
+    app.post(`/client/server/list`, async (_request, reply) => {
         const { database: { core: { serverConfig: { ip, port } } } } = require("../../app");
         return FastifyResponse.zlibJsonReply(
             reply,
