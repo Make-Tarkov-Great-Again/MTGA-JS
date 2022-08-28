@@ -14,7 +14,6 @@ module.exports = async function handbookRoutes(app, _opts) {
         const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
         const profile = await playerAccount.getProfile();
         const builds = await profile.getStorageBuilds();
-
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(Object.values(builds))
