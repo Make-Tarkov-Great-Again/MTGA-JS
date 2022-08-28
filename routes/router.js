@@ -20,6 +20,7 @@ module.exports = async function router(app, _opts) {
         app.register(require("./client/Ragfair")),
         app.register(require("./client/Raid")),
         app.register(require("./client/Trading")),
+        app.register(require("./client/Insurance")),
         /* Register the routes for the tarkov notifier */
         app.register(require("./notifier")),
 

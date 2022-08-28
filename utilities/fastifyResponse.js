@@ -27,16 +27,16 @@ class FastifyResponse {
     }
 
     static getServerAddress() {
-        const { database } = require("../app");
-        return `${database.core.serverConfig.ip}:${database.core.serverConfig.port}`;
+        const { database: { core: { serverConfig: { ip, port } } } } = require("../app");
+        return `${ip}:${port}`;
     }
 
     static getBackendUrl() {
         return `https://${FastifyResponse.getServerAddress()}/`;
     }
 
-    static getWebSocketUrl() {
-        return `wss://${FastifyResponse.getServerAddress()}/socket`;
+    static getWebSocketUrl(sessionID) {
+        return `wss://${FastifyResponse.getServerAddress()}/socket/${sessionID}`;
     }
 
     static getWebSocketDirectUrl() {
