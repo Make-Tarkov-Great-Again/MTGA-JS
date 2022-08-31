@@ -21,7 +21,7 @@ module.exports = async function notifierRoutes(app, _opt) {
         );
     });
 
-    app.get("/socket/:sessionID", { websocket: true }, async function wsHandler(connection, request) {
+    app.get("/socket/:sessionID", { websocket: true }, async (connection, request) => {
         await NotificationController.onUpgrade(connection, request);
     });
 };

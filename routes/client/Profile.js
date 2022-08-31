@@ -186,7 +186,7 @@ module.exports = async function profileRoutes(app, _opts) {
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "QuestAccept":
-                    actionResult = await GameController.clientGameProfileAcceptQuest(moveAction, reply, playerProfile, sessionId);
+                    actionResult = await GameController.clientGameProfileAcceptQuest(moveAction, playerProfile, sessionId);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "RagFairBuyOffer":
@@ -195,19 +195,19 @@ module.exports = async function profileRoutes(app, _opts) {
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "ReadEncyclopedia":
-                    actionResult = await GameController.clientGameProfileReadEncyclopedia(moveAction, reply, playerProfile);
+                    actionResult = await GameController.clientGameProfileReadEncyclopedia(moveAction, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "ResetWishList":
-                    actionResult = await GameController.clientGameProfileResetWishList(moveAction, reply, playerProfile);
+                    actionResult = await GameController.clientGameProfileResetWishList(moveAction, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "CustomizationBuy":
-                    actionResult = await GameController.clientGameProfileCustomizationBuy(moveAction, reply, playerProfile);
+                    actionResult = await GameController.clientGameProfileCustomizationBuy(moveAction, playerProfile);
                     await playerProfile.getProfileChangesBase(actionResult, outputData);
                     break;
                 case "CustomizationWear":
-                    actionResult = await GameController.clientGameProfileCustomizationWear(moveAction, reply, playerProfile);
+                    actionResult = await GameController.clientGameProfileCustomizationWear(moveAction, playerProfile);
                     await playerProfile.getProfileChangesBase(actionResult, outputData);
                     break;
                 case "TraderRepair":
@@ -215,15 +215,15 @@ module.exports = async function profileRoutes(app, _opts) {
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "SaveBuild":
-                    actionResult = await PresetController.savePreset(moveAction, reply, playerProfile);
+                    actionResult = await PresetController.savePreset(moveAction, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "RemoveBuild":
-                    actionResult = await PresetController.removePreset(moveAction, reply, playerProfile);
+                    actionResult = await PresetController.removePreset(moveAction, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "ApplyInventoryChanges":
-                    actionResult = await GameController.clientGameApplyInventoryChanges(moveAction, reply, playerProfile);
+                    actionResult = await GameController.clientGameApplyInventoryChanges(moveAction, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
