@@ -74,13 +74,13 @@ module.exports = async function profileRoutes(app, _opts) {
     app.post(`/client/game/profile/items/moving`, async (request, reply) => {
         const sessionId = await FastifyResponse.getSessionID(request);
         if (!sessionId) {
-            logger.logError(`[/client/game/profile/items/moving] Could not get session Id from request.`)
+            logger.error(`[/client/game/profile/items/moving] Could not get session Id from request.`)
             return false;
         }
 
         const playerProfile = await Profile.get(sessionId);
         if (!playerProfile) {
-            logger.logError(`[/client/game/profile/items/moving] Unable to get player profile for sessionId ${sessionId}.`)
+            logger.error(`[/client/game/profile/items/moving] Unable to get player profile for sessionId ${sessionId}.`)
             return false;
         }
 
@@ -243,7 +243,7 @@ module.exports = async function profileRoutes(app, _opts) {
                 case "Repair":
                 */
                 default:
-                    logger.logWarning("[/client/game/profile/items/moving] Action " + action + " is not yet implemented.");
+                    logger.warn("[/client/game/profile/items/moving] Action " + action + " is not yet implemented.");
             }
         }
         await playerProfile.save();

@@ -148,7 +148,7 @@ const payTrade = async (playerInventory, body, currency = null) => {
         }
 
         if (!moneyFiltered || totalPlayerMoney < totalCost) {
-            logger.logDebug("bro you're broke, go do some runs without ai you weakling");
+            logger.debug("bro you're broke, go do some runs without ai you weakling");
             return false;
         }
         for (const trade of body) {
@@ -174,7 +174,7 @@ const payTrade = async (playerInventory, body, currency = null) => {
         }
         return true;
     } else {
-        logger.logDebug("That's barter, barter not done yet, pay me Leffe and I'll do it");
+        logger.debug("That's barter, barter not done yet, pay me Leffe and I'll do it");
         return false;
     }
 }

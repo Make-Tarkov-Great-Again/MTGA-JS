@@ -18,7 +18,7 @@ module.exports = async function matchRoutes(app, _opts) {
     });
 
     app.post("/client/match/available", async (request, reply) => {
-        logger.logConsole(`[match/available (NOT IMPLEMENTED)] : ${request.body}`);
+        logger.console(`[match/available (NOT IMPLEMENTED)] : ${request.body}`);
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(true)
@@ -26,7 +26,7 @@ module.exports = async function matchRoutes(app, _opts) {
     });
 
     app.post(`/client/match/join`, async (request, reply) => {
-        logger.logConsole(`[match/join (NOT IMPLEMENTED)] : ${request.body}`);
+        logger.console(`[match/join (NOT IMPLEMENTED)] : ${request.body}`);
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody(null)

@@ -22,7 +22,7 @@ module.exports = async function resourcesRoutes(app, opts) {
         const fs = require('fs');
         const stream = fs.createReadStream("./database/res/" + file);
 
-        logger.logDebug("[RESOURCES] Reading file: /database/res/" + file);
+        logger.debug("[RESOURCES] Reading file: /database/res/" + file);
 
         return stream;
     });
@@ -37,7 +37,7 @@ module.exports = async function resourcesRoutes(app, opts) {
                 break;
         }
 
-        logger.logDebug("[RESOURCES] Reading file: " + webinterface.baseDirectory + "/resources/" + file);
+        logger.debug("[RESOURCES] Reading file: " + webinterface.baseDirectory + "/resources/" + file);
 
         return webinterface.readFile(file);
     });

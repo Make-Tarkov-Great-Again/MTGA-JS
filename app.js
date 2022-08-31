@@ -53,15 +53,15 @@ if (process.platform === 'win32' || process.platform === 'win64') {
 
     installCertificatePowerShell.on('close', function (_code) {
         if (userCancelOrError) {
-            logger.logError(`HTTPS Certification Installation failed!`);
-            logger.logError(`If an error occured, report on Discord.`);
-            logger.logError(` 
+            logger.error(`HTTPS Certification Installation failed!`);
+            logger.error(`If an error occured, report on Discord.`);
+            logger.error(` 
             If you chose not to allow the installation, read below:
              `);
-            logger.logError(`The certificate is required for Websockets to work, otherwise the Client will not connect to the socket endpoint.`);
-            logger.logError(`If you have any security concerns, you can take a look at the script ${installCertificateScriptPath}.`);
-            logger.logError(`The certificate is generated on first start, has a lifetime of 3 days, and will is saved to /user/certs/.`);
-            //logger.logDebug(scriptOutput);
+            logger.error(`The certificate is required for Websockets to work, otherwise the Client will not connect to the socket endpoint.`);
+            logger.error(`If you have any security concerns, you can take a look at the script ${installCertificateScriptPath}.`);
+            logger.error(`The certificate is generated on first start, has a lifetime of 3 days, and will is saved to /user/certs/.`);
+            //logger.debug(scriptOutput);
         } else {
             //open(`https://${database.core.serverConfig.ip}:${database.core.serverConfig.port}`) Opens the weblauncher automatically if wanted.
         }
@@ -75,30 +75,33 @@ const app = require('fastify')({
         transport: {
             target: 'pino-pretty'
         },
-        serializers: {
-            res(reply) {
-                return {
-                    statusCode: reply.statusCode
-                };
-            },
-            req(request) {
-                return {
-                    method: request.method,
-                    url: request.url,
-                    headers: request.headers,
-                    params: request.params,
-                    body: request.body,
-                    query: request.query,
-                    hostname: request.hostname,
-                    remoteAddress: request.ip,
-                    remotePort: request.socket.remotePort,
-                    routerMethod: request.routerMethod,
-                    routerPath: request.routerPath
-                };
-            }
+        options: {
+            colorize: true
         }
+        /*         serializers: {
+                    res(reply) {
+                        return {
+                            statusCode: reply.statusCode
+                        };
+                    },
+                    req(request) {
+                        return {
+                            method: request.method,
+                            url: request.url,
+                            headers: request.headers,
+                            params: request.params,
+                            body: request.body,
+                            query: request.query,
+                            hostname: request.hostname,
+                            remoteAddress: request.ip,
+                            remotePort: request.socket.remotePort,
+                            routerMethod: request.routerMethod,
+                            routerPath: request.routerPath
+                        };
+                    }
+                } */
     },
-    //http2: true,
+    http2: true,
     https: {
         allowHTTP1: true,
         key: cert.key,
@@ -125,10 +128,10 @@ app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (re
                         return;
                     }
                     done(null, false);
-                    return;
+                    //return;
                 } else {
                     done(null, false);
-                    return;
+                    //return;
                 }
             });
         } catch (error) {
@@ -160,17 +163,13 @@ app.addContentTypeParser('*', (req, payload, done) => {
 /**
 * Register Handler
 */
-app.server.on("listening", function () {
-    logger.logConsole(` `);
-    logger.logConsole(`     █▀▄▀█    ▄▄▄▄▀   ▄▀  ██   `);
-    logger.logConsole(`     █ █ █ ▀▀▀ █    ▄▀    █ █  `);
-    logger.logConsole(`     █ ▄ █     █    █ ▀▄  █▄▄█ `);
-    logger.logConsole(`     █   █    █     █   █ █  █ `);
-    logger.logConsole(`        █    ▀       ███     █ `);
-    logger.logConsole(`       ▀                    █  `);
-    logger.logConsole(`                           ▀`);
-    logger.logConsole(`     Make Tarkov Great Again`);
-    logger.logConsole(` `);
+app.server.on("listening", async function () {
+    const { default: terminalImage } = await import('terminal-image');
+    console.log(await terminalImage.file(`./templates/webinterface/resources/logo/banner_transparent.png`, {
+        preserveAspectRatio: true,
+        width: `65%`,
+        height: `65%`
+    }))
 });
 
 app.register(require('./plugins/register.js'));

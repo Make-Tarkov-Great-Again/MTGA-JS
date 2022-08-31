@@ -57,7 +57,7 @@ class Logger {
       return "";
     return colorTag;
   }
-  logConsole(data) {
+  console(data) {
     // allow to change this shit in 1 place and everywhere it will be changed
     console.log(data);
   }
@@ -82,13 +82,13 @@ class Logger {
       }
     } catch { }
     if (typeof data == "string") {
-      this.logConsole(logString + data);
+      this.console(logString + data);
       if (this.logFileStream != undefined) {
         this.logFileStream.write(utilFormat(fileString + data + "\n"));
       }
     } else {
-      this.logConsole(logString);
-      this.logConsole(data);
+      this.console(logString);
+      this.console(data);
       if (this.logFileStream != undefined) {
         this.logFileStream.write(utilFormat(fileString));
         this.logFileStream.write(utilFormat(data));
@@ -97,16 +97,16 @@ class Logger {
     }
   }
 
-  logInfo(text) {
+  info(text) {
     this.log("[INFO]", text, "white", "blue");
   }
-  logSuccess(text) {
+  success(text) {
     this.log("[SUCCESS]", text, "white", "green");
   }
-  logWarning(text) {
+  warn(text) {
     this.log("[WARNING]", text, "white", "yellow");
   }
-  logError(text) {
+  error(text) {
     this.log("[ERROR]", text, "white", "red");
   }
   /**
@@ -115,7 +115,7 @@ class Logger {
    * @param {number} mode 0 -> only draw log, 1 -> draw log and start timer, 2 -> end timer (default: 0)
    * @returns 
    */
-  logDebug(text, mode = 0) {
+  debug(text, mode = 0) {
     switch (mode) {
       case 0:
         this.log("[DEBUG]", text, "white");
@@ -129,7 +129,7 @@ class Logger {
         return;
     }
   }
-  logRequest(text) {
+  request(text) {
     this.log("[REQUEST]", text, "cyan", "black");
   }
   throwError(message, whereOccured, additionalInfo = "") {
