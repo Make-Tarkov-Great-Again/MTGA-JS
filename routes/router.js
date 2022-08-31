@@ -14,7 +14,6 @@ module.exports = async function router(app, _opts) {
         app.register(require("./client/Location")),
         app.register(require("./client/Mail")),
         app.register(require("./client/Match")),
-        app.register(require("./client/Mode")),
         app.register(require("./client/Profile")),
         app.register(require("./client/Quest")),
         app.register(require("./client/Ragfair")),
