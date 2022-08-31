@@ -6,7 +6,7 @@ module.exports = async function notifierRoutes(app, _opt) {
 
     // Client Notifier Routes //
     app.post("/client/WebSocketAddress", async (request, reply) => {
-        const sessionID = await FastifyResponse.getSessionID(request)
+        const sessionID = await FastifyResponse.getSessionID(request);
         return FastifyResponse.zlibReply(
             reply,
             FastifyResponse.getWebSocketUrl(sessionID)
@@ -21,8 +21,7 @@ module.exports = async function notifierRoutes(app, _opt) {
         );
     });
 
-    app.get("/socket/:sessionID", { websocket: true }, async function wsHandler (connection, request) {
-        await NotificationController.onUpgrade(connection, request)
+    app.get("/socket/:sessionID", { websocket: true }, async function wsHandler(connection, request) {
+        await NotificationController.onUpgrade(connection, request);
     });
-
 };
