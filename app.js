@@ -12,8 +12,7 @@ const tasker = require('./lib/engine/Tasker');
 tasker.execute();
 
 module.exports = {
-    database,
-    tasker
+    database, tasker
 };
 
 const { DatabaseLoader } = require("./lib/engine/DatabaseLoader");
@@ -111,7 +110,8 @@ const app = require('fastify')({
 module.exports = {
     app,
     database,
-    webinterface
+    webinterface,
+    tasker
 };
 
 app.removeContentTypeParser("application/json");
