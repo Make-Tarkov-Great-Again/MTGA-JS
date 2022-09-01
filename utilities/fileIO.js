@@ -9,7 +9,7 @@ const sjson = require('secure-json-parse')
  * @returns 
  */
 const readParsed = (file) => {
-    return parse(fs.readFileSync(file, 'utf8'));
+    return parse(read(file));
 }
 
 const wipeDepend = (data) => {

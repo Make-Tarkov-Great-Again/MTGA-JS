@@ -162,9 +162,9 @@ app.addContentTypeParser('*', (req, payload, done) => {
 /**
 * Register Handler
 */
-app.server.on("listening", async function () {
+app.server.on("listening", async () => {
     const { default: terminalImage } = await import('terminal-image');
-    console.log(await terminalImage.file(`./templates/webinterface/resources/logo/banner_transparent.png`, {
+    logger.console(await terminalImage.file(`./templates/webinterface/resources/logo/banner_transparent.png`, {
         preserveAspectRatio: true,
         width: `65%`,
         height: `65%`

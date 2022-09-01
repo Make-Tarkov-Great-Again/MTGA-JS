@@ -1,5 +1,8 @@
 const { logger, FastifyResponse } = require("../utilities");
+const { Notification } = require('../lib/models/Notification')
 const { NotificationController } = require("../lib/controllers/NotificationController");
+const { InsuranceController } = require(`../lib/controllers/InsuranceController`);
+const { Profile } = require("../lib/models/Profile");
 
 
 module.exports = async function notifierRoutes(app, _opt) {
@@ -22,6 +25,7 @@ module.exports = async function notifierRoutes(app, _opt) {
     });
 
     app.get("/socket/:sessionID", { websocket: true }, async (connection, request) => {
-        await NotificationController.onUpgrade(connection, request);
+        await NotificationController.onUpgrade(connection, request);      
+        //await InsuranceController.processInsuranceReturn(request);
     });
 };
