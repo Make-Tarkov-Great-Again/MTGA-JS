@@ -6,6 +6,7 @@ const { Profile } = require("../lib/models/Profile");
 
 
 module.exports = async function notifierRoutes(app, _opt) {
+
     // Client Notifier Routes //
     app.post("/client/WebSocketAddress", async (request, reply) => {
         const sessionID = await FastifyResponse.getSessionID(request);
