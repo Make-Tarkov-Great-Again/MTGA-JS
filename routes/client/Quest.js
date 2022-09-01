@@ -1,5 +1,4 @@
 const { ClientController } = require("../../lib/controllers");
-
 const { logger, FastifyResponse } = require("../../utilities");
 
 module.exports = async function questRoutes(app, _opts) {
@@ -9,7 +8,7 @@ module.exports = async function questRoutes(app, _opts) {
     });
 
     app.post(`/client/repeatalbeQuests/activityPeriods`, async (request, reply) => {
-        logger.warn("[repeatalbeQuests/activityPeriods (NOT IMPLEMENTED)]: " + request.body);
+        logger.warn("[repeatalbeQuests/activityPeriods (NOT IMPLEMENTED)]");
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody([]));
