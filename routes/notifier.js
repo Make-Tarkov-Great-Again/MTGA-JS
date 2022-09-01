@@ -25,7 +25,6 @@ module.exports = async function notifierRoutes(app, _opt) {
     });
 
     app.get("/socket/:sessionID", { websocket: true }, async (connection, request) => {
-        await NotificationController.onUpgrade(connection, request);      
-        //await InsuranceController.processInsuranceReturn(request);
+        await NotificationController.onUpgrade(connection, request);
     });
 };
