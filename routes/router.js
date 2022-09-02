@@ -37,6 +37,7 @@ module.exports = async function router(app, _opts) {
 
         /* Register the routes for the singleplayer */
         app.register(require("./singleplayer")),
-    ]);
+    ])
+    //.then((results) => results.forEach((result) => logger.info(`${result.status}, ${result.reason}`)));
 
 };

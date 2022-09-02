@@ -36,17 +36,15 @@ module.exports = async function launcherRoutes(app, _opts) {
     });
 
     app.get('/launcher/profile/get', async (request, _reply) => {
-        const accountID = await reloadAccountByLogin(request.body);
-        const output = find(accountID);
+        const output = find(await reloadAccountByLogin(request.body));
         return noBody(output["server"] = name);
     });
 
     app.get('/launcher/server/connect', async (_request, _reply) => {
-        const data = getEditions(profiles);
         const output = {
             backendURL: "https://" + ip + ":" + port,
             name: name,
-            editions: data
+            editions: getEditions(profiles)
         };
         logger.debug("[LAUNCHER CONNECT]: " + output);
         return noBody(output);
