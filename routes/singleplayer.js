@@ -14,7 +14,7 @@ module.exports = async function singleplayerRoutes(app, _opts) {
                 );
             }
         } else {
-            logger.logError(`Bot: ${keys[0]} does not have a difficulty: ${keys[1]}`);
+            logger.error(`Bot: ${keys[0]} does not have a difficulty: ${keys[1]}`);
             return FastifyResponse.zlibJsonReply(
                 reply,
                 FastifyResponse.applyBody(core)

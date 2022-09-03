@@ -21,7 +21,7 @@ module.exports = async function raidRoutes(app, _opts) {
             else if (request.body.diedFaction === "Usec" || request.body.diedFaction === "Bear")
                 profile.TradersInfo["579dc571d53a0658a154fbec"].standing += killingPMCsFenceLevelChange;
 
-            //await profile.save();
+            await account.save();
         }
         return stringify({});
     });
