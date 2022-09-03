@@ -32,10 +32,14 @@ module.exports = async function clientRoutes(app, _opts) {
     });
 
     app.post(`/client/checkVersion`, async (request, reply) => {
-        const version = await FastifyResponse.getVersion(request);
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody({ isValid: true, latestVersion: version })
+            FastifyResponse.applyBody(
+                {
+                    isValid: true,
+                    latestVersion: await FastifyResponse.getVersion(request)
+                }
+            )
         );
     });
 

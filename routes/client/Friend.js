@@ -4,17 +4,17 @@ const { logger } = require("../../utilities");
 module.exports = async function friendRoutes(app, _opts) {
 
     app.post(`/client/friend/list`, async (request, reply) => {
-        logger.logConsole(`[Current Friend List (NOT IMPLEMENTED)] : ${request.body}`);
+        logger.warn(`[Current Friend List (NOT IMPLEMENTED)]`);
         await FriendController.clientFriendRequestList(request, reply);
     });
 
     app.post(`/client/friend/request/list/inbox`, async (request, reply) => {
-        logger.logConsole(`[Received Friend Requests (NOT IMPLEMENTED)] : ${request.body}`);
+        logger.warn(`[Received Friend Requests (NOT IMPLEMENTED)]`);
         await FriendController.clientFriendRequestListInbox(request, reply);
     });
 
     app.post(`/client/friend/request/list/outbox`, async (request, reply) => {
-        logger.logConsole(`[Sent Friend Requests (NOT IMPLEMENTED)] : ${request.body}`);
+        logger.warn(`[Sent Friend Requests (NOT IMPLEMENTED)]`);
         await FriendController.clientFriendRequestListOutbox(request, reply);
     });
 };

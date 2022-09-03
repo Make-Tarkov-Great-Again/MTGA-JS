@@ -4,11 +4,11 @@
 ## Who are we, and why are we doing this.
 
 MTGA is a new org composed of a few Altered Escape developers and external contributors. 
-We are developing this emulator to offer an accessible live-like, up-to-date, and easy to modify experience.
+We are developing this emulator to offer a accessible live-like experience, uptodate and easy to modify.
 
 ## Community
 
-Our Discord is currently private, an invitation will be added in the future.
+TBA, the discord is currently closed and under building, a invitation will be added in the futur.
 
 ## Contribution
 
