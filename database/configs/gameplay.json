@@ -1,7 +1,12 @@
 {
     "development": {
         "updateLocations": false,
-        "updateBotDifficulties": false  
+        "updateBotDifficulties": false,
+        "devInsuranceTimers": true,
+        "devInsuranceTimes": {
+            "min": 0.01,
+            "max": 0.01
+        }
     },
     "items": {
         "quickExamine": true,
@@ -40,6 +45,7 @@
             "maximumAirdopsPerRaid": 1
         }
     },
+    "traders": {},
     "fence": {
         "killingScavsFenceLevelChange": -0.01,
         "killingPMCsFenceLevelChange": 0.02,

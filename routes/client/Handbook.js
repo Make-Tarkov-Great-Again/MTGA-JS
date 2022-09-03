@@ -1,5 +1,5 @@
 const { FastifyResponse } = require("../../utilities");
-const { Account } = require("../../lib/models/Account");
+const { Profile } = require("../../lib/models/Profile");
 
 module.exports = async function handbookRoutes(app, _opts) {
 
@@ -11,8 +11,7 @@ module.exports = async function handbookRoutes(app, _opts) {
     });
 
     app.post(`/client/handbook/builds/my/list`, async (request, reply) => {
-        const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
-        const profile = await playerAccount.getProfile();
+        const profile = await Profile.get(await FastifyResponse.getSessionID(request));
         const builds = await profile.getStorageBuilds();
         return FastifyResponse.zlibJsonReply(
             reply,

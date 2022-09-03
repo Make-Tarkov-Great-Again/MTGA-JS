@@ -32310,7 +32310,7 @@
                         "index": 0,
                         "parentId": "",
                         "target": "Sniper",
-                        "value": 9,
+                        "value": 8,
                         "visibilityConditions": []
                     },
                     "dynamicLocale": false
@@ -33285,7 +33285,7 @@
                         "oneSessionOnly": false,
                         "parentId": "",
                         "type": "Elimination",
-                        "value": "12",
+                        "value": "8",
                         "visibilityConditions": []
                     },
                     "dynamicLocale": false
@@ -46973,18 +46973,6 @@
                     "dynamicLocale": false
                 },
                 {
-                    "_parent": "Level",
-                    "_props": {
-                        "compareMethod": ">=",
-                        "dynamicLocale": false,
-                        "id": "5eda1a67ef0ad2643e73af31",
-                        "index": 0,
-                        "parentId": "",
-                        "value": "36"
-                    },
-                    "dynamicLocale": false
-                },
-                {
                     "_parent": "Quest",
                     "_props": {
                         "availableAfter": 0,
@@ -52230,7 +52218,7 @@
                         "oneSessionOnly": false,
                         "parentId": "",
                         "type": "Elimination",
-                        "value": 15,
+                        "value": 12,
                         "visibilityConditions": []
                     },
                     "dynamicLocale": false
