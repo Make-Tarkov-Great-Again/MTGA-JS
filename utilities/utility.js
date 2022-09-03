@@ -58,8 +58,22 @@ const getCurrentTimestamp = async () => {
  * @param {Date} date 
  * @returns returns formated date to "hours-minutes-seconds" format
  */
-const formatTime = async (date) => {
+const timeHoursMinutesSeconds = async (date) => {
     return `${("0" + date.getHours()).substr(-2)}-${("0" + date.getMinutes()).substr(-2)}-${("0" + date.getSeconds()).substr(-2)}`;
+}
+
+const getTimeDateMailFormat = async () => {
+    const date = new Date();
+    const hours = `0${date.getHours()}`.substr(-2);
+    const minutes = `0${date.getMinutes()}`.substr(-2);
+    return `${hours}:${minutes}`;
+}
+
+const getTimeMailFormat = async () => {
+    const date = new Date();
+    const day = `0${date.getDate()}`.substr(-2);
+    const month = `0${date.getMonth() + 1}`.substr(-2);
+    return `${day}.${month}.${date.getFullYear()}`;
 }
 
 /* Find And Return Children (TRegular)
@@ -114,7 +128,7 @@ const childrenCategories = async (x) => {
 // This bullshit handle both currency & barters
 // since I'm a lazy cunt I only did currency for now :)
 const payTrade = async (playerInventory, body, currency = null) => {
-    if (playerInventory.items)  playerInventory = playerInventory.items;
+    if (playerInventory.items) playerInventory = playerInventory.items;
 
     if (body.length >= 1) {
         const moneyFiltered = playerInventory.filter((item) => {
@@ -134,7 +148,7 @@ const payTrade = async (playerInventory, body, currency = null) => {
         }
 
         if (!moneyFiltered || totalPlayerMoney < totalCost) {
-            logger.logDebug("bro you're broke, go do some runs without ai you weakling");
+            logger.debug("bro you're broke, go do some runs without ai you weakling");
             return false;
         }
         for (const trade of body) {
@@ -160,7 +174,7 @@ const payTrade = async (playerInventory, body, currency = null) => {
         }
         return true;
     } else {
-        logger.logDebug("That's barter, barter not done yet, pay me Leffe and I'll do it");
+        logger.debug("That's barter, barter not done yet, pay me Leffe and I'll do it");
         return false;
     }
 }
@@ -227,7 +241,9 @@ const compareArrays = async (one, two) => {
 module.exports = {
     getCurrentTimestamp,
     getServerUptimeInSeconds,
-    formatTime,
+    timeHoursMinutesSeconds,
+    getTimeDateMailFormat,
+    getTimeMailFormat,
     getIsoDateString,
     utilFormat,
     clearString,

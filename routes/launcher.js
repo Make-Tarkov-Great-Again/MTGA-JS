@@ -26,7 +26,7 @@ module.exports = async function launcherRoutes(app, _opts) {
 
     app.post('/launcher/profile/register', async (request, _reply) => {
         const output = await register(request.body);
-        logger.logDebug("[LAUNCHER REGISTER]: " + output);
+        logger.debug("[LAUNCHER REGISTER]: " + output);
         return (output === "" ? "FAILED" : output);
     });
 
@@ -36,19 +36,17 @@ module.exports = async function launcherRoutes(app, _opts) {
     });
 
     app.get('/launcher/profile/get', async (request, _reply) => {
-        const accountID = await reloadAccountByLogin(request.body);
-        const output = find(accountID);
+        const output = find(await reloadAccountByLogin(request.body));
         return noBody(output["server"] = name);
     });
 
     app.get('/launcher/server/connect', async (_request, _reply) => {
-        const data = getEditions(profiles);
         const output = {
             backendURL: "https://" + ip + ":" + port,
             name: name,
-            editions: data
+            editions: getEditions(profiles)
         };
-        logger.logDebug("[LAUNCHER CONNECT]: " + output);
+        logger.debug("[LAUNCHER CONNECT]: " + output);
         return noBody(output);
     });
 
