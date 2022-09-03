@@ -14,14 +14,9 @@ module.exports = async function handbookRoutes(app, _opts) {
         const playerAccount = await Account.get(await FastifyResponse.getSessionID(request));
         const profile = await playerAccount.getProfile();
         const builds = await profile.getStorageBuilds();
-        if (!builds || Object.keys(builds).length === 0) {
-            return FastifyResponse.zlibJsonReply(
-                reply,
-                FastifyResponse.applyBody([]));
-        }
-
         return FastifyResponse.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody(Object.values(builds)));
+            FastifyResponse.applyBody(Object.values(builds))
+        );
     });
 };

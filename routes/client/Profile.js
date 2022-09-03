@@ -1,14 +1,22 @@
-const { GameController } = require("../../lib/controllers");
-const { ItemController, TraderController, HideoutController, ProfileController, NoteController, PresetController } = require("../../lib/controllers");
+const {
+    GameController,
+    ItemController,
+    TraderController,
+    HideoutController,
+    ProfileController,
+    NoteController,
+    PresetController,
+    InsuranceController
+} = require("../../lib/controllers");
 const { Profile } = require("../../lib/models/Profile");
 const { logger, FastifyResponse } = require("../../utilities");
 
 module.exports = async function profileRoutes(app, _opts) {
 
     app.post("/client/profile/status", async (request, reply) => {
-        const sessionID = await FastifyResponse.getSessionID(request);
-        const playerProfile = await Profile.get(sessionID);
+        const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
         const playerPMC = await playerProfile.getPmc();
+
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody({
@@ -178,7 +186,7 @@ module.exports = async function profileRoutes(app, _opts) {
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "QuestAccept":
-                    actionResult = await GameController.clientGameProfileAcceptQuest(moveAction, reply, playerProfile);
+                    actionResult = await GameController.clientGameProfileAcceptQuest(moveAction, reply, playerProfile, sessionId);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "RagFairBuyOffer":
@@ -219,8 +227,11 @@ module.exports = async function profileRoutes(app, _opts) {
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
-                // more, MOOOOOOOOOOOOOOORE
                 case "Insure":
+                    actionResult = await InsuranceController.insureItems(moveAction, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                /*
                 case "RagFairAddOffer":
                 case "AddToWishList":
                 case "RemoveFromWishList":
@@ -230,6 +241,7 @@ module.exports = async function profileRoutes(app, _opts) {
                 case "QuestComplete":
                 case "QuestHandover":
                 case "Repair":
+                */
                 default:
                     logger.logWarning("[/client/game/profile/items/moving] Action " + action + " is not yet implemented.");
             }

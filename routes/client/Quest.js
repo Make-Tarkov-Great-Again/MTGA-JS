@@ -9,8 +9,7 @@ module.exports = async function questRoutes(app, _opts) {
     });
 
     app.post(`/client/repeatalbeQuests/activityPeriods`, async (request, reply) => {
-        logger.logConsole("[repeatalbeQuests/activityPeriods]: " + request.body);
-        logger.logWarning("RepeatalbeQuests are not implemented yet");
+        logger.logConsole("[repeatalbeQuests/activityPeriods (NOT IMPLEMENTED)]: " + request.body);
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody([]));

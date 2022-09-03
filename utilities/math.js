@@ -2,12 +2,31 @@
 
 /** Clamp value between min and max
  * @param {number} value (number)
- * @param {number} min (number)
- * @param {number} max (number)
+ * @param {number} a (number) min
+ * @param {number} b (number) max
  * @returns (number) Clamped value
  */
-const clamp = (value, min, max) => {
-    return Math.min(Math.max(value, min), max);
+const clamp = (value, a, b) => {
+    return min(max(value, a), b);
+}
+
+const min = (a, b) => {
+    return (a < b) ? a : b;
+}
+const max = (a, b) => {
+    return (a > b) ? a : b;
+}
+
+const round = async (number) => {
+    return number + (number < 0 ? -0.5 : 0.5) >> 0;
+}
+
+const floor = async (number) => {
+    return number + (number < 0 ? -1 : 0) >> 0;
+}
+
+const ceil = async (number) => {
+    return number + (number < 0 ? 0 : 1) >> 0;
 }
 
 const getRandomInt = async (min = 0, max = 100) => {
@@ -79,6 +98,11 @@ const getRandomFromObject = async (obj) => {
 
 module.exports = {
     clamp,
+    round,
+    min,
+    max,
+    floor,
+    ceil,
     getRandomInt,
     getRandomIntEx,
     getRandomIntInc,
