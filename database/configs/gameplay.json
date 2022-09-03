@@ -5,7 +5,13 @@
     },
     "items": {
         "quickExamine": true,
-        "allExamined": true,
+        "allExamined": {
+            "enabled": true,
+            "exceptTheseParents": [
+                "5c99f98d86f7745c314214b3",
+                "5c164d2286f774194c5e69fa"
+            ]
+        },
         "stackSize": {
             "ammo": 120,
             "money": 1000000
