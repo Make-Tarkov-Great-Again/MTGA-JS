@@ -37119,14 +37119,446 @@
                     "dynamicLocale": false
                 },
                 {
+                    "_parent": "FindItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "60e827a20c492412897c688f",
+                        "index": 48,
+                        "maxDurability": 0,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "62a09ec84f842e1bd12da3f2"
+                        ],
+                        "value": "1"
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "HandoverItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "60e827faf09904268a4dbc41",
+                        "index": 49,
+                        "maxDurability": 0,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "62a09ec84f842e1bd12da3f2"
+                        ],
+                        "value": "1"
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "FindItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "60e827a20c492412897c688g",
+                        "index": 50,
+                        "maxDurability": 0,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "62a09e974f842e1bd12da3f0"
+                        ],
+                        "value": "1"
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "HandoverItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "60e827faf09904268a4dbc42",
+                        "index": 51,
+                        "maxDurability": 0,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "62a09e974f842e1bd12da3f0"
+                        ],
+                        "value": "1"
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "FindItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "60e827a20c492412897c688h",
+                        "index": 52,
+                        "maxDurability": 0,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "62a09e73af34e73a266d932a"
+                        ],
+                        "value": "1"
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "HandoverItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "60e827faf09904268a4dbc43",
+                        "index": 53,
+                        "maxDurability": 0,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "62a09e73af34e73a266d932a"
+                        ],
+                        "value": "1"
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "FindItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "60e827a20c492412897c688i",
+                        "index": 54,
+                        "maxDurability": 0,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "62a09e410b9d3c46de5b6e78"
+                        ],
+                        "value": "1"
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "HandoverItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "60e827faf09904268a4dbc44",
+                        "index": 55,
+                        "maxDurability": 0,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "62a09e410b9d3c46de5b6e78"
+                        ],
+                        "value": "1"
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "FindItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "60e827a20c492412897c688j",
+                        "index": 56,
+                        "maxDurability": 0,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "62a09e08de7ac81993580532"
+                        ],
+                        "value": "1"
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "HandoverItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "60e827faf09904268a4dbc45",
+                        "index": 57,
+                        "maxDurability": 0,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "62a09e08de7ac81993580532"
+                        ],
+                        "value": "1"
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "FindItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "60e827a20c492412897c688k",
+                        "index": 58,
+                        "maxDurability": 0,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "62a09dd4621468534a797ac7"
+                        ],
+                        "value": "1"
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "HandoverItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "60e827faf09904268a4dbc46",
+                        "index": 59,
+                        "maxDurability": 0,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "62a09dd4621468534a797ac7"
+                        ],
+                        "value": "1"
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "FindItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "60e827a20c492412897c688l",
+                        "index": 60,
+                        "maxDurability": 0,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "62a09d79de7ac81993580530"
+                        ],
+                        "value": "1"
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "HandoverItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "60e827faf09904268a4dbc47",
+                        "index": 61,
+                        "maxDurability": 0,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "62a09d79de7ac81993580530"
+                        ],
+                        "value": "1"
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "FindItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "60e827a20c492412897c688m",
+                        "index": 62,
+                        "maxDurability": 0,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "62a09d3bcf4a99369e262447"
+                        ],
+                        "value": "1"
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "HandoverItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "60e827faf09904268a4dbc48",
+                        "index": 63,
+                        "maxDurability": 0,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "62a09d3bcf4a99369e262447"
+                        ],
+                        "value": "1"
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "FindItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "60e827a20c492412897c688n",
+                        "index": 64,
+                        "maxDurability": 0,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "62a09cfe4f842e1bd12da3e4"
+                        ],
+                        "value": "1"
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "HandoverItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "60e827faf09904268a4dbc49",
+                        "index": 65,
+                        "maxDurability": 0,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "62a09cfe4f842e1bd12da3e4"
+                        ],
+                        "value": "1"
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "FindItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "60e827a20c492412897c688o",
+                        "index": 66,
+                        "maxDurability": 0,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "62a09cb7a04c0c5c6e0a84f8"
+                        ],
+                        "value": "1"
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "HandoverItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "60e827faf09904268a4dbc50",
+                        "index": 67,
+                        "maxDurability": 0,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "62a09cb7a04c0c5c6e0a84f8"
+                        ],
+                        "value": "1"
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "FindItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "60e827a20c492412897c688p",
+                        "index": 68,
+                        "maxDurability": 0,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "62a091170b9d3c46de5b6cf2"
+                        ],
+                        "value": "1"
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "HandoverItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "60e827faf09904268a4dbc51",
+                        "index": 69,
+                        "maxDurability": 0,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "62a091170b9d3c46de5b6cf2"
+                        ],
+                        "value": "1"
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "FindItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "60e827a20c492412897c688q",
+                        "index": 70,
+                        "maxDurability": 0,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "62a08f4c4f842e1bd12d9d62"
+                        ],
+                        "value": "1"
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "HandoverItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "60e827faf09904268a4dbc52",
+                        "index": 71,
+                        "maxDurability": 0,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "62a08f4c4f842e1bd12d9d62"
+                        ],
+                        "value": "1"
+                    },
+                    "dynamicLocale": false
+                },
+                {
                     "_parent": "Level",
                     "_props": {
                         "compareMethod": ">=",
                         "dynamicLocale": false,
                         "id": "60d9d34e8a6f9a3731773f93",
-                        "index": 48,
+                        "index": 72,
                         "parentId": "",
-                        "value": "62"
+                        "value": "55"
                     },
                     "dynamicLocale": false
                 }
