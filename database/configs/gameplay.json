@@ -23,47 +23,52 @@
         },
         "stimMaxUses": 3
     },
-    "inRaid": {
-        "showDeathMessage": true,
-        "createFriendlyAI": true,
-        "airdropSettings": {
-            "airdropChancePercent": {
-                "bigmap": 100,
-                "woods": 100,
-                "lighthouse": 100,
-                "shoreline": 100,
-                "interchange": 100,
-                "reserve": 100
-            },
-            "airdropMinStartTimeSeconds": 90,
-            "airdropMaxStartTimeSeconds": 120,
-            "airdropMinOpenHeight": 100,
-            "airdropMaxOpenHeight": 150,
-            "planeMinFlyHeight": 400,
-            "planeMaxFlyHeight": 500,
-            "planeVolume": 0.5,
-            "maximumAirdopsPerRaid": 1
+    "raid": {
+        "inRaid": {
+            "showDeathMessage": true,
+            "createFriendlyAI": true,
+            "airdropSettings": {
+                "airdropChancePercent": {
+                    "bigmap": 100,
+                    "woods": 100,
+                    "lighthouse": 100,
+                    "shoreline": 100,
+                    "interchange": 100,
+                    "reserve": 100
+                },
+                "airdropMinStartTimeSeconds": 90,
+                "airdropMaxStartTimeSeconds": 120,
+                "airdropMinOpenHeight": 100,
+                "airdropMaxOpenHeight": 150,
+                "planeMinFlyHeight": 400,
+                "planeMaxFlyHeight": 500,
+                "planeVolume": 0.5,
+                "maximumAirdopsPerRaid": 1
+            }
+        },
+        "defaultRaidSettings": {
+            "aiAmount": "AsOnline",
+            "aiDifficulty": "AsOnline",
+            "bossEnabled": true,
+            "scavWars": false,
+            "taggedAndCursed": false
+        },
+        "insuranceEnabled": true
+    },
+    "trading": {
+        "refreshTimeInMinutes": 2,
+        "fence": {
+            "killingScavsFenceLevelChange": -0.01,
+            "killingPMCsFenceLevelChange": 0.02,
+            "fenceLevelAssortModifier": 1.05
+        },
+        "ragman": {
+            "sellAllDrip": true
+        },
+        "flea": {
+            "unlockFlea": true,
+            "removeBlacklist": true
         }
-    },
-    "traders": {},
-    "fence": {
-        "killingScavsFenceLevelChange": -0.01,
-        "killingPMCsFenceLevelChange": 0.02,
-        "fenceLevelAssortModifier": 1.05
-    },
-    "flea": {
-        "unlockFlea": true,
-        "removeBlacklist": true
-    },
-    "other": {
-        "RedeemTime": 72
-    },
-    "defaultRaidSettings": {
-        "aiAmount": "AsOnline",
-        "aiDifficulty": "AsOnline",
-        "bossEnabled": true,
-        "scavWars": false,
-        "taggedAndCursed": false
     },
     "hideout": {
         "fastScavcase": true,
@@ -73,10 +78,6 @@
         "allHeadsOnCharacterCreation": true,
         "allVoicesOnCharacterCreation": true,
         "allPocketsHaveSpecialSlots": true
-    },
-    "trading": {
-        "refreshTimeInMinutes": 2,
-        "drip": true
     },
     "location": {
         "realTimeEnabled": true,
