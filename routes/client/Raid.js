@@ -8,7 +8,7 @@ module.exports = async function raidRoutes(app, _opts) {
             return stringify({}); //this pops on start for some reason
         }
 
-        const { database: { core: { gameplay: { fence: { killingScavsFenceLevelChange, killingPMCsFenceLevelChange } } } } } = require("../../app");
+        const { database: { core: { gameplay: { trading: { fence: { killingScavsFenceLevelChange, killingPMCsFenceLevelChange } } } } } } = require("../../app");
         const sessionID = await FastifyResponse.getSessionID(request)
 
         // if the killer is the player
@@ -27,7 +27,8 @@ module.exports = async function raidRoutes(app, _opts) {
     });
 
     app.post(`/client/raid/person/killed`, async (request, _reply) => {
-        const { database: { core: { gameplay: { inRaid: { showDeathMessage } } } } } = require("../../app");
+        const { database: { core: { gameplay: {
+            raid: { inRaid: { showDeathMessage } } } } } } = require("../../app");
 
         if (showDeathMessage) {
             return stringify(showDeathMessage)
@@ -35,7 +36,8 @@ module.exports = async function raidRoutes(app, _opts) {
     });
 
     app.post(`/client/raid/createFriendlyAI`, async (request, _reply) => {
-        const { database: { core: { gameplay: { inRaid: { createFriendlyAI } } } } } = require("../../app");
+        const { database: { core: { gameplay: {
+            raid: { inRaid: { createFriendlyAI } } } } } } = require("../../app");
         if (createFriendlyAI) {
             return stringify(createFriendlyAI)
         } else return stringify(false);
