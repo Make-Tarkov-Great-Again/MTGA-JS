@@ -10,7 +10,8 @@ We are developing this emulator to offer an accessible live-like experience, up-
 ## Community
 
 Our Discord is undergoing construction and is only available to those we invite.
-If you would like to join the team, contact one of the team members. (Nehax, ae-king or IAMBUDE)
+
+For the time being, any serious inquiries should be forwarded to [Discussions](https://github.com/Make-Tarkov-Great-Again/MTGA-Backend/discussions)
 
 ## Contribution
 
@@ -19,12 +20,10 @@ If you would like to join the team, contact one of the team members. (Nehax, ae-
 - Some code you would like to refactor?
   
 - Got an idea you would like to share/implement?
+
   
-
-Feel free to open a pull request and request a review:
-
-#### **We are open to any contribution!**
-
 This server runs off the latest LTS of NodeJS, v18.7.0.
 
-<img src="https://user-images.githubusercontent.com/21200584/183050357-6c92f1cd-68ca-4f74-b41d-1706915c67cf.gif" title="" alt="mtgababyyy" data-align="center">
+Feel free to open a pull request and request a review: **We are open to any contribution!**
+
+![mtgababyyy](https://user-images.githubusercontent.com/21200584/183050357-6c92f1cd-68ca-4f74-b41d-1706915c67cf.gif)
