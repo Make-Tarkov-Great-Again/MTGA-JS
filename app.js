@@ -68,43 +68,25 @@ if (process.platform === 'win32' || process.platform === 'win64') {
     cert = certificate.generate(database.core.serverConfig.ip, database.core.serverConfig.hostname, 365);
 }
 
+
 const app = require('fastify')({
     logger: {
         transport: {
             target: 'pino-pretty'
         },
         options: {
-            colorize: true
+            colorize: true,
+            translateTime: 'HH:MM:ss Z'
         }
-        /*         serializers: {
-                    res(reply) {
-                        return {
-                            statusCode: reply.statusCode
-                        };
-                    },
-                    req(request) {
-                        return {
-                            method: request.method,
-                            url: request.url,
-                            headers: request.headers,
-                            params: request.params,
-                            body: request.body,
-                            query: request.query,
-                            hostname: request.hostname,
-                            remoteAddress: request.ip,
-                            remotePort: request.socket.remotePort,
-                            routerMethod: request.routerMethod,
-                            routerPath: request.routerPath
-                        };
-                    }
-                } */
     },
     http2: true,
     https: {
         allowHTTP1: true,
         key: cert.key,
         cert: cert.cert
-    }
+    },
+    onProtoPoisoning: "remove",
+
 });
 
 module.exports = {
@@ -119,11 +101,10 @@ app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (re
     if (req.headers["user-agent"] !== undefined && req.headers['user-agent'].includes(['UnityPlayer' || 'Unity'])) {
         try {
             zlib.inflate(body, function (err, data) {
-                if (!err && data !== undefined) {
+                if (!err && data) {
                     const inflatedString = data.toString('utf-8');
                     if (inflatedString.length > 0) {
-                        const json = parse(inflatedString);
-                        done(null, json);
+                        done(null, parse(inflatedString));
                         return;
                     }
                     done(null, false);
@@ -140,8 +121,7 @@ app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (re
         }
     } else {
         try {
-            const json = parse(body);
-            done(null, json);
+            done(null, parse(body));
         } catch (err) {
             err.statusCode = 400;
             done(err, undefined);
@@ -173,5 +153,3 @@ app.server.on("listening", async () => {
 
 app.register(require('./plugins/register.js'));
 app.listen({ port: database.core.serverConfig.port, host: database.core.serverConfig.ip });
-
-

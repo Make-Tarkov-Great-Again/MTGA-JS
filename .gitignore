@@ -61,3 +61,7 @@ user/certs/*
 ragfair.json
 generatedBots.json
 saveInformation.json
+database/bot/scav_weapons.json
+database/bot/scav_attachments.json
+database/bot/raider_weapons.json
+database/bot/raider_attachments.json
