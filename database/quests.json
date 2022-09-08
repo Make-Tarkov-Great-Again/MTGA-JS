@@ -1869,7 +1869,8 @@
                         "index": 0,
                         "parentId": "",
                         "status": [
-                            2
+                            2,
+                            4
                         ],
                         "target": "59675ea386f77414b32bded2",
                         "visibilityConditions": []
@@ -2780,7 +2781,7 @@
                         "availableAfter": 0,
                         "dynamicLocale": false,
                         "id": "51d33b2d4fad9e61441772c0",
-                        "index": 0,
+                        "index": 1,
                         "parentId": "",
                         "status": [
                             4
@@ -8625,14 +8626,16 @@
                 {
                     "_parent": "Quest",
                     "_props": {
+                        "availableAfter": 0,
                         "dynamicLocale": false,
-                        "id": "",
+                        "id": "51d33b2d4fad9e61441772c0",
                         "index": 0,
                         "parentId": "",
                         "status": [
                             4
                         ],
-                        "target": "597a160786f77477531d39d2"
+                        "target": "597a160786f77477531d39d2",
+                        "visibilityConditions": []
                     },
                     "dynamicLocale": false
                 }
@@ -16032,7 +16035,7 @@
         "type": "Merchant"
     },
     "5a5642ce86f77445c63c3419": {
-        "QuestName": "Hippocratic Vow",
+        "QuestName": "Hippocratic Oath",
         "_id": "5a5642ce86f77445c63c3419",
         "canShowNotificationsInGame": false,
         "changeQuestMessageText": "5a5642ce86f77445c63c3419 changeQuestMessageText",
@@ -29041,14 +29044,16 @@
                 {
                     "_parent": "Quest",
                     "_props": {
+                        "availableAfter": 0,
                         "dynamicLocale": false,
-                        "id": "",
+                        "id": "51d33b2d4fad9e61441772c0",
                         "index": 0,
                         "parentId": "",
                         "status": [
                             4
                         ],
-                        "target": "5d25aed386f77442734d25d2"
+                        "target": "5d25aed386f77442734d25d2",
+                        "visibilityConditions": []
                     },
                     "dynamicLocale": false
                 }
@@ -32336,7 +32341,7 @@
                         "availableAfter": 0,
                         "dynamicLocale": false,
                         "id": "51d33b2d4fad9e61441772c0",
-                        "index": 0,
+                        "index": 1,
                         "parentId": "",
                         "status": [
                             4
@@ -32781,7 +32786,7 @@
                         "availableAfter": 0,
                         "dynamicLocale": false,
                         "id": "51d33b2d4fad9e61441772c0",
-                        "index": 0,
+                        "index": 1,
                         "parentId": "",
                         "status": [
                             4
@@ -33530,7 +33535,7 @@
                         "availableAfter": 0,
                         "dynamicLocale": false,
                         "id": "51d33b2d4fad9e61441772c0",
-                        "index": 0,
+                        "index": 1,
                         "parentId": "",
                         "status": [
                             4
@@ -34516,7 +34521,7 @@
                         "availableAfter": 0,
                         "dynamicLocale": false,
                         "id": "51d33b2d4fad9e61441772c0",
-                        "index": 0,
+                        "index": 1,
                         "parentId": "",
                         "status": [
                             4
@@ -34840,7 +34845,7 @@
                         "availableAfter": 0,
                         "dynamicLocale": false,
                         "id": "51d33b2d4fad9e61441772c0",
-                        "index": 0,
+                        "index": 1,
                         "parentId": "",
                         "status": [
                             4
@@ -35183,7 +35188,7 @@
                         "availableAfter": 0,
                         "dynamicLocale": false,
                         "id": "51d33b2d4fad9e61441772c0",
-                        "index": 0,
+                        "index": 1,
                         "parentId": "",
                         "status": [
                             4
@@ -39423,22 +39428,6 @@
                         "visibilityConditions": []
                     },
                     "dynamicLocale": false
-                },
-                {
-                    "_parent": "Quest",
-                    "_props": {
-                        "availableAfter": 0,
-                        "dynamicLocale": false,
-                        "id": "51d33b2d4fad9e61441772c0",
-                        "index": 0,
-                        "parentId": "",
-                        "status": [
-                            4
-                        ],
-                        "target": "5d25bfd086f77442734d3007",
-                        "visibilityConditions": []
-                    },
-                    "dynamicLocale": false
                 }
             ],
             "Fail": []
@@ -41024,7 +41013,7 @@
                         "availableAfter": 0,
                         "dynamicLocale": false,
                         "id": "51d33b2d4fad9e61441772c0",
-                        "index": 0,
+                        "index": 2,
                         "parentId": "",
                         "status": [
                             4
@@ -41301,7 +41290,7 @@
                         "availableAfter": 0,
                         "dynamicLocale": false,
                         "id": "51d33b2d4fad9e61441772c0",
-                        "index": 0,
+                        "index": 2,
                         "parentId": "",
                         "status": [
                             4
@@ -41931,22 +41920,6 @@
                         "visibilityConditions": []
                     },
                     "dynamicLocale": false
-                },
-                {
-                    "_parent": "Quest",
-                    "_props": {
-                        "availableAfter": 0,
-                        "dynamicLocale": false,
-                        "id": "51d33b2d4fad9e61441772c0",
-                        "index": 0,
-                        "parentId": "",
-                        "status": [
-                            4
-                        ],
-                        "target": "60c0c018f7afb4354815096a",
-                        "visibilityConditions": []
-                    },
-                    "dynamicLocale": false
                 }
             ],
             "Fail": []
@@ -42114,7 +42087,7 @@
                         "availableAfter": 0,
                         "dynamicLocale": false,
                         "id": "51d33b2d4fad9e61441772c0",
-                        "index": 1,
+                        "index": 2,
                         "parentId": "",
                         "status": [
                             4
@@ -43827,7 +43800,7 @@
                         "availableAfter": 0,
                         "dynamicLocale": false,
                         "id": "51d33b2d4fad9e61441772c0",
-                        "index": 0,
+                        "index": 1,
                         "parentId": "",
                         "status": [
                             4
@@ -45806,7 +45779,7 @@
                         "availableAfter": 0,
                         "dynamicLocale": false,
                         "id": "51d33b2d4fad9e61441772c0",
-                        "index": 0,
+                        "index": 1,
                         "parentId": "",
                         "status": [
                             4
@@ -45822,7 +45795,7 @@
                         "availableAfter": 0,
                         "dynamicLocale": false,
                         "id": "51d33b2d4fad9e61441772c0",
-                        "index": 0,
+                        "index": 2,
                         "parentId": "",
                         "status": [
                             4
@@ -47788,7 +47761,7 @@
                         "availableAfter": 0,
                         "dynamicLocale": false,
                         "id": "51d33b2d4fad9e61441772c0",
-                        "index": 1,
+                        "index": 2,
                         "parentId": "",
                         "status": [
                             4
@@ -49657,7 +49630,7 @@
                         "availableAfter": 0,
                         "dynamicLocale": false,
                         "id": "51d33b2d4fad9e61441772c0",
-                        "index": 0,
+                        "index": 1,
                         "parentId": "",
                         "status": [
                             4
@@ -50076,14 +50049,16 @@
                 {
                     "_parent": "Quest",
                     "_props": {
+                        "availableAfter": 0,
                         "dynamicLocale": false,
-                        "id": "",
+                        "id": "51d33b2d4fad9e61441772c0",
                         "index": 2,
                         "parentId": "",
                         "status": [
                             4
                         ],
-                        "target": "59675d6c86f7740a842fc482"
+                        "target": "59675d6c86f7740a842fc482",
+                        "visibilityConditions": []
                     },
                     "dynamicLocale": false
                 }
@@ -52119,7 +52094,7 @@
                         "availableAfter": 0,
                         "dynamicLocale": false,
                         "id": "51d33b2d4fad9e61441772c0",
-                        "index": 0,
+                        "index": 2,
                         "parentId": "",
                         "status": [
                             4
