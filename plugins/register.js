@@ -8,6 +8,8 @@ module.exports = fp(async function (app, _opts) {
 
   await app.register(require('@fastify/compress'));
 
+  await app.register(require('@fastify/formbody'));
+
   await app.register(require('@fastify/websocket'));
 
   await app.register(require('../routes/router.js'));
