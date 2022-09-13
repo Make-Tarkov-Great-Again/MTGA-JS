@@ -1,4 +1,5 @@
 const logger = require('./logger');
+const util = require("util");
 const ObjectID = require("bson-objectid");
 const fs = require('fs');
 
@@ -34,7 +35,7 @@ const getIsoDateString = async (useFormatted = false) => {
     return new Date().toISOString();
 }
 
-const utilFormat = async (data) => {
+const utilFormat = (data) => {
     return util.format(data);
 }
 
@@ -51,7 +52,7 @@ const getServerUptimeInSeconds = async () => {
 /**
  * @returns Current Date timestamp in seconds
  */
-const getCurrentTimestamp = async () => {
+const getCurrentTimestamp = () => {
     return ~~(Date.now() / 1000);
 }
 /**
