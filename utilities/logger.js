@@ -83,7 +83,7 @@ class Logger {
     if (typeof data == "string") {
       this.console(logString + data);
       logFileStream.once('open', function(fd) {
-        logFileStream.write(utilFormat(fileString + data + "\n"));
+        logFileStream.write(utilFormat(`${fileString} - ${data}\n`));
         logFileStream.end();
       });
     } else {
@@ -91,14 +91,12 @@ class Logger {
       this.console(data);
       logFileStream.once('open', function(fd) {
         logFileStream.write(utilFormat(fileString));
+        logFileStream.write(" - ");
         logFileStream.write(utilFormat(data));
         logFileStream.write(utilFormat("\n"));
         logFileStream.end();
       });
     }
-    logFileStream.on("end", function() {
-      logFileStream.end();
-    });
   }
 
   info(text) {
