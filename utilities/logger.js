@@ -27,11 +27,9 @@ class Logger {
     };
     this.logFilePath = `${this.getLogsFolderPath()}${this.getFileName()}`;
 
-    console.log(this.logFilePath)
     if (!fs.existsSync(this.getLogsFolderPath())) {
       fs.mkdirSync(this.getLogsFolderPath());
     }
-    //fs.writeFileSync(this.logFilePath, "START LOG");
   }
 
   /** Returns the Filename for Logs
@@ -39,20 +37,20 @@ class Logger {
    */
   getFileName() {
     return `${getCurrentTimestamp()}.txt`;
-  } 
+  }
 
   /** Returns the path to the Logs folder with / at the end
    * @param {boolean} useRelative
    * @returns
    */
   getLogsFolderPath() {
-    return process.cwd() + "/serverLogs/";
+    return `${process.cwd()}/serverLogs/`;
   }
 
   /**
    * @param {string} type ("front", "back")
    * @param {string} color ("black", "red", "green", "yellow", "blue", "magenta", "cyan", "white")
-   * @returns 
+   * @returns
    */
   getConsoleColor(type = "front", color = "white") {
     const colorTag = this.consoleColor[type][color];
@@ -122,16 +120,16 @@ class Logger {
    */
   debug(text, mode = 0) {
     switch (mode) {
-      case 0:
-        this.log("[DEBUG]", text, "white");
-        return;
       case 1:
         this.log("[DEBUG]", text, "white");
         console.time(text);
-        return;
+        break;
       case 2:
         console.timeEnd(text);
-        return;
+        break;
+      default:
+        this.log("[DEBUG]", text, "white");
+        break;
     }
   }
 
@@ -139,9 +137,6 @@ class Logger {
     this.log("[REQUEST]", text, "cyan", "black");
   }
 
-  throwError(message, whereOccured, additionalInfo = "") {
-    throw new Error(message + "\r\n" + whereOccured + (additionalInfo != "" ? `\r\n${additionalInfo}` : ""));
-  }
 }
 
 class LoggerUtils {
