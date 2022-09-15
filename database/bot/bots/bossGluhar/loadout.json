@@ -23,7 +23,10 @@
     ],
     "bodyArmor": [],
     "backpack": [],
-    "armoredVest": [
+    "vest": [
+        "5d5d85c586f774279a21cbdb",
+        "5f5f41f56760b4138443b352",
+        "6040dd4ddcf9592f401632d2",
         "544a5caa4bdc2d1a388b4568",
         "5ab8dced86f774646209ec87",
         "5b44cad286f77402a54ae7e5",
@@ -32,11 +35,6 @@
         "61bc85697113f767765c7fe7",
         "5d5d87f786f77427997cfaef",
         "61bcc89aef0f505f0c6cd0fc"
-    ],
-    "vest": [
-        "5d5d85c586f774279a21cbdb",
-        "5f5f41f56760b4138443b352",
-        "6040dd4ddcf9592f401632d2"
     ],
     "primaryWeapon": [
         "5aafa857e5b5b00018480968",
