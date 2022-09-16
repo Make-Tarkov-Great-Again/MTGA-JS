@@ -1,5 +1,5 @@
 {
-    "earpieces": [
+    "earpiece": [
         "5c165d832e2216398b5a7e36",
         "5b432b965acfc47a8774094e",
         "6033fa48ffd42c541047f728"
@@ -116,6 +116,8 @@
         "5c501a4d2e221602b412b540"
     ],
     "secondaryWeapon": [
+    ],
+    "holster": [
         "59f98b4986f7746f546d2cef",
         "576a581d2459771e7b1bc4f1",
         "56d59856d2720bd8418b456a",
