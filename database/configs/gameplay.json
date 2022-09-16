@@ -9,9 +9,10 @@
         }
     },
     "bot": {
-        "backpackChance": 40,
-        "headwearChance": 50,
+        "backpackChance": 30,
+        "headwearChance": 40,
         "facecoverChance": 50,
+        "earpieceChance": 20,
         "primaryWeaponChance": 40,
         "secondaryWeaponChance": 15,
         "holsterWeaponChance": 30
