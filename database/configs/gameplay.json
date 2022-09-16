@@ -8,6 +8,19 @@
             "max": 0.01
         }
     },
+    "bot": {
+        "backpackChance": 40,
+        "headwearChance": 50,
+        "facecoverChance": 50,
+        "primaryWeaponChance": 40,
+        "secondaryWeaponChance": 15,
+        "holsterWeaponChance": 30
+    },
+    "customization": {
+        "allHeadsOnCharacterCreation": true,
+        "allVoicesOnCharacterCreation": true,
+        "allPocketsHaveSpecialSlots": true
+    },
     "items": {
         "quickExamine": true,
         "allExamined": {
@@ -74,11 +87,6 @@
     "hideout": {
         "fastScavcase": true,
         "fastProduction": true
-    },
-    "customization": {
-        "allHeadsOnCharacterCreation": true,
-        "allVoicesOnCharacterCreation": true,
-        "allPocketsHaveSpecialSlots": true
     },
     "location": {
         "realTimeEnabled": true,
