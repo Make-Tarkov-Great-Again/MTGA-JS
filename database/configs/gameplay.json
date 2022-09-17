@@ -61,8 +61,6 @@
             },
             "airdropMinStartTimeSeconds": 90,
             "airdropMaxStartTimeSeconds": 120,
-            "airdropMinOpenHeight": 100,
-            "airdropMaxOpenHeight": 150,
             "planeMinFlyHeight": 400,
             "planeMaxFlyHeight": 500,
             "planeVolume": 0.5,

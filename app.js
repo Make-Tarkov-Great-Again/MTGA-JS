@@ -1,6 +1,7 @@
 const { certificate } = require("./lib/engine/CertificateGenerator");
 const zlib = require("node:zlib");
 const open = require("open");
+const qs = require('fast-querystring');
 
 /**
  * Fastify instance
@@ -79,6 +80,7 @@ const app = require('fastify')({
             translateTime: 'HH:MM:ss Z'
         }
     },
+    querystringParser: str => qs.parse(str),
     http2: true,
     https: {
         allowHTTP1: true,
@@ -86,7 +88,6 @@ const app = require('fastify')({
         cert: cert.cert
     },
     onProtoPoisoning: "remove",
-
 });
 
 module.exports = {
@@ -98,9 +99,10 @@ module.exports = {
 
 app.removeContentTypeParser("application/json");
 app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (req, body, done) {
-    if (req.headers["user-agent"] !== undefined && req.headers['user-agent'].includes(['UnityPlayer' || 'Unity'])) {
+    if (req.headers["user-agent"] !== undefined &&
+        req.headers['user-agent'].includes(['UnityPlayer' || 'Unity'])) {
         try {
-            zlib.inflate(body, function (err, data) {
+            zlib.inflate(body, { chunkSize: 32768 }, function (err, data) {
                 if (!err && data) {
                     const inflatedString = data.toString('utf-8');
                     if (inflatedString.length > 0) {

@@ -29,4 +29,8 @@ module.exports = async function ragfairRoutes(app, _opts) {
     app.post(`/client/mail/dialog/read`, async (request, reply) => {
         await ClientController.clientMailDialogRead(request, reply);
     });
+
+    app.post(`/client/mail/dialog/getAllAttachments`, async (request, reply) => {
+        await ClientController.clientMailDialogGetAllAttachments(request, reply);
+    })
 };
