@@ -13,13 +13,12 @@ module.exports = async function raidRoutes(app, _opts) {
 
         // if the killer is the player
         if (request.body.killedByAID === sessionID) {
-            const account = await Profile.get(sessionID);
-            const profile = await account.getPmc();
+            const { character } = await Profile.get(sessionID);
 
             if (request.body.diedFaction === "Savage" || request.body.diedFaction === "Scav")
-                profile.TradersInfo["579dc571d53a0658a154fbec"].standing += killingScavsFenceLevelChange;
+                character.TradersInfo["579dc571d53a0658a154fbec"].standing += killingScavsFenceLevelChange;
             else if (request.body.diedFaction === "Usec" || request.body.diedFaction === "Bear")
-                profile.TradersInfo["579dc571d53a0658a154fbec"].standing += killingPMCsFenceLevelChange;
+                character.TradersInfo["579dc571d53a0658a154fbec"].standing += killingPMCsFenceLevelChange;
 
             await account.save();
         }

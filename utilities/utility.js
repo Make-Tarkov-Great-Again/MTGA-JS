@@ -7,15 +7,6 @@ const generateMongoID = async () => {
     return ObjectID.createFromTime(process.hrtime.bigint()).toHexString();
 }
 
-/**Check if the given value is undefined
- * 
- * @param {*} value definition to check
- * @returns true or false
- */
-const isUndefined = async (value) => {
-    return typeof value === 'undefined';
-}
-
 /**
  * Get files updated date
  * @param {string} path 
@@ -77,37 +68,32 @@ const getTimeMailFormat = async () => {
     return `${day}.${month}.${date.getFullYear()}`;
 }
 
-/* Find And Return Children (TRegular)
- * input: PlayerData, InitialItem._id
- * output: list of item._id
- * List is backward first item is the furthest child and last item is main item
- * returns all child items ids in array, includes itself and children
- * */
+/**
+ * Find item object by ID in player inventory for Handover Quest, and adjust item stack as needed
+ * @param {object} player 
+ * @param {string} itemId 
+ * @param {int} amount 
+ * @param {object} output 
+ * @returns
+ */
+const findAndChangeHandoverItemsStack = async (player, itemId, amount, output) => {
+    const index = player.Inventory.items.findIndex(item => item._id === itemId);
+    if (index < 0) return;
+    if (amount > 0) {
+        const item = player.Inventory.items[index];
+        item.upd.StackObjectsCount = amount;
 
-
-const findChildren = async (idToFind, listToSearch) => {
-    let foundChildren = [];
-
-    for (const child of listToSearch) {
-        if (child._id === idToFind) {
-            foundChildren.push(child);
-        }
-
-        if (child.parentId === idToFind) {
-            foundChildren.push(child);
-        }
-
-        for (const parent of foundChildren) {
-            if (parent._id !== child._id) {
-                if (parent._id === child.parentId) {
-                    if (!foundChildren.includes(child)) {
-                        foundChildren.push(child)
-                    }
-                }
+        output.items.change.push({
+            "_id": item._id,
+            "_tpl": item._tpl,
+            "parentId": item.parentId,
+            "slotId": item.slotId,
+            "location": item.location,
+            "upd": {
+                "StackObjectsCount": item.upd.StackObjectsCount
             }
-        }
+        })
     }
-    return foundChildren;
 }
 
 /* all items in template with the given parent category */
@@ -180,19 +166,6 @@ const payTrade = async (playerInventory, body, currency = null) => {
     }
 }
 
-const findAndReturnChildrenByItems = async (items, itemId) => {
-    let list = [];
-
-    for (let childitem of items) {
-        if (childitem.parentId === itemId) {
-            list.push.apply(list, findAndReturnChildrenByItems(items, childitem._id));
-        }
-    }
-
-    list.push(itemId); // it's required
-    return list;
-}
-
 /**
  * Remove duplicate items from array
  * @param {[]} arr 
@@ -248,10 +221,8 @@ module.exports = {
     getIsoDateString,
     utilFormat,
     clearString,
-    isUndefined,
-    findChildren,
     payTrade,
-    findAndReturnChildrenByItems,
+    findAndChangeHandoverItemsStack,
     generateMongoID,
     templatesWithParent,
     isCategory,

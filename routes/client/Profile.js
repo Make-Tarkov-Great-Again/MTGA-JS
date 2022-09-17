@@ -14,16 +14,14 @@ const { logger, FastifyResponse } = require("../../utilities");
 module.exports = async function profileRoutes(app, _opts) {
 
     app.post("/client/profile/status", async (request, reply) => {
-        const playerProfile = await Profile.get(await FastifyResponse.getSessionID(request));
-        const playerPMC = await playerProfile.getPmc();
-
+        const { character } = await Profile.get(await FastifyResponse.getSessionID(request));
         return FastifyResponse.zlibJsonReply(
             reply,
             FastifyResponse.applyBody({
                 maxPveCountExceeded: false,
                 profiles: [
                     {
-                        profileid: playerPMC.savage,
+                        profileid: character.savage,
                         profileToken: null,
                         status: "Free",
                         sid: "",
@@ -31,7 +29,7 @@ module.exports = async function profileRoutes(app, _opts) {
                         port: 0
                     },
                     {
-                        profileid: playerPMC._id,
+                        profileid: character._id,
                         profileToken: null,
                         status: "Free",
                         sid: "",
@@ -186,7 +184,15 @@ module.exports = async function profileRoutes(app, _opts) {
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "QuestAccept":
-                    actionResult = await GameController.clientGameProfileAcceptQuest(moveAction, playerProfile, sessionId);
+                    actionResult = await GameController.clientGameProfileAcceptQuest(moveAction, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "QuestHandover":
+                    actionResult = await GameController.clientGameProfileHandoverQuest(moveAction, playerProfile);
+                    await playerProfile.getProfileChangesResponse(actionResult, outputData);
+                    break;
+                case "QuestComplete":
+                    actionResult = await GameController.clientGameProfileCompleteQuest(moveAction, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
                 case "RagFairBuyOffer":
@@ -226,7 +232,6 @@ module.exports = async function profileRoutes(app, _opts) {
                     actionResult = await GameController.clientGameApplyInventoryChanges(moveAction, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
-
                 case "Insure":
                     actionResult = await InsuranceController.insureItems(moveAction, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
@@ -238,8 +243,6 @@ module.exports = async function profileRoutes(app, _opts) {
                 case "Swap":
                 case "Transfer":
                 case "CreateMapMarker":
-                case "QuestComplete":
-                case "QuestHandover":
                 case "Repair":
                 */
                 default:

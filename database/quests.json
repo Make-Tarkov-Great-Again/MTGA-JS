@@ -44933,20 +44933,6 @@
                     "dynamicLocale": false
                 },
                 {
-                    "_parent": "Quest",
-                    "_props": {
-                        "dynamicLocale": false,
-                        "id": "",
-                        "index": 0,
-                        "parentId": "",
-                        "status": [
-                            4
-                        ],
-                        "target": "5e383a6386f77465910ce1f3"
-                    },
-                    "dynamicLocale": false
-                },
-                {
                     "_parent": "Level",
                     "_props": {
                         "compareMethod": ">=",
@@ -45158,16 +45144,14 @@
                     "dynamicLocale": false
                 },
                 {
-                    "_parent": "Quest",
+                    "_parent": "Level",
                     "_props": {
+                        "compareMethod": ">=",
                         "dynamicLocale": false,
-                        "id": "",
+                        "id": "29a4299488f7747aab09a77s",
                         "index": 1,
                         "parentId": "",
-                        "status": [
-                            4
-                        ],
-                        "target": "5e381b0286f77420e3417a74"
+                        "value": "40"
                     },
                     "dynamicLocale": false
                 }

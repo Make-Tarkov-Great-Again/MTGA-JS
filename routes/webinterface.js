@@ -54,5 +54,5 @@ module.exports = async function webinterfaceRoutes(app, _opts) {
     app.get('/webinterface/weblauncher/start', async (request, reply) => {
         return WeblauncherController.launch(request, reply);
     });
-    
+
 }

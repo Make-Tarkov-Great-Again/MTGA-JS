@@ -4018,9 +4018,7 @@
 		"Points": 0
 	},
 	"Stats": {
-		"SessionCounters": {
-			"Items": []
-		},
+		"SessionCounters": null,
 		"OverallCounters": {
 			"Items": []
 		},
@@ -4125,7 +4123,7 @@
 		"Areas": [
 			{
 				"type": 3,
-				"level": 1,
+				"level": 4,
 				"active": true,
 				"passiveBonusesEnabled": true,
 				"completeTime": 0,
@@ -4349,24 +4347,70 @@
 		{
 			"type": "StashSize",
 			"templateId": "566abbc34bdc2d92178b4576"
+		},
+		{
+			"type": "StashSize",
+			"templateId": "5811ce572459770cba1a34ea"
+		},
+		{
+			"type": "StashSize",
+			"templateId": "5811ce662459770f6f490f32"
+		},
+		{
+			"type": "StashSize",
+			"templateId": "5811ce772459770e9e5f9532"
 		}
 	],
 	"Notes": {
 		"Notes": []
 	},
 	"Quests": [],
+	"TradersInfo": {
+		"5c0647fdd443bc2504c2d371": {
+			"unlocked": false,
+			"salesSum": 0,
+			"standing": 0.2
+		},
+		"5935c25fb3acc3127c3d8cd9": {
+			"unlocked": false,
+			"salesSum": 0,
+			"standing": 0.2
+		},
+		"58330581ace78e27b8b10cee": {
+			"unlocked": false,
+			"salesSum": 0,
+			"standing": 0.2
+		},
+		"5a7c2eca46aef81a7ca2145d": {
+			"unlocked": false,
+			"salesSum": 0,
+			"standing": 0.2
+		},
+		"579dc571d53a0658a154fbec": {
+			"unlocked": false,
+			"salesSum": 0,
+			"standing": 0.2
+		},
+		"5ac3b934156ae10c4430e83c": {
+			"unlocked": false,
+			"salesSum": 0,
+			"standing": 0.2
+		},
+		"54cb50c76803fa8b248b4571": {
+			"unlocked": false,
+			"salesSum": 0,
+			"standing": 0.2
+		},
+		"54cb57776803fa99248b456e": {
+			"unlocked": false,
+			"salesSum": 0,
+			"standing": 0.2
+		}
+	},
 	"RagfairInfo": {
 		"rating": 0.2,
 		"isRatingGrowing": true,
 		"offers": []
 	},
-	"WishList": [],
-	"TradersInfo": {
-		"579dc571d53a0658a154fbec": {
-			"unlocked": true,
-			"disabled": false,
-			"saleSum": 0,
-			"standing": 0
-		}
-	}
+	"WishList": []
 }
