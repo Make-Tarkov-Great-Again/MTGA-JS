@@ -36,7 +36,7 @@ class Logger {
    * @returns string - Logs file name
    */
   getFileName() {
-    return `${getCurrentTimestamp()}.txt`;
+    return `${~~(Date.now() / 1000)}.txt`;
   }
 
   /** Returns the path to the Logs folder with / at the end
