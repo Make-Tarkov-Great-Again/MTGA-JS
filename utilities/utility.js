@@ -43,7 +43,7 @@ const getServerUptimeInSeconds = async () => {
 /**
  * @returns Current Date timestamp in seconds
  */
-const getCurrentTimestamp = () => {
+const getCurrentTimestamp = async () => {
     return ~~(Date.now() / 1000);
 }
 /**
