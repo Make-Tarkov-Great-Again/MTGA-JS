@@ -22,7 +22,7 @@ For the time being, any serious inquiries should be forwarded to [Discussions](h
 - Got an idea you would like to share/implement?
 
   
-This server runs off the latest LTS of NodeJS, v18.7.0. The binaries used are maintained by SIT: [Binaries](https://github.com/paulov-t/SIT.Tarkov.Core) 
+This server runs off the latest LTS of NodeJS, v18.7.0. The binaries used are maintained by SIT: [Binaries](https://github.com/Make-Tarkov-Great-Again/Tarkov-binaries) 
 
 Feel free to open a pull request and request a review: **We are open to any contribution!**
 
