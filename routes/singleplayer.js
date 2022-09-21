@@ -1,4 +1,4 @@
-const { logger, FastifyResponse, stringify } = require("../utilities");
+const { logger, Response, stringify } = require("../utilities");
 
 module.exports = async function singleplayerRoutes(app, _opts) {
 
@@ -8,16 +8,16 @@ module.exports = async function singleplayerRoutes(app, _opts) {
 
         if (keys[0] in bots) {
             if (keys[1] in bots[keys[0]].difficulty) {
-                return FastifyResponse.zlibJsonReply(
+                return Response.zlibJsonReply(
                     reply,
-                    FastifyResponse.applyBody(bots[keys[0]].difficulty[keys[1]])
+                    Response.applyBody(bots[keys[0]].difficulty[keys[1]])
                 );
             }
         } else {
             logger.error(`Bot: ${keys[0]} does not have a difficulty: ${keys[1]}`);
-            return FastifyResponse.zlibJsonReply(
+            return Response.zlibJsonReply(
                 reply,
-                FastifyResponse.applyBody(core)
+                Response.applyBody(core)
             );
         }
     });
@@ -26,9 +26,9 @@ module.exports = async function singleplayerRoutes(app, _opts) {
         const { database: { core: { gameplay: {
             raid: { defaultRaidSettings } } } } } = require("../app");
 
-        return FastifyResponse.zlibJsonReply(
+        return Response.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody(defaultRaidSettings)
+            Response.applyBody(defaultRaidSettings)
         );
     });
 

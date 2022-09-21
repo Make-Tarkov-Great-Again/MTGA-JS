@@ -2,7 +2,7 @@ const zlib = require("zlib");
 const { stringify } = require("./fileIO");
 
 
-class FastifyResponse {
+class Response {
     static mime = {
         html: "text/html",
         txt: "text/plain",
@@ -15,10 +15,10 @@ class FastifyResponse {
 
     static getNotifier(sessionID) {
         return {
-            "server": FastifyResponse.getServerAddress(),
+            "server": Response.getServerAddress(),
             "channel_id": sessionID,
-            "ws": `${FastifyResponse.getWebSocketDirectUrl()}`,
-            "url": `${FastifyResponse.getBackendUrl()}`
+            "ws": `${Response.getWebSocketDirectUrl()}`,
+            "url": `${Response.getBackendUrl()}`
         };
     }
 
@@ -32,15 +32,15 @@ class FastifyResponse {
     }
 
     static getBackendUrl() {
-        return `https://${FastifyResponse.getServerAddress()}/`;
+        return `https://${Response.getServerAddress()}/`;
     }
 
     static getWebSocketUrl(sessionID) {
-        return `wss://${FastifyResponse.getServerAddress()}/socket/${sessionID}`;
+        return `wss://${Response.getServerAddress()}/socket/${sessionID}`;
     }
 
     static getWebSocketDirectUrl() {
-        return `${FastifyResponse.getServerAddress()}`;
+        return `${Response.getServerAddress()}`;
     }
 
     static async getSessionID(request) {
@@ -76,4 +76,4 @@ class FastifyResponse {
     };
 }
 
-module.exports.FastifyResponse = FastifyResponse;
+module.exports.Response = Response;
