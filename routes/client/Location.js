@@ -1,10 +1,10 @@
-const { LocationController } = require("../../lib/controllers");
+const { LocationController: { clientLocationGetLocalloot } } = require("../../lib/controllers");
 const { logger, stringify } = require("../../utilities");
 
 module.exports = async function locationRoutes(app, _opts) {
 
     app.post(`/client/location/getLocalloot`, async (request, reply) => {
-        await LocationController.clientLocationGetLocalloot(request, reply);
+        await clientLocationGetLocalloot(request, reply);
     });
 
     app.post(`/client/location/getAirdropLoot`, async (request, reply) => {
