@@ -1,4 +1,5 @@
-const { utilFormat, getCurrentTimestamp} = require("./utility");
+const { utilFormat } = require("./utility");
+
 const fs = require("fs");
 class Logger {
   constructor() {
@@ -36,7 +37,9 @@ class Logger {
    * @returns string - Logs file name
    */
   getFileName() {
-    return `${~~(Date.now() / 1000)}.txt`;
+    const date = Date.now() / 1000
+    const time = date + (date < 0 ? -0.5 : 0.5) >> 0
+    return `${time}.txt`;
   }
 
   /** Returns the path to the Logs folder with / at the end
@@ -70,24 +73,24 @@ class Logger {
    * @param {string} colorAtFront ("black", "red", "green", "yellow", "blue", "magenta", "cyan", "white")
    * @param {string} colorAtBack ("black", "red", "green", "yellow", "blue", "magenta", "cyan", "white")
    */
-  log(type, data, colorAtFront, colorAtBack) {
+  async log(type, data, colorAtFront, colorAtBack) {
     const frontColor = this.getConsoleColor("front", colorAtFront);
     const backColor = this.getConsoleColor("back", colorAtBack);
     const time = LoggerUtils.getIsoDateString(true);
 
     const logString = `${frontColor}${backColor}${type}${this.consoleColor.reset} ${time} `;
     const fileString = `${type}${time}`;
-    const logFileStream = fs.createWriteStream(this.logFilePath, {flags: 'a+'});
+    const logFileStream = fs.createWriteStream(this.logFilePath, { flags: 'a+' });
     if (typeof data == "string") {
       this.console(logString + data);
-      logFileStream.once('open', function(fd) {
+      logFileStream.once('open', function (fd) {
         logFileStream.write(utilFormat(`${fileString} - ${data}\n`));
         logFileStream.end();
       });
     } else {
       this.console(logString);
       this.console(data);
-      logFileStream.once('open', function(fd) {
+      logFileStream.once('open', function (fd) {
         logFileStream.write(utilFormat(fileString));
         logFileStream.write(" - ");
         logFileStream.write(utilFormat(data));
@@ -98,19 +101,19 @@ class Logger {
   }
 
   info(text) {
-    this.log("[INFO]", text, "white", "blue");
+    return this.log("[INFO]", text, "white", "blue");
   }
 
   success(text) {
-    this.log("[SUCCESS]", text, "white", "green");
+    return this.log("[SUCCESS]", text, "white", "green");
   }
 
   warn(text) {
-    this.log("[WARNING]", text, "white", "yellow");
+    return this.log("[WARNING]", text, "white", "yellow");
   }
 
   error(text) {
-    this.log("[ERROR]", text, "white", "red");
+    return this.log("[ERROR]", text, "white", "red");
   }
 
   /**
@@ -121,27 +124,23 @@ class Logger {
   debug(text, mode = 0) {
     switch (mode) {
       case 1:
-        this.log("[DEBUG]", text, "white");
-        console.time(text);
-        break;
+        return this.log("[DEBUG]", console.time(text), "white"); break;
       case 2:
-        console.timeEnd(text);
-        break;
+        return console.timeEnd(text);
       default:
-        this.log("[DEBUG]", text, "white");
-        break;
+        return this.log("[DEBUG]", text, "white");
     }
   }
 
   request(text) {
-    this.log("[REQUEST]", text, "cyan", "black");
+    return this.log("[REQUEST]", text, "cyan", "black");
   }
 
 }
 
 class LoggerUtils {
 
-  static getIsoDateString(){
+  static getIsoDateString() {
     return new Date().toISOString().
       replace(/T/, ' ').
       replace(/\..+/, '');
