@@ -1,4 +1,4 @@
-const { logger, stringify, FastifyResponse } = require("../../utilities");
+const { logger, stringify, Response } = require("../../utilities");
 const { Profile } = require("../../lib/models/Profile");
 
 module.exports = async function raidRoutes(app, _opts) {
@@ -9,7 +9,7 @@ module.exports = async function raidRoutes(app, _opts) {
         }
 
         const { database: { core: { gameplay: { trading: { fence: { killingScavsFenceLevelChange, killingPMCsFenceLevelChange } } } } } } = require("../../app");
-        const sessionID = await FastifyResponse.getSessionID(request)
+        const sessionID = await Response.getSessionID(request)
 
         // if the killer is the player
         if (request.body.killedByAID === sessionID) {

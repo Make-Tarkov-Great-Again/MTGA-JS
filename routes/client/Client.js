@@ -1,5 +1,5 @@
 const { ClientController, MenuController } = require("../../lib/controllers");
-const { FastifyResponse } = require("../../utilities");
+const { Response } = require("../../utilities");
 
 module.exports = async function clientRoutes(app, _opts) {
 
@@ -32,12 +32,12 @@ module.exports = async function clientRoutes(app, _opts) {
     });
 
     app.post(`/client/checkVersion`, async (request, reply) => {
-        return FastifyResponse.zlibJsonReply(
+        return Response.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody(
+            Response.applyBody(
                 {
                     isValid: true,
-                    latestVersion: await FastifyResponse.getVersion(request)
+                    latestVersion: await Response.getVersion(request)
                 }
             )
         );
@@ -45,9 +45,9 @@ module.exports = async function clientRoutes(app, _opts) {
 
     app.post(`/client/server/list`, async (_request, reply) => {
         const { database: { core: { serverConfig: { ip, port } } } } = require("../../app");
-        return FastifyResponse.zlibJsonReply(
+        return Response.zlibJsonReply(
             reply,
-            FastifyResponse.applyBody([{ ip: ip, port: port }]));
+            Response.applyBody([{ ip: ip, port: port }]));
     });
 
     app.post(`/client/menu/locale/:language`, async (request, reply) => {

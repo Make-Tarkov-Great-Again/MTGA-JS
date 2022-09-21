@@ -1,4 +1,4 @@
-const { logger, FastifyResponse, writeFile, stringify } = require("../utilities");
+const { logger, Response, writeFile, stringify } = require("../utilities");
 const { RaidController } = require("../lib/controllers/RaidController");
 
 module.exports = async function serverRoutes(app, _opts) {
