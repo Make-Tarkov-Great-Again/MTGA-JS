@@ -32,9 +32,6 @@ module.exports = async function router(app, _opts) {
         /* Register the routes for raids */
         app.register(require("./raid")),
 
-        /* Register the routes for SIT */
-        app.register(require("./sit")),
-
         /* Register the routes for the singleplayer */
         app.register(require("./singleplayer")),
     ])
