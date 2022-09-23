@@ -28,7 +28,8 @@ module.exports = async function raidRoutes(app, _opts) {
 
     app.post(`/client/raid/person/killed`, async (request, _reply) => {
         logger.info(`[KILL INFO] ${stringify(request.body)}`)
-        return stringify(showDeathMessage);
+        if (showDeathMessage) return stringify(true);
+        else return stringify(false);
     });
 
     app.post(`/client/raid/createFriendlyAI`, async (_request, _reply) => {
