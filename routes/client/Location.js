@@ -10,6 +10,6 @@ module.exports = async function locationRoutes(app, _opts) {
     app.post(`/client/location/getAirdropLoot`, async (request, reply) => {
         const result = [];
         logger.debug("[getAirdropLoot] loot generation not implemented");
-        return clearString(JSON.stringify(result));
+        return JSON.stringify(result);
     })
 };
