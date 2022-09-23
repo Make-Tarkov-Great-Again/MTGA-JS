@@ -1,5 +1,4 @@
 const { ClientController, TaskerController } = require("../../lib/controllers");
-const { Profile } = require('../../lib/models/Profile');
 const { logger, Response } = require("../../utilities");
 
 module.exports = async function questRoutes(app, _opts) {
