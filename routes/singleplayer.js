@@ -36,7 +36,7 @@ module.exports = async function singleplayerRoutes(app, _opts) {
         const { database: { core: { gameplay: {
             raid: { airdropSettings } } } } } = require("../app");
 
-        return stringify(airdropSettings)
+        return JSON.stringify(airdropSettings)
     });
 
 }

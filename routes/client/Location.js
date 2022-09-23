@@ -1,5 +1,5 @@
 const { LocationController: { clientLocationGetLocalloot } } = require("../../lib/controllers");
-const { logger, stringify } = require("../../utilities");
+const { logger, stringify, clearString } = require("../../utilities");
 
 module.exports = async function locationRoutes(app, _opts) {
 
@@ -10,6 +10,6 @@ module.exports = async function locationRoutes(app, _opts) {
     app.post(`/client/location/getAirdropLoot`, async (request, reply) => {
         const result = [];
         logger.debug("[getAirdropLoot] loot generation not implemented");
-        return stringify(result);
+        return clearString(JSON.stringify(result));
     })
 };

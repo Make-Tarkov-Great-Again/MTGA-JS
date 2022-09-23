@@ -1,6 +1,3 @@
-/**
- * GET:/getBundleList
- */
 const { BundlesController } = require("../lib/controllers");
 const { logger } = require("../utilities");
 
