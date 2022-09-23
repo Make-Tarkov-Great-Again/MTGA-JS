@@ -26,20 +26,21 @@ module.exports = async function raidRoutes(app, _opts) {
         return stringify({});
     });
 
-    app.post(`/client/raid/person/killed`, async (request, reply) => {
-        logger.info(`[KILL INFO] ${request.body}`)
+    app.post(`/client/raid/person/killed`, async (request, _reply) => {
+        logger.info(`[KILL INFO] ${stringify(request.body)}`)
         return stringify(showDeathMessage);
     });
 
-    app.post(`/client/raid/createFriendlyAI`, async (request, _reply) => {
+    app.post(`/client/raid/createFriendlyAI`, async (_request, _reply) => {
         return stringify(createFriendlyAI);
     });
 
-    app.post(`/client/raid/bots/getNewProfile`, async (request, _reply) => {
+    app.post(`/client/raid/bots/getNewProfile`, async (_request, _reply) => {
         return stringify({});
     });
 
     app.post(`/client/raid/person/lootingContainer`, async (request, _reply) => {
+        logger.info(stringify(request.body));
         return stringify("");
     });
 
