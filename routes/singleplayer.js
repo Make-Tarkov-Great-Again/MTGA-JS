@@ -26,17 +26,13 @@ module.exports = async function singleplayerRoutes(app, _opts) {
         const { database: { core: { gameplay: {
             raid: { defaultRaidSettings } } } } } = require("../app");
 
-        return Response.zlibJsonReply(
-            reply,
-            Response.applyBody(defaultRaidSettings)
-        );
+        return stringify(defaultRaidSettings);
     });
 
     app.get(`/singleplayer/airdrop/config`, async (_request, _reply) => {
         const { database: { core: { gameplay: {
             raid: { airdropSettings } } } } } = require("../app");
-
-        return JSON.stringify(airdropSettings)
+        return stringify(airdropSettings);
     });
 
 }
