@@ -6,14 +6,17 @@
  * @param {number} b (number) max
  * @returns (number) Clamped value
  */
-const clamp = (value, a, b) => {
-    return min(max(value, a), b);
+const clamp = async (value, a, b) => {
+    return this.min(await this.max(value, a), b);
+}
+const abs = async (value) => {
+    return (value ^ (value >> 31)) - (value >> 31);
 }
 
-const min = (a, b) => {
+const min = async (a, b) => {
     return (a < b) ? a : b;
 }
-const max = (a, b) => {
+const max = async (a, b) => {
     return (a > b) ? a : b;
 }
 
@@ -101,6 +104,7 @@ module.exports = {
     round,
     min,
     max,
+    abs,
     floor,
     ceil,
     getRandomInt,
