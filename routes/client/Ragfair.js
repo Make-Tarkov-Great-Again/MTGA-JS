@@ -8,7 +8,7 @@ module.exports = async function ragfairRoutes(app, _opts) {
         const ragfair = await Ragfair.get("FleaMarket");
         return Response.zlibJsonReply(
             reply,
-            Response.applyBody(await ragfair.generateOffersBasedOnRequest(request.body))
+            Response.applyBody(await ragfair.generateOffersBasedOnRequest(request))
         );
     });
 
