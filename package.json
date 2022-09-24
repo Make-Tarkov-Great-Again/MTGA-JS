@@ -17,7 +17,6 @@
     "@fastify/websocket": "^7.0.1",
     "bson-objectid": "^2.0.3",
     "fast-querystring": "^1.0.0",
-    "fast-safe-stringify": "^2.1.1",
     "fastify": "^4.6.0",
     "fastify-plugin": "^4.2.1",
     "open": "^8.4.0",

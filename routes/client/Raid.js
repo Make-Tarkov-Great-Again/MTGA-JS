@@ -6,10 +6,11 @@ const { database: { core: { gameplay: {
 module.exports = async function raidRoutes(app, _opts) {
 
     app.post(`/client/raid/person/killed/showMessage`, async (request, _reply) => {
-        if (typeof request.body === "undefined") {
-            return stringify({}); //this pops on start for some reason
-        }
+        logger.info(`[KILL INFO] ${stringify(request.body)}`)
+        return stringify(showDeathMessage);
+    });
 
+    app.post(`/client/raid/person/killed`, async (request, _reply) => {
         const sessionID = await Response.getSessionID(request)
 
         // if the killer is the player
@@ -24,12 +25,6 @@ module.exports = async function raidRoutes(app, _opts) {
             await playerProfile.saveCharacter();
         }
         return stringify({});
-    });
-
-    app.post(`/client/raid/person/killed`, async (request, _reply) => {
-        logger.info(`[KILL INFO] ${stringify(request.body)}`)
-        if (showDeathMessage) return stringify(true);
-        else return stringify(false);
     });
 
     app.post(`/client/raid/createFriendlyAI`, async (_request, _reply) => {

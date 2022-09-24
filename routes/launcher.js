@@ -37,7 +37,8 @@ module.exports = async function launcherRoutes(app, _opts) {
 
     app.get('/launcher/profile/get', async (request, _reply) => {
         const output = find(await reloadAccountByLogin(request.body));
-        return noBody(output["server"] = name);
+        output["server"] = name;
+        return noBody(output);
     });
 
     app.get('/launcher/server/connect', async (_request, _reply) => {

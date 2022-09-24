@@ -1,7 +1,7 @@
 const { GameController } = require("../../lib/controllers");
 const { Bot } = require("../../lib/models/Bot");
 const { Profile } = require("../../lib/models/Profile")
-const { Response, writeFile, stringify } = require("../../utilities");
+const { Response, writeFile, stringify, logger } = require("../../utilities");
 
 module.exports = async function gameRoutes(app, _opts) {
 
@@ -28,6 +28,13 @@ module.exports = async function gameRoutes(app, _opts) {
             reply,
             Response.applyBody(bots)
         );
+    });
+
+    app.post('/client/game/profile/search', async (request, reply) => {
+        logger.log(request.body)
+        return Profile.getAll().filter(profile => {
+            if (profile._id === sessionID) return;
+        })
     });
 
     app.post("/client/game/logout", async (request, reply) => {
