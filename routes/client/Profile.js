@@ -15,14 +15,14 @@ const { logger, Response } = require("../../utilities");
 module.exports = async function profileRoutes(app, _opts) {
 
     app.post("/client/profile/status", async (request, reply) => {
-        const { character } = await Profile.get(await Response.getSessionID(request));
+        const { character: { savage, _id } } = await Profile.get(await Response.getSessionID(request));
         return Response.zlibJsonReply(
             reply,
             Response.applyBody({
                 maxPveCountExceeded: false,
                 profiles: [
                     {
-                        profileid: character.savage,
+                        profileid: savage,
                         profileToken: null,
                         status: "Free",
                         sid: "",
@@ -30,7 +30,7 @@ module.exports = async function profileRoutes(app, _opts) {
                         port: 0
                     },
                     {
-                        profileid: character._id,
+                        profileid: _id,
                         profileToken: null,
                         status: "Free",
                         sid: "",
