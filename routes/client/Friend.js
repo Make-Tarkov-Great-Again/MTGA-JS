@@ -1,20 +1,52 @@
-const { FriendController } = require("../../lib/controllers");
-const { logger } = require("../../utilities");
+const { Profile } = require("../../lib/models/Profile");
+const { FriendController, FriendControllerUtil } = require("../../lib/controllers");
+const { Response, generateMongoID, logger } = require("../../utilities");
 
 module.exports = async function friendRoutes(app, _opts) {
 
+    app.post('/client/game/profile/search', async (request, reply) => { //technically should be friend route
+        const output = []
+
+        const profiles = await Profile.getAllWithoutKeys();
+        if (profiles.length > 0) {
+            for (const profile of profiles) {
+                if (profile?.character?.Info?.Nickname === request.body.nickname) {
+                    output.push(await FriendControllerUtil.miniAccountTemplate(profile))
+                }
+            }
+        }
+
+        return Response.zlibJsonReply(
+            reply,
+            Response.applyBody(output)
+        );
+    });
+
     app.post(`/client/friend/list`, async (request, reply) => {
-        logger.warn(`[Current Friend List (NOT IMPLEMENTED)]`);
         await FriendController.clientFriendRequestList(request, reply);
     });
 
+    app.post(`/client/friend/request/send`, async (request, reply) => {
+        await FriendController.clientFriendRequestSend(request, reply);
+    });
+
+    app.post(`/client/friend/request/cancel`, async (request, reply) => {
+        await FriendController.clientFriendRequestCancel(request, reply);
+    });
+
+    app.post(`/client/friend/request/accept`, async (request, reply) => {
+        await FriendController.clientFriendRequestAccept(request, reply);
+    });
+
+    app.post(`/client/friend/request/decline`, async (request, reply) => {
+        await FriendController.clientFriendRequestDecline(request, reply);
+    });
+
     app.post(`/client/friend/request/list/inbox`, async (request, reply) => {
-        logger.warn(`[Received Friend Requests (NOT IMPLEMENTED)]`);
         await FriendController.clientFriendRequestListInbox(request, reply);
     });
 
     app.post(`/client/friend/request/list/outbox`, async (request, reply) => {
-        logger.warn(`[Sent Friend Requests (NOT IMPLEMENTED)]`);
         await FriendController.clientFriendRequestListOutbox(request, reply);
     });
 };
