@@ -46,6 +46,18 @@ module.exports = async function friendRoutes(app, _opts) {
         await FriendController.clientFriendRequestDecline(request, reply);
     });
 
+    app.post(`/client/friend/delete`, async (request, reply) =>{
+
+    });
+
+    app.post(`/client/friend/ignore/set`, async (request, reply) =>{
+        
+    });
+
+    app.post(`/client/friend/ignore/remove`, async (request, reply) =>{
+        
+    });
+
     app.post(`/client/friend/request/list/inbox`, async (request, reply) => {
         await FriendController.clientFriendRequestListInbox(request, reply);
     });
