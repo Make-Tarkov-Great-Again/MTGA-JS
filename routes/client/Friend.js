@@ -38,6 +38,10 @@ module.exports = async function friendRoutes(app, _opts) {
         await FriendController.clientFriendRequestAccept(request, reply);
     });
 
+    app.post(`/client/friend/request/accept-all`, async (request, reply) => {
+        await FriendController.clientFriendRequestAcceptAll(request, reply);
+    });
+
     app.post(`/client/friend/request/decline`, async (request, reply) => {
         await FriendController.clientFriendRequestDecline(request, reply);
     });
