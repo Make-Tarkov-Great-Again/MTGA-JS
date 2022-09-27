@@ -6,6 +6,7 @@ module.exports = async function router(app, _opts) {
 
         /* Register the routes for the client */
         app.register(require("./client/Account")),
+        app.register(requre("./client/Bots")),
         app.register(require("./client/Client")),
         app.register(require("./client/Friend")),
         app.register(require("./client/Game")),
