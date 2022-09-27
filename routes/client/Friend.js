@@ -10,6 +10,7 @@ module.exports = async function friendRoutes(app, _opts) {
         const profiles = await Profile.getAllWithoutKeys();
         if (profiles.length > 0) {
             for (const profile of profiles) {
+                if (profile?.character?.aid === await Response.getSessionID(request)) continue;
                 if (profile?.character?.Info?.Nickname === request.body.nickname) {
                     output.push(await FriendControllerUtil.miniAccountTemplate(profile))
                 }
@@ -46,16 +47,16 @@ module.exports = async function friendRoutes(app, _opts) {
         await FriendController.clientFriendRequestDecline(request, reply);
     });
 
-    app.post(`/client/friend/delete`, async (request, reply) =>{
-
+    app.post(`/client/friend/delete`, async (request, reply) => {
+        await FriendController.clientFriendDelete(request, reply);
     });
 
-    app.post(`/client/friend/ignore/set`, async (request, reply) =>{
-        
+    app.post(`/client/friend/ignore/set`, async (request, reply) => {
+        await FriendController.clientFriendIgnoreSet(request, reply);
     });
 
-    app.post(`/client/friend/ignore/remove`, async (request, reply) =>{
-        
+    app.post(`/client/friend/ignore/remove`, async (request, reply) => {
+        await FriendController.clientFriendIgnoreRemove(request, reply);
     });
 
     app.post(`/client/friend/request/list/inbox`, async (request, reply) => {
