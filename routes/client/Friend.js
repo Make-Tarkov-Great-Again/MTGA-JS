@@ -66,4 +66,12 @@ module.exports = async function friendRoutes(app, _opts) {
     app.post(`/client/friend/request/list/outbox`, async (request, reply) => {
         await FriendController.clientFriendRequestListOutbox(request, reply);
     });
+
+    app.post(`/client/reports/lobby/send`, async (request, reply) => {
+        logger.info(`[REPORT: REPLY] We do not care!`)
+        return Response.zlibJsonReply(
+            reply,
+            Response.applyBody(null)
+        );
+    });
 };
