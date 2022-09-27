@@ -15,7 +15,10 @@ module.exports = async function locationRoutes(app, _opts) {
 
     app.get(`/singleplayer/settings/raid/menu`, async (_request, reply) => {
         const { database: { core: { gameplay: {
-            raid: { defaultRaidSettings } } } } } = require("../app");
+            raid: { defaultRaidSettings } } } } } = require("../../app");
+
+        defaultRaidSettings.bossEnabled = false;
+        logger.info(`[ENABLE BOSSES] set to False until generating Boss bots is working`);
 
         return Response.zlibJsonReply(reply, defaultRaidSettings);
     });
