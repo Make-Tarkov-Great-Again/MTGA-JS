@@ -1,10 +1,9 @@
 const { Bot } = require("../../lib/models/Bot");
-const { logger, writeFile, Response } = require("../../utilities");
+const { logger, Response } = require("../../utilities");
 
 module.exports = async function botRoutes(app, _opts) {
     app.post('/client/game/bot/generate', async (request, reply) => {
         const bots = await Bot.generateBots(request, reply);
-        writeFile("./generatedBots.json", stringify(bots));
         return Response.zlibJsonReply(
             reply,
             Response.applyBody(bots)
@@ -12,7 +11,7 @@ module.exports = async function botRoutes(app, _opts) {
     });
 
     app.get(`/singleplayer/settings/bot/difficulty/*`, async (request, reply) => {
-        const { database: { bot: { core, bots } } } = require("../app");
+        const { database: { bot: { core, bots } } } = require("../../app");
         const keys = request.params['*'].split("/");
 
         if (keys[0] in bots) {
