@@ -16,7 +16,6 @@ module.exports = async function router(app, _opts) {
         app.register(require("./client/Match")),
         app.register(require("./client/Profile")),
         app.register(require("./client/Quest")),
-        app.register(require("./client/Ragfair")),
         app.register(require("./client/Raid")),
         app.register(require("./client/Trading")),
         app.register(require("./client/Insurance")),
@@ -27,10 +26,7 @@ module.exports = async function router(app, _opts) {
         app.register(require("./resources")),
 
         /* Register the routes for bundles?????? */
-        app.register(require("./bundles")),
-
-        /* Register the routes for the singleplayer */
-        app.register(require("./singleplayer")),
+        app.register(require("./bundles"))
     ])
     //.then((results) => results.forEach((result) => logger.info(`${result.status}, ${result.reason}`)));
 

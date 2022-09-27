@@ -11,12 +11,12 @@ module.exports = async function bundlesRoutes(app, _opts) {
 
   app.get(`/ServerInternalIPAddress`, async (request, reply) => {
     const { database: { core: { serverConfig: { ip } } } } = require("../app");
-    return ip
+    return Response.zlibJsonReply(reply, ip)
   });
 
   app.get(`/ServerExternalIPAddress`, async (request, reply) => {
     const { database: { core: { serverConfig: { ip_backend } } } } = require("../app");
-    return ip_backend;
+    return Response.zlibJsonReply(reply, ip_backend);
   });
 
 }

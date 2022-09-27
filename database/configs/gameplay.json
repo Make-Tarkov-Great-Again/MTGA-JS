@@ -168,7 +168,8 @@
         },
         "flea": {
             "unlockFlea": true,
-            "removeBlacklist": true
+            "removeBlacklist": true,
+            "liveFleaPrices": true
         }
     },
     "hideout": {
