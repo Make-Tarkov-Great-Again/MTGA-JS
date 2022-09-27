@@ -29,9 +29,6 @@ module.exports = async function router(app, _opts) {
         /* Register the routes for bundles?????? */
         app.register(require("./bundles")),
 
-        /* Register the routes for raids */
-        app.register(require("./raid")),
-
         /* Register the routes for the singleplayer */
         app.register(require("./singleplayer")),
     ])
