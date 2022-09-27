@@ -1,4 +1,5 @@
 const { ClientController } = require("../../lib/controllers");
+const { logger } = require("../../utilities");
 
 module.exports = async function ragfairRoutes(app, _opts) {
 
@@ -32,5 +33,33 @@ module.exports = async function ragfairRoutes(app, _opts) {
 
     app.post(`/client/mail/dialog/getAllAttachments`, async (request, reply) => {
         await ClientController.clientMailDialogGetAllAttachments(request, reply);
-    })
+    });
+
+    app.post(`/client/mail/dialog/group/users/add`, async (request, reply) => {
+        logger.info(request.body)
+    });
+
+    app.post(`/client/mail/dialog/group/users/remove`, async (request, reply) => {
+        logger.info(request.body)
+    });
+
+    app.post(`/client/mail/dialog/group/leave`, async (request, reply) => {
+        logger.info(request.body)
+    });
+
+    app.post(`/client/mail/dialog/group/owner/change`, async (request, reply) => {
+        logger.info(request.body)
+    });
+
+    app.post(`/client/mail/dialog/group/create`, async (request, reply) => {
+        logger.info(request.body)
+    });
+
+    app.post(`/client/mail/msg/send`, async (request, reply) => {
+        logger.info(request.body)
+    });
+
+    app.post(`/client/mail/dialog/clear`, async (request, reply) => {
+        logger.info(request.body)
+    });
 };
