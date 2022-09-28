@@ -1,4 +1,6 @@
 const { TraderController } = require("../../lib/controllers");
+const { Ragfair } = require("../../lib/models/Ragfair");
+const { Response, logger, stringify } = require("../../utilities");
 
 module.exports = async function tradingRoutes(app, _opts) {
 
@@ -24,6 +26,14 @@ module.exports = async function tradingRoutes(app, _opts) {
 
     app.post(`/client/trading/api/getUserAssortPrice/trader/:traderId`, async (request, reply) => {
         await TraderController.getUserAssortPrice(request, reply);
+    });
+
+    app.post(`/client/ragfair/find`, async (request, reply) => {
+        const ragfair = await Ragfair.get("FleaMarket");
+        return Response.zlibJsonReply(
+            reply,
+            Response.applyBody(await ragfair.generateOffersBasedOnRequest(request))
+        );
     });
 
 };
