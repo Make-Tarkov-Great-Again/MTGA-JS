@@ -57,6 +57,7 @@ module.exports = async function ragfairRoutes(app, _opts) {
 
     app.post(`/client/mail/msg/send`, async (request, reply) => {
         logger.info(request.body)
+        await ClientController.clientMailMessageSend(request, reply);
     });
 
     app.post(`/client/mail/dialog/clear`, async (request, reply) => {
