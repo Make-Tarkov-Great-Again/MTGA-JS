@@ -4,7 +4,8 @@
   "description": "Fastify Tarkov Emulation Server",
   "main": "app.js",
   "scripts": {
-    "start": "node --trace-warnings app.js "
+    "start": "node --trace-warnings app.js",
+    "dev": "nodemon --trace-warnings app.js"
   },
   "keywords": [],
   "author": "MTGA-Team",

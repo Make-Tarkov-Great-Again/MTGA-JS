@@ -1,58 +1,48 @@
-const {
-    account: {
-        find, register, getEditions, remove,
-        changeEmail, changePassword, reloadAccountByLogin,
-        wipe },
-    database: { profiles, core: { serverConfig: { name, ip, port } } }
-} = require('../../app');
-const { noBody, logger } = require('../utilities');
+const { webinterface } = require('../app');
+const { AccountController, WeblauncherController } = require('../lib/controllers');
 
 module.exports = async function launcherRoutes(app, _opts) {
 
-    app.get('/launcher/profile/change/email', async (request, _reply) => {
-        const output = await changeEmail(request.body);
-        return (output === "" ? "FAILED" : "OK");
+    // Account Routes //
+    app.get('/launcher/account/test', async (request, reply) => {
+        return AccountController.test(request, reply);
     });
 
-    app.get('/launcher/profile/change/password', async (request, _reply) => {
-        const output = await changePassword(request.body);
-        return (output === "" ? "FAILED" : "OK");
+    app.get('/launcher/account/register', async (request, reply) => {
+        return AccountController.create(request, reply);
     });
 
-    app.post('/launcher/profile/wipe', async (request, _reply) => {
-        const output = await wipe(request.body);
-        return (output === "" ? "FAILED" : "OK");
+    app.post('/launcher/account/register', async (request, reply) => {
+        return AccountController.store(request, reply);
     });
 
-    app.post('/launcher/profile/register', async (request, _reply) => {
-        const output = await register(request.body);
-        logger.debug("[LAUNCHER REGISTER]: " + output);
-        return (output === "" ? "FAILED" : output);
+    app.get('/launcher/account/login', async (request, reply) => {
+        return AccountController.showLogin(request, reply);
     });
 
-    app.post('/launcher/profile/remove', async (request, _reply) => {
-        const output = await remove(request.body)
-        return (output === "" ? "FAILED" : "OK");
+    app.post('/launcher/account/login', async (request, reply) => {
+        return AccountController.launcherLogin(request, reply);
     });
 
-    app.get('/launcher/profile/get', async (request, _reply) => {
-        const output = find(await reloadAccountByLogin(request.body));
-        output["server"] = name;
-        return noBody(output);
+    app.get('/launcher/account/settings', async (request, reply) => {
+        return AccountController.edit(request, reply);
     });
 
-    app.get('/launcher/server/connect', async (_request, _reply) => {
-        const output = {
-            backendURL: "https://" + ip + ":" + port,
-            name: name,
-            editions: getEditions(profiles)
-        };
-        logger.debug("[LAUNCHER CONNECT]: " + output);
-        return noBody(output);
+    app.get('/launcher/account/settings/wipe', async (request, reply) => {
+        return AccountController.wipe(request, reply);
     });
 
-    app.post('/launcher/profile/login', async (request, _reply) => {
-        return noBody(reloadAccountByLogin(request.body));
+    app.post('/launcher/account/settings', async (request, reply) => {
+        return AccountController.update(request, reply);
     });
 
-};
+    app.get('/launcher/account/logout', async (request, reply) => {
+        return AccountController.logout(request, reply);
+    });
+
+    // Launcher Route //
+    app.get('/launcher/weblauncher/start', async (request, reply) => {
+        return WeblauncherController.launch(request, reply);
+    });
+
+}
