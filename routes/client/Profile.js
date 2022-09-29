@@ -185,6 +185,7 @@ module.exports = async function profileRoutes(app, _opts) {
                 default:
                     logger.warn("[/client/game/profile/items/moving] Action " + moveAction.Action + " is not yet implemented.");
             }
+            break;
         }
         await playerProfile.save();
         return Response.zlibJsonReply(
