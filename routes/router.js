@@ -4,6 +4,9 @@ module.exports = async function router(app, _opts) {
         /* Register the routes for the webinterface */
         app.register(require("./webinterface")),
 
+        /* Register the routes for the launcher */
+        app.register(require("./launcher")),
+
         /* Register the routes for the client */
         app.register(require("./client/Account")),
         app.register(require("./client/Bots")),
