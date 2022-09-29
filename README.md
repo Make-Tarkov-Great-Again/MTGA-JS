@@ -1,6 +1,16 @@
-# Make Tarkov Great Again
+# MTGA-Backend
 
-> It's going to be great, so great, in fact it will be the best
+The server for MTGA
+
+> It's going to be great, so great, in fact it will dominate nikita's paste
+
+## Usage
+
+npm
+
+`npm install mtga-backend`
+
+## Known issues
 
 ## Who are we, and why are we doing this.
 
