@@ -8,9 +8,10 @@ module.exports = async function friendRoutes(app, _opts) {
         const output = []
 
         const profiles = await Profile.getAllWithoutKeys();
+        const sessionId = await Response.getSessionID(request)
         if (profiles.length > 0) {
             for (const profile of profiles) {
-                if (profile?.character?.aid === await Response.getSessionID(request)) continue;
+                if (profile?.character?.aid === sessionId) continue;
                 if (profile?.character?.Info?.Nickname === request.body.nickname) {
                     output.push(await FriendControllerUtil.miniAccountTemplate(profile))
                 }
