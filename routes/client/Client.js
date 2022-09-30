@@ -1,5 +1,5 @@
 const { ClientController, MenuController } = require("../../lib/controllers");
-const { Response } = require("../../utilities");
+const { Response, logger } = require("../../utilities");
 
 module.exports = async function clientRoutes(app, _opts) {
 
@@ -43,6 +43,10 @@ module.exports = async function clientRoutes(app, _opts) {
         );
     });
 
+    app.post(`/client/chatServer/list`, async (request, reply) => {
+        logger.info(`[CHAT SERVER OPTIONS] not implemented`)
+    });
+    
     app.post(`/client/server/list`, async (_request, reply) => {
         const { database: { core: { serverConfig: { ip, port } } } } = require("../../app");
         return Response.zlibJsonReply(

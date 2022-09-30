@@ -8,7 +8,6 @@ const { database: { core: { gameplay: {
 module.exports = async function raidRoutes(app, _opts) {
 
     app.post(`/client/raid/person/killed/showMessage`, async (request, reply) => {
-        logger.info(`[KILL INFO] ${stringify(request.body)}`)
         return Response.zlibJsonReply(reply, showDeathMessage);
     });
 

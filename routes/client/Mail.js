@@ -1,5 +1,5 @@
 const { ClientController } = require("../../lib/controllers");
-const { logger } = require("../../utilities");
+const { logger, Response } = require("../../utilities");
 
 module.exports = async function ragfairRoutes(app, _opts) {
 
@@ -56,8 +56,12 @@ module.exports = async function ragfairRoutes(app, _opts) {
     });
 
     app.post(`/client/mail/msg/send`, async (request, reply) => {
-        logger.info(request.body)
-        await ClientController.clientMailMessageSend(request, reply);
+        const sessionID = await Response.getSessionID(request);
+        if (request.body.dialogId === sessionID) {
+            if (request.body.type === 1) await ClientController.clientMailMessageReply(request, reply);
+            if (request.body.type === 6) logger.info(`[GROUP CHAT] not implemented`);
+        }
+        else await ClientController.clientMailMessageSend(request, reply);
     });
 
     app.post(`/client/mail/dialog/clear`, async (request, reply) => {
