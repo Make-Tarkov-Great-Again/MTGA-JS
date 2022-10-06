@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.20",
-    "pino-pretty": "^9.1.0",
+    "pino-pretty": "^9.1.1",
     "tap": "^16.3.0"
   }
 }

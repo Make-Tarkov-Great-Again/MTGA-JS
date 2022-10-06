@@ -86,8 +86,8 @@ const valueBetween = (value, minInput, maxInput, minOutput, maxOutput) => {
 }
 
 /**
- * @param {any[]} array 
- * @returns rolled value
+ * @param {[]} array 
+ * @returns {<Promise> string} rolled value
  */
 const getRandomFromArray = async (array) => {
     return array[await getRandomInt(0, array.length - 1)];
