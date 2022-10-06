@@ -18,10 +18,16 @@
             }
         ]
     },
+    "bots": {
+        "preload": false,
+        "maxPreloadThreshold": 100,
+        "minPreloadThreshold": 20
+    },
     "development": {
         "updateLocations": false,
         "updateBotDifficulties": false,
-        "devInsuranceTimers": true,
+        "debugBots": false,
+        "devInsuranceTimers": false,
         "devInsuranceTimes": {
             "min": 0.01,
             "max": 0.01
