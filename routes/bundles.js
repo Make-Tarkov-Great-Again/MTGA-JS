@@ -9,14 +9,4 @@ module.exports = async function bundlesRoutes(app, _opts) {
     await BundlesController.getBundles(reply);
   });
 
-  app.get(`/ServerInternalIPAddress`, async (request, reply) => {
-    const { database: { core: { serverConfig: { ip } } } } = require("../app");
-    return Response.zlibJsonReply(reply, ip)
-  });
-
-  app.get(`/ServerExternalIPAddress`, async (request, reply) => {
-    const { database: { core: { serverConfig: { ip_backend } } } } = require("../app");
-    return Response.zlibJsonReply(reply, ip_backend);
-  });
-
 }
