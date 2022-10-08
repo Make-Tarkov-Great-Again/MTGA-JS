@@ -1,5 +1,6 @@
 const { logger, stringify, Response } = require("../../utilities");
 const { Profile } = require("../../lib/models/Profile");
+const { Bot } = require("../../lib/models/Bot");
 const { RaidController } = require("../../lib/controllers/RaidController");
 
 const { database: { core: { gameplay: {
@@ -43,8 +44,8 @@ module.exports = async function raidRoutes(app, _opts) {
 
     // /client/raid/profile/save
     app.post(`/client/raid/profile/save`, async (request, reply) => {
-        //writeFile("./saveInformation.json", stringify(request.body));
         await RaidController.raidProfileSave(request, reply);
+        await Bot.regeneratePreloadedBots();
     });
 
 }
