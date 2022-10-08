@@ -3,7 +3,9 @@ const { logger, Response } = require("../../utilities");
 
 module.exports = async function botRoutes(app, _opts) {
     app.post('/client/game/bot/generate', async (request, reply) => {
-        const bots = await Bot.generateBots(request, reply);
+        const { database: { core: { gameplay: { bots: { preload } } } } } = require("../../app");     
+        const bots = preload ? await Bot.usePreloadedBots(request, reply) : await Bot.generateBots(request, reply);
+        
         return Response.zlibJsonReply(
             reply,
             Response.applyBody(bots)
