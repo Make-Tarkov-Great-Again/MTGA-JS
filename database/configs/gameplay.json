@@ -20,8 +20,8 @@
     },
     "bots": {
         "preload": false,
-        "maxPreloadThreshold": 100,
-        "minPreloadThreshold": 20
+        "maxPreloadThreshold": 5,
+        "minPreloadThreshold": 5
     },
     "development": {
         "updateLocations": false,
@@ -116,7 +116,9 @@
     "location": {
         "realTimeEnabled": true,
         "forceWeatherEnabled": false,
-        "forceWeatherId": false
+        "forceWeatherId": false,
+        "changeExfiltrationTime": true,
+        "exfiltrationTime": 1
     },
     "loot": {},
     "match": {
