@@ -60,7 +60,12 @@
             "ammo": 120,
             "money": 1000000
         },
-        "stimMaxUses": 3
+        "stimMaxUses": 3,
+        "noArmorRestrictions": true,
+        "Weight": {
+            "enabled": true,
+            "modifier": 0.3
+        }
     },
     "raid": {
         "insuranceEnabled": true,
