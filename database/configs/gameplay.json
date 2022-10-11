@@ -20,7 +20,7 @@
     },
     "bots": {
         "preload": false,
-        "maxPreloadThreshold": 5,
+        "maxPreloadThreshold": 100,
         "minPreloadThreshold": 5
     },
     "development": {
