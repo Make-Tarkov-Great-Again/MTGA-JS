@@ -20,8 +20,8 @@
     },
     "bots": {
         "preload": false,
-        "maxPreloadThreshold": 100,
-        "minPreloadThreshold": 5
+        "maxPreloadThreshold": 1,
+        "minPreloadThreshold": 10
     },
     "development": {
         "updateLocations": false,
