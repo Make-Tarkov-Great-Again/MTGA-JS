@@ -211,6 +211,20 @@ const compareArrays = async (one, two) => {
     return false;
 }
 
+/**
+ * Shuffles array
+ * @param {[]} array 
+ */
+const shuffleArray = async (array) => {
+    const { floor } = require(`./math`);
+
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = await floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
 
 module.exports = {
     getCurrentTimestamp,
@@ -230,5 +244,6 @@ module.exports = {
     getFileUpdatedDate,
     removeDuplicatesFromArray,
     groupArrayByObjectProperty,
-    compareArrays
+    compareArrays,
+    shuffleArray
 };
