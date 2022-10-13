@@ -56,10 +56,10 @@ const getPercentOf = (num1, num2) => {
 
 /** true if lucky, false if unlucky
  * @param {number} percentage 
- * @returns boolean
+ * @returns bool
  */
 const getPercentRandomBool = async (percentage) => {
-    return ~~((Math.random() * 100) < percentage);
+    return (~~(Math.random() * 100) < percentage);
 }
 
 /** extension for getRandomInt(1, max)
