@@ -71,11 +71,18 @@ if (process.platform === 'win32' || process.platform === 'win64') {
 const app = require('fastify')({
     logger: {
         transport: {
-            target: 'pino-pretty'
+            target: 'pino-pretty',
+            options: {
+                singleLine: true,
+            }
         },
-        options: {
-            colorize: true,
-            translateTime: 'HH:MM:ss Z'
+        serializers: {
+            req (request) {
+                return `[${request.method}] ${request.url}`
+            },
+            res (reply) {
+                return `${reply.statusCode}`
+            }
         }
     },
     querystringParser: str => qs.parse(str),
