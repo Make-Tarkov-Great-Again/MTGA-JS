@@ -19,12 +19,15 @@
         ]
     },
     "bots": {
-        "preload": false,
+        "preload": true,
         "preloadParameters": {
-            "maxBossPreloadThreshold": 3,
-            "minBossPreloadThreshold": 1,
-            "maxPreloadThreshold": 35,
-            "minPreloadThreshold": 10
+            "maxBossPreload": 3,
+            "minBossPreload": 1,
+            "maxFollowerPreload": 25,
+            "minFollowerPreload": 5,
+            "maxScavPreload": 100,
+            "minScavPreload": 10,
+            "limiter": 100
         }
     },
     "development": {
