@@ -38,10 +38,6 @@ module.exports = async function webinterfaceRoutes(app, _opts) {
         return AccountController.edit(request, reply);
     });
 
-    app.get('/webinterface/account/settings/wipe', async (request, reply) => {
-        return AccountController.wipe(request, reply);
-    });
-
     app.post('/webinterface/account/settings', async (request, reply) => {
         return AccountController.update(request, reply);
     });

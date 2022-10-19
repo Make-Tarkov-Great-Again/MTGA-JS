@@ -54,9 +54,7 @@ if (process.platform === 'win32' || process.platform === 'win64') {
         if (userCancelOrError) {
             logger.error(`HTTPS Certification Installation failed!`);
             logger.error(`If an error occured, report on Discord.`);
-            logger.error(` 
-            If you chose not to allow the installation, read below:
-             `);
+            logger.error(`If you chose not to allow the installation, read below:`);
             logger.error(`The certificate is required for Websockets to work, otherwise the Client will not connect to the socket endpoint.`);
             logger.error(`If you have any security concerns, you can take a look at the script ${installCertificateScriptPath}.`);
             logger.error(`The certificate is generated on first start, has a lifetime of 3 days, and will is saved to /user/certs/.`);
@@ -73,11 +71,18 @@ if (process.platform === 'win32' || process.platform === 'win64') {
 const app = require('fastify')({
     logger: {
         transport: {
-            target: 'pino-pretty'
+            target: 'pino-pretty',
+            options: {
+                singleLine: true,
+            }
         },
-        options: {
-            colorize: true,
-            translateTime: 'HH:MM:ss Z'
+        serializers: {
+            req (request) {
+                return `[${request.method}] ${request.url}`
+            },
+            res (reply) {
+                return `${reply.statusCode}`
+            }
         }
     },
     querystringParser: str => qs.parse(str),
