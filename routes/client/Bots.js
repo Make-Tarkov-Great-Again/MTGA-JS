@@ -7,7 +7,7 @@ module.exports = async function botRoutes(app, _opts) {
         const bots = preload ? await Bot.usePreloadedBots(request, reply) : await Bot.generateBots(request, reply);
         
 
-        writeFile("/generatedbots.json", stringify(bots));
+        //writeFile("/generatedbots.json", stringify(bots));
         return Response.zlibJsonReply(
             reply,
             Response.applyBody(bots)
