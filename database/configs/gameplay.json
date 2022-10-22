@@ -19,8 +19,8 @@
         ]
     },
     "bots": {
-        "preload": true,
-        "preloadParameters": {
+        "preload": {
+            "enabled": true,
             "maxBossPreload": 3,
             "minBossPreload": 1,
             "maxFollowerPreload": 25,
@@ -28,11 +28,14 @@
             "maxScavPreload": 100,
             "minScavPreload": 10,
             "limiter": 100
+        },
+        "randomAmmos": {
+            "enabled": true,
+            "chance": 65,
+            "maxTypes": 3
         }
     },
     "development": {
-        "updateLocations": false,
-        "updateBotDifficulties": false,
         "debugBots": false,
         "devInsuranceTimers": false,
         "devInsuranceTimes": {
