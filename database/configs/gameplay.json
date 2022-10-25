@@ -19,24 +19,27 @@
         ]
     },
     "bots": {
+        "_preload": "Creates a cache on server start of generated bots, so that it is not done as the deploy timer starts; bots are also regenerated after each raid if their minThreshold is met. If all bots in cache are used, will generate normally then regenerate after raid",
         "preload": {
             "enabled": true,
             "maxBossPreload": 3,
             "minBossPreload": 1,
-            "maxFollowerPreload": 25,
+            "maxFollowerPreload": 20,
             "minFollowerPreload": 5,
-            "maxScavPreload": 100,
+            "maxScavPreload": 50,
             "minScavPreload": 10,
-            "limiter": 100
+            "limiter": 75
         },
+        "_randomAmmos": "Adds some realism to the spare ammunition the standard bots carry",
         "randomAmmos": {
-            "enabled": true,
+            "looseEnabled": true,
+            "magazineEnabled": true,
             "chance": 65,
             "maxTypes": 3
         }
     },
     "development": {
-        "debugBots": false,
+        "debugBots": true,
         "devInsuranceTimers": false,
         "devInsuranceTimes": {
             "min": 0.01,
