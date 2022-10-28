@@ -33,7 +33,7 @@
         "_randomAmmos": "Adds some realism to the spare ammunition the standard bots carry",
         "randomAmmos": {
             "looseEnabled": true,
-            "magazineEnabled": true,
+            "magazineEnabled": "i don't work because bsg is shit",
             "chance": 65,
             "maxTypes": 3
         }
