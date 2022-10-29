@@ -1,10 +1,10 @@
 const logger = require('./logger');
 const util = require("util");
-const ObjectID = require("bson-objectid");
+const mongoid = require("mongoid-js");
 const fs = require('fs');
 
 const generateMongoID = async () => {
-    return ObjectID.createFromTime(process.hrtime.bigint()).toHexString();
+    return mongoid();
 }
 
 /**

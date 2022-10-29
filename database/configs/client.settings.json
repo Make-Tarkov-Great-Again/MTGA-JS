@@ -18,8 +18,8 @@
 			},
 			"FramerateLimit": {
 				"MinFramerateLimit": 30,
-				"MaxFramerateLobbyLimit": 96,
-				"MaxFramerateGameLimit": 144
+				"MaxFramerateLobbyLimit": 30,
+				"MaxFramerateGameLimit": 240
 			},
 			"ClientSendRateLimit": 60,
 			"TurnOffLogging": false,
