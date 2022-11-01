@@ -145,6 +145,8 @@
         "realTimeEnabled": true,
         "forceWeatherEnabled": false,
         "forceWeatherId": false,
+        "changeRaidTime": true,
+        "raidTimerMultiplier": 1,
         "changeExfiltrationTime": true,
         "exfiltrationTime": 1
     },
