@@ -3966,7 +3966,7 @@
               "Default": 0
             }
           },
-          "DefaultStimulatorBuff": "Buffs_Halloween"
+          "DefaultStimulatorBuff": ""
         }
       },
       "rating": {
@@ -4716,10 +4716,7 @@
       "SkillFreshPoints": 1,
       "SkillPointsBeforeFatigue": 1,
       "SkillFatigueReset": 200,
-      "EventType": [
-        "Halloween",
-        "HalloweenIllumination"
-      ],
+      "EventType": [],
       "WalkSpeed": {
         "x": 0.625,
         "y": 0.86,

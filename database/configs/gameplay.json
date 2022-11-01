@@ -6,7 +6,7 @@
                 "name": "Halloween",
                 "startDay": "24",
                 "startMonth": "10",
-                "endDay": "7",
+                "endDay": "5",
                 "endMonth": "11"
             },
             {
@@ -81,6 +81,14 @@
         }
     },
     "raid": {
+        "maxBotsAliveOnMap": 20,
+        "waveCoef": {
+            "low": 1,
+            "mid": 1.4,
+            "high": 1.8,
+            "horde": 10
+        },
+        "timeBeforeDeploy": 5,
         "inRaidModding": true,
         "insuranceEnabled": true,
         "inRaid": {
@@ -123,7 +131,8 @@
             "sellAllDrip": true
         },
         "flea": {
-            "unlockFlea": true,
+            "enabled": true,
+            "minUserLevel": 15,
             "removeBlacklist": true,
             "liveFleaPrices": true
         }
