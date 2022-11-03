@@ -2997,7 +2997,14 @@
     "WearChanceRepairGunsReduceEliteLevel": "Riduce la possibilità di usura quando si utilizzano i kit di riparazione",
     "WearAmountRepairGunsReducePerLevel": "Riduce l'usura quando si usano i kit di riparazione",
     "Settings/Graphics/MipStreamingBufferTooltip": "La quantità di RAM allocata per caricare le texture con una data qualità. Maggiore è la quantità, maggiore è il carico del disco e più veloce è il caricamento di tutte le texture necessarie.",
-    "Settings/Graphics/MipStreamingIOLimitTooltip": "Più alto è, maggiore è la velocità di caricamento delle texture. Su buone unità, questo aumenta il carico sul disco rigido. Sui dischi lenti, questo può portare a una lunga coda di operazioni sull'unità e le texture si caricheranno più lentamente."
+    "Settings/Graphics/MipStreamingIOLimitTooltip": "Più alto è, maggiore è la velocità di caricamento delle texture. Su buone unità, questo aumenta il carico sul disco rigido. Sui dischi lenti, questo può portare a una lunga coda di operazioni sull'unità e le texture si caricheranno più lentamente.",
+    "unpack": "unpack",
+    "FRACTURE": "FRACTURE",
+    "UI/Inventory/CantUnpackInRaid": "Can't be unpacked in raid",
+    "257 - ItemsMoving(OpenRandomLoot): can't open random loot container": "Can't open the loot container",
+    "HalloweenBuff": "Halloween. Random effects at the start of each raid",
+    "will be destroyed after unpacking": "Will be destroyed after unpacking",
+    "Halloween. Random effects at the start of each raid": "Halloween. Random effects at the start of each raid"
   },
   "enum": [],
   "error": {
@@ -3017,7 +3024,8 @@
     "201 - Client not authorized or not selected game profile": "Autorizzazione del client fallita, si prega di riavviare il gioco o controllare la connessione Internet",
     "Backend error: Unknown Error": "Errore backend: Errore di connessione al backend",
     "BackendErrorHeader": "Errore backend",
-    "BackendErrorMessage": "Si è verificato un errore lato backend"
+    "BackendErrorMessage": "Si è verificato un errore lato backend",
+    "257 - ItemsMoving[OpenRandomLoot]: can't open random loot container": "Can't open the loot container"
   },
   "mail": {
     "5a8fd75188a45036844e0ade": "Sembrerebbe che il Raid del giorno {date} nella zona di {location} sia andato male vero? Lo so per certo visto che ho ritrovato dell'equipaggiamento che ti appartiene. Ti sbrighi a riprenderlo o cosa?",
@@ -4735,9 +4743,9 @@
     "59f9da6786f774714230d751": {
       "successMessageText": "5ab0f32686f7745dd409f595",
       "description": "5abe61a886f7746ad512da6f",
+      "location": "5704e554d2720bac5b8b456e",
       "conditions": {},
-      "name": "",
-      "location": "5704e554d2720bac5b8b456e"
+      "name": ""
     },
     "5a03153686f77442d90e2171": {
       "conditions": {
@@ -7158,136 +7166,136 @@
         "5e7a0773838c444eb02dd0c4": "",
         "5e7b30e574986d20835c2185": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e748327dbe23170e05094f4": {
       "conditions": {
         "5e74833f0b1f9954c86ee49c": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e748d226725d419a47e2101": {
       "conditions": {
         "5e748d406725d419a47e2104": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e748d9fc73f9622610abb37": {
       "conditions": {
         "5e748dc9391f136a9201292e": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e748df9c73f9622610abb38": {
       "conditions": {
         "5e748e12c73f9622610abb3b": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e748e8fa848081e986a58a2": {
       "conditions": {
         "5e7b805f0bc7e118403c847d": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e74921dc73f9622610abb3e": {
       "conditions": {
         "5e74922b35e14d4fb162de6d": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e7492c2cdcce040bf508424": {
       "conditions": {
         "5e749308a848081e986a58a6": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e7493d5c377f60fe17d6ec8": {
       "conditions": {
         "5e7493e9c377f60fe17d6ecb": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e749741dec1852497081e69": {
       "conditions": {
         "5e74a5f2647a0846684a1dc4": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e7498198f3a2f53cc477e99": {
       "conditions": {
         "5e74983470d454700576d1fb": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e7498cc2eb35c76f5087a47": {
       "conditions": {
         "5e7498d9c377f60fe17d6ed4": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e74990c647a0846684a1db4": {
       "conditions": {
         "5e749921dec1852497081e6d": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e749800e80d6c7ea20e93de": {
       "conditions": {
         "5e789b80d7dc7108e2674cce": "",
         "5e7a14d6e77ff7644b69fec4": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e74a68870d454700576d1fe": {
       "conditions": {
         "5e74a6a4d9d3481b8e64369e": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e74a765c377f60fe17d6edb": {
       "conditions": {
         "5e74a798763a4645365a6186": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e74a8a9dfc5fc63e27a781a": {
       "conditions": {
         "5e74a8e914847d2f305bfb94": "",
         "5e7b6333b4c9b140be78c134": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e74aafac377f60fe17d6ede": {
       "conditions": {
         "5e7b2993f60dc341415906fb": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e74ac3f70d454700576d200": {
       "conditions": {
         "5e74ac57763a4645365a618b": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e74ad13647a0846684a1dc8": {
       "conditions": {
@@ -7299,72 +7307,72 @@
         "5e7a13facfd9c45fdf382af4": "",
         "5e7a13ffb9cbe86fb360bb74": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e74b1b201e03f5a8d48aff9": {
       "conditions": {
         "5e74b1c4c16d705f775de1db": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e74be7b258b0422556b70d7": {
       "conditions": {
         "5e79ffc73db8ef255a7c6554": "",
         "5e7a13c35b8bd347797f4fe5": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e74be4c24c2c642fa612776": {
       "conditions": {
         "5e7a012228b2fd48f6591c8f": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e74a9be70d454700576d1ff": {
       "conditions": {
         "5e7a0c8ee77ff7644b69febe": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e85e1d15549dd01fe748b5a": {
       "conditions": {
         "5e85e22e5549dda42377fa77": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e85e2fa5549dd01fe748b5b": {
       "conditions": {
         "5e85e32a5549ddfb4a0cdb3a": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e85e40d5549dd10225137b9": {
       "conditions": {
         "5e872a5a5549ddc49d49a643": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e85e5025549dda42377fa7b": {
       "conditions": {
         "5e85e5405549ddb56f1cf0d9": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5e85e77e5549ddf8e2131c0b": {
       "conditions": {
         "5e85e7b45549dd422605cc1d": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5eaaaa7c93afa0558f3b5a1c": {
       "conditions": {
@@ -7584,82 +7592,82 @@
       "conditions": {
         "5f75c578dfacb47e146a0063": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5f75fddbd24e8b7a9c508f3a": {
       "conditions": {
         "5f8f1423d613404c430b7895": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5f70e2a5dcfde927745eb1d0": {
       "conditions": {
         "5f8d63247b5bb8669b67ed4a": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5f79c7621f644f1eb53bdaf2": {
       "conditions": {
         "5f9683f05d04e220425a7c5b": "",
         "5f9684e4d8069972a173dd75": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5f710f7ce9f14826bf7c1c72": {
       "conditions": {
         "5f968586f4b9f84879321a41": "",
         "5f96875445904e5b11508ba4": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5f75fb988fb5c37ce1766e98": {
       "conditions": {
         "5f97010ace3c6452e951c536": "",
         "5f75fb988fb5c37ce1766e99": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5f75c5078fb5c37ce1766e95": {
       "conditions": {
         "5f9701bc261b2c7e0322947b": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5f70abfae9f14826bf7c1c65": {
       "conditions": {
         "5f970525cfe8173d12189403": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5f70acb63a7ec37e73013427": {
       "conditions": {
         "5f75c801ce26be0d620b7ff4": "",
         "5f995e4959c80875e62a667d": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5f75fd4450914c5fcc425279": {
       "conditions": {
         "5f75fd4450914c5fcc42527a": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5f70b9cfe9f14826bf7c1c67": {
       "conditions": {
         "5f71d67f413b7a71bb3d4883": ""
       },
-      "name": "",
-      "location": "any"
+      "location": "any",
+      "name": ""
     },
     "5fd9fad9c1ce6b1a3b486d00": {
       "conditions": {
@@ -9361,6 +9369,9 @@
     },
     "629792f0fd6eda47d6466fe8": {
       "Name": null
+    },
+    "63458654ef605d059f0c67bb": {
+      "Name": ""
     }
   },
   "handbook": {
@@ -10048,6 +10059,11 @@
       "ShortName": "AN/PEQ-15",
       "Description": "L'ATPIAL (Mirino Laser Avanzato Illuminato) AN/PEQ-15 prodotto da L3 Insight Technologies. Dispositivo tattico che combina un designatore laser visibile e banda IR con faro IR."
     },
+    "54490a4d4bdc2dbc018b4573": {
+      "Name": "Silenziatore SilencerCo Sparrow 22",
+      "ShortName": "Sparrow 22",
+      "Description": "SilencerCo Sparrow 22 è un silenziatore multi-calibro che permette di sparare .22LR .17WSM .22MAG e 5.7x28."
+    },
     "54491bb74bdc2d09088b4567": {
       "Name": "BAIONETTA ER FULCRUM",
       "ShortName": "BAYONET ER",
@@ -10087,6 +10103,11 @@
       "Name": "Ottica Nightforce NXS 2.5-10x24",
       "ShortName": "NXS 2.5-10",
       "Description": "L'ottica NightForce NXS 2.5-10х24mm combina le dimensioni compatte con un ampio campo di ingrandimento da 2.5х a 10х. Progettata per la caccia ed il tiro sportivo, è in grado di sopportare il potente rinculo e sparare efficacemente a breve e lungo raggio. Molto affidabile in questo ambito e permette di essere installato sulle armi di qualsiasi calibro. Ha guadagnato un ampio riconoscimento tra i tiratori civili e militari di molti paesi in tutto il mondo."
+    },
+    "544a3f024bdc2d1d388b4568": {
+      "Name": "Ottica d'assalto ELCAN Specter OS4x",
+      "ShortName": "OS4x",
+      "Description": "L'ottica Specter OS4x prodotto dalla ELCAN è progettata per armi di piccolo calibro che utilizzano munizioni NATO 5.56 (M4, SA80, C7). Ha un ingrandimento fisso 4x e 6 gradi di campo visivo."
     },
     "544a5caa4bdc2d1a388b4568": {
       "Name": "Porta piastre Crye Precision AVS",
@@ -10234,6 +10255,11 @@
       "Name": "Mirino olografico EOTech EXPS3",
       "ShortName": "EXPS3",
       "Description": "Mirino olografico EOTech EXPS3. Grazie alle caratteristiche di design può essere utilizzato con una vasta gamma di armi, anche con mirini non pieghevoli. Compatibile con i dispositivi di visione notturna grazie alla modalità reticolo NV. Utilizzato dalla US SOCOM come ottica per le operazioni in spazi ristretti."
+    },
+    "5580239d4bdc2de7118b4583": {
+      "Name": "GK-01 12ga compensator",
+      "ShortName": "GK-01",
+      "Description": "A heavy muzzle brake for the Vepr/Saiga 12ga is extremely good at cutting recoil and completely eliminates barrel climb and yaw. It fits all Saiga/Vepr shotguns with external chokes and, with an optional adapter, all single-barrelled shotguns with both external and internal chokes."
     },
     "55802d5f4bdc2dac148b458e": {
       "Name": "Caricatore Magpul PMAG 30 GEN M3 W STANAG da 30 colpi 5.56x45",
@@ -10495,6 +10521,11 @@
       "ShortName": "556-MONSTER",
       "Description": "Il silenziatore SureFire SOCOM556-MONSTER 5.56x45 e .223 può essere installato solo su dispositivi con volate SureFire compatibili."
     },
+    "55d617094bdc2d89028b4568": {
+      "Name": "Silenzziatore KAC QDC 6.5x35",
+      "ShortName": "QDC 6.5x35",
+      "Description": "Knight's Armament Company QDC Suppressor for 6.5x35 ammo. Can only be installed on compatible Knight's Armament QDC muzzle devices."
+    },
     "55d6190f4bdc2d87028b4567": {
       "Name": "Silenziatore SureFire SOCOM556-MINI MONSTER 5.56x45",
       "ShortName": "556-MINI",
@@ -10652,25 +10683,30 @@
       "ShortName": "RP-1",
       "Description": "La leva d'armamento RP-1 della Zenit è un dettaglio fresato, prodotto con la lega di alluminio D16T con uno strato nero. È compatibile con tutti i modelli di fucile e carabina AK. L' RP-1 è più larga e più maneggevole rispetto alle leve standard, migliora l'ergonomia dell'arma e rende la gestione dell'arma più comoda. L' RP-1 è installato al di sopra della base del manico attraverso un kit di bulloni inclusi. © Zenit"
     },
-    "5648ae314bdc2d3d1c8b457f": {
-      "Name": "Paramano AK CAA RS47",
-      "ShortName": "CAA RS47",
-      "Description": "The RS47 lightweight polymer handguard, fits the majority of rifles and carbines built on the base of AK-family rifles. Equipped with two short and two long rail mounts for installing additional devices. Manufactured by Command Arms."
-    },
     "5648b0744bdc2d363b8b4578": {
       "Name": "Paramano in legno per AK-74 (6P20 Sb.6)",
       "ShortName": "6P20 Sb.6",
       "Description": "Paramano standard in legno per AK47 prodotto dalla Izhmash per fucili d'assalto AK-74."
+    },
+    "5648b4534bdc2d3d1c8b4580": {
+      "Name": "Paramano AK Zenit B-10M con supporto superiore per paramano B-19",
+      "ShortName": "B10М+B19",
+      "Description": "Il paramano anteriore B-10M è interamente lavorata in lega di alluminio D16T con rivestimento nero e può essere installata al posto del paramano di fabbrica sulle serie AK 103, 104, 105, 74S, 74M, AKM ed AKMS. La slitta B-19 è fondamentalmente una montatura per ottiche situata alla stessa altezza del tubo di recupero del gas. Anch'essa interamente lavorata in lega di alluminio D16T con rivestimento nero, può essere installata sulle impugnature anteriori B-10M o B-21M. ©Zenit"
     },
     "5648b1504bdc2d9d488b4584": {
       "Name": "Paramano in polimeri per AK-74 (6P20 Sb.9)",
       "ShortName": "6P 20 Sb.9",
       "Description": "A polymer handguard for AK-74 automatic rifles which replaced the classic wooden one. Manufactured by Izhmash."
     },
-    "5648b4534bdc2d3d1c8b4580": {
-      "Name": "Paramano AK Zenit B-10M con supporto superiore per paramano B-19",
-      "ShortName": "B10М+B19",
-      "Description": "Il paramano anteriore B-10M è interamente lavorata in lega di alluminio D16T con rivestimento nero e può essere installata al posto del paramano di fabbrica sulle serie AK 103, 104, 105, 74S, 74M, AKM ed AKMS. La slitta B-19 è fondamentalmente una montatura per ottiche situata alla stessa altezza del tubo di recupero del gas. Anch'essa interamente lavorata in lega di alluminio D16T con rivestimento nero, può essere installata sulle impugnature anteriori B-10M o B-21M. ©Zenit"
+    "5648ae314bdc2d3d1c8b457f": {
+      "Name": "Paramano AK CAA RS47",
+      "ShortName": "CAA RS47",
+      "Description": "The RS47 lightweight polymer handguard, fits the majority of rifles and carbines built on the base of AK-family rifles. Equipped with two short and two long rail mounts for installing additional devices. Manufactured by Command Arms."
+    },
+    "5648b62b4bdc2d9d488b4585": {
+      "Name": "Lanciagranate sottocanna P-34",
+      "ShortName": "GP-34",
+      "Description": "Sotto canna lanciagranate per granate 40mm VOG-25, installato sui fucili d'assalto AK."
     },
     "5649a2464bdc2d91118b45a8": {
       "Name": "Supporto di riserva NcStar MPR45",
@@ -10794,6 +10830,11 @@
       "ShortName": "Oggetto",
       "Description": "Oggetto"
     },
+    "566966cd4bdc2d0c4c8b4578": {
+      "Name": "Cassa piena di cianfrusaglie",
+      "ShortName": "Cassa di cianfrusaglie",
+      "Description": "Una scatola piena di cianfrusaglie che nessuno chiamerà tesoro."
+    },
     "566abbb64bdc2d144c8b457d": {
       "Name": "Scorta",
       "ShortName": "Oggetto",
@@ -10813,6 +10854,11 @@
       "Name": "Valigetta per pistola",
       "ShortName": "ValigettaP",
       "Description": "A small case for pistol and ammunition storage."
+    },
+    "5671446a4bdc2d97058b4569": {
+      "Name": "Chiave Valigetta da Pistola",
+      "ShortName": "Chiave ValigettaP",
+      "Description": "Da qualche parte là fuori, una valigetta da pistola attende di essere aperta con questa chiave."
     },
     "5672c92d4bdc2d180f8b4567": {
       "Name": "Chiave Dormitorio, stanza 118",
@@ -10858,6 +10904,11 @@
       "Name": "Schedario",
       "ShortName": "Oggetto",
       "Description": "Oggetto"
+    },
+    "5675838d4bdc2d95058b456e": {
+      "Name": "Classificatore",
+      "ShortName": "Classificatore",
+      "Description": "Classificatore del dormitorio."
     },
     "567849dd4bdc2d150f8b456e": {
       "Name": "Mappa",
@@ -11025,6 +11076,11 @@
       "Name": "Silenziatore PB 9x18PM",
       "ShortName": "PB Silenz.",
       "Description": "Silenziatore standard rimovibile per pistola PB."
+    },
+    "56e294cdd2720b603a8b4575": {
+      "Name": "Zaino Mystery Ranch Terraplane",
+      "ShortName": "Terraplane 85L",
+      "Description": "Resistente, fatto di Cordura 500, spazioso, comodo da indossare e ben fatto. Questo zaino extra-large potrebbe contenere metà Tarkov ed avere ancora spazio libero al suo interno."
     },
     "56e335e4d2720b6c058b456d": {
       "Name": "Zaino Scav",
@@ -11741,6 +11797,26 @@
       "Name": "Can of Hot Rod energy drink",
       "ShortName": "Hot Rod",
       "Description": "Pur essendo una delle bevande energetiche più famose al mondo, Hot Rod non è molto meglio dei suoi concorrenti. Gli ingredienti sono gli stessi per tutti."
+    },
+    "57518f7724597720a31c09ab": {
+      "Name": "Chiave 3",
+      "ShortName": "Chiave 3",
+      "Description": "Chiave 3"
+    },
+    "57518fd424597720c85dbaaa": {
+      "Name": "Chiave 5",
+      "ShortName": "Chiave 5",
+      "Description": "Chiave 5"
+    },
+    "5751916f24597720a27126df": {
+      "Name": "Chiave 2",
+      "ShortName": "Chiave 2",
+      "Description": "Chiave 2"
+    },
+    "5751961824597720a31c09ac": {
+      "Name": "Tessera magnetica nera(off)",
+      "ShortName": "KC Nero",
+      "Description": "Tessera magnetica (Nera)"
     },
     "5751a25924597722c463c472": {
       "Name": "Benda militare",
@@ -12953,6 +13029,21 @@
       "ShortName": "Valigetta",
       "Description": "Cassetta blindata della banca. Nasconde chiaramente qualcosa di valore, e perciò è sopravvissuta a molti tentativi di scasso."
     },
+    "590de4a286f77423d9312a32": {
+      "Name": "Chiave auto pieghevole",
+      "ShortName": "Chiave auto",
+      "Description": "Una chiave per auto pieghevole con pulsanti di blocco."
+    },
+    "590de52486f774226a0c24c2": {
+      "Name": "Chiave dei macchinari",
+      "ShortName": "Macchinario",
+      "Description": "Una chiave per macchinari speciali come autocisterne, trattori e macchine per costruzioni stradali."
+    },
+    "590de5d986f77417a4293192": {
+      "Name": "Cassa dalla cassetta di sicurezza",
+      "ShortName": "Valigetta",
+      "Description": "A closed armored case for storing valuable items or documents."
+    },
     "590de71386f774347051a052": {
       "Name": "Teiera antica",
       "ShortName": "Teiera",
@@ -12987,6 +13078,11 @@
       "Name": "Kit di riparazione per armatura",
       "ShortName": "Kit di riparazione",
       "Description": "Borsa con tutto l'occorrente per riparare la tua armatura; dalla più leggera alla più pesante."
+    },
+    "5910959486f7747d96753485": {
+      "Name": "Kit di riparazione ed affilatura coltello",
+      "ShortName": "Kit di riparazione",
+      "Description": "Assortimento di attrezzi e strumenti necessari per mantenere le armi bianche in condizioni ottimali."
     },
     "5910968f86f77425cf569c32": {
       "Name": "Kit riparazione armi",
@@ -13844,6 +13940,11 @@
       "Description": "Una cartuccia R PS gzh (GRAU Index - 7N1) da 7,62x54mm con un proiettile da 9,8 grammi con un'anima d'acciaio appuntita su una base di piombo con rivestimento bimetallico, in una custodia bimetallica. Questa cartuccia PS (Púlya so Stal'ným serdéchnikom - 'Bullet with a Steel core') è stata sviluppata dalla TsNIITochMash a metà degli anni '60 dalla cartuccia R LPS gzh 7,62x54mm specificamente per aumentarne la precisione quando sparata da un cecchino o da fucili da tiratore scelto, come l'SVD e le sue varianti, essendo in grado di perforare le protezioni del corpo di base e intermedie oltre a fornire un eccezionale effetto di potenza frenante.",
       "casingName": "7.62x54mm R PS gzh"
     },
+    "59e8936686f77467ce798647": {
+      "Name": "Balaclava_test",
+      "ShortName": "Balaclava_test",
+      "Description": "Il passamontagna definitivo in lana, di colore nero, che non solo scalda la testa, ma scalda anche l'anima di tutti quelli che sono troppo modesti per farsi riconoscere durante le loro gesta eroiche."
+    },
     "59e8977386f77415a553c453": {
       "Name": "Mirino posteriore VPO-209",
       "ShortName": "VPO209",
@@ -13918,6 +14019,11 @@
       "Name": "Vortex Razor AMG UH-1 holographic sight",
       "ShortName": "UH-1",
       "Description": "The Vortex Razor AMG UH-1 holographic sight is not only made with futuristic design, but, according to its creators, is also a revolution among holographic and reflex sights."
+    },
+    "59f9ddae86f77407ab46e047": {
+      "Name": "Chiave USB di sicurezza",
+      "ShortName": "Penna USB",
+      "Description": "Una penna USB sicura. Tali chiavette USB vengono spesso utilizzate dagli impiegati della TerraGroup. Sicuramente possono contenere dati sensibili."
     },
     "59faf7ca86f7740dbe19f6c2": {
       "Name": "Orologio d'oro Roler Submariner",
@@ -14018,6 +14124,11 @@
       "Name": "AK 7.62x39 6L10 30-round magazine",
       "ShortName": "6L10",
       "Description": "A 30-round 6L10 magazine made with an AG-4S moulding compound, for 7.62x39 AK and compatible weapons. Can also be supplied with .366 TKM ammo for use with the corresponding caliber AK-compatible weapons."
+    },
+    "5a043f2c86f7741aa57b5145": {
+      "Name": "Chiave di prova per missione",
+      "ShortName": "Chiave di prova per missione",
+      "Description": "Chiave di prova per missione"
     },
     "5a0448bc86f774736f14efa8": {
       "Name": "Chiave dei locali chiusi del resort",
@@ -15640,6 +15751,11 @@
       "ShortName": "Mano Maestra",
       "Description": "Mano Maestra"
     },
+    "5ae089fb5acfc408fb13989b": {
+      "Name": "Trofeo",
+      "ShortName": "Trofeo",
+      "Description": "Trofeo"
+    },
     "5ae096d95acfc400185c2c81": {
       "Name": "Mosin Rifle standard stock",
       "ShortName": "Calcio Mosin",
@@ -15685,6 +15801,11 @@
       "ShortName": "M870 LEO",
       "Description": "Il Calcio Telescopico del Kit di conversione Mesa Tactical rimpiazza il calcio standard con un adattatore che accetta i calci retrattabili in stile AR e impugnature a pistola."
     },
+    "5ae9a34d86f7740aab00e4de": {
+      "Name": "Note for Therapist",
+      "ShortName": "Nota",
+      "Description": "A note from Ragman to Therapist. Better not read it."
+    },
     "5ae9a0dd86f7742e5f454a05": {
       "Name": "Bolle di carico Goshan",
       "ShortName": "Goshan",
@@ -15724,6 +15845,11 @@
       "Name": "Oftalmoscopio",
       "ShortName": "Oftalmoscopio",
       "Description": "Un dispositivo medico per l'esame diagnostico degli occhi."
+    },
+    "5af056f186f7746da511291f": {
+      "Name": "IMP mine detector",
+      "ShortName": "IMP",
+      "Description": "A military mine detector. Can be useful when passing through a heavy mined space."
     },
     "5af0484c86f7740f02001f7f": {
       "Name": "Can of Majaica coffee beans",
@@ -16731,6 +16857,11 @@
       "ShortName": "Accendi fuoco",
       "Description": "Una cosa strana classificata come un acciarino è un antico strumento per fare fuoco. Un altro oggetto d'antiquariato."
     },
+    "5b9b9020e7ef6f5716480215": {
+      "Name": "piastrina",
+      "ShortName": "piastrina",
+      "Description": "piastrina"
+    },
     "5bf3e03b0db834001d2c4a9c": {
       "Name": "Kalashnikov AK-74 5.45x39 assault rifle",
       "ShortName": "АК-74",
@@ -17325,6 +17456,21 @@
       "Name": "AR-15 5.56x45 Molot Arms 406mm barrel",
       "ShortName": "AR-15 406mm",
       "Description": "La canna 5.56x45 NATO della Molot per armi basate su AR-15. Canna standard per ADAR 2-15."
+    },
+    "5c0a596086f7747bef5731c2": {
+      "Name": "Scorta",
+      "ShortName": "Scorta",
+      "Description": "La scorta di qualcuno mal mimetizzata."
+    },
+    "5c0a5a5986f77476aa30ae64": {
+      "Name": "DEVELOPER secure container",
+      "ShortName": "DEV",
+      "Description": "A unique secure container used only by commanders of PMCs formerly deployed in Tarkov."
+    },
+    "5c0a5f6c86f774753654890e": {
+      "Name": "Cassa dello cianfrusaglie Lucky DEVELOPER",
+      "ShortName": "Cassa dello cianfrusaglie Lucky DEVELOPER",
+      "Description": "Deposito per oggetti e beni differenti che ti serviranno in seguito per essere barattati (oltre a materiali di consumo, documenti e così via)"
     },
     "5c0a794586f77461c458f892": {
       "Name": "Contenitore di sicurezza del Boss",
@@ -20977,6 +21123,12 @@
       "Description": "A 23x75mmR \"Barrikada\" (\"Barricade\") cartridge with solid steel projectile able to destroy the engine block of a car at up to 100 meters.",
       "casingName": "23x75mm \"Barrikada\" slug"
     },
+    "5e85aac65505fa48730d8af2": {
+      "Name": "23x75 mm \"Cheremukha-7M\"",
+      "ShortName": "Cher.7M",
+      "Description": "Granata Lacrimogena con cloroacetofenone (CN).",
+      "casingName": "23x75mm \"Cheremukha-7M\""
+    },
     "5e870397991fd70db46995c8": {
       "Name": "Mossberg 590A1 12ga pump-action shotgun",
       "ShortName": "590A1",
@@ -21132,6 +21284,12 @@
       "ShortName": "M386",
       "Description": "Una cartuccia da 40 mm M386 (HE) equipaggiata con una granata a frammentazione dotata di spoletta istantanea, che si attiva dopo il colpo a una distanza di 14-27 metri dal lancio.",
       "casingName": "Bomba a mano 40x46mm M386 (HE)"
+    },
+    "5ede47641cf3836a88318df1": {
+      "Name": "!!!NON UTILIZZARE!!!40x46 mm M716(Fumo)",
+      "ShortName": "M716",
+      "Description": "M716 is a 40mm smoke ground marker shot.",
+      "casingName": "M716"
     },
     "5ede7a8229445733cb4c18e2": {
       "Name": "Chiave contrassegnata RB-PKPM",
@@ -21634,6 +21792,12 @@
       "Name": "42/5000\nImpugnatura a pistola AK Aeroknox Scorpius",
       "ShortName": "Scorpius",
       "Description": "A lightweight ergonomic pistol grip for AK-family automatic rifles, manufactured by Aeroknox."
+    },
+    "5f647fd3f6e4ab66c82faed6": {
+      "Name": "23x75mm \"Volna-R\" rubber slug",
+      "ShortName": "Volna-R",
+      "Description": "A 23x75mmR \"Volna-R\" (\"Wave-R\") less-lethal cartridge with a rubber ball bullet. Minimum \"safe\" range is about 40 meters (at closer range it could cause serious bodily harm or death).",
+      "casingName": "23x75mm \"Volna-R\" rubber slug"
     },
     "5fb64bc92b1b027b1f50bcf2": {
       "Name": "Pistola mitragliatrice TDI KRISS Vector Gen.2 .45 ACP",
@@ -23749,6 +23913,11 @@
       "ShortName": "CR 50DS",
       "Description": "The Rhino revolvers, manufactured by the Italian company Armi Chiappa, are distinguished by a revolutionary patented design and construction with an unusual barrel arrangement for revolvers opposite the lower drum chamber."
     },
+    "61a6446f4b5f8b70f451b166": {
+      "Name": "Chiave della cella frigorifera",
+      "ShortName": "Freddo",
+      "Description": "Una chiave che apre la cella frigorifera, situata da qualche parte nell'area del cottage lungo la strada."
+    },
     "61aa5aed32a4743c3453d319": {
       "Name": "Chiave della cabina del camion della polizia",
       "ShortName": "Polizia",
@@ -23912,6 +24081,11 @@
       "Name": "SV-98 wooden stock",
       "ShortName": "SV98 legno",
       "Description": "A standard-issue wooden stock for the SV-98, manufactured by Izhmash."
+    },
+    "61a89e812cc17d60cc5f9879": {
+      "Name": "Airdrop supply crate 2",
+      "ShortName": "cassa",
+      "Description": "cassa"
     },
     "6217726288ed9f0845317459": {
       "Name": "Cartuccia a segnale reattivo RSP-30 (Verde)",
@@ -24122,6 +24296,11 @@
       "ShortName": "CNC 4\"",
       "Description": "CNC Guns 4 inch rail for KeyMod systems allows installation of additional equipment on the handguards equipped with a standard KeyMod interface."
     },
+    "61a89e5445a2672acf66c877": {
+      "Name": "Cassa di rifornimento",
+      "ShortName": "cassa",
+      "Description": "cassa"
+    },
     "62386b2adf47d66e835094b2": {
       "Name": "Paramano HK G36 2-vent",
       "ShortName": "G36 2-vent",
@@ -24141,6 +24320,11 @@
       "Name": "KAC QDC 5.56x45 sound suppressor",
       "ShortName": "QDC 556",
       "Description": "The Knight's Armament Company QDC 556 sound suppressor, designed for use with 5.56x45 caliber weapon systems. Can only be installed on the KAC QDC 3-Prong Flash Eliminator."
+    },
+    "61aa1e6984ea0800645777f9": {
+      "Name": "Cassa per armi",
+      "ShortName": "Cassa per armi",
+      "Description": "Cassa per armi"
     },
     "61aa1e9a32a4743c3453d2cf": {
       "Name": "Borsone",
@@ -24369,6 +24553,11 @@
       "ShortName": "AXMC .338LM",
       "Description": "A .338 Lapua Magnum bolt assembly for the Accuracy International AXMC sniper rifle."
     },
+    "62811d61578c54356d6d67ea": {
+      "Name": "!!!DO_NOT_USE!!!AI AXMC 7.62x51mm bolt assembly",
+      "ShortName": "AXMC .308",
+      "Description": "A .308 bolt assembly for the Accuracy International AXMC sniper rifle."
+    },
     "628120fd5631d45211793c9f": {
       "Name": "AI AXMC .338 LM 10-round magazine",
       "ShortName": "AXMC 338LM",
@@ -24389,6 +24578,11 @@
       "ShortName": "PM II 5-25x56",
       "Description": "The Schmidt & Bender PM II 5-25x56 riflescope was originally created for elite military forces for high-quality target acquisition and pinpoint accuracy."
     },
+    "6281214c1d5df4475f46a33a": {
+      "Name": "!!!DO_NOT_USE!!!Canna da 26\" AXMC 7.62x51",
+      "ShortName": "AXMC 26\" .308",
+      "Description": "A 26 inch (660mm) barrel for the AI AXMC chambered in 7.62x51 (.308) ammo."
+    },
     "62812081d23f207deb0ab216": {
       "Name": "AI .338 LM Tactical Muzzle Brake ",
       "ShortName": "TMB 338LM",
@@ -24398,6 +24592,11 @@
       "Name": "AI AXMC Adapter Kit short length rail",
       "ShortName": "AXMC short",
       "Description": "A short rail for installation on the KeySlot interface on the AXMC sniper rifle, manufactured by Accuracy International."
+    },
+    "6281215b4fa03b6b6c35dc6c": {
+      "Name": "!!!DO_NOT_USE!!!Canna da 24\" AXMC 7.62x51",
+      "ShortName": "AXMC 24\" .308",
+      "Description": "A 24 inch (610mm) barrel for the AI AXMC chambered in 7.62x51 (.308) ammo."
     },
     "6281204f308cb521f87a8f9b": {
       "Name": "AI AXMC .338 LM chassis",
@@ -24413,6 +24612,11 @@
       "Name": "AI AXMC Adapter Kit medium length rail",
       "ShortName": "AXMC med",
       "Description": "A medium length rail for installation on the KeySlot interface on the AXMC sniper rifle, manufactured by Accuracy International."
+    },
+    "628121651d5df4475f46a33c": {
+      "Name": "!!!DO_NOT_USE!!!Canna da 20\" AXMC 7.62x51",
+      "ShortName": "AXMC 20\" .308",
+      "Description": "A 20 inch (508mm) barrel for the AI AXMC chambered in 7.62x51 (.308) ammo."
     },
     "62811e2510e26c1f344e6554": {
       "Name": "Impugnatura a pistola AI AXMC",
@@ -24443,6 +24647,11 @@
       "Name": "AI AXMC upper receiver",
       "ShortName": "AXMC super.",
       "Description": "An upper receiver for the AXMC sniper rifle manufactured by Accuracy International. Equipped with a mount for attaching additional devices."
+    },
+    "628120415631d45211793c99": {
+      "Name": "!!!DO_NOT_USE!!!AI AXMC 7.62x51mm chassis",
+      "ShortName": "AXMC .308",
+      "Description": "The .308 Winchester caliber conversion chassis for the AXMC sniper rifle, manufactured by Accuracy International."
     },
     "628120621d5df4475f46a335": {
       "Name": "AI AXMC thread protection cap",
@@ -24937,6 +25146,37 @@
       "Name": "Haywood",
       "ShortName": "Haywood",
       "Description": "Haywood"
+    },
+    "62f10b79e7ee985f386b2f47": {
+      "Name": "Airdrop weapon crate",
+      "ShortName": "Airdrop weapon crate",
+      "Description": "crate"
+    },
+    "633ffb5d419dbf4bea7004c6": {
+      "Name": "Airdrop weapon crate",
+      "ShortName": "Airdrop weapon crate",
+      "Description": "crate"
+    },
+    "634959225289190e5e773b3b": {
+      "Name": "Pumpkin with sweets",
+      "ShortName": "Pumpkin",
+      "Description": "Looks like someone in Tarkov decided to have some fun and scattered these pumpkins all over the place. There could definitely be something inside them."
+    },
+    "63495c500c297e20065a08b1": {
+      "Name": "The old hand scythe",
+      "ShortName": "Scythe",
+      "Description": "An old hand scythe with a chipped handle. In the days of the fall harvest it is used to gather the bloody haul"
+    },
+    "635267f063651329f75a4ee8": {
+      "Name": "26x75mm distress signal flare (poison green)",
+      "ShortName": "DSF",
+      "Description": "Signal cartridge caliber 26x75mm for SP-81. The unusual color indicates that the cartridge is used for some special signals to \"friends\". It makes sense to try to use it to save lives in the presence of scavs or bosses.",
+      "casingName": "26x75mm flare cartridge (Green)"
+    },
+    "635267ab3c89e2112001f826": {
+      "Name": "Spooky skull mask",
+      "ShortName": "Skull",
+      "Description": "A really scary skull mask, worn only by the spookiest operators."
     }
   },
   "locations": {

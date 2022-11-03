@@ -6,7 +6,7 @@
                 "name": "Halloween",
                 "startDay": "24",
                 "startMonth": "10",
-                "endDay": "7",
+                "endDay": "5",
                 "endMonth": "11"
             },
             {
@@ -19,13 +19,26 @@
         ]
     },
     "bots": {
-        "preload": false,
-        "maxPreloadThreshold": 1,
-        "minPreloadThreshold": 10
+        "_preload": "Creates a cache on server start of generated bots, so that it is not done as the deploy timer starts; bots are also regenerated after each raid if their minThreshold is met. If all bots in cache are used, will generate normally then regenerate after raid",
+        "preload": {
+            "enabled": false,
+            "maxBossPreload": 3,
+            "minBossPreload": 1,
+            "maxFollowerPreload": 20,
+            "minFollowerPreload": 5,
+            "maxScavPreload": 50,
+            "minScavPreload": 10,
+            "limiter": 75
+        },
+        "_randomAmmos": "Adds some realism to the spare ammunition the standard bots carry",
+        "randomAmmos": {
+            "looseEnabled": true,
+            "magazineEnabled": "i don't work because bsg is shit",
+            "chance": 65,
+            "maxTypes": 3
+        }
     },
     "development": {
-        "updateLocations": false,
-        "updateBotDifficulties": false,
         "debugBots": false,
         "devInsuranceTimers": false,
         "devInsuranceTimes": {
@@ -68,6 +81,15 @@
         }
     },
     "raid": {
+        "maxBotsAliveOnMap": 20,
+        "waveCoef": {
+            "low": 1,
+            "mid": 1.4,
+            "high": 1.8,
+            "horde": 10
+        },
+        "timeBeforeDeploy": 5,
+        "inRaidModding": true,
         "insuranceEnabled": true,
         "inRaid": {
             "showDeathMessage": true,
@@ -109,7 +131,8 @@
             "sellAllDrip": true
         },
         "flea": {
-            "unlockFlea": true,
+            "enabled": true,
+            "minUserLevel": 15,
             "removeBlacklist": true,
             "liveFleaPrices": true
         }
@@ -122,6 +145,8 @@
         "realTimeEnabled": true,
         "forceWeatherEnabled": false,
         "forceWeatherId": false,
+        "changeRaidTime": true,
+        "raidTimerMultiplier": 1,
         "changeExfiltrationTime": true,
         "exfiltrationTime": 1
     },

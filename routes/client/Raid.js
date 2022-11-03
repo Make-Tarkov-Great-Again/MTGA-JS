@@ -42,7 +42,6 @@ module.exports = async function raidRoutes(app, _opts) {
         return Response.zlibJsonReply(reply, "");
     });
 
-    // /client/raid/profile/save
     app.post(`/client/raid/profile/save`, async (request, reply) => {
         await RaidController.raidProfileSave(request, reply);
         await Bot.regeneratePreloadedBots();
