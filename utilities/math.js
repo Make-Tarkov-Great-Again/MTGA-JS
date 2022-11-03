@@ -75,10 +75,25 @@ const getRandomIntEx = (max) => {
  * @param {number} max 
  * @returns 
  */
-const getRandomIntInc = (min, max) => {
-    min = ~~(min);
-    max = ~~(max);
-    return ~~(Math.random() * (max - min + 1) + min);
+const getRandomIntInc = async (min, max) => {
+    min = await round(min);
+    max = await round(max);
+    return round(Math.random() * (max - min + 1) + min);
+}
+
+/**
+ * Create random amount of numbers that equal total
+ * @param {int} total 
+ * @returns {<Promise> arr}
+ */
+const getRandomSplitInt = async (total) => {
+    const output = [];
+    while (total > 0) {
+        const sum = await round(Math.random() * (total - 1)) + 1;
+        output.push(sum);
+        total -= sum;
+    }
+    return output;
 }
 
 const valueBetween = (value, minInput, maxInput, minOutput, maxOutput) => {
@@ -115,5 +130,6 @@ module.exports = {
     getPercentRandomBool,
     getRandomFromArray,
     getRandomFromObject,
-    valueBetween
+    valueBetween,
+    getRandomSplitInt
 };
