@@ -1,0 +1,72 @@
+{
+	"5ae08f0a5acfc408fb1398a1": {
+		"parts": {
+			"required": {
+				"mod_stock": {
+					"slotId": "mod_stock",
+					"filter": [
+						"5bbdb870d4351e00367fb67d",
+						"5bfd36ad0db834001c38ef66",
+						"5bfd37c80db834001d23e842",
+						"5bfd384c0db834001a6691d3",
+						"5bfd35380db83400232fe5cc",
+						"5bfd36290db834001966869a",
+						"5ae096d95acfc400185c2c81",
+						"5bae13bad4351e00320204af"
+					]
+				},
+				"mod_barrel": {
+					"slotId": "mod_barrel",
+					"filter": [
+						"5bfd4cbe0db834001b73449f",
+						"5bfd4cd60db834001c38f095",
+						"5bfd4cc90db834001d23e846",
+						"5ae09bff5acfc4001562219d"
+					]
+				}
+			},
+			"optional": {
+				"mod_mount": {
+					"slotId": "mod_mount",
+					"filter": [
+						"5b3f7bf05acfc433000ecf6b"
+					]
+				}
+			}
+		},
+		"ammos": [
+			"5e023d34e8a400319a28ed44",
+			"5e023d48186a883be655e551",
+			"5e023cf8186a883be655e54f",
+			"59e77a2386f7742ee578960a",
+			"5887431f2459777e1612938f",
+			"560d61e84bdc2da74d8b4571"
+		],
+		"magazines": {
+			"5ae0973a5acfc4001562206c": {
+				"id": "5ae0973a5acfc4001562206c",
+				"count": 5,
+				"ammos": [
+					"5e023d34e8a400319a28ed44",
+					"5e023d48186a883be655e551",
+					"5e023cf8186a883be655e54f",
+					"59e77a2386f7742ee578960a",
+					"5887431f2459777e1612938f",
+					"560d61e84bdc2da74d8b4571"
+				]
+			},
+			"5bae13ded4351e44f824bf38": {
+				"id": "5bae13ded4351e44f824bf38",
+				"count": 10,
+				"ammos": [
+					"5e023d34e8a400319a28ed44",
+					"5e023d48186a883be655e551",
+					"5e023cf8186a883be655e54f",
+					"59e77a2386f7742ee578960a",
+					"5887431f2459777e1612938f",
+					"560d61e84bdc2da74d8b4571"
+				]
+			}
+		}
+	}
+}
