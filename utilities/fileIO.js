@@ -30,8 +30,7 @@ const createWriteStream = (file) => { return fs.createWriteStream(file, { flags:
 
 /**
  * Check if file exists.
- * @param {*} filePath 
- * @param {*} useRelative 
+ * @param {*} filePath
  * @returns 
  */
 const fileExist = (filePath) => {

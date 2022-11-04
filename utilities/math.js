@@ -70,6 +70,14 @@ const getRandomIntEx = (max) => {
     return this.getRandomInt(1, max);
 }
 
+const syncGetRandomIntInc = (min, max) => {
+    min = min + (min < 0 ? -0.5 : 0.5) >> 0;
+    max = max + (max < 0 ? -0.5 : 0.5) >> 0;
+
+    const number = Math.random() * (max - min + 1) + min
+    return number + (number < 0 ? -0.5 : 0.5) >> 0;
+}
+
 /**
  * @param {number} min 
  * @param {number} max 
@@ -125,6 +133,7 @@ module.exports = {
     getRandomInt,
     getRandomIntEx,
     getRandomIntInc,
+    syncGetRandomIntInc,
     getPercentDiff,
     getPercentOf,
     getPercentRandomBool,
