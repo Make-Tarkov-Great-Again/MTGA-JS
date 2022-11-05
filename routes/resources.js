@@ -4,8 +4,8 @@ const { read, logger, fileExist } = require('../utilities');
 
 async function returnProperIconPath(request) {
     let file = request.params['*'].replace("jpg", "png");
-    if (fileExist("./database/res/" + file) === false) file = request.params['*'].replace("png", "jpg");
-    if (fileExist("./database/res/" + file) === false) {
+    if (!fileExist("./database/res/" + file)) file = request.params['*'].replace("png", "jpg");
+    if (!fileExist("./database/res/" + file)) {
 
         if (file.includes("quest")) return `/noimage/quest.png`;
         else if (file.includes("trader")) return `/noimage/avatar.png`;

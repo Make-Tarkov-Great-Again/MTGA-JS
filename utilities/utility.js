@@ -1,10 +1,10 @@
 const logger = require('./logger');
 const util = require("util");
-const mongoid = require("mongoid-js");
 const fs = require('fs');
 
 const generateMongoID = async () => {
-    return mongoid();
+    const { database: { core: { mongoIds } } } = require("../app");
+    return mongoIds.fetch();
 }
 
 /**
