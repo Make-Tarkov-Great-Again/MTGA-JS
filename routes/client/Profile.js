@@ -96,6 +96,8 @@ module.exports = async function profileRoutes(app, _opts) {
                 case "Tag":
                 case "Toggle":
                 case "Bind":
+                case "Transfer":
+                case "Swap":
                     await playerProfile.getProfileChangesResponse(
                         await ItemController.itemActions(moveAction, reply, playerProfile),
                         outputData
@@ -136,6 +138,7 @@ module.exports = async function profileRoutes(app, _opts) {
                 case "CustomizationBuy":
                 case "CustomizationWear":
                 case "ApplyInventoryChanges":
+                case "Repair":
                     await playerProfile.getProfileChangesResponse(
                         await ProfileController.profileActions(moveAction, reply, playerProfile),
                         outputData
@@ -175,12 +178,9 @@ module.exports = async function profileRoutes(app, _opts) {
                     break;
                 /*
                 case "RagFairAddOffer":
-                case "Swap":
-                case "Transfer":
                 case "CreateMapMarker": nobody
                 case "DeleteMapMarker": uses
                 case "EditMapMarker": maps
-                case "Repair":
                 */
                 default:
                     logger.warn("[/client/game/profile/items/moving] Action " + moveAction.Action + " is not yet implemented.");
