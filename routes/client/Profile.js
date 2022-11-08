@@ -6,7 +6,8 @@ const {
     NoteController,
     PresetController,
     InsuranceController,
-    QuestController
+    QuestController,
+    RepairController
 } = require("../../lib/controllers");
 
 const { Profile } = require("../../lib/models/Profile");
@@ -138,7 +139,6 @@ module.exports = async function profileRoutes(app, _opts) {
                 case "CustomizationBuy":
                 case "CustomizationWear":
                 case "ApplyInventoryChanges":
-                case "Repair":
                     await playerProfile.getProfileChangesResponse(
                         await ProfileController.profileActions(moveAction, reply, playerProfile),
                         outputData
@@ -160,10 +160,13 @@ module.exports = async function profileRoutes(app, _opts) {
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
+                    
+                case "Repair":
                 case "TraderRepair":
-                    actionResult = await TraderController.traderRepair(moveAction, reply, playerProfile);
+                    actionResult = await RepairController.repairActions(moveAction, reply, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
+
                 case "SaveBuild":
                     actionResult = await PresetController.savePreset(moveAction, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
@@ -176,12 +179,11 @@ module.exports = async function profileRoutes(app, _opts) {
                     actionResult = await InsuranceController.insureItems(moveAction, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
-                /*
+                
                 case "RagFairAddOffer":
-                case "CreateMapMarker": nobody
-                case "DeleteMapMarker": uses
-                case "EditMapMarker": maps
-                */
+                case "CreateMapMarker": //nobody
+                case "DeleteMapMarker": //uses
+                case "EditMapMarker": //maps
                 default:
                     logger.warn("[/client/game/profile/items/moving] Action " + moveAction.Action + " is not yet implemented.");
             }

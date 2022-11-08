@@ -1,5 +1,29 @@
 {
     "barter_scheme": {
+        "armor119af1c881c07000029": [
+            [
+                {
+                    "_tpl": "5449016a4bdc2d6f028b456f",
+                    "count": 99999999
+                }
+            ]
+        ],
+        "knife119af1c881c07000029": [
+            [
+                {
+                    "_tpl": "5449016a4bdc2d6f028b456f",
+                    "count": 99999999
+                }
+            ]
+        ],
+        "weapon19af1c881c07000029": [
+            [
+                {
+                    "_tpl": "5449016a4bdc2d6f028b456f",
+                    "count": 99999999
+                }
+            ]
+        ],
         "54009119af1c881c07000029": [
             [
                 {
@@ -22770,6 +22794,36 @@
         ]
     },
     "items": [
+        {
+            "_id": "armor119af1c881c07000029",
+            "_tpl": "591094e086f7747caa7bb2ef",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "StackObjectsCount": 99999999,
+                "UnlimitedCount": true
+            }
+        },
+        {
+            "_id": "knife119af1c881c07000029",
+            "_tpl": "5910959486f7747d96753485",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "StackObjectsCount": 99999999,
+                "UnlimitedCount": true
+            }
+        },
+        {
+            "_id": "weapon19af1c881c07000029",
+            "_tpl": "5910968f86f77425cf569c32",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "StackObjectsCount": 99999999,
+                "UnlimitedCount": true
+            }
+        },
         {
             "_id": "54009119af1c881c07000029",
             "_tpl": "54009119af1c881c07000029",
@@ -60565,6 +60619,9 @@
         }
     ],
     "loyal_level_items": {
+        "weapon19af1c881c07000029": 1,
+        "knife119af1c881c07000029": 1,
+        "armor119af1c881c07000029": 1,
         "54009119af1c881c07000029": 1,
         "5422acb9af1c889c16000029": 1,
         "543be5664bdc2dd4348b4569": 1,
