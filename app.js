@@ -1,12 +1,15 @@
 const { certificate } = require("./lib/engine/CertificateGenerator");
 const zlib = require("node:zlib");
-const open = require("open");
+const opener = require("opener");
 const qs = require('fast-querystring');
+const { logger, parse } = require("./lib/utilities");
+const pngStringify = require('console-png');
+
+
 
 /**
  * Fastify instance
  */
-
 const database = require('./lib/engine/Database');
 const webinterface = require("./lib/engine/WebInterface");
 const tasker = require('./lib/engine/Tasker');
@@ -17,7 +20,6 @@ module.exports = {
 };
 
 const { DatabaseLoader } = require("./lib/engine/DatabaseLoader");
-const { logger, parse } = require("./lib/utilities");
 (async () => { await DatabaseLoader.setDatabase() })();
 
 let cert;
@@ -60,7 +62,7 @@ if (process.platform === 'win32' || process.platform === 'win64') {
             logger.error(`The certificate is generated on first start, has a lifetime of 3 days, and will is saved to /user/certs/.`);
             //logger.debug(scriptOutput);
         } else {
-            //open(`https://${database.core.serverConfig.ip}:${database.core.serverConfig.port}`) Opens the weblauncher automatically if wanted.
+            //opener(`https://${database.core.serverConfig.ip}:${database.core.serverConfig.port}`) //Opens the weblauncher automatically if wanted.
         }
     });
 } else {
@@ -77,10 +79,10 @@ const app = require('fastify')({
             }
         },
         serializers: {
-            req (request) {
+            req(request) {
                 return `[${request.method}] ${request.url}`
             },
-            res (reply) {
+            res(reply) {
                 return `${reply.statusCode}`
             }
         }
@@ -146,17 +148,25 @@ app.addContentTypeParser('*', (req, payload, done) => {
     });
 });
 
-/**
-* Register Handler
-*/
-app.server.on("listening", async () => {
-    const { default: terminalImage } = await import('terminal-image');
-    logger.console(await terminalImage.file(`./assets/templates/webinterface/resources/logo/banner_transparent.png`, {
-        preserveAspectRatio: true,
-        width: `65%`,
-        height: `65%`
-    }))
-});
+app.register(require('./lib/plugins/register.js')); //register
 
-app.register(require('./lib/plugins/register.js'));
-app.listen({ port: database.core.serverConfig.port, host: database.core.serverConfig.ip });
+const image = require('fs').readFileSync(__dirname + '/assets/templates/webinterface/resources/logo/rs_banner_transparent.png');
+pngStringify(image, function (err, string) {
+    if (err) throw err;
+    logger.info(string);
+})
+
+app.listen(
+    {
+        port: database.core.serverConfig.port,
+        host: database.core.serverConfig.ip
+    }
+)
+/* .then(() => {
+    setTimeout(() => app.log.info("Web-based Launcher will open in 3 seconds..."), 750);
+
+    setTimeout(() => {
+        opener(`https://${database.core.serverConfig.ip}:${database.core.serverConfig.port}`)
+    }, 3000);
+}); */
+
