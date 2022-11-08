@@ -17,7 +17,7 @@ module.exports = {
 };
 
 const { DatabaseLoader } = require("./lib/engine/DatabaseLoader");
-const { logger, parse } = require("./utilities");
+const { logger, parse } = require("./lib/utilities");
 (async () => { await DatabaseLoader.setDatabase() })();
 
 let cert;
@@ -25,11 +25,11 @@ if (process.platform === 'win32' || process.platform === 'win64') {
     const fs = require('fs');
     cert = certificate.generate(database.core.serverConfig.ip, database.core.serverConfig.hostname, 3);
 
-    const clearCertificateScriptPath = `${__dirname}/scripts/clear-certificate.ps1`;
+    const clearCertificateScriptPath = `${__dirname}/assets/scripts/clear-certificate.ps1`;
     const execSync = require('child_process').execSync;
     const code = execSync(`powershell.exe -ExecutionPolicy Bypass -File "${clearCertificateScriptPath}"`);
 
-    const installCertificateScriptPath = `${__dirname}/scripts/install-certificate.ps1`;
+    const installCertificateScriptPath = `${__dirname}/assets/scripts/install-certificate.ps1`;
     const installCertificateScript = fs.readFileSync(installCertificateScriptPath);
     const spawn = require('child_process').spawn;
     const installCertificatePowerShell = spawn('powershell', [installCertificateScript]);
@@ -151,12 +151,12 @@ app.addContentTypeParser('*', (req, payload, done) => {
 */
 app.server.on("listening", async () => {
     const { default: terminalImage } = await import('terminal-image');
-    logger.console(await terminalImage.file(`./templates/webinterface/resources/logo/banner_transparent.png`, {
+    logger.console(await terminalImage.file(`./assets/templates/webinterface/resources/logo/banner_transparent.png`, {
         preserveAspectRatio: true,
         width: `65%`,
         height: `65%`
     }))
 });
 
-app.register(require('./plugins/register.js'));
+app.register(require('./lib/plugins/register.js'));
 app.listen({ port: database.core.serverConfig.port, host: database.core.serverConfig.ip });
