@@ -71,6 +71,15 @@ module.exports = async function profileRoutes(app, _opts) {
         await ProfileController.profileVoiceChange(request, reply);
     });
 
+    app.post(`/client/game/profile/savage/regenerate`, async (request, reply) => {
+        logger.info(`/client/game/profile/savage/regenerate not implemented`);
+
+        return Response.zlibJsonReply(
+            reply,
+            Response.applyBody([])
+        );
+    })
+
     app.post(`/client/game/profile/items/moving`, async (request, reply) => {
         const sessionId = await Response.getSessionID(request);
         if (!sessionId) {
@@ -160,7 +169,7 @@ module.exports = async function profileRoutes(app, _opts) {
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
 
-                    
+
                 case "Repair":
                 case "TraderRepair":
                     actionResult = await RepairController.repairActions(moveAction, reply, playerProfile);
@@ -179,7 +188,7 @@ module.exports = async function profileRoutes(app, _opts) {
                     actionResult = await InsuranceController.insureItems(moveAction, playerProfile);
                     await playerProfile.getProfileChangesResponse(actionResult, outputData);
                     break;
-                
+
                 case "RagFairAddOffer":
                 case "CreateMapMarker": //nobody
                 case "DeleteMapMarker": //uses

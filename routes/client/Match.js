@@ -10,6 +10,35 @@ module.exports = async function matchRoutes(app, _opts) {
         );
     });
 
+    app.post(`/client/match/updatePing`, async (request, reply) => {
+        return Response.zlibJsonReply(
+            reply,
+            Response.applyBody(null)
+        );
+    })
+
+    app.post(`/client/putMetrics`, async (request, reply) => {
+        return Response.zlibJsonReply(
+            reply,
+            Response.applyBody(null)
+        );
+    })
+
+    app.post(`/client/getMetricsConfig`, async (request, reply) => {
+        const { database: { core: { metrics } } } = require(`../../app`);
+        return Response.zlibJsonReply(
+            reply,
+            Response.applyBody(metrics)
+        );
+    })
+
+    app.post(`/client/match/exit`, async (request, reply) => {
+        return Response.zlibJsonReply(
+            reply,
+            Response.applyBody(null)
+        );
+    })
+
     app.post(`/client/match/offline/end`, async (request, reply) => {
         return Response.zlibJsonReply(
             reply,

@@ -4,7 +4,9 @@ const { Bot } = require("../../lib/models/Bot");
 const { RaidController } = require("../../lib/controllers/RaidController");
 
 const { database: { core: { gameplay: {
-    trading: { fence: { killingPMCsFenceLevelChange, killingScavsFenceLevelChange } }, raid: { inRaid: { createFriendlyAI, showDeathMessage } } } } } } = require("../../app");
+    bots: { preload: { enabled } },
+    trading: { fence: { killingPMCsFenceLevelChange, killingScavsFenceLevelChange } },
+    raid: { inRaid: { createFriendlyAI, showDeathMessage } } } } } } = require("../../app");
 
 module.exports = async function raidRoutes(app, _opts) {
 
@@ -44,7 +46,8 @@ module.exports = async function raidRoutes(app, _opts) {
 
     app.post(`/client/raid/profile/save`, async (request, reply) => {
         await RaidController.raidProfileSave(request, reply);
-        await Bot.regeneratePreloadedBots();
+        if (enabled)
+            await Bot.regeneratePreloadedBots();
     });
 
 }

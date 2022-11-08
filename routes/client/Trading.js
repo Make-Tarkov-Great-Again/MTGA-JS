@@ -36,4 +36,28 @@ module.exports = async function tradingRoutes(app, _opts) {
         );
     });
 
+    app.post(`/client/ragfair/itemMarketPrice`, async (request, reply) => {
+        /**
+         * Called when creating an offer on flea, fills values in top right corner
+         */
+        logger.info(`/client/ragfair/itemMarketPrice not implemented`);
+        return Response.zlibJsonReply(
+            reply,
+            Response.applyBody({})
+        );
+    })
+
+    app.post(`/client/ragfair/offer/findbyid`, async (request, reply) => {
+        logger.info(`/client/ragfair/offer/findbyid not implemented`);
+    })
+
+    app.post(`/client/reports/ragfair/send`, async (request, reply) => {
+        logger.info(`/client/reports/ragfair/send not implemented`);
+
+        return Response.zlibJsonReply(
+            reply,
+            Response.applyBody(null)
+        );
+    })
+
 };

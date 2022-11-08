@@ -1,6 +1,6 @@
 const { Profile } = require("../../lib/models/Profile");
 const { FriendController, FriendControllerUtil } = require("../../lib/controllers");
-const { Response, generateMongoID, logger } = require("../../utilities");
+const { Response, logger } = require("../../utilities");
 
 module.exports = async function friendRoutes(app, _opts) {
 
