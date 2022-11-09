@@ -6,9 +6,7 @@ The server for MTGA
 
 ## Usage
 
-npm
-
-`npm install mtga-backend`
+[MTGA-Backend Wiki](https://github.com/Make-Tarkov-Great-Again/MTGA-Backend/wiki)
 
 ## Known issues
 
