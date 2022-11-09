@@ -8,7 +8,7 @@ The server for MTGA
 
 npm
 
-`npm install mtga-backend`
+`npm install `
 
 ## Known issues
 
