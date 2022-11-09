@@ -1711,7 +1711,7 @@
             "HealthLoopTime": 3,
             "OfflineDurationMin": -1,
             "OfflineDurationMax": -1,
-            "RemovedAfterDeath": true,
+            "RemovedAfterDeath": false,
             "HealExperience": 150,
             "RemovePrice": 42700
           },
@@ -2223,15 +2223,6 @@
                   "Value": 0.1,
                   "AbsoluteValue": true,
                   "SkillName": ""
-                },
-                {
-                  "BuffType": "SkillRate",
-                  "Chance": 1,
-                  "Delay": 1,
-                  "Duration": 300,
-                  "Value": 2,
-                  "AbsoluteValue": true,
-                  "SkillName": "Strength"
                 }
               ],
               "Buffs_drink_hotrod": [
@@ -2272,15 +2263,6 @@
                   "Value": 0.2,
                   "AbsoluteValue": true,
                   "SkillName": ""
-                },
-                {
-                  "BuffType": "HealthRate",
-                  "Chance": 1,
-                  "Delay": 1,
-                  "Duration": 60,
-                  "Value": 1,
-                  "AbsoluteValue": true,
-                  "SkillName": ""
                 }
               ],
               "Buffs_drink_water": [
@@ -2310,7 +2292,7 @@
                   "BuffType": "SkillRate",
                   "Chance": 1,
                   "Delay": 1,
-                  "Duration": 600,
+                  "Duration": 300,
                   "Value": 3,
                   "AbsoluteValue": true,
                   "SkillName": "Intellect"
@@ -2319,7 +2301,7 @@
                   "BuffType": "SkillRate",
                   "Chance": 1,
                   "Delay": 1,
-                  "Duration": 600,
+                  "Duration": 300,
                   "Value": 3,
                   "AbsoluteValue": true,
                   "SkillName": "Attention"
@@ -2328,19 +2310,10 @@
                   "BuffType": "SkillRate",
                   "Chance": 1,
                   "Delay": 1,
-                  "Duration": 600,
+                  "Duration": 300,
                   "Value": 3,
                   "AbsoluteValue": true,
                   "SkillName": "StressResistance"
-                },
-                {
-                  "BuffType": "StaminaRate",
-                  "Chance": 1,
-                  "Delay": 1,
-                  "Duration": 600,
-                  "Value": 3,
-                  "AbsoluteValue": true,
-                  "SkillName": ""
                 }
               ],
               "Buffs_food_emelya": [
@@ -2381,19 +2354,10 @@
                   "BuffType": "SkillRate",
                   "Chance": 1,
                   "Delay": 1,
-                  "Duration": 600,
-                  "Value": 5,
+                  "Duration": 300,
+                  "Value": 1,
                   "AbsoluteValue": true,
                   "SkillName": "Intellect"
-                },
-                {
-                  "BuffType": "MaxStamina",
-                  "Chance": 1,
-                  "Delay": 1,
-                  "Duration": 600,
-                  "Value": 10,
-                  "AbsoluteValue": true,
-                  "SkillName": ""
                 }
               ],
               "Buffs_drink_vodka": [
@@ -3328,7 +3292,7 @@
                   "BuffType": "SkillRate",
                   "Chance": 1,
                   "Delay": 1,
-                  "Duration": 300,
+                  "Duration": 120,
                   "Value": 2,
                   "AbsoluteValue": true,
                   "SkillName": "Attention"
@@ -3337,7 +3301,7 @@
                   "BuffType": "SkillRate",
                   "Chance": 1,
                   "Delay": 1,
-                  "Duration": 300,
+                  "Duration": 120,
                   "Value": 2,
                   "AbsoluteValue": true,
                   "SkillName": "StressResistance"
@@ -3346,28 +3310,10 @@
                   "BuffType": "SkillRate",
                   "Chance": 1,
                   "Delay": 1,
-                  "Duration": 300,
+                  "Duration": 120,
                   "Value": 2,
                   "AbsoluteValue": true,
                   "SkillName": "Intellect"
-                },
-                {
-                  "BuffType": "SkillRate",
-                  "Chance": 1,
-                  "Delay": 1,
-                  "Duration": 300,
-                  "Value": 5,
-                  "AbsoluteValue": true,
-                  "SkillName": "Endurance"
-                },
-                {
-                  "BuffType": "SkillRate",
-                  "Chance": 1,
-                  "Delay": 1,
-                  "Duration": 300,
-                  "Value": 5,
-                  "AbsoluteValue": true,
-                  "SkillName": "Strength"
                 }
               ],
               "Buffs_food_slippers": [
@@ -3375,7 +3321,7 @@
                   "BuffType": "SkillRate",
                   "Chance": 1,
                   "Delay": 1,
-                  "Duration": 300,
+                  "Duration": 60,
                   "Value": 1,
                   "AbsoluteValue": true,
                   "SkillName": "Intellect"
@@ -3384,7 +3330,7 @@
                   "BuffType": "SkillRate",
                   "Chance": 1,
                   "Delay": 1,
-                  "Duration": 300,
+                  "Duration": 60,
                   "Value": 1,
                   "AbsoluteValue": true,
                   "SkillName": "Attention"
@@ -3393,28 +3339,10 @@
                   "BuffType": "SkillRate",
                   "Chance": 1,
                   "Delay": 1,
-                  "Duration": 300,
+                  "Duration": 60,
                   "Value": 1,
                   "AbsoluteValue": true,
                   "SkillName": "StressResistance"
-                },
-                {
-                  "BuffType": "SkillRate",
-                  "Chance": 1,
-                  "Delay": 1,
-                  "Duration": 300,
-                  "Value": 2,
-                  "AbsoluteValue": true,
-                  "SkillName": "Endurance"
-                },
-                {
-                  "BuffType": "SkillRate",
-                  "Chance": 1,
-                  "Delay": 1,
-                  "Duration": 300,
-                  "Value": 2,
-                  "AbsoluteValue": true,
-                  "SkillName": "Strength"
                 }
               ],
               "Buffs_knife": [
@@ -3491,315 +3419,6 @@
                   "Value": -3,
                   "AbsoluteValue": true,
                   "SkillName": "Attention"
-                }
-              ],
-              "Buffs_drink_juice_apple": [
-                {
-                  "BuffType": "SkillRate",
-                  "Chance": 1,
-                  "Delay": 1,
-                  "Duration": 300,
-                  "Value": 2,
-                  "AbsoluteValue": true,
-                  "SkillName": "Attention"
-                }
-              ],
-              "Buffs_drink_juice_grand": [
-                {
-                  "BuffType": "SkillRate",
-                  "Chance": 1,
-                  "Delay": 1,
-                  "Duration": 300,
-                  "Value": 2,
-                  "AbsoluteValue": true,
-                  "SkillName": "Metabolism"
-                }
-              ],
-              "Buffs_drink_juice_vita": [
-                {
-                  "BuffType": "SkillRate",
-                  "Chance": 1,
-                  "Delay": 1,
-                  "Duration": 300,
-                  "Value": 2,
-                  "AbsoluteValue": true,
-                  "SkillName": "Health"
-                }
-              ],
-              "Buffs_drink_kvas": [
-                {
-                  "BuffType": "SkillRate",
-                  "Chance": 1,
-                  "Delay": 1,
-                  "Duration": 300,
-                  "Value": 2,
-                  "AbsoluteValue": true,
-                  "SkillName": "Endurance"
-                }
-              ],
-              "Buffs_drink_ratcola": [
-                {
-                  "BuffType": "EnergyRate",
-                  "Chance": 1,
-                  "Delay": 1,
-                  "Duration": 60,
-                  "Value": 0.1,
-                  "AbsoluteValue": true,
-                  "SkillName": ""
-                },
-                {
-                  "BuffType": "SkillRate",
-                  "Chance": 1,
-                  "Delay": 1,
-                  "Duration": 300,
-                  "Value": 2,
-                  "AbsoluteValue": true,
-                  "SkillName": "StressResistance"
-                }
-              ],
-              "Buffs_Halloween": [
-                {
-                  "BuffType": "EnergyRate",
-                  "Chance": 1,
-                  "Delay": 0,
-                  "Duration": 6666,
-                  "Value": -0.06,
-                  "AbsoluteValue": true,
-                  "SkillName": ""
-                },
-                {
-                  "BuffType": "SkillRate",
-                  "Chance": 0.1,
-                  "Delay": 0,
-                  "Duration": 666,
-                  "Value": 6,
-                  "AbsoluteValue": true,
-                  "SkillName": "Memory"
-                },
-                {
-                  "BuffType": "SkillRate",
-                  "Chance": 0.1,
-                  "Delay": 0,
-                  "Duration": 666,
-                  "Value": 6,
-                  "AbsoluteValue": true,
-                  "SkillName": "Vitality"
-                },
-                {
-                  "BuffType": "SkillRate",
-                  "Chance": 0.1,
-                  "Delay": 0,
-                  "Duration": 666,
-                  "Value": 6,
-                  "AbsoluteValue": true,
-                  "SkillName": "Intellect"
-                },
-                {
-                  "BuffType": "SkillRate",
-                  "Chance": 0.1,
-                  "Delay": 0,
-                  "Duration": 666,
-                  "Value": 6,
-                  "AbsoluteValue": true,
-                  "SkillName": "Strength"
-                },
-                {
-                  "BuffType": "SkillRate",
-                  "Chance": 0.1,
-                  "Delay": 0,
-                  "Duration": 666,
-                  "Value": 6,
-                  "AbsoluteValue": true,
-                  "SkillName": "StressResistance"
-                },
-                {
-                  "BuffType": "SkillRate",
-                  "Chance": 0.1,
-                  "Delay": 0,
-                  "Duration": 666,
-                  "Value": 6,
-                  "AbsoluteValue": true,
-                  "SkillName": "Charisma"
-                },
-                {
-                  "BuffType": "SkillRate",
-                  "Chance": 0.1,
-                  "Delay": 0,
-                  "Duration": 666,
-                  "Value": 6,
-                  "AbsoluteValue": true,
-                  "SkillName": "Endurance"
-                },
-                {
-                  "BuffType": "SkillRate",
-                  "Chance": 0.1,
-                  "Delay": 0,
-                  "Duration": 666,
-                  "Value": 6,
-                  "AbsoluteValue": true,
-                  "SkillName": "Attention"
-                },
-                {
-                  "BuffType": "LightBleeding",
-                  "Chance": 0.03,
-                  "Delay": 0,
-                  "Duration": -1,
-                  "Value": 0,
-                  "AbsoluteValue": false,
-                  "SkillName": ""
-                },
-                {
-                  "BuffType": "HeavyBleeding",
-                  "Chance": 0.02,
-                  "Delay": 0,
-                  "Duration": -1,
-                  "Value": 0,
-                  "AbsoluteValue": false,
-                  "SkillName": ""
-                },
-                {
-                  "BuffType": "UnknownToxin",
-                  "Chance": 0.04,
-                  "Delay": 0,
-                  "Duration": -1,
-                  "Value": 0,
-                  "AbsoluteValue": false,
-                  "SkillName": ""
-                },
-                {
-                  "BuffType": "Fracture",
-                  "Chance": 0.02,
-                  "Delay": 0,
-                  "Duration": -1,
-                  "Value": 0,
-                  "AbsoluteValue": false,
-                  "SkillName": ""
-                },
-                {
-                  "BuffType": "WeightLimit",
-                  "Chance": 0.05,
-                  "Delay": 0,
-                  "Duration": 666,
-                  "Value": 0.16,
-                  "AbsoluteValue": false,
-                  "SkillName": ""
-                },
-                {
-                  "BuffType": "HealthRate",
-                  "Chance": 0.02,
-                  "Delay": 0,
-                  "Duration": 666,
-                  "Value": -0.16,
-                  "AbsoluteValue": true,
-                  "SkillName": ""
-                },
-                {
-                  "BuffType": "HydrationRate",
-                  "Chance": 0.02,
-                  "Delay": 0,
-                  "Duration": 666,
-                  "Value": -0.06,
-                  "AbsoluteValue": true,
-                  "SkillName": ""
-                },
-                {
-                  "BuffType": "StaminaRate",
-                  "Chance": 0,
-                  "Delay": 0,
-                  "Duration": 666,
-                  "Value": 1,
-                  "AbsoluteValue": true,
-                  "SkillName": ""
-                },
-                {
-                  "BuffType": "StomachBloodloss",
-                  "Chance": 0.01,
-                  "Delay": 0,
-                  "Duration": -1,
-                  "Value": 0,
-                  "AbsoluteValue": false,
-                  "SkillName": ""
-                },
-                {
-                  "BuffType": "Pain",
-                  "Chance": 0.02,
-                  "Delay": 0,
-                  "Duration": 66,
-                  "Value": 0,
-                  "AbsoluteValue": false,
-                  "SkillName": ""
-                },
-                {
-                  "BuffType": "QuantumTunnelling",
-                  "Chance": 0.02,
-                  "Delay": 0,
-                  "Duration": 66,
-                  "Value": 0,
-                  "AbsoluteValue": false,
-                  "SkillName": ""
-                },
-                {
-                  "BuffType": "DamageModifier",
-                  "Chance": 0.05,
-                  "Delay": 0,
-                  "Duration": 666,
-                  "Value": 0.06,
-                  "AbsoluteValue": false,
-                  "SkillName": ""
-                },
-                {
-                  "BuffType": "BodyTemperature",
-                  "Chance": 0.05,
-                  "Delay": 0,
-                  "Duration": 666,
-                  "Value": -6,
-                  "AbsoluteValue": true,
-                  "SkillName": ""
-                },
-                {
-                  "BuffType": "HandsTremor",
-                  "Chance": 0.02,
-                  "Delay": 0,
-                  "Duration": 66,
-                  "Value": 0,
-                  "AbsoluteValue": false,
-                  "SkillName": ""
-                },
-                {
-                  "BuffType": "MaxStamina",
-                  "Chance": 0,
-                  "Delay": 0,
-                  "Duration": 666,
-                  "Value": 26,
-                  "AbsoluteValue": true,
-                  "SkillName": ""
-                },
-                {
-                  "BuffType": "ContusionWiggle",
-                  "Chance": 0.01,
-                  "Delay": 0,
-                  "Duration": 66,
-                  "Value": 0,
-                  "AbsoluteValue": false,
-                  "SkillName": ""
-                },
-                {
-                  "BuffType": "ContusionBlur",
-                  "Chance": 0.01,
-                  "Delay": 0,
-                  "Duration": 66,
-                  "Value": 0,
-                  "AbsoluteValue": false,
-                  "SkillName": ""
-                },
-                {
-                  "BuffType": "HalloweenBuff",
-                  "Chance": 1,
-                  "Delay": 0,
-                  "Duration": 666,
-                  "Value": 0,
-                  "AbsoluteValue": false,
-                  "SkillName": ""
                 }
               ]
             }
@@ -4716,7 +4335,9 @@
       "SkillFreshPoints": 1,
       "SkillPointsBeforeFatigue": 1,
       "SkillFatigueReset": 200,
-      "EventType": [],
+      "EventType": [
+        "None"
+      ],
       "WalkSpeed": {
         "x": 0.625,
         "y": 0.86,
