@@ -54,12 +54,15 @@ if (process.platform === 'win32' || process.platform === 'win64') {
 
     installCertificatePowerShell.on('close', function (_code) {
         if (userCancelOrError) {
-            logger.error(`HTTPS Certification Installation failed!`);
-            logger.error(`If an error occured, report on Discord.`);
-            logger.error(`If you chose not to allow the installation, read below:`);
-            logger.error(`The certificate is required for Websockets to work, otherwise the Client will not connect to the socket endpoint.`);
-            logger.error(`If you have any security concerns, you can take a look at the script ${installCertificateScriptPath}.`);
-            logger.error(`The certificate is generated on first start, has a lifetime of 3 days, and will is saved to /user/certs/.`);
+            logger.error(`
+    [HTTPS Certification Installation failed]
+        If an error occured, report on Discord!
+        If you chose not to allow the installation, read below:
+            
+            The certificate is required for Websockets to work, otherwise the Client will not connect to the socket endpoint.
+                If you have any security concerns, you can take a look at the script ${installCertificateScriptPath}.        
+            The certificate is generated on first start, has a lifetime of 3 days, and is saved to /user/certs/.
+`);
             //logger.debug(scriptOutput);
         } else {
             //opener(`https://${database.core.serverConfig.ip}:${database.core.serverConfig.port}`) //Opens the weblauncher automatically if wanted.
