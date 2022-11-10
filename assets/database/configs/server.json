@@ -2,7 +2,7 @@
   "ip": "127.0.0.1",
   "ip_backend": "127.0.0.1",
   "hostname": "localhost",
-  "port": 443,
+  "port": 4300,
   "eventPollIntervalSec": 60,
   "rebuildCache": true,
   "name": "Make Tarkov Great Again",
@@ -68,9 +68,9 @@
   },
   "serverIPs": {
     "Enable": false,
-    "Trading": "https://127.0.0.1:443",
-    "Messaging": "https://127.0.0.1:443",
-    "Main": "https://127.0.0.1:443",
-    "RagFair": "https://127.0.0.1:443"
+    "Trading": "https://127.0.0.1:4300",
+    "Messaging": "https://127.0.0.1:4300",
+    "Main": "https://127.0.0.1:4300",
+    "RagFair": "https://127.0.0.1:4300"
   }
 }
