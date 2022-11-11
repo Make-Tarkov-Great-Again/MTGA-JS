@@ -19,10 +19,10 @@ module.exports = {
     database, tasker
 };
 
-const { DatabaseLoader } = require("./lib/engine/DatabaseLoader");
-(async () => { await DatabaseLoader.setDatabase() })();
 
 let cert;
+const { DatabaseLoader } = require("./lib/engine/DatabaseLoader");
+
 if (process.platform === 'win32' || process.platform === 'win64') {
     const fs = require('fs');
     cert = certificate.generate(database.core.serverConfig.ip, database.core.serverConfig.hostname, 3);
@@ -47,30 +47,41 @@ if (process.platform === 'win32' || process.platform === 'win64') {
 
     installCertificatePowerShell.stderr.setEncoding('utf8');
     installCertificatePowerShell.stderr.on('data', function (data) {
+
+        if (data.includes("Get-ChildItem : Cannot find drive")) {
+            logger.error(`
+            [installCertificatePowerShell.stderr.on]
+            Report error below to our GitHub Issues, or on our Discord Bug reports.
+            
+            `);
+            logger.error(data);
+            userCancelOrError = true;
+        }
+
         data = data.toString();
         installCertificateScriptOutput += data;
-        userCancelOrError = true;
     });
 
     installCertificatePowerShell.on('close', function (_code) {
         if (userCancelOrError) {
             logger.error(`
-    [HTTPS Certification Installation failed]
-        If an error occured, report on Discord!
-        If you chose not to allow the installation, read below:
+                [HTTPS Certification Installation failed]
+                    If an error occured, report on Discord!
+                    If you chose not to allow the installation, read below:
+                        
+                        The certificate is required for Websockets to work, otherwise the Client will not connect to the socket endpoint.
+                            If you have any security concerns, you can take a look at the script ${installCertificateScriptPath}.        
+                        The certificate is generated on first start, has a lifetime of 3 days, and is saved to /user/certs/.
             
-            The certificate is required for Websockets to work, otherwise the Client will not connect to the socket endpoint.
-                If you have any security concerns, you can take a look at the script ${installCertificateScriptPath}.        
-            The certificate is generated on first start, has a lifetime of 3 days, and is saved to /user/certs/.
-`);
-            //logger.debug(scriptOutput);
-        } else {
-            //opener(`https://${database.core.serverConfig.ip}:${database.core.serverConfig.port}`) //Opens the weblauncher automatically if wanted.
+                [Shutting Down, restart the server and accept certificate installation] 
+            `);
         }
     });
 } else {
     cert = certificate.generate(database.core.serverConfig.ip, database.core.serverConfig.hostname, 365);
 }
+DatabaseLoader.setDatabase();
+
 
 
 const app = require('fastify')({
@@ -95,7 +106,11 @@ const app = require('fastify')({
     https: {
         allowHTTP1: true,
         key: cert.key,
-        cert: cert.cert
+        cert: cert.cert,
+        ca: cert.cert,
+
+        requestCert: true,
+        rejectUnauthorized: false,
     },
     onProtoPoisoning: "remove",
 });
@@ -156,7 +171,7 @@ app.register(require('./lib/plugins/register.js')); //register
 const image = require('fs').readFileSync(__dirname + '/assets/templates/webinterface/resources/logo/rs_banner_transparent.png');
 pngStringify(image, function (err, string) {
     if (err) throw err;
-    logger.info(string);
+    logger.success(string);
 })
 
 app.listen(
