@@ -6,6 +6,8 @@ The server for MTGA
 
 ## Usage
 
+Client version: 0.12.12.32.20212+
+
 npm
 
 `npm install `
