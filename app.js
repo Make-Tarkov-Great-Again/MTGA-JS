@@ -80,9 +80,6 @@ if (process.platform === 'win32' || process.platform === 'win64') {
 } else {
     cert = certificate.generate(database.core.serverConfig.ip, database.core.serverConfig.hostname, 365);
 }
-DatabaseLoader.setDatabase();
-
-
 
 const app = require('fastify')({
     logger: {
@@ -180,6 +177,8 @@ app.listen(
         host: database.core.serverConfig.ip
     }
 )
+DatabaseLoader.setDatabase();
+
 /* .then(() => {
     setTimeout(() => app.log.info("Web-based Launcher will open in 3 seconds..."), 750);
 
