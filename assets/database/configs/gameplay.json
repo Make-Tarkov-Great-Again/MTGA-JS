@@ -1,0 +1,158 @@
+{
+    "seasonalEvents": {
+        "enable": true,
+        "events": [
+            {
+                "name": "Halloween",
+                "startDay": "24",
+                "startMonth": "10",
+                "endDay": "4",
+                "endMonth": "11"
+            },
+            {
+                "name": "Christmas",
+                "startDay": "17",
+                "startMonth": "12",
+                "endDay": "31",
+                "endMonth": "12"
+            }
+        ]
+    },
+    "bots": {
+        "_preload": "Creates a cache on server start of generated bots, so that it is not done as the deploy timer starts; bots are also regenerated after each raid if their minThreshold is met. If all bots in cache are used, will generate normally then regenerate after raid",
+        "preload": {
+            "enabled": false,
+            "maxBossPreload": 3,
+            "minBossPreload": 1,
+            "maxFollowerPreload": 20,
+            "minFollowerPreload": 5,
+            "maxScavPreload": 50,
+            "minScavPreload": 10,
+            "limiter": 75
+        },
+        "_randomAmmos": "Adds some realism to the spare ammunition the standard bots carry",
+        "randomAmmos": {
+            "looseEnabled": true,
+            "magazineEnabled": "i don't work because bsg is shit",
+            "chance": 65,
+            "maxTypes": 3
+        }
+    },
+    "development": {
+        "debugBots": false,
+        "devInsuranceTimers": false,
+        "devInsuranceTimes": {
+            "min": 0.01,
+            "max": 0.01
+        }
+    },
+    "bot": {
+        "backpackChance": 30,
+        "headwearChance": 40,
+        "facecoverChance": 50,
+        "earpieceChance": 20,
+        "primaryWeaponChance": 40,
+        "secondaryWeaponChance": 15,
+        "holsterWeaponChance": 30
+    },
+    "customization": {
+        "allHeadsOnCharacterCreation": true,
+        "allVoicesOnCharacterCreation": true,
+        "allPocketsHaveSpecialSlots": true
+    },
+    "items": {
+        "quickExamine": true,
+        "allExamined": {
+            "enabled": true,
+            "exceptTheseParents": [
+                "5c99f98d86f7745c314214b3",
+                "5c164d2286f774194c5e69fa"
+            ]
+        },
+        "stackSize": {
+            "ammo": 120,
+            "money": 1000000
+        },
+        "stimMaxUses": 3,
+        "noArmorRestrictions": true,
+        "Weight": {
+            "enabled": true,
+            "modifier": 0.3
+        }
+    },
+    "raid": {
+        "maxBotsAliveOnMap": 20,
+        "waveCoef": {
+            "low": 1,
+            "mid": 1.4,
+            "high": 1.8,
+            "horde": 10
+        },
+        "timeBeforeDeploy": 5,
+        "inRaidModding": true,
+        "insuranceEnabled": true,
+        "inRaid": {
+            "showDeathMessage": true,
+            "createFriendlyAI": true
+        },
+        "defaultRaidSettings": {
+            "aiAmount": "AsOnline",
+            "aiDifficulty": "AsOnline",
+            "bossEnabled": true,
+            "scavWars": false,
+            "taggedAndCursed": false
+        },
+        "airdropSettings": {
+            "airdropChancePercent": {
+                "bigmap": 100,
+                "woods": 100,
+                "lighthouse": 100,
+                "shoreline": 100,
+                "interchange": 100,
+                "reserve": 100
+            },
+            "airdropMinStartTimeSeconds": 60,
+            "airdropMaxStartTimeSeconds": 300,
+            "planeMinFlyHeight": 400,
+            "planeMaxFlyHeight": 500,
+            "planeVolume": 0.5
+        }
+    },
+    "trading": {
+        "redeemTimeInHours": 72,
+        "refreshTimeInMinutes": 2,
+        "tradePurchasedIsFoundInRaid": true,
+        "fence": {
+            "killingScavsFenceLevelChange": -0.01,
+            "killingPMCsFenceLevelChange": 0.02,
+            "fenceLevelAssortModifier": 1.05
+        },
+        "ragman": {
+            "sellAllDrip": true
+        },
+        "flea": {
+            "enabled": true,
+            "minUserLevel": 15,
+            "removeBlacklist": true,
+            "liveFleaPrices": true
+        }
+    },
+    "hideout": {
+        "fastScavcase": true,
+        "fastProduction": true
+    },
+    "location": {
+        "realTimeEnabled": true,
+        "forceWeatherEnabled": false,
+        "forceWeatherId": false,
+        "changeRaidTime": true,
+        "raidTimerMultiplier": 1,
+        "changeExfiltrationTime": true,
+        "exfiltrationTime": 1
+    },
+    "loot": {},
+    "match": {
+        "enabled": true
+    },
+    "weapons": {}
+}
