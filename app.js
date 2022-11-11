@@ -1,12 +1,15 @@
 const { certificate } = require("./lib/engine/CertificateGenerator");
 const zlib = require("node:zlib");
-const open = require("open");
+const opener = require("opener");
 const qs = require('fast-querystring');
+const { logger, parse } = require("./lib/utilities");
+const pngStringify = require('console-png');
+
+
 
 /**
  * Fastify instance
  */
-
 const database = require('./lib/engine/Database');
 const webinterface = require("./lib/engine/WebInterface");
 const tasker = require('./lib/engine/Tasker');
@@ -16,20 +19,19 @@ module.exports = {
     database, tasker
 };
 
-const { DatabaseLoader } = require("./lib/engine/DatabaseLoader");
-const { logger, parse } = require("./utilities");
-(async () => { await DatabaseLoader.setDatabase() })();
 
 let cert;
+const { DatabaseLoader } = require("./lib/engine/DatabaseLoader");
+
 if (process.platform === 'win32' || process.platform === 'win64') {
     const fs = require('fs');
     cert = certificate.generate(database.core.serverConfig.ip, database.core.serverConfig.hostname, 3);
 
-    const clearCertificateScriptPath = `${__dirname}/scripts/clear-certificate.ps1`;
+    const clearCertificateScriptPath = `${__dirname}/assets/scripts/clear-certificate.ps1`;
     const execSync = require('child_process').execSync;
     const code = execSync(`powershell.exe -ExecutionPolicy Bypass -File "${clearCertificateScriptPath}"`);
 
-    const installCertificateScriptPath = `${__dirname}/scripts/install-certificate.ps1`;
+    const installCertificateScriptPath = `${__dirname}/assets/scripts/install-certificate.ps1`;
     const installCertificateScript = fs.readFileSync(installCertificateScriptPath);
     const spawn = require('child_process').spawn;
     const installCertificatePowerShell = spawn('powershell', [installCertificateScript]);
@@ -45,28 +47,39 @@ if (process.platform === 'win32' || process.platform === 'win64') {
 
     installCertificatePowerShell.stderr.setEncoding('utf8');
     installCertificatePowerShell.stderr.on('data', function (data) {
+
+        if (data.includes("Get-ChildItem : Cannot find drive")) {
+            logger.error(`
+            [installCertificatePowerShell.stderr.on]
+            Report error below to our GitHub Issues, or on our Discord Bug reports.
+            
+            `);
+            logger.error(data);
+            userCancelOrError = true;
+        }
+
         data = data.toString();
         installCertificateScriptOutput += data;
-        userCancelOrError = true;
     });
 
     installCertificatePowerShell.on('close', function (_code) {
         if (userCancelOrError) {
-            logger.error(`HTTPS Certification Installation failed!`);
-            logger.error(`If an error occured, report on Discord.`);
-            logger.error(`If you chose not to allow the installation, read below:`);
-            logger.error(`The certificate is required for Websockets to work, otherwise the Client will not connect to the socket endpoint.`);
-            logger.error(`If you have any security concerns, you can take a look at the script ${installCertificateScriptPath}.`);
-            logger.error(`The certificate is generated on first start, has a lifetime of 3 days, and will is saved to /user/certs/.`);
-            //logger.debug(scriptOutput);
-        } else {
-            //open(`https://${database.core.serverConfig.ip}:${database.core.serverConfig.port}`) Opens the weblauncher automatically if wanted.
+            logger.error(`
+                [HTTPS Certification Installation failed]
+                    If an error occured, report on Discord!
+                    If you chose not to allow the installation, read below:
+                        
+                        The certificate is required for Websockets to work, otherwise the Client will not connect to the socket endpoint.
+                            If you have any security concerns, you can take a look at the script ${installCertificateScriptPath}.        
+                        The certificate is generated on first start, has a lifetime of 3 days, and is saved to /user/certs/.
+            
+                [Shutting Down, restart the server and accept certificate installation] 
+            `);
         }
     });
 } else {
     cert = certificate.generate(database.core.serverConfig.ip, database.core.serverConfig.hostname, 365);
 }
-
 
 const app = require('fastify')({
     logger: {
@@ -77,10 +90,10 @@ const app = require('fastify')({
             }
         },
         serializers: {
-            req (request) {
+            req(request) {
                 return `[${request.method}] ${request.url}`
             },
-            res (reply) {
+            res(reply) {
                 return `${reply.statusCode}`
             }
         }
@@ -90,7 +103,11 @@ const app = require('fastify')({
     https: {
         allowHTTP1: true,
         key: cert.key,
-        cert: cert.cert
+        cert: cert.cert,
+        ca: cert.cert,
+
+        requestCert: true,
+        rejectUnauthorized: false,
     },
     onProtoPoisoning: "remove",
 });
@@ -146,17 +163,27 @@ app.addContentTypeParser('*', (req, payload, done) => {
     });
 });
 
-/**
-* Register Handler
-*/
-app.server.on("listening", async () => {
-    const { default: terminalImage } = await import('terminal-image');
-    logger.console(await terminalImage.file(`./templates/webinterface/resources/logo/banner_transparent.png`, {
-        preserveAspectRatio: true,
-        width: `65%`,
-        height: `65%`
-    }))
-});
+app.register(require('./lib/plugins/register.js')); //register
 
-app.register(require('./plugins/register.js'));
-app.listen({ port: database.core.serverConfig.port, host: database.core.serverConfig.ip });
+const image = require('fs').readFileSync(__dirname + '/assets/templates/webinterface/resources/logo/rs_banner_transparent.png');
+pngStringify(image, function (err, string) {
+    if (err) throw err;
+    logger.success(string);
+})
+
+app.listen(
+    {
+        port: database.core.serverConfig.port,
+        host: database.core.serverConfig.ip
+    }
+)
+DatabaseLoader.setDatabase();
+
+/* .then(() => {
+    setTimeout(() => app.log.info("Web-based Launcher will open in 3 seconds..."), 750);
+
+    setTimeout(() => {
+        opener(`https://${database.core.serverConfig.ip}:${database.core.serverConfig.port}`)
+    }, 3000);
+}); */
+
