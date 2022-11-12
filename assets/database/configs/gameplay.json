@@ -77,7 +77,7 @@
         "noArmorRestrictions": true,
         "Weight": {
             "enabled": true,
-            "modifier": 0.3
+            "modifier": 1
         }
     },
     "raid": {
