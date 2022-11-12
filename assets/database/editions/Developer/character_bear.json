@@ -969,6 +969,27 @@
     {
       "type": "StashSize",
       "templateId": "5811ce772459770e9e5f9532"
+    },
+    {
+      "type": "UnlockWeaponRepair",
+      "value": 1,
+      "passive": true,
+      "production": false,
+      "visible": true
+    },
+    {
+      "type": "UnlockWeaponModification",
+      "value": 1,
+      "passive": true,
+      "production": false,
+      "visible": true
+    },
+    {
+      "type": "UnlockArmorRepair",
+      "value": 1,
+      "passive": true,
+      "production": false,
+      "visible": true
     }
   ],
   "Notes": {
