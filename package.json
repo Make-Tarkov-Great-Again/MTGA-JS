@@ -17,7 +17,6 @@
     "@fastify/formbody": "^7.3.0",
     "@fastify/websocket": "^7.1.1",
     "console-png": "^1.2.1",
-    "fast-querystring": "^1.0.0",
     "fast-stringify": "^2.0.0",
     "fastify": "^4.9.2",
     "fastify-plugin": "^4.3.0",
