@@ -39,6 +39,7 @@
         }
     },
     "development": {
+        "openWebLauncher": false,
         "debugBots": false,
         "devInsuranceTimers": false,
         "devInsuranceTimes": {

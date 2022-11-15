@@ -1,6 +1,6 @@
 const { certificate } = require("./lib/engine/CertificateGenerator");
 const zlib = require("node:zlib");
-const opener = require("opener");
+const fs = require('fs');
 const qs = require('fast-querystring');
 const { logger, parse } = require("./lib/utilities");
 const pngStringify = require('console-png');
@@ -24,7 +24,6 @@ let cert;
 const { DatabaseLoader } = require("./lib/engine/DatabaseLoader");
 
 if (process.platform === 'win32' || process.platform === 'win64') {
-    const fs = require('fs');
     cert = certificate.generate(database.core.serverConfig.ip, database.core.serverConfig.hostname, 3);
 
     const clearCertificateScriptPath = `${__dirname}/assets/scripts/clear-certificate.ps1`;
@@ -126,16 +125,16 @@ app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (re
         try {
             zlib.inflate(body, { chunkSize: 32768 }, function (err, data) {
                 if (!err && data) {
-                    const inflatedString = data.toString('utf-8');
+                    const inflatedString = data.toString('utf8');
                     if (inflatedString.length > 0) {
                         done(null, parse(inflatedString));
                         return;
                     }
                     done(null, false);
-                    //return;
+                    return;
                 } else {
                     done(null, false);
-                    //return;
+                    return;
                 }
             });
         } catch (error) {
@@ -165,7 +164,7 @@ app.addContentTypeParser('*', (req, payload, done) => {
 
 app.register(require('./lib/plugins/register.js')); //register
 
-const image = require('fs').readFileSync(__dirname + '/assets/templates/webinterface/resources/logo/rs_banner_transparent.png');
+const image = fs.readFileSync(__dirname + '/assets/templates/webinterface/resources/logo/rs_banner_transparent.png');
 pngStringify(image, function (err, string) {
     if (err) throw err;
     logger.success(string);
