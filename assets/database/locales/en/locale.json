@@ -1216,8 +1216,8 @@
     "ONYOUROWN": "ON YOUR OWN",
     "REACTION": "REACTION",
     "CONTACT": "CONTACT",
-    "HEALTH STATUS": "HEALTH STATUS",
     "ENEMY": "ENEMY",
+    "HEALTH STATUS": "HEALTH STATUS",
     "COMMAND": "COMMAND",
     "HELP": "HELP",
     "TEAM STATUS": "TEAM STATUS",
@@ -2942,8 +2942,8 @@
     "Trader": "Trader:",
     "QuestCondition/Elimination/Kill/BotRole/cursedAssault": "Cultist Warrior",
     "Display has changed. Do you want to keep the changes?": "Display settings have changed. Do you want to keep the changes?",
-    "ECoopBlock/GameVersionUnavailable": "Invalid pre-order version",
     "CoopMode/HighServerLoadAcceptScreen": "High load on practice mode servers.",
+    "ECoopBlock/GameVersionUnavailable": "Invalid pre-order version",
     "QuestCondition/Elimination/Kill/BotRole/sectantPriest": "Cultist Priest",
     "Settings/Graphics/DLSSWrongSampling": "Disable Resampling to enable DLSS",
     "RepairWeaponDeteriorationReduce": "Reduces wear during a repair by repair kits",
@@ -4132,7 +4132,9 @@
     "62973d1f5ffa6d1acd27faa1": "Well done.",
     "62973d2417898b24b605ebbf": "There are other tasks available, at the cost of my patience.",
     "62973d4aa283f6620225410b": "Well done.",
-    "62973d532afdd248653e322f": "There are other tasks available, at the cost of my patience."
+    "62973d532afdd248653e322f": "There are other tasks available, at the cost of my patience.",
+    "636a33ae0860a46670082e68": "Come on in, friend! I've got a request for you. One of my acquaintances put himself into a really complicated situation - Sanitar is looking for him with his death squad. I wouldn't want to lose this kid, he's an excellent informant and courier, and a good person, as far as I know. As you could've already guessed, we need to deal with Sanitar to help the guy out... Who's the kid, you ask? He's one of the Scavs, nickname's Ryzhy. Alright, let's deal with this quick.",
+    "636a33ae0860a46670082e69": "Sanitar is dealt with?.. Excellent. I did the right thing by contacting you right away. If it weren't for you, Ryzhy would definitely be finished."
   },
   "quest": {
     "596b36c586f77450d6045ad2": {
@@ -8655,6 +8657,29 @@
         "626c3183af14a41d9a1f4ea7": "Locate and eliminate Birdeye"
       },
       "location": "any"
+    },
+    "636a2f5759cb834f8a5825d6": {
+      "name": "Letters",
+      "note": "",
+      "description": "636a33ae0860a46670082e68",
+      "failMessageText": "636a33ae0860a46670082e6a",
+      "successMessageText": "636a33ae0860a46670082e69",
+      "startedMessageText": "636a33ae0860a46670082e6b",
+      "conditions": {
+        "636a2fbfaa5efe6e055057d7": "Eliminate Sanitar while using assault rifles",
+        "636a305ac7ed455bc71e3995": "Eliminate Sanitar while using assault carbines",
+        "636a30d002e62c4d853d3f45": "Eliminate Sanitar while using machine guns",
+        "636a31590860a46670082e66": "Eliminate Sanitar while using SMGs",
+        "636b82a5c7ed455bc71e3998": "Eliminate Sanitar while using shotguns",
+        "636b82e4550cde781e0ac377": "Eliminate Sanitar while using marksman rifles",
+        "636b8864c7ed455bc71e399a": "Eliminate Sanitar while using bolt-action rifles",
+        "636b88ff550cde781e0ac379": "Eliminate Sanitar while using grenade launchers",
+        "636b89dfc0e68626dd2b2ba7": "Eliminate Sanitar while using pistols or revolvers",
+        "636cc7d546480934981ce1e5": "Eliminate Sanitar while using melee weapons",
+        "636cc91b314c901c6632f716": "Eliminate Sanitar while using throwable weapons",
+        "636b8a19c7ed455bc71e399c": "Eliminate Sanitar while using revolvers"
+      },
+      "location": "any"
     }
   },
   "preset": {
@@ -12745,21 +12770,21 @@
       "Description": "A 9x19mm Parabellum PSO gzh cartridge with a 7.5 gram bullet in a bimetallic case; intended for sport shooting and hunting. Despite the low muzzle velocity of the bullet, it has considerable stopping power effect, thanks to its exceptional expansion capability after hitting the target.",
       "casingName": "9x19mm PSO gzh"
     },
-    "5887431f2459777e1612938f": {
-      "Name": "7.62x54mm R LPS gzh",
-      "ShortName": "LPS",
-      "Description": "A 7.62x54mm R LPS gzh (GRAU Index - 57-N-323S) cartridge with a 9.6 gram steel core bullet with a lead cladding and a bimetallic jacket, in a bimetallic case. The LPS cartridge (Lyógkaya Púlya so Stal'ným serdéchnikom - \"Light Steel core Bullet\") was introduced into service in 1953 for Soviet 7.62x54mm R caliber weaponry, and over the years has undergone numerous changes in the materials used for its construction. Thanks to its steel core, it is capable of piercing through basic and intermediate ballistic body protections in addition to providing a considerable stopping power effect, however, it has a high bounce probability off various surfaces.",
-      "casingName": "7.62x54mm R LPS gzh"
+    "5888945a2459774bf43ba385": {
+      "Name": "DVL-10 7.62x51 500mm barrel",
+      "ShortName": "DVL10 500mm",
+      "Description": "A 500 mm long 7.62x51 match-grade stainless steel barrel with an integral sound suppressor manufactured by LOBAEV Hummer Barrels for the DVL-10 sniper rifle."
     },
     "588892092459774ac91d4b11": {
       "Name": "Lobaev Arms DVL-10 7.62x51 bolt-action sniper rifle",
       "ShortName": "DVL-10",
       "Description": "DVL-10 is a lightweight, compact, and silenced rifle in proprietary and current military subsonic calibers. Developed for special service and combat missions where exceptional accuracy and range are needed. Equipped with a standard Lobaev Arms foldable buttstock and Lobaev Hummer Barrels stainless steel match-grade barrel."
     },
-    "5888945a2459774bf43ba385": {
-      "Name": "DVL-10 7.62x51 500mm barrel",
-      "ShortName": "DVL10 500mm",
-      "Description": "A 500 mm long 7.62x51 match-grade stainless steel barrel with an integral sound suppressor manufactured by LOBAEV Hummer Barrels for the DVL-10 sniper rifle."
+    "5887431f2459777e1612938f": {
+      "Name": "7.62x54mm R LPS gzh",
+      "ShortName": "LPS",
+      "Description": "A 7.62x54mm R LPS gzh (GRAU Index - 57-N-323S) cartridge with a 9.6 gram steel core bullet with a lead cladding and a bimetallic jacket, in a bimetallic case. The LPS cartridge (Lyógkaya Púlya so Stal'ným serdéchnikom - \"Light Steel core Bullet\") was introduced into service in 1953 for Soviet 7.62x54mm R caliber weaponry, and over the years has undergone numerous changes in the materials used for its construction. Thanks to its steel core, it is capable of piercing through basic and intermediate ballistic body protections in addition to providing a considerable stopping power effect, however, it has a high bounce probability off various surfaces.",
+      "casingName": "7.62x54mm R LPS gzh"
     },
     "5888956924597752983e182d": {
       "Name": "DVL-10 M2 7.62x51 660mm barrel",
@@ -16835,16 +16860,6 @@
       "ShortName": "416A5 4Rail",
       "Description": "A quad rail handguard for 416 and compatibles. Comes with a built-in flip-up front sight and four picatinny rails for attaching wide amount of different accessories. Manufactured by Heckler & Koch."
     },
-    "5bb20da5d4351e0035629dbf": {
-      "Name": "HK 416A5 5.56x45 16.5 inch barrel with flip-up front sight",
-      "ShortName": "416A5 16.5\"",
-      "Description": "A barrel for 416 based weapons for 5.56x45 NATO ammo, 16.5 inches (419mm) long with a flip-up front sight."
-    },
-    "5bb20d9cd4351e00334c9d8a": {
-      "Name": "HK 416A5 5.56x45 14.5 inch barrel",
-      "ShortName": "416A5 14.5\"",
-      "Description": "A 14.5 inch (368mm) barrel for HK416 based weapons for 5.56x45 NATO ammo, includes a flip-up front sight."
-    },
     "5bae13ded4351e44f824bf38": {
       "Name": "Mosin Rifle 7.62x54R ProMag Archangel OPFOR 10-round magazine",
       "ShortName": "AA762R 02",
@@ -16854,6 +16869,16 @@
       "Name": "HK 416A5 5.56x45 upper receiver",
       "ShortName": "416A5",
       "Description": "An upper receiver for the 416A5 assault rifle manufactured by Heckler & Koch. Equipped with a mount for attaching additional devices."
+    },
+    "5bb20d9cd4351e00334c9d8a": {
+      "Name": "HK 416A5 5.56x45 14.5 inch barrel",
+      "ShortName": "416A5 14.5\"",
+      "Description": "A 14.5 inch (368mm) barrel for HK416 based weapons for 5.56x45 NATO ammo, includes a flip-up front sight."
+    },
+    "5bb20da5d4351e0035629dbf": {
+      "Name": "HK 416A5 5.56x45 16.5 inch barrel with flip-up front sight",
+      "ShortName": "416A5 16.5\"",
+      "Description": "A barrel for 416 based weapons for 5.56x45 NATO ammo, 16.5 inches (419mm) long with a flip-up front sight."
     },
     "5bb20dadd4351e00367faeff": {
       "Name": "HK 416A5 5.56x45 20 inch barrel",

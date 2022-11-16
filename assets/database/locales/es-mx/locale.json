@@ -1577,8 +1577,8 @@
     "BlindShootAbove": "Disparo a ciegas, arriba",
     "BlindShootRight": "Disparo a ciegas, derecha",
     "Are you sure you want to destroy {0}?": "¿Estás seguro de querer destruir {0}?",
-    "Stun": "Aturdido",
     "PP Exfil": "Ex-V - Estación Eléctrica",
+    "Stun": "Aturdido",
     "Armband": "Brazalete",
     "DISCARD": "DESCARTAR",
     "ENicknameError/NicknameTaken": "Este apodo ya está en uso.",
@@ -2700,8 +2700,8 @@
     "Authorization/ForceLogoutMessage": "Requiere volver a iniciar sesión. Por favor, reinicie el cliente.",
     "Trading/AssortmentUpdated": "reabastecido",
     "ForceAutoWeaponMode": "Fijar el modo de disparo en Automático",
-    "{0} removed you from friends list": "{0} te ha removido de su lista de amigos.",
     "no available item": "Sin objeto disponible",
+    "{0} removed you from friends list": "{0} te ha removido de su lista de amigos.",
     "EBackendErrorCode/OfferSold": "La oferta ya se ha vendido.",
     "Ragfair/No selected item": "No hay objetos seleccionados.",
     "Ui/Settings/MalfunctionVisability": "Notificaciones de averías",
@@ -4132,7 +4132,9 @@
     "62973d1f5ffa6d1acd27faa1": "Bien hecho.",
     "62973d2417898b24b605ebbf": "Hay otros encargos disponibles, pero esto te costará mi paciencia.",
     "62973d4aa283f6620225410b": "Bien hecho.",
-    "62973d532afdd248653e322f": "Hay otros encargos disponibles, pero esto te costará mi paciencia."
+    "62973d532afdd248653e322f": "Hay otros encargos disponibles, pero esto te costará mi paciencia.",
+    "636a33ae0860a46670082e68": "Come on in, friend! I've got a request for you. One of my acquaintances put himself into a really complicated situation - Sanitar is looking for him with his death squad. I wouldn't want to lose this kid, he's an excellent informant and courier, and a good person, as far as I know. As you could've already guessed, we need to deal with Sanitar to help the guy out... Who's the kid, you ask? He's one of the Scavs, nickname's Ryzhy. Alright, let's deal with this quick.",
+    "636a33ae0860a46670082e69": "Sanitar is dealt with?.. Excellent. I did the right thing by contacting you right away. If it weren't for you, Ryzhy would definitely be finished."
   },
   "quest": {
     "596b36c586f77450d6045ad2": {
@@ -8653,6 +8655,29 @@
       "failMessageText": "626bddcb05f287031503c7f9",
       "startedMessageText": "626bddcb05f287031503c7fa",
       "location": "any"
+    },
+    "636a2f5759cb834f8a5825d6": {
+      "name": "Letters",
+      "note": "",
+      "description": "636a33ae0860a46670082e68",
+      "failMessageText": "636a33ae0860a46670082e6a",
+      "successMessageText": "636a33ae0860a46670082e69",
+      "startedMessageText": "636a33ae0860a46670082e6b",
+      "conditions": {
+        "636a2fbfaa5efe6e055057d7": "Eliminate Sanitar while using assault rifles",
+        "636a305ac7ed455bc71e3995": "Eliminate Sanitar while using assault carbines",
+        "636a30d002e62c4d853d3f45": "Eliminate Sanitar while using machine guns",
+        "636a31590860a46670082e66": "Eliminate Sanitar while using SMGs",
+        "636b82a5c7ed455bc71e3998": "Eliminate Sanitar while using shotguns",
+        "636b82e4550cde781e0ac377": "Eliminate Sanitar while using marksman rifles",
+        "636b8864c7ed455bc71e399a": "Eliminate Sanitar while using bolt-action rifles",
+        "636b88ff550cde781e0ac379": "Eliminate Sanitar while using grenade launchers",
+        "636b89dfc0e68626dd2b2ba7": "Eliminate Sanitar while using pistols or revolvers",
+        "636cc7d546480934981ce1e5": "Eliminate Sanitar while using melee weapons",
+        "636cc91b314c901c6632f716": "Eliminate Sanitar while using throwable weapons",
+        "636b8a19c7ed455bc71e399c": "Eliminate Sanitar while using revolvers"
+      },
+      "location": "any"
     }
   },
   "preset": {
@@ -12572,21 +12597,21 @@
       "Description": "Munición de 9x19 mm Parabellum PSO gzh - Es un cartucho con una bala de 7.5 gramos en un casquillo bimetálico; diseñada para tiro deportivo y cacería. A pesar de la baja velocidad de salida de la bala, esta posee un poder de parada considerable, gracias a su excepcional capacidad de expansión tras impactar al objetivo.",
       "casingName": "Cartucho 9x19 mm PSO gzh"
     },
-    "5887431f2459777e1612938f": {
-      "Name": "Cartucho 7.62x54 mm R LPS gzh",
-      "ShortName": "LPS",
-      "Description": "Munición de 7.62x54 mm R LPS gzh (Índice GRAU - 57-N-323S) - Es un cartucho con una bala de 9.6 gramos con un núcleo de acero con revestimiento de plomo y encamisado bimetálico, en un casquillo de bimetálico. El cartucho LPS (Lyógkaya Púlya so Stal'ným serdéchnikom - \"Bala con núcleo de Acero Ligero\") se introdujo al servicio en 1953 para el armamento Soviético de calibre 7.62x54 mm R y, a lo largo de los años, ha sufrido numerosos cambios en los materiales utilizados para su construcción. Gracias a su núcleo de acero, es capaz de atravesar protecciones balísticas corporales básicas e intermedias, además de proporcionar un poder de parada considerable, sin embargo, posee una alta probabilidad de rebote en diversas superficies.",
-      "casingName": "Cartucho 7.62x54 mm R LPS gzh"
+    "5888945a2459774bf43ba385": {
+      "Name": "Cañón de 500 mm para DVL-10 7.62x51 mm",
+      "ShortName": "DVL10 500 mm",
+      "Description": "Un tubo cañón con supresor integrado de 500 mm grado Match de acero inoxidable calibre 7.62x51 mm OTAN, fabricado por LOBAEV Hummer Barrels para el fusil de francotirador DVL-10."
     },
     "588892092459774ac91d4b11": {
       "Name": "Fusil de francotirador de cerrojo Lobaev Arms DVL-10 Saboteur 7.62x51 mm",
       "ShortName": "DVL-10",
       "Description": "El DVL-10 es un fusil silenciado patentado, ligero y compacto para calibres militares subsónicos, diseñado para el servicio especial y misiones de combate, donde es necesaria una precisión y alcance excepcionales. Está equipado con una culata plegable Lobaev Arms estándar y un cañón Lobaev Hummer Barrels de grado Match y de acero inoxidable."
     },
-    "5888945a2459774bf43ba385": {
-      "Name": "Cañón de 500 mm para DVL-10 7.62x51 mm",
-      "ShortName": "DVL10 500 mm",
-      "Description": "Un tubo cañón con supresor integrado de 500 mm grado Match de acero inoxidable calibre 7.62x51 mm OTAN, fabricado por LOBAEV Hummer Barrels para el fusil de francotirador DVL-10."
+    "5887431f2459777e1612938f": {
+      "Name": "Cartucho 7.62x54 mm R LPS gzh",
+      "ShortName": "LPS",
+      "Description": "Munición de 7.62x54 mm R LPS gzh (Índice GRAU - 57-N-323S) - Es un cartucho con una bala de 9.6 gramos con un núcleo de acero con revestimiento de plomo y encamisado bimetálico, en un casquillo de bimetálico. El cartucho LPS (Lyógkaya Púlya so Stal'ným serdéchnikom - \"Bala con núcleo de Acero Ligero\") se introdujo al servicio en 1953 para el armamento Soviético de calibre 7.62x54 mm R y, a lo largo de los años, ha sufrido numerosos cambios en los materiales utilizados para su construcción. Gracias a su núcleo de acero, es capaz de atravesar protecciones balísticas corporales básicas e intermedias, además de proporcionar un poder de parada considerable, sin embargo, posee una alta probabilidad de rebote en diversas superficies.",
+      "casingName": "Cartucho 7.62x54 mm R LPS gzh"
     },
     "5888956924597752983e182d": {
       "Name": "Cañón de 660 mm para DVL-10 M2 7.62x51 mm",
