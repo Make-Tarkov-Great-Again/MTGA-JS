@@ -164,7 +164,7 @@ app.addContentTypeParser('*', (req, payload, done) => {
 
 app.register(require('./lib/plugins/register.js')); //register
 
-const image = fs.readFileSync(__dirname + '/assets/templates/webinterface/resources/logo/rs_banner_transparent.png');
+const image = fs.readFileSync('./assets/templates/webinterface/resources/logo/rs_banner_transparent.png');
 pngStringify(image, function (err, string) {
     if (err) throw err;
     logger.success(string);
