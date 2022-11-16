@@ -4128,7 +4128,9 @@
     "Points": 0
   },
   "Stats": {
-    "SessionCounters": null,
+    "SessionCounters": {
+      "Items": []
+    },
     "OverallCounters": {
       "Items": []
     },
@@ -4583,41 +4585,49 @@
   "TradersInfo": {
     "5c0647fdd443bc2504c2d371": {
       "unlocked": false,
+      "disabled": false,
       "salesSum": 0,
       "standing": 0.2
     },
     "5935c25fb3acc3127c3d8cd9": {
       "unlocked": false,
+      "disabled": false,
       "salesSum": 0,
       "standing": 0.2
     },
     "58330581ace78e27b8b10cee": {
       "unlocked": false,
+      "disabled": false,
       "salesSum": 0,
       "standing": 0.2
     },
     "5a7c2eca46aef81a7ca2145d": {
       "unlocked": false,
+      "disabled": false,
       "salesSum": 0,
       "standing": 0.2
     },
     "579dc571d53a0658a154fbec": {
       "unlocked": false,
+      "disabled": false,
       "salesSum": 0,
       "standing": 0.2
     },
     "5ac3b934156ae10c4430e83c": {
       "unlocked": false,
+      "disabled": false,
       "salesSum": 0,
       "standing": 0.2
     },
     "54cb50c76803fa8b248b4571": {
       "unlocked": false,
+      "disabled": false,
       "salesSum": 0,
       "standing": 0.2
     },
     "54cb57776803fa99248b456e": {
       "unlocked": false,
+      "disabled": false,
       "salesSum": 0,
       "standing": 0.2
     }
