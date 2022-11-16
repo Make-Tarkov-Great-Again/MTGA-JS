@@ -493,8 +493,8 @@
     "No free room for that item": "没有空间存放此物品",
     "Can't find any non-empty magazine": "无已载弹的弹匣",
     "Can't find appropriate slot": "找不到兼容的栏位",
-    "SurvivalRate": "幸存率",
     "Can't find any appropriate magazine": "找不到合适的弹匣",
+    "SurvivalRate": "幸存率",
     "Perish": "丧生",
     "MeanLifetime": "平均存活时间",
     "Sessions": "场次",
@@ -1577,8 +1577,8 @@
     "BlindShootAbove": "武器举过头顶盲射",
     "BlindShootRight": "武器伸出右侧盲射",
     "Are you sure you want to destroy {0}?": "你是否确定要销毁 {0}?",
-    "Stun": "震撼",
     "PP Exfil": "发电站",
+    "Stun": "震撼",
     "Armband": "臂带",
     "DISCARD": "丢弃",
     "ENicknameError/NicknameTaken": "该昵称已被占用。",
@@ -2700,8 +2700,8 @@
     "Authorization/ForceLogoutMessage": "需要重新登录。请重启客户端。",
     "Trading/AssortmentUpdated": "已补货",
     "ForceAutoWeaponMode": "设定开火模式为全自动",
-    "{0} removed you from friends list": "{0} 已将你移出好友列表",
     "no available item": "没有可用的物品",
+    "{0} removed you from friends list": "{0} 已将你移出好友列表",
     "EBackendErrorCode/OfferSold": "交易单已售出",
     "Ragfair/No selected item": "未选择物品",
     "Ui/Settings/MalfunctionVisability": "故障提醒",
@@ -4132,7 +4132,9 @@
     "62973d1f5ffa6d1acd27faa1": "干得好。",
     "62973d2417898b24b605ebbf": "还有别的活儿，只不过我有点没耐心了。",
     "62973d4aa283f6620225410b": "干得好。",
-    "62973d532afdd248653e322f": "还有别的活儿，只不过我有点没耐心了。"
+    "62973d532afdd248653e322f": "还有别的活儿，只不过我有点没耐心了。",
+    "636a33ae0860a46670082e68": "Come on in, friend! I've got a request for you. One of my acquaintances put himself into a really complicated situation - Sanitar is looking for him with his death squad. I wouldn't want to lose this kid, he's an excellent informant and courier, and a good person, as far as I know. As you could've already guessed, we need to deal with Sanitar to help the guy out... Who's the kid, you ask? He's one of the Scavs, nickname's Ryzhy. Alright, let's deal with this quick.",
+    "636a33ae0860a46670082e69": "Sanitar is dealt with?.. Excellent. I did the right thing by contacting you right away. If it weren't for you, Ryzhy would definitely be finished."
   },
   "quest": {
     "596b36c586f77450d6045ad2": {
@@ -8653,6 +8655,29 @@
       "failMessageText": "626bddcb05f287031503c7f9",
       "startedMessageText": "626bddcb05f287031503c7fa",
       "location": "any"
+    },
+    "636a2f5759cb834f8a5825d6": {
+      "name": "Letters",
+      "note": "",
+      "description": "636a33ae0860a46670082e68",
+      "failMessageText": "636a33ae0860a46670082e6a",
+      "successMessageText": "636a33ae0860a46670082e69",
+      "startedMessageText": "636a33ae0860a46670082e6b",
+      "conditions": {
+        "636a2fbfaa5efe6e055057d7": "Eliminate Sanitar while using assault rifles",
+        "636a305ac7ed455bc71e3995": "Eliminate Sanitar while using assault carbines",
+        "636a30d002e62c4d853d3f45": "Eliminate Sanitar while using machine guns",
+        "636a31590860a46670082e66": "Eliminate Sanitar while using SMGs",
+        "636b82a5c7ed455bc71e3998": "Eliminate Sanitar while using shotguns",
+        "636b82e4550cde781e0ac377": "Eliminate Sanitar while using marksman rifles",
+        "636b8864c7ed455bc71e399a": "Eliminate Sanitar while using bolt-action rifles",
+        "636b88ff550cde781e0ac379": "Eliminate Sanitar while using grenade launchers",
+        "636b89dfc0e68626dd2b2ba7": "Eliminate Sanitar while using pistols or revolvers",
+        "636cc7d546480934981ce1e5": "Eliminate Sanitar while using melee weapons",
+        "636cc91b314c901c6632f716": "Eliminate Sanitar while using throwable weapons",
+        "636b8a19c7ed455bc71e399c": "Eliminate Sanitar while using revolvers"
+      },
+      "location": "any"
     }
   },
   "preset": {
@@ -12572,21 +12597,21 @@
       "Description": "9x19毫米 PSO gzh是运动和狩猎用子弹 。",
       "casingName": "9x19毫米 PSO gzh"
     },
-    "5887431f2459777e1612938f": {
-      "Name": "7.62x54R LPS Gzh",
-      "ShortName": "LPS Gzh",
-      "Description": "（型号 GRAU - 57-N-323S）是一种带有含钢芯的轻型双金属LPS弹头的子弹。",
-      "casingName": "7.62x54R LPS Gzh"
+    "5888945a2459774bf43ba385": {
+      "Name": "500毫米DVL-10枪管 .308",
+      "ShortName": "500毫米 DVL-10 .308",
+      "Description": "LOBAEV Hummer Barrels生产的DVL-10狙击步枪用.308 500mm竞赛级不锈钢枪管，装有整体式消音器。\n"
     },
     "588892092459774ac91d4b11": {
       "Name": "DVL-10 “破坏者” 7.62x51 狙击步枪",
       "ShortName": "DVL-10",
       "Description": "DVL-10是一款集轻便，紧凑和消音于一体的步枪。使用具有优异精度和射程，以满足特勤和作战任务需要的军用亚音速子弹。配备有标准Lobaev可折叠枪托和Lobaev Hummer Barrels不锈钢竞赛级枪管。"
     },
-    "5888945a2459774bf43ba385": {
-      "Name": "500毫米DVL-10枪管 .308",
-      "ShortName": "500毫米 DVL-10 .308",
-      "Description": "LOBAEV Hummer Barrels生产的DVL-10狙击步枪用.308 500mm竞赛级不锈钢枪管，装有整体式消音器。\n"
+    "5887431f2459777e1612938f": {
+      "Name": "7.62x54R LPS Gzh",
+      "ShortName": "LPS Gzh",
+      "Description": "（型号 GRAU - 57-N-323S）是一种带有含钢芯的轻型双金属LPS弹头的子弹。",
+      "casingName": "7.62x54R LPS Gzh"
     },
     "5888956924597752983e182d": {
       "Name": "660毫米DVL-10 M2枪管 .308",
@@ -16662,16 +16687,6 @@
       "ShortName": "四轨准星",
       "Description": "Heckler & Koch公司生产的416兼容四导轨护木。它带有四条皮卡汀尼导轨和一个内置折叠准星，可安装多种不同的配件。"
     },
-    "5bb20da5d4351e0035629dbf": {
-      "Name": "16.5英寸416A5兼容枪管 5.56x45",
-      "ShortName": "16.5英寸416A5 5.56x45",
-      "Description": "适用于416系列武器的5.56x45 NATO弹419毫米带折叠准星枪管。"
-    },
-    "5bb20d9cd4351e00334c9d8a": {
-      "Name": "14.5英寸416A5兼容枪管 5.56x45",
-      "ShortName": "14.5英寸416A5 5.56x45",
-      "Description": "适用于416系列武器的5.56x45 NATO弹368毫米带折叠准星枪管。"
-    },
     "5bae13ded4351e44f824bf38": {
       "Name": "7.62x54r ProMag OPFOR Archangel套件10发莫辛步枪弹匣",
       "ShortName": "AA762R 02",
@@ -16681,6 +16696,16 @@
       "Name": "HK 416A5 5.56x45 416A5上机匣",
       "ShortName": "416A5上机匣",
       "Description": "Hackler & Koch生产的416A5突击步枪的上机匣，附带有用于安装额外配件的导轨。"
+    },
+    "5bb20d9cd4351e00334c9d8a": {
+      "Name": "14.5英寸416A5兼容枪管 5.56x45",
+      "ShortName": "14.5英寸416A5 5.56x45",
+      "Description": "适用于416系列武器的5.56x45 NATO弹368毫米带折叠准星枪管。"
+    },
+    "5bb20da5d4351e0035629dbf": {
+      "Name": "16.5英寸416A5兼容枪管 5.56x45",
+      "ShortName": "16.5英寸416A5 5.56x45",
+      "Description": "适用于416系列武器的5.56x45 NATO弹419毫米带折叠准星枪管。"
     },
     "5bb20dadd4351e00367faeff": {
       "Name": "20英寸416A5兼容枪管 5.56x45",

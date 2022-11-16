@@ -1577,8 +1577,8 @@
     "BlindShootAbove": "Fuoco cieco sopra la testa",
     "BlindShootRight": "Fuoco cieco lato destro",
     "Are you sure you want to destroy {0}?": "Sei sicuro di voler distruggere {0}?",
-    "Stun": "Stordito",
     "PP Exfil": "Centrale Elettrica",
+    "Stun": "Stordito",
     "Armband": "Fascia",
     "DISCARD": "SCARTA",
     "ENicknameError/NicknameTaken": "Questo nickname è già stato preso.",
@@ -2700,8 +2700,8 @@
     "Authorization/ForceLogoutMessage": "Necessario Login. Perpiacere riavvia il client",
     "Trading/AssortmentUpdated": "rifornito",
     "ForceAutoWeaponMode": "Imposta la modalità di fuoco su Automatico",
-    "{0} removed you from friends list": "{0} ti ha rimosso dalla lista amici",
     "no available item": "Nessun oggetto disponibile",
+    "{0} removed you from friends list": "{0} ti ha rimosso dalla lista amici",
     "EBackendErrorCode/OfferSold": "L'offerta è gia stata venduta",
     "Ragfair/No selected item": "Nessun oggetto selezionato",
     "Ui/Settings/MalfunctionVisability": "Notifiche malfunzionamenti",
@@ -4132,7 +4132,9 @@
     "62973d1f5ffa6d1acd27faa1": "Ben Fatto.",
     "62973d2417898b24b605ebbf": "Ci sarebbero altri incarichi disponibili, al costo della pazienza che mi rimane.",
     "62973d4aa283f6620225410b": "Ben Fatto.",
-    "62973d532afdd248653e322f": "Ci sarebbero altri incarichi disponibili, al costo della pazienza che mi rimane."
+    "62973d532afdd248653e322f": "Ci sarebbero altri incarichi disponibili, al costo della pazienza che mi rimane.",
+    "636a33ae0860a46670082e68": "Come on in, friend! I've got a request for you. One of my acquaintances put himself into a really complicated situation - Sanitar is looking for him with his death squad. I wouldn't want to lose this kid, he's an excellent informant and courier, and a good person, as far as I know. As you could've already guessed, we need to deal with Sanitar to help the guy out... Who's the kid, you ask? He's one of the Scavs, nickname's Ryzhy. Alright, let's deal with this quick.",
+    "636a33ae0860a46670082e69": "Sanitar is dealt with?.. Excellent. I did the right thing by contacting you right away. If it weren't for you, Ryzhy would definitely be finished."
   },
   "quest": {
     "596b36c586f77450d6045ad2": {
@@ -8652,6 +8654,29 @@
       "successMessageText": "626bddcb05f287031503c7f8",
       "failMessageText": "626bddcb05f287031503c7f9",
       "startedMessageText": "626bddcb05f287031503c7fa",
+      "location": "any"
+    },
+    "636a2f5759cb834f8a5825d6": {
+      "name": "Letters",
+      "note": "",
+      "description": "636a33ae0860a46670082e68",
+      "failMessageText": "636a33ae0860a46670082e6a",
+      "successMessageText": "636a33ae0860a46670082e69",
+      "startedMessageText": "636a33ae0860a46670082e6b",
+      "conditions": {
+        "636a2fbfaa5efe6e055057d7": "Eliminate Sanitar while using assault rifles",
+        "636a305ac7ed455bc71e3995": "Eliminate Sanitar while using assault carbines",
+        "636a30d002e62c4d853d3f45": "Eliminate Sanitar while using machine guns",
+        "636a31590860a46670082e66": "Eliminate Sanitar while using SMGs",
+        "636b82a5c7ed455bc71e3998": "Eliminate Sanitar while using shotguns",
+        "636b82e4550cde781e0ac377": "Eliminate Sanitar while using marksman rifles",
+        "636b8864c7ed455bc71e399a": "Eliminate Sanitar while using bolt-action rifles",
+        "636b88ff550cde781e0ac379": "Eliminate Sanitar while using grenade launchers",
+        "636b89dfc0e68626dd2b2ba7": "Eliminate Sanitar while using pistols or revolvers",
+        "636cc7d546480934981ce1e5": "Eliminate Sanitar while using melee weapons",
+        "636cc91b314c901c6632f716": "Eliminate Sanitar while using throwable weapons",
+        "636b8a19c7ed455bc71e399c": "Eliminate Sanitar while using revolvers"
+      },
       "location": "any"
     }
   },

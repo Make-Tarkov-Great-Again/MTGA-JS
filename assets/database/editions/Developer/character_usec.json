@@ -7,7 +7,7 @@
     "LowerNickname": "",
     "Side": "",
     "Voice": "",
-    "Level": 80,
+    "Level": 65,
     "Experience": 17206065,
     "RegistrationDate": 1641932568,
     "GameVersion": "developer",
@@ -524,7 +524,9 @@
     "Points": 0
   },
   "Stats": {
-    "SessionCounters": null,
+    "SessionCounters": {
+      "Items": []
+    },
     "OverallCounters": {
       "Items": []
     },
@@ -999,41 +1001,49 @@
   "TradersInfo": {
     "5c0647fdd443bc2504c2d371": {
       "unlocked": true,
+      "disabled": false,
       "salesSum": 100000000,
       "standing": 99
     },
     "5935c25fb3acc3127c3d8cd9": {
       "unlocked": true,
+      "disabled": false,
       "salesSum": 100000000,
       "standing": 99
     },
     "58330581ace78e27b8b10cee": {
       "unlocked": true,
+      "disabled": false,
       "salesSum": 100000000,
       "standing": 99
     },
     "5a7c2eca46aef81a7ca2145d": {
       "unlocked": true,
+      "disabled": false,
       "salesSum": 100000000,
       "standing": 99
     },
     "579dc571d53a0658a154fbec": {
       "unlocked": true,
+      "disabled": false,
       "salesSum": 100000000,
       "standing": 99
     },
     "5ac3b934156ae10c4430e83c": {
       "unlocked": true,
+      "disabled": false,
       "salesSum": 100000000,
       "standing": 99
     },
     "54cb50c76803fa8b248b4571": {
       "unlocked": true,
+      "disabled": false,
       "salesSum": 100000000,
       "standing": 99
     },
     "54cb57776803fa99248b456e": {
       "unlocked": true,
+      "disabled": false,
       "salesSum": 100000000,
       "standing": 99
     }
