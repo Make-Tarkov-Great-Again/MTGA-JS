@@ -493,8 +493,8 @@
     "No free room for that item": "Pro tento předmět není místo",
     "Can't find any non-empty magazine": "Nenapáskované zásobníky",
     "Can't find appropriate slot": "Nelze najít kompatibilní slot",
-    "SurvivalRate": "Míra přežití",
     "Can't find any appropriate magazine": "Nekompatibilní zásobníky",
+    "SurvivalRate": "Míra přežití",
     "Perish": "Zahynul",
     "MeanLifetime": "Průměrná délka života",
     "Sessions": "Výsadky",
@@ -1577,8 +1577,8 @@
     "BlindShootAbove": "Střelba naslepo nad hlavou",
     "BlindShootRight": "Střelba naslepo zprava",
     "Are you sure you want to destroy {0}?": "Jste si jistý, že chcete zničit {0}?",
-    "Stun": "Omráčení",
     "PP Exfil": "Auto u elektrárny",
+    "Stun": "Omráčení",
     "Armband": "Páska",
     "DISCARD": "ZAHODIT",
     "ENicknameError/NicknameTaken": "Tato přezdívka je již používána.",
@@ -2700,8 +2700,8 @@
     "Authorization/ForceLogoutMessage": "Je nutné opětovné přihlášení. Prosím restartujte klienta",
     "Trading/AssortmentUpdated": "doplněno",
     "ForceAutoWeaponMode": "Přepnutí na automatickou střelbu",
-    "{0} removed you from friends list": "{0} si vás odstranil ze seznamu přátel",
     "no available item": "Žádný dostupný předmět",
+    "{0} removed you from friends list": "{0} si vás odstranil ze seznamu přátel",
     "EBackendErrorCode/OfferSold": "Předmět je již prodán",
     "Ragfair/No selected item": "Předměty nejsou vybrány",
     "Ui/Settings/MalfunctionVisability": "Notifikace o závadách",
@@ -4132,7 +4132,9 @@
     "62973d1f5ffa6d1acd27faa1": "Skvěle provedeno.",
     "62973d2417898b24b605ebbf": "Jsou zde i jiné úkoly, ale to tě bude stát mou trpělivost.",
     "62973d4aa283f6620225410b": "Skvěle provedeno.",
-    "62973d532afdd248653e322f": "Jsou zde i jiné úkoly, ale to tě bude stát mou trpělivost."
+    "62973d532afdd248653e322f": "Jsou zde i jiné úkoly, ale to tě bude stát mou trpělivost.",
+    "636a33ae0860a46670082e68": "Come on in, friend! I've got a request for you. One of my acquaintances put himself into a really complicated situation - Sanitar is looking for him with his death squad. I wouldn't want to lose this kid, he's an excellent informant and courier, and a good person, as far as I know. As you could've already guessed, we need to deal with Sanitar to help the guy out... Who's the kid, you ask? He's one of the Scavs, nickname's Ryzhy. Alright, let's deal with this quick.",
+    "636a33ae0860a46670082e69": "Sanitar is dealt with?.. Excellent. I did the right thing by contacting you right away. If it weren't for you, Ryzhy would definitely be finished."
   },
   "quest": {
     "596b36c586f77450d6045ad2": {
@@ -8653,6 +8655,29 @@
       "failMessageText": "626bddcb05f287031503c7f9",
       "startedMessageText": "626bddcb05f287031503c7fa",
       "location": "any"
+    },
+    "636a2f5759cb834f8a5825d6": {
+      "name": "Letters",
+      "note": "",
+      "description": "636a33ae0860a46670082e68",
+      "failMessageText": "636a33ae0860a46670082e6a",
+      "successMessageText": "636a33ae0860a46670082e69",
+      "startedMessageText": "636a33ae0860a46670082e6b",
+      "conditions": {
+        "636a2fbfaa5efe6e055057d7": "Eliminate Sanitar while using assault rifles",
+        "636a305ac7ed455bc71e3995": "Eliminate Sanitar while using assault carbines",
+        "636a30d002e62c4d853d3f45": "Eliminate Sanitar while using machine guns",
+        "636a31590860a46670082e66": "Eliminate Sanitar while using SMGs",
+        "636b82a5c7ed455bc71e3998": "Eliminate Sanitar while using shotguns",
+        "636b82e4550cde781e0ac377": "Eliminate Sanitar while using marksman rifles",
+        "636b8864c7ed455bc71e399a": "Eliminate Sanitar while using bolt-action rifles",
+        "636b88ff550cde781e0ac379": "Eliminate Sanitar while using grenade launchers",
+        "636b89dfc0e68626dd2b2ba7": "Eliminate Sanitar while using pistols or revolvers",
+        "636cc7d546480934981ce1e5": "Eliminate Sanitar while using melee weapons",
+        "636cc91b314c901c6632f716": "Eliminate Sanitar while using throwable weapons",
+        "636b8a19c7ed455bc71e399c": "Eliminate Sanitar while using revolvers"
+      },
+      "location": "any"
     }
   },
   "preset": {
@@ -12572,21 +12597,21 @@
       "Description": "Náboj 9x19mm Parabellum PSO gzh se 7,5 gramovou střelou v bimetalové nábojnici; určený pro sportovní střelbu a lov. Navzdory nízké úsťové rychlosti střely má díky své výjimečné expanzní schopnosti po zásahu cíle značný zastavovací účinek.",
       "casingName": "9x19mm PSO gzh"
     },
-    "5887431f2459777e1612938f": {
-      "Name": "7.62x54mm R LPS gzh",
-      "ShortName": "LPS",
-      "Description": "Náboj 7.62x54mm R LPS gzh (index GRAU - 57-N-323S) se střelou s ocelovým jádrem o hmotnosti 9,6 gramu s olověnou plášťovou střelou a bimetalovou nábojnicí v bimetalové nábojnici. Náboj LPS (Lyógkaya Púlya so Stal'ným serdéchnikom - \"Lehká střela s ocelovým jádrem\") byl zaveden do výzbroje v roce 1953 pro sovětské zbraně ráže 7.62x54mmR a v průběhu let prošel četnými změnami materiálů použitých pro jeho konstrukci. Díky svému ocelovému jádru je schopna kromě značného zastavovacího účinku prorazit základní a střední balistickou ochranu těla, má však vysokou pravděpodobnost odrazu od různých povrchů.",
-      "casingName": "7.62x54mm R LPS gzh"
+    "5888945a2459774bf43ba385": {
+      "Name": "500mm hlaveň pro DVL-10 7.62x51",
+      "ShortName": "DVL10 500mm",
+      "Description": "Hlaveň dlouhá 500m z nerezové oceli ráže 7.62x51 s integrovaným tlumičem, vyrobená společností LOBAEV Hummer Barrels pro odstřelovací pušku DVL-10."
     },
     "588892092459774ac91d4b11": {
       "Name": "Odstřelovací puška Lobaev Arms DVL-10 7.62x51",
       "ShortName": "DVL-10",
       "Description": "DVL-10 je lehká, kompaktní a tlumená puška v patentovaných a současných vojenských podzvukových rážích. Byla vyvinuta pro speciální služby a bojové mise, kde je zapotřebí výjimečná přesnost a dostřel. Je vybavena standardní sklopnou pažbou Lobaev Arms a hlavní Lobaev Hummer Barrels z nerezové oceli."
     },
-    "5888945a2459774bf43ba385": {
-      "Name": "500mm hlaveň pro DVL-10 7.62x51",
-      "ShortName": "DVL10 500mm",
-      "Description": "Hlaveň dlouhá 500m z nerezové oceli ráže 7.62x51 s integrovaným tlumičem, vyrobená společností LOBAEV Hummer Barrels pro odstřelovací pušku DVL-10."
+    "5887431f2459777e1612938f": {
+      "Name": "7.62x54mm R LPS gzh",
+      "ShortName": "LPS",
+      "Description": "Náboj 7.62x54mm R LPS gzh (index GRAU - 57-N-323S) se střelou s ocelovým jádrem o hmotnosti 9,6 gramu s olověnou plášťovou střelou a bimetalovou nábojnicí v bimetalové nábojnici. Náboj LPS (Lyógkaya Púlya so Stal'ným serdéchnikom - \"Lehká střela s ocelovým jádrem\") byl zaveden do výzbroje v roce 1953 pro sovětské zbraně ráže 7.62x54mmR a v průběhu let prošel četnými změnami materiálů použitých pro jeho konstrukci. Díky svému ocelovému jádru je schopna kromě značného zastavovacího účinku prorazit základní a střední balistickou ochranu těla, má však vysokou pravděpodobnost odrazu od různých povrchů.",
+      "casingName": "7.62x54mm R LPS gzh"
     },
     "5888956924597752983e182d": {
       "Name": "660mm hlaveň pro DVL-10 M2 7.62x51",
@@ -16662,16 +16687,6 @@
       "ShortName": "416A5 4-liš.",
       "Description": "4-lištové předpažbí pro 416 a kompatibilní zbraně. Dodává se s vestavěnou sklopnou muškou a čtyřmi picatinny lištami pro připevnění širokého množství různého příslušenství. Vyrábí společnost Heckler & Koch."
     },
-    "5bb20da5d4351e0035629dbf": {
-      "Name": "16.5\" hlaveň s výklopnou muškou pro HK 416A5 5.56x45",
-      "ShortName": "416A5 16.5\"",
-      "Description": "Hlaveň pro zbraně na bázi 416 5.56x45 NATO, dlouhá 16.5 palců (419mm) se sklopnou muškou."
-    },
-    "5bb20d9cd4351e00334c9d8a": {
-      "Name": "14.5\" hlaveň pro HK 416A5 5.56x45",
-      "ShortName": "416A5 14.5\"",
-      "Description": "Hlaveň dlouhá 14.5 palcovů (368mm) pro zbraně na bázi HK416 5.56x45 NATO, vybavená sklopnout muškou."
-    },
     "5bae13ded4351e44f824bf38": {
       "Name": "10-ranný zásobník ProMag Archangel OPFOR pro Mosin 7.62x54R",
       "ShortName": "AA762R 02",
@@ -16681,6 +16696,16 @@
       "Name": "Pozdro závěru pro HK 416A5 5.56x45",
       "ShortName": "416A5",
       "Description": "Pouzdro závěru pro útočnou pušku 416A5, vyráběné společností Heckler & Koch. Je vybaveno montáží pro připevnění přídavných zařízení."
+    },
+    "5bb20d9cd4351e00334c9d8a": {
+      "Name": "14.5\" hlaveň pro HK 416A5 5.56x45",
+      "ShortName": "416A5 14.5\"",
+      "Description": "Hlaveň dlouhá 14.5 palcovů (368mm) pro zbraně na bázi HK416 5.56x45 NATO, vybavená sklopnout muškou."
+    },
+    "5bb20da5d4351e0035629dbf": {
+      "Name": "16.5\" hlaveň s výklopnou muškou pro HK 416A5 5.56x45",
+      "ShortName": "416A5 16.5\"",
+      "Description": "Hlaveň pro zbraně na bázi 416 5.56x45 NATO, dlouhá 16.5 palců (419mm) se sklopnou muškou."
     },
     "5bb20dadd4351e00367faeff": {
       "Name": "20\" hlaveň pro HK 416A5 5.56x45",
