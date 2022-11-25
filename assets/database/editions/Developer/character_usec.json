@@ -9,7 +9,7 @@
     "Voice": "",
     "Level": 65,
     "Experience": 17206065,
-    "RegistrationDate": 1641932568,
+    "RegistrationDate": 0,
     "GameVersion": "developer",
     "AccountType": 1,
     "MemberCategory": 1,
@@ -99,7 +99,7 @@
         }
       }
     },
-    "UpdateTime": 1641932568
+    "UpdateTime": 0
   },
   "Inventory": {
     "items": [
@@ -515,12 +515,7 @@
         "LastAccess": 0
       }
     ],
-    "Mastering": [
-      {
-        "Id": "VSS",
-        "Progress": 0
-      }
-    ],
+    "Mastering": [],
     "Points": 0
   },
   "Stats": {
@@ -534,15 +529,29 @@
     "ExperienceBonusMult": 0,
     "TotalSessionExperience": 0,
     "LastSessionDate": 0,
-    "Aggressor": null,
+    "Aggressor": {},
     "DroppedItems": [],
     "FoundInRaidItems": [],
     "Victims": [],
     "CarriedQuestItems": [],
     "DamageHistory": {
-      "LethalDamagePart": "Head",
+      "LethalDamagePart": "Common",
       "LethalDamage": null,
-      "BodyParts": []
+      "BodyParts": {
+        "Head": [],
+        "Chest": [],
+        "Stomach": [],
+        "LeftArm": [],
+        "RightArm": [],
+        "LeftLeg": [],
+        "RightLeg": []
+      }
+    },
+    "DeathCause": {
+      "DamageType": 0,
+      "Side": 0,
+      "Role": 0,
+      "WeaponId": null
     },
     "LastPlayerState": null,
     "TotalInGameTime": 0,
@@ -1053,5 +1062,6 @@
     "isRatingGrowing": true,
     "offers": []
   },
-  "WishList": []
+  "WishList": [],
+  "SurvivorClass": "Unknown"
 }
