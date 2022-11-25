@@ -162,6 +162,7 @@ app.addContentTypeParser('*', (req, payload, done) => {
     });
 });
 
+DatabaseLoader.setDatabase();
 app.register(require('./lib/plugins/register.js')); //register
 
 const image = fs.readFileSync('./assets/templates/webinterface/resources/logo/rs_banner_transparent.png');
@@ -176,7 +177,6 @@ app.listen(
         host: database.core.serverConfig.ip
     }
 )
-DatabaseLoader.setDatabase();
 
 /* .then(() => {
     setTimeout(() => app.log.info("Web-based Launcher will open in 3 seconds..."), 750);
