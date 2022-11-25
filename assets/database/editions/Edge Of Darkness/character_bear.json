@@ -9,7 +9,7 @@
 		"Voice": "",
 		"Level": 1,
 		"Experience": 0,
-		"RegistrationDate": 1656528315,
+		"RegistrationDate": 0,
 		"GameVersion": "edge_of_darkness",
 		"AccountType": 0,
 		"MemberCategory": 2,
@@ -99,7 +99,7 @@
 				}
 			}
 		},
-		"UpdateTime": 1656528963
+		"UpdateTime": 0
 	},
 	"Inventory": {
 		"items": [
@@ -4028,15 +4028,29 @@
 		"ExperienceBonusMult": 0,
 		"TotalSessionExperience": 0,
 		"LastSessionDate": 0,
-		"Aggressor": null,
+		"Aggressor": {},
 		"DroppedItems": [],
 		"FoundInRaidItems": [],
 		"Victims": [],
 		"CarriedQuestItems": [],
 		"DamageHistory": {
-			"LethalDamagePart": "Head",
+			"LethalDamagePart": "Common",
 			"LethalDamage": null,
-			"BodyParts": []
+			"BodyParts": {
+				"Head": [],
+				"Chest": [],
+				"Stomach": [],
+				"LeftArm": [],
+				"RightArm": [],
+				"LeftLeg": [],
+				"RightLeg": []
+			}
+		},
+		"DeathCause": {
+			"DamageType": 0,
+			"Side": 0,
+			"Role": 0,
+			"WeaponId": null
 		},
 		"LastPlayerState": null,
 		"TotalInGameTime": 0,
@@ -4422,5 +4436,6 @@
 		"isRatingGrowing": true,
 		"offers": []
 	},
-	"WishList": []
+	"WishList": [],
+	"SurvivorClass": "Unknown"
 }
