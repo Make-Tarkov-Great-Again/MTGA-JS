@@ -7,9 +7,9 @@
     "LowerNickname": "",
     "Side": "",
     "Voice": "",
-    "Level": 65,
+    "Level": 69,
     "Experience": 17206065,
-    "RegistrationDate": 1641932568,
+    "RegistrationDate": 0,
     "GameVersion": "developer",
     "AccountType": 1,
     "MemberCategory": 1,
@@ -37,10 +37,10 @@
     "Bans": []
   },
   "Customization": {
-		"Head": "5cc084dd14c02e000b0550a3",
-		"Body": "5cc0858d14c02e000c6bea66",
-		"Feet": "5cc085bb14c02e000e67a5c5",
-		"Hands": "5cc0876314c02e000c6bea6b"
+    "Head": "5cc084dd14c02e000b0550a3",
+    "Body": "5cc0858d14c02e000c6bea66",
+    "Feet": "5cc085bb14c02e000e67a5c5",
+    "Hands": "5cc0876314c02e000c6bea6b"
   },
   "Health": {
     "Hydration": {
@@ -99,7 +99,7 @@
         }
       }
     },
-    "UpdateTime": 1641932568
+    "UpdateTime": 0
   },
   "Inventory": {
     "items": [
@@ -110,18 +110,6 @@
       {
         "_id": "61b7367440281631fc83f072",
         "_tpl": "55d7217a4bdc2d86028b456d"
-      },
-      {
-        "_id": "5fe49a0e2694b0755a504761",
-        "_tpl": "5c0a794586f77461c458f892",
-        "parentId": "61b7367440281631fc83f072",
-        "slotId": "SecuredContainer"
-      },
-      {
-        "_id": "5fe49a0e2694b0755a50476a",
-        "_tpl": "60c7272c204bc17802313365",
-        "parentId": "61b7367440281631fc83f072",
-        "slotId": "Pockets"
       },
       {
         "_id": "61b7367440281631fc83f17c",
@@ -179,6 +167,18 @@
       {
         "_id": "61b7367440281631fc83f17d",
         "_tpl": "5963866286f7747bf429b572"
+      },
+      {
+        "_id": "5fe49a0e2694b0755a504761",
+        "_tpl": "5c0a794586f77461c458f892",
+        "parentId": "61b7367440281631fc83f072",
+        "slotId": "SecuredContainer"
+      },
+      {
+        "_id": "5fe49a0e2694b0755a50476a",
+        "_tpl": "60c7272c204bc17802313365",
+        "parentId": "61b7367440281631fc83f072",
+        "slotId": "Pockets"
       }
     ],
     "equipment": "61b7367440281631fc83f072",
@@ -515,12 +515,7 @@
         "LastAccess": 0
       }
     ],
-    "Mastering": [
-      {
-        "Id": "VSS",
-        "Progress": 0
-      }
-    ],
+    "Mastering": [],
     "Points": 0
   },
   "Stats": {
@@ -534,15 +529,29 @@
     "ExperienceBonusMult": 0,
     "TotalSessionExperience": 0,
     "LastSessionDate": 0,
-    "Aggressor": null,
+    "Aggressor": {},
     "DroppedItems": [],
     "FoundInRaidItems": [],
     "Victims": [],
     "CarriedQuestItems": [],
     "DamageHistory": {
-      "LethalDamagePart": "Head",
+      "LethalDamagePart": "Common",
       "LethalDamage": null,
-      "BodyParts": []
+      "BodyParts": {
+        "Head": [],
+        "Chest": [],
+        "Stomach": [],
+        "LeftArm": [],
+        "RightArm": [],
+        "LeftLeg": [],
+        "RightLeg": []
+      }
+    },
+    "DeathCause": {
+      "DamageType": 0,
+      "Side": 0,
+      "Role": 0,
+      "WeaponId": null
     },
     "LastPlayerState": null,
     "TotalInGameTime": 0,
@@ -1053,5 +1062,6 @@
     "isRatingGrowing": true,
     "offers": []
   },
-  "WishList": []
+  "WishList": [],
+  "SurvivorClass": "Unknown"
 }
