@@ -16,12 +16,37 @@
                 "endDay": "31",
                 "endMonth": "12"
             }
-        ]
+        ],
+        "loot": {
+            "634959225289190e5e773b3b": {
+                "max": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "prizes": [
+                    "57514643245977207f2c2d09",
+                    "544fb62a4bdc2dfb738b4568",
+                    "57513f07245977207e26a311",
+                    "57513f9324597720a7128161",
+                    "57513fcc24597720a31c09a6",
+                    "5e8f3423fd7471236e6e3b64",
+                    "60b0f93284c20f0feb453da7",
+                    "5734773724597737fd047c14",
+                    "59e3577886f774176a362503",
+                    "57505f6224597709a92585a9",
+                    "544fb6cc4bdc2d34748b456e"
+                ]
+            }
+        }
     },
     "bots": {
         "_preload": "Creates a cache on server start of generated bots, so that it is not done as the deploy timer starts; bots are also regenerated after each raid if their minThreshold is met. If all bots in cache are used, will generate normally then regenerate after raid",
         "preload": {
-            "enabled": false,
+            "enabled": true,
             "maxBossPreload": 3,
             "minBossPreload": 1,
             "maxFollowerPreload": 20,
@@ -150,6 +175,206 @@
         "raidTimerMultiplier": 1,
         "changeExfiltrationTime": true,
         "exfiltrationTime": 1
+    },
+    "quests": {
+        "repeatable": {
+            "Daily": {
+                "requiredLevel": 5,
+                "traderQuest": [
+                    {
+                        "traderId": "54cb50c76803fa8b248b4571",
+                        "questTypes": [
+                            "Completion",
+                            "Exploration",
+                            "Elimination"
+                        ]
+                    },
+                    {
+                        "traderId": "54cb57776803fa99248b456e",
+                        "questTypes": [
+                            "Completion",
+                            "Exploration",
+                            "Elimination"
+                        ]
+                    },
+                    {
+                        "traderId": "58330581ace78e27b8b10cee",
+                        "questTypes": [
+                            "Completion",
+                            "Exploration",
+                            "Elimination"
+                        ]
+                    },
+                    {
+                        "traderId": "5935c25fb3acc3127c3d8cd9",
+                        "questTypes": [
+                            "Completion",
+                            "Exploration",
+                            "Elimination"
+                        ]
+                    },
+                    {
+                        "traderId": "5a7c2eca46aef81a7ca2145d",
+                        "questTypes": [
+                            "Completion",
+                            "Exploration"
+                        ]
+                    },
+                    {
+                        "traderId": "5ac3b934156ae10c4430e83c",
+                        "questTypes": [
+                            "Completion",
+                            "Exploration",
+                            "Elimination"
+                        ]
+                    },
+                    {
+                        "traderId": "5c0647fdd443bc2504c2d371",
+                        "questTypes": [
+                            "Completion",
+                            "Exploration",
+                            "Elimination"
+                        ]
+                    }
+                ],
+                "locations": {
+                    "any": [
+                        "any"
+                    ],
+                    "factory4_day": [
+                        "factory4_day",
+                        "factory4_night"
+                    ],
+                    "bigmap": [
+                        "bigmap"
+                    ],
+                    "Woods": [
+                        "Woods"
+                    ],
+                    "Shoreline": [
+                        "Shoreline"
+                    ],
+                    "Interchange": [
+                        "Interchange"
+                    ],
+                    "Lighthouse": [
+                        "Lighthouse"
+                    ],
+                    "laboratory": [
+                        "laboratory"
+                    ],
+                    "RezervBase": [
+                        "RezervBase"
+                    ]
+                },
+                "config": {
+                    "Exploration": {
+                        "maxExtracts": 10,
+                        "specificExits": {
+                            "probability": 0.5,
+                            "passageRequirementWhitelist": [
+                                "None",
+                                "TransferItem",
+                                "WorldEvent",
+                                "Train",
+                                "Reference",
+                                "Empty"
+                            ]
+                        }
+                    },
+                    "Completion": {
+                        "minRequestedAmount": 2,
+                        "maxRequestedAmount": 10,
+                        "minRequestedBulletAmount": 20,
+                        "maxRequestedBulletAmount": 60,
+                        "useWhitelist": true,
+                        "useBlacklist": false
+                    },
+                    "Elimination": {
+                        "targets": [
+                            {
+                                "key": [
+                                    "bossBully",
+                                    "bossGluhar",
+                                    "bossKilla",
+                                    "bossSanitar",
+                                    "bossTagilla",
+                                    "bossKojaniy",
+                                    "bossKnight"
+                                ],
+                                "relativeProbability": 0.5,
+                                "data": {
+                                    "isBoss": true
+                                }
+                            },
+                            {
+                                "key": "Savage",
+                                "relativeProbability": 7,
+                                "data": {
+                                    "isBoss": false
+                                }
+                            }
+                        ],
+                        "bodyPartProb": 0.4,
+                        "bodyParts": [
+                            {
+                                "key": "Head",
+                                "relativeProbability": 1,
+                                "data": [
+                                    "Head"
+                                ]
+                            },
+                            {
+                                "key": "Stomach",
+                                "relativeProbability": 3,
+                                "data": [
+                                    "Stomach"
+                                ]
+                            },
+                            {
+                                "key": "Chest",
+                                "relativeProbability": 5,
+                                "data": [
+                                    "Chest"
+                                ]
+                            },
+                            {
+                                "key": "Arms",
+                                "relativeProbability": 0.5,
+                                "data": [
+                                    "LeftArm",
+                                    "RightArm"
+                                ]
+                            },
+                            {
+                                "key": "Legs",
+                                "relativeProbability": 1,
+                                "data": [
+                                    "LeftLeg",
+                                    "RightLeg"
+                                ]
+                            }
+                        ],
+                        "specificLocationProb": 0.25,
+                        "distLocationBlacklist": [
+                            "laboratory",
+                            "factory4_day",
+                            "factory4_night"
+                        ],
+                        "distProb": 0.25,
+                        "maxDist": 200,
+                        "minDist": 10,
+                        "maxKills": 15,
+                        "minKills": 5
+                    }
+                },
+                "rewardBaseTypeBlacklist": [
+                    "543be5e94bdc2df1348b4568",
+                    "5b3f15d486f77432d0509248"
+                ],
+                "rewardBlacklist": []
+            }
+        }
     },
     "loot": {},
     "match": {
