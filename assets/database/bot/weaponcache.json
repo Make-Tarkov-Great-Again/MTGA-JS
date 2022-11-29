@@ -16062,5 +16062,284 @@
 				]
 			}
 		}
+	},
+	"628b9c37a733087d0d7fe84b": {
+		"parts": {
+			"required": {
+				"mod_gas_block": {
+					"slotId": "mod_gas_block",
+					"filter": [
+						"628b8d83717774443b15e248"
+					]
+				},
+				"mod_pistol_grip": {
+					"slotId": "mod_pistol_grip",
+					"filter": [
+						"5f6341043ada5942720e2dc5",
+						"6087e663132d4d12c81fd96b",
+						"623c3be0484b5003161840dc",
+						"5beec8ea0db834001a6f9dbf",
+						"5649ad3f4bdc2df8348b4585",
+						"5649ade84bdc2d1b2b8b4587",
+						"59e62cc886f77440d40b52a1",
+						"5a0071d486f77404e23a12b2",
+						"57e3dba62459770f0c32322b",
+						"5cf54404d7f00c108840b2ef",
+						"5e2192a498a36665e8337386",
+						"5b30ac585acfc433000eb79c",
+						"59e6318286f77444dd62c4cc",
+						"5cf50850d7f00c056e24104c",
+						"5cf508bfd7f00c056e24104e",
+						"628a664bccaab13006640e47",
+						"628c9ab845c59e5b80768a81",
+						"5947f92f86f77427344a76b1",
+						"5947fa2486f77425b47c1a9b",
+						"5c6bf4aa2e2216001219b0ae",
+						"5649ae4a4bdc2d1b2b8b4588",
+						"5998517986f7746017232f7e"
+					]
+				},
+				"mod_stock": {
+					"slotId": "mod_stock_000",
+					"filter": [
+						"628b9a40717774443b15e9f2"
+					]
+				}
+			},
+			"optional": {
+				"mod_muzzle": {
+					"slotId": "mod_muzzle",
+					"filter": [
+						"5ac72e945acfc43f3b691116",
+						"5ac7655e5acfc40016339a19",
+						"5649aa744bdc2ded0b8b457e",
+						"5f633f791b231926f2329f13",
+						"5943eeeb86f77412d6384f6b",
+						"5cc9a96cd7f00c011c04e04a",
+						"615d8f5dd92c473c770212ef",
+						"5649ab884bdc2ded0b8b457f",
+						"57dc324a24597759501edc20",
+						"59bffc1f86f77435b128b872",
+						"593d493f86f7745e6b2ceb22",
+						"564caa3d4bdc2d17108b458e",
+						"57ffb0e42459777d047111c5"
+					]
+				},
+				"mod_charge": {
+					"slotId": "mod_charge",
+					"filter": [
+						"6130ca3fd92c473c77020dbd",
+						"5648ac824bdc2ded0b8b457d"
+					]
+				}
+			}
+		},
+		"ammos": [
+			"5c0d5e4486f77478390952fe",
+			"61962b617c6c7b169525f168",
+			"56dfef82d2720bbd668b4567",
+			"56dff026d2720bb8668b4567",
+			"56dff061d2720bb5668b4567",
+			"56dff0bed2720bb0668b4567",
+			"56dff216d2720bbd668b4568",
+			"56dff2ced2720bb4668b4567",
+			"56dff338d2720bbd668b4569",
+			"56dff3afd2720bba668b4567",
+			"56dff421d2720b5f5a8b4567",
+			"56dff4a2d2720bbd668b456a",
+			"56dff4ecd2720b5f5a8b4568"
+		],
+		"magazines": {
+			"564ca9df4bdc2d35148b4569": {
+				"id": "564ca9df4bdc2d35148b4569",
+				"count": 45,
+				"ammos": [
+					"5c0d5e4486f77478390952fe",
+					"61962b617c6c7b169525f168",
+					"56dfef82d2720bbd668b4567",
+					"56dff026d2720bb8668b4567",
+					"56dff061d2720bb5668b4567",
+					"56dff0bed2720bb0668b4567",
+					"56dff216d2720bbd668b4568",
+					"56dff2ced2720bb4668b4567",
+					"56dff338d2720bbd668b4569",
+					"56dff3afd2720bba668b4567",
+					"56dff421d2720b5f5a8b4567",
+					"56dff4a2d2720bbd668b456a",
+					"56dff4ecd2720b5f5a8b4568"
+				]
+			},
+			"564ca99c4bdc2d16268b4589": {
+				"id": "564ca99c4bdc2d16268b4589",
+				"count": 30,
+				"ammos": [
+					"5c0d5e4486f77478390952fe",
+					"61962b617c6c7b169525f168",
+					"56dfef82d2720bbd668b4567",
+					"56dff026d2720bb8668b4567",
+					"56dff061d2720bb5668b4567",
+					"56dff0bed2720bb0668b4567",
+					"56dff216d2720bbd668b4568",
+					"56dff2ced2720bb4668b4567",
+					"56dff338d2720bbd668b4569",
+					"56dff3afd2720bba668b4567",
+					"56dff421d2720b5f5a8b4567",
+					"56dff4a2d2720bbd668b456a",
+					"56dff4ecd2720b5f5a8b4568"
+				]
+			},
+			"55d480c04bdc2d1d4e8b456a": {
+				"id": "55d480c04bdc2d1d4e8b456a",
+				"count": 30,
+				"ammos": [
+					"5c0d5e4486f77478390952fe",
+					"61962b617c6c7b169525f168",
+					"56dfef82d2720bbd668b4567",
+					"56dff026d2720bb8668b4567",
+					"56dff061d2720bb5668b4567",
+					"56dff0bed2720bb0668b4567",
+					"56dff216d2720bbd668b4568",
+					"56dff2ced2720bb4668b4567",
+					"56dff338d2720bbd668b4569",
+					"56dff3afd2720bba668b4567",
+					"56dff421d2720b5f5a8b4567",
+					"56dff4a2d2720bbd668b456a",
+					"56dff4ecd2720b5f5a8b4568"
+				]
+			},
+			"5cbdaf89ae9215000e5b9c94": {
+				"id": "5cbdaf89ae9215000e5b9c94",
+				"count": 30,
+				"ammos": [
+					"5c0d5e4486f77478390952fe",
+					"61962b617c6c7b169525f168",
+					"56dfef82d2720bbd668b4567",
+					"56dff026d2720bb8668b4567",
+					"56dff061d2720bb5668b4567",
+					"56dff0bed2720bb0668b4567",
+					"56dff216d2720bbd668b4568",
+					"56dff2ced2720bb4668b4567",
+					"56dff338d2720bbd668b4569",
+					"56dff3afd2720bba668b4567",
+					"56dff421d2720b5f5a8b4567",
+					"56dff4a2d2720bbd668b456a",
+					"56dff4ecd2720b5f5a8b4568"
+				]
+			},
+			"55d481904bdc2d8c2f8b456a": {
+				"id": "55d481904bdc2d8c2f8b456a",
+				"count": 45,
+				"ammos": [
+					"5c0d5e4486f77478390952fe",
+					"61962b617c6c7b169525f168",
+					"56dfef82d2720bbd668b4567",
+					"56dff026d2720bb8668b4567",
+					"56dff061d2720bb5668b4567",
+					"56dff0bed2720bb0668b4567",
+					"56dff216d2720bbd668b4568",
+					"56dff2ced2720bb4668b4567",
+					"56dff338d2720bbd668b4569",
+					"56dff3afd2720bba668b4567",
+					"56dff421d2720b5f5a8b4567",
+					"56dff4a2d2720bbd668b456a",
+					"56dff4ecd2720b5f5a8b4568"
+				]
+			},
+			"55d482194bdc2d1d4e8b456b": {
+				"id": "55d482194bdc2d1d4e8b456b",
+				"count": 60,
+				"ammos": [
+					"5c0d5e4486f77478390952fe",
+					"61962b617c6c7b169525f168",
+					"56dfef82d2720bbd668b4567",
+					"56dff026d2720bb8668b4567",
+					"56dff061d2720bb5668b4567",
+					"56dff0bed2720bb0668b4567",
+					"56dff216d2720bbd668b4568",
+					"56dff2ced2720bb4668b4567",
+					"56dff338d2720bbd668b4569",
+					"56dff3afd2720bba668b4567",
+					"56dff421d2720b5f5a8b4567",
+					"56dff4a2d2720bbd668b456a",
+					"56dff4ecd2720b5f5a8b4568"
+				]
+			},
+			"55d4837c4bdc2d1d4e8b456c": {
+				"id": "55d4837c4bdc2d1d4e8b456c",
+				"count": 10,
+				"ammos": [
+					"5c0d5e4486f77478390952fe",
+					"61962b617c6c7b169525f168",
+					"56dfef82d2720bbd668b4567",
+					"56dff026d2720bb8668b4567",
+					"56dff061d2720bb5668b4567",
+					"56dff0bed2720bb0668b4567",
+					"56dff216d2720bbd668b4568",
+					"56dff2ced2720bb4668b4567",
+					"56dff338d2720bbd668b4569",
+					"56dff3afd2720bba668b4567",
+					"56dff421d2720b5f5a8b4567",
+					"56dff4a2d2720bbd668b456a",
+					"56dff4ecd2720b5f5a8b4568"
+				]
+			},
+			"5aaa4194e5b5b055d06310a5": {
+				"id": "5aaa4194e5b5b055d06310a5",
+				"count": 30,
+				"ammos": [
+					"5c0d5e4486f77478390952fe",
+					"61962b617c6c7b169525f168",
+					"56dfef82d2720bbd668b4567",
+					"56dff026d2720bb8668b4567",
+					"56dff061d2720bb5668b4567",
+					"56dff0bed2720bb0668b4567",
+					"56dff216d2720bbd668b4568",
+					"56dff2ced2720bb4668b4567",
+					"56dff338d2720bbd668b4569",
+					"56dff3afd2720bba668b4567",
+					"56dff421d2720b5f5a8b4567",
+					"56dff4a2d2720bbd668b456a",
+					"56dff4ecd2720b5f5a8b4568"
+				]
+			},
+			"5bed61680db834001d2c45ab": {
+				"id": "5bed61680db834001d2c45ab",
+				"count": 30,
+				"ammos": [
+					"5c0d5e4486f77478390952fe",
+					"61962b617c6c7b169525f168",
+					"56dfef82d2720bbd668b4567",
+					"56dff026d2720bb8668b4567",
+					"56dff061d2720bb5668b4567",
+					"56dff0bed2720bb0668b4567",
+					"56dff216d2720bbd668b4568",
+					"56dff2ced2720bb4668b4567",
+					"56dff338d2720bbd668b4569",
+					"56dff3afd2720bba668b4567",
+					"56dff421d2720b5f5a8b4567",
+					"56dff4a2d2720bbd668b456a",
+					"56dff4ecd2720b5f5a8b4568"
+				]
+			},
+			"5bed625c0db834001c062946": {
+				"id": "5bed625c0db834001c062946",
+				"count": 95,
+				"ammos": [
+					"5c0d5e4486f77478390952fe",
+					"61962b617c6c7b169525f168",
+					"56dfef82d2720bbd668b4567",
+					"56dff026d2720bb8668b4567",
+					"56dff061d2720bb5668b4567",
+					"56dff0bed2720bb0668b4567",
+					"56dff216d2720bbd668b4568",
+					"56dff2ced2720bb4668b4567",
+					"56dff338d2720bbd668b4569",
+					"56dff3afd2720bba668b4567",
+					"56dff421d2720b5f5a8b4567",
+					"56dff4a2d2720bbd668b456a",
+					"56dff4ecd2720b5f5a8b4568"
+				]
+			}
+		}
 	}
 }
