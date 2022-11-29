@@ -6,13 +6,16 @@ The server for MTGA
 
 ## Usage
 
-Client version: 0.12.12.32.20212+
+Client version: 0.12.12.32.20243
 
-npm
-
-`npm install `
+[More information available on the Wiki](https://github.com/Make-Tarkov-Great-Again/MTGA-Backend/wiki)
 
 ## Known issues
+
+On first start, the Repair Window causes a client error. This can be monkey-fixed by starting and canceling a raid
+
+[More information available on the Projects board](https://github.com/orgs/Make-Tarkov-Great-Again/projects/1)
+
 
 ## Who are we, and why are we doing this.
 
@@ -23,7 +26,7 @@ We are developing this emulator to offer an accessible live-like experience, up-
 
 Our Discord is undergoing construction and is only available to those we invite.
 
-For the time being, any serious inquiries should be forwarded to [Discussions](https://github.com/Make-Tarkov-Great-Again/MTGA-Backend/discussions)
+[For the time being, any serious inquiries should be forwarded to Discussions](https://github.com/Make-Tarkov-Great-Again/MTGA-Backend/discussions)
 
 ## Contribution
 
