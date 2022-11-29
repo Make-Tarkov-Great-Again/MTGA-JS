@@ -46,7 +46,7 @@
     "bots": {
         "_preload": "Creates a cache on server start of generated bots, so that it is not done as the deploy timer starts; bots are also regenerated after each raid if their minThreshold is met. If all bots in cache are used, will generate normally then regenerate after raid",
         "preload": {
-            "enabled": true,
+            "enabled": false,
             "maxBossPreload": 3,
             "minBossPreload": 1,
             "maxFollowerPreload": 20,
