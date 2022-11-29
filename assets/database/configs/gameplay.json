@@ -158,7 +158,7 @@
             "sellAllDrip": true
         },
         "flea": {
-            "enabled": false,
+            "enabled": true,
             "minUserLevel": 15,
             "removeBlacklist": true,
             "liveFleaPrices": true
