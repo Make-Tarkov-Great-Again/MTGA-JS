@@ -60,10 +60,11 @@
             "looseEnabled": true,
             "magazineEnabled": "i don't work because bsg is shit",
             "chance": 65,
-            "maxTypes": 3
+            "maxTypes": 5
         }
     },
     "development": {
+        "_development": "Debugging modifiers for development",
         "openWebLauncher": false,
         "debugBots": false,
         "devInsuranceTimers": false,
@@ -157,7 +158,7 @@
             "sellAllDrip": true
         },
         "flea": {
-            "enabled": true,
+            "enabled": false,
             "minUserLevel": 15,
             "removeBlacklist": true,
             "liveFleaPrices": true
