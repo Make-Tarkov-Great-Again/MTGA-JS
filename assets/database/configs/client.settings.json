@@ -3,41 +3,55 @@
 	"errmsg": null,
 	"data": {
 		"config": {
+			"AFKTimeoutSeconds": 604800,
+			"AdditionalRandomDelaySeconds": 13,
+			"ClientSendRateLimit": 120,
+			"CriticalRetriesCount": 1,
+			"DefaultRetriesCount": 1,
+			"FirstCycleDelaySeconds": 20,
+			"FramerateLimit": {
+				"MaxFramerateGameLimit": 144,
+				"MaxFramerateLobbyLimit": 30,
+				"MinFramerateLimit": 30
+			},
+			"GroupStatusInterval": 60,
+			"KeepAliveInterval": 140,
+			"LobbyKeepAliveInterval": 1,
+			"Mark502and504AsNonImportant": true,
 			"MemoryManagementSettings": {
+				"AggressiveGC": true,
+				"GigabytesRequiredToDisableGCDuringRaid": 15,
 				"HeapPreAllocationEnabled": false,
 				"HeapPreAllocationMB": 200,
 				"OverrideRamCleanerSettings": false,
-				"RamCleanerEnabled": false,
-				"GigabytesRequiredToDisableGCDuringRaid": 18,
-				"AggressiveGC": true
+				"RamCleanerEnabled": true
 			},
+			"NVidiaHighlights": false,
+			"NextCycleDelaySeconds": 60,
+			"PingServerResultSendInterval": -1,
+			"PingServersInterval": 5,
 			"ReleaseProfiler": {
 				"Enabled": true,
-				"RecordTriggerValue": 2000,
-				"MaxRecords": 100
+				"MaxRecords": 100,
+				"RecordTriggerValue": 2000
 			},
-			"FramerateLimit": {
-				"MinFramerateLimit": 30,
-				"MaxFramerateLobbyLimit": 30,
-				"MaxFramerateGameLimit": 240
-			},
-			"ClientSendRateLimit": 60,
-			"TurnOffLogging": false,
-			"NVidiaHighlights": false,
-			"WebDiagnosticsEnabled": true,
-			"KeepAliveInterval": 60,
-			"GroupStatusInterval": 20,
-			"PingServersInterval": 5,
-			"PingServerResultSendInterval": -1,
-			"WeaponOverlapDistanceCulling": -1,
-			"FirstCycleDelaySeconds": 20,
+			"RequestConfirmationTimeouts": [
+				0.2,
+				0.4,
+				0.8,
+				1.6,
+				3.2,
+				6.4,
+				18.8
+			],
+			"RequestsMadeThroughLobby": [
+				"/client/mail/msg/send"
+			],
 			"SecondCycleDelaySeconds": 40,
-			"NextCycleDelaySeconds": 60,
-			"AdditionalRandomDelaySeconds": 10,
-			"Mark502and504AsNonImportant": true,
-			"DefaultRetriesCount": 1,
-			"CriticalRetriesCount": 1,
-			"AFKTimeoutSeconds": 604800
+			"ShouldEstablishLobbyConnection": false,
+			"TurnOffLogging": false,
+			"WeaponOverlapDistanceCulling": 50,
+			"WebDiagnosticsEnabled": false
 		}
 	},
 	"crc": 251050423
