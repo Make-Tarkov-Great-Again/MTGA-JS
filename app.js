@@ -1,7 +1,6 @@
 const { certificate } = require("./lib/engine/CertificateGenerator");
 const zlib = require("node:zlib");
 const fs = require('fs');
-const qs = require('fast-querystring');
 const { logger, parse } = require("./lib/utilities");
 const pngStringify = require('console-png');
 
@@ -97,7 +96,6 @@ const app = require('fastify')({
             }
         }
     },
-    querystringParser: str => qs.parse(str),
     http2: true,
     https: {
         allowHTTP1: true,
@@ -121,13 +119,14 @@ module.exports = {
 app.removeContentTypeParser("application/json");
 app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (req, body, done) {
     if (req.headers["user-agent"] !== undefined &&
-        req.headers['user-agent'].includes(['UnityPlayer' || 'Unity'])) {
+        ['UnityPlayer', 'Unity'].includes(req.headers['user-agent'])) {
         try {
-            zlib.inflate(body, { chunkSize: 32768 }, function (err, data) {
-                if (!err && data) {
-                    const inflatedString = data.toString('utf8');
+            zlib.inflate(body, function (err, buffer) {
+                if (!err && buffer !== undefined) {
+                    const inflatedString = buffer.toString('utf8');
                     if (inflatedString.length > 0) {
-                        done(null, parse(inflatedString));
+                        const data = parse(inflatedString);
+                        done(null, data);
                         return;
                     }
                     done(null, false);
@@ -138,21 +137,23 @@ app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (re
                 }
             });
         } catch (error) {
-            err.statusCode = 400;
+            err.statusCode = 404;
             done(err, undefined);
             return;
         }
     } else {
         try {
-            done(null, parse(body));
+            const json = parse(body);
+            done(null, json);
         } catch (err) {
-            err.statusCode = 400;
+            err.statusCode = 404;
             done(err, undefined);
         }
     }
 });
 
 app.addContentTypeParser('*', (req, payload, done) => {
+
     const chunks = [];
     payload.on('data', chunk => {
         chunks.push(chunk);
@@ -160,6 +161,7 @@ app.addContentTypeParser('*', (req, payload, done) => {
     payload.on('end', () => {
         done(null, Buffer.concat(chunks));
     });
+
 });
 
 DatabaseLoader.setDatabase();
