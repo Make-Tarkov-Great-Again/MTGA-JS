@@ -119,7 +119,7 @@ module.exports = {
 app.removeContentTypeParser("application/json");
 app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (req, body, done) {
     if (req.headers["user-agent"] !== undefined &&
-        ['UnityPlayer', 'Unity'].includes(req.headers['user-agent'])) {
+        req.headers['user-agent'].includes(['UnityPlayer' || 'Unity'])) {
         try {
             zlib.inflate(body, function (err, buffer) {
                 if (!err && buffer !== undefined) {
@@ -154,12 +154,39 @@ app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (re
 
 app.addContentTypeParser('*', (req, payload, done) => {
 
-    const chunks = [];
-    payload.on('data', chunk => {
-        chunks.push(chunk);
-    });
-    payload.on('end', () => {
-        done(null, Buffer.concat(chunks));
+    payload.on('data', (chunks) => {
+        if (req.headers["user-agent"] !== undefined &&
+            req.headers['user-agent'].includes(['UnityPlayer' || 'Unity'])) {
+            try {
+                zlib.inflate(chunks, function (err, buffer) {
+                    if (!err && buffer !== undefined) {
+                        const inflatedString = buffer.toString('utf8');
+                        if (inflatedString.length > 0) {
+                            const data = parse(inflatedString);
+                            done(null, data);
+                            return;
+                        }
+                        done(null, false);
+                        return;
+                    } else {
+                        done(null, false);
+                        return;
+                    }
+                });
+            } catch (error) {
+                err.statusCode = 400;
+                done(err, undefined);
+                return;
+            }
+        } else {
+            try {
+                const json = parse(chunks);
+                done(null, json);
+            } catch (err) {
+                err.statusCode = 400;
+                done(err, undefined);
+            }
+        }
     });
 
 });
