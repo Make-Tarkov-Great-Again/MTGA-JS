@@ -117,56 +117,46 @@ module.exports = {
 };
 
 app.removeContentTypeParser("application/json");
-app.addContentTypeParser('application/json', { parseAs: 'buffer' }, function (req, body, done) {
-    if (req.headers["user-agent"] !== undefined &&
-        req.headers['user-agent'].includes(['UnityPlayer' || 'Unity'])) {
-        try {
-            zlib.inflate(body, function (err, buffer) {
-                if (!err && buffer !== undefined) {
-                    const inflatedString = buffer.toString('utf8');
-                    if (inflatedString.length > 0) {
-                        const data = parse(inflatedString);
-                        done(null, data);
-                        return;
-                    }
-                    done(null, false);
-                    return;
-                } else {
-                    done(null, false);
-                    return;
-                }
-            });
-        } catch (error) {
-            err.statusCode = 404;
-            done(err, undefined);
-            return;
-        }
-    } else {
-        try {
-            const json = parse(body);
-            done(null, json);
-        } catch (err) {
-            err.statusCode = 404;
-            done(err, undefined);
-        }
+app.addContentTypeParser('application/json', function (req, body, done) {
+    try {
+        zlib.inflate(body, function (err, buffer) {
+            if (err && buffer === undefined) {
+                logger.error(`Buffer is undefined`);
+                done(err, false);
+                return;
+            }
+            const inflatedString = buffer.toString('utf8');
+            if (inflatedString.length > 0) {
+                const data = parse(inflatedString);
+                done(null, data);
+                return;
+            } else {
+                done(null, false);
+                return;
+            }
+        });
+    } catch (error) {
+        err.statusCode = 404;
+        done(err, undefined);
+        return;
     }
 });
 
 app.addContentTypeParser('*', (req, payload, done) => {
-
     payload.on('data', (chunks) => {
         if (req.headers["user-agent"] !== undefined &&
             req.headers['user-agent'].includes(['UnityPlayer' || 'Unity'])) {
             try {
                 zlib.inflate(chunks, function (err, buffer) {
-                    if (!err && buffer !== undefined) {
-                        const inflatedString = buffer.toString('utf8');
-                        if (inflatedString.length > 0) {
-                            const data = parse(inflatedString);
-                            done(null, data);
-                            return;
-                        }
-                        done(null, false);
+                    if (err && buffer === undefined) {
+                        logger.error(`Buffer is undefined`);
+                        done(err, false);
+                        return;
+                    }
+                    const inflatedString = buffer.toString('utf8');
+                    if (inflatedString.length > 0) {
+                        const data = parse(inflatedString);
+                        done(null, data);
                         return;
                     } else {
                         done(null, false);
@@ -174,7 +164,7 @@ app.addContentTypeParser('*', (req, payload, done) => {
                     }
                 });
             } catch (error) {
-                err.statusCode = 400;
+                err.statusCode = 404;
                 done(err, undefined);
                 return;
             }
@@ -183,12 +173,11 @@ app.addContentTypeParser('*', (req, payload, done) => {
                 const json = parse(chunks);
                 done(null, json);
             } catch (err) {
-                err.statusCode = 400;
+                err.statusCode = 404;
                 done(err, undefined);
             }
         }
     });
-
 });
 
 DatabaseLoader.setDatabase();
