@@ -121,6 +121,7 @@ app.addContentTypeParser('application/json', function (req, body, done) {
     try {
         zlib.inflate(body, function (err, buffer) {
             if (err && buffer === undefined) {
+                err.statusCode = 404;
                 logger.error(`Buffer is undefined`);
                 done(err, false);
                 return;
@@ -149,6 +150,7 @@ app.addContentTypeParser('*', (req, payload, done) => {
             try {
                 zlib.inflate(chunks, function (err, buffer) {
                     if (err && buffer === undefined) {
+                        err.statusCode = 404;
                         logger.error(`Buffer is undefined`);
                         done(err, false);
                         return;
