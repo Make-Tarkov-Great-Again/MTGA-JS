@@ -4,7 +4,7 @@
 
 ## Usage
 
-Client version: 0.12.12.32.20243
+Client version: Latest
 
 [More information available on the Wiki](https://github.com/Make-Tarkov-Great-Again/MTGA-Backend/wiki)
 
