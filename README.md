@@ -1,7 +1,5 @@
 # MTGA-Backend
 
-The server for MTGA
-
 > It's going to be great, so great, in fact it will dominate nikita's paste
 
 ## Usage
@@ -15,7 +13,6 @@ Client version: Latest
 On first start, the Repair Window causes a client error. This can be monkey-fixed by starting and canceling a raid
 
 [More information available on the Projects board](https://github.com/orgs/Make-Tarkov-Great-Again/projects/1)
-
 
 ## Who are we, and why are we doing this.
 
@@ -31,12 +28,9 @@ Our Discord is undergoing construction and is only available to those we invite.
 ## Contribution
 
 - Is there a part of the server you would like to tackle?
-  
 - Some code you would like to refactor?
-  
 - Got an idea you would like to share/implement?
 
-  
 This server runs off the latest LTS of NodeJS, v18.7.0.
 
 Feel free to create a fork, open a pull request and request a review: **We are open to any contribution!**
