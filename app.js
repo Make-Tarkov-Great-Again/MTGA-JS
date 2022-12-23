@@ -116,7 +116,7 @@ module.exports = {
     tasker
 };
 
-app.removeContentTypeParser("application/json");
+/* app.removeContentTypeParser("application/json");
 app.addContentTypeParser('application/json', function (req, body, done) {
     try {
         zlib.inflate(body, function (err, buffer) {
@@ -141,7 +141,7 @@ app.addContentTypeParser('application/json', function (req, body, done) {
         done(err, undefined);
         return;
     }
-});
+}); */
 
 app.addContentTypeParser('*', (req, payload, done) => {
     payload.on('data', (chunks) => {
