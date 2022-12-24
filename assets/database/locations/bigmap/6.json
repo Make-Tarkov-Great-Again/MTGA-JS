@@ -2,6 +2,7 @@
 	"BackendUrl": "https://dev-05.escapefromtarkov.com",
 	"Location": {
 		"Enabled": true,
+		"EnabledCoop": false,
 		"Locked": false,
 		"Insurance": true,
 		"SafeLocation": false,
@@ -13,7 +14,10 @@
 		},
 		"Area": 0,
 		"RequiredPlayerLevel": 0,
-		"MinPlayers": 8,
+		"PmcMaxPlayersInGroup": 5,
+		"ScavMaxPlayersInGroup": 4,
+		"MinPlayers": 9,
+		"MaxCoopGroup": 12,
 		"MaxPlayers": 12,
 		"exit_count": 2,
 		"exit_access_time": 60,
@@ -342,7 +346,8 @@
 		"limits": [],
 		"AveragePlayTime": 25,
 		"AveragePlayerLevel": 20,
-		"escape_time_limit": 45,
+		"EscapeTimeLimit": 40,
+		"EscapeTimeLimitCoop": 25,
 		"Rules": "AvoidAllPmc",
 		"IsSecret": false,
 		"doors": [],
@@ -351,19 +356,19 @@
 		"MaxDistToFreePoint": 300,
 		"MinDistToFreePoint": 80,
 		"MaxBotPerZone": 4,
-		"OpenZones": "ZoneBrige,ZoneCrossRoad,ZoneFactorySide,ZoneOldAZS,ZoneBlock,Post,ZoneTankSquare,ZoneCustoms",
+		"OpenZones": "ZoneBrige,ZoneCrossRoad,ZoneDormitory,ZoneGasStation,ZoneFactoryCenter,ZoneFactorySide,ZoneOldAZS,ZoneSnipeBrige,ZoneSnipeTower,ZoneSnipeFactory,ZoneBlockPost,ZoneBlockPostSniper,ZoneBlockPostSniper3,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCustoms",
 		"OcculsionCullingEnabled": false,
 		"GlobalLootChanceModifier": 0.8,
 		"OldSpawn": false,
 		"NewSpawn": true,
 		"BotMax": 13,
 		"BotStart": 20,
-		"BotStop": 2400,
-		"BotMaxTimePlayer": 2000,
-		"BotSpawnTimeOnMin": 160,
-		"BotSpawnTimeOnMax": 220,
-		"BotSpawnTimeOffMin": 30,
-		"BotSpawnTimeOffMax": 40,
+		"BotStop": 1500,
+		"BotMaxTimePlayer": 1200,
+		"BotSpawnTimeOnMin": 260,
+		"BotSpawnTimeOnMax": 320,
+		"BotSpawnTimeOffMin": 20,
+		"BotSpawnTimeOffMax": 30,
 		"BotMaxPlayer": 7,
 		"BotEasy": 10,
 		"BotNormal": 50,
@@ -396,7 +401,8 @@
 			"DistToActivate": 265,
 			"DistToSleep": 300,
 			"MagnetPower": 44,
-			"DistToPersueAxemanCoef": 0.7
+			"DistToPersueAxemanCoef": 1,
+			"KhorovodChance": 0
 		},
 		"exits": [
 			{
@@ -508,7 +514,7 @@
 				"PassageRequirement": "TransferItem",
 				"ExfiltrationType": "SharedTimer",
 				"Id": "5449016a4bdc2d6f028b456f",
-				"Count": 7000,
+				"Count": 5000,
 				"RequirementTip": "EXFIL_Item"
 			},
 			{
@@ -529,26 +535,65 @@
 		"DisabledForScav": false,
 		"BossLocationSpawn": [
 			{
+				"BossName": "bossKnight",
+				"BossChance": 12,
+				"BossZone": "ZoneScavBase",
+				"BossPlayer": false,
+				"BossDifficult": "normal",
+				"BossEscortType": "exUsec",
+				"BossEscortDifficult": "normal",
+				"BossEscortAmount": "2",
+				"Time": -1,
+				"Supports": [
+					{
+						"BossEscortType": "followerBigPipe",
+						"BossEscortDifficult": [
+							"normal"
+						],
+						"BossEscortAmount": "1"
+					},
+					{
+						"BossEscortType": "followerBirdEye",
+						"BossEscortDifficult": [
+							"normal"
+						],
+						"BossEscortAmount": "1"
+					},
+					{
+						"BossEscortType": "followerGluharScout",
+						"BossEscortDifficult": [
+							"normal"
+						],
+						"BossEscortAmount": "0"
+					}
+				],
+				"RandomTimeSpawn": true
+			},
+			{
 				"BossName": "sectantPriest",
-				"BossChance": 20,
+				"BossChance": 5,
 				"BossZone": "ZoneScavBase",
 				"BossPlayer": false,
 				"BossDifficult": "normal",
 				"BossEscortType": "sectantWarrior",
 				"BossEscortDifficult": "normal",
-				"BossEscortAmount": "3",
-				"Time": -1
+				"BossEscortAmount": "4",
+				"Time": -1,
+				"Supports": null,
+				"RandomTimeSpawn": false
 			},
 			{
 				"BossName": "bossBully",
-				"BossChance": 36,
-				"BossZone": "ZoneDormitory,ZoneGasStation,ZoneScavBase",
+				"BossChance": 15,
+				"BossZone": "ZoneDormitory,ZoneGasStation",
 				"BossPlayer": false,
 				"BossDifficult": "normal",
 				"BossEscortType": "followerBully",
 				"BossEscortDifficult": "normal",
 				"BossEscortAmount": "4",
-				"Time": -1
+				"Time": -1,
+				"Supports": null,
+				"RandomTimeSpawn": false
 			}
 		],
 		"SpawnPointParams": [
@@ -1083,6 +1128,36 @@
 				"BotZoneName": ""
 			},
 			{
+				"Id": "10a75815-d786-43e2-9639-6b94071433f8",
+				"Position": {
+					"x": 101.76799,
+					"y": 1.18800008,
+					"z": 11.8939972
+				},
+				"Rotation": 167.010742,
+				"Sides": [
+					"Usec",
+					"Bear"
+				],
+				"Categories": [
+					"Coop"
+				],
+				"Infiltration": "Customs",
+				"DelayToCanSpawnSec": 4,
+				"ColliderParams": {
+					"_parent": "SpawnSphereParams",
+					"_props": {
+						"Center": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"Radius": 77
+					}
+				},
+				"BotZoneName": ""
+			},
+			{
 				"Id": "117bc357-c61a-45ea-9018-6dca47b7e665",
 				"Position": {
 					"x": 487.64,
@@ -1258,6 +1333,36 @@
 					}
 				},
 				"BotZoneName": "ZoneBrige"
+			},
+			{
+				"Id": "181f7000-df70-4bc7-bff3-a709291c907f",
+				"Position": {
+					"x": 100.158005,
+					"y": 1.18800008,
+					"z": 11.9940033
+				},
+				"Rotation": 167.010742,
+				"Sides": [
+					"Usec",
+					"Bear"
+				],
+				"Categories": [
+					"Coop"
+				],
+				"Infiltration": "Customs",
+				"DelayToCanSpawnSec": 4,
+				"ColliderParams": {
+					"_parent": "SpawnSphereParams",
+					"_props": {
+						"Center": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"Radius": 77
+					}
+				},
+				"BotZoneName": ""
 			},
 			{
 				"Id": "18aa63ac-895c-4178-ac75-5e916a53d0b3",
@@ -1911,6 +2016,36 @@
 				"BotZoneName": "ZoneFactorySide"
 			},
 			{
+				"Id": "287bf35f-5cdc-44dc-97b6-c035d5054bfa",
+				"Position": {
+					"x": 100.664017,
+					"y": 1.18800008,
+					"z": 16.3029938
+				},
+				"Rotation": 167.010742,
+				"Sides": [
+					"Usec",
+					"Bear"
+				],
+				"Categories": [
+					"Coop"
+				],
+				"Infiltration": "Customs",
+				"DelayToCanSpawnSec": 4,
+				"ColliderParams": {
+					"_parent": "SpawnSphereParams",
+					"_props": {
+						"Center": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"Radius": 77
+					}
+				},
+				"BotZoneName": ""
+			},
+			{
 				"Id": "29fd0e7e-8056-473f-a34e-33868312a249",
 				"Position": {
 					"x": 663.252441,
@@ -2467,6 +2602,36 @@
 							"z": 0
 						},
 						"Radius": 50
+					}
+				},
+				"BotZoneName": ""
+			},
+			{
+				"Id": "3b54601a-2e4b-4991-988e-962f1ee45668",
+				"Position": {
+					"x": 96.1380157,
+					"y": 1.18800008,
+					"z": 13.3840027
+				},
+				"Rotation": 167.010742,
+				"Sides": [
+					"Usec",
+					"Bear"
+				],
+				"Categories": [
+					"Coop"
+				],
+				"Infiltration": "Customs",
+				"DelayToCanSpawnSec": 4,
+				"ColliderParams": {
+					"_parent": "SpawnSphereParams",
+					"_props": {
+						"Center": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"Radius": 77
 					}
 				},
 				"BotZoneName": ""
@@ -3067,6 +3232,66 @@
 				"BotZoneName": ""
 			},
 			{
+				"Id": "4f865c11-d533-4fce-9833-fe41a6cb52af",
+				"Position": {
+					"x": 101.408005,
+					"y": 1.21600008,
+					"z": 17.673996
+				},
+				"Rotation": 85.46295,
+				"Sides": [
+					"Usec",
+					"Bear"
+				],
+				"Categories": [
+					"Coop"
+				],
+				"Infiltration": "Customs",
+				"DelayToCanSpawnSec": 4,
+				"ColliderParams": {
+					"_parent": "SpawnSphereParams",
+					"_props": {
+						"Center": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"Radius": 77
+					}
+				},
+				"BotZoneName": ""
+			},
+			{
+				"Id": "4fb0d413-cf19-4580-8217-b2d6ca431e91",
+				"Position": {
+					"x": 101.599991,
+					"y": 1.18800008,
+					"z": 19.0269928
+				},
+				"Rotation": 167.010742,
+				"Sides": [
+					"Usec",
+					"Bear"
+				],
+				"Categories": [
+					"Coop"
+				],
+				"Infiltration": "Customs",
+				"DelayToCanSpawnSec": 4,
+				"ColliderParams": {
+					"_parent": "SpawnSphereParams",
+					"_props": {
+						"Center": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"Radius": 77
+					}
+				},
+				"BotZoneName": ""
+			},
+			{
 				"Id": "4fb8d6d8-c158-42f5-b4d2-5e28feb8c675",
 				"Position": {
 					"x": 503.829956,
@@ -3571,6 +3796,36 @@
 				"BotZoneName": "ZoneTankSquare"
 			},
 			{
+				"Id": "5caf5e1b-0113-41fc-9867-007e37ffe906",
+				"Position": {
+					"x": 95.968,
+					"y": 1.18800008,
+					"z": 11.6539917
+				},
+				"Rotation": 167.010742,
+				"Sides": [
+					"Usec",
+					"Bear"
+				],
+				"Categories": [
+					"Coop"
+				],
+				"Infiltration": "Customs",
+				"DelayToCanSpawnSec": 4,
+				"ColliderParams": {
+					"_parent": "SpawnSphereParams",
+					"_props": {
+						"Center": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"Radius": 77
+					}
+				},
+				"BotZoneName": ""
+			},
+			{
 				"Id": "61e3a2a4-55af-4b66-bf4f-302f9cdac5b2",
 				"Position": {
 					"x": 348.438,
@@ -3626,6 +3881,36 @@
 							"z": 0
 						},
 						"Radius": 80
+					}
+				},
+				"BotZoneName": ""
+			},
+			{
+				"Id": "62f5b14d-cb51-4529-b572-f5a8f5815bb5",
+				"Position": {
+					"x": 104.246017,
+					"y": 1.21600008,
+					"z": 18.7420044
+				},
+				"Rotation": 85.46295,
+				"Sides": [
+					"Usec",
+					"Bear"
+				],
+				"Categories": [
+					"Coop"
+				],
+				"Infiltration": "Customs",
+				"DelayToCanSpawnSec": 4,
+				"ColliderParams": {
+					"_parent": "SpawnSphereParams",
+					"_props": {
+						"Center": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"Radius": 77
 					}
 				},
 				"BotZoneName": ""
@@ -4962,6 +5247,66 @@
 				"BotZoneName": ""
 			},
 			{
+				"Id": "97185451-3b24-4e74-baa1-6a706f09c520",
+				"Position": {
+					"x": 99.222,
+					"y": 1.18800008,
+					"z": 18.9140015
+				},
+				"Rotation": 167.010742,
+				"Sides": [
+					"Usec",
+					"Bear"
+				],
+				"Categories": [
+					"Coop"
+				],
+				"Infiltration": "Customs",
+				"DelayToCanSpawnSec": 4,
+				"ColliderParams": {
+					"_parent": "SpawnSphereParams",
+					"_props": {
+						"Center": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"Radius": 77
+					}
+				},
+				"BotZoneName": ""
+			},
+			{
+				"Id": "97513a7b-d467-454a-8232-2e77f3e386ef",
+				"Position": {
+					"x": 105.498,
+					"y": 1.197,
+					"z": 17.3639984
+				},
+				"Rotation": 85.46295,
+				"Sides": [
+					"Usec",
+					"Bear"
+				],
+				"Categories": [
+					"Coop"
+				],
+				"Infiltration": "Customs",
+				"DelayToCanSpawnSec": 4,
+				"ColliderParams": {
+					"_parent": "SpawnSphereParams",
+					"_props": {
+						"Center": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"Radius": 77
+					}
+				},
+				"BotZoneName": ""
+			},
+			{
 				"Id": "989f1148-f609-4191-8a09-de4d40b117e4",
 				"Position": {
 					"x": 571.17,
@@ -5170,6 +5515,36 @@
 				"BotZoneName": "ZoneFactorySide"
 			},
 			{
+				"Id": "9dd4bcc0-062e-45a4-9346-2b488ed4ad72",
+				"Position": {
+					"x": 104.638016,
+					"y": 1.197,
+					"z": 14.3540039
+				},
+				"Rotation": 85.46295,
+				"Sides": [
+					"Usec",
+					"Bear"
+				],
+				"Categories": [
+					"Coop"
+				],
+				"Infiltration": "Customs",
+				"DelayToCanSpawnSec": 4,
+				"ColliderParams": {
+					"_parent": "SpawnSphereParams",
+					"_props": {
+						"Center": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"Radius": 77
+					}
+				},
+				"BotZoneName": ""
+			},
+			{
 				"Id": "a092494e-01bf-496f-b789-8e9790639784",
 				"Position": {
 					"x": 502.349976,
@@ -5313,6 +5688,36 @@
 							"z": 0
 						},
 						"Radius": 50
+					}
+				},
+				"BotZoneName": ""
+			},
+			{
+				"Id": "a64e8bd1-42f5-4c0d-b132-ddc01cd46d33",
+				"Position": {
+					"x": -189.071991,
+					"y": 1.538,
+					"z": -235.216
+				},
+				"Rotation": 350.7271,
+				"Sides": [
+					"Usec",
+					"Bear"
+				],
+				"Categories": [
+					"Player"
+				],
+				"Infiltration": "Customs",
+				"DelayToCanSpawnSec": 4,
+				"ColliderParams": {
+					"_parent": "SpawnSphereParams",
+					"_props": {
+						"Center": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"Radius": 77
 					}
 				},
 				"BotZoneName": ""
@@ -5463,6 +5868,66 @@
 					}
 				},
 				"BotZoneName": "ZoneBrige"
+			},
+			{
+				"Id": "b0126d65-ba76-45ad-b25e-32f4f3509904",
+				"Position": {
+					"x": 102.168015,
+					"y": 1.228,
+					"z": 19.8840027
+				},
+				"Rotation": 85.46295,
+				"Sides": [
+					"Usec",
+					"Bear"
+				],
+				"Categories": [
+					"Coop"
+				],
+				"Infiltration": "Customs",
+				"DelayToCanSpawnSec": 4,
+				"ColliderParams": {
+					"_parent": "SpawnSphereParams",
+					"_props": {
+						"Center": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"Radius": 77
+					}
+				},
+				"BotZoneName": ""
+			},
+			{
+				"Id": "b049c6f8-afb9-42f9-9591-2f265fef2097",
+				"Position": {
+					"x": 99.65102,
+					"y": 1.18800008,
+					"z": 14.6369934
+				},
+				"Rotation": 167.010742,
+				"Sides": [
+					"Usec",
+					"Bear"
+				],
+				"Categories": [
+					"Coop"
+				],
+				"Infiltration": "Customs",
+				"DelayToCanSpawnSec": 4,
+				"ColliderParams": {
+					"_parent": "SpawnSphereParams",
+					"_props": {
+						"Center": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"Radius": 77
+					}
+				},
+				"BotZoneName": ""
 			},
 			{
 				"Id": "b1a57f2f-89ab-49ae-81ab-3d4e5f6e9f1c",
@@ -5669,6 +6134,36 @@
 							"z": 0
 						},
 						"Radius": 50
+					}
+				},
+				"BotZoneName": ""
+			},
+			{
+				"Id": "b96df3dc-23f2-4e1d-8a9a-9fbe05a94f47",
+				"Position": {
+					"x": 102.318008,
+					"y": 1.21600008,
+					"z": 16.2639923
+				},
+				"Rotation": 85.46295,
+				"Sides": [
+					"Usec",
+					"Bear"
+				],
+				"Categories": [
+					"Coop"
+				],
+				"Infiltration": "Customs",
+				"DelayToCanSpawnSec": 4,
+				"ColliderParams": {
+					"_parent": "SpawnSphereParams",
+					"_props": {
+						"Center": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"Radius": 77
 					}
 				},
 				"BotZoneName": ""
@@ -5911,6 +6406,36 @@
 				"BotZoneName": ""
 			},
 			{
+				"Id": "c36b37b1-e654-45b8-a921-4864d1a325a4",
+				"Position": {
+					"x": 98.10802,
+					"y": 1.18800008,
+					"z": 11.9839935
+				},
+				"Rotation": 167.010742,
+				"Sides": [
+					"Usec",
+					"Bear"
+				],
+				"Categories": [
+					"Coop"
+				],
+				"Infiltration": "Customs",
+				"DelayToCanSpawnSec": 4,
+				"ColliderParams": {
+					"_parent": "SpawnSphereParams",
+					"_props": {
+						"Center": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"Radius": 77
+					}
+				},
+				"BotZoneName": ""
+			},
+			{
 				"Id": "c37fc9fb-a3cc-4097-9687-a22d32cb51e1",
 				"Position": {
 					"x": 174.652283,
@@ -6057,6 +6582,36 @@
 					}
 				},
 				"BotZoneName": "ZoneBlockPost"
+			},
+			{
+				"Id": "c8b04f3f-1f80-49a7-8530-3180b3ff71e9",
+				"Position": {
+					"x": 103.26799,
+					"y": 1.197,
+					"z": 15.322998
+				},
+				"Rotation": 85.46295,
+				"Sides": [
+					"Usec",
+					"Bear"
+				],
+				"Categories": [
+					"Coop"
+				],
+				"Infiltration": "Customs",
+				"DelayToCanSpawnSec": 4,
+				"ColliderParams": {
+					"_parent": "SpawnSphereParams",
+					"_props": {
+						"Center": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"Radius": 77
+					}
+				},
+				"BotZoneName": ""
 			},
 			{
 				"Id": "c98a753b-d534-4fa4-9430-478b7d8bf27d",
@@ -6416,17 +6971,17 @@
 			{
 				"Id": "daaa4a02-1f51-460b-bdf8-29b3bd2c838b",
 				"Position": {
-					"x": -189.071991,
-					"y": 1.538,
-					"z": -235.216
+					"x": 96.56099,
+					"y": 1.238,
+					"z": 17.1719971
 				},
-				"Rotation": 350.7271,
+				"Rotation": 167.010742,
 				"Sides": [
 					"Usec",
 					"Bear"
 				],
 				"Categories": [
-					"Player"
+					"Coop"
 				],
 				"Infiltration": "Customs",
 				"DelayToCanSpawnSec": 4,
@@ -6529,6 +7084,36 @@
 							"z": 0
 						},
 						"Radius": 50
+					}
+				},
+				"BotZoneName": ""
+			},
+			{
+				"Id": "ddca1267-6caa-4986-bd13-0ed29a81e6d2",
+				"Position": {
+					"x": 104.470016,
+					"y": 1.197,
+					"z": 16.5079956
+				},
+				"Rotation": 85.46295,
+				"Sides": [
+					"Usec",
+					"Bear"
+				],
+				"Categories": [
+					"Coop"
+				],
+				"Infiltration": "Customs",
+				"DelayToCanSpawnSec": 4,
+				"ColliderParams": {
+					"_parent": "SpawnSphereParams",
+					"_props": {
+						"Center": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"Radius": 77
 					}
 				},
 				"BotZoneName": ""
@@ -6828,35 +7413,6 @@
 				"BotZoneName": ""
 			},
 			{
-				"Id": "f37187ac-421c-4d38-8f33-b589ea2fa212",
-				"Position": {
-					"x": 687.829956,
-					"y": 25.829998,
-					"z": 30.3499985
-				},
-				"Rotation": 343.038422,
-				"Sides": [
-					"Savage"
-				],
-				"Categories": [
-					"Bot"
-				],
-				"Infiltration": "",
-				"DelayToCanSpawnSec": 1700,
-				"ColliderParams": {
-					"_parent": "SpawnSphereParams",
-					"_props": {
-						"Center": {
-							"x": 0,
-							"y": 0,
-							"z": 0
-						},
-						"Radius": 117
-					}
-				},
-				"BotZoneName": "ZoneBlockPostSniper3"
-			},
-			{
 				"Id": "f44a3dce-3acb-4e54-af80-49c3c53ebca4",
 				"Position": {
 					"x": 227.562,
@@ -6884,6 +7440,36 @@
 					}
 				},
 				"BotZoneName": "ZoneCrossRoad"
+			},
+			{
+				"Id": "f61dc8f4-8ab8-4a1b-9771-8c4d26568769",
+				"Position": {
+					"x": 103.658005,
+					"y": 1.18800008,
+					"z": 11.7939911
+				},
+				"Rotation": 167.010742,
+				"Sides": [
+					"Usec",
+					"Bear"
+				],
+				"Categories": [
+					"Coop"
+				],
+				"Infiltration": "Customs",
+				"DelayToCanSpawnSec": 4,
+				"ColliderParams": {
+					"_parent": "SpawnSphereParams",
+					"_props": {
+						"Center": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"Radius": 77
+					}
+				},
+				"BotZoneName": ""
 			},
 			{
 				"Id": "f66533f0-ec28-4c8a-8b38-a058c2ed6563",
@@ -7087,6 +7673,36 @@
 							"z": 0
 						},
 						"Radius": 80
+					}
+				},
+				"BotZoneName": ""
+			},
+			{
+				"Id": "fd6734ed-6ba8-423b-8a7b-2943f31c6527",
+				"Position": {
+					"x": 97.4080048,
+					"y": 1.18800008,
+					"z": 13.8939972
+				},
+				"Rotation": 167.010742,
+				"Sides": [
+					"Usec",
+					"Bear"
+				],
+				"Categories": [
+					"Coop"
+				],
+				"Infiltration": "Customs",
+				"DelayToCanSpawnSec": 4,
+				"ColliderParams": {
+					"_parent": "SpawnSphereParams",
+					"_props": {
+						"Center": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"Radius": 77
 					}
 				},
 				"BotZoneName": ""
@@ -29814,6 +30430,21 @@
 					"path": "CONTENT/banners/banner_scavraider.jpg",
 					"rcid": ""
 				}
+			}
+		],
+		"GenerateLocalLootCache": true,
+		"AirdropParameters": [
+			{
+				"PlaneAirdropStartMin": 300,
+				"PlaneAirdropStartMax": 900,
+				"PlaneAirdropEnd": 1200,
+				"PlaneAirdropChance": 0.2,
+				"PlaneAirdropMax": 1,
+				"PlaneAirdropCooldownMin": 600,
+				"PlaneAirdropCooldownMax": 700,
+				"AirdropPointDeactivateDistance": 50,
+				"MinPlayersCountToSpawnAirdrop": 6,
+				"UnsuccessfulTryPenalty": 600
 			}
 		]
 	},

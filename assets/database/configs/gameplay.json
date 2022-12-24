@@ -108,6 +108,7 @@
         }
     },
     "raid": {
+        "allowSelectEntryPoint": true,
         "maxBotsAliveOnMap": 20,
         "waveCoef": {
             "low": 1,
