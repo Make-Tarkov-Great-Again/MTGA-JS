@@ -182,7 +182,7 @@ app.addContentTypeParser('*', (req, payload, done) => {
     });
 });
 
-DatabaseLoader.setDatabase();
+
 app.register(require('./lib/plugins/register.js')); //register
 
 const image = fs.readFileSync('./assets/templates/webinterface/resources/logo/rs_banner_transparent.png');
@@ -191,12 +191,7 @@ pngStringify(image, function (err, string) {
     logger.success(string);
 })
 
-app.listen(
-    {
-        port: database.core.serverConfig.port,
-        host: database.core.serverConfig.ip
-    }
-)
+startServer(app);
 
 /* .then(() => {
     setTimeout(() => app.log.info("Web-based Launcher will open in 3 seconds..."), 750);
@@ -206,3 +201,13 @@ app.listen(
     }, 3000);
 }); */
 
+async function startServer(app) {
+    await DatabaseLoader.setDatabase();
+
+    app.listen(
+        {
+            port: database.core.serverConfig.port,
+            host: database.core.serverConfig.ip
+        }
+    );
+}
