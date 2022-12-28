@@ -1,0 +1,185 @@
+{
+    "Elimination": {
+        "_id": null,
+        "traderId": "5935c25fb3acc3127c3d8cd9",
+        "location": null,
+        "image": "/files/quest/icon/616d993bc8c5ad2ab30ff6ba.jpg",
+        "type": "Elimination",
+        "isKey": false,
+        "restartable": false,
+        "instantComplete": false,
+        "secretQuest": false,
+        "canShowNotificationsInGame": true,
+        "rewards": {
+            "Started": [],
+            "Success": [],
+            "Fail": []
+        },
+        "conditions": {
+            "AvailableForStart": [],
+            "AvailableForFinish": [
+                {
+                    "_props": {
+                        "id": "618c1de4d4cd91439f3de4ae",
+                        "parentId": "",
+                        "dynamicLocale": true,
+                        "index": 0,
+                        "visibilityConditions": [],
+                        "value": 1,
+                        "type": "Elimination",
+                        "oneSessionOnly": false,
+                        "doNotResetIfCounterCompleted": false,
+                        "counter": {
+                            "id": "618c1de4d4cd91439f3de4ac",
+                            "conditions": [
+                                {
+                                    "_props": {
+                                        "target": "Savage",
+                                        "value": 1,
+                                        "savageRole": [
+                                            "bossBully"
+                                        ],
+                                        "id": "618c1de4d4cd91439f3de4ad",
+                                        "dynamicLocale": true
+                                    },
+                                    "_parent": "Kills"
+                                }
+                            ]
+                        }
+                    },
+                    "_parent": "CounterCreator",
+                    "dynamicLocale": true
+                }
+            ],
+            "Fail": []
+        },
+        "name": "616052ea3054fc0e2c24ce6e name {traderId}",
+        "note": "616052ea3054fc0e2c24ce6e note {traderId}",
+        "description": "616052ea3054fc0e2c24ce6e description {traderId} 0",
+        "successMessageText": "616052ea3054fc0e2c24ce6e successMessageText {traderId} 0",
+        "failMessageText": "616052ea3054fc0e2c24ce6e failMessageText {traderId} 0",
+        "startedMessageText": "616052ea3054fc0e2c24ce6e startedMessageText {traderId} 0",
+        "changeQuestMessageText": "616052ea3054fc0e2c24ce6e changeQuestMessageText {traderId} 0",
+        "templateId": "616052ea3054fc0e2c24ce6e",
+        "changeCost": [
+            {
+                "templateId": "5449016a4bdc2d6f028b456f",
+                "count": 5000
+            }
+        ],
+        "changeStandingCost": 0
+    },
+    "Completion": {
+        "_id": "61943a75eb60e11b7965cdbf4",
+        "traderId": "58330581ace78e27b8b10cee",
+        "location": "any",
+        "image": "/files/quest/icon/616d993bc8c5ad2ab30ff6ba.jpg",
+        "type": "Completion",
+        "isKey": false,
+        "restartable": false,
+        "instantComplete": false,
+        "secretQuest": false,
+        "canShowNotificationsInGame": true,
+        "rewards": {
+            "Started": [],
+            "Success": [],
+            "Fail": []
+        },
+        "conditions": {
+            "AvailableForStart": [],
+            "AvailableForFinish": [],
+            "Fail": []
+        },
+        "name": "61604635c725987e815b1a46 name {traderId}",
+        "note": "61604635c725987e815b1a46 note {traderId}",
+        "description": "61604635c725987e815b1a46 description {traderId} 0",
+        "successMessageText": "61604635c725987e815b1a46 successMessageText {traderId} 0",
+        "failMessageText": "61604635c725987e815b1a46 failMessageText {traderId} 0",
+        "startedMessageText": "61604635c725987e815b1a46 startedMessageText {traderId} 0",
+        "changeQuestMessageText": "61604635c725987e815b1a46 changeQuestMessageText {traderId} 0",
+        "templateId": "61604635c725987e815b1a46",
+        "changeCost": [
+            {
+                "templateId": "5449016a4bdc2d6f028b456f",
+                "count": 5000
+            }
+        ],
+        "changeStandingCost": 0
+    },
+    "Exploration": {
+        "_id": null,
+        "traderId": "54cb50c76803fa8b248b4571",
+        "location": null,
+        "image": "/files/quest/icon/616d993bc8c5ad2ab30ff6ba.jpg",
+        "type": "Exploration",
+        "isKey": false,
+        "restartable": false,
+        "instantComplete": false,
+        "secretQuest": false,
+        "canShowNotificationsInGame": true,
+        "rewards": {
+            "Started": [],
+            "Success": [],
+            "Fail": []
+        },
+        "conditions": {
+            "AvailableForStart": [],
+            "AvailableForFinish": [
+                {
+                    "_props": {
+                        "id": "618c1de4d4cd91439f3de4a5",
+                        "parentId": "",
+                        "dynamicLocale": true,
+                        "index": 0,
+                        "visibilityConditions": [],
+                        "value": 1,
+                        "type": "Completion",
+                        "oneSessionOnly": false,
+                        "doNotResetIfCounterCompleted": false,
+                        "counter": {
+                            "id": "618c1de4d4cd91439f3de4a4",
+                            "conditions": [
+                                {
+                                    "_props": {
+                                        "status": [
+                                            "Survived"
+                                        ],
+                                        "id": "618c1de4d4cd91439f3de4a3",
+                                        "dynamicLocale": true
+                                    },
+                                    "_parent": "ExitStatus"
+                                },
+                                {
+                                    "_props": {
+                                        "target": [],
+                                        "id": "618c1de4d4cd91439f3de4a2",
+                                        "dynamicLocale": true
+                                    },
+                                    "_parent": "Location"
+                                }
+                            ]
+                        }
+                    },
+                    "_parent": "CounterCreator",
+                    "dynamicLocale": true
+                }
+            ],
+            "Fail": []
+        },
+        "name": "616041eb031af660100c9967 name {traderId}",
+        "note": "616041eb031af660100c9967 note {traderId}",
+        "description": "616041eb031af660100c9967 description {traderId} 0",
+        "successMessageText": "616041eb031af660100c9967 successMessageText {traderId} 0",
+        "failMessageText": "616041eb031af660100c9967 failMessageText {traderId} 0",
+        "startedMessageText": "616041eb031af660100c9967 startedMessageText {traderId} 0",
+        "changeQuestMessageText": "616041eb031af660100c9967 changeQuestMessageText {traderId} 0",
+        "templateId": "616041eb031af660100c9967",
+        "changeCost": [
+            {
+                "templateId": "5449016a4bdc2d6f028b456f",
+                "count": 5000
+            }
+        ],
+        "changeStandingCost": 0
+    }
+}
