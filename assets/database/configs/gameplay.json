@@ -182,93 +182,8 @@
         "repeatable": {
             "Daily": {
                 "requiredLevel": 5,
-                "traderQuest": [
-                    {
-                        "traderId": "54cb50c76803fa8b248b4571",
-                        "questTypes": [
-                            "Completion",
-                            "Exploration",
-                            "Elimination"
-                        ]
-                    },
-                    {
-                        "traderId": "54cb57776803fa99248b456e",
-                        "questTypes": [
-                            "Completion",
-                            "Exploration",
-                            "Elimination"
-                        ]
-                    },
-                    {
-                        "traderId": "58330581ace78e27b8b10cee",
-                        "questTypes": [
-                            "Completion",
-                            "Exploration",
-                            "Elimination"
-                        ]
-                    },
-                    {
-                        "traderId": "5935c25fb3acc3127c3d8cd9",
-                        "questTypes": [
-                            "Completion",
-                            "Exploration",
-                            "Elimination"
-                        ]
-                    },
-                    {
-                        "traderId": "5a7c2eca46aef81a7ca2145d",
-                        "questTypes": [
-                            "Completion",
-                            "Exploration"
-                        ]
-                    },
-                    {
-                        "traderId": "5ac3b934156ae10c4430e83c",
-                        "questTypes": [
-                            "Completion",
-                            "Exploration",
-                            "Elimination"
-                        ]
-                    },
-                    {
-                        "traderId": "5c0647fdd443bc2504c2d371",
-                        "questTypes": [
-                            "Completion",
-                            "Exploration",
-                            "Elimination"
-                        ]
-                    }
-                ],
-                "locations": {
-                    "any": [
-                        "any"
-                    ],
-                    "factory4_day": [
-                        "factory4_day",
-                        "factory4_night"
-                    ],
-                    "bigmap": [
-                        "bigmap"
-                    ],
-                    "Woods": [
-                        "Woods"
-                    ],
-                    "Shoreline": [
-                        "Shoreline"
-                    ],
-                    "Interchange": [
-                        "Interchange"
-                    ],
-                    "Lighthouse": [
-                        "Lighthouse"
-                    ],
-                    "laboratory": [
-                        "laboratory"
-                    ],
-                    "RezervBase": [
-                        "RezervBase"
-                    ]
-                },
+                "maxQuests": 3,
+                "resetTime": 86400,
                 "config": {
                     "Exploration": {
                         "maxExtracts": 10,
@@ -369,13 +284,177 @@
                         "maxKills": 15,
                         "minKills": 5
                     }
-                },
-                "rewardBaseTypeBlacklist": [
-                    "543be5e94bdc2df1348b4568",
-                    "5b3f15d486f77432d0509248"
+                }
+            },
+            "Weekly": {
+                "requiredLevel": 15,
+                "maxQuests": 1,
+                "resetTime": 604800,
+                "config": {
+                    "Exploration": {
+                        "maxExtracts": 10,
+                        "specificExits": {
+                            "probability": 0.5,
+                            "passageRequirementWhitelist": [
+                                "None",
+                                "TransferItem",
+                                "WorldEvent",
+                                "Train",
+                                "Reference",
+                                "Empty"
+                            ]
+                        }
+                    },
+                    "Completion": {
+                        "minRequestedAmount": 2,
+                        "maxRequestedAmount": 10,
+                        "minRequestedBulletAmount": 20,
+                        "maxRequestedBulletAmount": 60,
+                        "useWhitelist": true,
+                        "useBlacklist": false
+                    },
+                    "Elimination": {
+                        "targets": [
+                            {
+                                "key": [
+                                    "bossBully",
+                                    "bossGluhar",
+                                    "bossKilla",
+                                    "bossSanitar",
+                                    "bossTagilla",
+                                    "bossKojaniy",
+                                    "bossKnight"
+                                ],
+                                "relativeProbability": 0.5,
+                                "data": {
+                                    "isBoss": true
+                                }
+                            },
+                            {
+                                "key": "Savage",
+                                "relativeProbability": 7,
+                                "data": {
+                                    "isBoss": false
+                                }
+                            }
+                        ],
+                        "bodyPartProb": 0.4,
+                        "bodyParts": [
+                            {
+                                "key": "Head",
+                                "relativeProbability": 1,
+                                "data": [
+                                    "Head"
+                                ]
+                            },
+                            {
+                                "key": "Stomach",
+                                "relativeProbability": 3,
+                                "data": [
+                                    "Stomach"
+                                ]
+                            },
+                            {
+                                "key": "Chest",
+                                "relativeProbability": 5,
+                                "data": [
+                                    "Chest"
+                                ]
+                            },
+                            {
+                                "key": "Arms",
+                                "relativeProbability": 0.5,
+                                "data": [
+                                    "LeftArm",
+                                    "RightArm"
+                                ]
+                            },
+                            {
+                                "key": "Legs",
+                                "relativeProbability": 1,
+                                "data": [
+                                    "LeftLeg",
+                                    "RightLeg"
+                                ]
+                            }
+                        ],
+                        "specificLocationProb": 0.25,
+                        "distLocationBlacklist": [
+                            "laboratory",
+                            "factory4_day",
+                            "factory4_night"
+                        ],
+                        "distProb": 0.25,
+                        "maxDist": 200,
+                        "minDist": 10,
+                        "maxKills": 15,
+                        "minKills": 5
+                    }
+                }
+            },
+            "locations": {
+                "any": [
+                    "any"
                 ],
-                "rewardBlacklist": []
-            }
+                "factory4_day": [
+                    "factory4_day",
+                    "factory4_night"
+                ],
+                "bigmap": [
+                    "bigmap"
+                ],
+                "Woods": [
+                    "Woods"
+                ],
+                "Shoreline": [
+                    "Shoreline"
+                ],
+                "Interchange": [
+                    "Interchange"
+                ],
+                "Lighthouse": [
+                    "Lighthouse"
+                ],
+                "laboratory": [
+                    "laboratory"
+                ],
+                "RezervBase": [
+                    "RezervBase"
+                ]
+            },
+            "quests": {
+                "Elimination": [
+                    "54cb50c76803fa8b248b4571",
+                    "54cb57776803fa99248b456e",
+                    "58330581ace78e27b8b10cee",
+                    "5935c25fb3acc3127c3d8cd9",
+                    "5ac3b934156ae10c4430e83c",
+                    "5c0647fdd443bc2504c2d371"
+                ],
+                "Exploration": [
+                    "54cb50c76803fa8b248b4571",
+                    "54cb57776803fa99248b456e",
+                    "58330581ace78e27b8b10cee",
+                    "5935c25fb3acc3127c3d8cd9",
+                    "5ac3b934156ae10c4430e83c",
+                    "5c0647fdd443bc2504c2d371",
+                    "5a7c2eca46aef81a7ca2145d"
+                ],
+                "Completion": [
+                    "54cb50c76803fa8b248b4571",
+                    "54cb57776803fa99248b456e",
+                    "58330581ace78e27b8b10cee",
+                    "5935c25fb3acc3127c3d8cd9",
+                    "5ac3b934156ae10c4430e83c",
+                    "5c0647fdd443bc2504c2d371",
+                    "5a7c2eca46aef81a7ca2145d"
+                ]
+            },
+            "rewardBaseTypeBlacklist": [
+                "543be5e94bdc2df1348b4568",
+                "5b3f15d486f77432d0509248"
+            ],
+            "rewardBlacklist": []
         }
     },
     "loot": {},
