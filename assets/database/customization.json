@@ -2076,6 +2076,146 @@
             },
             "_proto": "5cc2e59214c02e000f16684e"
         },
+        "63628b825c1b30a79d09ccb9": {
+            "_id": "63628b825c1b30a79d09ccb9",
+            "_name": "Top_BOSS_Zryachi",
+            "_parent": "5cc0868e14c02e000c6bea68",
+            "_type": "Item",
+            "_props": {
+                "Name": "Top_BOSS_Zryachi",
+                "ShortName": "Top_BOSS_Zryachi",
+                "Description": "Top_BOSS_Zryachi",
+                "Side": [
+                    "Savage"
+                ],
+                "BodyPart": "Body",
+                "Prefab": {
+                    "path": "assets/content/characters/character/prefabs/top_boss_zryachi.bundle",
+                    "rcid": ""
+                },
+                "WatchPrefab": {
+                    "path": "",
+                    "rcid": ""
+                },
+                "IntegratedArmorVest": false,
+                "WatchPosition": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "WatchRotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "_proto": "5cdea33e7d6c8b0474535dac"
+        },
+        "6377266693a3b4967208e42b": {
+            "_id": "6377266693a3b4967208e42b",
+            "_name": "bear_upper_SpNa",
+            "_parent": "5cc0868e14c02e000c6bea68",
+            "_type": "Item",
+            "_props": {
+                "Name": "DeafaultBearBody",
+                "ShortName": "DeafaultBearBody",
+                "Description": "DeafaultBearBody",
+                "Side": [
+                    "Bear"
+                ],
+                "BodyPart": "Body",
+                "Prefab": {
+                    "path": "assets/content/characters/character/prefabs/top_bear_spna.bundle",
+                    "rcid": ""
+                },
+                "WatchPrefab": {
+                    "path": "",
+                    "rcid": ""
+                },
+                "IntegratedArmorVest": false,
+                "WatchPosition": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "WatchRotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "_proto": "5cc0858d14c02e000c6bea66"
+        },
+        "637b945722e2a933ed0e33c8": {
+            "_id": "637b945722e2a933ed0e33c8",
+            "_name": "usec_upper_carinthia_softshell",
+            "_parent": "5cc0868e14c02e000c6bea68",
+            "_type": "Item",
+            "_props": {
+                "Name": "DefaultUsecBody",
+                "ShortName": "DefaultUsecBody",
+                "Description": "DefaultUsecBody",
+                "Side": [
+                    "Usec"
+                ],
+                "BodyPart": "Body",
+                "Prefab": {
+                    "path": "assets/content/characters/character/prefabs/top_usec_carinthia_softshell.bundle",
+                    "rcid": ""
+                },
+                "WatchPrefab": {
+                    "path": "",
+                    "rcid": ""
+                },
+                "IntegratedArmorVest": false,
+                "WatchPosition": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "WatchRotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "_proto": "5cde95d97d6c8b647a3769b0"
+        },
+        "637df28ac22da5bb8d046935": {
+            "_id": "637df28ac22da5bb8d046935",
+            "_name": "wild_body_victory",
+            "_parent": "5cc0868e14c02e000c6bea68",
+            "_type": "Item",
+            "_props": {
+                "Name": "wild_body",
+                "ShortName": "wild_body",
+                "Description": "wild_body",
+                "Side": [
+                    "Savage"
+                ],
+                "BodyPart": "Body",
+                "Prefab": {
+                    "path": "assets/content/characters/character/prefabs/top_wild_victory.bundle",
+                    "rcid": ""
+                },
+                "WatchPrefab": {
+                    "path": "",
+                    "rcid": ""
+                },
+                "IntegratedArmorVest": false,
+                "WatchPosition": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "WatchRotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "_proto": "5cc2e59214c02e000f16684e"
+        },
         "5cde95ef7d6c8b04713c4f2d": {
             "_id": "5cde95ef7d6c8b04713c4f2d",
             "_name": "DefaulUsecFeet",
@@ -3193,41 +3333,6 @@
             },
             "_proto": "5cde95ef7d6c8b04713c4f2d"
         },
-        "6295e944e9de5e7b3751c4da": {
-            "_id": "6295e944e9de5e7b3751c4da",
-            "_name": "usec_lower_chameleon_softshell",
-            "_parent": "5cc0869814c02e000a4cad94",
-            "_type": "Item",
-            "_props": {
-                "Name": "DefaultUsecFeet",
-                "ShortName": "DefaultUsecFeet",
-                "Description": "DefaultUsecFeet",
-                "Side": [
-                    "Usec"
-                ],
-                "BodyPart": "Feet",
-                "Prefab": {
-                    "path": "assets/content/characters/character/prefabs/pants_usec_chameleon_softshell.bundle",
-                    "rcid": ""
-                },
-                "WatchPrefab": {
-                    "path": "",
-                    "rcid": ""
-                },
-                "IntegratedArmorVest": false,
-                "WatchPosition": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 0
-                },
-                "WatchRotation": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 0
-                }
-            },
-            "_proto": "5cde95ef7d6c8b04713c4f2d"
-        },
         "5e4bb3b586f77406812bd579": {
             "_id": "5e4bb3b586f77406812bd579",
             "_name": "usec_lower_commando",
@@ -3906,6 +4011,181 @@
                 "BodyPart": "Feet",
                 "Prefab": {
                     "path": "assets/content/characters/character/prefabs/wild_security_feet_1.bundle",
+                    "rcid": ""
+                },
+                "WatchPrefab": {
+                    "path": "",
+                    "rcid": ""
+                },
+                "IntegratedArmorVest": false,
+                "WatchPosition": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "WatchRotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "_proto": "5cde9fb87d6c8b0474535da9"
+        },
+        "6361216278f9ab270a0a48d9": {
+            "_id": "6361216278f9ab270a0a48d9",
+            "_name": "Pants_BOSS_Zryachi",
+            "_parent": "5cc0869814c02e000a4cad94",
+            "_type": "Item",
+            "_props": {
+                "Name": "Pants_BOSS_Zryachi",
+                "ShortName": "Pants_BOSS_Zryachi",
+                "Description": "Pants_BOSS_Zryachi",
+                "Side": [
+                    "Savage"
+                ],
+                "BodyPart": "Feet",
+                "Prefab": {
+                    "path": "assets/content/characters/character/prefabs/pants_boss_zryachi.bundle",
+                    "rcid": ""
+                },
+                "WatchPrefab": {
+                    "path": "",
+                    "rcid": ""
+                },
+                "IntegratedArmorVest": false,
+                "WatchPosition": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "WatchRotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "_proto": "5cdea3c47d6c8b0475341734"
+        },
+        "6377315993a3b4967208e437": {
+            "_id": "6377315993a3b4967208e437",
+            "_name": "bear_lower_spna",
+            "_parent": "5cc0869814c02e000a4cad94",
+            "_type": "Item",
+            "_props": {
+                "Name": "DefaultBeerFeet",
+                "ShortName": "DefaultBeerFeet",
+                "Description": "DefaultBeerFeet",
+                "Side": [
+                    "Bear"
+                ],
+                "BodyPart": "Feet",
+                "Prefab": {
+                    "path": "assets/content/characters/character/prefabs/pants_bear_spna.bundle",
+                    "rcid": ""
+                },
+                "WatchPrefab": {
+                    "path": "",
+                    "rcid": ""
+                },
+                "IntegratedArmorVest": false,
+                "WatchPosition": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "WatchRotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "_proto": "5cc085bb14c02e000e67a5c5"
+        },
+        "637ba17aa10a96c2b605dbc2": {
+            "_id": "637ba17aa10a96c2b605dbc2",
+            "_name": "usec_lower_carinthia_softshell",
+            "_parent": "5cc0869814c02e000a4cad94",
+            "_type": "Item",
+            "_props": {
+                "Name": "usec_lower_carinthia_softshell",
+                "ShortName": "usec_lower_carinthia_softshell",
+                "Description": "usec_lower_carinthia_softshell",
+                "Side": [
+                    "Usec"
+                ],
+                "BodyPart": "Feet",
+                "Prefab": {
+                    "path": "assets/content/characters/character/prefabs/pants_usec_carinthia_softshell.bundle",
+                    "rcid": ""
+                },
+                "WatchPrefab": {
+                    "path": "",
+                    "rcid": ""
+                },
+                "IntegratedArmorVest": false,
+                "WatchPosition": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "WatchRotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "_proto": "5cde95ef7d6c8b04713c4f2d"
+        },
+        "6295e944e9de5e7b3751c4da": {
+            "_id": "6295e944e9de5e7b3751c4da",
+            "_name": "usec_lower_chameleon_softshell",
+            "_parent": "5cc0869814c02e000a4cad94",
+            "_type": "Item",
+            "_props": {
+                "Name": "usec_lower_chameleon_softshell",
+                "ShortName": "usec_lower_chameleon_softshell",
+                "Description": "usec_lower_chameleon_softshell",
+                "Side": [
+                    "Usec"
+                ],
+                "BodyPart": "Feet",
+                "Prefab": {
+                    "path": "assets/content/characters/character/prefabs/pants_usec_chameleon_softshell.bundle",
+                    "rcid": ""
+                },
+                "WatchPrefab": {
+                    "path": "",
+                    "rcid": ""
+                },
+                "IntegratedArmorVest": false,
+                "WatchPosition": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "WatchRotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "_proto": "5cde95ef7d6c8b04713c4f2d"
+        },
+        "637df25a1e688345e1097bd4": {
+            "_id": "637df25a1e688345e1097bd4",
+            "_name": "wild_feet_victory",
+            "_parent": "5cc0869814c02e000a4cad94",
+            "_type": "Item",
+            "_props": {
+                "Name": "wild_feet_1",
+                "ShortName": "wild_feet_1",
+                "Description": "wild_feet_1",
+                "Side": [
+                    "Savage"
+                ],
+                "BodyPart": "Feet",
+                "Prefab": {
+                    "path": "assets/content/characters/character/prefabs/pants_wild_victory.bundle",
                     "rcid": ""
                 },
                 "WatchPrefab": {
@@ -5356,6 +5636,111 @@
             },
             "_proto": "5cde95fa7d6c8b04737c2d13"
         },
+        "6391c6205dbbdb3b1b049840": {
+            "_id": "6391c6205dbbdb3b1b049840",
+            "_name": "SavageHands_Victory",
+            "_parent": "5cc086a314c02e000c6bea69",
+            "_type": "Item",
+            "_props": {
+                "Name": "SavageHands1",
+                "ShortName": "SavageHands1",
+                "Description": "SavageHands1",
+                "Side": [
+                    "Savage"
+                ],
+                "BodyPart": "Hands",
+                "Prefab": {
+                    "path": "assets/content/hands/hands_wild_hoody_victory/hands_wild_hoody_victory.skin.bundle",
+                    "rcid": ""
+                },
+                "WatchPrefab": {
+                    "path": "",
+                    "rcid": ""
+                },
+                "IntegratedArmorVest": false,
+                "WatchPosition": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "WatchRotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "_proto": "5cc2e68f14c02e28b47de290"
+        },
+        "6390103dfdb42a2ccc0e8cca": {
+            "_id": "6390103dfdb42a2ccc0e8cca",
+            "_name": "bear_hands_spna",
+            "_parent": "5cc086a314c02e000c6bea69",
+            "_type": "Item",
+            "_props": {
+                "Name": "DefaultBearHands",
+                "ShortName": "DefaultBearHands",
+                "Description": "DefaultBearHands",
+                "Side": [
+                    "Bear"
+                ],
+                "BodyPart": "Hands",
+                "Prefab": {
+                    "path": "assets/content/hands/hands_bear_spna/hands_bear_spna.skin.bundle",
+                    "rcid": ""
+                },
+                "WatchPrefab": {
+                    "path": "assets/content/hands/bear/bear_watch_luminoxrecon.bundle",
+                    "rcid": ""
+                },
+                "IntegratedArmorVest": false,
+                "WatchPosition": {
+                    "x": -0.06411,
+                    "y": -0.00163,
+                    "z": 0.03671
+                },
+                "WatchRotation": {
+                    "x": 2.485724,
+                    "y": -172.2751,
+                    "z": 1.332026
+                }
+            },
+            "_proto": "5cc0876314c02e000c6bea6b"
+        },
+        "6393082c1c8f182ad90c8961": {
+            "_id": "6393082c1c8f182ad90c8961",
+            "_name": "usec_hands_carinthia_softshell",
+            "_parent": "5cc086a314c02e000c6bea69",
+            "_type": "Item",
+            "_props": {
+                "Name": "DefaultUsecHands",
+                "ShortName": "DefaultUsecHands",
+                "Description": "DefaultUsecHands",
+                "Side": [
+                    "Usec"
+                ],
+                "BodyPart": "Hands",
+                "Prefab": {
+                    "path": "assets/content/hands/hands_usec_carinthia_softshell/hands_usec_carinthia_softshell.skin.bundle",
+                    "rcid": ""
+                },
+                "WatchPrefab": {
+                    "path": "assets/content/hands/usec/usec_watch_garmintactix.bundle",
+                    "rcid": ""
+                },
+                "IntegratedArmorVest": false,
+                "WatchPosition": {
+                    "x": -0.05244,
+                    "y": -0.01385,
+                    "z": -0.043
+                },
+                "WatchRotation": {
+                    "x": 168.419,
+                    "y": 7.066986,
+                    "z": -1.380981
+                }
+            },
+            "_proto": "5cde95fa7d6c8b04737c2d13"
+        },
         "5cc084dd14c02e000b0550a3": {
             "_id": "5cc084dd14c02e000b0550a3",
             "_name": "DefaultBearHead",
@@ -6332,6 +6717,41 @@
             },
             "_proto": "5cde9ff17d6c8b0474535daa"
         },
+        "636129784aa74b8fe30ab418": {
+            "_id": "636129784aa74b8fe30ab418",
+            "_name": "Head_BOSS_Zryachi",
+            "_parent": "5cc085e214c02e000c6bea67",
+            "_type": "Item",
+            "_props": {
+                "Name": "Head_BOSS_Zryachi",
+                "ShortName": "Head_BOSS_Zryachi",
+                "Description": "Head_BOSS_Zryachi",
+                "Side": [
+                    "Savage"
+                ],
+                "BodyPart": "Head",
+                "Prefab": {
+                    "path": "assets/content/characters/character/prefabs/head_boss_zryachi.bundle",
+                    "rcid": ""
+                },
+                "WatchPrefab": {
+                    "path": "",
+                    "rcid": ""
+                },
+                "IntegratedArmorVest": false,
+                "WatchPosition": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "WatchRotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "_proto": "5cde9ff17d6c8b0474535daa"
+        },
         "5cc0868e14c02e000c6bea68": {
             "_id": "5cc0868e14c02e000c6bea68",
             "_name": "Body",
@@ -7091,6 +7511,40 @@
             },
             "_proto": "5cd946231388ce000d572fe3"
         },
+        "63a8a41e8523141c3d055228": {
+            "_id": "63a8a41e8523141c3d055228",
+            "_name": "bear_kit_lower_spna",
+            "_parent": "5cd944d01388ce000a659df9",
+            "_type": "Item",
+            "_props": {
+                "Name": "DefaultBearLowerSuite",
+                "ShortName": "DefaultBearLowerSuite",
+                "Description": "DefaultBearLowerSuite",
+                "Side": [
+                    "Bear"
+                ],
+                "AvailableAsDefault": false,
+                "Feet": "6377315993a3b4967208e437"
+            },
+            "_proto": "5cd946231388ce000d572fe3"
+        },
+        "63a8a446dd384f7e8d716f9d": {
+            "_id": "63a8a446dd384f7e8d716f9d",
+            "_name": "usec_kit_lower_carinthia_softshell",
+            "_parent": "5cd944d01388ce000a659df9",
+            "_type": "Item",
+            "_props": {
+                "Name": "DefaultBearLowerSuite",
+                "ShortName": "DefaultBearLowerSuite",
+                "Description": "DefaultBearLowerSuite",
+                "Side": [
+                    "Usec"
+                ],
+                "AvailableAsDefault": false,
+                "Feet": "637ba17aa10a96c2b605dbc2"
+            },
+            "_proto": "5cd946231388ce000d572fe3"
+        },
         "5d1f623e86f7744bce0ef705": {
             "_id": "5d1f623e86f7744bce0ef705",
             "_name": " usec_kit_upper_pcuironsight",
@@ -7807,6 +8261,42 @@
             },
             "_proto": "5cde9ec17d6c8b04723cf479"
         },
+        "63a8a3d48523141c3d055226": {
+            "_id": "63a8a3d48523141c3d055226",
+            "_name": "bear_kit_upper_spna",
+            "_parent": "5cd944ca1388ce03a44dc2a4",
+            "_type": "Item",
+            "_props": {
+                "Name": "DefaultBearLowerSuite",
+                "ShortName": "DefaultBearLowerSuite",
+                "Description": "DefaultBearLowerSuite",
+                "Side": [
+                    "Bear"
+                ],
+                "AvailableAsDefault": false,
+                "Body": "6377266693a3b4967208e42b",
+                "Hands": "6390103dfdb42a2ccc0e8cca"
+            },
+            "_proto": "5cd946231388ce000d572fe3"
+        },
+        "63a8a3f5dd384f7e8d716f9b": {
+            "_id": "63a8a3f5dd384f7e8d716f9b",
+            "_name": "usec_kit_upper_carinthia_softshell",
+            "_parent": "5cd944ca1388ce03a44dc2a4",
+            "_type": "Item",
+            "_props": {
+                "Name": "DefaultUsecUpperSuite",
+                "ShortName": "DefaultUsecUpperSuite",
+                "Description": "DefaultUsecUpperSuite",
+                "Side": [
+                    "Usec"
+                ],
+                "AvailableAsDefault": false,
+                "Body": "637b945722e2a933ed0e33c8",
+                "Hands": "6393082c1c8f182ad90c8961"
+            },
+            "_proto": "5cde9ec17d6c8b04723cf479"
+        },
         "5cd944d01388ce000a659df9": {
             "_id": "5cd944d01388ce000a659df9",
             "_name": "Lower",
@@ -8110,6 +8600,86 @@
                 ],
                 "Prefab": "Usec_5"
             }
+        },
+        "6353fe04f0de2294830a0dbe": {
+            "_id": "6353fe04f0de2294830a0dbe",
+            "_name": "BossBigPipe",
+            "_parent": "5fc100cf95572123ae738483",
+            "_type": "Item",
+            "_props": {
+                "Name": "BossBigPipe",
+                "ShortName": "BossBigPipe",
+                "Description": "BossBigPipe",
+                "Side": [
+                    "Savage"
+                ],
+                "Prefab": "BossBigPipe"
+            },
+            "_proto": "5fc50bddb4965a7a2f48c5af"
+        },
+        "6353fe34f0de2294830a0dbf": {
+            "_id": "6353fe34f0de2294830a0dbf",
+            "_name": "BossBirdEye",
+            "_parent": "5fc100cf95572123ae738483",
+            "_type": "Item",
+            "_props": {
+                "Name": "BossBirdEye",
+                "ShortName": "BossBirdEye",
+                "Description": "BossBirdEye",
+                "Side": [
+                    "Savage"
+                ],
+                "Prefab": "BossBirdEye"
+            },
+            "_proto": "5fc50bddb4965a7a2f48c5af"
+        },
+        "6353fea0a644ca0c510d1dd8": {
+            "_id": "6353fea0a644ca0c510d1dd8",
+            "_name": "BossKilla",
+            "_parent": "5fc100cf95572123ae738483",
+            "_type": "Item",
+            "_props": {
+                "Name": "BossKilla",
+                "ShortName": "BossKilla",
+                "Description": "BossKilla",
+                "Side": [
+                    "Savage"
+                ],
+                "Prefab": "BossKilla"
+            },
+            "_proto": "5fc50bddb4965a7a2f48c5af"
+        },
+        "6353fe74a644ca0c510d1dd6": {
+            "_id": "6353fe74a644ca0c510d1dd6",
+            "_name": "BossKnight",
+            "_parent": "5fc100cf95572123ae738483",
+            "_type": "Item",
+            "_props": {
+                "Name": "BossKnight",
+                "ShortName": "BossKnight",
+                "Description": "BossKnight",
+                "Side": [
+                    "Savage"
+                ],
+                "Prefab": "BossKnight"
+            },
+            "_proto": "5fc50bddb4965a7a2f48c5af"
+        },
+        "6353fec227f75f803206e60a": {
+            "_id": "6353fec227f75f803206e60a",
+            "_name": "BossTagilla",
+            "_parent": "5fc100cf95572123ae738483",
+            "_type": "Item",
+            "_props": {
+                "Name": "BossTagilla",
+                "ShortName": "BossTagilla",
+                "Description": "BossTagilla",
+                "Side": [
+                    "Savage"
+                ],
+                "Prefab": "BossTagilla"
+            },
+            "_proto": "5fc50bddb4965a7a2f48c5af"
         },
         "5cd943c31388ce000a659df5": {
             "_id": "5cd943c31388ce000a659df5",

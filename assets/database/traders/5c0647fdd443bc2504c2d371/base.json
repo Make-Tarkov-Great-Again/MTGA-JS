@@ -1,97 +1,119 @@
 {
     "_id": "5c0647fdd443bc2504c2d371",
-    "customization_seller": false,
-    "name": "Егерь",
-    "surname": "Егерь",
-    "nickname": "Jaeger",
-    "location": "",
+    "availableInRaid": false,
     "avatar": "/files/trader/avatar/5c06531a86f7746319710e1b.jpg",
-    "balance_rub": 80000000,
     "balance_dol": 0,
     "balance_eur": 0,
-    "unlockedByDefault": false,
-    "discount": 0,
-    "discount_end": 0,
+    "balance_rub": 7000000,
     "buyer_up": false,
     "currency": "RUB",
-    "nextResupply": 1631486713,
-    "repair": {
-        "availability": false,
-        "quality": 0.7,
-        "excluded_id_list": [],
-        "excluded_category": [],
-        "currency": "5449016a4bdc2d6f028b456f",
-        "currency_coefficient": 1
-    },
+    "customization_seller": false,
+    "discount": 0,
+    "discount_end": 0,
+    "gridHeight": 120,
     "insurance": {
         "availability": false,
-        "min_payment": 0,
-        "min_return_hour": 24,
+        "excluded_category": [],
         "max_return_hour": 36,
         "max_storage_time": 72,
-        "excluded_category": []
+        "min_payment": 0,
+        "min_return_hour": 24
     },
-    "medic": false,
-    "gridHeight": 120,
+    "items_buy": {
+        "category": [
+            "57864c8c245977548867e7f1",
+            "543be6674bdc2df1348b4569",
+            "543be5664bdc2dd4348b4569",
+            "57864ee62459775490116fc1",
+            "5447e1d04bdc2dff2f8b4567",
+            "5795f317245977243854e041",
+            "5671435f4bdc2d96058b4569",
+            "5448e53e4bdc2d60728b4567",
+            "5448e5284bdc2dcb718b4567",
+            "57864e4c24597754843f8723",
+            "57864ada245977548638de91",
+            "5447b6194bdc2d67278b4567",
+            "5447b6094bdc2dc3278b4567",
+            "5447b6254bdc2dc3278b4568"
+        ],
+        "id_list": [
+            "5755383e24597772cb798966"
+        ]
+    },
+    "items_buy_prohibited": {
+        "category": [],
+        "id_list": [
+            "62e910aaf957f2915e0a5e36"
+        ]
+    },
+    "location": "",
     "loyaltyLevels": [
         {
+            "buy_price_coef": 40,
+            "exchange_price_coef": 0,
+            "heal_price_coef": 0,
+            "insurance_price_coef": 10,
             "minLevel": 1,
             "minSalesSum": 0,
             "minStanding": 0,
-            "buy_price_coef": 40,
-            "repair_price_coef": 0,
-            "insurance_price_coef": 10,
-            "exchange_price_coef": 0,
-            "heal_price_coef": 0
+            "repair_price_coef": 0
         },
         {
+            "buy_price_coef": 40,
+            "exchange_price_coef": 0,
+            "heal_price_coef": 0,
+            "insurance_price_coef": 8,
             "minLevel": 15,
             "minSalesSum": 750000,
-            "minStanding": 0.2,
-            "buy_price_coef": 40,
-            "repair_price_coef": 0,
-            "insurance_price_coef": 8,
-            "exchange_price_coef": 0,
-            "heal_price_coef": 0
+            "minStanding": 0,
+            "repair_price_coef": 0
         },
         {
+            "buy_price_coef": 40,
+            "exchange_price_coef": 0,
+            "heal_price_coef": 0,
+            "insurance_price_coef": 6,
             "minLevel": 22,
             "minSalesSum": 1500000,
-            "minStanding": 0.35,
-            "buy_price_coef": 40,
-            "repair_price_coef": 0,
-            "insurance_price_coef": 6,
-            "exchange_price_coef": 0,
-            "heal_price_coef": 0
+            "minStanding": 0,
+            "repair_price_coef": 0
         },
         {
+            "buy_price_coef": 40,
+            "exchange_price_coef": 0,
+            "heal_price_coef": 0,
+            "insurance_price_coef": 4,
             "minLevel": 33,
             "minSalesSum": 2300000,
-            "minStanding": 0.5,
-            "buy_price_coef": 40,
-            "repair_price_coef": 0,
-            "insurance_price_coef": 4,
-            "exchange_price_coef": 0,
-            "heal_price_coef": 0
+            "minStanding": 0,
+            "repair_price_coef": 0
         }
     ],
+    "medic": false,
+    "name": "Егерь",
+    "nextResupply": 1631486713,
+    "nickname": "Jaeger",
+    "repair": {
+        "availability": false,
+        "currency": "5449016a4bdc2d6f028b456f",
+        "currency_coefficient": 1,
+        "excluded_category": [],
+        "excluded_id_list": [],
+        "quality": "0.7"
+    },
     "sell_category": [
-        "5b47574386f77428ca22b2ee",
-        "5b47574386f77428ca22b2ed",
-        "5b47574386f77428ca22b2f2",
-        "5b47574386f77428ca22b2f3",
-        "5b5f6f6c86f774093f2ecf0b",
-        "5b5f6fa186f77409407a7eb7",
-        "5b5f6f8786f77447ed563642",
-        "5b5f798886f77447ed5636b5",
+        "5b5f78e986f77447ed5636b1",
         "5b5f791486f774093f2ed3be",
+        "5b5f792486f77447ed5636b3",
+        "5b5f794b86f77409407a7f92",
+        "5b5f798886f77447ed5636b5",
         "5b5f7a0886f77409407a7f96",
-        "5b5f794b86f77409407a7f92",
+        "5b5f75b986f77447ec5d7710",
+        "5b47574386f77428ca22b346",
         "5b47574386f77428ca22b340",
-        "5b47574386f77428ca22b344",
-        "5b5f791486f774093f2ed3be",
-        "5b5f798886f77447ed5636b5",
-        "5b5f794b86f77409407a7f92",
-        "5b5f6f6c86f774093f2ecf0b"
-    ]
+        "5b47574386f77428ca22b2ed",
+        "5b47574386f77428ca22b2f2"
+    ],
+    "surname": "Егерь",
+    "unlockedByDefault": false
 }

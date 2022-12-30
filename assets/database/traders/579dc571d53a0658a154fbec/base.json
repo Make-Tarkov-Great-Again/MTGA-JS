@@ -1,60 +1,88 @@
 {
     "_id": "579dc571d53a0658a154fbec",
-    "customization_seller": false,
-    "name": "<Настоящее имя неизвестно>",
-    "surname": "Fence",
-    "nickname": "Fence",
-    "location": "unknown",
+    "availableInRaid": false,
     "avatar": "/files/trader/avatar/579dc571d53a0658a154fbec.jpg",
-    "balance_rub": 500000,
     "balance_dol": 0,
     "balance_eur": 0,
-    "unlockedByDefault": true,
-    "discount": 0,
-    "discount_end": 0,
+    "balance_rub": 7000000,
     "buyer_up": true,
     "currency": "RUB",
-    "nextResupply": 1631484143,
-    "repair": {
-        "availability": false,
-        "quality": 2,
-        "excluded_id_list": [],
-        "excluded_category": [],
-        "currency": "5449016a4bdc2d6f028b456f",
-        "currency_coefficient": 1
-    },
+    "customization_seller": false,
+    "discount": 0,
+    "discount_end": 0,
+    "gridHeight": 120,
     "insurance": {
         "availability": false,
+        "excluded_category": [],
+        "max_return_hour": 80,
+        "max_storage_time": 50,
         "min_payment": 0,
-        "min_return_hour": 0,
-        "max_return_hour": 0,
-        "max_storage_time": 24,
-        "excluded_category": []
+        "min_return_hour": 30
     },
-    "medic": false,
-    "gridHeight": 120,
+    "location": "unknown",
     "loyaltyLevels": [
         {
+            "buy_price_coef": 60,
+            "exchange_price_coef": 0,
+            "heal_price_coef": 0,
+            "insurance_price_coef": 30,
             "minLevel": 1,
             "minSalesSum": 0,
             "minStanding": 0,
-            "buy_price_coef": 60,
-            "repair_price_coef": 0,
-            "insurance_price_coef": 0,
-            "exchange_price_coef": 0,
-            "heal_price_coef": 0
+            "repair_price_coef": 300
         },
         {
+            "buy_price_coef": 60,
+            "exchange_price_coef": 0,
+            "heal_price_coef": 0,
+            "insurance_price_coef": 30,
             "minLevel": 1,
             "minSalesSum": 0,
             "minStanding": 6,
-            "buy_price_coef": 60,
-            "repair_price_coef": 0,
-            "insurance_price_coef": 0,
-            "exchange_price_coef": 0,
-            "heal_price_coef": 0
+            "repair_price_coef": 250
         }
     ],
+    "medic": false,
+    "name": "<Настоящее имя неизвестно>",
+    "nextResupply": 1631484143,
+    "nickname": "Fence",
+    "repair": {
+        "availability": false,
+        "currency": "5449016a4bdc2d6f028b456f",
+        "currency_coefficient": 1,
+        "excluded_category": [],
+        "excluded_id_list": [],
+        "quality": "2"
+    },
+    "items_buy": {
+        "id_list": [],
+        "category": [
+            "5661632d4bdc2d903d8b456b",
+            "5447e0e74bdc2d3c308b4567",
+            "543be5664bdc2dd4348b4569",
+            "5448e5284bdc2dcb718b4567",
+            "5448e53e4bdc2d60728b4567",
+            "5448fe124bdc2da5018b4567",
+            "543be5f84bdc2dd4348b456a",
+            "5422acb9af1c889c16000029",
+            "543be6674bdc2df1348b4569",
+            "567849dd4bdc2d150f8b456e",
+            "543be6564bdc2df4348b4568",
+            "5447e1d04bdc2dff2f8b4567",
+            "5448eb774bdc2d0a728b4567",
+            "5448ecbe4bdc2d60728b4568",
+            "616eb7aea207f41933308f46"
+        ]
+    },
+    "items_buy_prohibited": {
+        "id_list": [
+            "5449016a4bdc2d6f028b456f",
+            "5696686a4bdc2da3298b456a",
+            "569668774bdc2da2298b4568",
+            "62e910aaf957f2915e0a5e36"
+        ],
+        "category": []
+    },
     "sell_category": [
         "5b47574386f77428ca22b33e",
         "5b47574386f77428ca22b33f",
@@ -85,5 +113,7 @@
         "5b5f760586f774093e6cb509",
         "5b5f761f86f774094242f1a1",
         "5b5f764186f77447ec5d7714"
-    ]
+    ],
+    "surname": "Fence",
+    "unlockedByDefault": true
 }
