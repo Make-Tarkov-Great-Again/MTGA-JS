@@ -1345,6 +1345,12 @@
       "slotId": "mod_handguard"
     },
     {
+      "_id": "62bc83b894b0bdy72e2a6d5d",
+      "_tpl": "638f1ff84822287cad04be9d",
+      "parentId": "62bc83be94a0fde72e0a7313",
+      "slotId": "mod_handguard"
+    },
+    {
       "_id": "62bc83be94a0fde72e0a7314",
       "_tpl": "58c157be86f77403c74b2bb6",
       "parentId": "62bc83be94a0fde72e0a7313",
@@ -2492,6 +2498,12 @@
       "slotId": "mod_handguard"
     },
     {
+      "_id": "62bc83bh94a02de72e0a73hb",
+      "_tpl": "637f57a68d137b27f70c4968",
+      "parentId": "62bc83bf94a0fde72e0a73ea",
+      "slotId": "mod_handguard"
+    },
+    {
       "_id": "62bc83bf94a0fde72e0a73eb",
       "_tpl": "5ae30bad5acfc400185c2dc4",
       "parentId": "62bc83bf94a0fde72e0a73e6",
@@ -2566,6 +2578,12 @@
       "_id": "62bc83bf94a0fde72e0a73f7",
       "_tpl": "5ae30db85acfc408fb139a05",
       "parentId": "62bc83bf94a0fde72e0a73f3",
+      "slotId": "mod_handguard"
+    },
+    {
+      "_id": "62bc83bh94b02fe72e0a63hb",
+      "_tpl": "637f57a68d137b27f70c4968",
+      "parentId": "62bc83bf94a0fde72e0a73f7",
       "slotId": "mod_handguard"
     },
     {
