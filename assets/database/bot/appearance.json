@@ -309,6 +309,27 @@
 			"6033a3fee29c9f6c9b14e74e"
 		]
 	},
+	"bossZryachiy": {
+		"Voice": "SectantPriest",
+		"Body": "63628b825c1b30a79d09ccb9",
+		"Head": "636129784aa74b8fe30ab418",
+		"Hands": "5cc2e68f14c02e28b47de290",
+		"Feet": "6361216278f9ab270a0a48d9"
+	},
+	"followerZryachiy": {
+		"Voice": "SectantPriest",
+		"Body": "5fb53d0b7b5d1342ee24bd64",
+		"Head": [
+			"5fb5297a0359a84b77066e56",
+			"5fb52a3a1c69e5198e234118",
+			"5fb52a537b5d1342ee24bd57"
+		],
+		"Hands": "5cc2e68f14c02e28b47de290",
+		"Feet": [
+			"5fb535bd1c69e5198e234125",
+			"5fb535cf1c69e5198e234126"
+		]
+	},
 	"bossBully": {
 		"Voice": "BossBully",
 		"Body": "5d28adcb86f77429242fc893",

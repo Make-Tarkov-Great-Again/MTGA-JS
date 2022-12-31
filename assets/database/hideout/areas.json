@@ -3768,6 +3768,95 @@
 			"type": 21
 		},
 		{
+			"_id": "6377a9b9a93bde8fa30eb79a",
+			"craftGivesExp": true,
+			"displayLevel": true,
+			"enableAreaRequirements": true,
+			"enabled": true,
+			"needsFuel": false,
+			"requirements": [
+				{
+					"areaType": 22,
+					"requiredLevel": 6,
+					"type": "Area"
+				}
+			],
+			"stages": {
+				"0": {
+					"autoUpgrade": false,
+					"bonuses": [],
+					"constructionTime": 0,
+					"description": "",
+					"displayInterface": true,
+					"improvements": [],
+					"requirements": [],
+					"slots": 0
+				},
+				"1": {
+					"autoUpgrade": false,
+					"bonuses": [],
+					"constructionTime": 14400,
+					"description": "",
+					"displayInterface": true,
+					"improvements": [],
+					"requirements": [
+						{
+							"count": 1,
+							"isEncoded": false,
+							"isFunctional": false,
+							"templateId": "590c2e1186f77425357b6124",
+							"type": "Item"
+						},
+						{
+							"count": 1,
+							"isEncoded": false,
+							"isFunctional": false,
+							"templateId": "59e35de086f7741778269d84",
+							"type": "Item"
+						},
+						{
+							"count": 1,
+							"isEncoded": false,
+							"isFunctional": false,
+							"templateId": "5d40419286f774318526545f",
+							"type": "Item"
+						},
+						{
+							"count": 3,
+							"isEncoded": false,
+							"isFunctional": false,
+							"templateId": "57347c77245977448d35f6e2",
+							"type": "Item"
+						},
+						{
+							"count": 3,
+							"isEncoded": false,
+							"isFunctional": false,
+							"templateId": "57347c5b245977448d35f6e1",
+							"type": "Item"
+						},
+						{
+							"count": 1,
+							"isEncoded": false,
+							"isFunctional": false,
+							"templateId": "590c5bbd86f774785762df04",
+							"type": "Item"
+						},
+						{
+							"count": 1,
+							"isEncoded": false,
+							"isFunctional": false,
+							"templateId": "5734795124597738002c6176",
+							"type": "Item"
+						}
+					],
+					"slots": 0
+				}
+			},
+			"takeFromSlotLocked": false,
+			"type": 23
+		},
+		{
 			"_id": "637b39f02e873739ec490215",
 			"craftGivesExp": false,
 			"displayLevel": false,
@@ -3861,7 +3950,7 @@
 									"production": false,
 									"type": "HealthRegeneration",
 									"value": 2,
-									"visible": false
+									"visible": true
 								},
 								{
 									"passive": true,
@@ -3876,7 +3965,7 @@
 									"skillType": "Physical",
 									"type": "SkillGroupLevelingBoost",
 									"value": 2,
-									"visible": false
+									"visible": true
 								}
 							],
 							"id": "639199277a9178252d38c98f",
