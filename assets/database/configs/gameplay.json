@@ -132,18 +132,21 @@
         },
         "airdropSettings": {
             "airdropChancePercent": {
-                "bigmap": 100,
-                "woods": 100,
-                "lighthouse": 100,
-                "shoreline": 100,
-                "interchange": 100,
-                "reserve": 100
+                "bigmap": 20,
+                "woods": 25,
+                "lighthouse": 20,
+                "shoreline": 20,
+                "interchange": 20,
+                "reserve": 10,
+                "tarkovStreets": 12
             },
             "airdropMinStartTimeSeconds": 60,
             "airdropMaxStartTimeSeconds": 300,
             "planeMinFlyHeight": 400,
             "planeMaxFlyHeight": 500,
-            "planeVolume": 0.5
+            "planeVolume": 0.5,
+            "planeSpeed": 65,
+            "crateFallSpeed": 3
         }
     },
     "trading": {
