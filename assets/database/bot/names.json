@@ -2,6 +2,12 @@
   "bossGluhar": [
     "Gluhkar"
   ],
+  "bossZryachiy": [
+    "Zryachiy"
+  ],
+  "followerZryachiy": [
+    "Сектант"
+  ],
   "generalFollower": [
     "Кумулятив",
     "Летёха",
@@ -255,6 +261,7 @@
     "Black Knight"
   ],
   "gifter": [
+    "Santa Claus",
     "Дед Мороз"
   ],
   "sectantpriest": [
@@ -264,7 +271,9 @@
     "Сектант"
   ],
   "normal": [
-    "Nehax", "Bude", "King",
+    "Nehax",
+    "Bude",
+    "King",
     "SlejmUr",
     "life",
     "hackintosh12945",

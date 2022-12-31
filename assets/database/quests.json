@@ -42,6 +42,7 @@
                         "dynamicLocale": false,
                         "id": "596737cb86f77463a8115efd",
                         "index": 3,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -252,10 +253,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5968ec9986f7741ddd6c1012",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -275,6 +278,7 @@
                         "dynamicLocale": false,
                         "id": "5967920f86f77468d219d632",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -298,10 +302,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5975de1f86f7744ca53b7c82",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -356,6 +362,7 @@
         "location": "56f40101d2720b2a4d8b45d6",
         "name": "5936da9e86f7742d65037edf name",
         "note": "5936da9e86f7742d65037edf note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -543,6 +550,7 @@
         "location": "5704e3c2d2720bac5b8b4567",
         "name": "59674cd986f7744ab26e32f2 name",
         "note": "59674cd986f7744ab26e32f2 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -704,10 +712,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5968929e86f7740d121082d3",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -727,6 +737,7 @@
                         "dynamicLocale": false,
                         "id": "59674fe586f7744f4e358aa2",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -831,6 +842,7 @@
         "location": "any",
         "name": "59674eb386f774539f14813a name",
         "note": "59674eb386f774539f14813a note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -2171,10 +2183,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5968edc086f77420d2328014",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -2194,6 +2208,7 @@
                         "dynamicLocale": false,
                         "id": "59689eb886f7740d137ebfc3",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -2218,6 +2233,7 @@
         "location": "any",
         "name": "5967733e86f774602332fc84 name",
         "note": "5967733e86f774602332fc84 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -2352,10 +2368,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5cb6f32986f7746ef55e17a0",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -2375,6 +2393,7 @@
                         "dynamicLocale": false,
                         "id": "59689f7586f7740d14064726",
                         "index": 2,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -2429,6 +2448,7 @@
         "location": "55f2d3fd4bdc2d5f408b4567",
         "name": "59689ee586f7740d1570bbd5 name",
         "note": "59689ee586f7740d1570bbd5 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -2629,6 +2649,7 @@
         "location": "56f40101d2720b2a4d8b45d6",
         "name": "59689fbd86f7740d137ebfc4 name",
         "note": "59689fbd86f7740d137ebfc4 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -3881,10 +3902,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5ec1398886f7561e047757a5",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -3904,6 +3927,7 @@
                         "dynamicLocale": false,
                         "id": "596a20ac86f7741ddf17dbf4",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -3958,6 +3982,7 @@
         "location": "any",
         "name": "596a204686f774576d4c95de name",
         "note": "596a204686f774576d4c95de note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -4244,6 +4269,7 @@
                         "dynamicLocale": false,
                         "id": "597867e986f7741b265c6bd3",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -4263,6 +4289,7 @@
                         "dynamicLocale": false,
                         "id": "5ab8d44c86f7745b2325bd0c",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -4301,6 +4328,7 @@
         "location": "any",
         "name": "596b36c586f77450d6045ad2 name",
         "note": "596b36c586f77450d6045ad2 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -4483,10 +4511,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "596b44b686f77457cb50ecca",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -4506,6 +4536,7 @@
                         "dynamicLocale": false,
                         "id": "596b450986f7745a7e510b54",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -4624,6 +4655,7 @@
         "location": "56f40101d2720b2a4d8b45d6",
         "name": "596b43fb86f77457ca186186 name",
         "note": "596b43fb86f77457ca186186 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -4661,6 +4693,10 @@
                             "_id": "634acfb4da5c23324e07c97e",
                             "_tpl": "59e6687d86f77411d949b251",
                             "upd": {
+                                "Repairable": {
+                                    "Durability": 100,
+                                    "MaxDurability": 100
+                                },
                                 "StackObjectsCount": 1
                             }
                         },
@@ -4827,7 +4863,9 @@
                                             "6193a720f8ee7e52e42109ed",
                                             "624c2e8614da335f1e034d8c",
                                             "61a4c8884f95bc3b2c5dc96f",
-                                            "620109578d82e67e7911abf2"
+                                            "620109578d82e67e7911abf2",
+                                            "633ec7c2a6918cb895019c6c",
+                                            "63088377b5cd696784087147"
                                         ]
                                     }
                                 }
@@ -4888,6 +4926,7 @@
         "location": "any",
         "name": "596b455186f77457cb50eccb name",
         "note": "596b455186f77457cb50eccb note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -4990,7 +5029,7 @@
                             "slotId": "mod_magazine"
                         }
                     ],
-                    "loyaltyLevel": 1,
+                    "loyaltyLevel": 2,
                     "target": "634acfb4da5c23324e07c98c",
                     "traderId": "58330581ace78e27b8b10cee",
                     "type": "AssortmentUnlock"
@@ -5036,10 +5075,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5979ee2986f7743ec214c7a4",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -5059,6 +5100,7 @@
                         "dynamicLocale": false,
                         "id": "5979ee4586f7743ec214c7a5",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -5113,6 +5155,7 @@
         "location": "any",
         "name": "5979ed3886f77431307dc512 name",
         "note": "5979ed3886f77431307dc512 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
