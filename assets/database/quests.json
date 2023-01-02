@@ -81,6 +81,7 @@
         "location": "any",
         "name": "5936d90786f7742b1420ba5b name",
         "note": "5936d90786f7742b1420ba5b note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -1033,10 +1034,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5968941f86f7740d1570bbd2",
                         "index": 2,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -1052,10 +1055,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5968943f86f7740d137ebfc2",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -1075,6 +1080,7 @@
                         "dynamicLocale": false,
                         "id": "5968948986f7740d121082d4",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -1184,6 +1190,7 @@
         "location": "any",
         "name": "5967530a86f77462ba22226b name",
         "note": "5967530a86f77462ba22226b note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -1328,10 +1335,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5968ed3186f77420d2328013",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -1351,6 +1360,7 @@
                         "dynamicLocale": false,
                         "id": "59675e1d86f77414b07f137d",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -1370,6 +1380,7 @@
                         "dynamicLocale": false,
                         "id": "5967938c86f77468cf5f9f54",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -1452,6 +1463,7 @@
         "location": "5704e3c2d2720bac5b8b4567",
         "name": "59675d6c86f7740a842fc482 name",
         "note": "59675d6c86f7740a842fc482 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -2823,6 +2835,7 @@
         "location": "56f40101d2720b2a4d8b45d6",
         "name": "5968eb3186f7741dde183a4d name",
         "note": "5968eb3186f7741dde183a4d note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -2933,10 +2946,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5969f98286f774576d4c9542",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -2956,6 +2971,7 @@
                         "dynamicLocale": false,
                         "id": "5969f99286f77456630ea442",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -3010,6 +3026,7 @@
         "location": "any",
         "name": "5969f90786f77420d2328015 name",
         "note": "5969f90786f77420d2328015 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -3133,10 +3150,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5969fa4886f7741ddb481544",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -3156,6 +3175,7 @@
                         "dynamicLocale": false,
                         "id": "5969fa8986f7741ddc2d3154",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -3274,6 +3294,7 @@
         "location": "56f40101d2720b2a4d8b45d6",
         "name": "5969f9e986f7741dde183a50 name",
         "note": "5969f9e986f7741dde183a50 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -3377,10 +3398,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "596a0e7086f7741ddf17dbef",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -3447,6 +3470,7 @@
                         "dynamicLocale": false,
                         "id": "596a0e8086f7741ddd6c104c",
                         "index": 2,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -3526,6 +3550,7 @@
         "location": "5704e3c2d2720bac5b8b4567",
         "name": "596a0e1686f7741ddf17dbee name",
         "note": "596a0e1686f7741ddf17dbee note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -3602,6 +3627,7 @@
                         "dynamicLocale": false,
                         "id": "596a10d886f7741ddf17dbf0",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -3676,6 +3702,7 @@
         "location": "any",
         "name": "596a101f86f7741ddb481582 name",
         "note": "596a101f86f7741ddb481582 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -3731,10 +3758,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "596a1f0486f77456630ea4d2",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -3754,6 +3783,7 @@
                         "dynamicLocale": false,
                         "id": "596a1f1586f77420d2328077",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -3795,6 +3825,7 @@
         "location": "any",
         "name": "596a1e6c86f7741ddc2d3206 name",
         "note": "596a1e6c86f7741ddc2d3206 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -4055,10 +4086,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "596b46d886f77457ca186189",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -4074,10 +4107,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "596b46ec86f77457c7006f89",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -4097,6 +4132,7 @@
                         "dynamicLocale": false,
                         "id": "596b470c86f77457ca18618a",
                         "index": 2,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -4116,6 +4152,7 @@
                         "dynamicLocale": false,
                         "id": "596b472686f77457c7006f8a",
                         "index": 3,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -4157,6 +4194,7 @@
         "location": "any",
         "name": "596a218586f77420d232807c name",
         "note": "596a218586f77420d232807c note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -5296,10 +5334,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5979ef4586f77431307dc513",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -5319,6 +5359,7 @@
                         "dynamicLocale": false,
                         "id": "5979ef7986f77431307dc514",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -5375,6 +5416,7 @@
         "location": "56f40101d2720b2a4d8b45d6",
         "name": "5979eee086f774311955e614 name",
         "note": "5979eee086f774311955e614 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -7367,6 +7409,7 @@
         "location": "56f40101d2720b2a4d8b45d6",
         "name": "59c124d686f774189b3c843f name",
         "note": "59c124d686f774189b3c843f note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -11090,6 +11133,7 @@
                         "dynamicLocale": false,
                         "id": "5a27d81a86f774472a6e0456",
                         "index": 2,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -11111,6 +11155,7 @@
                         "dynamicLocale": false,
                         "id": "5a27d85286f77448d82084e7",
                         "index": 3,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -11221,6 +11266,7 @@
         "location": "5704e554d2720bac5b8b456e",
         "name": "5a27b75b86f7742e97191958 name",
         "note": "5a27b75b86f7742e97191958 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -11589,6 +11635,7 @@
         "location": "56f40101d2720b2a4d8b45d6",
         "name": "5a27b7a786f774579c3eb376 name",
         "note": "5a27b7a786f774579c3eb376 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -11829,6 +11876,7 @@
         "location": "5704e554d2720bac5b8b456e",
         "name": "5a27b7d686f77460d847e6a6 name",
         "note": "5a27b7d686f77460d847e6a6 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -12056,10 +12104,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5a27ffb186f774192932b3d5",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -12079,6 +12129,7 @@
                         "dynamicLocale": false,
                         "id": "5a27ffc786f77415ca58ae47",
                         "index": 2,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -12130,10 +12181,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5a294f1686f774340c7b7e4a",
                         "index": 5,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -12153,6 +12206,7 @@
                         "dynamicLocale": false,
                         "id": "5a294f3386f77433e923f9cd",
                         "index": 6,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -12215,6 +12269,7 @@
         "location": "5704e554d2720bac5b8b456e",
         "name": "5a27b80086f774429a5d7e20 name",
         "note": "5a27b80086f774429a5d7e20 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -12338,10 +12393,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5cb5fd3d86f7746ef64ca33c",
                         "index": 2,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -12361,6 +12418,7 @@
                         "dynamicLocale": false,
                         "id": "5a28023f86f774528903dd1e",
                         "index": 3,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -12583,6 +12641,7 @@
         "location": "5704e554d2720bac5b8b456e",
         "name": "5a27b87686f77460de0252a8 name",
         "note": "5a27b87686f77460de0252a8 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -15672,10 +15731,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5ec137962d5b8510d548aef1",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -15695,6 +15756,7 @@
                         "dynamicLocale": false,
                         "id": "5ec137dcc367fc6781104613",
                         "index": 2,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -15749,6 +15811,7 @@
         "location": "any",
         "name": "5a27c99a86f7747d2c6bdd8e name",
         "note": "5a27c99a86f7747d2c6bdd8e note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -15918,6 +15981,7 @@
                         "dynamicLocale": false,
                         "id": "5a27d34586f7744e1115b327",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -15972,6 +16036,7 @@
         "location": "any",
         "name": "5a27d2af86f7744e1115b323 name",
         "note": "5a27d2af86f7744e1115b323 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -16311,6 +16376,7 @@
         "location": "5704e554d2720bac5b8b456e",
         "name": "5a68661a86f774500f48afb0 name",
         "note": "5a68661a86f774500f48afb0 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -17190,7 +17256,7 @@
                     "_props": {
                         "compareMethod": ">=",
                         "dynamicLocale": false,
-                        "id": "5acf375f86f7741bb8377ff7",
+                        "id": "639afb227c898a131e1cff88",
                         "index": 0,
                         "parentId": "",
                         "value": 2,
@@ -17209,6 +17275,7 @@
         "location": "any",
         "name": "5ac23c6186f7741247042bad name",
         "note": "5ac23c6186f7741247042bad note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -17218,7 +17285,7 @@
                     "id": "60cc74a92b555f16df5c41af",
                     "index": 0,
                     "type": "Experience",
-                    "value": 3200
+                    "value": 800
                 },
                 {
                     "findInRaid": true,
@@ -17226,90 +17293,89 @@
                     "index": 1,
                     "items": [
                         {
-                            "_id": "634acfb4da5c23324e07c77c",
+                            "_id": "63b05b5fd6c6b6c6cf03cfeb",
                             "_tpl": "5449016a4bdc2d6f028b456f",
                             "upd": {
-                                "StackObjectsCount": 20000
+                                "StackObjectsCount": 10000
                             }
                         }
                     ],
-                    "target": "634acfb4da5c23324e07c77c",
+                    "target": "63b05b5fd6c6b6c6cf03cfeb",
                     "type": "Item",
-                    "value": "20000"
-                },
-                {
-                    "findInRaid": true,
-                    "id": "60cc74c665e4664318606aec",
-                    "index": 2,
-                    "items": [
-                        {
-                            "_id": "634acfb4da5c23324e07c77d",
-                            "_tpl": "5de652c31b7e3716273428be",
-                            "upd": {
-                                "FireMode": {
-                                    "FireMode": "single"
-                                },
-                                "StackObjectsCount": 1
-                            }
-                        },
-                        {
-                            "_id": "634acfb4da5c23324e07c77e",
-                            "_tpl": "5de653abf76fdc1ce94a5a2a",
-                            "parentId": "634acfb4da5c23324e07c77d",
-                            "slotId": "mod_magazine"
-                        },
-                        {
-                            "_id": "634acfb4da5c23324e07c77f",
-                            "_tpl": "5de655be4a9f347bc92edb88",
-                            "parentId": "634acfb4da5c23324e07c77d",
-                            "slotId": "mod_stock"
-                        },
-                        {
-                            "_id": "634acfb4da5c23324e07c780",
-                            "_tpl": "5de65547883dde217541644b",
-                            "parentId": "634acfb4da5c23324e07c77d",
-                            "slotId": "mod_barrel"
-                        },
-                        {
-                            "_id": "634acfb4da5c23324e07c781",
-                            "_tpl": "5de6556a205ddc616a6bc4f7",
-                            "parentId": "634acfb4da5c23324e07c780",
-                            "slotId": "mod_muzzle"
-                        },
-                        {
-                            "_id": "634acfb4da5c23324e07c782",
-                            "_tpl": "5de6558e9f98ac2bc65950fc",
-                            "parentId": "634acfb4da5c23324e07c77d",
-                            "slotId": "mod_mount"
-                        }
-                    ],
-                    "target": "634acfb4da5c23324e07c77d",
-                    "type": "Item",
-                    "value": "1"
-                },
-                {
-                    "findInRaid": true,
-                    "id": "60cc74da65e4664318606aed",
-                    "index": 3,
-                    "items": [
-                        {
-                            "_id": "634acfb4da5c23324e07c783",
-                            "_tpl": "5f0596629e22f464da6bbdd9",
-                            "upd": {
-                                "StackObjectsCount": 20
-                            }
-                        }
-                    ],
-                    "target": "634acfb4da5c23324e07c783",
-                    "type": "Item",
-                    "value": "20"
+                    "value": "10000"
                 },
                 {
                     "id": "60cc74ac65e4664318606aeb",
                     "index": 4,
                     "target": "5a7c2eca46aef81a7ca2145d",
                     "type": "TraderStanding",
-                    "value": "0.02"
+                    "value": "0.01"
+                },
+                {
+                    "findInRaid": true,
+                    "id": "639898a3eee7ff72370f7dd6",
+                    "index": 5,
+                    "items": [
+                        {
+                            "_id": "63b05b5fd6c6b6c6cf03cfec",
+                            "_tpl": "57347c77245977448d35f6e2",
+                            "upd": {
+                                "StackObjectsCount": 1
+                            }
+                        }
+                    ],
+                    "target": "63b05b5fd6c6b6c6cf03cfec",
+                    "type": "Item",
+                    "value": "1"
+                },
+                {
+                    "findInRaid": true,
+                    "id": "639898b08871e1272b10ccf8",
+                    "index": 6,
+                    "items": [
+                        {
+                            "_id": "63b05b5fd6c6b6c6cf03cfed",
+                            "_tpl": "57347c5b245977448d35f6e1",
+                            "upd": {
+                                "StackObjectsCount": 1
+                            }
+                        }
+                    ],
+                    "target": "63b05b5fd6c6b6c6cf03cfed",
+                    "type": "Item",
+                    "value": "1"
+                },
+                {
+                    "findInRaid": true,
+                    "id": "639898da05aa481907106506",
+                    "index": 7,
+                    "items": [
+                        {
+                            "_id": "63b05b5fd6c6b6c6cf03cfee",
+                            "_tpl": "5d6e68c4a4b9361b93413f79",
+                            "upd": {
+                                "StackObjectsCount": 20
+                            }
+                        }
+                    ],
+                    "target": "63b05b5fd6c6b6c6cf03cfee",
+                    "type": "Item",
+                    "unknown": true,
+                    "value": "20"
+                },
+                {
+                    "id": "63a19af0fcae11642e50f9b1",
+                    "index": 8,
+                    "items": [
+                        {
+                            "_id": "63b05b5fd6c6b6c6cf03cfef",
+                            "_tpl": "56ea8d2fd2720b7c698b4570"
+                        }
+                    ],
+                    "loyaltyLevel": 1,
+                    "target": "63b05b5fd6c6b6c6cf03cfef",
+                    "traderId": "5a7c2eca46aef81a7ca2145d",
+                    "type": "AssortmentUnlock"
                 }
             ]
         },
@@ -17401,7 +17467,7 @@
                         "id": "5acf37a186f7741843346d0c",
                         "index": 0,
                         "parentId": "",
-                        "value": 11,
+                        "value": 5,
                         "visibilityConditions": []
                     },
                     "dynamicLocale": false
@@ -17433,6 +17499,7 @@
         "location": "any",
         "name": "5ac2426c86f774138762edfe name",
         "note": "5ac2426c86f774138762edfe note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -17508,7 +17575,7 @@
                     "id": "5c950c8086f77455192fa441",
                     "index": 0,
                     "type": "Experience",
-                    "value": 4000
+                    "value": 2000
                 },
                 {
                     "findInRaid": true,
@@ -17519,13 +17586,13 @@
                             "_id": "634acfb4da5c23324e07c790",
                             "_tpl": "5449016a4bdc2d6f028b456f",
                             "upd": {
-                                "StackObjectsCount": 60000
+                                "StackObjectsCount": 15000
                             }
                         }
                     ],
                     "target": "634acfb4da5c23324e07c790",
                     "type": "Item",
-                    "value": "60000"
+                    "value": "15000"
                 },
                 {
                     "findInRaid": true,
@@ -17566,7 +17633,7 @@
                     "index": 4,
                     "target": "5a7c2eca46aef81a7ca2145d",
                     "type": "TraderStanding",
-                    "value": "0.02"
+                    "value": "0.01"
                 }
             ]
         },
@@ -17659,7 +17726,7 @@
                         "id": "5acf37d486f7741841752ffc",
                         "index": 0,
                         "parentId": "",
-                        "value": 12,
+                        "value": 7,
                         "visibilityConditions": []
                     },
                     "dynamicLocale": false
@@ -17691,6 +17758,7 @@
         "location": "any",
         "name": "5ac2428686f77412450b42bf name",
         "note": "5ac2428686f77412450b42bf note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -17700,7 +17768,7 @@
                     "id": "60cc75dea7d63f18200a24e0",
                     "index": 0,
                     "type": "Experience",
-                    "value": 5900
+                    "value": 2800
                 },
                 {
                     "findInRaid": true,
@@ -17832,7 +17900,7 @@
         "type": "WeaponAssembly"
     },
     "5ac242ab86f77412464f68b4": {
-        "QuestName": "Gunsmith Part 5",
+        "QuestName": "Gunsmith Part 16",
         "_id": "5ac242ab86f77412464f68b4",
         "canShowNotificationsInGame": true,
         "changeQuestMessageText": "5ac242ab86f77412464f68b4 changeQuestMessageText",
@@ -17922,12 +17990,12 @@
                         "availableAfter": 0,
                         "dynamicLocale": false,
                         "id": "51d33b2d4fad9e61441772c0",
-                        "index": 1,
+                        "index": 2,
                         "parentId": "",
                         "status": [
                             4
                         ],
-                        "target": "5ac244eb86f7741356335af1",
+                        "target": "5ae3280386f7742a41359364",
                         "visibilityConditions": []
                     },
                     "dynamicLocale": false
@@ -18040,7 +18108,7 @@
         "type": "WeaponAssembly"
     },
     "5ac244c486f77413e12cf945": {
-        "QuestName": "Gunsmith Part 6",
+        "QuestName": "Gunsmith Part 13",
         "_id": "5ac244c486f77413e12cf945",
         "canShowNotificationsInGame": true,
         "changeQuestMessageText": "5ac244c486f77413e12cf945 changeQuestMessageText",
@@ -18135,7 +18203,7 @@
                         "status": [
                             4
                         ],
-                        "target": "5ac242ab86f77412464f68b4",
+                        "target": "5b47799d86f7746c5d6a5fd8",
                         "visibilityConditions": []
                     },
                     "dynamicLocale": false
@@ -18214,7 +18282,7 @@
         "type": "WeaponAssembly"
     },
     "5ac244eb86f7741356335af1": {
-        "QuestName": "Gunsmith Part 4",
+        "QuestName": "Gunsmith Part 7",
         "_id": "5ac244eb86f7741356335af1",
         "canShowNotificationsInGame": true,
         "changeQuestMessageText": "5ac244eb86f7741356335af1 changeQuestMessageText",
@@ -18401,6 +18469,7 @@
                         "dynamicLocale": false,
                         "id": "5ac7a4ba86f77409f3423628",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -18422,6 +18491,7 @@
                         "dynamicLocale": false,
                         "id": "5ac7a51a86f774738a4ffc96",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -18533,6 +18603,7 @@
         "location": "55f2d3fd4bdc2d5f408b4567",
         "name": "5ac345dc86f774288030817f name",
         "note": "5ac345dc86f774288030817f note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -18624,10 +18695,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5ac502a786f7740bde1b000c",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -18647,6 +18720,7 @@
                         "dynamicLocale": false,
                         "id": "5ac5055a86f7745cae22b582",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -18662,10 +18736,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5ac505c386f7740be0424d19",
                         "index": 2,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -18685,6 +18761,7 @@
                         "dynamicLocale": false,
                         "id": "5ac505e186f7740bdf2ceabe",
                         "index": 3,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -18700,10 +18777,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5ac5061386f77417e429ce7a",
                         "index": 4,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -18723,6 +18802,7 @@
                         "dynamicLocale": false,
                         "id": "5ac5062586f774587c327395",
                         "index": 5,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -18777,6 +18857,7 @@
         "location": "any",
         "name": "5ac3460c86f7742880308185 name",
         "note": "5ac3460c86f7742880308185 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -18935,10 +19016,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5ac6248586f77416781dd3a3",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -18958,6 +19041,7 @@
                         "dynamicLocale": false,
                         "id": "5ac624b286f77416781dd3ac",
                         "index": 2,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -19020,6 +19104,7 @@
         "location": "56f40101d2720b2a4d8b45d6",
         "name": "5ac3462b86f7741d6118b983 name",
         "note": "5ac3462b86f7741d6118b983 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -19092,10 +19177,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5ac5081086f7740bde1b002f",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -19115,6 +19202,7 @@
                         "dynamicLocale": false,
                         "id": "5ac5082586f77418804f7d4c",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -19130,10 +19218,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5ac5083d86f7740be2744eed",
                         "index": 2,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -19153,6 +19243,7 @@
                         "dynamicLocale": false,
                         "id": "5ac5084d86f7740bde1b0031",
                         "index": 3,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -19207,6 +19298,7 @@
         "location": "any",
         "name": "5ac3464c86f7741d651d6877 name",
         "note": "5ac3464c86f7741d651d6877 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -20267,10 +20359,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5ac5ee9986f7746e7a509a26",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -20290,6 +20384,7 @@
                         "dynamicLocale": false,
                         "id": "5ac5eee986f77401fd341c9e",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -20305,10 +20400,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5ac5ef2a86f7741c5804f9f5",
                         "index": 2,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -20328,6 +20425,7 @@
                         "dynamicLocale": false,
                         "id": "5ac5ef5686f77416ca60f644",
                         "index": 3,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -20343,10 +20441,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5ac5ef9886f7746e7a509a2d",
                         "index": 4,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -20366,6 +20466,7 @@
                         "dynamicLocale": false,
                         "id": "5ac5eff886f7740f43322559",
                         "index": 5,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -20420,6 +20521,7 @@
         "location": "any",
         "name": "5ac3475486f7741d6224abd3 name",
         "note": "5ac3475486f7741d6224abd3 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -20945,7 +21047,7 @@
         "type": "Standing"
     },
     "5ae3267986f7742a413592fe": {
-        "QuestName": "Gunsmith Part 7",
+        "QuestName": "Gunsmith Part 5",
         "_id": "5ae3267986f7742a413592fe",
         "canShowNotificationsInGame": true,
         "changeQuestMessageText": "5ae3267986f7742a413592fe changeQuestMessageText",
@@ -21038,12 +21140,12 @@
                         "availableAfter": 0,
                         "dynamicLocale": false,
                         "id": "51d33b2d4fad9e61441772c0",
-                        "index": 1,
+                        "index": 2,
                         "parentId": "",
                         "status": [
                             4
                         ],
-                        "target": "5ac244c486f77413e12cf945",
+                        "target": "639872f9decada40426d3447",
                         "visibilityConditions": []
                     },
                     "dynamicLocale": false
@@ -21347,7 +21449,7 @@
         "type": "WeaponAssembly"
     },
     "5ae3277186f7745973054106": {
-        "QuestName": "Gunsmith Part 9",
+        "QuestName": "Gunsmith Part 6",
         "_id": "5ae3277186f7745973054106",
         "canShowNotificationsInGame": true,
         "changeQuestMessageText": "5ae3277186f7745973054106 changeQuestMessageText",
@@ -21440,12 +21542,12 @@
                         "availableAfter": 0,
                         "dynamicLocale": false,
                         "id": "51d33b2d4fad9e61441772c0",
-                        "index": 1,
+                        "index": 2,
                         "parentId": "",
                         "status": [
                             4
                         ],
-                        "target": "5ae3270f86f77445ba41d4dd",
+                        "target": "5ac244eb86f7741356335af1",
                         "visibilityConditions": []
                     },
                     "dynamicLocale": false
@@ -21722,12 +21824,12 @@
                         "availableAfter": 0,
                         "dynamicLocale": false,
                         "id": "51d33b2d4fad9e61441772c0",
-                        "index": 1,
+                        "index": 2,
                         "parentId": "",
                         "status": [
                             4
                         ],
-                        "target": "5ae3277186f7745973054106",
+                        "target": "639872fa9b4fb827b200d8e5",
                         "visibilityConditions": []
                     },
                     "dynamicLocale": false
@@ -21883,7 +21985,7 @@
         "type": "WeaponAssembly"
     },
     "5ae3280386f7742a41359364": {
-        "QuestName": "Gunsmith Part 11",
+        "QuestName": "Gunsmith Part 15",
         "_id": "5ae3280386f7742a41359364",
         "canShowNotificationsInGame": true,
         "changeQuestMessageText": "5ae3280386f7742a41359364 changeQuestMessageText",
@@ -21975,12 +22077,12 @@
                         "availableAfter": 0,
                         "dynamicLocale": false,
                         "id": "51d33b2d4fad9e61441772c0",
-                        "index": 1,
+                        "index": 2,
                         "parentId": "",
                         "status": [
                             4
                         ],
-                        "target": "5ae327c886f7745c7b3f2f3f",
+                        "target": "639872fe8871e1272b10ccf6",
                         "visibilityConditions": []
                     },
                     "dynamicLocale": false
@@ -22105,6 +22207,7 @@
         "location": "any",
         "name": "5ae448a386f7744d3730fff0 name",
         "note": "5ae448a386f7744d3730fff0 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -22241,6 +22344,7 @@
         "location": "5714dbc024597771384a510d",
         "name": "5ae448bf86f7744d733e55ee name",
         "note": "5ae448bf86f7744d733e55ee note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -22561,6 +22665,7 @@
         "location": "5714dbc024597771384a510d",
         "name": "5ae448e586f7744dcf0c2a67 name",
         "note": "5ae448e586f7744dcf0c2a67 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -24614,7 +24719,7 @@
         "type": "Skill"
     },
     "5ae449a586f7744bde357696": {
-        "QuestName": "No fuss needed",
+        "QuestName": "No Fuss Needed",
         "_id": "5ae449a586f7744bde357696",
         "canShowNotificationsInGame": true,
         "changeQuestMessageText": "5ae449a586f7744bde357696 changeQuestMessageText",
@@ -25353,7 +25458,7 @@
         "type": "PickUp"
     },
     "5b47749f86f7746c5d6a5fd4": {
-        "QuestName": "Gunsmith Part 12",
+        "QuestName": "Gunsmith Part 17",
         "_id": "5b47749f86f7746c5d6a5fd4",
         "canShowNotificationsInGame": true,
         "changeQuestMessageText": "5b47749f86f7746c5d6a5fd4 changeQuestMessageText",
@@ -25634,7 +25739,7 @@
         "type": "WeaponAssembly"
     },
     "5b47799d86f7746c5d6a5fd8": {
-        "QuestName": "Gunsmith Part 13",
+        "QuestName": "Gunsmith Part 12",
         "_id": "5b47799d86f7746c5d6a5fd8",
         "canShowNotificationsInGame": true,
         "changeQuestMessageText": "5b47799d86f7746c5d6a5fd8 changeQuestMessageText",
@@ -25726,12 +25831,12 @@
                         "availableAfter": 0,
                         "dynamicLocale": false,
                         "id": "51d33b2d4fad9e61441772c0",
-                        "index": 1,
+                        "index": 2,
                         "parentId": "",
                         "status": [
                             4
                         ],
-                        "target": "5b47749f86f7746c5d6a5fd4",
+                        "target": "639872fc93ae507d5858c3a6",
                         "visibilityConditions": []
                     },
                     "dynamicLocale": false
@@ -25858,7 +25963,7 @@
         "type": "WeaponAssembly"
     },
     "5b477b6f86f7747290681823": {
-        "QuestName": "Gunsmith Part 14",
+        "QuestName": "Gunsmith Part 18",
         "_id": "5b477b6f86f7747290681823",
         "canShowNotificationsInGame": true,
         "changeQuestMessageText": "5b477b6f86f7747290681823 changeQuestMessageText",
@@ -26051,7 +26156,7 @@
         "type": "WeaponAssembly"
     },
     "5b477f7686f7744d1b23c4d2": {
-        "QuestName": "Gunsmith Part 15",
+        "QuestName": "Gunsmith Part 20",
         "_id": "5b477f7686f7744d1b23c4d2",
         "canShowNotificationsInGame": true,
         "changeQuestMessageText": "5b477f7686f7744d1b23c4d2 changeQuestMessageText",
@@ -26270,7 +26375,7 @@
         "type": "WeaponAssembly"
     },
     "5b47825886f77468074618d3": {
-        "QuestName": "Gunsmith Part 16",
+        "QuestName": "Gunsmith Part 22",
         "_id": "5b47825886f77468074618d3",
         "canShowNotificationsInGame": true,
         "changeQuestMessageText": "5b47825886f77468074618d3 changeQuestMessageText",
@@ -29111,6 +29216,7 @@
         "location": "any",
         "name": "5bc4776586f774512d07cf05 name",
         "note": "5bc4776586f774512d07cf05 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -29338,6 +29444,7 @@
         "location": "any",
         "name": "5bc479e586f7747f376c7da3 name",
         "note": "5bc479e586f7747f376c7da3 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -29511,6 +29618,7 @@
         "location": "any",
         "name": "5bc47dbf86f7741ee74e93b9 name",
         "note": "5bc47dbf86f7741ee74e93b9 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -29702,6 +29810,7 @@
         "location": "any",
         "name": "5bc480a686f7741af0342e29 name",
         "note": "5bc480a686f7741af0342e29 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -32174,6 +32283,7 @@
         "location": "any",
         "name": "5c0bde0986f77479cf22c2f8 name",
         "note": "5c0bde0986f77479cf22c2f8 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -33380,6 +33490,7 @@
         "location": "any",
         "name": "5c0d190cd09282029f5390d8 name",
         "note": "5c0d190cd09282029f5390d8 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -38415,6 +38526,7 @@
         "location": "5704e3c2d2720bac5b8b4567",
         "name": "5d2495a886f77425cd51e403 name",
         "note": "5d2495a886f77425cd51e403 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -38559,6 +38671,7 @@
         "location": "any",
         "name": "5d24b81486f77439c92d6ba8 name",
         "note": "5d24b81486f77439c92d6ba8 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -38847,6 +38960,7 @@
         "location": "5704e3c2d2720bac5b8b4567",
         "name": "5d25aed386f77442734d25d2 name",
         "note": "5d25aed386f77442734d25d2 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -38988,6 +39102,7 @@
                         "dynamicLocale": false,
                         "id": "5d25beca86f77409dd5cdbb3",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 0,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -39009,6 +39124,7 @@
                         "dynamicLocale": false,
                         "id": "5d25beeb86f77443fe45765f",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 0,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -39030,6 +39146,7 @@
                         "dynamicLocale": false,
                         "id": "5d2deedc86f77459121c3118",
                         "index": 2,
+                        "isEncoded": false,
                         "maxDurability": 0,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -39051,6 +39168,7 @@
                         "dynamicLocale": false,
                         "id": "5d2defc586f774591510e6b9",
                         "index": 3,
+                        "isEncoded": false,
                         "maxDurability": 0,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -39094,6 +39212,7 @@
         "location": "5704e3c2d2720bac5b8b4567",
         "name": "5d25b6be86f77444001e1b89 name",
         "note": "5d25b6be86f77444001e1b89 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -39317,6 +39436,7 @@
         "location": "any",
         "name": "5d25bfd086f77442734d3007 name",
         "note": "5d25bfd086f77442734d3007 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -39484,6 +39604,7 @@
         "location": "any",
         "name": "5d25c81b86f77443e625dd71 name",
         "note": "5d25c81b86f77443e625dd71 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -42722,10 +42843,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "5d6949e786f774238a38d9e0",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -42745,6 +42868,7 @@
                         "dynamicLocale": false,
                         "id": "5d27491686f77475aa5cf5b9",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": true,
@@ -42799,6 +42923,7 @@
         "location": "any",
         "name": "5d25e48d86f77408251c4bfb name",
         "note": "5d25e48d86f77408251c4bfb note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -48109,6 +48234,7 @@
         "location": "5704e5fad2720bc05b8b4567",
         "name": "5ede55112c95834b583f052a name",
         "note": "5ede55112c95834b583f052a note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -49011,6 +49137,7 @@
         "location": "5704e3c2d2720bac5b8b4567",
         "name": "5fd9fad9c1ce6b1a3b486d00 name",
         "note": "5fd9fad9c1ce6b1a3b486d00 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -50466,10 +50593,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "6091698a30bb620b3239874c",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -50485,10 +50614,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "60ae12ffb809a474875907aa",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -50508,6 +50639,7 @@
                         "dynamicLocale": false,
                         "id": "609169cfeca522371e5725c5",
                         "index": 2,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -50535,6 +50667,7 @@
                         "dynamicLocale": false,
                         "id": "60ae134cabb9675f0062cf6e",
                         "index": 3,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -50597,6 +50730,7 @@
         "location": "5704e5fad2720bc05b8b4567",
         "name": "60896e28e4a85c72ef3fa301 name",
         "note": "60896e28e4a85c72ef3fa301 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -55863,10 +55997,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "617bf2a6f8e6c97ec70878b7",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -55886,6 +56022,7 @@
                         "dynamicLocale": false,
                         "id": "617bf29a52e86c73d372a917",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -55952,6 +56089,7 @@
         "location": "5704e4dad2720bb55b8b4567",
         "name": "6179ad56c760af5ad2053587 name",
         "note": "6179ad56c760af5ad2053587 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -56655,10 +56793,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "617bf6c70cf4a041de5b3972",
                         "index": 0,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -56678,6 +56818,7 @@
                         "dynamicLocale": false,
                         "id": "617bf77a3de8a6689b533a2a",
                         "index": 1,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -56701,10 +56842,12 @@
                 {
                     "_parent": "FindItem",
                     "_props": {
+                        "countInRaid": false,
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "61951c30aa0f643f9a0ae1b7",
                         "index": 2,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -56724,6 +56867,7 @@
                         "dynamicLocale": false,
                         "id": "61951c3e2e2805073c2d29db",
                         "index": 3,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -56773,6 +56917,7 @@
         "location": "5704e4dad2720bb55b8b4567",
         "name": "6179b3bdc7560e13d23eeb8d name",
         "note": "6179b3bdc7560e13d23eeb8d note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -57936,6 +58081,7 @@
         "location": "5704e4dad2720bb55b8b4567",
         "name": "6193850f60b34236ee0483de name",
         "note": "6193850f60b34236ee0483de note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -58364,6 +58510,7 @@
         "location": "any",
         "name": "61e6e60223374d168a4576a6 name",
         "note": "61e6e60223374d168a4576a6 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -59099,13 +59246,29 @@
         "conditions": {
             "AvailableForFinish": [
                 {
-                    "_parent": "VisitPlace",
+                    "_parent": "CounterCreator",
                     "_props": {
+                        "counter": {
+                            "conditions": [
+                                {
+                                    "_parent": "VisitPlace",
+                                    "_props": {
+                                        "dynamicLocale": false,
+                                        "id": "63ac2332dd6923311c7d1828",
+                                        "target": "qlight_extension_mechanik1_exploration1",
+                                        "value": "1"
+                                    }
+                                }
+                            ],
+                            "id": "63ac232087413d64ae0ac23d"
+                        },
+                        "doNotResetIfCounterCompleted": false,
                         "dynamicLocale": false,
-                        "id": "626c3115cca1461ed63c4f9a",
-                        "index": 0,
+                        "id": "63ac232087413d64ae0ac23c",
+                        "index": 1,
+                        "oneSessionOnly": false,
                         "parentId": "",
-                        "target": "qlight_extension_mechanik1_exploration1",
+                        "type": "Exploration",
                         "value": "1",
                         "visibilityConditions": []
                     },
@@ -59117,7 +59280,8 @@
                         "dogtagLevel": 0,
                         "dynamicLocale": false,
                         "id": "626c3158a371ee3a7a3514cc",
-                        "index": 1,
+                        "index": 2,
+                        "isEncoded": false,
                         "maxDurability": 100,
                         "minDurability": 0,
                         "onlyFoundInRaid": false,
@@ -59131,8 +59295,8 @@
                             {
                                 "_parent": "CompleteCondition",
                                 "_props": {
-                                    "id": "626c316db2fc227dd1179799",
-                                    "target": "626c3115cca1461ed63c4f9a"
+                                    "id": "63ac235c87413d64ae0ac24d",
+                                    "target": "63ac232087413d64ae0ac23c"
                                 }
                             }
                         ],
@@ -59169,6 +59333,7 @@
         "location": "5704e4dad2720bb55b8b4567",
         "name": "626bd75e47ea7f506e5493c5 name",
         "note": "626bd75e47ea7f506e5493c5 note",
+        "questStatus": {},
         "restartable": false,
         "rewards": {
             "Fail": [],
@@ -59581,7 +59746,7 @@
         "type": "Elimination"
     },
     "636a2f5759cb834f8a5825d6": {
-        "QuestName": "Letters",
+        "QuestName": "EVENT - Letters",
         "_id": "636a2f5759cb834f8a5825d6",
         "canShowNotificationsInGame": true,
         "changeQuestMessageText": "636a2f5759cb834f8a5825d6 changeQuestMessageText",
@@ -60198,5 +60363,769 @@
         "templateId": "636a2f5759cb834f8a5825d6",
         "traderId": "5a7c2eca46aef81a7ca2145d",
         "type": "Elimination"
+    },
+    "638fcd23dc65553116701d33": {
+        "QuestName": "Audit",
+        "_id": "638fcd23dc65553116701d33",
+        "canShowNotificationsInGame": true,
+        "changeQuestMessageText": "638fcd23dc65553116701d33 changeQuestMessageText",
+        "conditions": {
+            "AvailableForFinish": [
+                {
+                    "_parent": "FindItem",
+                    "_props": {
+                        "countInRaid": false,
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "638fd070202cd55bee01ca11",
+                        "index": 0,
+                        "isEncoded": false,
+                        "maxDurability": 100,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": false,
+                        "parentId": "",
+                        "target": [
+                            "63a943cead5cc12f22161ff7"
+                        ],
+                        "value": "1",
+                        "visibilityConditions": []
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "HandoverItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "638fd0805e5a195d2c443754",
+                        "index": 1,
+                        "isEncoded": false,
+                        "maxDurability": 100,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": false,
+                        "parentId": "",
+                        "target": [
+                            "63a943cead5cc12f22161ff7"
+                        ],
+                        "value": "1",
+                        "visibilityConditions": []
+                    },
+                    "dynamicLocale": false
+                }
+            ],
+            "AvailableForStart": [
+                {
+                    "_parent": "Quest",
+                    "_props": {
+                        "availableAfter": 0,
+                        "dynamicLocale": false,
+                        "id": "63a78742ee7b4d0d5507bade",
+                        "index": 0,
+                        "parentId": "",
+                        "status": [
+                            4
+                        ],
+                        "target": "5ae448a386f7744d3730fff0",
+                        "visibilityConditions": []
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "Level",
+                    "_props": {
+                        "compareMethod": ">=",
+                        "dynamicLocale": false,
+                        "id": "63a787505199ab1f7d4a773b",
+                        "index": 1,
+                        "parentId": "",
+                        "value": 17,
+                        "visibilityConditions": []
+                    },
+                    "dynamicLocale": false
+                }
+            ],
+            "Fail": []
+        },
+        "description": "638fcd23dc65553116701d33 description",
+        "failMessageText": "638fcd23dc65553116701d33 failMessageText",
+        "image": "/files/quest/icon/63a944c0c593cc01b3713331.jpg",
+        "instantComplete": false,
+        "isKey": false,
+        "location": "5714dc692459777137212e12",
+        "name": "638fcd23dc65553116701d33 name",
+        "note": "638fcd23dc65553116701d33 note",
+        "questStatus": {},
+        "restartable": false,
+        "rewards": {
+            "Fail": [],
+            "Started": [],
+            "Success": [
+                {
+                    "id": "639eed9681b99001240bbe7e",
+                    "index": 0,
+                    "type": "Experience",
+                    "value": 8700
+                },
+                {
+                    "findInRaid": true,
+                    "id": "63a7876c27a4ff476e6dd0bc",
+                    "index": 1,
+                    "items": [
+                        {
+                            "_id": "63b1de02b13fecc795089707",
+                            "_tpl": "5449016a4bdc2d6f028b456f",
+                            "upd": {
+                                "StackObjectsCount": 200000
+                            }
+                        }
+                    ],
+                    "target": "63b1de02b13fecc795089707",
+                    "type": "Item",
+                    "value": "200000"
+                },
+                {
+                    "id": "63a78777cc389e31a64596cc",
+                    "index": 2,
+                    "target": "5ac3b934156ae10c4430e83c",
+                    "type": "TraderStanding",
+                    "value": "0.02"
+                }
+            ]
+        },
+        "secretQuest": false,
+        "side": "Pmc",
+        "startedMessageText": "638fcd23dc65553116701d33 startedMessageText",
+        "successMessageText": "638fcd23dc65553116701d33 successMessageText",
+        "templateId": "638fcd23dc65553116701d33",
+        "traderId": "5ac3b934156ae10c4430e83c",
+        "type": "Completion"
+    },
+    "639135a7e705511c8a4a1b78": {
+        "QuestName": "Ballet Lover",
+        "_id": "639135a7e705511c8a4a1b78",
+        "canShowNotificationsInGame": true,
+        "changeQuestMessageText": "639135a7e705511c8a4a1b78 changeQuestMessageText",
+        "conditions": {
+            "AvailableForFinish": [
+                {
+                    "_parent": "CounterCreator",
+                    "_props": {
+                        "counter": {
+                            "conditions": [
+                                {
+                                    "_parent": "VisitPlace",
+                                    "_props": {
+                                        "id": "63a7da8b3e491955e65fb88a",
+                                        "target": "quest_zone_c5_mar",
+                                        "value": "1"
+                                    }
+                                }
+                            ],
+                            "id": "63a7da6f5199ab1f7d4a774b"
+                        },
+                        "doNotResetIfCounterCompleted": false,
+                        "dynamicLocale": false,
+                        "id": "63a7da6f5199ab1f7d4a774a",
+                        "index": 0,
+                        "oneSessionOnly": false,
+                        "parentId": "",
+                        "type": "Discover",
+                        "value": "1",
+                        "visibilityConditions": []
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "CounterCreator",
+                    "_props": {
+                        "counter": {
+                            "conditions": [
+                                {
+                                    "_parent": "ExitStatus",
+                                    "_props": {
+                                        "dynamicLocale": false,
+                                        "id": "63a7dab6ee7b4d0d5507baf7",
+                                        "status": [
+                                            "Survived"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "_parent": "Location",
+                                    "_props": {
+                                        "dynamicLocale": false,
+                                        "id": "63a7dad85199ab1f7d4a774c",
+                                        "target": [
+                                            "TarkovStreets"
+                                        ]
+                                    }
+                                }
+                            ],
+                            "id": "63a7daae04d3dc28a52a210a"
+                        },
+                        "doNotResetIfCounterCompleted": false,
+                        "dynamicLocale": false,
+                        "id": "63a7daae04d3dc28a52a2109",
+                        "index": 1,
+                        "oneSessionOnly": false,
+                        "parentId": "",
+                        "type": "Completion",
+                        "value": "1",
+                        "visibilityConditions": [
+                            {
+                                "_parent": "CompleteCondition",
+                                "_props": {
+                                    "id": "63a7db0404d3dc28a52a210b",
+                                    "target": "63a7da6f5199ab1f7d4a774a"
+                                }
+                            }
+                        ]
+                    },
+                    "dynamicLocale": false
+                }
+            ],
+            "AvailableForStart": [
+                {
+                    "_parent": "Quest",
+                    "_props": {
+                        "availableAfter": 0,
+                        "dynamicLocale": false,
+                        "id": "63a78928ee7b4d0d5507bae1",
+                        "index": 0,
+                        "parentId": "",
+                        "status": [
+                            4
+                        ],
+                        "target": "638fcd23dc65553116701d33",
+                        "visibilityConditions": []
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "Level",
+                    "_props": {
+                        "compareMethod": ">=",
+                        "dynamicLocale": false,
+                        "id": "63a7893410b7a13eb015960e",
+                        "index": 1,
+                        "parentId": "",
+                        "value": 20,
+                        "visibilityConditions": []
+                    },
+                    "dynamicLocale": false
+                }
+            ],
+            "Fail": []
+        },
+        "description": "639135a7e705511c8a4a1b78 description",
+        "failMessageText": "639135a7e705511c8a4a1b78 failMessageText",
+        "image": "/files/quest/icon/63ab032d435ab5742b4e40aa.jpg",
+        "instantComplete": false,
+        "isKey": false,
+        "location": "5714dc692459777137212e12",
+        "name": "639135a7e705511c8a4a1b78 name",
+        "note": "639135a7e705511c8a4a1b78 note",
+        "questStatus": {},
+        "restartable": false,
+        "rewards": {
+            "Fail": [],
+            "Started": [],
+            "Success": [
+                {
+                    "id": "639729d480af270b6c22406a",
+                    "index": 0,
+                    "type": "Experience",
+                    "value": 10700
+                },
+                {
+                    "id": "63a78967cc389e31a64596ce",
+                    "index": 1,
+                    "target": "5ac3b934156ae10c4430e83c",
+                    "type": "TraderStanding",
+                    "value": "0.02"
+                },
+                {
+                    "findInRaid": true,
+                    "id": "63a78978ee7b4d0d5507bae2",
+                    "index": 2,
+                    "items": [
+                        {
+                            "_id": "63b1de02b13fecc79508970c",
+                            "_tpl": "5449016a4bdc2d6f028b456f",
+                            "upd": {
+                                "StackObjectsCount": 66000
+                            }
+                        }
+                    ],
+                    "target": "63b1de02b13fecc79508970c",
+                    "type": "Item",
+                    "value": "66000"
+                },
+                {
+                    "findInRaid": true,
+                    "id": "63a789b3f32fa1316250c3c9",
+                    "index": 3,
+                    "items": [
+                        {
+                            "_id": "63b1de02b13fecc79508970d",
+                            "_tpl": "61bc85697113f767765c7fe7",
+                            "upd": {
+                                "StackObjectsCount": 1
+                            }
+                        }
+                    ],
+                    "target": "63b1de02b13fecc79508970d",
+                    "type": "Item",
+                    "value": "1"
+                }
+            ]
+        },
+        "secretQuest": false,
+        "side": "Pmc",
+        "startedMessageText": "639135a7e705511c8a4a1b78 startedMessageText",
+        "successMessageText": "639135a7e705511c8a4a1b78 successMessageText",
+        "templateId": "639135a7e705511c8a4a1b78",
+        "traderId": "5ac3b934156ae10c4430e83c",
+        "type": "Completion"
+    },
+    "639135d89444fb141f4e6eea": {
+        "QuestName": "Population Census",
+        "_id": "639135d89444fb141f4e6eea",
+        "canShowNotificationsInGame": true,
+        "changeQuestMessageText": "639135d89444fb141f4e6eea changeQuestMessageText",
+        "conditions": {
+            "AvailableForFinish": [
+                {
+                    "_parent": "FindItem",
+                    "_props": {
+                        "countInRaid": false,
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "639135d89444fb141f4e6eeb",
+                        "index": 0,
+                        "isEncoded": false,
+                        "maxDurability": 100,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": false,
+                        "parentId": "",
+                        "target": [
+                            "638e0057ab150a5f56238960"
+                        ],
+                        "value": "1",
+                        "visibilityConditions": []
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "HandoverItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "639135d89444fb141f4e6eec",
+                        "index": 1,
+                        "isEncoded": false,
+                        "maxDurability": 100,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": false,
+                        "parentId": "",
+                        "target": [
+                            "638e0057ab150a5f56238960"
+                        ],
+                        "value": "1",
+                        "visibilityConditions": [
+                            {
+                                "_parent": "CompleteCondition",
+                                "_props": {
+                                    "id": "639ce767dae1800a3e1359b1",
+                                    "target": "639135d89444fb141f4e6eeb"
+                                }
+                            }
+                        ]
+                    },
+                    "dynamicLocale": false
+                }
+            ],
+            "AvailableForStart": [
+                {
+                    "_parent": "Quest",
+                    "_props": {
+                        "availableAfter": 0,
+                        "dynamicLocale": false,
+                        "id": "63a7705ad4153566a07328f7",
+                        "index": 0,
+                        "parentId": "",
+                        "status": [
+                            4
+                        ],
+                        "target": "5969f9e986f7741dde183a50",
+                        "visibilityConditions": []
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "Level",
+                    "_props": {
+                        "compareMethod": ">=",
+                        "dynamicLocale": false,
+                        "id": "63a7706bee7b4d0d5507bad9",
+                        "index": 1,
+                        "parentId": "",
+                        "value": 12,
+                        "visibilityConditions": []
+                    },
+                    "dynamicLocale": false
+                }
+            ],
+            "Fail": []
+        },
+        "description": "639135d89444fb141f4e6eea description",
+        "failMessageText": "639135d89444fb141f4e6eea failMessageText",
+        "image": "/files/quest/icon/63aaeaa987413d64ae0ac1a9.jpg",
+        "instantComplete": false,
+        "isKey": false,
+        "location": "5714dc692459777137212e12",
+        "name": "639135d89444fb141f4e6eea name",
+        "note": "639135d89444fb141f4e6eea note",
+        "questStatus": {},
+        "restartable": false,
+        "rewards": {
+            "Fail": [],
+            "Started": [],
+            "Success": [
+                {
+                    "id": "63a770c5cc389e31a64596c6",
+                    "index": 0,
+                    "type": "Experience",
+                    "value": 6900
+                },
+                {
+                    "findInRaid": true,
+                    "id": "63a770e527a4ff476e6dd0b7",
+                    "index": 1,
+                    "items": [
+                        {
+                            "_id": "63b1de02b13fecc795089704",
+                            "_tpl": "5449016a4bdc2d6f028b456f",
+                            "upd": {
+                                "StackObjectsCount": 35000
+                            }
+                        }
+                    ],
+                    "target": "63b1de02b13fecc795089704",
+                    "type": "Item",
+                    "value": "35000"
+                },
+                {
+                    "id": "63a771171f06d111271f5ada",
+                    "index": 2,
+                    "target": "54cb57776803fa99248b456e",
+                    "type": "TraderStanding",
+                    "value": "0.02"
+                },
+                {
+                    "findInRaid": true,
+                    "id": "63a7714bf32fa1316250c3c5",
+                    "index": 3,
+                    "items": [
+                        {
+                            "_id": "63b1de02b13fecc795089705",
+                            "_tpl": "544fb45d4bdc2dee738b4568",
+                            "upd": {
+                                "StackObjectsCount": 2
+                            }
+                        }
+                    ],
+                    "target": "63b1de02b13fecc795089705",
+                    "type": "Item",
+                    "value": "2"
+                },
+                {
+                    "findInRaid": true,
+                    "id": "63a771535199ab1f7d4a7737",
+                    "index": 4,
+                    "items": [
+                        {
+                            "_id": "63b1de02b13fecc795089706",
+                            "_tpl": "619cc01e0a7c3a1a2731940c",
+                            "upd": {
+                                "StackObjectsCount": 2
+                            }
+                        }
+                    ],
+                    "target": "63b1de02b13fecc795089706",
+                    "type": "Item",
+                    "value": "2"
+                }
+            ]
+        },
+        "secretQuest": false,
+        "side": "Pmc",
+        "startedMessageText": "639135d89444fb141f4e6eea startedMessageText",
+        "successMessageText": "639135d89444fb141f4e6eea successMessageText",
+        "templateId": "639135d89444fb141f4e6eea",
+        "traderId": "54cb57776803fa99248b456e",
+        "type": "Completion"
+    },
+    "63a88045abf76d719f42d715": {
+        "QuestName": "The Delicious Sausage",
+        "_id": "63a88045abf76d719f42d715",
+        "canShowNotificationsInGame": true,
+        "changeQuestMessageText": "63a88045abf76d719f42d715 changeQuestMessageText",
+        "conditions": {
+            "AvailableForFinish": [
+                {
+                    "_parent": "CounterCreator",
+                    "_props": {
+                        "counter": {
+                            "conditions": [
+                                {
+                                    "_parent": "VisitPlace",
+                                    "_props": {
+                                        "id": "63a98d1b64b9631d9178274c",
+                                        "target": "quest_produkt1",
+                                        "value": "1"
+                                    }
+                                }
+                            ],
+                            "id": "63a98cfbc31b00242d28a95c"
+                        },
+                        "doNotResetIfCounterCompleted": false,
+                        "dynamicLocale": false,
+                        "id": "63a98cfbc31b00242d28a95b",
+                        "index": 0,
+                        "oneSessionOnly": false,
+                        "parentId": "",
+                        "type": "Discover",
+                        "value": "1",
+                        "visibilityConditions": []
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "CounterCreator",
+                    "_props": {
+                        "counter": {
+                            "conditions": [
+                                {
+                                    "_parent": "VisitPlace",
+                                    "_props": {
+                                        "id": "63a98d33c0f61a5d8731cd9e",
+                                        "target": "quest_produkt2",
+                                        "value": "1"
+                                    }
+                                }
+                            ],
+                            "id": "63a98d24655ec5555b4aa9e8"
+                        },
+                        "doNotResetIfCounterCompleted": false,
+                        "dynamicLocale": false,
+                        "id": "63a98d24655ec5555b4aa9e7",
+                        "index": 1,
+                        "oneSessionOnly": false,
+                        "parentId": "",
+                        "type": "Discover",
+                        "value": "1",
+                        "visibilityConditions": []
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "CounterCreator",
+                    "_props": {
+                        "counter": {
+                            "conditions": [
+                                {
+                                    "_parent": "VisitPlace",
+                                    "_props": {
+                                        "id": "63a98d48655ec5555b4aa9e9",
+                                        "target": "quest_produkt3",
+                                        "value": "1"
+                                    }
+                                }
+                            ],
+                            "id": "63a98d39da7999196148ba3b"
+                        },
+                        "doNotResetIfCounterCompleted": false,
+                        "dynamicLocale": false,
+                        "id": "63a98d39da7999196148ba3a",
+                        "index": 2,
+                        "oneSessionOnly": false,
+                        "parentId": "",
+                        "type": "Discover",
+                        "value": "1",
+                        "visibilityConditions": []
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "CounterCreator",
+                    "_props": {
+                        "counter": {
+                            "conditions": [
+                                {
+                                    "_parent": "VisitPlace",
+                                    "_props": {
+                                        "id": "63a98d6c64b9631d9178274d",
+                                        "target": "quest_produkt4",
+                                        "value": "1"
+                                    }
+                                }
+                            ],
+                            "id": "63a98d60c0f61a5d8731cda0"
+                        },
+                        "doNotResetIfCounterCompleted": false,
+                        "dynamicLocale": false,
+                        "id": "63a98d60c0f61a5d8731cd9f",
+                        "index": 3,
+                        "oneSessionOnly": false,
+                        "parentId": "",
+                        "type": "Discover",
+                        "value": "1",
+                        "visibilityConditions": []
+                    },
+                    "dynamicLocale": false
+                },
+                {
+                    "_parent": "HandoverItem",
+                    "_props": {
+                        "dogtagLevel": 0,
+                        "dynamicLocale": false,
+                        "id": "63a98cdf655ec5555b4aa9e6",
+                        "index": 4,
+                        "isEncoded": false,
+                        "maxDurability": 100,
+                        "minDurability": 0,
+                        "onlyFoundInRaid": true,
+                        "parentId": "",
+                        "target": [
+                            "635a758bfefc88a93f021b8a"
+                        ],
+                        "value": "1",
+                        "visibilityConditions": []
+                    },
+                    "dynamicLocale": false
+                }
+            ],
+            "AvailableForStart": [
+                {
+                    "_parent": "Level",
+                    "_props": {
+                        "compareMethod": ">=",
+                        "dynamicLocale": false,
+                        "id": "63aacc511b5c9574661f054a",
+                        "index": 0,
+                        "parentId": "",
+                        "value": 5,
+                        "visibilityConditions": []
+                    },
+                    "dynamicLocale": false
+                }
+            ],
+            "Fail": []
+        },
+        "description": "63a88045abf76d719f42d715 description",
+        "failMessageText": "63a88045abf76d719f42d715 failMessageText",
+        "image": "/files/quest/icon/63aaec53e842787ad21356a3.jpg",
+        "instantComplete": false,
+        "isKey": false,
+        "location": "5714dc692459777137212e12",
+        "name": "63a88045abf76d719f42d715 name",
+        "note": "63a88045abf76d719f42d715 note",
+        "questStatus": {},
+        "restartable": false,
+        "rewards": {
+            "Fail": [],
+            "Started": [],
+            "Success": [
+                {
+                    "id": "63a9f14cc31b00242d28a9c0",
+                    "index": 0,
+                    "type": "Experience",
+                    "value": 2600
+                },
+                {
+                    "findInRaid": true,
+                    "id": "63a9f2ee7cd7613adb65252a",
+                    "index": 1,
+                    "items": [
+                        {
+                            "_id": "63b1de02b13fecc795089708",
+                            "_tpl": "5449016a4bdc2d6f028b456f",
+                            "upd": {
+                                "StackObjectsCount": 10000
+                            }
+                        }
+                    ],
+                    "target": "63b1de02b13fecc795089708",
+                    "type": "Item",
+                    "value": "10000"
+                },
+                {
+                    "findInRaid": true,
+                    "id": "63a9f2bf87c76a25c91212a0",
+                    "index": 2,
+                    "items": [
+                        {
+                            "_id": "63b1de02b13fecc795089709",
+                            "_tpl": "57347c5b245977448d35f6e1",
+                            "upd": {
+                                "StackObjectsCount": 2
+                            }
+                        }
+                    ],
+                    "target": "63b1de02b13fecc795089709",
+                    "type": "Item",
+                    "value": "2"
+                },
+                {
+                    "findInRaid": true,
+                    "id": "63a9f267009ffc6a551631cd",
+                    "index": 3,
+                    "items": [
+                        {
+                            "_id": "63b1de02b13fecc79508970a",
+                            "_tpl": "57347c77245977448d35f6e2",
+                            "upd": {
+                                "StackObjectsCount": 2
+                            }
+                        }
+                    ],
+                    "target": "63b1de02b13fecc79508970a",
+                    "type": "Item",
+                    "value": "2"
+                },
+                {
+                    "findInRaid": true,
+                    "id": "63a9f289c31b00242d28a9c1",
+                    "index": 5,
+                    "items": [
+                        {
+                            "_id": "63b1de02b13fecc79508970b",
+                            "_tpl": "59e35cbb86f7741778269d83",
+                            "upd": {
+                                "StackObjectsCount": 1
+                            }
+                        }
+                    ],
+                    "target": "63b1de02b13fecc79508970b",
+                    "type": "Item",
+                    "value": "1"
+                },
+                {
+                    "id": "63a9f15ead5cc12f22162053",
+                    "index": 6,
+                    "target": "5c0647fdd443bc2504c2d371",
+                    "type": "TraderStanding",
+                    "value": "0.01"
+                }
+            ]
+        },
+        "secretQuest": false,
+        "side": "Pmc",
+        "startedMessageText": "63a88045abf76d719f42d715 startedMessageText",
+        "successMessageText": "63a88045abf76d719f42d715 successMessageText",
+        "templateId": "63a88045abf76d719f42d715",
+        "traderId": "5c0647fdd443bc2504c2d371",
+        "type": "Discover"
     }
 }
