@@ -1,116 +1,116 @@
 {
-    "_id": "58330581ace78e27b8b10cee",
-    "availableInRaid": false,
-    "avatar": "/files/trader/avatar/59b91cb486f77469a81232e5.jpg",
-    "balance_dol": 0,
-    "balance_eur": 0,
-    "balance_rub": 7000000,
-    "buyer_up": false,
-    "currency": "RUB",
-    "customization_seller": false,
-    "discount": 0,
-    "discount_end": 0,
-    "gridHeight": 160,
-    "insurance": {
-        "availability": false,
-        "excluded_category": [],
-        "max_return_hour": 0,
-        "max_storage_time": 24,
-        "min_payment": 0,
-        "min_return_hour": 0
-    },
-    "items_buy": {
-        "category": [
-            "543be5f84bdc2dd4348b456a",
-            "5448e5284bdc2dcb718b4567",
-            "57864a3d24597754843f8721",
-            "57864a66245977548f04a81f",
-            "590c745b86f7743cc433c5f2",
-            "5422acb9af1c889c16000029",
-            "543be6564bdc2df4348b4568",
-            "5448fe124bdc2da5018b4567",
-            "5448f3a64bdc2d60728b456a"
-        ],
-        "id_list": []
-    },
-    "items_buy_prohibited": {
-        "category": [],
-        "id_list": [
-            "62e910aaf957f2915e0a5e36"
-        ]
-    },
-    "location": "Таможня",
-    "loyaltyLevels": [
-        {
-            "buy_price_coef": 51,
-            "exchange_price_coef": 0,
-            "heal_price_coef": 0,
-            "insurance_price_coef": 0,
-            "minLevel": 1,
-            "minSalesSum": 0,
-            "minStanding": 0,
-            "repair_price_coef": 110
-        },
-        {
-            "buy_price_coef": 51,
-            "exchange_price_coef": 0,
-            "heal_price_coef": 0,
-            "insurance_price_coef": 0,
-            "minLevel": 15,
-            "minSalesSum": 800000,
-            "minStanding": 0.2,
-            "repair_price_coef": 120
-        },
-        {
-            "buy_price_coef": 51,
-            "exchange_price_coef": 0,
-            "heal_price_coef": 0,
-            "insurance_price_coef": 0,
-            "minLevel": 28,
-            "minSalesSum": 1600000,
-            "minStanding": 0.4,
-            "repair_price_coef": 130
-        },
-        {
-            "buy_price_coef": 51,
-            "exchange_price_coef": 0,
-            "heal_price_coef": 0,
-            "insurance_price_coef": 0,
-            "minLevel": 38,
-            "minSalesSum": 2600000,
-            "minStanding": 0.75,
-            "repair_price_coef": 140
-        }
-    ],
-    "medic": false,
-    "name": "Александр Фёдорович",
-    "nextResupply": 1631487786,
-    "nickname": "Skier",
-    "repair": {
-        "availability": true,
-        "currency": "5449016a4bdc2d6f028b456f",
-        "currency_coefficient": 1,
-        "excluded_category": [],
-        "excluded_id_list": [],
-        "quality": "1"
-    },
-    "sell_category": [
-        "5b5f71b386f774093f2ecf11",
-        "5b5f71c186f77409407a7ec0",
-        "5b5f71de86f774093f2ecf13",
-        "5b5f724186f77447ed5636ad",
-        "5b5f736886f774094242f193",
-        "5b5f73ec86f774093e6cb4fd",
-        "5b5f74cc86f77447ec5d770a",
-        "5b5f750686f774093e6cb503",
-        "5b5f751486f77447ec5d770c",
-        "5b5f752e86f774093e6cb505",
-        "5b5f754a86f774094242f19b",
-        "5b5f755f86f77447ec5d770e",
-        "5b5f757486f774093e6cb507",
-        "5b5f78e986f77447ed5636b1",
-        "5b5f78fc86f77409407a7f90"
-    ],
-    "surname": "Киселёв",
-    "unlockedByDefault": true
+	"_id": "58330581ace78e27b8b10cee",
+	"availableInRaid": false,
+	"avatar": "/files/trader/avatar/59b91cb486f77469a81232e5.png",
+	"balance_dol": 0,
+	"balance_eur": 0,
+	"balance_rub": 7000000,
+	"buyer_up": false,
+	"currency": "RUB",
+	"customization_seller": false,
+	"discount": 0,
+	"discount_end": 0,
+	"gridHeight": 160,
+	"insurance": {
+		"availability": false,
+		"excluded_category": [],
+		"max_return_hour": 0,
+		"max_storage_time": 24,
+		"min_payment": 0,
+		"min_return_hour": 0
+	},
+	"items_buy": {
+		"category": [
+			"543be5f84bdc2dd4348b456a",
+			"5448e5284bdc2dcb718b4567",
+			"57864a3d24597754843f8721",
+			"57864a66245977548f04a81f",
+			"590c745b86f7743cc433c5f2",
+			"5422acb9af1c889c16000029",
+			"543be6564bdc2df4348b4568",
+			"5448fe124bdc2da5018b4567",
+			"5448f3a64bdc2d60728b456a"
+		],
+		"id_list": []
+	},
+	"items_buy_prohibited": {
+		"category": [],
+		"id_list": [
+			"62e910aaf957f2915e0a5e36"
+		]
+	},
+	"location": "Таможня",
+	"loyaltyLevels": [
+		{
+			"buy_price_coef": 51,
+			"exchange_price_coef": 0,
+			"heal_price_coef": 0,
+			"insurance_price_coef": 0,
+			"minLevel": 1,
+			"minSalesSum": 0,
+			"minStanding": 0,
+			"repair_price_coef": 110
+		},
+		{
+			"buy_price_coef": 51,
+			"exchange_price_coef": 0,
+			"heal_price_coef": 0,
+			"insurance_price_coef": 0,
+			"minLevel": 15,
+			"minSalesSum": 800000,
+			"minStanding": 0.2,
+			"repair_price_coef": 120
+		},
+		{
+			"buy_price_coef": 51,
+			"exchange_price_coef": 0,
+			"heal_price_coef": 0,
+			"insurance_price_coef": 0,
+			"minLevel": 28,
+			"minSalesSum": 1600000,
+			"minStanding": 0.4,
+			"repair_price_coef": 130
+		},
+		{
+			"buy_price_coef": 51,
+			"exchange_price_coef": 0,
+			"heal_price_coef": 0,
+			"insurance_price_coef": 0,
+			"minLevel": 38,
+			"minSalesSum": 2600000,
+			"minStanding": 0.75,
+			"repair_price_coef": 140
+		}
+	],
+	"medic": false,
+	"name": "Александр Фёдорович",
+	"nextResupply": 1672758538,
+	"nickname": "Skier",
+	"repair": {
+		"availability": true,
+		"currency": "5449016a4bdc2d6f028b456f",
+		"currency_coefficient": 1,
+		"excluded_category": [],
+		"excluded_id_list": [],
+		"quality": "1"
+	},
+	"sell_category": [
+		"5b5f71b386f774093f2ecf11",
+		"5b5f71c186f77409407a7ec0",
+		"5b5f71de86f774093f2ecf13",
+		"5b5f724186f77447ed5636ad",
+		"5b5f736886f774094242f193",
+		"5b5f73ec86f774093e6cb4fd",
+		"5b5f74cc86f77447ec5d770a",
+		"5b5f750686f774093e6cb503",
+		"5b5f751486f77447ec5d770c",
+		"5b5f752e86f774093e6cb505",
+		"5b5f754a86f774094242f19b",
+		"5b5f755f86f77447ec5d770e",
+		"5b5f757486f774093e6cb507",
+		"5b5f78e986f77447ed5636b1",
+		"5b5f78fc86f77409407a7f90"
+	],
+	"surname": "Киселёв",
+	"unlockedByDefault": true
 }
