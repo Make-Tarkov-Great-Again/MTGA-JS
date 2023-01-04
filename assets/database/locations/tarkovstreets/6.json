@@ -4962,21 +4962,6 @@
         ],
         "BossLocationSpawn": [
             {
-                "BossName": "gifter",
-                "BossChance": 10,
-                "BossZone": "ZoneColumn",
-                "BossPlayer": false,
-                "BossDifficult": "normal",
-                "BossEscortType": "gifter",
-                "BossEscortDifficult": "normal",
-                "BossEscortAmount": "0",
-                "Time": -1,
-                "TriggerId": "",
-                "TriggerName": "",
-                "Supports": null,
-                "RandomTimeSpawn": false
-            },
-            {
                 "BossName": "bossGluhar",
                 "BossChance": 0.6,
                 "BossZone": "ZoneCarShowroom",

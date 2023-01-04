@@ -6555,21 +6555,6 @@
 		"maxItemCountInLocation": [],
 		"BossLocationSpawn": [
 			{
-				"BossName": "gifter",
-				"BossChance": 15,
-				"BossZone": "Zone_TreatmentContainers,Zone_Chalet,Zone_RoofContainers,Zone_RoofBeach,Zone_Hellicopter",
-				"BossPlayer": false,
-				"BossDifficult": "normal",
-				"BossEscortType": "gifter",
-				"BossEscortDifficult": "normal",
-				"BossEscortAmount": "0",
-				"Time": -1,
-				"TriggerId": "",
-				"TriggerName": "",
-				"Supports": null,
-				"RandomTimeSpawn": false
-			},
-			{
 				"BossName": "bossZryachiy",
 				"BossChance": 100,
 				"BossZone": "Zone_Island",
