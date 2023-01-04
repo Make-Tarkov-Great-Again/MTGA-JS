@@ -4358,14 +4358,24 @@
 				"lastRecipe": ""
 			},
 			{
-			  "type": 22,
-			  "level": 1,
-			  "active": true,
-			  "passiveBonusesEnabled": true,
-			  "completeTime": 0,
-			  "constructing": false,
-			  "slots": [],
-			  "lastRecipe": ""
+				"type": 22,
+				"level": 1,
+				"active": true,
+				"passiveBonusesEnabled": true,
+				"completeTime": 0,
+				"constructing": false,
+				"slots": [],
+				"lastRecipe": ""
+			},
+			{
+				"type": 23,
+				"level": 0,
+				"active": true,
+				"passiveBonusesEnabled": true,
+				"completeTime": 0,
+				"constructing": false,
+				"slots": [],
+				"lastRecipe": ""
 			}
 		],
 		"Improvements": {}
