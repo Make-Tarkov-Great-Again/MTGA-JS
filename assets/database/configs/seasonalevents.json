@@ -1,0 +1,76 @@
+{
+    "santaSpawns": [
+        {
+            "map": "bigmap",
+            "zones": "ZoneDormitory,ZoneGasStation,ZoneScavBase",
+            "spawnChance": 15
+        },
+        {
+            "map": "factory4_day",
+            "zones": "BotZone",
+            "spawnChance": 10
+        },
+        {
+            "map": "laboratory",
+            "zones": "BotZoneFloor1,BotZoneFloor2",
+            "spawnChance": 15
+        },
+        {
+            "map": "interchange",
+            "zones": "ZoneCenterBot,ZoneCenter,ZoneOLI,ZoneIDEA,ZoneGoshan,ZoneIDEAPark,ZoneOLIPark",
+            "spawnChance": 15
+        },
+        {
+            "map": "lighthouse",
+            "zones": "Zone_TreatmentContainers,Zone_Chalet,Zone_RoofContainers,Zone_RoofBeach,Zone_Hellicopter",
+            "spawnChance": 15
+        },
+        {
+            "map": "rezervbase",
+            "zones": "ZoneRailStrorage,ZoneRailStrorage,ZoneRailStrorage,ZonePTOR1,ZonePTOR2,ZoneBarrack,ZoneBarrack,ZoneBarrack,ZoneSubStorage",
+            "spawnChance": 15
+        },
+        {
+            "map": "shoreline",
+            "zones": "ZonePort,ZoneGreenHouses,ZoneSanatorium1,ZoneGreenHouses,ZoneSanatorium2,ZoneMeteoStation,ZoneSanatorium1,ZoneSanatorium2",
+            "spawnChance": 15
+        },
+        {
+            "map": "tarkovstreets",
+            "zones": "ZoneColumn",
+            "spawnChance": 10
+        },
+        {
+            "map": "woods",
+            "zones": "ZoneScavBase2,ZoneWoodCutter",
+            "spawnChance": 15
+        }
+    ],
+    "halloweenCandy": {
+        "loot": {
+            "634959225289190e5e773b3b": {
+                "max": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "prizes": [
+                    "57514643245977207f2c2d09",
+                    "544fb62a4bdc2dfb738b4568",
+                    "57513f07245977207e26a311",
+                    "57513f9324597720a7128161",
+                    "57513fcc24597720a31c09a6",
+                    "5e8f3423fd7471236e6e3b64",
+                    "60b0f93284c20f0feb453da7",
+                    "5734773724597737fd047c14",
+                    "59e3577886f774176a362503",
+                    "57505f6224597709a92585a9",
+                    "544fb6cc4bdc2d34748b456e"
+                ]
+            }
+        }
+    }
+}

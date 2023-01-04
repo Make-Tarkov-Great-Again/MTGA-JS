@@ -16,32 +16,7 @@
                 "endDay": "31",
                 "endMonth": "12"
             }
-        ],
-        "loot": {
-            "634959225289190e5e773b3b": {
-                "max": [
-                    1,
-                    2,
-                    3,
-                    4,
-                    5,
-                    6
-                ],
-                "prizes": [
-                    "57514643245977207f2c2d09",
-                    "544fb62a4bdc2dfb738b4568",
-                    "57513f07245977207e26a311",
-                    "57513f9324597720a7128161",
-                    "57513fcc24597720a31c09a6",
-                    "5e8f3423fd7471236e6e3b64",
-                    "60b0f93284c20f0feb453da7",
-                    "5734773724597737fd047c14",
-                    "59e3577886f774176a362503",
-                    "57505f6224597709a92585a9",
-                    "544fb6cc4bdc2d34748b456e"
-                ]
-            }
-        }
+        ]
     },
     "bots": {
         "_preload": "Creates a cache on server start of generated bots, so that it is not done as the deploy timer starts; bots are also regenerated after each raid if their minThreshold is met. If all bots in cache are used, will generate normally then regenerate after raid",
@@ -170,7 +145,8 @@
     },
     "hideout": {
         "fastScavcase": true,
-        "fastProduction": true
+        "fastProduction": true,
+        "hideoutWallAppearTimeSeconds": 86400
     },
     "location": {
         "realTimeEnabled": true,
