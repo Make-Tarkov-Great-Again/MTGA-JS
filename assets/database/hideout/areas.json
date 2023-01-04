@@ -4217,7 +4217,44 @@
 				},
 				"6": {
 					"autoUpgrade": false,
-					"bonuses": [],
+					"bonuses": [
+						{
+							"passive": true,
+							"production": false,
+							"type": "FuelConsumption",
+							"value": -20,
+							"visible": true
+						},
+						{
+							"passive": true,
+							"production": false,
+							"type": "EnergyRegeneration",
+							"value": 20,
+							"visible": true
+						},
+						{
+							"passive": true,
+							"production": false,
+							"type": "HealthRegeneration",
+							"value": 20,
+							"visible": true
+						},
+						{
+							"passive": true,
+							"production": false,
+							"type": "ExperienceRate",
+							"value": 12,
+							"visible": true
+						},
+						{
+							"passive": true,
+							"production": false,
+							"skillType": "Physical",
+							"type": "SkillGroupLevelingBoost",
+							"value": 12,
+							"visible": true
+						}
+					],
 					"constructionTime": 43200,
 					"description": "",
 					"displayInterface": false,
