@@ -146,7 +146,7 @@
     "hideout": {
         "fastScavcase": true,
         "fastProduction": true,
-        "hideoutWallAppearTimeSeconds": 86400
+        "wallUnlockInSeconds": 86400
     },
     "location": {
         "realTimeEnabled": true,
