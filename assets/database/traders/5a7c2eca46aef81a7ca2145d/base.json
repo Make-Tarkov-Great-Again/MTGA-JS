@@ -1,7 +1,7 @@
 {
 	"_id": "5a7c2eca46aef81a7ca2145d",
 	"availableInRaid": false,
-	"avatar": "/files/trader/avatar/5a7c2ebb86f7746e324a06ab.png",
+	"avatar": "/files/trader/avatar/5a7c2ebb86f7746e324a06ab.jpg",
 	"balance_dol": 0,
 	"balance_eur": 0,
 	"balance_rub": 7000000,
@@ -55,7 +55,7 @@
 			"buy_price_coef": 44,
 			"exchange_price_coef": 0,
 			"heal_price_coef": 0,
-			"insurance_price_coef": "12",
+			"insurance_price_coef": "11",
 			"minLevel": 20,
 			"minSalesSum": 750000,
 			"minStanding": 0.15,
@@ -65,7 +65,7 @@
 			"buy_price_coef": 44,
 			"exchange_price_coef": 0,
 			"heal_price_coef": 0,
-			"insurance_price_coef": "14",
+			"insurance_price_coef": "12",
 			"minLevel": 30,
 			"minSalesSum": 1600000,
 			"minStanding": 0.3,
@@ -75,7 +75,7 @@
 			"buy_price_coef": 44,
 			"exchange_price_coef": 0,
 			"heal_price_coef": 0,
-			"insurance_price_coef": "16",
+			"insurance_price_coef": "13",
 			"minLevel": 40,
 			"minSalesSum": 2500000,
 			"minStanding": 0.6,
@@ -84,7 +84,7 @@
 	],
 	"medic": false,
 	"name": "Сергей Арсеньевич",
-	"nextResupply": 1672757075,
+	"nextResupply": 1631483553,
 	"nickname": "Mechanic",
 	"repair": {
 		"availability": true,
@@ -92,6 +92,7 @@
 		"currency_coefficient": 1,
 		"excluded_category": [],
 		"excluded_id_list": [],
+		"price_rate": 0,
 		"quality": "0.7"
 	},
 	"sell_category": [
