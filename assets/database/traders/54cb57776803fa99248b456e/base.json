@@ -1,7 +1,7 @@
 {
 	"_id": "54cb57776803fa99248b456e",
 	"availableInRaid": false,
-	"avatar": "/files/trader/avatar/59b91cab86f77469aa5343ca.png",
+	"avatar": "/files/trader/avatar/59b91cab86f77469aa5343ca.jpg",
 	"balance_dol": 0,
 	"balance_eur": 0,
 	"balance_rub": 7000000,
@@ -54,7 +54,7 @@
 			"buy_price_coef": 37,
 			"exchange_price_coef": 0,
 			"heal_price_coef": 110,
-			"insurance_price_coef": "24",
+			"insurance_price_coef": "21",
 			"minLevel": 13,
 			"minSalesSum": 400000,
 			"minStanding": 0.15,
@@ -64,7 +64,7 @@
 			"buy_price_coef": 37,
 			"exchange_price_coef": 0,
 			"heal_price_coef": 120,
-			"insurance_price_coef": "28",
+			"insurance_price_coef": "22",
 			"minLevel": 24,
 			"minSalesSum": 700000,
 			"minStanding": 0.3,
@@ -74,7 +74,7 @@
 			"buy_price_coef": 37,
 			"exchange_price_coef": 0,
 			"heal_price_coef": 135,
-			"insurance_price_coef": "32",
+			"insurance_price_coef": "23",
 			"minLevel": 35,
 			"minSalesSum": 900000,
 			"minStanding": 0.6,
@@ -83,7 +83,7 @@
 	],
 	"medic": true,
 	"name": "Эльвира",
-	"nextResupply": 1672756947,
+	"nextResupply": 1631488848,
 	"nickname": "Therapist",
 	"repair": {
 		"availability": false,
@@ -93,6 +93,7 @@
 			"5447e1d04bdc2dff2f8b4567"
 		],
 		"excluded_id_list": [],
+		"price_rate": 0,
 		"quality": "0"
 	},
 	"sell_category": [
