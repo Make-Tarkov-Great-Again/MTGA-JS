@@ -1,0 +1,48 @@
+[
+ {
+  "BossChance": 0.6,
+  "BossDifficult": "normal",
+  "BossEscortAmount": "0",
+  "BossEscortDifficult": "normal",
+  "BossEscortType": "followerGluharAssault",
+  "BossName": "bossGluhar",
+  "BossPlayer": false,
+  "BossZone": "ZoneCarShowroom",
+  "RandomTimeSpawn": false,
+  "Supports": [
+   {
+    "BossEscortAmount": "2",
+    "BossEscortDifficult": ["normal"],
+    "BossEscortType": "followerGluharAssault"
+   },
+   {
+    "BossEscortAmount": "2",
+    "BossEscortDifficult": ["normal"],
+    "BossEscortType": "followerGluharSecurity"
+   },
+   {
+    "BossEscortAmount": "1",
+    "BossEscortDifficult": ["normal"],
+    "BossEscortType": "followerGluharScout"
+   }
+  ],
+  "Time": -1,
+  "TriggerId": "",
+  "TriggerName": ""
+ },
+ {
+  "BossChance": 0.6,
+  "BossDifficult": "normal",
+  "BossEscortAmount": "0",
+  "BossEscortDifficult": "normal",
+  "BossEscortType": "pmcBot",
+  "BossName": "bossKilla",
+  "BossPlayer": false,
+  "BossZone": "ZoneHotel_1,ZoneHotel_2",
+  "RandomTimeSpawn": false,
+  "Supports": null,
+  "Time": -1,
+  "TriggerId": "",
+  "TriggerName": ""
+ }
+]
