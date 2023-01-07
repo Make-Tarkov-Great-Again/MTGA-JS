@@ -1,0 +1,15 @@
+[
+ {
+  "BossChance": 10,
+  "BossDifficult": "normal",
+  "BossEscortAmount": "0",
+  "BossEscortDifficult": "normal",
+  "BossEscortType": "followerTagilla",
+  "BossName": "bossKilla",
+  "BossPlayer": false,
+  "BossZone": "ZoneCenterBot,ZoneCenter,ZoneOLI,ZoneIDEA,ZoneGoshan,ZoneIDEAPark,ZoneOLIPark",
+  "RandomTimeSpawn": false,
+  "Supports": null,
+  "Time": -1
+ }
+]

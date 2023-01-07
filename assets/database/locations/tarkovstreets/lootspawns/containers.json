@@ -1,0 +1,3837 @@
+[
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509c8f",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00092",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509c90",
+        "_tpl": "5909d7cf86f77470ee57d75a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00059",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509c92",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00091",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509c94",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00079",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509c95",
+        "_tpl": "5909d89086f77472591234a0"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00069",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509ca0",
+        "_tpl": "5909d76c86f77471e53d2adf"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00072",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509ca2",
+        "_tpl": "5909d5ef86f77467974efbd8"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00065",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509ca4",
+        "_tpl": "5d6d2bb386f774785b07a77a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00101",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509ca8",
+        "_tpl": "5d6fd45b86f774317075ed43"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00083",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509caa",
+        "_tpl": "5909d76c86f77471e53d2adf"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00035",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509cad",
+        "_tpl": "5d6d2bb386f774785b07a77a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00096",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509cb3",
+        "_tpl": "5909d76c86f77471e53d2adf"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00050",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509cbf",
+        "_tpl": "5909d7cf86f77470ee57d75a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00051",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509cc3",
+        "_tpl": "5909d50c86f774659e6aaebe"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00046",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509cc6",
+        "_tpl": "5909d5ef86f77467974efbd8"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00052",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509cc8",
+        "_tpl": "5909d4c186f7746ad34e805a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00047",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509cca",
+        "_tpl": "5909d7cf86f77470ee57d75a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00070",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509ccd",
+        "_tpl": "5d6d2bb386f774785b07a77a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00103",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509cd4",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00087",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509cd7",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00093",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509cd9",
+        "_tpl": "5d6d2b5486f774785c2ba8ea"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00095",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509ce0",
+        "_tpl": "5909d7cf86f77470ee57d75a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00053",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509ce3",
+        "_tpl": "5909d7cf86f77470ee57d75a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00058",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509ce6",
+        "_tpl": "5909d7cf86f77470ee57d75a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00043",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509ceb",
+        "_tpl": "5909d5ef86f77467974efbd8"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00066",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509ced",
+        "_tpl": "5909d50c86f774659e6aaebe"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00049",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509cf2",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00086",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509cf3",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00074",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509cf4",
+        "_tpl": "5909d7cf86f77470ee57d75a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00056",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509cf7",
+        "_tpl": "5909d4c186f7746ad34e805a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00062",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509cfa",
+        "_tpl": "5909d5ef86f77467974efbd8"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00057",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509cfc",
+        "_tpl": "5909d7cf86f77470ee57d75a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00038",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d02",
+        "_tpl": "5909d4c186f7746ad34e805a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00068",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d03",
+        "_tpl": "5d6d2b5486f774785c2ba8ea"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00108",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d07",
+        "_tpl": "5909d5ef86f77467974efbd8"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00044",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d09",
+        "_tpl": "5d6d2bb386f774785b07a77a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00099",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d0f",
+        "_tpl": "5909d50c86f774659e6aaebe"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00080",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d13",
+        "_tpl": "5909d50c86f774659e6aaebe"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00048",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d14",
+        "_tpl": "5909d76c86f77471e53d2adf"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00060",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d17",
+        "_tpl": "5d6d2b5486f774785c2ba8ea"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00106",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d1f",
+        "_tpl": "5909d5ef86f77467974efbd8"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00037",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d24",
+        "_tpl": "5d6d2b5486f774785c2ba8ea"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00104",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d28",
+        "_tpl": "5d6d2bb386f774785b07a77a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00105",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d2e",
+        "_tpl": "5909d7cf86f77470ee57d75a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00040",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d35",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00085",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d36",
+        "_tpl": "5909d50c86f774659e6aaebe"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00064",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d39",
+        "_tpl": "5909d4c186f7746ad34e805a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00073",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d3b",
+        "_tpl": "5d6d2bb386f774785b07a77a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00113",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d41",
+        "_tpl": "5909d7cf86f77470ee57d75a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00045",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d46",
+        "_tpl": "5909d4c186f7746ad34e805a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00063",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d48",
+        "_tpl": "5d6d2b5486f774785c2ba8ea"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00107",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d4c",
+        "_tpl": "5909d7cf86f77470ee57d75a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00067",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d4e",
+        "_tpl": "5909d5ef86f77467974efbd8"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00077",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d50",
+        "_tpl": "5d6d2bb386f774785b07a77a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00094",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d5c",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00090",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d60",
+        "_tpl": "5909d5ef86f77467974efbd8"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00061",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d61",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00081",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d6c",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00088",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d6f",
+        "_tpl": "5d6d2bb386f774785b07a77a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00098",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d71",
+        "_tpl": "5909d4c186f7746ad34e805a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00055",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d73",
+        "_tpl": "5909d7cf86f77470ee57d75a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00039",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d75",
+        "_tpl": "5d6d2b5486f774785c2ba8ea"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00115",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d79",
+        "_tpl": "5909d7cf86f77470ee57d75a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00036",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d7e",
+        "_tpl": "5d6d2bb386f774785b07a77a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00110",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d80",
+        "_tpl": "5909d76c86f77471e53d2adf"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00041",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d82",
+        "_tpl": "5909d50c86f774659e6aaebe"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00082",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d85",
+        "_tpl": "5d6d2bb386f774785b07a77a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00112",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d8a",
+        "_tpl": "5909d7cf86f77470ee57d75a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00075",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d8c",
+        "_tpl": "5d6d2b5486f774785c2ba8ea"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00100",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d8e",
+        "_tpl": "5909d5ef86f77467974efbd8"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00042",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d90",
+        "_tpl": "5909d50c86f774659e6aaebe"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00071",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d92",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00089",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d95",
+        "_tpl": "5d6d2b5486f774785c2ba8ea"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00102",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d97",
+        "_tpl": "5909d36d86f774660f0bb900"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00084",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d99",
+        "_tpl": "5909d5ef86f77467974efbd8"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00054",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d9b",
+        "_tpl": "5d6d2bb386f774785b07a77a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00109",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509d9d",
+        "_tpl": "5d6d2bb386f774785b07a77a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00114",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509da0",
+        "_tpl": "5d6d2bb386f774785b07a77a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00097",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509da6",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00076",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509da9",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00078",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509dab",
+        "_tpl": "5d6d2bb386f774785b07a77a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00116",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509daf",
+        "_tpl": "5d6d2b5486f774785c2ba8ea"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_DesignStuff_00111",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509db3",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Garage_00024",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509db6",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Garage_00022",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509db9",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Garage_00019",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509dba",
+        "_tpl": "5909e4b686f7747f5b744fa4"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Garage_00021",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509dbe",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Garage_00020",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509dc2",
+        "_tpl": "5909d24f86f77466f56e6855"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Garage_00023",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509dc7",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Garage_00018",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509dc9",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Garage_00025",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509dca",
+        "_tpl": "578f8782245977354405a1e3"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Tamozhnya_00006",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509dd0",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Tamozhnya_00019",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509dd1",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Tamozhnya_00018",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509dd3",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Tamozhnya_00017",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509dd4",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Tamozhnya_00016",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509dd5",
+        "_tpl": "59139c2186f77411564f8e42"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Tamozhnya_00007",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509dd6",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Tamozhnya_00024",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509dd8",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Tamozhnya_00023",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509dd9",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Tamozhnya_00022",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509ddb",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Tamozhnya_00021",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509ddd",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Tamozhnya_00014",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509de0",
+        "_tpl": "59139c2186f77411564f8e42"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Tamozhnya_00009",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509de3",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Tamozhnya_00025",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509de6",
+        "_tpl": "59139c2186f77411564f8e42"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Tamozhnya_00008",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509de8",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Tamozhnya_00010",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509dec",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Tamozhnya_00015",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509def",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Tamozhnya_00012",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509df2",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Tamozhnya_00011",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509df3",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Tamozhnya_00020",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509df4",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Tamozhnya_00013",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509df6",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_TrailerPark_00019",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509df7",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_TrailerPark_00018",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509df8",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_TrailerPark_00021",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509df9",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_TrailerPark_00020",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509dfc",
+        "_tpl": "5914944186f774189e5e76c2"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_factoryStorageZone_00023",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509dfe",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_factoryStorageZone_00021",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e00",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_factoryStorageZone_00020",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e03",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_factoryStorageZone_00019",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e05",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_factoryStorageZone_00018",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e08",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_factoryStorageZone_00017",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e09",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_factoryStorageZone_00022",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e0b",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_factoryStorageZone_00016",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e0d",
+        "_tpl": "5909d36d86f774660f0bb900"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_00035",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e0e",
+        "_tpl": "578f879c24597735401e6bc6"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_00034",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e11",
+        "_tpl": "59139c2186f77411564f8e42"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00042",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e12",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00069",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e13",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00061",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e16",
+        "_tpl": "5909d4c186f7746ad34e805a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00043",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e18",
+        "_tpl": "578f8782245977354405a1e3"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00037",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e1b",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00032",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e1e",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00033",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e23",
+        "_tpl": "578f8782245977354405a1e3"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00041",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e29",
+        "_tpl": "5909d50c86f774659e6aaebe"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00047",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e2c",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00067",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e2e",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00039",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e30",
+        "_tpl": "5909d45286f77465a8136dc6"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00035",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e31",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00068",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e33",
+        "_tpl": "5909d45286f77465a8136dc6"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00034",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e3b",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00059",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e3e",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00045",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e3f",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00046",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e40",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00056",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e43",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00054",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e45",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00053",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e47",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00055",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e49",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00066",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e4a",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00057",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e4d",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00058",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e50",
+        "_tpl": "5909d76c86f77471e53d2adf"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00036",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e54",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00060",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e55",
+        "_tpl": "5909e4b686f7747f5b744fa4"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00048",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e59",
+        "_tpl": "578f8782245977354405a1e3"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00044",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e5c",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00052",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e5d",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00051",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e5f",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00049",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e62",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00050",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e64",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00040",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e67",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00038",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e69",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00064",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e6a",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00063",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e6d",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00062",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e6f",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_1_indoor_00065",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e71",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00090",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e73",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00071",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e76",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00082",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e79",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00084",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e7c",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00069",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e7d",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00086",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e7e",
+        "_tpl": "59139c2186f77411564f8e42"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00060",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e82",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00076",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e84",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00072",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e86",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00089",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e87",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00059",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e88",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00087",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e8b",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00088",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e8e",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00064",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e91",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00063",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e93",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00062",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e94",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00061",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e97",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00083",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e98",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00068",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e9a",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00067",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e9d",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00066",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509e9f",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00065",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509ea1",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00055",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509ea3",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00054",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509ea5",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00053",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509ea7",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00052",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509ea9",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00051",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509eaa",
+        "_tpl": "5937ef2b86f77408a47244b3"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00079",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509eac",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00056",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509eaf",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00078",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509eb2",
+        "_tpl": "578f8782245977354405a1e3"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00077",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509eb8",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00050",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509ebc",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00070",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509ebd",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00075",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567807611d5b51509ec0",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00057",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509ec3",
+        "_tpl": "59139c2186f77411564f8e42"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00080",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509ec5",
+        "_tpl": "578f8782245977354405a1e3"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00081",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509ec9",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00085",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509ecb",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00058",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509ecd",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00074",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509ecf",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Obshezhitie_2_indoor_00073",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509ed6",
+        "_tpl": "578f879c24597735401e6bc6"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_AZS_00047",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509ed9",
+        "_tpl": "5909d4c186f7746ad34e805a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_AZS_00045",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509ede",
+        "_tpl": "578f879c24597735401e6bc6"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_AZS_00050",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509ee1",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_AZS_00051",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509ee2",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_AZS_00052",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509ee4",
+        "_tpl": "578f879c24597735401e6bc6"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_AZS_00049",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509ee6",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_AZS_00043",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509ee8",
+        "_tpl": "578f8782245977354405a1e3"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_AZS_00044",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509eeb",
+        "_tpl": "578f879c24597735401e6bc6"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_AZS_00048",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509eed",
+        "_tpl": "5909d24f86f77466f56e6855"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_AZS_00046",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509eee",
+        "_tpl": "5909d50c86f774659e6aaebe"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_mazuto_00043",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509ef2",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_mazuto_00029",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509ef5",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_mazuto_00041",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509ef7",
+        "_tpl": "59139c2186f77411564f8e42"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_mazuto_00047",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509ef9",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_mazuto_00039",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509efc",
+        "_tpl": "5909d89086f77472591234a0"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_mazuto_00045",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f00",
+        "_tpl": "59139c2186f77411564f8e42"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_mazuto_00034",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f03",
+        "_tpl": "5909d7cf86f77470ee57d75a"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_mazuto_00040",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f0c",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_mazuto_00030",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f0d",
+        "_tpl": "5909d89086f77472591234a0"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_mazuto_00044",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f0f",
+        "_tpl": "5909d50c86f774659e6aaebe"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_mazuto_00036",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f13",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_mazuto_00032",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f16",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_mazuto_00031",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f18",
+        "_tpl": "5909d50c86f774659e6aaebe"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_mazuto_00038",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f1d",
+        "_tpl": "5909d24f86f77466f56e6855"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_mazuto_00037",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f20",
+        "_tpl": "5909e4b686f7747f5b744fa4"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_mazuto_00042",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f22",
+        "_tpl": "59139c2186f77411564f8e42"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_mazuto_00046",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f23",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_mazuto_00033",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f24",
+        "_tpl": "59139c2186f77411564f8e42"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_mazuto_00035",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f26",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_multiScene_00073",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f2a",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_multiScene_00055",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f2d",
+        "_tpl": "59387ac686f77401442ddd61"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_multiScene_00068",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f2f",
+        "_tpl": "5909e4b686f7747f5b744fa4"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_multiScene_00064",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f36",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_multiScene_00072",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f38",
+        "_tpl": "5909d45286f77465a8136dc6"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_multiScene_00066",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f3a",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_multiScene_00069",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f3e",
+        "_tpl": "5909d45286f77465a8136dc6"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_multiScene_00070",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f44",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_multiScene_00071",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f48",
+        "_tpl": "5909d45286f77465a8136dc6"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_multiScene_00054",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f4b",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_multiScene_00076",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f4e",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_multiScene_00062",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f50",
+        "_tpl": "5909d45286f77465a8136dc6"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_multiScene_00065",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f53",
+        "_tpl": "5909d36d86f774660f0bb900"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_multiScene_00067",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f55",
+        "_tpl": "5909e4b686f7747f5b744fa4"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_multiScene_00074",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f56",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_multiScene_00056",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f58",
+        "_tpl": "578f87a3245977356274f2cb"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_multiScene_00059",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f5b",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_multiScene_00060",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f5d",
+        "_tpl": "578f879c24597735401e6bc6"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_multiScene_00061",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f5e",
+        "_tpl": "5909d45286f77465a8136dc6"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_multiScene_00075",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f67",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_multiScene_00057",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f68",
+        "_tpl": "578f87ad245977356274f2cc"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_AZS_old_00009",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f69",
+        "_tpl": "5909d24f86f77466f56e6855"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_AZS_old_00010",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f6d",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Abandoned_Lab_00014",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f6e",
+        "_tpl": "5909e4b686f7747f5b744fa4"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Abandoned_Lab_00016",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f72",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Abandoned_Lab_00025",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f75",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Abandoned_Lab_00026",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f78",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Abandoned_Lab_00027",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f7a",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Abandoned_Lab_00028",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f7b",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Abandoned_Lab_00013",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f7c",
+        "_tpl": "5909e4b686f7747f5b744fa4"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Abandoned_Lab_00012",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f81",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Abandoned_Lab_00017",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f84",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Abandoned_Lab_00018",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f86",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Abandoned_Lab_00019",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f88",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Abandoned_Lab_00020",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f89",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Abandoned_Lab_00021",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f8c",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Abandoned_Lab_00022",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f8d",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Abandoned_Lab_00023",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f8e",
+        "_tpl": "578f87b7245977356274f2cd"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Abandoned_Lab_00024",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f90",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Abandoned_Lab_00015",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f92",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "Custom_ChemicalFactory_00011",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f95",
+        "_tpl": "5d6fd13186f77424ad2a8c69"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "Custom_Construction_Factory_00004",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509f9d",
+        "_tpl": "5d6fe50986f77449d97f7463"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "Custom_Construction_Factory_00001",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509fa4",
+        "_tpl": "5d6fd45b86f774317075ed43"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "Custom_Construction_Factory_00002",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509fa9",
+        "_tpl": "5d6fe50986f77449d97f7463"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "Custom_Construction_Factory_00003",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509fb0",
+        "_tpl": "5909d5ef86f77467974efbd8"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "Custom_Expansion_00006",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509fb4",
+        "_tpl": "5909e4b686f7747f5b744fa4"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "Custom_Expansion_00011",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509fb7",
+        "_tpl": "5d6fd45b86f774317075ed43"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "Custom_Expansion_00012",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509fbd",
+        "_tpl": "5d6fd45b86f774317075ed43"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "Custom_Expansion_00008",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509fbf",
+        "_tpl": "5d6fd45b86f774317075ed43"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "Custom_Expansion_00007",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509fc2",
+        "_tpl": "5909e4b686f7747f5b744fa4"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "Custom_Expansion_00010",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509fc3",
+        "_tpl": "5d6fd45b86f774317075ed43"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "Custom_Expansion_00005",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509fc6",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "Custom_Expansion_00009",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509fc9",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Pump_Station_00008",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509fcc",
+        "_tpl": "59139c2186f77411564f8e42"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Pump_Station_00006",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509fd0",
+        "_tpl": "578f8778245977358849a9b5"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Pump_Station_00005",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61b6567907611d5b51509fd2",
+        "_tpl": "59139c2186f77411564f8e42"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "custom_Pump_Station_00007",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61ce0fd24d4e220bfc7ac48c",
+        "_tpl": "61a89e5445a2672acf66c877"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "container_shoreline_scripts_00005",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61ce0fd24d4e220bfc7ac4e5",
+        "_tpl": "61a89e5445a2672acf66c877"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "container_shoreline_scripts_00002",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61ce0fd24d4e220bfc7ac527",
+        "_tpl": "61a89e5445a2672acf66c877"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "container_shoreline_scripts_00004",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61ce0fd24d4e220bfc7ac544",
+        "_tpl": "61a89e5445a2672acf66c877"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "container_shoreline_scripts_00001",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61ce0fd24d4e220bfc7ac579",
+        "_tpl": "61a89e5445a2672acf66c877"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "container_shoreline_scripts_00003",
+    "useGravity": true
+  },
+  {
+    "IsStatic": true,
+    "Items": [
+      {
+        "_id": "61ce0fd24d4e220bfc7ac592",
+        "_tpl": "61a89e5445a2672acf66c877"
+      }
+    ],
+    "Position": 0,
+    "Rotation": 0,
+    "id": "container_custom_Scripts_00000",
+    "useGravity": true
+  }
+]
