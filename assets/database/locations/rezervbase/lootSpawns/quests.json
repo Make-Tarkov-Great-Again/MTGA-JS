@@ -1,0 +1,100 @@
+[
+	{
+		"worldId": "loot_bunker_quest (3)555192",
+		"questItmTpl": "60a3b65c27adf161da7b6e14",
+		"Position": [
+			-121.867004,
+			-14.314,
+			38.6560059
+		],
+		"Rotation": [
+			57.3194122,
+			107.333969,
+			0.00000316238743
+		]
+	},
+	{
+		"worldId": "loot_medroom_quest (2)558122",
+		"questItmTpl": "608c22a003292f4ba43f8a1a",
+		"Position": [
+			-59.0209961,
+			-3.637,
+			-36.1919861
+		],
+		"Rotation": [
+			0,
+			135.458725,
+			0
+		]
+	},
+	{
+		"worldId": "loot_ccp_quest (4)565540",
+		"questItmTpl": "609267a2bb3f46069c3e6c7d",
+		"Position": [
+			-88.065,
+			-19.129,
+			151.055
+		],
+		"Rotation": [
+			0,
+			167.8859,
+			0
+		]
+	},
+	{
+		"worldId": "loot_bunker_quest (2)565580",
+		"questItmTpl": "60a3b6359c427533db36cf84",
+		"Position": [
+			-114.18103,
+			-13.6893,
+			39.7880249
+		],
+		"Rotation": [
+			0,
+			135.458725,
+			0
+		]
+	},
+	{
+		"worldId": "loot_gals_quest (3)571494",
+		"questItmTpl": "60c080eb991ac167ad1c3ad4",
+		"Position": [
+			99.78601,
+			-6.725,
+			59.1600342
+		],
+		"Rotation": [
+			57.5091553,
+			135.458725,
+			0.00000317881381
+		]
+	},
+	{
+		"worldId": "loot_medroom_quest (3)572174",
+		"questItmTpl": "60a3b5b05f84d429b732e934",
+		"Position": [
+			-80.47601,
+			-3.647,
+			-30.7659912
+		],
+		"Rotation": [
+			67.99741,
+			36.12959,
+			-0.000004557729
+		]
+	},
+	{
+		"worldId": "loot_bunker_quest (1)572182",
+		"questItmTpl": "60915994c49cf53e4772cc38",
+		"Position": [
+			-114.36499,
+			-13.7081,
+			27.3590088
+		],
+		"Rotation": [
+			0,
+			135.458725,
+			0
+		]
+	}
+]

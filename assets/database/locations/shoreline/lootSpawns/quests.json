@@ -1,0 +1,456 @@
+[
+	{
+		"worldId": "diagset_Sanitar4334942",
+		"questItmTpl": "5efdaf6de6a30218ed211a48",
+		"Position": [
+			99.45056,
+			-44.3777,
+			107.002594
+		],
+		"Rotation": [
+			33.2750854,
+			143.360168,
+			73.77298
+		]
+	},
+	{
+		"worldId": "SAS1  [1] (11)4335270",
+		"questItmTpl": "5a294d7c86f7740651337cf9",
+		"Position": [
+			-715.9717,
+			-42.1482,
+			224.9588
+		],
+		"Rotation": [
+			283.965057,
+			317.191071,
+			58.3573227
+		]
+	},
+	{
+		"worldId": "SAS2  [1] (12)4338974",
+		"questItmTpl": "5a294d8486f774068638cd93",
+		"Position": [
+			-58.2937,
+			-19.4951,
+			-311.1382
+		],
+		"Rotation": [
+			273.719482,
+			25.41563,
+			128.2211
+		]
+	},
+	{
+		"worldId": "controller1_forest_crate4339794",
+		"questItmTpl": "5b4c72b386f7745b453af9c0",
+		"Position": [
+			-753.850952,
+			-44.348,
+			180.932
+		],
+		"Rotation": [
+			7.60346651,
+			29.75233,
+			76.96652
+		]
+	},
+	{
+		"worldId": "surgical_kit_Sanitar4340414",
+		"questItmTpl": "5efdafc1e70b5e33f86de058",
+		"Position": [
+			-314.594971,
+			-55.7136,
+			480.1718
+		],
+		"Rotation": [
+			-0.00000272140346,
+			90,
+			179.200577
+		]
+	},
+	{
+		"worldId": "010_5_drive  [1] (17)4340764",
+		"questItmTpl": "5a29276886f77435ed1b117c",
+		"Position": [
+			-358.932983,
+			2.54,
+			-76.9750061
+		],
+		"Rotation": [
+			87.5914154,
+			-0.00004063392,
+			41.0816841
+		]
+	},
+	{
+		"worldId": "008_5_key  [1] (13)4340900",
+		"questItmTpl": "5a0448bc86f774736f14efa8",
+		"Position": [
+			-152.349976,
+			-14.546,
+			-301.219
+		],
+		"Rotation": [
+			78.07961,
+			152.851624,
+			291.816772
+		]
+	},
+	{
+		"worldId": "case_0060  [1] (3)4340924",
+		"questItmTpl": "5d357d6b86f7745b606e3508",
+		"Position": [
+			-226.552,
+			2.089,
+			-87.571
+		],
+		"Rotation": [
+			270,
+			69.19153,
+			0
+		]
+	},
+	{
+		"worldId": "009_1_nout  [1] (14)4341060",
+		"questItmTpl": "5a29284f86f77463ef3db363",
+		"Position": [
+			-285.103027,
+			2.512,
+			-89.3500061
+		],
+		"Rotation": [
+			270.951,
+			5.79528236,
+			330.8144
+		]
+	},
+	{
+		"worldId": "009_2_doc  [1] (15)4341498",
+		"questItmTpl": "5939e5a786f77461f11c0098",
+		"Position": [
+			-340.984,
+			-2.725,
+			-88.627
+		],
+		"Rotation": [
+			89.19449,
+			0.000121351572,
+			37.2990265
+		]
+	},
+	{
+		"worldId": "010_4_flash  [1] (16)4341554",
+		"questItmTpl": "5a29357286f77409c705e025",
+		"Position": [
+			-267.220947,
+			-0.017,
+			-145.576
+		],
+		"Rotation": [
+			272.7763,
+			0.00003525317,
+			331.548157
+		]
+	},
+	{
+		"worldId": "case_0060  [1] (2)4341926",
+		"questItmTpl": "5a6860d886f77411cd3a9e47",
+		"Position": [
+			-218.02002,
+			2.815,
+			-86.09
+		],
+		"Rotation": [
+			88.40358,
+			310.6659,
+			352.884674
+		]
+	},
+	{
+		"worldId": "luj1_chem_container14344530",
+		"questItmTpl": "5b43237186f7742f3a4ab252",
+		"Position": [
+			-186.06189,
+			-2.7302,
+			-86.1152039
+		],
+		"Rotation": [
+			1.04949251e-7,
+			13.0688772,
+			-4.192726e-7
+		]
+	},
+	{
+		"worldId": "giroscope216_44344852",
+		"questItmTpl": "5b4c72fb86f7745cef1cffc5",
+		"Position": [
+			-181.3706,
+			0.2235,
+			-80.57291
+		],
+		"Rotation": [
+			0,
+			77.26779,
+			0
+		]
+	},
+	{
+		"worldId": "controller_comp_room4345172",
+		"questItmTpl": "5b4c72c686f77462ac37e907",
+		"Position": [
+			-289.378052,
+			2.225,
+			-84.373
+		],
+		"Rotation": [
+			0,
+			0,
+			89.20525
+		]
+	},
+	{
+		"worldId": "quest_pacadge9164720",
+		"questItmTpl": "5ac620eb86f7743a8e6e0da0",
+		"Position": [
+			-202.607,
+			7.223,
+			-98.319
+		],
+		"Rotation": [
+			358.863953,
+			128.208572,
+			358.896179
+		],
+		"useGravity": true
+	},
+	{
+		"worldId": "loot_quest_00319165436",
+		"questItmTpl": "5938188786f77474f723e87f",
+		"Position": [
+			204.073,
+			4.6952,
+			12.3975
+		],
+		"Rotation": [
+			270,
+			25.6943226,
+			0
+		]
+	},
+	{
+		"worldId": "loot_case_feld9167078",
+		"questItmTpl": "5910922b86f7747d96753483",
+		"Position": [
+			239.183,
+			0.713,
+			160.595
+		],
+		"Rotation": [
+			88.6121,
+			270.000122,
+			0
+		]
+	},
+	{
+		"worldId": "loot_letter_TG9167658",
+		"questItmTpl": "5939e9b286f77462a709572c",
+		"Position": [
+			194.7797,
+			4.4267,
+			173.1325
+		],
+		"Rotation": [
+			4.01791573,
+			6.64310646,
+			88.59731
+		]
+	},
+	{
+		"worldId": "quest_flash9170756",
+		"questItmTpl": "5c12301c86f77419522ba7e4",
+		"Position": [
+			-91.521,
+			1.027,
+			4.346
+		],
+		"Rotation": [
+			90,
+			306.564636,
+			0
+		]
+	},
+	{
+		"worldId": "Loot 56 (28)9171534",
+		"questItmTpl": "5937fd0086f7742bf33fc198",
+		"Position": [
+			102.2964,
+			2.9634,
+			-5.9064
+		],
+		"Rotation": [
+			85.79029,
+			180,
+			180
+		]
+	},
+	{
+		"worldId": "Loot 158 (38)9171622",
+		"questItmTpl": "5939a00786f7742fe8132936",
+		"Position": [
+			180.8072,
+			6.7378,
+			150.0781
+		],
+		"Rotation": [
+			90,
+			339.936157,
+			0
+		]
+	},
+	{
+		"worldId": "quest_case2039171706",
+		"questItmTpl": "590dde5786f77405e71908b2",
+		"Position": [
+			178.07,
+			2.877,
+			148.702
+		],
+		"Rotation": [
+			0.00000170754754,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "loot_quest_customs9172078",
+		"questItmTpl": "591092ef86f7747bb8703422",
+		"Position": [
+			-202.8806,
+			7.6911,
+			-102.4012
+		],
+		"Rotation": [
+			270,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "loot_quest_00489173300",
+		"questItmTpl": "593965cf86f774087a77e1b6",
+		"Position": [
+			367.6828,
+			1.3008,
+			-50.5712
+		],
+		"Rotation": [
+			270,
+			222.660156,
+			0
+		]
+	},
+	{
+		"worldId": "loot_flash_TG9173428",
+		"questItmTpl": "590c62a386f77412b0130255",
+		"Position": [
+			194.2243,
+			3.7256,
+			171.0656
+		],
+		"Rotation": [
+			90,
+			37.30105,
+			0
+		]
+	},
+	{
+		"worldId": "custom_multiScene_00058",
+		"questItmTpl": "5909e4b686f7747f5b744fa4",
+		"useGravity": true
+	},
+	{
+		"worldId": "huntsman_001_message8286546",
+		"questItmTpl": "5d3ec50586f774183a607442",
+		"Position": [
+			-257.1476,
+			8.518,
+			7.9998
+		],
+		"Rotation": [
+			358.7371,
+			260.537354,
+			180.210419
+		]
+	},
+	{
+		"worldId": "giroscope28286790",
+		"questItmTpl": "5af04e0a86f7743a532b79e2",
+		"Position": [
+			56.7209473,
+			-1.791,
+			-50.2489929
+		],
+		"Rotation": [
+			272.717346,
+			297.500916,
+			62.4726944
+		]
+	},
+	{
+		"worldId": "loot_case_00528289804",
+		"questItmTpl": "5938878586f7741b797c562f",
+		"Position": [
+			-3.322,
+			-1.4843,
+			-81.1259
+		],
+		"Rotation": [
+			270,
+			14.9999752,
+			0
+		]
+	},
+	{
+		"worldId": "controller_wood_car38292174",
+		"questItmTpl": "5af04c0b86f774138708f78e",
+		"Position": [
+			233.843018,
+			-1.235,
+			-71.10199
+		],
+		"Rotation": [
+			1.05227029,
+			246.741547,
+			89.4343262
+		]
+	},
+	{
+		"worldId": "loot_flash8292538",
+		"questItmTpl": "590c621186f774138d11ea29",
+		"Position": [
+			130.2527,
+			-3.5876,
+			101.2445
+		],
+		"Rotation": [
+			270,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "blood_probe8292974",
+		"questItmTpl": "5a687e7886f7740c4a5133fb",
+		"Position": [
+			-94.25195,
+			-15.702,
+			218.992981
+		],
+		"Rotation": [
+			274.426941,
+			180,
+			180
+		]
+	}
+]
