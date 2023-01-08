@@ -1,0 +1,29 @@
+{
+  "utes": {
+    "template": "5cdeb229d7f00c000e7ce174",
+    "magazine": "5cffa483d7ad1a049e54ef1c",
+    "totalAmmoSlots": 50,
+    "cartridges": [
+      { 
+        "template": "5d2f2ab648f03550091993ca",
+        "countPer": 1
+      },
+      { 
+        "template": "5cde8864d7f00c0010373be1",
+        "countPer": 3
+      }
+    ]
+  },
+  "ags": {
+    "template": "5d52cc5ba4b9367408500062",
+    "magazine": "5d52d479a4b936793d58c76b",
+    "scope": "5d53f4b7a4b936793d58c780",
+    "totalAmmoSlots": 100,
+    "cartridges": [
+      { 
+        "template": "5d70e500a4b9364de70d38ce",
+        "countPer": 1
+      }
+    ]
+  }
+}
