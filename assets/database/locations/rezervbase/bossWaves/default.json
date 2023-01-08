@@ -1,0 +1,63 @@
+[
+    {
+        "BossName": "bossKnight",
+        "BossChance": 12,
+        "BossZone": "ZoneScavBase",
+        "BossPlayer": false,
+        "BossDifficult": "normal",
+        "BossEscortType": "exUsec",
+        "BossEscortDifficult": "normal",
+        "BossEscortAmount": "2",
+        "Time": -1,
+        "Supports": [
+            {
+                "BossEscortType": "followerBigPipe",
+                "BossEscortDifficult": [
+                    "normal"
+                ],
+                "BossEscortAmount": "1"
+            },
+            {
+                "BossEscortType": "followerBirdEye",
+                "BossEscortDifficult": [
+                    "normal"
+                ],
+                "BossEscortAmount": "1"
+            },
+            {
+                "BossEscortType": "followerGluharScout",
+                "BossEscortDifficult": [
+                    "normal"
+                ],
+                "BossEscortAmount": "0"
+            }
+        ],
+        "RandomTimeSpawn": true
+    },
+    {
+        "BossName": "sectantPriest",
+        "BossChance": 5,
+        "BossZone": "ZoneScavBase",
+        "BossPlayer": false,
+        "BossDifficult": "normal",
+        "BossEscortType": "sectantWarrior",
+        "BossEscortDifficult": "normal",
+        "BossEscortAmount": "4",
+        "Time": -1,
+        "Supports": null,
+        "RandomTimeSpawn": false
+    },
+    {
+        "BossName": "bossBully",
+        "BossChance": 15,
+        "BossZone": "ZoneDormitory,ZoneGasStation",
+        "BossPlayer": false,
+        "BossDifficult": "normal",
+        "BossEscortType": "followerBully",
+        "BossEscortDifficult": "normal",
+        "BossEscortAmount": "4",
+        "Time": -1,
+        "Supports": null,
+        "RandomTimeSpawn": false
+    }
+]
