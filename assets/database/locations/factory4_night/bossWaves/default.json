@@ -1,0 +1,26 @@
+[
+ {
+  "BossChance": 10,
+  "BossDifficult": "normal",
+  "BossEscortAmount": "0",
+  "BossEscortDifficult": "normal",
+  "BossEscortType": "followerBully",
+  "BossName": "bossTagilla",
+  "BossPlayer": false,
+  "BossZone": "BotZone",
+  "RandomTimeSpawn": false,
+  "Time": -1
+ },
+ {
+  "BossChance": 2,
+  "BossDifficult": "normal",
+  "BossEscortAmount": "2",
+  "BossEscortDifficult": "normal",
+  "BossEscortType": "sectantWarrior",
+  "BossName": "sectantPriest",
+  "BossPlayer": false,
+  "BossZone": "BotZone",
+  "RandomTimeSpawn": false,
+  "Time": -1
+ }
+]
