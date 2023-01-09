@@ -15,7 +15,7 @@
     "@fastify/compress": "^6.2.0",
     "@fastify/cookie": "^8.3.0",
     "@fastify/formbody": "^7.4.0",
-    "@fastify/websocket": "^7.1.1",
+    "@fastify/websocket": "^7.1.2",
     "console-png": "^1.2.1",
     "fast-stringify": "^2.0.0",
     "fastify": "^4.11.0",
@@ -26,6 +26,6 @@
   "devDependencies": {
     "nodemon": "^2.0.20",
     "pino-pretty": "^9.1.1",
-    "tap": "^16.3.2"
+    "tap": "^16.3.3"
   }
 }
