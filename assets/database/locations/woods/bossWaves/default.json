@@ -1,57 +1,63 @@
 [
- {
-  "BossChance": 15,
-  "BossDifficult": "normal",
-  "BossEscortAmount": "2",
-  "BossEscortDifficult": "normal",
-  "BossEscortType": "exUsec",
-  "BossName": "bossKnight",
-  "BossPlayer": false,
-  "BossZone": "ZoneScavBase2",
-  "RandomTimeSpawn": true,
-  "Supports": [
-   {
-    "BossEscortAmount": "1",
-    "BossEscortDifficult": ["normal"],
-    "BossEscortType": "followerBigPipe"
-   },
-   {
-    "BossEscortAmount": "1",
-    "BossEscortDifficult": ["normal"],
-    "BossEscortType": "followerBirdEye"
-   },
-   {
-    "BossEscortAmount": "0",
-    "BossEscortDifficult": ["normal"],
-    "BossEscortType": "followerGluharScout"
-   }
-  ],
-  "Time": -1
- },
- {
-  "BossChance": 5,
-  "BossDifficult": "normal",
-  "BossEscortAmount": "4",
-  "BossEscortDifficult": "normal",
-  "BossEscortType": "sectantWarrior",
-  "BossName": "sectantPriest",
-  "BossPlayer": false,
-  "BossZone": "ZoneMiniHouse,ZoneBrokenVill",
-  "RandomTimeSpawn": false,
-  "Supports": null,
-  "Time": -1
- },
- {
-  "BossChance": 20,
-  "BossDifficult": "normal",
-  "BossEscortAmount": "2",
-  "BossEscortDifficult": "normal",
-  "BossEscortType": "followerKojaniy",
-  "BossName": "bossKojaniy",
-  "BossPlayer": false,
-  "BossZone": "ZoneWoodCutter",
-  "RandomTimeSpawn": false,
-  "Supports": null,
-  "Time": -1
- }
+    {
+        "BossChance": 15,
+        "BossDifficult": "normal",
+        "BossEscortAmount": "2",
+        "BossEscortDifficult": "normal",
+        "BossEscortType": "exUsec",
+        "BossName": "bossKnight",
+        "BossPlayer": false,
+        "BossZone": "ZoneScavBase2",
+        "RandomTimeSpawn": true,
+        "Supports": [
+            {
+                "BossEscortAmount": "1",
+                "BossEscortDifficult": [
+                    "normal"
+                ],
+                "BossEscortType": "followerBigPipe"
+            },
+            {
+                "BossEscortAmount": "1",
+                "BossEscortDifficult": [
+                    "normal"
+                ],
+                "BossEscortType": "followerBirdEye"
+            },
+            {
+                "BossEscortAmount": "0",
+                "BossEscortDifficult": [
+                    "normal"
+                ],
+                "BossEscortType": "followerGluharScout"
+            }
+        ],
+        "Time": -1
+    },
+    {
+        "BossChance": 5,
+        "BossDifficult": "normal",
+        "BossEscortAmount": "4",
+        "BossEscortDifficult": "normal",
+        "BossEscortType": "sectantWarrior",
+        "BossName": "sectantPriest",
+        "BossPlayer": false,
+        "BossZone": "ZoneMiniHouse,ZoneBrokenVill",
+        "RandomTimeSpawn": false,
+        "Supports": null,
+        "Time": -1
+    },
+    {
+        "BossChance": 20,
+        "BossDifficult": "normal",
+        "BossEscortAmount": "2",
+        "BossEscortDifficult": "normal",
+        "BossEscortType": "followerKojaniy",
+        "BossName": "bossKojaniy",
+        "BossPlayer": false,
+        "BossZone": "ZoneWoodCutter",
+        "RandomTimeSpawn": false,
+        "Supports": null,
+        "Time": -1
+    }
 ]
