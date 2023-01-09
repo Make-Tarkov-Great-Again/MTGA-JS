@@ -1,14 +1,14 @@
 [
- {
-  "BossChance": 10,
-  "BossDifficult": "normal",
-  "BossEscortAmount": "0",
-  "BossEscortDifficult": "normal",
-  "BossEscortType": "followerBully",
-  "BossName": "bossTagilla",
-  "BossPlayer": false,
-  "BossZone": "BotZone",
-  "RandomTimeSpawn": false,
-  "Time": -1
- }
+    {
+        "BossChance": 10,
+        "BossDifficult": "normal",
+        "BossEscortAmount": "0",
+        "BossEscortDifficult": "normal",
+        "BossEscortType": "followerBully",
+        "BossName": "bossTagilla",
+        "BossPlayer": false,
+        "BossZone": "BotZone",
+        "RandomTimeSpawn": false,
+        "Time": -1
+    }
 ]
