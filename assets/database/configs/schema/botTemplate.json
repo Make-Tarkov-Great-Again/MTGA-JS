@@ -3,38 +3,38 @@
     "aid": 0,
     "savage": null,
     "Info": {
-       "Nickname": "",
-       "LowerNickname": "",
-       "Side": "Savage",
-       "Voice": "Scav_1",
-       "Level": 1,
-       "Experience": 0,
-       "RegistrationDate": 0,
-       "GameVersion": "",
-       "AccountType": 0,
-       "MemberCategory": 0,
-       "lockedMoveCommands": false,
-       "SavageLockTime": 0,
-       "LastTimePlayedAsSavage": 0,
-       "Settings": {
-          "Role": "assault",
-          "BotDifficulty": "normal",
-          "Experience": -1,
-          "StandingForKill": -0.02,
-          "AggressorBonus": 0.01
-       },
-       "NicknameChangeDate": 0,
-       "NeedWipeOptions": [],
-       "lastCompletedWipe": null,
-       "BannedState": false,
-       "BannedUntil": 0,
-       "IsStreamerModeAvailable": false
+        "Nickname": "",
+        "LowerNickname": "",
+        "Side": "Savage",
+        "Voice": "Scav_1",
+        "Level": 1,
+        "Experience": 0,
+        "RegistrationDate": 0,
+        "GameVersion": "",
+        "AccountType": 0,
+        "MemberCategory": 0,
+        "lockedMoveCommands": false,
+        "SavageLockTime": 0,
+        "LastTimePlayedAsSavage": 0,
+        "Settings": {
+            "Role": "assault",
+            "BotDifficulty": "normal",
+            "Experience": -1,
+            "StandingForKill": -0.02,
+            "AggressorBonus": 0.01
+        },
+        "NicknameChangeDate": 0,
+        "NeedWipeOptions": [],
+        "lastCompletedWipe": null,
+        "BannedState": false,
+        "BannedUntil": 0,
+        "IsStreamerModeAvailable": false
     },
     "Customization": {
-       "Head": "5cc2e4d014c02e000d0115f8",
-       "Body": "5d28ad7286f7742926686182",
-       "Feet": "5f5e41576760b4138443b344",
-       "Hands": "5cc2e68f14c02e28b47de290"
+        "Head": "5cc2e4d014c02e000d0115f8",
+        "Body": "5d28ad7286f7742926686182",
+        "Feet": "5f5e41576760b4138443b344",
+        "Hands": "5cc2e68f14c02e28b47de290"
     },
     "Health": {
         "Hydration": {
