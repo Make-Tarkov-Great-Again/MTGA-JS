@@ -1,7 +1,7 @@
 {
 	"_id": "58330581ace78e27b8b10cee",
 	"availableInRaid": false,
-	"avatar": "/files/trader/avatar/59b91cb486f77469a81232e5.png",
+	"avatar": "/files/trader/avatar/59b91cb486f77469a81232e5.jpg",
 	"balance_dol": 0,
 	"balance_eur": 0,
 	"balance_rub": 7000000,
@@ -29,7 +29,8 @@
 			"5422acb9af1c889c16000029",
 			"543be6564bdc2df4348b4568",
 			"5448fe124bdc2da5018b4567",
-			"5448f3a64bdc2d60728b456a"
+			"5448f3a64bdc2d60728b456a",
+			"5485a8684bdc2da71d8b4567"
 		],
 		"id_list": []
 	},
@@ -84,7 +85,7 @@
 	],
 	"medic": false,
 	"name": "Александр Фёдорович",
-	"nextResupply": 1672758538,
+	"nextResupply": 1631487786,
 	"nickname": "Skier",
 	"repair": {
 		"availability": true,
@@ -92,6 +93,7 @@
 		"currency_coefficient": 1,
 		"excluded_category": [],
 		"excluded_id_list": [],
+		"price_rate": 0,
 		"quality": "1"
 	},
 	"sell_category": [
