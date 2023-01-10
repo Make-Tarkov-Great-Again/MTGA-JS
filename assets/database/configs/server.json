@@ -2,7 +2,7 @@
   "ip": "127.0.0.1",
   "ip_backend": "127.0.0.1",
   "hostname": "localhost",
-  "port": 443,
+  "port": 42069,
   "eventPollIntervalSec": 60,
   "rebuildCache": true,
   "name": "Make Tarkov Great Again",
