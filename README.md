@@ -1,6 +1,6 @@
 # MTGA-Backend
 
-> It's going to be great, so great, in fact it will dominate nikita's paste
+> It's going to be great, so great, in fact it be the best.
 
 ## Usage
 
