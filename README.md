@@ -1,6 +1,6 @@
 # MTGA-Backend
 
-> It's going to be great, so great, in fact it be the best.
+> It's going to be great, so great, in fact it will be the best.
 
 ## Usage
 
