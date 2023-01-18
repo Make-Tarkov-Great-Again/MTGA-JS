@@ -1,7 +1,7 @@
 {
 	"_id": "5ac3b934156ae10c4430e83c",
 	"availableInRaid": false,
-	"avatar": "/files/trader/avatar/5ac3b86a86f77461491d1ad8.png",
+	"avatar": "/files/trader/avatar/5ac3b86a86f77461491d1ad8.jpg",
 	"balance_dol": 0,
 	"balance_eur": 0,
 	"balance_rub": 7000000,
@@ -84,7 +84,7 @@
 	],
 	"medic": false,
 	"name": "Аршавир Саркисович",
-	"nextResupply": 1672757072,
+	"nextResupply": 1631489044,
 	"nickname": "Ragman",
 	"repair": {
 		"availability": false,
@@ -92,6 +92,7 @@
 		"currency_coefficient": 1,
 		"excluded_category": [],
 		"excluded_id_list": [],
+		"price_rate": 0,
 		"quality": "1"
 	},
 	"sell_category": [
