@@ -1,0 +1,1 @@
+Copy assets database into this location for scripts to work properly
