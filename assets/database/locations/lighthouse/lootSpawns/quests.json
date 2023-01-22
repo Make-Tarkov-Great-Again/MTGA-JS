@@ -368,5 +368,915 @@
 			32.5999451,
 			48.9144936
 		]
+	},
+	{
+		"worldId": "item_barter_electr_hdd_barahol_quest3267764",
+		"questItmTpl": "628393620d8524273e7eb028",
+		"Position": [
+			352.6155,
+			16.2855,
+			545.5325
+		],
+		"Rotation": [
+			90,
+			143.941727,
+			0
+		]
+	},
+	{
+		"worldId": "quest_qlight4_l1_redcar3268410",
+		"questItmTpl": "619252352be33f26043400a7",
+		"Position": [
+			139.196289,
+			3.39897728,
+			-129.943909
+		],
+		"Rotation": [
+			270,
+			179.0013,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_common (92)3272240",
+		"questItmTpl": "5bc9bc53d4351e00367fbcee",
+		"Position": [
+			328.906,
+			5.305,
+			484.697
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "qlight11_mech1_find_data23287028",
+		"questItmTpl": "619268de2be33f2604340159",
+		"Position": [
+			-111.0176,
+			9.24679,
+			-750.147034
+		],
+		"Rotation": [
+			353.295135,
+			164.134064,
+			4.55723
+		]
+	},
+	{
+		"worldId": "quest_hunt_note3289234",
+		"questItmTpl": "61904c9df62c89219a56e034",
+		"Position": [
+			-248.391052,
+			0.134607315,
+			-328.2831
+		],
+		"Rotation": [
+			355.1893,
+			156.3603,
+			197.453018
+		]
+	},
+	{
+		"worldId": "jeverly_common (54)3289940",
+		"questItmTpl": "590de7e986f7741b096e5f32",
+		"Position": [
+			-134.018,
+			32.346,
+			274.824
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "qlight_military_data3293414",
+		"questItmTpl": "61a00bcb177fb945751bbe6a",
+		"Position": [
+			-115.694664,
+			40.7532349,
+			88.8879852
+		],
+		"Rotation": [
+			0.5844833,
+			48.59865,
+			186.611191
+		]
+	},
+	{
+		"worldId": "qlight11_mech1_find_data13293482",
+		"questItmTpl": "619268ad78f4fa33f173dbe5",
+		"Position": [
+			53.2094955,
+			8.74386,
+			-638.8754
+		],
+		"Rotation": [
+			279.5803,
+			32.5999451,
+			48.9144936
+		]
+	},
+	{
+		"worldId": "table_loot3273446",
+		"questItmTpl": "58d3db5386f77426186285a0",
+		"Position": [
+			35.447,
+			13.008,
+			-846.65
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_common (67)3279666",
+		"questItmTpl": "59e3658a86f7741776641ac4",
+		"Position": [
+			328.833,
+			5.194,
+			486.284
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_flash_card_soft_v3_quest8049456",
+		"questItmTpl": "6331bb0d1aa9f42b804997a6",
+		"Position": [
+			-28.7638016,
+			2.8203,
+			-525.2898
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_spec_radiotransmitterbody8057940",
+		"questItmTpl": "6399f54b0a36db13c823ad21",
+		"Position": [
+			-125.2112,
+			3.9244,
+			-530.8186
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_keeper2_kompr_fake_final8058932",
+		"questItmTpl": "6398a0861c712b1e1d4dadf1",
+		"Position": [
+			32.03167,
+			4.912996,
+			-454.489777
+		],
+		"Rotation": [
+			-0.0000326002446,
+			-0.000218542715,
+			270.000031
+		]
+	},
+	{
+		"worldId": "Jeverly&food (1)3290904",
+		"questItmTpl": "5d40407c86f774318526545a",
+		"Position": [
+			90.695,
+			1.273,
+			457.86
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_common (79)3269344",
+		"questItmTpl": "59e3639286f7741777737013",
+		"Position": [
+			330.828,
+			5.494,
+			484.66
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_flash_card_soft_v3_quest8049456",
+		"questItmTpl": "6331bb0d1aa9f42b804997a6",
+		"Position": [
+			-63.1750031,
+			5.2796,
+			-627.414
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_spec_radiotransmitterbody8057940",
+		"questItmTpl": "6399f54b0a36db13c823ad21",
+		"Position": [
+			1.35900116,
+			2.1595,
+			-630.858032
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_keeper2_kompr_fake_final8058932",
+		"questItmTpl": "6398a0861c712b1e1d4dadf1",
+		"Position": [
+			21.2779083,
+			5.31199932,
+			-445.487946
+		],
+		"Rotation": [
+			-0.0000121621515,
+			323.941772,
+			0.00003987292
+		]
+	},
+	{
+		"worldId": "item_flash_card_soft_v3_quest8049456",
+		"questItmTpl": "6331bb0d1aa9f42b804997a6",
+		"Position": [
+			-134.9648,
+			2.8757,
+			-678.8499
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_spec_radiotransmitterbody8057940",
+		"questItmTpl": "6399f54b0a36db13c823ad21",
+		"Position": [
+			-116.042,
+			40.3917,
+			91.302
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_flash_card_soft_v3_quest8049456",
+		"questItmTpl": "6331bb0d1aa9f42b804997a6",
+		"Position": [
+			-122.483,
+			5.422,
+			-733.8048
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_spec_radiotransmitterbody8057940",
+		"questItmTpl": "6399f54b0a36db13c823ad21",
+		"Position": [
+			-69.291,
+			3.4699,
+			-695.73
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_flash_card_soft_v3_quest8049456",
+		"questItmTpl": "6331bb0d1aa9f42b804997a6",
+		"Position": [
+			-46.7180023,
+			8.1166,
+			-519.991
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_spec_radiotransmitterbody8057940",
+		"questItmTpl": "6399f54b0a36db13c823ad21",
+		"Position": [
+			-54.7257,
+			6.5304,
+			-294.8269
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_common (56)3272336",
+		"questItmTpl": "5734758f24597738025ee253",
+		"Position": [
+			-80.185,
+			18.445,
+			-52.008
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_flash_card_soft_v3_quest8049456",
+		"questItmTpl": "6331bb0d1aa9f42b804997a6",
+		"Position": [
+			-100.754,
+			1.0697,
+			-491.3172
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_spec_radiotransmitterbody8057940",
+		"questItmTpl": "6399f54b0a36db13c823ad21",
+		"Position": [
+			-180.094559,
+			15.249,
+			-651.085
+		],
+		"Rotation": [
+			0,
+			196.372635,
+			0
+		]
+	},
+	{
+		"worldId": "item_spec_radiotransmitterbody1938008",
+		"questItmTpl": "6399f54b0a36db13c823ad21",
+		"Position": [
+			-60.6951,
+			5.3316,
+			-627.515869
+		],
+		"Rotation": [
+			0,
+			226.8926,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_keeper1_kompr_fake1939006",
+		"questItmTpl": "6398a072e301557ae24cec92",
+		"Position": [
+			-114.714508,
+			0.948876858,
+			-545.9003
+		],
+		"Rotation": [
+			2.12600183,
+			143.941772,
+			-0.0000409559652
+		]
+	},
+	{
+		"worldId": "item_flash_card_soft_v3_quest8049456",
+		"questItmTpl": "6331bb0d1aa9f42b804997a6",
+		"Position": [
+			0.192001343,
+			2.8773,
+			-598.199
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_spec_radiotransmitterbody8057940",
+		"questItmTpl": "6399f54b0a36db13c823ad21",
+		"Position": [
+			40.2740021,
+			15.1105,
+			-619.311
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_flash_card_soft_v3_quest8049456",
+		"questItmTpl": "6331bb0d1aa9f42b804997a6",
+		"Position": [
+			-114.446,
+			9.1012,
+			-731.515
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_flash_card_soft_v3_quest8049456",
+		"questItmTpl": "6331bb0d1aa9f42b804997a6",
+		"Position": [
+			-178.272,
+			5.8165,
+			-649.599
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_flash_card_soft_v3_quest8049456",
+		"questItmTpl": "6331bb0d1aa9f42b804997a6",
+		"Position": [
+			50.5459976,
+			5.927,
+			-649.859
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_spec_radiotransmitterbody8057940",
+		"questItmTpl": "6399f54b0a36db13c823ad21",
+		"Position": [
+			-80.694,
+			18.8225,
+			-92.13699
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_flash_card_soft_v3_quest8049456",
+		"questItmTpl": "6331bb0d1aa9f42b804997a6",
+		"Position": [
+			-61.8229,
+			2.7588,
+			-689.4481
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_keeper1_kompr_fake1939006",
+		"questItmTpl": "6398a072e301557ae24cec92",
+		"Position": [
+			27.970499,
+			9.20035,
+			-650.9415
+		],
+		"Rotation": [
+			359.45752,
+			90.00065,
+			269.605
+		]
+	},
+	{
+		"worldId": "item_spec_radiotransmitterbody8057940",
+		"questItmTpl": "6399f54b0a36db13c823ad21",
+		"Position": [
+			-114.139,
+			40.3917,
+			95.1129761
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_flash_card_soft_v3_quest8049456",
+		"questItmTpl": "6331bb0d1aa9f42b804997a6",
+		"Position": [
+			-133.4922,
+			2.8779,
+			-497.9937
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_spec_radiotransmitterbody8057940",
+		"questItmTpl": "6399f54b0a36db13c823ad21",
+		"Position": [
+			-100.585,
+			1.5309,
+			-491.943
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_spec_radiotransmitterbody8057940",
+		"questItmTpl": "6399f54b0a36db13c823ad21",
+		"Position": [
+			-140.383,
+			2.9291,
+			-686.027
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_flash_card_soft_v3_quest8049456",
+		"questItmTpl": "6331bb0d1aa9f42b804997a6",
+		"Position": [
+			-197.6766,
+			5.7923,
+			-651.9562
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_spec_radiotransmitterbody8057940",
+		"questItmTpl": "6399f54b0a36db13c823ad21",
+		"Position": [
+			-81.666,
+			22.3841,
+			-91.04553
+		],
+		"Rotation": [
+			0,
+			74.14857,
+			0
+		]
+	},
+	{
+		"worldId": "item_flash_card_soft_v3_quest8049456",
+		"questItmTpl": "6331bb0d1aa9f42b804997a6",
+		"Position": [
+			-171.334,
+			9.2309,
+			-633.393
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_spec_radiotransmitterbody8057940",
+		"questItmTpl": "6399f54b0a36db13c823ad21",
+		"Position": [
+			-115.973007,
+			41.2528,
+			88.95398
+		],
+		"Rotation": [
+			0,
+			246.140961,
+			0
+		]
+	},
+	{
+		"worldId": "item_flash_card_soft_v3_quest8049456",
+		"questItmTpl": "6331bb0d1aa9f42b804997a6",
+		"Position": [
+			-68.6482,
+			2.978,
+			-697.1657
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_flash_card_soft_v3_quest8049456",
+		"questItmTpl": "6331bb0d1aa9f42b804997a6",
+		"Position": [
+			30.5200958,
+			9.1071,
+			-646.7069
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_spec_radiotransmitterbody8057940",
+		"questItmTpl": "6399f54b0a36db13c823ad21",
+		"Position": [
+			-77.514,
+			20.469,
+			-72.0840149
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_flash_card_soft_v3_quest8049456",
+		"questItmTpl": "6331bb0d1aa9f42b804997a6",
+		"Position": [
+			-65.779,
+			5.8221,
+			-734.927
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_flash_card_soft_v3_quest8049456",
+		"questItmTpl": "6331bb0d1aa9f42b804997a6",
+		"Position": [
+			27.9509964,
+			9.0999,
+			-650.5705
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_spec_radiotransmitterbody8057940",
+		"questItmTpl": "6399f54b0a36db13c823ad21",
+		"Position": [
+			0.427200317,
+			3.3931,
+			-654.5141
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_spec_radiotransmitterbody8057940",
+		"questItmTpl": "6399f54b0a36db13c823ad21",
+		"Position": [
+			-46.276,
+			8.6158,
+			-521.0152
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_keeper1_kompr_fake1939006",
+		"questItmTpl": "6398a072e301557ae24cec92",
+		"Position": [
+			-24.25936,
+			2.74272776,
+			-524.3533
+		],
+		"Rotation": [
+			-0.0000121621515,
+			323.941772,
+			180.000031
+		]
+	},
+	{
+		"worldId": "item_spec_radiotransmitterbody8057940",
+		"questItmTpl": "6399f54b0a36db13c823ad21",
+		"Position": [
+			135.2674,
+			5.6936,
+			287.9223
+		],
+		"Rotation": [
+			355.801,
+			163.206985,
+			1.07008937e-7
+		]
+	},
+	{
+		"worldId": "item_spec_radiotransmitterbody8057940",
+		"questItmTpl": "6399f54b0a36db13c823ad21",
+		"Position": [
+			-68.905,
+			26.475,
+			136.367
+		],
+		"Rotation": [
+			47.4469948,
+			253.784988,
+			180
+		]
+	},
+	{
+		"worldId": "item_quest_keeper1_kompr_fake1939006",
+		"questItmTpl": "6398a072e301557ae24cec92",
+		"Position": [
+			32.0310745,
+			4.912996,
+			-454.633728
+		],
+		"Rotation": [
+			-0.0000326002446,
+			-0.000218542715,
+			270.000031
+		]
+	},
+	{
+		"worldId": "item_flash_card_soft_v3_quest8049456",
+		"questItmTpl": "6331bb0d1aa9f42b804997a6",
+		"Position": [
+			-69.882,
+			2.4355,
+			-654.615967
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_spec_radiotransmitterbody8057940",
+		"questItmTpl": "6399f54b0a36db13c823ad21",
+		"Position": [
+			-54.7156,
+			2.5759,
+			-525.9251
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_keeper1_kompr_fake1939006",
+		"questItmTpl": "6398a072e301557ae24cec92",
+		"Position": [
+			-59.83629,
+			2.48655176,
+			-584.4576
+		],
+		"Rotation": [
+			0.0000121621515,
+			143.941772,
+			-0.00003987292
+		]
+	},
+	{
+		"worldId": "item_flash_card_soft_v3_quest8049456",
+		"questItmTpl": "6331bb0d1aa9f42b804997a6",
+		"Position": [
+			-139.22,
+			2.4206,
+			-686.048
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_keeper1_kompr_fake1939006",
+		"questItmTpl": "6398a072e301557ae24cec92",
+		"Position": [
+			-120.521133,
+			9.240465,
+			-730.441956
+		],
+		"Rotation": [
+			-0.0000121621515,
+			323.941772,
+			180.000031
+		]
+	},
+	{
+		"worldId": "item_quest_keeper1_kompr_fake1939006",
+		"questItmTpl": "6398a072e301557ae24cec92",
+		"Position": [
+			-199.667068,
+			6.65518045,
+			-638.864441
+		],
+		"Rotation": [
+			-0.0000326002446,
+			-0.000218542715,
+			270.000031
+		]
+	},
+	{
+		"worldId": "item_quest_keeper1_kompr_fake1939006",
+		"questItmTpl": "6398a072e301557ae24cec92",
+		"Position": [
+			49.72152,
+			9.1177845,
+			-637.1735
+		],
+		"Rotation": [
+			-0.0000121621515,
+			323.941772,
+			180.000031
+		]
+	},
+	{
+		"worldId": "item_quest_keeper1_kompr_fake1939006",
+		"questItmTpl": "6398a072e301557ae24cec92",
+		"Position": [
+			-112.735062,
+			5.009127,
+			-751.6815
+		],
+		"Rotation": [
+			-0.0000326002446,
+			-0.000218542715,
+			270.000031
+		]
+	},
+	{
+		"worldId": "item_quest_keeper1_kompr_fake1939006",
+		"questItmTpl": "6398a072e301557ae24cec92",
+		"Position": [
+			21.707,
+			5.312099,
+			-445.581879
+		],
+		"Rotation": [
+			-0.0000121621515,
+			323.941772,
+			0.00003987292
+		]
 	}
 ]

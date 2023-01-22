@@ -12,5 +12,89 @@
 			278.942383,
 			0
 		]
+	},
+	{
+		"worldId": "flash_quest_sanitar45826",
+		"questItmTpl": "5eff135be0d3331e9d282b7b",
+		"Position": [
+			-133.0114,
+			5.0157,
+			-335.2083
+		],
+		"Rotation": [
+			270,
+			278.942383,
+			0
+		]
+	},
+	{
+		"worldId": "univ_loot_sup1 (17)39768",
+		"questItmTpl": "569668774bdc2da2298b4568",
+		"Position": [
+			-141.133,
+			5.166,
+			-399.885
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "univ_loot_sup1 (30)47462",
+		"questItmTpl": "5bc9c049d4351e44f824d360",
+		"Position": [
+			-186.889,
+			1.162,
+			-328.52
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_keeper7_securedtape5235856",
+		"questItmTpl": "6398a4cfb5992f573c6562b3",
+		"Position": [
+			-178.46817,
+			4.99133,
+			-343.610168
+		],
+		"Rotation": [
+			4.28152333e-7,
+			299.803772,
+			7.386575e-7
+		]
+	},
+	{
+		"worldId": "item_quest_keeper7_securedtape5235856",
+		"questItmTpl": "6398a4cfb5992f573c6562b3",
+		"Position": [
+			-178.309113,
+			4.99103,
+			-344.880524
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_keeper7_securedtape5235856",
+		"questItmTpl": "6398a4cfb5992f573c6562b3",
+		"Position": [
+			-170.751,
+			5.14473,
+			-343.610321
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
 	}
 ]

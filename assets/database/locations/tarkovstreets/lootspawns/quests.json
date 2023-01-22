@@ -1,0 +1,1660 @@
+[
+	{
+		"worldId": "quest_pacadge3548400",
+		"questItmTpl": "5ac620eb86f7743a8e6e0da0",
+		"Position": [
+			-202.607,
+			7.223,
+			-98.319
+		],
+		"Rotation": [
+			358.863953,
+			128.208572,
+			358.896179
+		],
+		"useGravity": true
+	},
+	{
+		"worldId": "loot_quest_00313549100",
+		"questItmTpl": "5938188786f77474f723e87f",
+		"Position": [
+			204.073,
+			4.6952,
+			12.3975
+		],
+		"Rotation": [
+			270,
+			25.6943226,
+			0
+		]
+	},
+	{
+		"worldId": "loot_case_feld3550698",
+		"questItmTpl": "5910922b86f7747d96753483",
+		"Position": [
+			239.183,
+			0.713,
+			160.595
+		],
+		"Rotation": [
+			88.6121,
+			270.000122,
+			0
+		]
+	},
+	{
+		"worldId": "loot_letter_TG3551274",
+		"questItmTpl": "5939e9b286f77462a709572c",
+		"Position": [
+			194.7797,
+			4.4267,
+			173.1325
+		],
+		"Rotation": [
+			4.01791573,
+			6.64310646,
+			88.59731
+		]
+	},
+	{
+		"worldId": "loot_case_00133551546",
+		"questItmTpl": "5939e5a786f77461f11c0098",
+		"Position": [
+			485.8866,
+			5.639,
+			-140.5712
+		],
+		"Rotation": [
+			-0.000273207552,
+			180,
+			180
+		]
+	},
+	{
+		"worldId": "quest_flash3554276",
+		"questItmTpl": "5c12301c86f77419522ba7e4",
+		"Position": [
+			-91.521,
+			1.027,
+			4.346
+		],
+		"Rotation": [
+			90,
+			306.564636,
+			0
+		]
+	},
+	{
+		"worldId": "Loot 56 (28)3555022",
+		"questItmTpl": "5937fd0086f7742bf33fc198",
+		"Position": [
+			102.2964,
+			2.9634,
+			-5.9064
+		],
+		"Rotation": [
+			85.79029,
+			180,
+			180
+		]
+	},
+	{
+		"worldId": "Loot 158 (38)3555110",
+		"questItmTpl": "5939a00786f7742fe8132936",
+		"Position": [
+			180.8072,
+			6.7378,
+			150.0781
+		],
+		"Rotation": [
+			90,
+			339.936157,
+			0
+		]
+	},
+	{
+		"worldId": "quest_case2033555174",
+		"questItmTpl": "590dde5786f77405e71908b2",
+		"Position": [
+			178.07,
+			2.877,
+			148.702
+		],
+		"Rotation": [
+			0.00000170754754,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "loot_quest_customs3555538",
+		"questItmTpl": "591092ef86f7747bb8703422",
+		"Position": [
+			-202.8806,
+			7.6911,
+			-102.4012
+		],
+		"Rotation": [
+			270,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "loot_quest_00483556700",
+		"questItmTpl": "593965cf86f774087a77e1b6",
+		"Position": [
+			367.6828,
+			1.3008,
+			-50.5712
+		],
+		"Rotation": [
+			270,
+			222.660156,
+			0
+		]
+	},
+	{
+		"worldId": "loot_flash_TG3556828",
+		"questItmTpl": "590c62a386f77412b0130255",
+		"Position": [
+			194.2243,
+			3.7256,
+			171.0656
+		],
+		"Rotation": [
+			90,
+			37.30105,
+			0
+		]
+	},
+	{
+		"worldId": "quest_2143556996",
+		"questItmTpl": "5780cf942459777df90dcb72",
+		"Position": [
+			-295.4893,
+			1.1072,
+			-143.3421
+		],
+		"Rotation": [
+			270,
+			321.1947,
+			0
+		]
+	},
+	{
+		"worldId": "custom_multiScene_00058",
+		"questItmTpl": "5909e4b686f7747f5b744fa4",
+		"useGravity": true
+	},
+	{
+		"worldId": "Loot_jigul_garbage-8092204",
+		"questItmTpl": "59e35ef086f7741777737012",
+		"Position": [
+			-133.272614,
+			2.864996,
+			253.492813
+		],
+		"Rotation": [
+			-0.0000517600274,
+			114.502609,
+			183.295975
+		]
+	},
+	{
+		"worldId": "jeverly_all (28)3314178",
+		"questItmTpl": "5f745ee30acaeb0d490d8c5b",
+		"Position": [
+			106.38002,
+			4.237,
+			222.889053
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (56)3315450",
+		"questItmTpl": "5df8a72c86f77412640e2e83",
+		"Position": [
+			37.885006,
+			12.627,
+			155.971024
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (58)3316078",
+		"questItmTpl": "638df4cc7b560b03794a18d2",
+		"Position": [
+			36.5620079,
+			12.627,
+			156.123032
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (27)3316934",
+		"questItmTpl": "573478bc24597738002c6175",
+		"Position": [
+			109.003021,
+			6.965,
+			234.555054
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (26)3318226",
+		"questItmTpl": "5734758f24597738025ee253",
+		"Position": [
+			108.050026,
+			6.965,
+			232.105057
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (21)3319158",
+		"questItmTpl": "573478bc24597738002c6175",
+		"Position": [
+			110.814026,
+			7.182,
+			230.43306
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (52)3319654",
+		"questItmTpl": "573478bc24597738002c6175",
+		"Position": [
+			-129.747025,
+			2.98,
+			393.6311
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (50)3319678",
+		"questItmTpl": "5c1267ee86f77416ec610f72",
+		"Position": [
+			-131.047028,
+			3.232,
+			396.0881
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (55)3322492",
+		"questItmTpl": "5df8a72c86f77412640e2e83",
+		"Position": [
+			38.4610062,
+			12.627,
+			156.004028
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (43)3323852",
+		"questItmTpl": "5df8a6a186f77412640e2e80",
+		"Position": [
+			277.277069,
+			7.059,
+			382.749084
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (23)3324368",
+		"questItmTpl": "5df8a72c86f77412640e2e83",
+		"Position": [
+			106.723022,
+			7.409,
+			231.937057
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (15)3325664",
+		"questItmTpl": "5df8a72c86f77412640e2e83",
+		"Position": [
+			129.929031,
+			3.988,
+			235.031067
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (20)3326068",
+		"questItmTpl": "5df8a77486f77412672a1e3f",
+		"Position": [
+			110.754021,
+			7.182,
+			229.824066
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (59)3327454",
+		"questItmTpl": "59e3639286f7741777737013",
+		"Position": [
+			40.83301,
+			12.503,
+			154.331024
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (4)3327914",
+		"questItmTpl": "590de71386f774347051a052",
+		"Position": [
+			37.50501,
+			7.57,
+			85.89102
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (2)3328886",
+		"questItmTpl": "62a09cfe4f842e1bd12da3e4",
+		"Position": [
+			51.72301,
+			2.145,
+			82.9820251
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (41)3328942",
+		"questItmTpl": "638df4cc7b560b03794a18d2",
+		"Position": [
+			278.060059,
+			6.499,
+			381.0601
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (44)3329958",
+		"questItmTpl": "5d235b4d86f7742e017bc88a",
+		"Position": [
+			276.430054,
+			7.059,
+			382.0831
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (34)3332258",
+		"questItmTpl": "573474f924597738002c6174",
+		"Position": [
+			224.596054,
+			10.137,
+			395.908081
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (3)3333622",
+		"questItmTpl": "638df4cc7b560b03794a18d2",
+		"Position": [
+			52.07901,
+			2.1,
+			83.72702
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (22)3334134",
+		"questItmTpl": "5bc9bdb8d4351e003562b8a1",
+		"Position": [
+			111.286026,
+			7.182,
+			230.294067
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (31)3336602",
+		"questItmTpl": "573478bc24597738002c6175",
+		"Position": [
+			223.735046,
+			10.137,
+			396.7091
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c7_mel4854896",
+		"questItmTpl": "638df4cc7b560b03794a18d2",
+		"Position": [
+			41.0520058,
+			12.5601988,
+			154.98201
+		],
+		"Rotation": [
+			0,
+			41.96576,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_keeper2_diary4854912",
+		"questItmTpl": "63989ced706b793c7d60cfef",
+		"Position": [
+			-127.914,
+			2.38099957,
+			397.042969
+		],
+		"Rotation": [
+			90,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c10_jek4854960",
+		"questItmTpl": "638e0057ab150a5f56238960",
+		"Position": [
+			83.304,
+			1.63770008,
+			124.508
+		],
+		"Rotation": [
+			90,
+			284.898,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c28_medbook4855188",
+		"questItmTpl": "6393262086e646067c176aa2",
+		"Position": [
+			-53.01919,
+			3.51169968,
+			199.7029
+		],
+		"Rotation": [
+			22.6629715,
+			9.852069,
+			-4.6260584e-7
+		]
+	},
+	{
+		"worldId": "item_quest_c3_teh_flash4855246",
+		"questItmTpl": "638cbb3ba63f1b49be6a300e",
+		"Position": [
+			66.8009949,
+			7.72719955,
+			303.143
+		],
+		"Rotation": [
+			270,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_letter_c4_pos4855260",
+		"questItmTpl": "638cbc68a63f1b49be6a3010",
+		"Position": [
+			39.2349968,
+			1.51599979,
+			117.6931
+		],
+		"Rotation": [
+			90,
+			280.164,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c21_look4855276",
+		"questItmTpl": "638e9d5536b3b72c944e2fc7",
+		"Position": [
+			-65.262,
+			5.88999939,
+			66.363
+		],
+		"Rotation": [
+			270,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c13_nabl4855328",
+		"questItmTpl": "638dfc803083a019d447768e",
+		"Position": [
+			210.5096,
+			-0.773201,
+			407.500427
+		],
+		"Rotation": [
+			270,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c11_gmed4855370",
+		"questItmTpl": "63927b29c115f907b14700b9",
+		"Position": [
+			97.119,
+			2.66969967,
+			320.445
+		],
+		"Rotation": [
+			0,
+			310.948242,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c2_aud_docs4855462",
+		"questItmTpl": "63a943cead5cc12f22161ff7",
+		"Position": [
+			-177.12001,
+			6.1466,
+			227.096
+		],
+		"Rotation": [
+			90,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (46)3806822",
+		"questItmTpl": "62a09cfe4f842e1bd12da3e4",
+		"Position": [
+			65.1650162,
+			7.223,
+			308.012054
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (9)3809938",
+		"questItmTpl": "5df8a72c86f77412640e2e83",
+		"Position": [
+			-167.610046,
+			6.372,
+			229.222061
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (12)3811354",
+		"questItmTpl": "62a091170b9d3c46de5b6cf2",
+		"Position": [
+			139.595032,
+			4.679,
+			234.400055
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (38)3811662",
+		"questItmTpl": "5734758f24597738025ee253",
+		"Position": [
+			229.330063,
+			10.091,
+			396.2451
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all3818548",
+		"questItmTpl": "59faf7ca86f7740dbe19f6c2",
+		"Position": [
+			58.8860168,
+			0.792,
+			44.86301
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (42)3826206",
+		"questItmTpl": "590de71386f774347051a052",
+		"Position": [
+			277.737061,
+			7.059,
+			382.8311
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c7_mel4957924",
+		"questItmTpl": "638df4cc7b560b03794a18d2",
+		"Position": [
+			44.3447,
+			12.6434994,
+			151.7695
+		],
+		"Rotation": [
+			0,
+			280.409149,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_keeper2_diary4957940",
+		"questItmTpl": "63989ced706b793c7d60cfef",
+		"Position": [
+			-132.226,
+			2.37899971,
+			397.643982
+		],
+		"Rotation": [
+			90,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c28_medbook4958216",
+		"questItmTpl": "6393262086e646067c176aa2",
+		"Position": [
+			-50.0019951,
+			3.21369982,
+			198.37
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_letter_c4_pos4958288",
+		"questItmTpl": "638cbc68a63f1b49be6a3010",
+		"Position": [
+			39.2349968,
+			1.50129938,
+			117.6931
+		],
+		"Rotation": [
+			90,
+			280.164,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c13_nabl4958356",
+		"questItmTpl": "638dfc803083a019d447768e",
+		"Position": [
+			208.7273,
+			-0.448801041,
+			408.634583
+		],
+		"Rotation": [
+			270,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c11_gmed4958398",
+		"questItmTpl": "63927b29c115f907b14700b9",
+		"Position": [
+			95.28351,
+			2.671,
+			318.9527
+		],
+		"Rotation": [
+			0,
+			337.8288,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c7_mel3856172",
+		"questItmTpl": "638df4cc7b560b03794a18d2",
+		"Position": [
+			40.6016045,
+			11.7158985,
+			153.7631
+		],
+		"Rotation": [
+			292.661,
+			180,
+			180
+		]
+	},
+	{
+		"worldId": "item_quest_c10_jek3856236",
+		"questItmTpl": "638e0057ab150a5f56238960",
+		"Position": [
+			81.737,
+			1.888,
+			144.2245
+		],
+		"Rotation": [
+			90,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c21_look3856552",
+		"questItmTpl": "638e9d5536b3b72c944e2fc7",
+		"Position": [
+			-70.079,
+			5.75205374,
+			69.437
+		],
+		"Rotation": [
+			270,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c11_gmed3856646",
+		"questItmTpl": "63927b29c115f907b14700b9",
+		"Position": [
+			95.8846,
+			2.67089987,
+			319.081177
+		],
+		"Rotation": [
+			0,
+			30.1253319,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (14)3944468",
+		"questItmTpl": "5df8a6a186f77412640e2e80",
+		"Position": [
+			137.820038,
+			4.257,
+			234.678055
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (32)3948416",
+		"questItmTpl": "5e54f62086f774219b0f1937",
+		"Position": [
+			223.601044,
+			10.137,
+			395.6171
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (11)3949568",
+		"questItmTpl": "590de7e986f7741b096e5f32",
+		"Position": [
+			139.562027,
+			4.244,
+			233.067062
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (25)3949840",
+		"questItmTpl": "573478bc24597738002c6175",
+		"Position": [
+			107.49102,
+			7.341,
+			233.301056
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (39)3952416",
+		"questItmTpl": "590de71386f774347051a052",
+		"Position": [
+			279.782074,
+			6.338,
+			380.0391
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (18)3804002",
+		"questItmTpl": "59e3639286f7741777737013",
+		"Position": [
+			111.012024,
+			7.182,
+			228.753067
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (17)3819792",
+		"questItmTpl": "5df8a72c86f77412640e2e83",
+		"Position": [
+			111.646027,
+			7.182,
+			228.847061
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (54)3823610",
+		"questItmTpl": "5df8a72c86f77412640e2e83",
+		"Position": [
+			39.13101,
+			12.165,
+			156.255035
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (5)3826158",
+		"questItmTpl": "5bc9bc53d4351e00367fbcee",
+		"Position": [
+			38.23401,
+			7.448,
+			86.1510239
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c7_mel4957924",
+		"questItmTpl": "638df4cc7b560b03794a18d2",
+		"Position": [
+			34.95802,
+			12.5019989,
+			152.327286
+		],
+		"Rotation": [
+			0,
+			99.00099,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c10_jek4957988",
+		"questItmTpl": "638e0057ab150a5f56238960",
+		"Position": [
+			77.51741,
+			1.64690018,
+			140.0864
+		],
+		"Rotation": [
+			90,
+			159.48703,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c13_nabl4958356",
+		"questItmTpl": "638dfc803083a019d447768e",
+		"Position": [
+			208.44899,
+			-0.370000839,
+			412.143982
+		],
+		"Rotation": [
+			270,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c11_gmed4958398",
+		"questItmTpl": "63927b29c115f907b14700b9",
+		"Position": [
+			92.4178,
+			4.29579973,
+			324.1068
+		],
+		"Rotation": [
+			0,
+			180,
+			180
+		]
+	},
+	{
+		"worldId": "jeverly_all (45)3803530",
+		"questItmTpl": "590de7e986f7741b096e5f32",
+		"Position": [
+			277.133057,
+			7.059,
+			381.5781
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (30)3809754",
+		"questItmTpl": "5734758f24597738025ee253",
+		"Position": [
+			-220.883041,
+			6.034,
+			275.772064
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (35)3813042",
+		"questItmTpl": "5df8a72c86f77412640e2e83",
+		"Position": [
+			227.678055,
+			10.137,
+			397.2471
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (37)3824146",
+		"questItmTpl": "573478bc24597738002c6175",
+		"Position": [
+			229.287064,
+			9.507,
+			399.4881
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_keeper2_diary4957940",
+		"questItmTpl": "63989ced706b793c7d60cfef",
+		"Position": [
+			-129.309,
+			2.37359953,
+			392.5885
+		],
+		"Rotation": [
+			90,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (1)3810474",
+		"questItmTpl": "5df8a72c86f77412640e2e83",
+		"Position": [
+			58.8170166,
+			0.792,
+			43.86901
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (29)3812366",
+		"questItmTpl": "5df8a77486f77412672a1e3f",
+		"Position": [
+			-222.640045,
+			6.038,
+			277.131073
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (40)3814266",
+		"questItmTpl": "59e3658a86f7741776641ac4",
+		"Position": [
+			278.662048,
+			6.499,
+			381.154083
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c7_mel4957924",
+		"questItmTpl": "638df4cc7b560b03794a18d2",
+		"Position": [
+			44.6515,
+			11.7606983,
+			149.323914
+		],
+		"Rotation": [
+			0,
+			5.75599957,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c10_jek4957988",
+		"questItmTpl": "638e0057ab150a5f56238960",
+		"Position": [
+			80.18001,
+			3.9165,
+			143.7027
+		],
+		"Rotation": [
+			90,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_letter_c4_pos4958288",
+		"questItmTpl": "638cbc68a63f1b49be6a3010",
+		"Position": [
+			36.1079979,
+			1.28899956,
+			126.599
+		],
+		"Rotation": [
+			90,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c13_nabl4958356",
+		"questItmTpl": "638dfc803083a019d447768e",
+		"Position": [
+			213.235886,
+			-0.88670063,
+			410.321228
+		],
+		"Rotation": [
+			270,
+			275.672,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c11_gmed4958398",
+		"questItmTpl": "63927b29c115f907b14700b9",
+		"Position": [
+			97.5265045,
+			2.67219973,
+			317.0785
+		],
+		"Rotation": [
+			0,
+			88.92236,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (7)3807790",
+		"questItmTpl": "573474f924597738002c6174",
+		"Position": [
+			-166.522049,
+			6.354,
+			231.409058
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (10)3816768",
+		"questItmTpl": "5df8a77486f77412672a1e3f",
+		"Position": [
+			-167.156052,
+			6.372,
+			229.651062
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c7_mel4957924",
+		"questItmTpl": "638df4cc7b560b03794a18d2",
+		"Position": [
+			36.3492126,
+			12.2785988,
+			148.5618
+		],
+		"Rotation": [
+			0,
+			91.44142,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c10_jek4957988",
+		"questItmTpl": "638e0057ab150a5f56238960",
+		"Position": [
+			84.013,
+			1.4772,
+			129.821
+		],
+		"Rotation": [
+			90,
+			166.374008,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c7_mel4957924",
+		"questItmTpl": "638df4cc7b560b03794a18d2",
+		"Position": [
+			36.4939842,
+			11.8429985,
+			157.480011
+		],
+		"Rotation": [
+			0,
+			278.826019,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_letter_c4_pos4958288",
+		"questItmTpl": "638cbc68a63f1b49be6a3010",
+		"Position": [
+			39.475,
+			1.18399954,
+			113.470993
+		],
+		"Rotation": [
+			90,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (48)3314434",
+		"questItmTpl": "573474f924597738002c6174",
+		"Position": [
+			65.1650162,
+			7.223,
+			308.818054
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (51)3326830",
+		"questItmTpl": "5df8a72c86f77412640e2e83",
+		"Position": [
+			-129.165024,
+			2.98,
+			392.6501
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (33)3327898",
+		"questItmTpl": "573474f924597738002c6174",
+		"Position": [
+			224.021057,
+			10.137,
+			395.822083
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_letter_c4_pos4855260",
+		"questItmTpl": "638cbc68a63f1b49be6a3010",
+		"Position": [
+			36.1079979,
+			1.29199982,
+			126.599
+		],
+		"Rotation": [
+			90,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c11_gmed4855370",
+		"questItmTpl": "63927b29c115f907b14700b9",
+		"Position": [
+			92.7830048,
+			3.68019962,
+			324.0796
+		],
+		"Rotation": [
+			270,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (13)3313026",
+		"questItmTpl": "5df8a72c86f77412640e2e83",
+		"Position": [
+			138.631027,
+			4.257,
+			234.285065
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (6)3329878",
+		"questItmTpl": "5d235a5986f77443f6329bc6",
+		"Position": [
+			-167.355042,
+			6.354,
+			231.582062
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c11_gmed4855370",
+		"questItmTpl": "63927b29c115f907b14700b9",
+		"Position": [
+			95.209,
+			2.6704998,
+			323.802979
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (19)2750238",
+		"questItmTpl": "573474f924597738002c6174",
+		"Position": [
+			110.842026,
+			7.182,
+			229.478058
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_letter_c4_pos3877768",
+		"questItmTpl": "638cbc68a63f1b49be6a3010",
+		"Position": [
+			39.475,
+			1.19559956,
+			113.470993
+		],
+		"Rotation": [
+			90,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (8)3811314",
+		"questItmTpl": "5734758f24597738025ee253",
+		"Position": [
+			-165.689041,
+			6.354,
+			231.478058
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_letter_c4_pos4958288",
+		"questItmTpl": "638cbc68a63f1b49be6a3010",
+		"Position": [
+			42.3956947,
+			1.90189981,
+			118.768196
+		],
+		"Rotation": [
+			90,
+			72.77599,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c11_gmed4855370",
+		"questItmTpl": "63927b29c115f907b14700b9",
+		"Position": [
+			98.317,
+			2.67039967,
+			316.638977
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (16)3820970",
+		"questItmTpl": "573474f924597738002c6174",
+		"Position": [
+			126.486031,
+			6.857,
+			218.471039
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c7_mel4957924",
+		"questItmTpl": "638df4cc7b560b03794a18d2",
+		"Position": [
+			36.995472,
+			12.5019989,
+			153.307312
+		],
+		"Rotation": [
+			0,
+			145.904968,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (53)2743114",
+		"questItmTpl": "5734758f24597738025ee253",
+		"Position": [
+			-129.463028,
+			2.98,
+			395.1571
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_letter_c4_pos4855260",
+		"questItmTpl": "638cbc68a63f1b49be6a3010",
+		"Position": [
+			42.3956947,
+			1.91799974,
+			118.768196
+		],
+		"Rotation": [
+			90,
+			72.77599,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (36)3324552",
+		"questItmTpl": "62a091170b9d3c46de5b6cf2",
+		"Position": [
+			228.087067,
+			10.137,
+			398.0481
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c7_mel4957924",
+		"questItmTpl": "638df4cc7b560b03794a18d2",
+		"Position": [
+			42.2910042,
+			12.5537491,
+			148.518311
+		],
+		"Rotation": [
+			0,
+			28.141243,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c11_gmed4855370",
+		"questItmTpl": "63927b29c115f907b14700b9",
+		"Position": [
+			91.192,
+			2.6707,
+			323.2334
+		],
+		"Rotation": [
+			0,
+			90.2078857,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (24)3310798",
+		"questItmTpl": "5734758f24597738025ee253",
+		"Position": [
+			107.342026,
+			7.409,
+			231.915054
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jeverly_all (49)3816584",
+		"questItmTpl": "573478bc24597738002c6175",
+		"Position": [
+			65.77402,
+			7.223,
+			308.366058
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c11_gmed4958398",
+		"questItmTpl": "63927b29c115f907b14700b9",
+		"Position": [
+			92.884,
+			2.66839981,
+			323.711
+		],
+		"Rotation": [
+			0,
+			49.0511627,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_c7_mel4854896",
+		"questItmTpl": "638df4cc7b560b03794a18d2",
+		"Position": [
+			42.913,
+			11.7292986,
+			152.357513
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	}
+]
