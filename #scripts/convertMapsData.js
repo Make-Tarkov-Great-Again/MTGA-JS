@@ -1,3 +1,13 @@
+
+/*
+Made by TheMaoci for MTGA
+
+this scripts cakes old type of containers/dynamic/quest/weapons data structure 
+and changes it to newer more compressed one
+files are not overriden and are named as originalname2
+*/
+
+
 "use strict";
 const fs = require('fs');
 const path = require('path');
@@ -12,6 +22,7 @@ var WORKING_DIR = "../assets/database/locations";
 
 var MapNames = fs.readdirSync(`${WORKING_DIR}`);
 
+/*
 var FolderStructure = {
   MapName: {
     bossWaves: "filesContainingBossWaves",
@@ -19,7 +30,7 @@ var FolderStructure = {
     waves: "filesContainingWaves"
   }
 }
-
+*/
 
 for(let mapName of MapNames)
 {
@@ -33,6 +44,10 @@ for(let mapName of MapNames)
   
   // we are skipping IsStatic cause it will be always static for containers and false for dynamics
   
+  // --- STATIC - CONTAINERS ---
+  // --- STATIC - CONTAINERS ---
+  // --- STATIC - CONTAINERS ---
+  // --- STATIC - CONTAINERS ---
   let newContainers = [];
   for(let container of containers)
   {
@@ -44,6 +59,10 @@ for(let mapName of MapNames)
   }
   fs.writeFileSync(`${WORKING_DIR}/${mapName}/lootspawns/containers2.json`, stringify(newContainers));
   
+  // --- DYNAMIC - LOOSELOOT ---
+  // --- DYNAMIC - LOOSELOOT---
+  // --- DYNAMIC - LOOSELOOT ---
+  // --- DYNAMIC - LOOSELOOT ---
   let newDynamic = [];
   for(let dynamic of dynamics)
   {
@@ -81,6 +100,10 @@ for(let mapName of MapNames)
   }
   fs.writeFileSync(`${WORKING_DIR}/${mapName}/lootspawns/dynamic2.json`, stringify(newDynamic));
 
+  // --- STATIONARY - WEAPONS ---
+  // --- STATIONARY - WEAPONS ---
+  // --- STATIONARY - WEAPONS ---
+  // --- STATIONARY - WEAPONS ---
   let newWeapon = [];
   for(let weapon of weapons)
   {
@@ -92,6 +115,10 @@ for(let mapName of MapNames)
   }
   fs.writeFileSync(`${WORKING_DIR}/${mapName}/lootspawns/weapons2.json`, stringify(newWeapon));
 
+  // --- QUESTS ---
+  // --- QUESTS ---
+  // --- QUESTS ---
+  // --- QUESTS ---
   let newQuest = [];
   for(let quest of newQuest)
   {
@@ -117,23 +144,4 @@ for(let mapName of MapNames)
     newQuest.push(newData);
   }
   fs.writeFileSync(`${WORKING_DIR}/${mapName}/lootspawns/quests2.json`, stringify(newQuest));
-
-  //let getFiles = fs.readdirSync(`${WORKING_DIR}/${mapName}/lootspawns`);
-  //let MapFiles = [];
-  //let FilesToDeleteAfterWorkIsDone = [];
-  
-  
-  //for(let file of getFiles)
-  //{
-    // if(file.includes(".json"))
-    // {
-      // MapFiles.push(parse(read(`${WORKING_DIR}/${mapName}/${file}`)).Location)
-      // FilesToDeleteAfterWorkIsDone.push(`${WORKING_DIR}/${mapName}/${file}`);
-    // }
- // }
-  
-  //log(MapFiles);
-  
-  //break;
-  
 }
