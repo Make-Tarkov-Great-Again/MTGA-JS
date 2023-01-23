@@ -96,5 +96,131 @@
 			135.458725,
 			0
 		]
+	},
+	{
+		"worldId": "loot_bunker_quest (3)48742",
+		"questItmTpl": "60a3b65c27adf161da7b6e14",
+		"Position": [
+			-121.867004,
+			-14.314,
+			38.6560059
+		],
+		"Rotation": [
+			57.3194122,
+			107.333969,
+			0.00000316238743
+		]
+	},
+	{
+		"worldId": "loot_medroom_quest (2)51712",
+		"questItmTpl": "608c22a003292f4ba43f8a1a",
+		"Position": [
+			-59.0209961,
+			-3.637,
+			-36.1919861
+		],
+		"Rotation": [
+			0,
+			135.458725,
+			0
+		]
+	},
+	{
+		"worldId": "loot_ccp_quest (4)59230",
+		"questItmTpl": "609267a2bb3f46069c3e6c7d",
+		"Position": [
+			-88.065,
+			-19.129,
+			151.055
+		],
+		"Rotation": [
+			0,
+			167.8859,
+			0
+		]
+	},
+	{
+		"worldId": "loot_bunker_quest (2)59270",
+		"questItmTpl": "60a3b6359c427533db36cf84",
+		"Position": [
+			-114.18103,
+			-13.6893,
+			39.7880249
+		],
+		"Rotation": [
+			0,
+			135.458725,
+			0
+		]
+	},
+	{
+		"worldId": "loot_gals_quest (3)65228",
+		"questItmTpl": "60c080eb991ac167ad1c3ad4",
+		"Position": [
+			99.78601,
+			-6.725,
+			59.1600342
+		],
+		"Rotation": [
+			57.5091553,
+			135.458725,
+			0.00000317881381
+		]
+	},
+	{
+		"worldId": "loot_medroom_quest (3)65916",
+		"questItmTpl": "60a3b5b05f84d429b732e934",
+		"Position": [
+			-80.47601,
+			-3.647,
+			-30.7659912
+		],
+		"Rotation": [
+			67.99741,
+			36.12959,
+			-0.000004557729
+		]
+	},
+	{
+		"worldId": "loot_bunker_quest (1)65924",
+		"questItmTpl": "60915994c49cf53e4772cc38",
+		"Position": [
+			-114.36499,
+			-13.7081,
+			27.3590088
+		],
+		"Rotation": [
+			0,
+			135.458725,
+			0
+		]
+	},
+	{
+		"worldId": "item_quest_keeper2_kompr_true51662792",
+		"questItmTpl": "6398a072e301557ae24cec92",
+		"Position": [
+			102.242981,
+			-6.813,
+			65.56604
+		],
+		"Rotation": [
+			5.56767035,
+			208.625565,
+			278.150818
+		]
+	},
+	{
+		"worldId": "item_quest_keeper2_kompr_true-8842194",
+		"questItmTpl": "6398a072e301557ae24cec92",
+		"Position": [
+			-114.473206,
+			-13.1744127,
+			23.7062988
+		],
+		"Rotation": [
+			272.149231,
+			283.298584,
+			6.22575426
+		]
 	}
 ]

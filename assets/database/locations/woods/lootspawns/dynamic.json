@@ -21681,5 +21681,12382 @@
 			122.225
 		],
 		"useGravity": true
+	},
+	{
+		"worldId": "BAZA_DIKIH27680016",
+		"Position": [
+			132.349976,
+			24.3719978,
+			-742.189941
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "BAZA_DIKIH7685688",
+		"Position": [
+			224.930054,
+			24.2,
+			-708.339966
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Building_materials (1)7679476",
+		"Position": [
+			-471.54,
+			22.022,
+			-225.569946
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Building_materials (10)7685380",
+		"Position": [
+			432.193,
+			-4.581,
+			-23.7990112
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "Building_materials (11)7684400",
+		"Position": [
+			431.723022,
+			-4.612,
+			-24.763
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "Building_materials (2)7678840",
+		"Position": [
+			-470.45,
+			22.022,
+			-225.589966
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Building_materials (3)7679896",
+		"Position": [
+			-478.85,
+			22.022,
+			-226.579956
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "Building_materials (4)7678752",
+		"Position": [
+			-479.01,
+			22.022,
+			-228.48999
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Building_materials (5)7686826",
+		"Position": [
+			-480.524,
+			22.066,
+			-229.272949
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Building_materials (6)7682002",
+		"Position": [
+			-482.161,
+			22.501,
+			-232.062012
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Building_materials (7)7678728",
+		"Position": [
+			-482.738,
+			22.501,
+			-232.807983
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Building_materials (8)7681696",
+		"Position": [
+			423.865967,
+			-4.272,
+			-24.0390015
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "Building_materials (9)7680172",
+		"Position": [
+			425.29895,
+			-4.272,
+			-24.2639771
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "Building_materials7683562",
+		"Position": [
+			-470.25,
+			22.022,
+			-226.280029
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (1)7679004",
+		"Position": [
+			-201.224,
+			44.756,
+			-230.547974
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (10)7678948",
+		"Position": [
+			-69.30499,
+			12.262,
+			-723.647949
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "Jeverly (11)7684988",
+		"Position": [
+			-63.6890259,
+			12.293,
+			-726.081055
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "Jeverly (12)7678520",
+		"Position": [
+			-65.46399,
+			12.312,
+			-723.724
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "Jeverly (13)7683262",
+		"Position": [
+			-57.8939819,
+			11.09,
+			-739.147949
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "Jeverly (14)7686802",
+		"Position": [
+			-57.7550049,
+			10.885,
+			-739.944
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "Jeverly (15)7680140",
+		"Position": [
+			142.088013,
+			27.532,
+			-726.29895
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (16)7681600",
+		"Position": [
+			225.662964,
+			20.415,
+			-704.83606
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "Jeverly (17)7682594",
+		"Position": [
+			224.115967,
+			20.412,
+			-704.412
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "Jeverly (18)7679660",
+		"Position": [
+			224.496948,
+			21.182,
+			-704.69104
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "Jeverly (19)7680032",
+		"Position": [
+			-159.280029,
+			46.305,
+			-232.748047
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (2)7683940",
+		"Position": [
+			-202.106018,
+			44.916,
+			-231.099976
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (20)7679928",
+		"Position": [
+			-159.942017,
+			46.305,
+			-232.946045
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (21)7687468",
+		"Position": [
+			-158.867,
+			46.305,
+			-234.541016
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (22)7683766",
+		"Position": [
+			-160.487976,
+			46.305,
+			-234.052979
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (23)7681576",
+		"Position": [
+			-158.630981,
+			46.305,
+			-233.597046
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (24)7680956",
+		"Position": [
+			-160.221985,
+			46.305,
+			-234.991943
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (25)7686402",
+		"Position": [
+			-459.792,
+			18.792,
+			-366.182
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (26)7680736",
+		"Position": [
+			-459.193,
+			18.792,
+			-366.11
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (27)7684128",
+		"Position": [
+			-458.216,
+			18.792,
+			-366.041016
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (28)7680332",
+		"Position": [
+			-462.568,
+			18.847,
+			-366.555054
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (29)7685536",
+		"Position": [
+			-463.934,
+			18.785,
+			-364.659058
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (3)7680388",
+		"Position": [
+			-201.107971,
+			45.419,
+			-231.305054
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (30)7681044",
+		"Position": [
+			-463.487,
+			18.785,
+			-364.671021
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (31)7682914",
+		"Position": [
+			-547.128,
+			14.402,
+			-379.489
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "Jeverly (32)7678176",
+		"Position": [
+			-545.334,
+			14.447,
+			-379.631958
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "Jeverly (33)7684340",
+		"Position": [
+			-513.170044,
+			15.662,
+			-393.27002
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (34)7678376",
+		"Position": [
+			-513.155,
+			15.706,
+			-393.837036
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (35)7687042",
+		"Position": [
+			-87.91101,
+			13.226,
+			-717.897
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (36)7686442",
+		"Position": [
+			-90.58899,
+			13.226,
+			-718.881958
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (37)7685180",
+		"Position": [
+			-90.1560059,
+			13.226,
+			-716.121948
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (38)7683382",
+		"Position": [
+			-88.10797,
+			13.226,
+			-716.642944
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (39)7683758",
+		"Position": [
+			-89.3109741,
+			13.226,
+			-717.189941
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (4)7679500",
+		"Position": [
+			-135.732971,
+			10.769,
+			-685.599
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (40)7683842",
+		"Position": [
+			-89.16101,
+			13.226,
+			-718.629
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (41)7680752",
+		"Position": [
+			-90.90399,
+			13.226,
+			-718.24
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (42)7686502",
+		"Position": [
+			-61.263,
+			10.844,
+			-649.899048
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (43)7679208",
+		"Position": [
+			-59.8759766,
+			10.844,
+			-650.165039
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (44)7686842",
+		"Position": [
+			-60.7020264,
+			11.061,
+			-649.449
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (45)7686698",
+		"Position": [
+			-61.46997,
+			10.895,
+			-650.980957
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (46)7686942",
+		"Position": [
+			-60.7810059,
+			10.895,
+			-651.746
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (47)7680084",
+		"Position": [
+			-61.0219727,
+			10.895,
+			-650.95105
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (48)7685922",
+		"Position": [
+			-61.4249878,
+			10.895,
+			-651.402954
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (49)7685914",
+		"Position": [
+			311.357056,
+			23.201,
+			-464.218018
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (5)7683782",
+		"Position": [
+			-94.21802,
+			8.078,
+			-621.665039
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (50)7680064",
+		"Position": [
+			310.676025,
+			23.201,
+			-464.649048
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (51)7683426",
+		"Position": [
+			310.814941,
+			23.201,
+			-464.293945
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (52)7684040",
+		"Position": [
+			310.177979,
+			23.201,
+			-464.597046
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (53)7681852",
+		"Position": [
+			271.66394,
+			23.017,
+			-436.420044
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (54)7679712",
+		"Position": [
+			271.487061,
+			22.992,
+			-436.704956
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (55)7679452",
+		"Position": [
+			270.274048,
+			23.173,
+			-439.540039
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (56)7680964",
+		"Position": [
+			-202.189026,
+			44.756,
+			-230.944946
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (57)7682938",
+		"Position": [
+			-29.7349854,
+			10.346,
+			-739.974
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "Jeverly (58)7680548",
+		"Position": [
+			-30.8809814,
+			10.346,
+			-741.628052
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "Jeverly (59)7686330",
+		"Position": [
+			-25.5339966,
+			10.207,
+			-736.991943
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "Jeverly (6)7680364",
+		"Position": [
+			-93.40503,
+			8.122,
+			-621.125
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (60)7679880",
+		"Position": [
+			-26.7180176,
+			10.452,
+			-746.114
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (61)7686850",
+		"Position": [
+			-159.474,
+			46.305,
+			-233.404053
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (62)7682602",
+		"Position": [
+			-160.607,
+			46.305,
+			-233.422
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (63)7683238",
+		"Position": [
+			-202.171021,
+			44.999,
+			-231.943
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (64)7684160",
+		"Position": [
+			-201.60199,
+			44.756,
+			-231.561035
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (65)7684732",
+		"Position": [
+			132.187988,
+			24.64,
+			-760.42395
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (66)7685044",
+		"Position": [
+			132.656,
+			24.64,
+			-759.766968
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (67)7682610",
+		"Position": [
+			220.224,
+			20.249,
+			-704.668945
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (68)7684256",
+		"Position": [
+			219.802979,
+			20.249,
+			-704.656
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (69)7681640",
+		"Position": [
+			225.255,
+			20.415,
+			-704.790039
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "Jeverly (7)7682786",
+		"Position": [
+			-56.57202,
+			7.499,
+			-636.048
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (70)7682482",
+		"Position": [
+			-44.9550171,
+			8.882,
+			-603.006
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (71)7678472",
+		"Position": [
+			-46.513,
+			9.194,
+			-601.084
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (72)7681448",
+		"Position": [
+			-48.2319946,
+			9.069,
+			-600.962036
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (73)7684684",
+		"Position": [
+			-47.1950073,
+			9.134,
+			-600.766968
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (74)7685484",
+		"Position": [
+			-159.22699,
+			46.305,
+			-234.774048
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (75)7683522",
+		"Position": [
+			-157.700989,
+			46.305,
+			-234.564941
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (8)7679536",
+		"Position": [
+			-57.34198,
+			7.499,
+			-635.875
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Jeverly (9)7685012",
+		"Position": [
+			-26.723999,
+			8.156,
+			-686.899048
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "Jeverly7686494",
+		"Position": [
+			-201.705017,
+			44.916,
+			-230.797
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootAmmoBoxes (1)7685776",
+		"Position": [
+			-204.144012,
+			30.73,
+			-210.436981
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxes (10)7680500",
+		"Position": [
+			-390.533,
+			3.77000046,
+			13.167
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxes (11)7680212",
+		"Position": [
+			-390.336029,
+			3.77000046,
+			15.6210022
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxes (12)7680000",
+		"Position": [
+			239.2,
+			-1.591999,
+			-71.496
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxes (13)7682826",
+		"Position": [
+			239.074,
+			-1.591999,
+			-71.752
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxes (14)7687248",
+		"Position": [
+			239.365,
+			-1.591999,
+			-71.71
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxes (15)7682206",
+		"Position": [
+			-324.838959,
+			14.5859985,
+			22.419
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxes (16)7684364",
+		"Position": [
+			-325.324,
+			14.5859985,
+			22.546
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxes (17)7684176",
+		"Position": [
+			-325.012,
+			15.3979988,
+			23.283
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxes (2)7681108",
+		"Position": [
+			-204.145966,
+			30.73,
+			-210.709991
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxes (3)7686022",
+		"Position": [
+			-204.371,
+			30.73,
+			-210.510986
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxes (4)7680380",
+		"Position": [
+			-203.320038,
+			30.927002,
+			-210.207977
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxes (5)7687436",
+		"Position": [
+			-201.657013,
+			30.927002,
+			-211.896
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxes (6)7682402",
+		"Position": [
+			-201.931976,
+			30.927002,
+			-211.876984
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxes (7)7686794",
+		"Position": [
+			-388.61203,
+			3.77000046,
+			11.4700012
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxes (8)7679528",
+		"Position": [
+			-389.217,
+			3.77000046,
+			12.6189995
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxes (9)7684892",
+		"Position": [
+			-388.09,
+			3.77000046,
+			12.7480011
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxes7683286",
+		"Position": [
+			-203.59,
+			30.73,
+			-210.264984
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxesAR (1)7683570",
+		"Position": [
+			247.225,
+			-8.109,
+			130.14
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxesAR (10)7684056",
+		"Position": [
+			444.421,
+			-12.905,
+			63.01
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxesAR (11)7681884",
+		"Position": [
+			444.873,
+			-12.905,
+			63.469
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxesAR (12)7683554",
+		"Position": [
+			445.351,
+			-13.8775,
+			59.48
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxesAR (2)7681132",
+		"Position": [
+			246.486,
+			-8.109,
+			129.61
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxesAR (3)7683658",
+		"Position": [
+			246.706,
+			-8.109,
+			129.004
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxesAR (4)7684072",
+		"Position": [
+			246.706,
+			-8.109,
+			130.255
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxesAR (5)7682778",
+		"Position": [
+			246.825,
+			-8.109,
+			129.61
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxesAR (6)7684804",
+		"Position": [
+			246.231,
+			-8.109,
+			129.396
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxesAR (7)7678536",
+		"Position": [
+			444.492,
+			-14.073,
+			62.422
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxesAR (8)7681876",
+		"Position": [
+			445.095,
+			-14.15,
+			62.486
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxesAR (9)7685308",
+		"Position": [
+			444.23,
+			-13.815,
+			62.507
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootAmmoBoxesAR7678656",
+		"Position": [
+			246.877,
+			-8.109,
+			129.703
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootCamping (10)7679272",
+		"Position": [
+			-219.582977,
+			24.6340027,
+			-115.12
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootCamping (11)7685284",
+		"Position": [
+			-220.27298,
+			24.6340027,
+			-116.970009
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootCamping (12)7686090",
+		"Position": [
+			-220.77298,
+			24.9140015,
+			-115.720009
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootCamping (13)7681472",
+		"Position": [
+			-217.71701,
+			24.9140015,
+			-117.484
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootCamping (14)7678304",
+		"Position": [
+			-217.798981,
+			24.9140015,
+			-117.756996
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootCamping (15)7681036",
+		"Position": [
+			-217.394989,
+			24.9140015,
+			-117.288
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootCamping (16)7687096",
+		"Position": [
+			-218.001,
+			24.647,
+			-114.094
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootCamping (17)7684940",
+		"Position": [
+			-301.11,
+			11.56,
+			-80.86
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootCamping (18)7685468",
+		"Position": [
+			-298.52,
+			11.56,
+			-78.57
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootCamping (19)7683858",
+		"Position": [
+			-297.29,
+			11.56,
+			-75.78
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootCamping (2)7686126",
+		"Position": [
+			134.256989,
+			-3.34399986,
+			102.085
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootCamping (20)7682690",
+		"Position": [
+			-296.82,
+			11.56,
+			-73.63
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootCamping (21)7681208",
+		"Position": [
+			-290.06,
+			11.97,
+			-54.09
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootCamping (22)7686030",
+		"Position": [
+			-284.152,
+			11.97,
+			-54.044
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootCamping (23)7687428",
+		"Position": [
+			-272.89,
+			11.85,
+			-45.61
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootCamping (24)7680348",
+		"Position": [
+			-262.311,
+			10.4,
+			-39.424
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootCamping (25)7680860",
+		"Position": [
+			-255.2,
+			10.735,
+			-28.73
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootCamping (26)7682578",
+		"Position": [
+			-249.01,
+			12.52,
+			-24.64
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootCamping (27)7685404",
+		"Position": [
+			-249.945,
+			12.52,
+			-24.293
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootCamping (3)7684668",
+		"Position": [
+			134.558014,
+			-3.34399986,
+			101.931
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootCamping (4)7686974",
+		"Position": [
+			133.233978,
+			-3.34399986,
+			99.976
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootCamping (5)7678712",
+		"Position": [
+			133.043,
+			-3.34399986,
+			100.447
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootCamping (6)7682490",
+		"Position": [
+			133.582,
+			-3.34399986,
+			99.562
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootCamping (7)7681392",
+		"Position": [
+			133.819,
+			-3.34399986,
+			98.953
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootCamping (8)7684532",
+		"Position": [
+			-218.16,
+			24.8300018,
+			-113.12
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootCamping (9)7685452",
+		"Position": [
+			-219.952972,
+			24.6340027,
+			-115.699989
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootCamping7684248",
+		"Position": [
+			130.311,
+			-3.12300014,
+			101.031
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (1)7678760",
+		"Position": [
+			-136.894012,
+			-0.962999344,
+			415.089
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (10)7684580",
+		"Position": [
+			-1.6539917,
+			-0.4260006,
+			-70.225
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (11)7681616",
+		"Position": [
+			-1.44198608,
+			-0.4260006,
+			-70.262
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (12)7685204",
+		"Position": [
+			-1.88800049,
+			-0.4260006,
+			-70.124
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (13)7679076",
+		"Position": [
+			-1.57000732,
+			-0.4260006,
+			-70.117
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (14)7679828",
+		"Position": [
+			-4.7789917,
+			-0.4260006,
+			-75.721
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (15)7685736",
+		"Position": [
+			-5,
+			-0.4260006,
+			-75.755
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (16)7680640",
+		"Position": [
+			-4.924011,
+			-1.03100014,
+			-75.736
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (17)7679100",
+		"Position": [
+			-4.82000732,
+			-1.03100014,
+			-75.649
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (18)7680076",
+		"Position": [
+			-1.7789917,
+			-0.475000381,
+			-75.513
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (19)7684496",
+		"Position": [
+			-1.54501343,
+			-0.475000381,
+			-75.521
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (2)7683706",
+		"Position": [
+			-96.9590149,
+			-15.321,
+			219.249
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (20)7685156",
+		"Position": [
+			-1.73901367,
+			-0.475000381,
+			-75.379
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (21)7679748",
+		"Position": [
+			-1.83200073,
+			-0.475000381,
+			-81.717
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (22)7682094",
+		"Position": [
+			-1.64599609,
+			-0.475000381,
+			-81.488
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (23)7681764",
+		"Position": [
+			-1.82699585,
+			-0.475000381,
+			-81.4
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (24)7680476",
+		"Position": [
+			-1.04699707,
+			0.165000916,
+			-81.5170059
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (25)7687208",
+		"Position": [
+			242.507,
+			-7.4659996,
+			121.886
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (26)7681464",
+		"Position": [
+			242.831,
+			-7.4659996,
+			121.911
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (27)7680808",
+		"Position": [
+			-25.9710083,
+			-2.658,
+			47.508
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (28)7686562",
+		"Position": [
+			-25.9660034,
+			-2.658,
+			47.758
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (29)7687272",
+		"Position": [
+			-26.4129944,
+			-2.18700027,
+			47.688
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (3)7686586",
+		"Position": [
+			-96.8570251,
+			-15.321,
+			219.51001
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (30)7684020",
+		"Position": [
+			-23.6799927,
+			-2.047001,
+			44.459
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (31)7686194",
+		"Position": [
+			-4.584198,
+			-1.03219986,
+			-81.2952042
+		],
+		"Rotation": [
+			270,
+			21.08838,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (32)7681994",
+		"Position": [
+			245.515,
+			-7.549,
+			123.155
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (33)7686118",
+		"Position": [
+			245.533,
+			-7.42300034,
+			123.485
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (34)7684428",
+		"Position": [
+			245.827,
+			-7.47100067,
+			123.241
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			216.919815,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (4)7682378",
+		"Position": [
+			-96.57999,
+			-15.321,
+			219.245
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (5)7683374",
+		"Position": [
+			-96.99899,
+			-15.321,
+			220.257019
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (6)7680340",
+		"Position": [
+			-96.2909851,
+			-15.321,
+			220.014
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (7)7684200",
+		"Position": [
+			-96.20798,
+			-15.321,
+			219.432
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (8)7682970",
+		"Position": [
+			-96.79697,
+			-15.321,
+			218.796021
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood (9)7686082",
+		"Position": [
+			-1.85101318,
+			-0.4260006,
+			-70.348
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootFood7678776",
+		"Position": [
+			-137.649017,
+			-0.962999344,
+			414.743
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (1)7684112",
+		"Position": [
+			-403.942,
+			-0.673000336,
+			311.821
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (10)7678964",
+		"Position": [
+			-246.423,
+			1.77199936,
+			388.796
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (11)7684408",
+		"Position": [
+			-246.669037,
+			1.77199936,
+			388.753
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (12)7679684",
+		"Position": [
+			-246.720978,
+			1.77199936,
+			389.005
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (13)7686266",
+		"Position": [
+			5.855011,
+			-3.22000027,
+			46.458
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (14)7684288",
+		"Position": [
+			5.816986,
+			-3.22000027,
+			46.792
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (15)7679296",
+		"Position": [
+			6.093994,
+			-3.22000027,
+			46.523
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (16)7684980",
+		"Position": [
+			5.71200562,
+			-3.22000027,
+			45.304
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (17)7684932",
+		"Position": [
+			5.0369873,
+			-3.22000027,
+			44.641
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (18)7681536",
+		"Position": [
+			3.73999023,
+			-3.10000038,
+			49.39
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (19)7683626",
+		"Position": [
+			4.369995,
+			-3.10000038,
+			49.24
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (2)7679872",
+		"Position": [
+			-404.228973,
+			-0.673000336,
+			312.087
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (20)7684660",
+		"Position": [
+			412.376,
+			-12.903,
+			241.321014
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (21)7686338",
+		"Position": [
+			411.004,
+			-12.903,
+			241.802
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (22)7686314",
+		"Position": [
+			411.171,
+			-12.903,
+			242.008
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (23)7679596",
+		"Position": [
+			410.732,
+			-12.903,
+			242.331
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (24)7686394",
+		"Position": [
+			414.096,
+			-13.278,
+			242.232
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (25)7682866",
+		"Position": [
+			413.661,
+			-13.278,
+			241.068
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (26)7678908",
+		"Position": [
+			412.552,
+			-12.969,
+			240.966
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (27)7683742",
+		"Position": [
+			-368.8893,
+			0.8397007,
+			332.8673
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (28)7685164",
+		"Position": [
+			-272.517,
+			0.83,
+			353.491
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (29)7681276",
+		"Position": [
+			-179.426971,
+			0.04260063,
+			382.839
+		],
+		"useGravity": true,
+		"Rotation": [
+			53.8408165,
+			333.162018,
+			40.6831741
+		]
+	},
+	{
+		"worldId": "LootGarbage (3)7680148",
+		"Position": [
+			-407.264,
+			-0.673000336,
+			311.886
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (30)7685420",
+		"Position": [
+			-180.223969,
+			0.552000046,
+			382.857
+		],
+		"useGravity": true,
+		"Rotation": [
+			53.8408165,
+			333.162018,
+			40.6831741
+		]
+	},
+	{
+		"worldId": "LootGarbage (31)7680188",
+		"Position": [
+			-180.717987,
+			0.552000046,
+			383.77
+		],
+		"useGravity": true,
+		"Rotation": [
+			53.8408165,
+			333.162018,
+			40.6831741
+		]
+	},
+	{
+		"worldId": "LootGarbage (32)7681224",
+		"Position": [
+			415.336,
+			-12.446,
+			238.224
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (33)7686178",
+		"Position": [
+			414.572,
+			-12.446,
+			238.115021
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (4)7680024",
+		"Position": [
+			-407.723969,
+			-0.673000336,
+			311.357
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (5)7682010",
+		"Position": [
+			-414.983978,
+			-0.788999557,
+			309.63
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (6)7682190",
+		"Position": [
+			-416.680023,
+			-0.673000336,
+			309.922
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (7)7681020",
+		"Position": [
+			-417.826019,
+			-0.673000336,
+			309.171
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (8)7684064",
+		"Position": [
+			-246.595,
+			1.77199936,
+			388.884
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (9)7678156",
+		"Position": [
+			-246.447968,
+			1.77199936,
+			389.012
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage7681168",
+		"Position": [
+			-407.303,
+			-0.673000336,
+			311.367
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMeds (1)7681484",
+		"Position": [
+			194.42395,
+			11.422,
+			-600.3611
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootMeds (10)7685004",
+		"Position": [
+			443.638,
+			-13.02,
+			61.807
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMeds (11)7679820",
+		"Position": [
+			194.452026,
+			11.422,
+			-599.411
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootMeds (13)7680252",
+		"Position": [
+			443.903,
+			-14.014,
+			61.796
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMeds (14)7681656",
+		"Position": [
+			443.828,
+			-14.014,
+			61.461
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMeds (2)7678824",
+		"Position": [
+			237.325,
+			-1.62599945,
+			-62.1440048
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMeds (3)7683230",
+		"Position": [
+			237.139,
+			-1.29500008,
+			-61.4899979
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMeds (4)7684012",
+		"Position": [
+			237.063,
+			-1.29500008,
+			-61.0210037
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMeds (5)7679140",
+		"Position": [
+			237.4,
+			-1.29500008,
+			-61.3429947
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMeds (6)7678572",
+		"Position": [
+			242.274,
+			-1.29500008,
+			-69.196
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMeds (7)7682418",
+		"Position": [
+			443.862,
+			-13.076,
+			68.311
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMeds (8)7683366",
+		"Position": [
+			193.939941,
+			11.422,
+			-599.679932
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootMeds (9)7678368",
+		"Position": [
+			443.926,
+			-13.567,
+			61.828
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMeds7682086",
+		"Position": [
+			195.206,
+			11.422,
+			-600.18
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "LootMedsGlassesKnifeTool (1)7681788",
+		"Position": [
+			-26.9159851,
+			-2.80599976,
+			45.271
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMedsGlassesKnifeTool (10)7683996",
+		"Position": [
+			70.426,
+			-1.37,
+			-38.485
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMedsGlassesKnifeTool (11)7678132",
+		"Position": [
+			70.12698,
+			-1.48399925,
+			-37.7020035
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMedsGlassesKnifeTool (2)7683878",
+		"Position": [
+			80.46701,
+			-1.09000015,
+			-38.183
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMedsGlassesKnifeTool (3)7679028",
+		"Position": [
+			80.89902,
+			-1.09000015,
+			-38.114
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMedsGlassesKnifeTool (4)7680156",
+		"Position": [
+			81.733,
+			-1.09000015,
+			-38.223
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMedsGlassesKnifeTool (5)7687018",
+		"Position": [
+			81.733,
+			-0.51199913,
+			-38.223
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMedsGlassesKnifeTool (6)7685636",
+		"Position": [
+			80.80499,
+			-0.51199913,
+			-38.098
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMedsGlassesKnifeTool (7)7687066",
+		"Position": [
+			70.14902,
+			-0.5470009,
+			-37.7020035
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMedsGlassesKnifeTool (8)7678256",
+		"Position": [
+			70.12799,
+			-0.09000015,
+			-37.7139969
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMedsGlassesKnifeTool (9)7680452",
+		"Position": [
+			70.761,
+			-1.0359993,
+			-38.37
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMedsGlassesKnifeTool7686410",
+		"Position": [
+			-26.6329956,
+			-2.80599976,
+			45.151
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMod (1)7681060",
+		"Position": [
+			52.597,
+			-2.246,
+			-8.9
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMod (2)7687050",
+		"Position": [
+			52.377,
+			-2.246,
+			-8.2
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMod (3)7681248",
+		"Position": [
+			53.223,
+			-2.246,
+			-8.316
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMod (4)7683350",
+		"Position": [
+			52.046,
+			-2.272,
+			-8.816
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMod (5)7685068",
+		"Position": [
+			-535.852,
+			18.964,
+			-203.239
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMod (6)7686990",
+		"Position": [
+			-536.483,
+			18.964,
+			-204.028
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMod (7)7683682",
+		"Position": [
+			-536.011,
+			18.964,
+			-203.804
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMod (8)7686614",
+		"Position": [
+			-536.187,
+			18.964,
+			-203.175
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootMod7683674",
+		"Position": [
+			52.701,
+			-2.246,
+			-8.116
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootTool 17678696",
+		"Position": [
+			68.0249939,
+			-0.6189995,
+			-38.17
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootTool 27681748",
+		"Position": [
+			68.4129944,
+			-0.6189995,
+			-38.2840042
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootTool 3 (1)7680108",
+		"Position": [
+			71.21799,
+			-1.02899933,
+			-37.7040024
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootTool 3 (10)7682386",
+		"Position": [
+			194.064,
+			-14.446,
+			260.348
+		],
+		"useGravity": true,
+		"Rotation": [
+			348.692017,
+			313.650665,
+			27.7440834
+		]
+	},
+	{
+		"worldId": "LootTool 3 (11)7681568",
+		"Position": [
+			195.789,
+			0.695,
+			-7.131
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootTool 3 (12)7678208",
+		"Position": [
+			196.352,
+			0.695,
+			-6.981
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			168.218216,
+			0
+		]
+	},
+	{
+		"worldId": "LootTool 3 (13)7686786",
+		"Position": [
+			195.93,
+			1.24,
+			-6.61
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			168.218216,
+			0
+		]
+	},
+	{
+		"worldId": "LootTool 3 (14)7684636",
+		"Position": [
+			196.97998,
+			1.24,
+			-5.4699707
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			168.218216,
+			0
+		]
+	},
+	{
+		"worldId": "LootTool 3 (2)7682234",
+		"Position": [
+			71.612,
+			-1.02899933,
+			-37.711998
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootTool 3 (3)7683050",
+		"Position": [
+			71.612,
+			-0.5569992,
+			-37.711998
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootTool 3 (4)7686882",
+		"Position": [
+			-3.993988,
+			-0.7250004,
+			-64.131
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootTool 3 (5)7687168",
+		"Position": [
+			-3.78799438,
+			-0.7250004,
+			-63.78
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootTool 3 (6)7682946",
+		"Position": [
+			-4.128998,
+			-0.7250004,
+			-63.652
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootTool 3 (7)7680416",
+		"Position": [
+			115.514008,
+			-2.823,
+			10.0660019
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootTool 3 (8)7679084",
+		"Position": [
+			115.247009,
+			-2.68900013,
+			9.114998
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootTool 3 (9)7685890",
+		"Position": [
+			195.179,
+			-14.572,
+			259.842
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootTool 37684844",
+		"Position": [
+			67.9029846,
+			-1.24399948,
+			-38.4240036
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootTool7678552",
+		"Position": [
+			67.73898,
+			-0.6189995,
+			-38.3380051
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootWeaponMod (1)7686346",
+		"Position": [
+			242.598,
+			-7.561,
+			122.104
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootWeaponMod (10)7678280",
+		"Position": [
+			65.8670044,
+			-0.6189995,
+			-47.0479965
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootWeaponMod (2)7687484",
+		"Position": [
+			242.915,
+			-7.561,
+			122.225
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootWeaponMod (3)7680460",
+		"Position": [
+			243.112,
+			-7.561,
+			121.75
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootWeaponMod (4)7678352",
+		"Position": [
+			242.408,
+			-1.24699974,
+			-69.487
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootWeaponMod (5)7678164",
+		"Position": [
+			58.322998,
+			-1.93000031,
+			-49.247
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootWeaponMod (6)7681184",
+		"Position": [
+			55.9660034,
+			-1.93000031,
+			-48.795
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootWeaponMod (7)7683090",
+		"Position": [
+			55.10199,
+			-1.93000031,
+			-47.6050034
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootWeaponMod (8)7683818",
+		"Position": [
+			54.8500061,
+			-1.93000031,
+			-48.1149979
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootWeaponMod (9)7680916",
+		"Position": [
+			55.875,
+			-1.93000031,
+			-46.9959946
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootWeaponMod7680400",
+		"Position": [
+			242.594,
+			-7.561,
+			122.41
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "Loot_MBSS  [4] (2)7681868",
+		"Position": [
+			-275.551025,
+			-0.317,
+			349.985
+		],
+		"Rotation": [
+			286.1807,
+			-0.00000306376683,
+			341.022125
+		]
+	},
+	{
+		"worldId": "Loot_MBSS  [4] (6)7687240",
+		"Position": [
+			-95.07202,
+			-16.311,
+			221.078
+		],
+		"Rotation": [
+			293.1518,
+			122.661812,
+			38.24367
+		]
+	},
+	{
+		"worldId": "Loot_MBSS  [4] (7)7679544",
+		"Position": [
+			-301.375977,
+			11.32,
+			-62.4349976
+		],
+		"Rotation": [
+			352.556671,
+			86.402,
+			354.7652
+		]
+	},
+	{
+		"worldId": "Loot_MBSS  [4] (8)7687082",
+		"Position": [
+			245.038086,
+			-0.586,
+			-70.68201
+		],
+		"Rotation": [
+			356.2294,
+			344.6162,
+			0.00000213906446
+		]
+	},
+	{
+		"worldId": "Loot_MBSS (1)7686606",
+		"Position": [
+			285.258118,
+			24.04687,
+			-508.4419
+		],
+		"Rotation": [
+			0.00000341308623,
+			3.93005633,
+			1.17101855e-7
+		]
+	},
+	{
+		"worldId": "Loot_MBSS (2)7687232",
+		"Position": [
+			306.5282,
+			22.8273563,
+			-462.480255
+		],
+		"Rotation": [
+			272.8469,
+			313.138641,
+			311.644318
+		]
+	},
+	{
+		"worldId": "Loot_UN_armor (2)7681052",
+		"Position": [
+			294.1679,
+			22.7539,
+			-442.140442
+		],
+		"Rotation": [
+			270,
+			197.454987,
+			0
+		]
+	},
+	{
+		"worldId": "Loot_armor_3m [4] (7)7686654",
+		"Position": [
+			-413.852051,
+			-2.39,
+			309.552
+		],
+		"Rotation": [
+			275.354156,
+			-0.0000182993044,
+			318.9395
+		]
+	},
+	{
+		"worldId": "Loot_armor_3m [4] (8)7687316",
+		"Position": [
+			243.446045,
+			-3.521,
+			-59.0529938
+		],
+		"Rotation": [
+			281.7709,
+			52.1844139,
+			7.18337727
+		]
+	},
+	{
+		"worldId": "Loot_armor_NotHeavy (1)7684996",
+		"Position": [
+			125.724358,
+			24.6538944,
+			-752.1927
+		],
+		"Rotation": [
+			273.746735,
+			69.83716,
+			116.062469
+		]
+	},
+	{
+		"worldId": "Loot_armor_NotHeavy (2)7678416",
+		"Position": [
+			129.818329,
+			24.8835087,
+			-733.3776
+		],
+		"Rotation": [
+			270.019775,
+			88.9532547,
+			0
+		]
+	},
+	{
+		"worldId": "Loot_armor_NotHeavy (3)7680484",
+		"Position": [
+			141.95636,
+			25.3338871,
+			-732.567932
+		],
+		"Rotation": [
+			270,
+			197.454987,
+			0
+		]
+	},
+	{
+		"worldId": "Loot_armor_NotHeavy (4)7686690",
+		"Position": [
+			136.008087,
+			25.00088,
+			-757.136047
+		],
+		"Rotation": [
+			270,
+			197.454987,
+			0
+		]
+	},
+	{
+		"worldId": "Loot_armor_NotHeavy (5)7678528",
+		"Position": [
+			138.017487,
+			27.543848,
+			-727.128967
+		],
+		"Rotation": [
+			270,
+			197.454987,
+			0
+		]
+	},
+	{
+		"worldId": "Loot_armor_NotHeavy (6)7681908",
+		"Position": [
+			225.11499,
+			24.6018925,
+			-708.4797
+		],
+		"Rotation": [
+			339.282654,
+			175.183929,
+			262.558441
+		]
+	},
+	{
+		"worldId": "Loot_armor_NotHeavy (7)7681456",
+		"Position": [
+			233.632935,
+			24.5129032,
+			-704.9104
+		],
+		"Rotation": [
+			270,
+			197.454987,
+			0
+		]
+	},
+	{
+		"worldId": "Loot_armor_NotHeavy (8)7683398",
+		"Position": [
+			232.275024,
+			20.39297,
+			-711.5793
+		],
+		"Rotation": [
+			270,
+			320.841919,
+			0
+		]
+	},
+	{
+		"worldId": "Loot_armor_NotHeavy (9)7678988",
+		"Position": [
+			219.460358,
+			20.4139042,
+			-708.3873
+		],
+		"Rotation": [
+			270,
+			23.9346447,
+			0
+		]
+	},
+	{
+		"worldId": "Loot_armor_paca [4] (10)7685492",
+		"Position": [
+			-1.3260498,
+			-0.979,
+			-91.5870056
+		],
+		"Rotation": [
+			275.5788,
+			158.425659,
+			146.307129
+		]
+	},
+	{
+		"worldId": "Loot_armor_paca [4] (2)7685744",
+		"Position": [
+			-247.390991,
+			1.569,
+			391.294983
+		],
+		"Rotation": [
+			273.673645,
+			125.089081,
+			148.29155
+		]
+	},
+	{
+		"worldId": "Loot_armor_paca [4] (5)7679052",
+		"Position": [
+			-211.515991,
+			-0.909,
+			195.885986
+		],
+		"Rotation": [
+			308.508545,
+			180,
+			180
+		]
+	},
+	{
+		"worldId": "Loot_armor_paca [4] (9)7678648",
+		"Position": [
+			89.21155,
+			-1.0675,
+			-43.3238068
+		],
+		"Rotation": [
+			273.1104,
+			32.35381,
+			185.983154
+		]
+	},
+	{
+		"worldId": "Loot_mr133 (1)7681256",
+		"Position": [
+			-0.862091064,
+			-0.888799667,
+			-62.4547958
+		],
+		"Rotation": [
+			0.9561283,
+			216.503189,
+			354.858337
+		]
+	},
+	{
+		"worldId": "Loot_mr133 (2)7678200",
+		"Position": [
+			-0.7532959,
+			-0.8696995,
+			-62.5599
+		],
+		"Rotation": [
+			16.2567577,
+			245.622528,
+			332.9656
+		]
+	},
+	{
+		"worldId": "Loot_mr133 (3)7682650",
+		"Position": [
+			-0.730285645,
+			-0.8696995,
+			-62.4561
+		],
+		"Rotation": [
+			7.95382,
+			215.755447,
+			345.2718
+		]
+	},
+	{
+		"worldId": "Loot_mr1337682498",
+		"Position": [
+			-0.7905884,
+			-0.8181,
+			-62.7312
+		],
+		"Rotation": [
+			295.78244,
+			306.4724,
+			45.8314476
+		]
+	},
+	{
+		"worldId": "Loot_vild_MBSS  [4] (6)7680220",
+		"Position": [
+			-345.602051,
+			0.571,
+			158.81601
+		],
+		"Rotation": [
+			5.28961,
+			95.12472,
+			342.0733
+		]
+	},
+	{
+		"worldId": "Lootpistol7680008",
+		"Position": [
+			-25.30191,
+			-3.69890022,
+			43.7977
+		],
+		"Rotation": [
+			0,
+			0,
+			89.9998245
+		]
+	},
+	{
+		"worldId": "MED_stuff (23)7682682",
+		"Position": [
+			-207.547,
+			-0.685,
+			206.927979
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (24)7685020",
+		"Position": [
+			-206.85498,
+			-0.728,
+			207.213013
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (25)7686434",
+		"Position": [
+			-205.213013,
+			-0.94,
+			208.575989
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (26)7685812",
+		"Position": [
+			-203.896,
+			-0.698,
+			208.426025
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (27)7685544",
+		"Position": [
+			-204.552,
+			-0.698,
+			208.539978
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (28)7684280",
+		"Position": [
+			-204.999023,
+			-0.567,
+			206.961
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (29)7687156",
+		"Position": [
+			-202.653992,
+			-0.7,
+			209.409973
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (30)7684628",
+		"Position": [
+			-202.817017,
+			-0.7,
+			209.594971
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (31)7680760",
+		"Position": [
+			-204.151,
+			-0.656,
+			209.661011
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (32)7679132",
+		"Position": [
+			-204.807983,
+			-0.624,
+			209.731018
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (33)7680524",
+		"Position": [
+			-205.286011,
+			-0.559,
+			209.453
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (34)7686714",
+		"Position": [
+			-205.80603,
+			-0.993,
+			209.432983
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (35)7679044",
+		"Position": [
+			-206.669,
+			-0.495,
+			209.45697
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (36)7682306",
+		"Position": [
+			-207.59198,
+			-0.486,
+			209.437012
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (37)7680132",
+		"Position": [
+			-205.414978,
+			-0.843,
+			212.515015
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (38)7682758",
+		"Position": [
+			-206.169,
+			-0.896,
+			212.333008
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (39)7680600",
+		"Position": [
+			-207.189026,
+			-0.91,
+			211.911987
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (40)7680540",
+		"Position": [
+			-206.729,
+			-0.91,
+			212.383972
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (41)7680588",
+		"Position": [
+			-203.448975,
+			-0.728,
+			238.573975
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (42)7686670",
+		"Position": [
+			-203.171021,
+			-0.728,
+			237.893982
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (43)7679320",
+		"Position": [
+			-203.588989,
+			-0.728,
+			238.211
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (44)7679336",
+		"Position": [
+			-203.429016,
+			-0.728,
+			237.799988
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (45)7680632",
+		"Position": [
+			-203.494019,
+			-1.231,
+			203.674988
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (46)7678544",
+		"Position": [
+			-204.177979,
+			-1.231,
+			203.711975
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (47)7678496",
+		"Position": [
+			-205.237976,
+			-1.231,
+			203.794983
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (48)7679612",
+		"Position": [
+			-204.95697,
+			-0.898,
+			203.797974
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (49)7684716",
+		"Position": [
+			-203.85498,
+			-0.915,
+			203.76001
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (50)7678816",
+		"Position": [
+			-98.62201,
+			8.487,
+			-616.762939
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (51)7679468",
+		"Position": [
+			-98.81201,
+			8.498,
+			-617.459961
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (52)7684748",
+		"Position": [
+			-99.1040039,
+			8.498,
+			-618.672
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff (53)7684768",
+		"Position": [
+			-98.33502,
+			8.281,
+			-617.215942
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "MED_stuff_rare (10)7679520",
+		"Position": [
+			-179.549011,
+			-0.846,
+			260.452026
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "MED_stuff_rare (11)7683254",
+		"Position": [
+			-179.336,
+			-1.299,
+			260.338
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "MED_stuff_rare (12)7683506",
+		"Position": [
+			-176.307,
+			-0.915,
+			260.388977
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "MED_stuff_rare (13)7686866",
+		"Position": [
+			-177.242981,
+			-0.904,
+			258.372
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "MED_stuff_rare (2)7687380",
+		"Position": [
+			284.036,
+			23.875,
+			-517.121948
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "MED_stuff_rare (3)7686014",
+		"Position": [
+			284.387939,
+			23.875,
+			-516.93396
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "MED_stuff_rare (4)7685212",
+		"Position": [
+			285.521,
+			23.875,
+			-517.348
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "MED_stuff_rare (5)7684004",
+		"Position": [
+			-179.622986,
+			-0.889,
+			264.885
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "MED_stuff_rare (6)7683734",
+		"Position": [
+			284.682,
+			23.875,
+			-517.300049
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "MED_stuff_rare (7)7679804",
+		"Position": [
+			284.040039,
+			23.172,
+			-517.409058
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "MED_stuff_rare (8)7678612",
+		"Position": [
+			-180.771,
+			-0.889,
+			263.115
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "MED_stuff_rare (9)7683790",
+		"Position": [
+			-180.500977,
+			-0.945,
+			261.030029
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "SPAWN (1)7678392",
+		"Position": [
+			367.24,
+			19.84,
+			-343.12
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "SPAWN (2)7687058",
+		"Position": [
+			366,
+			8.8,
+			-698
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "SPAWN (4)7682350",
+		"Position": [
+			-4.73999,
+			13.42,
+			-585.63
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "SPAWN (5)7678800",
+		"Position": [
+			-254.590027,
+			27.64,
+			-641.28
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "SPAWN (6)7680608",
+		"Position": [
+			-435.6,
+			27.64,
+			-506.099976
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "SPAWN (7)7684692",
+		"Position": [
+			-627.209961,
+			26.42,
+			-325.52002
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "SPAWN (8)7687492",
+		"Position": [
+			-510.1,
+			10.12,
+			-145.5
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "SPAWN7679156",
+		"Position": [
+			398.819946,
+			17.56,
+			-291.199951
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "ammo_mix_stuff (10)7685930",
+		"Position": [
+			-173.473022,
+			13.649,
+			-692.254
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (11)7679148",
+		"Position": [
+			-173.961975,
+			13.649,
+			-692.118042
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (12)7683650",
+		"Position": [
+			-193.724976,
+			1.853,
+			202.838989
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (15)7682258",
+		"Position": [
+			-208.911011,
+			3.017,
+			229.732971
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (17)7678312",
+		"Position": [
+			-128.15802,
+			11.603,
+			-684.577
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (18)7686486",
+		"Position": [
+			-190.53302,
+			-1.39,
+			254.096008
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (19)7685132",
+		"Position": [
+			-208.5,
+			3.017,
+			229.448975
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (20)7679304",
+		"Position": [
+			-208.633,
+			3.017,
+			229.846008
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (21)7682770",
+		"Position": [
+			-209.263,
+			2.949,
+			229.52002
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (22)7681320",
+		"Position": [
+			-209.729,
+			3.017,
+			230.807
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (23)7686046",
+		"Position": [
+			-191.052,
+			-1.255,
+			254.32
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (24)7681304",
+		"Position": [
+			-191.419,
+			-0.944,
+			253.68103
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (25)7687256",
+		"Position": [
+			-190.934021,
+			-0.944,
+			253.57
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (26)7680236",
+		"Position": [
+			-192.127014,
+			-0.965,
+			253.185974
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (27)7681152",
+		"Position": [
+			-190.211975,
+			-0.582,
+			251.900024
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (28)7683666",
+		"Position": [
+			-185.560974,
+			3.476,
+			268.482
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (29)7681076",
+		"Position": [
+			-185.263,
+			3.476,
+			269.042
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (30)7679796",
+		"Position": [
+			-185.708008,
+			3.476,
+			268.802979
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (31)7680300",
+		"Position": [
+			-185.491028,
+			3.476,
+			268.768982
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (32)7681520",
+		"Position": [
+			-180.471985,
+			0.871,
+			216.22998
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (33)7680056",
+		"Position": [
+			-181.184021,
+			0.871,
+			215.90802
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (34)7678140",
+		"Position": [
+			-180.474,
+			0.871,
+			215.815
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (35)7686210",
+		"Position": [
+			-207.190979,
+			1.117,
+			201.888977
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (36)7682442",
+		"Position": [
+			-207.01001,
+			1.117,
+			202.801025
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (37)7683900",
+		"Position": [
+			-206.88,
+			1.117,
+			203.651
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (38)7683442",
+		"Position": [
+			-185.143,
+			1.328,
+			198.966
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (39)7682882",
+		"Position": [
+			-184.453,
+			0.909,
+			198.890991
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (40)7682426",
+		"Position": [
+			-135.302979,
+			11.478,
+			-690.909058
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (41)7685760",
+		"Position": [
+			-135.729,
+			11.478,
+			-690.556
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (42)7684548",
+		"Position": [
+			-135.002991,
+			11.543,
+			-690.078
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (43)7682274",
+		"Position": [
+			-129.044983,
+			11.631,
+			-684.057
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (44)7682150",
+		"Position": [
+			142.864014,
+			24.546,
+			-728.4
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (45)7683018",
+		"Position": [
+			141.303955,
+			25.642,
+			-728.433
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (46)7679380",
+		"Position": [
+			226.675049,
+			24.512,
+			-694.99
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (47)7678440",
+		"Position": [
+			226.39502,
+			24.512,
+			-695.266968
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (48)7683082",
+		"Position": [
+			226.31897,
+			25.134,
+			-696.457031
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (49)7678940",
+		"Position": [
+			226.448975,
+			25.134,
+			-696.121
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (5)7681092",
+		"Position": [
+			226.394043,
+			25.399,
+			-700.798
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (50)7686282",
+		"Position": [
+			227.522949,
+			25.042,
+			-696.602051
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (51)7685604",
+		"Position": [
+			227.243042,
+			25.042,
+			-696.699951
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (52)7685036",
+		"Position": [
+			226.185059,
+			25.399,
+			-701.365
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (53)7682858",
+		"Position": [
+			197.271,
+			11.994,
+			-606.012939
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (54)7685576",
+		"Position": [
+			197.303955,
+			11.994,
+			-606.266
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (55)7686738",
+		"Position": [
+			-164.624023,
+			50.831,
+			-230.833008
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (56)7679568",
+		"Position": [
+			-165.857,
+			51.142,
+			-231.083008
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (57)7680048",
+		"Position": [
+			-164.901,
+			51.076,
+			-231.385986
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (58)7686234",
+		"Position": [
+			-165.057,
+			51.076,
+			-230.946045
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (59)7685982",
+		"Position": [
+			-461.33,
+			15.319,
+			-344.751953
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (6)7680268",
+		"Position": [
+			143.353027,
+			24.62,
+			-728.245
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (60)7682986",
+		"Position": [
+			-461.319,
+			15.319,
+			-345.516
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (61)7682026",
+		"Position": [
+			-461.293,
+			15.319,
+			-345.166016
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (62)7680100",
+		"Position": [
+			-460.786,
+			15.319,
+			-345.381958
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (63)7686354",
+		"Position": [
+			-209.948,
+			77.45,
+			-269.407959
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (64)7678888",
+		"Position": [
+			-210.219971,
+			77.45,
+			-268.891968
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (65)7683826",
+		"Position": [
+			-210.328,
+			77.45,
+			-269.232056
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (66)7683956",
+		"Position": [
+			-210.887024,
+			77.45,
+			-269.118042
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (67)7681424",
+		"Position": [
+			-209.515991,
+			76.985,
+			-268.081055
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (68)7682138",
+		"Position": [
+			-158.505,
+			52.032,
+			-274.595947
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (69)7685248",
+		"Position": [
+			-159.05603,
+			52.032,
+			-275.170044
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (7)7682850",
+		"Position": [
+			143.098022,
+			24.546,
+			-728.313
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (70)7686958",
+		"Position": [
+			-158.508972,
+			52.032,
+			-275.006958
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (71)7686258",
+		"Position": [
+			-157.195,
+			52.259,
+			-276.849976
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (72)7681772",
+		"Position": [
+			-463.068,
+			18.785,
+			-360.751953
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (73)7678116",
+		"Position": [
+			-463.237,
+			18.785,
+			-361.014038
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (74)7686874",
+		"Position": [
+			-463.718,
+			18.785,
+			-361.845947
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (75)7682182",
+		"Position": [
+			-530.875,
+			10.355,
+			-462.724976
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (76)7683774",
+		"Position": [
+			-530.5,
+			10.355,
+			-463.530029
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (77)7683482",
+		"Position": [
+			-531.351,
+			10.355,
+			-464.787964
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (78)7682174",
+		"Position": [
+			258.615967,
+			29.991,
+			-433.261963
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (79)7683058",
+		"Position": [
+			258.134033,
+			29.991,
+			-433.676025
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (8)7684468",
+		"Position": [
+			-170.601013,
+			12.788,
+			-686.609
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (80)7681068",
+		"Position": [
+			258.261,
+			29.991,
+			-433.406
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (81)7682226",
+		"Position": [
+			257.912964,
+			29.991,
+			-433.265
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (82)7682674",
+		"Position": [
+			257.667969,
+			29.991,
+			-433.475952
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (83)7682550",
+		"Position": [
+			-26.3079834,
+			10.688,
+			-741.003052
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (84)7685140",
+		"Position": [
+			-25.6589966,
+			10.399,
+			-741.817
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (85)7679216",
+		"Position": [
+			-25.71698,
+			10.271,
+			-740.78
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (86)7684488",
+		"Position": [
+			-27.1409912,
+			10.88,
+			-740.875
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (87)7679636",
+		"Position": [
+			190.391968,
+			10.973,
+			-581.376953
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (88)7684652",
+		"Position": [
+			194.495,
+			11.695,
+			-582.154053
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (89)7682458",
+		"Position": [
+			194.32605,
+			11.695,
+			-581.578
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (9)7680284",
+		"Position": [
+			-171.831,
+			12.788,
+			-687.925049
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (90)7686218",
+		"Position": [
+			193.629028,
+			11.023,
+			-581.728
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (91)7680356",
+		"Position": [
+			-501.344,
+			17.228,
+			-411.64
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (92)7679412",
+		"Position": [
+			-500.109,
+			16.499,
+			-411.396973
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_mix_stuff (93)7682922",
+		"Position": [
+			-500.458,
+			16.446,
+			-411.78894
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (10)7678148",
+		"Position": [
+			-486.564,
+			15.039,
+			-153.122009
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (11)7682722",
+		"Position": [
+			276.029053,
+			23.654,
+			-511.608032
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (12)7681100",
+		"Position": [
+			275.952026,
+			23.654,
+			-510.896973
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (13)7681954",
+		"Position": [
+			275.469,
+			23.654,
+			-510.953979
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (14)7683538",
+		"Position": [
+			276.394043,
+			23.654,
+			-511.333984
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (15)7681344",
+		"Position": [
+			291.592041,
+			23.859,
+			-502.557
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (16)7683130",
+		"Position": [
+			291.104,
+			23.859,
+			-502.519043
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (17)7687112",
+		"Position": [
+			290.634033,
+			23.859,
+			-501.805054
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (18)7682118",
+		"Position": [
+			292.266968,
+			24.129,
+			-506.422974
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (19)7685092",
+		"Position": [
+			292.209961,
+			24.531,
+			-506.92395
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (20)7683634",
+		"Position": [
+			292.581055,
+			24.129,
+			-506.597046
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (21)7681828",
+		"Position": [
+			290.749023,
+			24.129,
+			-505.823975
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (22)7684480",
+		"Position": [
+			291.170044,
+			24.075,
+			-506.134033
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (23)7678688",
+		"Position": [
+			266.223022,
+			23.102,
+			-520.605
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (24)7680852",
+		"Position": [
+			265.996948,
+			23.102,
+			-520.089
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (25)7687176",
+		"Position": [
+			266.531,
+			23.102,
+			-520.108032
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (26)7682954",
+		"Position": [
+			266.734,
+			23.102,
+			-519.634033
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (27)7685720",
+		"Position": [
+			290.574951,
+			23.859,
+			-502.222046
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (28)7681352",
+		"Position": [
+			308.948,
+			23.169,
+			-460.475952
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (29)7684104",
+		"Position": [
+			308.738037,
+			23.169,
+			-460.743042
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (3)7680040",
+		"Position": [
+			-485.351,
+			15.175,
+			-156.695984
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (30)7681796",
+		"Position": [
+			308.599976,
+			23.169,
+			-461.071045
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (31)7687308",
+		"Position": [
+			295.980957,
+			23.883,
+			-441.550049
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (32)7682062",
+		"Position": [
+			296.301025,
+			23.883,
+			-441.171021
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (33)7687216",
+		"Position": [
+			295.614,
+			23.883,
+			-440.590942
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (34)7678596",
+		"Position": [
+			281.894043,
+			23.636,
+			-437.723022
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (35)7679620",
+		"Position": [
+			282.18396,
+			23.636,
+			-437.203
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (36)7678860",
+		"Position": [
+			281.906982,
+			24.097,
+			-436.917
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (37)7678872",
+		"Position": [
+			281.131958,
+			23.86,
+			-438.108032
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (38)7683932",
+		"Position": [
+			277.880981,
+			23.987,
+			-432.287
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (39)7681780",
+		"Position": [
+			277.453,
+			23.987,
+			-431.824951
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (40)7681860",
+		"Position": [
+			277.19104,
+			23.987,
+			-432.022949
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (41)7685768",
+		"Position": [
+			276.930054,
+			23.987,
+			-432.69104
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (42)7684376",
+		"Position": [
+			-537.623,
+			21.783,
+			-238.790039
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (43)7682158",
+		"Position": [
+			-536.815,
+			21.783,
+			-238.587036
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (44)7680792",
+		"Position": [
+			-535.921,
+			21.783,
+			-239.25
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (45)7680768",
+		"Position": [
+			-533.797,
+			21.783,
+			-240.318
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (46)7682330",
+		"Position": [
+			-533.342041,
+			21.783,
+			-240.881958
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (47)7680616",
+		"Position": [
+			-533.233032,
+			21.783,
+			-241.661987
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (48)7683834",
+		"Position": [
+			-535.493042,
+			21.783,
+			-243.54895
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (49)7681512",
+		"Position": [
+			-537.51,
+			21.783,
+			-242.51001
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (5)7684572",
+		"Position": [
+			-485.9,
+			15.175,
+			-156.650024
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (50)7685842",
+		"Position": [
+			-538.89,
+			21.63,
+			-241.98999
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (51)7680948",
+		"Position": [
+			-489.98,
+			15.02,
+			-154.669983
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (6)7683174",
+		"Position": [
+			-486.658,
+			15.175,
+			-156.473022
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (7)7680892",
+		"Position": [
+			-483.471,
+			15.039,
+			-155.348022
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (8)7682794",
+		"Position": [
+			-483.43,
+			15.039,
+			-154.44
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_nato_mix_stuff (9)7686578",
+		"Position": [
+			-484.55,
+			15.039,
+			-153.219971
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_var (7)7684556",
+		"Position": [
+			-187.348022,
+			-0.884,
+			201.752014
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_var (8)7682198",
+		"Position": [
+			-187.388,
+			-0.97,
+			200.853027
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "ammo_var (9)7684964",
+		"Position": [
+			-187.736023,
+			-0.97,
+			201.062012
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "arm_paca7686062",
+		"Position": [
+			110.06543,
+			25.4738121,
+			245.6427
+		],
+		"Rotation": [
+			271.928955,
+			151.736862,
+			46.1250877
+		]
+	},
+	{
+		"worldId": "armor_Tarbank (1)7684564",
+		"Position": [
+			-450.44574,
+			14.3159122,
+			-390.617218
+		],
+		"Rotation": [
+			280.634247,
+			175.116562,
+			0.6542486
+		]
+	},
+	{
+		"worldId": "armor_Tarbank (2)7680276",
+		"Position": [
+			-441.701843,
+			14.5428715,
+			-405.1219
+		],
+		"Rotation": [
+			270,
+			197.454987,
+			0
+		]
+	},
+	{
+		"worldId": "armor_Tarbank (3)7679512",
+		"Position": [
+			-511.097717,
+			18.3159122,
+			-391.698029
+		],
+		"Rotation": [
+			270,
+			90.0519,
+			0
+		]
+	},
+	{
+		"worldId": "armor_Tarbank (4)7685958",
+		"Position": [
+			-511.240845,
+			14.9219,
+			-393.7034
+		],
+		"Rotation": [
+			270,
+			197.454987,
+			0
+		]
+	},
+	{
+		"worldId": "armor_Tarbank (5)7680228",
+		"Position": [
+			-460.427643,
+			18.04394,
+			-366.728
+		],
+		"Rotation": [
+			270,
+			197.454987,
+			0
+		]
+	},
+	{
+		"worldId": "armor_Tarbank (6)7684916",
+		"Position": [
+			-450.709839,
+			14.318903,
+			-395.5145
+		],
+		"Rotation": [
+			270,
+			197.454987,
+			0
+		]
+	},
+	{
+		"worldId": "armor_Tarbank (7)7684724",
+		"Position": [
+			-463.886658,
+			14.4499454,
+			-360.852936
+		],
+		"Rotation": [
+			271.294678,
+			6.95906973,
+			344.354248
+		]
+	},
+	{
+		"worldId": "armor_Tarbank7681978",
+		"Position": [
+			-463.540161,
+			14.49795,
+			-366.891968
+		],
+		"Rotation": [
+			270,
+			197.454987,
+			0
+		]
+	},
+	{
+		"worldId": "bag_wild (4)7681544",
+		"Position": [
+			141.138489,
+			24.5788822,
+			-728.7048
+		],
+		"Rotation": [
+			358.6635,
+			55.3997841,
+			358.119873
+		]
+	},
+	{
+		"worldId": "bag_wild (5)7683610",
+		"Position": [
+			230.486145,
+			24.36587,
+			-714.6279
+		],
+		"Rotation": [
+			283.367859,
+			92.07756,
+			31.8933
+		]
+	},
+	{
+		"worldId": "bag_wild (6)7684460",
+		"Position": [
+			219.8935,
+			24.39187,
+			-700.4288
+		],
+		"Rotation": [
+			273.176819,
+			237.6977,
+			28.1067314
+		]
+	},
+	{
+		"worldId": "bag_wild (7)7680124",
+		"Position": [
+			221.787476,
+			24.3948612,
+			-718.575439
+		],
+		"Rotation": [
+			270,
+			112.084496,
+			0
+		]
+	},
+	{
+		"worldId": "bot_zona_snayper7681804",
+		"Position": [
+			-535.660034,
+			23.8,
+			-53.47998
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "building1 (1)7682898",
+		"Position": [
+			-505.311,
+			15.597,
+			-368.609
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (10)7681124",
+		"Position": [
+			-465.805,
+			15.475,
+			-333.241943
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (11)7686594",
+		"Position": [
+			-465.476,
+			15.432,
+			-332.536
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (12)7680532",
+		"Position": [
+			-449.978,
+			15.601,
+			-365.141968
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (13)7684604",
+		"Position": [
+			-449.904,
+			15.601,
+			-364.823975
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (14)7678784",
+		"Position": [
+			-451.674,
+			16.071,
+			-357.854
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (15)7685704",
+		"Position": [
+			-458.557,
+			16.17,
+			-394.427
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (16)7681200",
+		"Position": [
+			-457.876,
+			16.137,
+			-394.359
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (17)7679484",
+		"Position": [
+			-463.074,
+			16.355,
+			-385.764038
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (18)7684444",
+		"Position": [
+			-463.245,
+			16.363,
+			-386.462036
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (19)7678264",
+		"Position": [
+			-457.205,
+			15.954,
+			-387.011963
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (2)7685644",
+		"Position": [
+			-505.803,
+			15.597,
+			-368.62
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (20)7679364",
+		"Position": [
+			-456.07,
+			15.954,
+			-387.176025
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (21)7680572",
+		"Position": [
+			-451.613,
+			15.838,
+			-384.667969
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (22)7682750",
+		"Position": [
+			-451.944,
+			15.838,
+			-384.274048
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (23)7684924",
+		"Position": [
+			-515.865,
+			16.09,
+			-390.206055
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (24)7679312",
+		"Position": [
+			-515.742,
+			16.09,
+			-388.293945
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (25)7681264",
+		"Position": [
+			-515.044,
+			16.087,
+			-392.780029
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (26)7687460",
+		"Position": [
+			-517.38,
+			15.947,
+			-370.66394
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (27)7679676",
+		"Position": [
+			-517.825,
+			15.483,
+			-371.291016
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (28)7686914",
+		"Position": [
+			-516.556,
+			15.51,
+			-372.46106
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (29)7685196",
+		"Position": [
+			-514.586,
+			15.922,
+			-373.313
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (3)7683198",
+		"Position": [
+			-506.898,
+			15.648,
+			-368.468018
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (30)7685028",
+		"Position": [
+			-517.739,
+			15.708,
+			-375.114
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (31)7683326",
+		"Position": [
+			-517.404,
+			15.367,
+			-374.209961
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (32)7687356",
+		"Position": [
+			-449.091,
+			16.171,
+			-392.889038
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (33)7684192",
+		"Position": [
+			-449.322,
+			16.171,
+			-393.560059
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (4)7684884",
+		"Position": [
+			-512.261963,
+			16.201,
+			-368.729
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (5)7680828",
+		"Position": [
+			-512.396,
+			16.201,
+			-369.417969
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (6)7681176",
+		"Position": [
+			-512.285034,
+			16.201,
+			-370.188
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (7)7686162",
+		"Position": [
+			-468.704,
+			15.524,
+			-332.609
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (8)7686754",
+		"Position": [
+			-468.181,
+			15.682,
+			-332.95105
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building1 (9)7681740",
+		"Position": [
+			-467.283,
+			15.385,
+			-332.977051
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "building17680564",
+		"Position": [
+			-507.086,
+			15.996,
+			-372.094971
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "drink_only (10)7685728",
+		"Position": [
+			-127.018005,
+			10.67,
+			-684.970947
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "drink_only (5)7681416",
+		"Position": [
+			-182.312988,
+			-1.65,
+			266.609
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "drink_only (6)7679588",
+		"Position": [
+			-181.95697,
+			-1.65,
+			265.935
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "drink_only (7)7683948",
+		"Position": [
+			-506.299,
+			16.189,
+			-175.336975
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "drink_only (8)7683410",
+		"Position": [
+			-506.75,
+			16.189,
+			-174.995
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "drink_only (9)7683602",
+		"Position": [
+			-507.458,
+			16.445,
+			-177.72699
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_only (1)7686150",
+		"Position": [
+			-185.633,
+			-0.909,
+			260.185
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_only (2)7679668",
+		"Position": [
+			-185.440979,
+			-0.909,
+			259.913025
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_only (3)7683034",
+		"Position": [
+			-182.805,
+			-0.802,
+			259.968018
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_only (4)7684152",
+		"Position": [
+			-183.039978,
+			-0.855,
+			259.279
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_only7682450",
+		"Position": [
+			-185.224,
+			-0.909,
+			260.542
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (10)7686250",
+		"Position": [
+			-565.667969,
+			22.365,
+			-216.495
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (11)7684240",
+		"Position": [
+			-565.806,
+			21.518,
+			-216.174988
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (12)7678832",
+		"Position": [
+			-134.198975,
+			10.7,
+			-682.357056
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (13)7680308",
+		"Position": [
+			-133.776,
+			10.7,
+			-682.465942
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (14)7680712",
+		"Position": [
+			-95.80298,
+			8.236,
+			-616.692
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (15)7682266",
+		"Position": [
+			-94.89203,
+			8.236,
+			-617.052
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (16)7686142",
+		"Position": [
+			-35.4459839,
+			11.043,
+			-741.501
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (17)7681296",
+		"Position": [
+			-35.11798,
+			11.043,
+			-740.975
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (18)7684900",
+		"Position": [
+			130.074951,
+			24.799,
+			-737.220947
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (19)7682586",
+		"Position": [
+			127.944946,
+			24.677,
+			-738.246948
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (2)7685584",
+		"Position": [
+			-166.664978,
+			-1.672,
+			254.685974
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (20)7683106",
+		"Position": [
+			129.198975,
+			24.637,
+			-737.598
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (21)7678924",
+		"Position": [
+			132.411987,
+			25.49,
+			-731.834961
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (22)7680492",
+		"Position": [
+			131.500977,
+			25.49,
+			-732.564941
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (23)7678296",
+		"Position": [
+			140.400024,
+			28.181,
+			-725.761963
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (24)7682410",
+		"Position": [
+			139.71106,
+			28.238,
+			-725.858032
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (25)7680728",
+		"Position": [
+			138.220947,
+			27.824,
+			-729.516968
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (26)7683010",
+		"Position": [
+			137.85498,
+			27.827,
+			-728.881958
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (27)7680204",
+		"Position": [
+			229.82605,
+			21.197,
+			-710.718
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (28)7678224",
+		"Position": [
+			230.310059,
+			21.197,
+			-711.230957
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (29)7682366",
+		"Position": [
+			230.542969,
+			21.268,
+			-710.911
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (3)7682874",
+		"Position": [
+			-203.799988,
+			0.987,
+			209.896
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (30)7686730",
+		"Position": [
+			221.28894,
+			21.033,
+			-704.027
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (31)7687324",
+		"Position": [
+			220.604,
+			21.047,
+			-704.850952
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (32)7687074",
+		"Position": [
+			221.133057,
+			21.047,
+			-704.79895
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (33)7681492",
+		"Position": [
+			228.515015,
+			25.097,
+			-712.435059
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (34)7678980",
+		"Position": [
+			228.848022,
+			25.097,
+			-712.456055
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (35)7685100",
+		"Position": [
+			225.828,
+			25.423,
+			-708.76
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (36)7684776",
+		"Position": [
+			-506.541,
+			16.575,
+			-393.902954
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (37)7682102",
+		"Position": [
+			-507.104,
+			16.575,
+			-393.866943
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (38)7681924",
+		"Position": [
+			-506.892,
+			16.575,
+			-394.313
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (39)7685966",
+		"Position": [
+			-506.219,
+			16.563,
+			-394.245972
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (4)7681624",
+		"Position": [
+			-565.822,
+			22.354,
+			-216.765991
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (40)7683908",
+		"Position": [
+			-508.456,
+			16.5,
+			-391.540039
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (41)7681938",
+		"Position": [
+			-508.302,
+			16.5,
+			-392.104
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (42)7686134",
+		"Position": [
+			-508.501,
+			16.5,
+			-390.142944
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (43)7682890",
+		"Position": [
+			-462.68,
+			16.458,
+			-363.474
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (44)7681844",
+		"Position": [
+			-463.328,
+			16.434,
+			-364.047
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (45)7678580",
+		"Position": [
+			-463.273,
+			16.444,
+			-363.175049
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (46)7686770",
+		"Position": [
+			-462.689,
+			16.444,
+			-362.957031
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (47)7684972",
+		"Position": [
+			-460.066,
+			16.484,
+			-362.31604
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (48)7678664",
+		"Position": [
+			-460.663,
+			16.484,
+			-362.256958
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (49)7681360",
+		"Position": [
+			-453.721,
+			16.313,
+			-388.590942
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (5)7684452",
+		"Position": [
+			-166.72998,
+			-1.62,
+			254.109009
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (50)7684644",
+		"Position": [
+			-454.515,
+			16.313,
+			-388.527954
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (51)7679192",
+		"Position": [
+			-452.211,
+			16.423,
+			-397.868042
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (52)7679280",
+		"Position": [
+			-451.783,
+			16.423,
+			-397.159058
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (53)7684184",
+		"Position": [
+			-451.669,
+			16.423,
+			-397.80603
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (54)7681962",
+		"Position": [
+			-453.387,
+			16.382,
+			-395.357056
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (55)7685660",
+		"Position": [
+			-453.837,
+			16.382,
+			-395.400024
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (56)7683490",
+		"Position": [
+			-456.434,
+			16.317,
+			-399.859
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (57)7682218",
+		"Position": [
+			-455.888,
+			16.317,
+			-400.133057
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (58)7683972",
+		"Position": [
+			286.063,
+			23.832,
+			-517.404053
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (59)7678604",
+		"Position": [
+			286.042969,
+			23.832,
+			-517.852051
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (6)7685364",
+		"Position": [
+			-174.698,
+			-0.889,
+			265.419
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (60)7683358",
+		"Position": [
+			285.766,
+			23.76,
+			-517.667969
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (61)7685124",
+		"Position": [
+			286.100952,
+			24.175,
+			-436.438965
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (62)7683726",
+		"Position": [
+			285.784058,
+			24.175,
+			-435.762939
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (63)7679092",
+		"Position": [
+			285.875977,
+			24.175,
+			-436.093018
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (64)7685828",
+		"Position": [
+			286.439941,
+			24.175,
+			-436.019043
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (7)7679728",
+		"Position": [
+			-174.664,
+			-0.889,
+			264.774
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (8)7678792",
+		"Position": [
+			-174.809021,
+			-0.889,
+			264.174
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "food_varios_mix (9)7679920",
+		"Position": [
+			-175.366028,
+			-0.889,
+			264.155029
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "fuel_stuff1 (1)7680696",
+		"Position": [
+			-40.4530029,
+			6.05,
+			-9.719971
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (10)7680800",
+		"Position": [
+			281.175049,
+			23.46,
+			-505.334961
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (11)7684708",
+		"Position": [
+			295.659058,
+			23.289,
+			-506.781982
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (12)7679172",
+		"Position": [
+			224.198,
+			24.683,
+			-702.165039
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (13)7685882",
+		"Position": [
+			229.796021,
+			24.658,
+			-697.29895
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (14)7679836",
+		"Position": [
+			141.114014,
+			25.31,
+			-733.472046
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (15)7683114",
+		"Position": [
+			141.453,
+			25.31,
+			-732.874
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (16)7687404",
+		"Position": [
+			-172.453,
+			12.737,
+			-690.444946
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (17)7684136",
+		"Position": [
+			-156.028015,
+			11.513,
+			-677.73
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (18)7682962",
+		"Position": [
+			-155.155029,
+			11.744,
+			-676.568
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (19)7684852",
+		"Position": [
+			-195.614014,
+			-1.073,
+			230.991028
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (2)7678272",
+		"Position": [
+			-47.224,
+			6.615,
+			-7.89300537
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (20)7683294",
+		"Position": [
+			-196.091,
+			-1.073,
+			230.547974
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (21)7685552",
+		"Position": [
+			-189.353027,
+			-1.493,
+			252.992981
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (22)7679036",
+		"Position": [
+			-177.862,
+			1.298,
+			210.948975
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (23)7679628",
+		"Position": [
+			-178.307983,
+			1.298,
+			210.689026
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (25)7685476",
+		"Position": [
+			-500.162,
+			16.181,
+			-174.698
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (26)7683206",
+		"Position": [
+			-540.68,
+			15.629,
+			-202.31897
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (27)7687372",
+		"Position": [
+			-541.521,
+			15.422,
+			-201.846008
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (28)7679200",
+		"Position": [
+			-155.81,
+			12.32,
+			-689.73
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (29)7684756",
+		"Position": [
+			-156.23999,
+			12.32,
+			-688.930054
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (30)7684168",
+		"Position": [
+			-4.869995,
+			12.966,
+			-754.410034
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (31)7683964",
+		"Position": [
+			-1.697998,
+			12.897,
+			-755.214966
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (32)7679068",
+		"Position": [
+			123.773987,
+			24.657,
+			-749.194946
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (33)7687148",
+		"Position": [
+			124.057007,
+			24.726,
+			-750.381
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (34)7679240",
+		"Position": [
+			128.213013,
+			24.74,
+			-750.240967
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (35)7681592",
+		"Position": [
+			126.817993,
+			24.74,
+			-749.862061
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (36)7679124",
+		"Position": [
+			-448.133,
+			15.371,
+			-366.279053
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (37)7681632",
+		"Position": [
+			-458.777,
+			15.277,
+			-358.871948
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (38)7683166",
+		"Position": [
+			-456.816,
+			15.245,
+			-359.212036
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (39)7683802",
+		"Position": [
+			-451.748,
+			16.657,
+			-366.037
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (4)7679604",
+		"Position": [
+			-19.7080078,
+			6.039,
+			-59.47998
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (40)7679552",
+		"Position": [
+			-454.332,
+			15.525,
+			-390.978027
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (41)7686242",
+		"Position": [
+			-457.682,
+			15.55,
+			-395.94104
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (42)7686450",
+		"Position": [
+			-498.257,
+			15.456,
+			-405.458
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (43)7687444",
+		"Position": [
+			-497.514,
+			15.456,
+			-404.88
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (44)7681336",
+		"Position": [
+			-463.665,
+			15.365,
+			-378.52002
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (45)7681724",
+		"Position": [
+			280.637939,
+			23.46,
+			-505.589966
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (46)7683026",
+		"Position": [
+			268.781,
+			23.319,
+			-513.381
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (47)7679232",
+		"Position": [
+			273.040039,
+			23.176,
+			-515.317
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (48)7679256",
+		"Position": [
+			283.392944,
+			23.149,
+			-511.707031
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (49)7681820",
+		"Position": [
+			283.828,
+			23.095,
+			-511.28894
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (5)7686890",
+		"Position": [
+			-19.3900146,
+			6.039,
+			-58.8170166
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (50)7687280",
+		"Position": [
+			-444.329,
+			15.542,
+			-409.521
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (51)7685520",
+		"Position": [
+			-23.6660156,
+			10.203,
+			-740.181
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (7)7683142",
+		"Position": [
+			-498.771,
+			22.123,
+			-245.609985
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (8)7680900",
+		"Position": [
+			-570.421,
+			15.29,
+			-186.236023
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff1 (9)7678512",
+		"Position": [
+			-499.683,
+			16.181,
+			-175.172
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "fuel_stuff17685560",
+		"Position": [
+			-40.01001,
+			6.098,
+			-10.0880127
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "gun 1 (7)7679108",
+		"Position": [
+			283.152,
+			23.9789066,
+			-440.749054
+		],
+		"Rotation": [
+			356.8998,
+			287.455,
+			270
+		]
+	},
+	{
+		"worldId": "gun_ak1 (1)7683214",
+		"Position": [
+			-196.12088,
+			2.03406715,
+			201.561554
+		],
+		"Rotation": [
+			1.15342712,
+			275.878082,
+			271.8292
+		]
+	},
+	{
+		"worldId": "gun_ak1 (2)7686570",
+		"Position": [
+			-507.7019,
+			19.0099125,
+			-389.2394
+		],
+		"Rotation": [
+			282.8151,
+			355.972565,
+			270
+		]
+	},
+	{
+		"worldId": "gun_ak1 (3)7682558",
+		"Position": [
+			257.7049,
+			29.7979069,
+			-434.626068
+		],
+		"Rotation": [
+			358.858978,
+			96.4371,
+			91.25924
+		]
+	},
+	{
+		"worldId": "gun_ak17684524",
+		"Position": [
+			-515.547058,
+			15.6059818,
+			-210.649658
+		],
+		"Rotation": [
+			346.394653,
+			177.7497,
+			273.3793
+		]
+	},
+	{
+		"worldId": "gun_akm7679372",
+		"Position": [
+			-463.750122,
+			18.7009525,
+			-361.698883
+		],
+		"Rotation": [
+			357.755219,
+			27.3014946,
+			270
+		]
+	},
+	{
+		"worldId": "gun_aks_vertical (3)7686322",
+		"Position": [
+			-505.507263,
+			17.0459232,
+			-388.0206
+		],
+		"Rotation": [
+			86.93765,
+			17.4548931,
+			179.999878
+		]
+	},
+	{
+		"worldId": "gun_m4_horizontal (1)7682842",
+		"Position": [
+			266.093781,
+			22.8898869,
+			-519.16626
+		],
+		"Rotation": [
+			0.0000179292474,
+			197.454987,
+			278.059753
+		]
+	},
+	{
+		"worldId": "gun_m4_horizontal (3)7686290",
+		"Position": [
+			-535.3179,
+			21.5399418,
+			-239.8121
+		],
+		"Rotation": [
+			292.540466,
+			190.94165,
+			89.99998
+		]
+	},
+	{
+		"worldId": "gun_m4_horizontal (4)7684512",
+		"Position": [
+			-488.076752,
+			14.9659672,
+			-156.154144
+		],
+		"Rotation": [
+			293.070984,
+			352.083282,
+			270.000031
+		]
+	},
+	{
+		"worldId": "gun_m4_vertical (2)7680244",
+		"Position": [
+			316.2568,
+			22.9049015,
+			-464.641235
+		],
+		"Rotation": [
+			284.165527,
+			107.455048,
+			89.9999542
+		]
+	},
+	{
+		"worldId": "gun_m4_vertical7678588",
+		"Position": [
+			-535.8939,
+			21.5369511,
+			-242.744324
+		],
+		"Rotation": [
+			286.807739,
+			107.455048,
+			89.99995
+		]
+	},
+	{
+		"worldId": "gun_mp4_raider_horizontal (13)7685500",
+		"Position": [
+			294.435638,
+			23.8249149,
+			-443.555939
+		],
+		"Rotation": [
+			1.45309758,
+			311.008942,
+			270
+		]
+	},
+	{
+		"worldId": "gun_mp5_horizontal (14)7678328",
+		"Position": [
+			306.832336,
+			23.9869022,
+			-463.116058
+		],
+		"Rotation": [
+			2.94589472,
+			222.107315,
+			270
+		]
+	},
+	{
+		"worldId": "gun_mp5_horizontal (6)7684232",
+		"Position": [
+			286.04245,
+			23.7218876,
+			-503.357
+		],
+		"Rotation": [
+			348.7303,
+			207.369537,
+			90.00001
+		]
+	},
+	{
+		"worldId": "gun_mp5_horizontal (7)7679888",
+		"Position": [
+			291.0725,
+			23.9538822,
+			-515.3972
+		],
+		"Rotation": [
+			0.129561961,
+			197.356323,
+			93.27182
+		]
+	},
+	{
+		"worldId": "gun_mp5_horizontal (8)7679812",
+		"Position": [
+			295.840179,
+			23.6368656,
+			-504.25528
+		],
+		"Rotation": [
+			0.02658011,
+			13.7328558,
+			90.40874
+		]
+	},
+	{
+		"worldId": "gun_mp5_horizontal (9)7686818",
+		"Position": [
+			274.453552,
+			23.5438786,
+			-502.8044
+		],
+		"Rotation": [
+			355.0233,
+			107.454994,
+			89.99999
+		]
+	},
+	{
+		"worldId": "gun_mp5_vertical7684740",
+		"Position": [
+			297.3415,
+			23.0508671,
+			-509.798859
+		],
+		"Rotation": [
+			282.336853,
+			107.271217,
+			254.401382
+		]
+	},
+	{
+		"worldId": "key_3087686518",
+		"Position": [
+			-5.04209661,
+			-0.5614,
+			-70.4055
+		],
+		"Rotation": [
+			276.993835,
+			180.0002,
+			347.085266
+		]
+	},
+	{
+		"worldId": "key_314r (17)7678248",
+		"Position": [
+			238.5931,
+			-1.2869,
+			-71.4566
+		],
+		"Rotation": [
+			82.7318039,
+			179.999954,
+			79.22884
+		]
+	},
+	{
+		"worldId": "key_316r (18)7680656",
+		"Position": [
+			-96.438,
+			-15.743,
+			218.741
+		],
+		"Rotation": [
+			84.3451843,
+			180.000046,
+			202.49646
+		]
+	},
+	{
+		"worldId": "key_lab_sec_pult (2)7681672",
+		"Position": [
+			54.5767,
+			-2.0162,
+			-46.6806
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "key_lab_sec_pult (3)7684436",
+		"Position": [
+			233.650009,
+			-1.4718,
+			-70.695
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "key_lab_sec_pult (4)7678320",
+		"Position": [
+			-25.021,
+			-2.7881,
+			47.4380035
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "krug_sectantov_i zona_botov7684216",
+		"Position": [
+			72.20001,
+			13.42,
+			-661.800049
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "loot_el_military_citizen (45)7682698",
+		"Position": [
+			-2.046997,
+			22.895,
+			190.958008
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_electr (10)7680980",
+		"Position": [
+			-37.8058472,
+			-5.51057673,
+			20.06128
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_electr (11)7683924",
+		"Position": [
+			-511.533,
+			15.771,
+			-391.323
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_electr (12)7683318",
+		"Position": [
+			-511.734,
+			15.771,
+			-390.825928
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_electr (13)7685272",
+		"Position": [
+			-511.002,
+			15.596,
+			-391.126953
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_electr (14)7685076",
+		"Position": [
+			-511.057,
+			15.596,
+			-390.925049
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_flash (1)7682250",
+		"Position": [
+			130.1333,
+			-3.5964,
+			101.4756
+		],
+		"Rotation": [
+			291.3062,
+			267.925,
+			179.9974
+		]
+	},
+	{
+		"worldId": "loot_flash7685240",
+		"Position": [
+			130.2527,
+			-3.5876,
+			101.2445
+		],
+		"Rotation": [
+			270,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "loot_morhine (1)7685628",
+		"Position": [
+			232.8751,
+			-1.6738,
+			-73.0974
+		],
+		"Rotation": [
+			0,
+			266.1449,
+			0
+		]
+	},
+	{
+		"worldId": "loot_morhine (2)7686186",
+		"Position": [
+			237.038,
+			-2.114,
+			-71.883
+		],
+		"Rotation": [
+			0,
+			266.1449,
+			0
+		]
+	},
+	{
+		"worldId": "loot_morhine (3)7686646",
+		"Position": [
+			237.580887,
+			-2.114,
+			-72.5422
+		],
+		"Rotation": [
+			0,
+			337.830353,
+			0
+		]
+	},
+	{
+		"worldId": "loot_morhine (4)7678240",
+		"Position": [
+			53.85,
+			-1.979,
+			-47.513
+		],
+		"Rotation": [
+			0,
+			337.830353,
+			0
+		]
+	},
+	{
+		"worldId": "loot_morhine (5)7682906",
+		"Position": [
+			58.6281,
+			-1.9934,
+			-50.9554
+		],
+		"Rotation": [
+			292.5271,
+			283.735046,
+			55.9304047
+		]
+	},
+	{
+		"worldId": "loot_morhine7685938",
+		"Position": [
+			232.304,
+			-1.6657,
+			-72.187
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "loot_shelter_building_items (10)7684868",
+		"Position": [
+			446.7368,
+			-12.9203243,
+			71.16899
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_building_items (11)7687140",
+		"Position": [
+			448.303772,
+			-13.8413239,
+			69.4949951
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_building_items (12)7686386",
+		"Position": [
+			-390.889221,
+			3.55867553,
+			20.7509937
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_building_items (13)7683302",
+		"Position": [
+			-390.070221,
+			3.38967586,
+			19.786993
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_building_items (14)7681216",
+		"Position": [
+			-386.9142,
+			3.52167583,
+			21.8089943
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_building_items (15)7678092",
+		"Position": [
+			-389.1812,
+			3.5036757,
+			24.2049942
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_building_items (16)7682522",
+		"Position": [
+			-391.032227,
+			3.5036757,
+			23.885994
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_building_items (17)7685784",
+		"Position": [
+			-390.191223,
+			3.54467559,
+			13.8539934
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_building_items (18)7684208",
+		"Position": [
+			-389.797241,
+			3.55867553,
+			15.491993
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_building_items (19)7683718",
+		"Position": [
+			-386.683228,
+			3.46267581,
+			14.4929934
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_building_items (20)7678184",
+		"Position": [
+			-387.285217,
+			3.5036757,
+			13.1959934
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_building_items (4)7683690",
+		"Position": [
+			140.159,
+			-10.45,
+			35.3659973
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_building_items (5)7684316",
+		"Position": [
+			444.889771,
+			-13.0323238,
+			63.16899
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_building_items (6)7684588",
+		"Position": [
+			445.883759,
+			-13.8483238,
+			63.7689972
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_building_items (7)7678432",
+		"Position": [
+			446.690765,
+			-13.8513241,
+			59.6189957
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_building_items (8)7685858",
+		"Position": [
+			444.327759,
+			-13.8453236,
+			71.65199
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_building_items (9)7687104",
+		"Position": [
+			444.352783,
+			-14.0153236,
+			70.9959946
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (10)7680292",
+		"Position": [
+			-509.462,
+			16.206,
+			-173.86499
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (11)7685528",
+		"Position": [
+			-511.781,
+			16.206,
+			-174.87
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (12)7686638",
+		"Position": [
+			-512.849,
+			16.206,
+			-175
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (13)7679992",
+		"Position": [
+			233.364014,
+			20.812,
+			-707.219
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (14)7685820",
+		"Position": [
+			-512.711,
+			16.206,
+			-177.98999
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (15)7686526",
+		"Position": [
+			-512.697,
+			16.206,
+			-178.697021
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (16)7687476",
+		"Position": [
+			233.154053,
+			20.812,
+			-708.147949
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (17)7683698",
+		"Position": [
+			232.706055,
+			21.23,
+			-710.3579
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (18)7686274",
+		"Position": [
+			231.732056,
+			20.42,
+			-710.206055
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (19)7687348",
+		"Position": [
+			230.06897,
+			20.386,
+			-705.959961
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (20)7683514",
+		"Position": [
+			229.886963,
+			20.386,
+			-706.637939
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (21)7681084",
+		"Position": [
+			228.88,
+			20.386,
+			-705.533936
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (22)7685356",
+		"Position": [
+			229.144043,
+			25.49,
+			-706.308
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (23)7678076",
+		"Position": [
+			227.664063,
+			25.668,
+			-707.173
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (24)7684356",
+		"Position": [
+			410.62,
+			12.62,
+			-607.1599
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (25)7683594",
+		"Position": [
+			411.51,
+			12.62,
+			-608.439941
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (26)7684120",
+		"Position": [
+			409.99,
+			12.62,
+			-608.699951
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (27)7681528",
+		"Position": [
+			411.050049,
+			12.62,
+			-610.52
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (28)7683246",
+		"Position": [
+			-210.411987,
+			76.259,
+			-278.994019
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (29)7679704",
+		"Position": [
+			-208.411987,
+			76.259,
+			-280.674072
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (30)7680372",
+		"Position": [
+			-209.113037,
+			76.259,
+			-278.531
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (31)7680092",
+		"Position": [
+			-207.799988,
+			76.259,
+			-279.115
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (32)7686466",
+		"Position": [
+			-96.56598,
+			12.575,
+			-540.885
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (33)7685804",
+		"Position": [
+			-96.70703,
+			13.306,
+			-541.832031
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (34)7683618",
+		"Position": [
+			-96.05603,
+			13.306,
+			-543.02
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (35)7685052",
+		"Position": [
+			-97.78302,
+			12.819,
+			-543.276
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (36)7685512",
+		"Position": [
+			-453.573,
+			15.708,
+			-360.291016
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (37)7687396",
+		"Position": [
+			-454.017,
+			16.081,
+			-360.299072
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (38)7683150",
+		"Position": [
+			-453.463,
+			16.365,
+			-360.329956
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (39)7680924",
+		"Position": [
+			-455.01,
+			16.412,
+			-362.338
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (40)7687224",
+		"Position": [
+			-455.016,
+			16.412,
+			-362.761
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (41)7681732",
+		"Position": [
+			245.396973,
+			-9.949,
+			291.721
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (42)7683342",
+		"Position": [
+			247.068,
+			-9.532,
+			290.827
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (43)7682434",
+		"Position": [
+			247.916016,
+			-9.532,
+			291.012
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (44)7683074",
+		"Position": [
+			248.062988,
+			-9.532,
+			291.929
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (45)7683270",
+		"Position": [
+			-229.633,
+			68.075,
+			-229.480957
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (46)7679764",
+		"Position": [
+			-230.085022,
+			68.075,
+			-229.312988
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (47)7679444",
+		"Position": [
+			-230.812012,
+			68.075,
+			-229.495
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (48)7681312",
+		"Position": [
+			-453.727,
+			15.479,
+			-360.603027
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (49)7684384",
+		"Position": [
+			-468.59,
+			15.46,
+			-418.25
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (50)7678384",
+		"Position": [
+			-469.069,
+			15.46,
+			-419.634033
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (51)7681408",
+		"Position": [
+			-467.52,
+			15.46,
+			-419.97998
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (52)7687010",
+		"Position": [
+			229.057,
+			20.386,
+			-706.593
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (53)7682530",
+		"Position": [
+			228.292969,
+			20.386,
+			-705.692
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (54)7686306",
+		"Position": [
+			-441.934,
+			15.71,
+			-412.139038
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (55)7679720",
+		"Position": [
+			-441.874,
+			15.71,
+			-411.412964
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (56)7678100",
+		"Position": [
+			-441.92,
+			15.657,
+			-410.420044
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (57)7678932",
+		"Position": [
+			-550.197,
+			15.617,
+			-205.049011
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (58)7681384",
+		"Position": [
+			-550.56,
+			15.617,
+			-206.630981
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (59)7687412",
+		"Position": [
+			-550.37,
+			16.263,
+			-205.801025
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (60)7679936",
+		"Position": [
+			-550.515,
+			16.263,
+			-206.249023
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (61)7679356",
+		"Position": [
+			-550.324,
+			15.564,
+			-205.823975
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_shelter_electr (62)7683390",
+		"Position": [
+			-513.224,
+			16.206,
+			-176.297
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stash_armor (1)7680876",
+		"Position": [
+			291.5063,
+			22.3598881,
+			-507.4368
+		],
+		"Rotation": [
+			270,
+			197.454987,
+			0
+		]
+	},
+	{
+		"worldId": "loot_stash_armor (2)7678488",
+		"Position": [
+			315.4096,
+			21.7419071,
+			-466.588776
+		],
+		"Rotation": [
+			270,
+			197.454987,
+			0
+		]
+	},
+	{
+		"worldId": "loot_stash_armor (3)7680468",
+		"Position": [
+			269.050781,
+			21.7909184,
+			-443.03244
+		],
+		"Rotation": [
+			270,
+			197.454987,
+			0
+		]
+	},
+	{
+		"worldId": "loot_stash_armor (4)7685950",
+		"Position": [
+			286.651459,
+			21.818903,
+			-436.860718
+		],
+		"Rotation": [
+			270,
+			117.336433,
+			0
+		]
+	},
+	{
+		"worldId": "loot_toospaste_stuff (131)7681648",
+		"Position": [
+			-103.698975,
+			8.887,
+			-620.8579
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (132)7680680",
+		"Position": [
+			-102.910034,
+			8.355,
+			-620.866943
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (133)7682282",
+		"Position": [
+			-103.367004,
+			8.355,
+			-620.310059
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (134)7679772",
+		"Position": [
+			-101.849976,
+			8.86,
+			-615.944
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (135)7685444",
+		"Position": [
+			-447.838,
+			15.388,
+			-342.904053
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (136)7678564",
+		"Position": [
+			-447.745,
+			15.388,
+			-344.098022
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (137)7683586",
+		"Position": [
+			-447.946,
+			16.036,
+			-345.675049
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (138)7678232",
+		"Position": [
+			-448.099,
+			16.036,
+			-346.488037
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (139)7686906",
+		"Position": [
+			-448.269,
+			15.281,
+			-345.964966
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (140)7678996",
+		"Position": [
+			-458.246,
+			15.383,
+			-399.375
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (141)7678124",
+		"Position": [
+			-457.678,
+			15.383,
+			-400.422974
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (142)7686226",
+		"Position": [
+			-171.099976,
+			-1.66,
+			255.094
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (144)7687026",
+		"Position": [
+			-172.104,
+			-1.607,
+			255.577026
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (145)7683334",
+		"Position": [
+			-169.633972,
+			-1.64,
+			255.956
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (146)7681240",
+		"Position": [
+			-168.242981,
+			-1.64,
+			257.583984
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (147)7678704",
+		"Position": [
+			-167.43,
+			-1.66,
+			256.937
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (148)7681892",
+		"Position": [
+			-170.338989,
+			-1.2,
+			252.354
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (100)7678636",
+		"Position": [
+			-442.834,
+			15.834,
+			-405.448
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (101)7679060",
+		"Position": [
+			-445.185,
+			16.481,
+			-405.662
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (102)7678768",
+		"Position": [
+			-443.972,
+			16.7,
+			-407.339
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (103)7681756",
+		"Position": [
+			-444.534,
+			16.7,
+			-407.365967
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (104)7687184",
+		"Position": [
+			-445.101,
+			16.627,
+			-406.141
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (105)7685906",
+		"Position": [
+			-22.7719727,
+			11.143,
+			-739.332031
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (106)7679904",
+		"Position": [
+			-23.3099976,
+			11.143,
+			-741.23
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (107)7679844",
+		"Position": [
+			-23.11499,
+			11.143,
+			-740.646
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (108)7679180",
+		"Position": [
+			-22.9320068,
+			11.143,
+			-739.73
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (109)7679780",
+		"Position": [
+			133.932,
+			24.83,
+			-760.579
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (110)7686006",
+		"Position": [
+			132.32605,
+			24.978,
+			-759.932
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (111)7682322",
+		"Position": [
+			134.281,
+			24.741,
+			-759.855
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (112)7685188",
+		"Position": [
+			-546.235,
+			14.561,
+			-379.389038
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (113)7682314",
+		"Position": [
+			-545.756958,
+			14.561,
+			-379.396
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (114)7686982",
+		"Position": [
+			120.127014,
+			7.919,
+			-606.381958
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (115)7685396",
+		"Position": [
+			119.40802,
+			7.919,
+			-605.944946
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (116)7684416",
+		"Position": [
+			119.737,
+			7.919,
+			-604.866943
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (117)7681288",
+		"Position": [
+			120.161987,
+			7.919,
+			-605.605957
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (118)7683980",
+		"Position": [
+			120.583008,
+			7.919,
+			-604.912
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (19)7679020",
+		"Position": [
+			-191.706,
+			-1.278,
+			198.028015
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (20)7686298",
+		"Position": [
+			-191.924011,
+			-1.278,
+			198.19
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (21)7679396",
+		"Position": [
+			-182.55603,
+			-1.439,
+			203.54303
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (22)7680444",
+		"Position": [
+			-182.268982,
+			-1.076,
+			203.070984
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (23)7682738",
+		"Position": [
+			-201.650024,
+			-1.638,
+			223.60498
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (24)7682110",
+		"Position": [
+			-202.86499,
+			-1.638,
+			223.54303
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (25)7683498",
+		"Position": [
+			-202.341,
+			-1.638,
+			223.594971
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (26)7684028",
+		"Position": [
+			-195.307983,
+			-0.984,
+			221.984985
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (27)7687300",
+		"Position": [
+			-195.427979,
+			-0.984,
+			222.833008
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (28)7684264",
+		"Position": [
+			-193.620972,
+			-0.596,
+			220.172974
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (29)7680180",
+		"Position": [
+			-193.737,
+			-0.671,
+			220.297974
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (30)7680720",
+		"Position": [
+			-182.659,
+			-0.36,
+			242.598022
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (31)7685460",
+		"Position": [
+			-182.987976,
+			-0.339,
+			243.221985
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (32)7685436",
+		"Position": [
+			-188.026,
+			-1.42,
+			264.671021
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (33)7681328",
+		"Position": [
+			-188.224976,
+			-1.42,
+			263.840027
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (34)7685752",
+		"Position": [
+			-188.617981,
+			-1.42,
+			264.76
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (35)7683122",
+		"Position": [
+			-187.771,
+			-0.586,
+			218.547
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (36)7678620",
+		"Position": [
+			-187.708008,
+			-0.586,
+			219.120972
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (37)7683190",
+		"Position": [
+			-187.831,
+			-0.586,
+			219.377991
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (38)7685232",
+		"Position": [
+			-210.461975,
+			-0.663,
+			215.419983
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (39)7680116",
+		"Position": [
+			-210.369019,
+			-0.663,
+			214.88
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (40)7679968",
+		"Position": [
+			-189.146973,
+			1.584,
+			202.557
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (41)7680908",
+		"Position": [
+			-190.000977,
+			1.584,
+			202.568
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (42)7681376",
+		"Position": [
+			-560.799,
+			21.707,
+			-217.568
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (43)7684812",
+		"Position": [
+			-561.417,
+			21.707,
+			-217.302
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (44)7685412",
+		"Position": [
+			-561.681,
+			21.707,
+			-217.484985
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (45)7684700",
+		"Position": [
+			-202.812988,
+			45.021,
+			-228.854
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (46)7686542",
+		"Position": [
+			-202.453,
+			44.916,
+			-229.047974
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (47)7680196",
+		"Position": [
+			-202.211975,
+			45.011,
+			-229.651
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (48)7684796",
+		"Position": [
+			-515.157,
+			15.589,
+			-210.890991
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (49)7684908",
+		"Position": [
+			-515.084961,
+			15.548,
+			-210.762024
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (50)7682070",
+		"Position": [
+			-128.278992,
+			10.705,
+			-688.151
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (51)7682342",
+		"Position": [
+			-128.762024,
+			10.727,
+			-689.442
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (52)7684272",
+		"Position": [
+			-131.956,
+			10.972,
+			-687.977051
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (53)7680164",
+		"Position": [
+			-134.500977,
+			10.959,
+			-687.152
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (54)7685620",
+		"Position": [
+			-102.166992,
+			9.01,
+			-667.366943
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (55)7686810",
+		"Position": [
+			-102.526978,
+			9.01,
+			-667.848
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (56)7680932",
+		"Position": [
+			-115.784,
+			22.549,
+			-463.24
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (57)7683434",
+		"Position": [
+			-116.323975,
+			22.549,
+			-462.642944
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (58)7686922",
+		"Position": [
+			-116.078,
+			22.549,
+			-462.876953
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (59)7683158",
+		"Position": [
+			-449.494,
+			15.558,
+			-331.494019
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (60)7681680",
+		"Position": [
+			-449.41,
+			15.863,
+			-330.889038
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (61)7679436",
+		"Position": [
+			-455.837,
+			16.381,
+			-366.677
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (62)7678288",
+		"Position": [
+			-455.894,
+			16.381,
+			-366.243042
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (63)7681916",
+		"Position": [
+			-464.213,
+			16.436,
+			-360.328979
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (64)7686834",
+		"Position": [
+			-464.644,
+			16.436,
+			-360.322021
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (65)7685292",
+		"Position": [
+			-452.722,
+			16.027,
+			-392.217041
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (66)7683642",
+		"Position": [
+			-452.184,
+			16.027,
+			-392.04895
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (67)7684332",
+		"Position": [
+			-450.882,
+			16.355,
+			-392.682983
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (68)7680324",
+		"Position": [
+			-456.899,
+			15.912,
+			-392.944946
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (69)7684956",
+		"Position": [
+			-465.235,
+			15.188,
+			-396.13
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (70)7679344",
+		"Position": [
+			-465.005,
+			15.188,
+			-396.406982
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (71)7679652",
+		"Position": [
+			-463.622,
+			15.461,
+			-434.843018
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (72)7682978",
+		"Position": [
+			-463.629,
+			15.821,
+			-439.03894
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (73)7684144",
+		"Position": [
+			-464.89,
+			15.681,
+			-436.495972
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (74)7685372",
+		"Position": [
+			-492.77,
+			15.506,
+			-451.307983
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (75)7685060",
+		"Position": [
+			-492.131,
+			16.002,
+			-449.912
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (76)7685974",
+		"Position": [
+			-515.339966,
+			11.602,
+			-475.406
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (77)7679984",
+		"Position": [
+			-534.13,
+			15.14,
+			-372.030029
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (78)7681664",
+		"Position": [
+			-530.579,
+			15.425,
+			-373.607056
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (79)7682618",
+		"Position": [
+			-513.363037,
+			16.259,
+			-391.094971
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (80)7685898",
+		"Position": [
+			-513.421,
+			16.259,
+			-391.983032
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (81)7678192",
+		"Position": [
+			-509.121,
+			16.146,
+			-386.192017
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (82)7682166",
+		"Position": [
+			-500.608,
+			16.272,
+			-401.918945
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (83)7686706",
+		"Position": [
+			-500.121,
+			16.272,
+			-402.478027
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (84)7683870",
+		"Position": [
+			-500.084,
+			16.272,
+			-401.982056
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (85)7686474",
+		"Position": [
+			279.27002,
+			23.971,
+			-507.796021
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (86)7686746",
+		"Position": [
+			278.735,
+			24.048,
+			-508.435059
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (87)7685340",
+		"Position": [
+			305.746948,
+			24.047,
+			-459.982056
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (88)7678736",
+		"Position": [
+			305.968018,
+			24.047,
+			-460.448
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (89)7682570",
+		"Position": [
+			304.453,
+			24.033,
+			-461.197021
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (90)7684308",
+		"Position": [
+			305.317017,
+			24.033,
+			-463.366943
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (91)7680744",
+		"Position": [
+			304.738037,
+			24.062,
+			-462.037
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (92)7683466",
+		"Position": [
+			305.568,
+			24.122,
+			-455.376953
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (93)7685428",
+		"Position": [
+			306.572021,
+			24.122,
+			-454.930054
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (94)7683892",
+		"Position": [
+			281.833,
+			24.113,
+			-441.360962
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (95)7686778",
+		"Position": [
+			282.959961,
+			24.113,
+			-441.307983
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (96)7682658",
+		"Position": [
+			282.722046,
+			24.073,
+			-440.854
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (97)7678504",
+		"Position": [
+			-442.772,
+			15.855,
+			-402.068
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (98)7682994",
+		"Position": [
+			-442.777,
+			16.412,
+			-403.47998
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mix_stuff (99)7679692",
+		"Position": [
+			-442.88,
+			15.834,
+			-404.167
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mods (1)7679264",
+		"Position": [
+			296.19104,
+			23.765,
+			-504.032959
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "mods (10)7687120",
+		"Position": [
+			279.279053,
+			23.902,
+			-435.879028
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "mods (11)7678956",
+		"Position": [
+			279.66394,
+			23.902,
+			-435.792969
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "mods (12)7686678",
+		"Position": [
+			279.401,
+			23.902,
+			-435.552
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "mods (13)7686418",
+		"Position": [
+			258.755,
+			30.031,
+			-434.503052
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "mods (14)7685108",
+		"Position": [
+			258.887939,
+			30.031,
+			-434.240967
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "mods (15)7683988",
+		"Position": [
+			258.583,
+			30.031,
+			-434.344
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "mods (16)7687364",
+		"Position": [
+			258.387939,
+			30.031,
+			-434.63
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "mods (2)7685866",
+		"Position": [
+			296.281,
+			23.765,
+			-504.651978
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "mods (3)7680836",
+		"Position": [
+			296.003052,
+			23.765,
+			-504.376953
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "mods (4)7684392",
+		"Position": [
+			272.661,
+			23.827,
+			-512.444946
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "mods (5)7679852",
+		"Position": [
+			272.623047,
+			23.827,
+			-512.832031
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "mods (6)7682358",
+		"Position": [
+			272.267944,
+			23.827,
+			-513.093
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "mods (7)7685316",
+		"Position": [
+			272.088,
+			23.827,
+			-512.840942
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "mods (8)7681704",
+		"Position": [
+			279.552,
+			23.902,
+			-436.123047
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "mods (9)7686378",
+		"Position": [
+			279.771973,
+			23.902,
+			-435.448
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "mods7686534",
+		"Position": [
+			296.64502,
+			23.765,
+			-504.922974
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "money1 (1)7680408",
+		"Position": [
+			-514.098,
+			19.181,
+			-395.063965
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "money1 (10)7683278",
+		"Position": [
+			-465.145,
+			15.702,
+			-367.081055
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "money1 (11)7684820",
+		"Position": [
+			-461.153,
+			19.505,
+			-360.662
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "money1 (12)7679164",
+		"Position": [
+			-461.32,
+			19.505,
+			-360.659058
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "money1 (13)7683042",
+		"Position": [
+			-461.139,
+			19.505,
+			-360.505
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "money1 (14)7680436",
+		"Position": [
+			-462.728,
+			19.244,
+			-366.43396
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "money1 (15)7680424",
+		"Position": [
+			-457.333,
+			19.387,
+			-366.245972
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "money1 (16)7686074",
+		"Position": [
+			-456.986,
+			19.387,
+			-366.331055
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "money1 (17)7686898",
+		"Position": [
+			-450.964,
+			15.469,
+			-389.714
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "money1 (18)7678424",
+		"Position": [
+			-450.434,
+			15.57,
+			-389.276978
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "money1 (19)7684828",
+		"Position": [
+			-450.57,
+			15.57,
+			-390.03894
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "money1 (2)7685990",
+		"Position": [
+			-513.988037,
+			19.181,
+			-394.993042
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "money1 (20)7682078",
+		"Position": [
+			-450.824,
+			15.57,
+			-390.034058
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "money1 (21)7679428",
+		"Position": [
+			-450.462,
+			15.57,
+			-388.102051
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "money1 (22)7686762",
+		"Position": [
+			132.019043,
+			25.489,
+			-739.156
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "money1 (23)7681004",
+		"Position": [
+			131.847046,
+			25.489,
+			-739.213
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "money1 (24)7682038",
+		"Position": [
+			132.12,
+			25.489,
+			-739.181
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "money1 (3)7681836",
+		"Position": [
+			-513.678955,
+			19.74,
+			-391.939941
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "money1 (4)7682730",
+		"Position": [
+			-513.698,
+			19.74,
+			-392.16394
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "money1 (5)7679420",
+		"Position": [
+			-464.962,
+			16.094,
+			-363.93396
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "money1 (6)7678464",
+		"Position": [
+			-464.947,
+			16.052,
+			-364.374023
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "money1 (7)7680776",
+		"Position": [
+			-464.954,
+			16.052,
+			-364.55896
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "money1 (8)7680516",
+		"Position": [
+			-462.789,
+			16.208,
+			-366.703
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "money1 (9)7685696",
+		"Position": [
+			-465.225,
+			15.702,
+			-367.005981
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "money17685300",
+		"Position": [
+			-513.81,
+			19.181,
+			-395.109
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "nato_food1 (1)7681232",
+		"Position": [
+			276.182,
+			24.172,
+			-512.89
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "nato_food1 (10)7679860",
+		"Position": [
+			309.927,
+			23.263,
+			-460.817017
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "nato_food1 (11)7682706",
+		"Position": [
+			309.344,
+			23.263,
+			-461.185059
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "nato_food1 (12)7682930",
+		"Position": [
+			309.534058,
+			23.28,
+			-460.948975
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "nato_food1 (13)7684348",
+		"Position": [
+			310.062,
+			23.199,
+			-462.14
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "nato_food1 (14)7682818",
+		"Position": [
+			273.756958,
+			23.12,
+			-435.813965
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "nato_food1 (15)7682802",
+		"Position": [
+			274.021,
+			23.12,
+			-435.182
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "nato_food1 (16)7683530",
+		"Position": [
+			274.324951,
+			23.12,
+			-434.99
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "nato_food1 (17)7683418",
+		"Position": [
+			274.160034,
+			23.12,
+			-435.562
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "nato_food1 (18)7686202",
+		"Position": [
+			271.77002,
+			23.147,
+			-440.514038
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "nato_food1 (19)7678216",
+		"Position": [
+			272.006958,
+			23.147,
+			-439.578979
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "nato_food1 (2)7680972",
+		"Position": [
+			287.714966,
+			23.857,
+			-514.454
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "nato_food1 (20)7687132",
+		"Position": [
+			272.495972,
+			23.147,
+			-438.994019
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "nato_food1 (3)7681716",
+		"Position": [
+			286.917,
+			23.857,
+			-514.329
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "nato_food1 (4)7685592",
+		"Position": [
+			287.5,
+			23.757,
+			-514.490967
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "nato_food1 (5)7680988",
+		"Position": [
+			291.198,
+			23.772,
+			-511.796021
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "nato_food1 (6)7678916",
+		"Position": [
+			290.599976,
+			23.772,
+			-511.536
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "nato_food1 (7)7678720",
+		"Position": [
+			265.72998,
+			23.096,
+			-519.355957
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "nato_food1 (8)7685668",
+		"Position": [
+			266.152954,
+			23.096,
+			-518.779053
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "nato_food1 (9)7685324",
+		"Position": [
+			287.281982,
+			23.757,
+			-514.595947
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "nato_food17678456",
+		"Position": [
+			277.006958,
+			24.172,
+			-512.217041
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "repair_mix_stuff (1)7681812",
+		"Position": [
+			-7.74597168,
+			8.483,
+			-114.330017
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "repair_mix_stuff (2)7678680",
+		"Position": [
+			-456.773,
+			15.023,
+			-181.484009
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "repair_mix_stuff (3)7685568",
+		"Position": [
+			-572.329956,
+			16.497,
+			-185.099976
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "repair_mix_stuff (5)7681440",
+		"Position": [
+			-189.461,
+			1.715,
+			202.666992
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "repair_mix_stuff (6)7680556",
+		"Position": [
+			-8.362976,
+			8.499,
+			-113.23999
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "rez_base_key_ptor1_craft27685148",
+		"Position": [
+			70.153,
+			-1.193,
+			-37.775
+		],
+		"Rotation": [
+			88.68121,
+			243.714432,
+			179.99971
+		]
+	},
+	{
+		"worldId": "rez_base_key_rigtht_weap2fl7683066",
+		"Position": [
+			-180.47,
+			0.299,
+			383.643
+		],
+		"Rotation": [
+			88.68136,
+			339.433,
+			180.000229
+		]
+	},
+	{
+		"worldId": "scontainer_gunrack 0(Clone)7682714",
+		"Position": [
+			244.704712,
+			-8.507999,
+			126.647224
+		],
+		"useGravity": true,
+		"Rotation": [
+			275.104523,
+			92.0032959,
+			194.938934
+		]
+	},
+	{
+		"worldId": "scontainer_gunrack 1(Clone)7686170",
+		"Position": [
+			244.684769,
+			-8.507999,
+			126.508652
+		],
+		"useGravity": true,
+		"Rotation": [
+			275.104523,
+			92.0032959,
+			194.938934
+		]
+	},
+	{
+		"worldId": "scontainer_gunrack 2(Clone)7681970",
+		"Position": [
+			244.663391,
+			-8.507999,
+			126.360184
+		],
+		"useGravity": true,
+		"Rotation": [
+			275.104523,
+			92.0032959,
+			194.938934
+		]
+	},
+	{
+		"worldId": "scontainer_gunrack 3(Clone)7685796",
+		"Position": [
+			244.642014,
+			-8.507999,
+			126.211716
+		],
+		"useGravity": true,
+		"Rotation": [
+			275.104523,
+			92.0032959,
+			194.938934
+		]
+	},
+	{
+		"worldId": "scontainer_gunrack 4(Clone)7686370",
+		"Position": [
+			244.620636,
+			-8.508,
+			126.063248
+		],
+		"useGravity": true,
+		"Rotation": [
+			275.104523,
+			92.0032959,
+			194.938934
+		]
+	},
+	{
+		"worldId": "scontainer_gunrack 5(Clone)7685264",
+		"Position": [
+			244.599274,
+			-8.507999,
+			125.914772
+		],
+		"useGravity": true,
+		"Rotation": [
+			275.104523,
+			92.0032959,
+			194.938934
+		]
+	},
+	{
+		"worldId": "small_budka_stuff_stuff (1)7682394",
+		"Position": [
+			-475.338,
+			14.878,
+			-178.182983
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "small_budka_stuff_stuff (2)7687500",
+		"Position": [
+			-475.135,
+			14.878,
+			-178.55603
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "small_budka_stuff_stuff (3)7686102",
+		"Position": [
+			-476.222,
+			14.669,
+			-177.096008
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "small_budka_stuff_stuff (6)7680844",
+		"Position": [
+			-474.675,
+			14.648,
+			-176.372009
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "small_budka_stuff_stuff (7)7680784",
+		"Position": [
+			-473.169,
+			14.536,
+			-179.450989
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (1)7680508",
+		"Position": [
+			-211.73999,
+			-0.653,
+			201.979
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (10)7684096",
+		"Position": [
+			-554.561035,
+			16.908,
+			-201.29303
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (11)7686362",
+		"Position": [
+			-554.083,
+			16.908,
+			-201.247986
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (12)7684324",
+		"Position": [
+			-553.849,
+			16.783,
+			-202.04303
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (13)7680260",
+		"Position": [
+			-535.867,
+			15.715,
+			-212.797
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (14)7687388",
+		"Position": [
+			-535.547,
+			15.762,
+			-211.960022
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (15)7684860",
+		"Position": [
+			-535.32,
+			16.185,
+			-211.445984
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (16)7687200",
+		"Position": [
+			-535.466,
+			16.138,
+			-211.75
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (17)7680868",
+		"Position": [
+			-535.858032,
+			16.196,
+			-212.73999
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (18)7683310",
+		"Position": [
+			-535.683,
+			15.966,
+			-211.383
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (19)7682634",
+		"Position": [
+			-537.916,
+			16.129,
+			-203.255981
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (2)7681400",
+		"Position": [
+			-212.73999,
+			-0.584,
+			202.659973
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (20)7683750",
+		"Position": [
+			-538.808,
+			16.129,
+			-203.122009
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (21)7682466",
+		"Position": [
+			-538.404,
+			16.129,
+			-203.252014
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (22)7680580",
+		"Position": [
+			-539.660034,
+			16.232,
+			-202.450012
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (23)7681028",
+		"Position": [
+			-125.172,
+			11.419,
+			-689.759033
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (24)7679328",
+		"Position": [
+			-124.875,
+			11.395,
+			-688.781
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (25)7682810",
+		"Position": [
+			-25.4400024,
+			8.197,
+			-685.447
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (26)7683002",
+		"Position": [
+			-24.8439941,
+			8.194,
+			-685.035034
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (27)7682290",
+		"Position": [
+			-54.4130249,
+			8.328,
+			-761.578
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "tools (28)7685348",
+		"Position": [
+			-53.263,
+			8.624,
+			-760.22
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "tools (29)7687332",
+		"Position": [
+			-55.0830078,
+			8.342,
+			-756.136963
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "tools (3)7679736",
+		"Position": [
+			-212.771973,
+			-0.676,
+			203.156
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (30)7682242",
+		"Position": [
+			228.035034,
+			20.311,
+			-710.671
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (31)7681160",
+		"Position": [
+			228.030029,
+			20.855,
+			-710.668945
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (32)7684296",
+		"Position": [
+			228.030029,
+			21.303,
+			-710.668945
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (33)7678880",
+		"Position": [
+			-460.812,
+			16.455,
+			-358.607056
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (34)7679388",
+		"Position": [
+			-460.789,
+			16.398,
+			-357.626953
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (35)7678744",
+		"Position": [
+			-460.307,
+			16.398,
+			-357.92395
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (36)7685388",
+		"Position": [
+			-452.003,
+			16.28,
+			-363.442017
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (37)7679576",
+		"Position": [
+			-451.799,
+			16.28,
+			-363.89502
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (38)7685224",
+		"Position": [
+			-454.79,
+			16.312,
+			-365.214
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (39)7682834",
+		"Position": [
+			-455.047,
+			16.312,
+			-364.551025
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (4)7684612",
+		"Position": [
+			-212.765991,
+			-0.67,
+			203.458984
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (40)7687420",
+		"Position": [
+			-454.829,
+			16.312,
+			-364.698
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (41)7682666",
+		"Position": [
+			-459.164,
+			15.996,
+			-395.764038
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (42)7678448",
+		"Position": [
+			-457.807,
+			15.902,
+			-398.411
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (43)7683182",
+		"Position": [
+			-498.779,
+			16.175,
+			-405.753052
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (44)7685998",
+		"Position": [
+			-498.241,
+			16.164,
+			-405.738037
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (45)7681688",
+		"Position": [
+			-442.023,
+			16.403,
+			-412.052
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (46)7684048",
+		"Position": [
+			-441.957,
+			16.403,
+			-411.694946
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (47)7684596",
+		"Position": [
+			-442.589,
+			16.339,
+			-413.021
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (48)7682474",
+		"Position": [
+			-444.143,
+			16.328,
+			-413.47998
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (49)7684224",
+		"Position": [
+			-444.035,
+			16.328,
+			-413.139038
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (5)7684504",
+		"Position": [
+			-205.997986,
+			-1,
+			217.75
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (6)7687508",
+		"Position": [
+			-205.216,
+			-0.985,
+			218.005981
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (7)7682298",
+		"Position": [
+			-205.354,
+			-0.985,
+			217.734009
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (8)7678084",
+		"Position": [
+			-562.967041,
+			21.556,
+			-216.015015
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools (9)7686722",
+		"Position": [
+			-561.969,
+			21.539,
+			-215.799011
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "tools7687340",
+		"Position": [
+			-212.038025,
+			-0.608,
+			202.091
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "varios_building_stuff (3)7679756",
+		"Position": [
+			320.319946,
+			11.843,
+			-830.261
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "varios_building_stuff (4)7681584",
+		"Position": [
+			320.300049,
+			11.843,
+			-831.319946
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "varios_building_stuff (5)7682538",
+		"Position": [
+			340.363037,
+			12.431,
+			-824.693
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "varios_building_stuff (6)7683474",
+		"Position": [
+			340.719971,
+			12.431,
+			-828.14
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "varios_building_stuff (7)7683222",
+		"Position": [
+			354.39,
+			12,
+			-811.930054
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "varios_building_stuff (9)7681012",
+		"Position": [
+			-510.96,
+			16.384,
+			-174.547
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "varios_mix_stuff (2)7687002",
+		"Position": [
+			233.396,
+			25.459,
+			-703.917
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "varios_mix_stuff (3)7679976",
+		"Position": [
+			233.456055,
+			25.459,
+			-703.251953
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "varios_mix_stuff7681946",
+		"Position": [
+			-22.5750122,
+			7.216,
+			-77.9979858
+		],
+		"useGravity": true,
+		"Rotation": [
+			0,
+			0,
+			0
+		]
 	}
 ]

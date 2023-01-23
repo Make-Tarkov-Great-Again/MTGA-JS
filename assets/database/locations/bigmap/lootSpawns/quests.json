@@ -186,5 +186,285 @@
 		"worldId": "custom_multiScene_00058",
 		"questItmTpl": "5909e4b686f7747f5b744fa4",
 		"useGravity": true
+	},
+	{
+		"worldId": "quest_pacadge1197758",
+		"questItmTpl": "5ac620eb86f7743a8e6e0da0",
+		"Position": [
+			-202.607,
+			7.223,
+			-98.319
+		],
+		"Rotation": [
+			358.863953,
+			128.208572,
+			358.896179
+		]
+	},
+	{
+		"worldId": "loot_quest_00311198474",
+		"questItmTpl": "5938188786f77474f723e87f",
+		"Position": [
+			204.073,
+			4.6952,
+			12.3975
+		],
+		"Rotation": [
+			270,
+			25.6943226,
+			0
+		]
+	},
+	{
+		"worldId": "loot_case_feld1200132",
+		"questItmTpl": "5910922b86f7747d96753483",
+		"Position": [
+			239.183,
+			0.713,
+			160.595
+		],
+		"Rotation": [
+			88.6121,
+			270.000122,
+			0
+		]
+	},
+	{
+		"worldId": "loot_letter_TG1200720",
+		"questItmTpl": "5939e9b286f77462a709572c",
+		"Position": [
+			194.7797,
+			4.4267,
+			173.1325
+		],
+		"Rotation": [
+			4.01791573,
+			6.64310646,
+			88.59731
+		]
+	},
+	{
+		"worldId": "loot_case_00131201008",
+		"questItmTpl": "5939e5a786f77461f11c0098",
+		"Position": [
+			485.8866,
+			5.639,
+			-140.5712
+		],
+		"Rotation": [
+			-0.000273207552,
+			180,
+			180
+		]
+	},
+	{
+		"worldId": "quest_flash1203842",
+		"questItmTpl": "5c12301c86f77419522ba7e4",
+		"Position": [
+			-91.521,
+			1.027,
+			4.346
+		],
+		"Rotation": [
+			90,
+			306.564636,
+			0
+		]
+	},
+	{
+		"worldId": "Loot 56 (28)1204628",
+		"questItmTpl": "5937fd0086f7742bf33fc198",
+		"Position": [
+			102.2964,
+			2.9634,
+			-5.9064
+		],
+		"Rotation": [
+			85.79029,
+			180,
+			180
+		]
+	},
+	{
+		"worldId": "Loot 158 (38)1204716",
+		"questItmTpl": "5939a00786f7742fe8132936",
+		"Position": [
+			180.8072,
+			6.7378,
+			150.0781
+		],
+		"Rotation": [
+			90,
+			339.936157,
+			0
+		]
+	},
+	{
+		"worldId": "quest_case2031204800",
+		"questItmTpl": "590dde5786f77405e71908b2",
+		"Position": [
+			178.07,
+			2.877,
+			148.702
+		],
+		"Rotation": [
+			0.00000170754754,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "loot_quest_customs1205180",
+		"questItmTpl": "591092ef86f7747bb8703422",
+		"Position": [
+			-202.8806,
+			7.6911,
+			-102.4012
+		],
+		"Rotation": [
+			270,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "loot_quest_00481206410",
+		"questItmTpl": "593965cf86f774087a77e1b6",
+		"Position": [
+			367.6828,
+			1.3008,
+			-50.5712
+		],
+		"Rotation": [
+			270,
+			222.660156,
+			0
+		]
+	},
+	{
+		"worldId": "loot_flash_TG1206546",
+		"questItmTpl": "590c62a386f77412b0130255",
+		"Position": [
+			194.2243,
+			3.7256,
+			171.0656
+		],
+		"Rotation": [
+			90,
+			37.30105,
+			0
+		]
+	},
+	{
+		"worldId": "quest_pacadge1132222",
+		"questItmTpl": "5ac620eb86f7743a8e6e0da0",
+		"Position": [
+			-202.591,
+			7.223,
+			-98.431
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "loot_case_00131135578",
+		"questItmTpl": "5939e5a786f77461f11c0098",
+		"Position": [
+			487.272583,
+			5.64299059,
+			-138.6152
+		],
+		"Rotation": [
+			90,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "jev_exp1 (5)1140398",
+		"questItmTpl": "573474f924597738002c6174",
+		"Position": [
+			567.299,
+			6.83299971,
+			-58.99301
+		],
+		"Rotation": [
+			0,
+			170.016968,
+			0
+		]
+	},
+	{
+		"worldId": "loot_case_00131135578",
+		"questItmTpl": "5939e5a786f77461f11c0098",
+		"Position": [
+			485.8996,
+			5.639,
+			-140.5882
+		],
+		"Rotation": [
+			90,
+			0.000042915548,
+			0
+		]
+	},
+	{
+		"worldId": "quest_pacadge1132222",
+		"questItmTpl": "5ac620eb86f7743a8e6e0da0",
+		"Position": [
+			-200.803253,
+			7.22331524,
+			-100.563126
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "quest_pacadge1132222",
+		"questItmTpl": "5ac620eb86f7743a8e6e0da0",
+		"Position": [
+			-204.387573,
+			7.32987,
+			-98.63279
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "loot_case_00131135578",
+		"questItmTpl": "5939e5a786f77461f11c0098",
+		"Position": [
+			498.5496,
+			5.63900328,
+			-141.5012
+		],
+		"Rotation": [
+			90,
+			0.000042915548,
+			0
+		]
+	},
+	{
+		"worldId": "quest_pacadge1132222",
+		"questItmTpl": "5ac620eb86f7743a8e6e0da0",
+		"Position": [
+			-201.849213,
+			7.33054161,
+			-102.947968
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
 	}
 ]

@@ -48280,5 +48280,12106 @@
 		],
 		"randomRotation": true,
 		"useGravity": true
+	},
+	{
+		"worldId": "(no phis)mil_reciv (74)43644",
+		"Position": [
+			-264.499,
+			4.81,
+			-323.262
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "LootGarbage (35)-401698",
+		"Position": [
+			-228.433319,
+			0.9990011,
+			-393.909882
+		],
+		"useGravity": true,
+		"Rotation": [
+			0.0000273232254,
+			180.018768,
+			-0.0000150883088
+		]
+	},
+	{
+		"worldId": "LootGarbage (35)-423994",
+		"Position": [
+			-217.0951,
+			3.57300067,
+			-413.804321
+		],
+		"useGravity": true,
+		"Rotation": [
+			0.000004831994,
+			90.01835,
+			-0.0000144882451
+		]
+	},
+	{
+		"worldId": "LootGarbage (35)-439732",
+		"Position": [
+			-238.303314,
+			0.999000847,
+			-411.599884
+		],
+		"useGravity": true,
+		"Rotation": [
+			0.00001707804,
+			180.018768,
+			-0.0000156936312
+		]
+	},
+	{
+		"worldId": "LootGarbage (36)-401700",
+		"Position": [
+			-227.9263,
+			0.7750009,
+			-393.881042
+		],
+		"useGravity": true,
+		"Rotation": [
+			0.9362164,
+			223.260071,
+			94.65881
+		]
+	},
+	{
+		"worldId": "LootGarbage (36)-423996",
+		"Position": [
+			-217.123932,
+			3.34900045,
+			-413.297333
+		],
+		"useGravity": true,
+		"Rotation": [
+			0.936201036,
+			133.259674,
+			94.6588058
+		]
+	},
+	{
+		"worldId": "LootGarbage (36)-439734",
+		"Position": [
+			-237.7963,
+			0.775000632,
+			-411.571045
+		],
+		"useGravity": true,
+		"Rotation": [
+			0.936212957,
+			223.260071,
+			94.6588058
+		]
+	},
+	{
+		"worldId": "LootGarbage (37)-401702",
+		"Position": [
+			-227.841354,
+			1.01600122,
+			-394.0251
+		],
+		"useGravity": true,
+		"Rotation": [
+			0.0000107568239,
+			146.4676,
+			-0.0000254656825
+		]
+	},
+	{
+		"worldId": "LootGarbage (37)-423998",
+		"Position": [
+			-216.9799,
+			3.59000063,
+			-413.212372
+		],
+		"useGravity": true,
+		"Rotation": [
+			-0.00000377576157,
+			56.46719,
+			-0.0000146252705
+		]
+	},
+	{
+		"worldId": "LootGarbage (37)-439736",
+		"Position": [
+			-237.711349,
+			1.01600075,
+			-411.7151
+		],
+		"useGravity": true,
+		"Rotation": [
+			0.000004375593,
+			146.4676,
+			-0.0000223641455
+		]
+	},
+	{
+		"worldId": "gun_M4a1_default (4)47446",
+		"Position": [
+			-184.643,
+			1.324,
+			-316.894
+		],
+		"Rotation": [
+			359.512054,
+			11.3999739,
+			90
+		]
+	},
+	{
+		"worldId": "gun_M4a1_default (5)42298",
+		"Position": [
+			-185.132,
+			1.062,
+			-375.897
+		],
+		"Rotation": [
+			0,
+			242.25943,
+			90
+		]
+	},
+	{
+		"worldId": "gun_M4a1_default (6)43732",
+		"Position": [
+			-213.07,
+			4.106,
+			-382.457
+		],
+		"Rotation": [
+			280.569122,
+			270,
+			90
+		]
+	},
+	{
+		"worldId": "gun_MP5 (12)37680",
+		"Position": [
+			-250.272,
+			4.9,
+			-323.97
+		],
+		"Rotation": [
+			287.802277,
+			91.04355,
+			0.0000111701747
+		]
+	},
+	{
+		"worldId": "gun_MP5 (18)48768",
+		"Position": [
+			-256.3672,
+			4.8847,
+			-325.5394
+		],
+		"Rotation": [
+			284.989441,
+			265.125244,
+			359.937775
+		]
+	},
+	{
+		"worldId": "gun_MP5 (9)37904",
+		"Position": [
+			-227.749344,
+			4.715,
+			-304.541321
+		],
+		"Rotation": [
+			-0.0000110990577,
+			154.908,
+			90
+		]
+	},
+	{
+		"worldId": "gun_mp7 (7)43400",
+		"Position": [
+			-236.606,
+			4.804,
+			-345.761
+		],
+		"Rotation": [
+			0.000005122642,
+			300.1339,
+			90
+		]
+	},
+	{
+		"worldId": "gun_mp7 (8)46398",
+		"Position": [
+			-162.69,
+			4.937,
+			-342.618
+		],
+		"Rotation": [
+			0.000008537737,
+			316.544373,
+			90
+		]
+	},
+	{
+		"worldId": "gun_mp7 (9)36968",
+		"Position": [
+			-266.584,
+			4.972,
+			-328.114
+		],
+		"Rotation": [
+			0.00000341509462,
+			220.045837,
+			90
+		]
+	},
+	{
+		"worldId": "gun_mpx (4)39976",
+		"Position": [
+			-220.698975,
+			5.018,
+			-380.404663
+		],
+		"Rotation": [
+			0.0000119528313,
+			248.96463,
+			89.99998
+		]
+	},
+	{
+		"worldId": "gun_preset_m4 (2)39250",
+		"Position": [
+			-202.004,
+			2.435,
+			-307.714
+		],
+		"Rotation": [
+			0,
+			0,
+			270
+		]
+	},
+	{
+		"worldId": "gun_preset_m4 (3)45302",
+		"Position": [
+			-255.902,
+			5.017,
+			-327.491
+		],
+		"Rotation": [
+			0.4627401,
+			208.897018,
+			270.053528
+		]
+	},
+	{
+		"worldId": "gun_preset_m4 (4)41980",
+		"Position": [
+			-228.478,
+			4.203,
+			-340.338
+		],
+		"Rotation": [
+			299.8281,
+			70.0358353,
+			82.19589
+		]
+	},
+	{
+		"worldId": "gun_preset_m4 (5)39258",
+		"Position": [
+			-161.817627,
+			4.947,
+			-347.807
+		],
+		"Rotation": [
+			0.00000170754731,
+			31.4541683,
+			270
+		]
+	},
+	{
+		"worldId": "gun_preset_m4 (6)43456",
+		"Position": [
+			-250.235428,
+			4.86918736,
+			-323.31
+		],
+		"Rotation": [
+			280.8346,
+			85.632164,
+			4.007576
+		]
+	},
+	{
+		"worldId": "gun_preset_m4 (7)41948",
+		"Position": [
+			-250.23,
+			4.866,
+			-324.541
+		],
+		"Rotation": [
+			280.8346,
+			85.632164,
+			4.007576
+		]
+	},
+	{
+		"worldId": "gun_preset_m4_scav (10)39082",
+		"Position": [
+			-180.4779,
+			1.1397,
+			-316.9503
+		],
+		"Rotation": [
+			288.524567,
+			90.762085,
+			-0.0000161235785
+		]
+	},
+	{
+		"worldId": "gun_preset_m4_scav (11)38562",
+		"Position": [
+			-180.4475,
+			1.1303,
+			-316.7778
+		],
+		"Rotation": [
+			288.524567,
+			90.762085,
+			-0.0000161235785
+		]
+	},
+	{
+		"worldId": "gun_preset_m4_scav (6)41680",
+		"Position": [
+			-263.186,
+			4.097,
+			-322.975
+		],
+		"Rotation": [
+			292.986969,
+			179.98645,
+			89.99958
+		]
+	},
+	{
+		"worldId": "gun_preset_m4_scav (7)47922",
+		"Position": [
+			-267.399078,
+			4.135,
+			-300.055756
+		],
+		"Rotation": [
+			0.00000341509462,
+			249.5622,
+			90
+		]
+	},
+	{
+		"worldId": "gun_preset_m4_scav (8)37568",
+		"Position": [
+			-180.4632,
+			1.1779,
+			-317.5653
+		],
+		"Rotation": [
+			288.524567,
+			90.762085,
+			-0.0000161235785
+		]
+	},
+	{
+		"worldId": "gun_preset_m4_scav (9)43448",
+		"Position": [
+			-180.474,
+			1.183,
+			-317.279
+		],
+		"Rotation": [
+			288.524567,
+			90.762085,
+			-0.0000161235785
+		]
+	},
+	{
+		"worldId": "gun_preset_m870 (1)42034",
+		"Position": [
+			-268.84,
+			0.064,
+			-316.547
+		],
+		"Rotation": [
+			289.4953,
+			7.117775,
+			93.47853
+		]
+	},
+	{
+		"worldId": "loot_alarm_pult (4)42862",
+		"Position": [
+			-181.633011,
+			1.09229994,
+			-356.657562
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "loot_alarm_pult (5)41362",
+		"Position": [
+			-172.989716,
+			5.138,
+			-343.798859
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "loot_alarm_pult (6)38614",
+		"Position": [
+			-231.327515,
+			5.269,
+			-312.286743
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "loot_ammo_rare (1)43360",
+		"Position": [
+			161.887451,
+			22.3298073,
+			-68.4873047
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (10)37848",
+		"Position": [
+			-175.491,
+			4.886,
+			-283.54
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (11)38466",
+		"Position": [
+			-175.247,
+			4.886,
+			-283.675
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (12)38294",
+		"Position": [
+			-176.993,
+			4.96,
+			-281.367
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (13)43860",
+		"Position": [
+			-176.876,
+			4.899,
+			-281.482
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (14)49020",
+		"Position": [
+			-178.386,
+			5.307,
+			-284.842
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (15)47616",
+		"Position": [
+			-146.795,
+			4.773,
+			-373.448
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (16)38182",
+		"Position": [
+			-146.735,
+			4.773,
+			-372.972
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (17)36792",
+		"Position": [
+			-146.743,
+			4.901,
+			-368.707
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (18)44378",
+		"Position": [
+			-255.165,
+			4.575,
+			-321.037
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (19)47358",
+		"Position": [
+			-254.402,
+			4.613,
+			-321.134
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (2)42650",
+		"Position": [
+			-177.787,
+			4.592,
+			-292.596
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (20)44166",
+		"Position": [
+			-184.097,
+			1.532,
+			-316.987
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (21)41266",
+		"Position": [
+			-183.944,
+			1.45,
+			-316.356
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (22)37506",
+		"Position": [
+			-183.99,
+			1.427,
+			-316.609
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (23)47470",
+		"Position": [
+			-184.314,
+			1.454,
+			-317.515
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (24)44806",
+		"Position": [
+			-135.148,
+			-2.921,
+			-320.028
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (25)48570",
+		"Position": [
+			-134.41,
+			-2.921,
+			-320.436
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (26)38342",
+		"Position": [
+			-134.701,
+			-2.921,
+			-320.057
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (27)45010",
+		"Position": [
+			-135.194,
+			-2.921,
+			-320.458
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (28)44638",
+		"Position": [
+			-134.711,
+			-2.921,
+			-320.47
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (3)36856",
+		"Position": [
+			-177.901,
+			4.592,
+			-292.114
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (30)38122",
+		"Position": [
+			-184.219,
+			1.532,
+			-317.202
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (31)38630",
+		"Position": [
+			-260.684,
+			4.993,
+			-328.338
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (32)41856",
+		"Position": [
+			-260.923,
+			4.993,
+			-328.522
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (33)38374",
+		"Position": [
+			-259.337,
+			4.996,
+			-328.234
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (4)47640",
+		"Position": [
+			-178.069,
+			4.592,
+			-292.078
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (5)40542",
+		"Position": [
+			-177.885,
+			4.592,
+			-291.905
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (6)41848",
+		"Position": [
+			-177.748,
+			4.627,
+			-286.976
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (7)48924",
+		"Position": [
+			-177.64,
+			4.627,
+			-287.56
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (8)44246",
+		"Position": [
+			-178.405,
+			5.359,
+			-285.653
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_rare (9)38076",
+		"Position": [
+			-178.356,
+			5.325,
+			-286.122
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (20)42946",
+		"Position": [
+			-133.627,
+			4.729,
+			-281.399
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (21)40534",
+		"Position": [
+			-250.459,
+			5.126,
+			-325.814
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (23)44990",
+		"Position": [
+			-250.621,
+			5.076,
+			-326.119
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (24)42090",
+		"Position": [
+			-250.434,
+			5.108,
+			-326.404
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (25)40068",
+		"Position": [
+			-250.308,
+			5.108,
+			-326.109
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (26)45588",
+		"Position": [
+			-133.486,
+			4.729,
+			-280.976
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (27)48444",
+		"Position": [
+			-133.335,
+			4.729,
+			-281.069
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (28)39560",
+		"Position": [
+			-133.399,
+			4.729,
+			-281.368
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (29)43770",
+		"Position": [
+			-255.852,
+			4.63,
+			-321.133
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (30)42182",
+		"Position": [
+			-256.457,
+			4.63,
+			-321.109
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (31)39436",
+		"Position": [
+			-256.166,
+			4.63,
+			-321.066
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (32)47170",
+		"Position": [
+			-256.166,
+			4.206,
+			-321.066
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (33)48372",
+		"Position": [
+			-255.839,
+			4.206,
+			-321.041
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (34)38954",
+		"Position": [
+			-255.175,
+			4.206,
+			-321.133
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (35)41392",
+		"Position": [
+			-254.516,
+			4.206,
+			-321.085
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (37)46690",
+		"Position": [
+			-126.63,
+			4.693,
+			-352.816
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (38)47162",
+		"Position": [
+			-127.336,
+			4.693,
+			-352.813
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (39)43472",
+		"Position": [
+			-127.045,
+			4.324,
+			-352.79
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (40)46750",
+		"Position": [
+			-268.474,
+			4.466,
+			-299.802
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (41)37352",
+		"Position": [
+			-126.732,
+			4.354,
+			-352.782
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (42)38570",
+		"Position": [
+			-268.005,
+			4.466,
+			-299.801
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (43)45648",
+		"Position": [
+			-267.537,
+			4.466,
+			-299.818
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (44)41720",
+		"Position": [
+			-267.663,
+			4.212,
+			-301.025
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (45)45632",
+		"Position": [
+			-254.973,
+			4.206,
+			-321.099
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (46)46996",
+		"Position": [
+			-255.558,
+			4.63,
+			-321.134
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (47)36808",
+		"Position": [
+			-250.622,
+			5.076,
+			-325.77
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (48)39242",
+		"Position": [
+			-256.383,
+			4.206,
+			-321.209
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_ammo_sup (49)39006",
+		"Position": [
+			-127.402,
+			4.324,
+			-352.906
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_building (64)42962",
+		"Position": [
+			20.9614258,
+			27.4148064,
+			-35.0042725
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_drink (33)47238",
+		"Position": [
+			-167.479,
+			0.743,
+			-405.189
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_electron_rare (10)37138",
+		"Position": [
+			-188.044,
+			0.76,
+			-367.823
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_electron_rare (11)45530",
+		"Position": [
+			-187.602,
+			0.594,
+			-367.369
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_electron_rare (3)39022",
+		"Position": [
+			-185.746,
+			0.947,
+			-365.763
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_electron_rare (4)46032",
+		"Position": [
+			-172.297,
+			0.48,
+			-361.42
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_electron_rare (5)42490",
+		"Position": [
+			-173.254,
+			0.326,
+			-361.269
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_electron_rare (6)43580",
+		"Position": [
+			-179.726,
+			0.838,
+			-366.831
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_electron_rare (7)48058",
+		"Position": [
+			-182.774,
+			1.256,
+			-356.121
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_electron_rare (8)47398",
+		"Position": [
+			-181.993,
+			1.21,
+			-356.108
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_electron_rare (9)40184",
+		"Position": [
+			-183.232,
+			1.265,
+			-356.631
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_electron_sup (1)40084",
+		"Position": [
+			-215.493,
+			0.733,
+			-315.285
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_electron_sup (2)47714",
+		"Position": [
+			-214.71,
+			0.438,
+			-316.465
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_electron_sup43496",
+		"Position": [
+			3.11938477,
+			28.0958061,
+			-294.148315
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_electron_sup46666",
+		"Position": [
+			-216.08,
+			0.754,
+			-315.338
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (1)46140",
+		"Position": [
+			-143.045,
+			4.854,
+			-409.152
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (10)41924",
+		"Position": [
+			-149.467,
+			4.785,
+			-398.446
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (100)39014",
+		"Position": [
+			-236.097,
+			5.568,
+			-312.395
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (101)46546",
+		"Position": [
+			-233.221,
+			4.301,
+			-295.738
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (102)46806",
+		"Position": [
+			-233.451,
+			4.301,
+			-296.06
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (103)39548",
+		"Position": [
+			-235.552,
+			5.298,
+			-295.714
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (104)46204",
+		"Position": [
+			-237.917,
+			5.188,
+			-294.921
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (105)39318",
+		"Position": [
+			-239.775,
+			5.242,
+			-294.955
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (106)48242",
+		"Position": [
+			-237.582,
+			5.076,
+			-299.714
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (107)44886",
+		"Position": [
+			-223.815,
+			5.388,
+			-294.821
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (108)36928",
+		"Position": [
+			-217.494,
+			4.378,
+			-295.34
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (109)47482",
+		"Position": [
+			-216.072,
+			4.736,
+			-294.54
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (11)37130",
+		"Position": [
+			-149.689,
+			4.761,
+			-398.852
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (110)46602",
+		"Position": [
+			-215.204,
+			4.729,
+			-294.511
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (111)37736",
+		"Position": [
+			-214.793,
+			5.219,
+			-294.53
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (112)46790",
+		"Position": [
+			-211.923,
+			4.37,
+			-295.513
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (113)42978",
+		"Position": [
+			-212.93,
+			4.37,
+			-295.46
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (114)42562",
+		"Position": [
+			-211.959,
+			5.341,
+			-303.466
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (115)37924",
+		"Position": [
+			-211.959,
+			5.264,
+			-304.733
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (116)45218",
+		"Position": [
+			-213.863,
+			5.337,
+			-308.095
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (117)36872",
+		"Position": [
+			-219.563,
+			5.347,
+			-308.106
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (118)36742",
+		"Position": [
+			-219.329,
+			5.241,
+			-303.613
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (119)45116",
+		"Position": [
+			-219.311,
+			5.266,
+			-302.682
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (12)39872",
+		"Position": [
+			-182.043,
+			4.662,
+			-407.547
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (120)44614",
+		"Position": [
+			-258.292,
+			0.189,
+			-315.117
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (121)40076",
+		"Position": [
+			-258.244,
+			0.189,
+			-314.076
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (122)42602",
+		"Position": [
+			-258.102,
+			0.189,
+			-314.653
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (123)44862",
+		"Position": [
+			-200.714,
+			5.358,
+			-302.965
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (124)39234",
+		"Position": [
+			-200.756,
+			4.764,
+			-303.249
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (125)40176",
+		"Position": [
+			-200.688,
+			4.751,
+			-305.11
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (126)44590",
+		"Position": [
+			-200.722,
+			5.317,
+			-304.159
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (127)47230",
+		"Position": [
+			-200.646,
+			5.356,
+			-306.91
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (128)46846",
+		"Position": [
+			-204.307,
+			5.518,
+			-307.093
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (129)44198",
+		"Position": [
+			-184.051,
+			0.324,
+			-367.117
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (13)38670",
+		"Position": [
+			-181.685,
+			4.61,
+			-407.877
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (130)47954",
+		"Position": [
+			-183.545,
+			0.244,
+			-367.067
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (131)40458",
+		"Position": [
+			-248.19,
+			4.388,
+			-366.757
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (132)40860",
+		"Position": [
+			-210.433,
+			1.552,
+			-308.019
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (133)40842",
+		"Position": [
+			-210.356,
+			1.536,
+			-307.011
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (134)49052",
+		"Position": [
+			-213.464,
+			1.23,
+			-302.487
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (135)36766",
+		"Position": [
+			-213.399,
+			1.23,
+			-302.603
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (136)46798",
+		"Position": [
+			-149.601,
+			4.795,
+			-405.409
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (137)37872",
+		"Position": [
+			-224.077,
+			0.996,
+			-348.201
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (138)39358",
+		"Position": [
+			-223.468,
+			0.996,
+			-348.725
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (139)39226",
+		"Position": [
+			-253.949,
+			4.778,
+			-316.614
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (14)44930",
+		"Position": [
+			-186.257,
+			4.821,
+			-410.723
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (140)39412",
+		"Position": [
+			-254.717,
+			4.784,
+			-316.7
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (141)48250",
+		"Position": [
+			-161.446,
+			4.674,
+			-338.951
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (142)38788",
+		"Position": [
+			-248.092,
+			-3.775,
+			-311.278
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (142)39388",
+		"Position": [
+			-160.952,
+			4.66,
+			-339.261
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (143)37808",
+		"Position": [
+			-247.878,
+			-3.775,
+			-311.361
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (143)47414",
+		"Position": [
+			-153.938,
+			0.196,
+			-400.033
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (144)40998",
+		"Position": [
+			-153.563,
+			0.196,
+			-399.915
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (144)41672",
+		"Position": [
+			-248.838,
+			-3.775,
+			-311.255
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (145)41496",
+		"Position": [
+			-249.374,
+			-3.775,
+			-311.216
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (145)46682",
+		"Position": [
+			-250.267,
+			1.302,
+			-319.911
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (146)43098",
+		"Position": [
+			-246.845,
+			0.223,
+			-278.79
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (146)48796",
+		"Position": [
+			-249.796,
+			-3.775,
+			-311.203
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (147)46438",
+		"Position": [
+			-247.933,
+			4.388,
+			-366.017
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (147)47310",
+		"Position": [
+			-246.768,
+			0.223,
+			-278.993
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (148)37000",
+		"Position": [
+			-217.974,
+			4.785,
+			-377.325
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (148)42838",
+		"Position": [
+			-224.633,
+			4.761,
+			-335.235
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (149)39864",
+		"Position": [
+			-219.476,
+			4.892,
+			-377.419
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (149)46188",
+		"Position": [
+			-227.57,
+			5.053,
+			-340.84
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (15)46084",
+		"Position": [
+			-187.094,
+			4.818,
+			-410.799
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (150)45090",
+		"Position": [
+			-227.832,
+			4.897,
+			-340.33
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (151)36960",
+		"Position": [
+			-229.712,
+			4.977,
+			-343.996
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (152)38888",
+		"Position": [
+			-224.229,
+			4.754,
+			-351.051
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (153)37194",
+		"Position": [
+			-223.402,
+			4.73,
+			-343.194
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (154)41282",
+		"Position": [
+			-248.187,
+			4.788,
+			-326.579
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (155)44394",
+		"Position": [
+			-246.679,
+			4.612,
+			-324.082
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (156)40108",
+		"Position": [
+			-138.071,
+			5.186,
+			-280.548
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (157)47390",
+		"Position": [
+			-139.444,
+			5.186,
+			-280.469
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (158)39218",
+		"Position": [
+			-139.559,
+			5.186,
+			-280.975
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (159)42210",
+		"Position": [
+			-139.655,
+			5.132,
+			-282.27
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (16)46726",
+		"Position": [
+			-199.283,
+			5.077,
+			-392.57
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (160)46554",
+		"Position": [
+			-181.937,
+			4.75,
+			-344.602
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (17)45818",
+		"Position": [
+			-199.386,
+			5.077,
+			-392.715
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (18)41298",
+		"Position": [
+			-199.334,
+			4.969,
+			-395.975
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (19)44190",
+		"Position": [
+			-192.462,
+			5.036,
+			-400.228
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (2)37210",
+		"Position": [
+			-143.695,
+			4.81,
+			-409.692
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (20)48544",
+		"Position": [
+			-192.703,
+			5.042,
+			-400.469
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (21)43432",
+		"Position": [
+			-196.062,
+			4.994,
+			-397.22
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (22)48226",
+		"Position": [
+			-188.881,
+			4.809,
+			-394.187
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (23)36758",
+		"Position": [
+			-188.963,
+			4.809,
+			-394.721
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (24)44846",
+		"Position": [
+			-186.975,
+			4.99,
+			-395.116
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (25)46462",
+		"Position": [
+			-176.883,
+			4.725,
+			-399.179
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (26)45850",
+		"Position": [
+			-176.666,
+			4.743,
+			-399.568
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (27)41442",
+		"Position": [
+			-259.062,
+			4.687,
+			-362.103
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (28)45558",
+		"Position": [
+			-259.144,
+			4.607,
+			-361.871
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (29)46618",
+		"Position": [
+			-268.809,
+			4.32,
+			-365.902
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (3)39880",
+		"Position": [
+			-152.279,
+			4.784,
+			-407.634
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (30)38546",
+		"Position": [
+			-268.981,
+			4.32,
+			-365.293
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (31)37284",
+		"Position": [
+			-268.687,
+			4.32,
+			-365.546
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (32)39154",
+		"Position": [
+			-258.013,
+			4.726,
+			-370.875
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (33)39776",
+		"Position": [
+			-257.465,
+			4.723,
+			-370.827
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (34)41062",
+		"Position": [
+			-257.726,
+			4.765,
+			-371.124
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (35)39444",
+		"Position": [
+			-178.311,
+			0.703,
+			-343.184
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (36)47506",
+		"Position": [
+			-177.837,
+			0.703,
+			-342.125
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (37)43270",
+		"Position": [
+			-177.895,
+			0.703,
+			-343.173
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (38)42274",
+		"Position": [
+			-176.832,
+			1.249,
+			-341.386
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (39)40420",
+		"Position": [
+			-175.601,
+			1.249,
+			-341.357
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (4)39266",
+		"Position": [
+			-152.198,
+			4.784,
+			-407.152
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (40)46562",
+		"Position": [
+			-172.223,
+			1.262,
+			-341.341
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (41)47138",
+		"Position": [
+			-170.124,
+			1.382,
+			-341.377
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (42)39892",
+		"Position": [
+			-168.589,
+			1.32,
+			-341.369
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (43)44402",
+		"Position": [
+			-168.705,
+			1.275,
+			-341.705
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (44)37880",
+		"Position": [
+			-176.6,
+			1.314,
+			-344.718
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (45)43312",
+		"Position": [
+			-168.594,
+			1.393,
+			-344.247
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (46)38522",
+		"Position": [
+			-250.301,
+			1.364,
+			-318.3
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (47)42506",
+		"Position": [
+			-250.369,
+			1.302,
+			-319.405
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (48)37170",
+		"Position": [
+			-178.842,
+			4.248,
+			-419.34
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (49)37672",
+		"Position": [
+			-179.061,
+			4.248,
+			-419.488
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (51)47938",
+		"Position": [
+			-179.493,
+			4.248,
+			-419.465
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (52)48752",
+		"Position": [
+			-267.271,
+			0.672,
+			-351.284
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (53)39274",
+		"Position": [
+			-268.666,
+			0.693,
+			-351.196
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (54)44958",
+		"Position": [
+			-154.781,
+			0.961,
+			-402.929
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (55)41640",
+		"Position": [
+			-154.781,
+			0.916,
+			-403.836
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (56)37308",
+		"Position": [
+			-255.162,
+			0.242,
+			-375.514
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (57)43906",
+		"Position": [
+			-255.444,
+			0.242,
+			-374.662
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (58)42514",
+		"Position": [
+			-255.124,
+			0.134,
+			-375.06
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (59)37074",
+		"Position": [
+			-225.254,
+			0.825,
+			-375.107
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (6)36952",
+		"Position": [
+			-152.284,
+			4.751,
+			-405.336
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (60)48512",
+		"Position": [
+			-225.789,
+			0.759,
+			-375.363
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (61)40716",
+		"Position": [
+			-225.101,
+			0.809,
+			-375.596
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (62)40024",
+		"Position": [
+			-222.664,
+			0.209,
+			-375.396
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (63)40348",
+		"Position": [
+			-234.405,
+			0.783,
+			-295.019
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (64)37242",
+		"Position": [
+			-234.268,
+			0.804,
+			-294.793
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (65)44686",
+		"Position": [
+			-251.898,
+			1.369,
+			-316.597
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (66)43636",
+		"Position": [
+			-251.58,
+			1.111,
+			-328.365
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (67)39194",
+		"Position": [
+			-251.406,
+			0.626,
+			-328.347
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (68)45358",
+		"Position": [
+			-221.54,
+			1.454,
+			-368.22
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (69)42348",
+		"Position": [
+			-238.819,
+			1.036,
+			-338.169
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (7)48452",
+		"Position": [
+			-143.527,
+			4.84,
+			-394.24
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (70)42190",
+		"Position": [
+			-238.9,
+			1.005,
+			-337.713
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (71)40550",
+		"Position": [
+			-236.814,
+			1.058,
+			-334.669
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (72)45810",
+		"Position": [
+			-239.852,
+			1.009,
+			-348.884
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (73)45394",
+		"Position": [
+			-236.447,
+			1.015,
+			-352.668
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (74)44354",
+		"Position": [
+			-236.946,
+			1.006,
+			-352.954
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (75)43548",
+		"Position": [
+			-137.146,
+			4.668,
+			-419.203
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (76)47608",
+		"Position": [
+			-138.031,
+			4.657,
+			-419.19
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (77)37608",
+		"Position": [
+			-138.449,
+			4.703,
+			-417.067
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (78)48586",
+		"Position": [
+			-269.056,
+			0.633,
+			-316.574
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (79)44966",
+		"Position": [
+			-269.08,
+			1.021,
+			-317.182
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (8)47584",
+		"Position": [
+			-142.695,
+			4.855,
+			-394.362
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (80)42594",
+		"Position": [
+			-232.103,
+			0.649,
+			-290.558
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (81)40694",
+		"Position": [
+			-231.708,
+			0.733,
+			-290.322
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (82)38856",
+		"Position": [
+			-235.013,
+			0.818,
+			-285.958
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (83)48900",
+		"Position": [
+			-227.158,
+			0.377,
+			-280.539
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (84)44346",
+		"Position": [
+			-227.199,
+			0.283,
+			-279.497
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (85)48114",
+		"Position": [
+			-227.032,
+			0.33,
+			-279.877
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (86)48812",
+		"Position": [
+			-222.128,
+			5.139,
+			-306.095
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (87)48972",
+		"Position": [
+			-221.901,
+			5.139,
+			-307.135
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (88)42106",
+		"Position": [
+			-225.896,
+			5.46,
+			-312.333
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (89)43962",
+		"Position": [
+			-226.66,
+			5.36,
+			-312.292
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (9)38756",
+		"Position": [
+			-142.708,
+			4.837,
+			-394.082
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (90)37380",
+		"Position": [
+			-228.031,
+			5.36,
+			-312.45
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (91)40752",
+		"Position": [
+			-229.698,
+			5.402,
+			-312.404
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (92)42290",
+		"Position": [
+			-231.935,
+			5.459,
+			-312.303
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (93)46980",
+		"Position": [
+			-200.762,
+			5.357,
+			-302.047
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (94)48892",
+		"Position": [
+			-232.847,
+			5.165,
+			-308.824
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (95)48860",
+		"Position": [
+			-232.891,
+			5.183,
+			-304.612
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (96)40316",
+		"Position": [
+			-239.864,
+			4.55,
+			-305.728
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (97)42082",
+		"Position": [
+			-239.568,
+			4.55,
+			-307.023
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (98)40884",
+		"Position": [
+			-239.407,
+			4.55,
+			-306.818
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food (99)36992",
+		"Position": [
+			-235.619,
+			5.295,
+			-306.067
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food_drink (75)38828",
+		"Position": [
+			-226.401,
+			0.697,
+			-299.258
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_food_drink (77)40818",
+		"Position": [
+			-226.684,
+			0.697,
+			-299.284
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (100)40892",
+		"Position": [
+			-166.555,
+			1.113,
+			-355.016
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (101)41572",
+		"Position": [
+			-167.281,
+			1.156,
+			-354.274
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (102)47722",
+		"Position": [
+			-174.376,
+			1.19,
+			-357.393
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (103)37514",
+		"Position": [
+			-175.42,
+			1.196,
+			-355.176
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (67)48504",
+		"Position": [
+			-279.549,
+			0.796,
+			-381.566
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (68)43620",
+		"Position": [
+			-279.186,
+			0.552,
+			-382.127
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (69)40786",
+		"Position": [
+			-276.74,
+			0.826,
+			-373.419
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (70)37640",
+		"Position": [
+			-170.665,
+			1.784,
+			-327.074
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (71)44174",
+		"Position": [
+			-258.087,
+			-1.618,
+			-369.641
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (72)48688",
+		"Position": [
+			-257.387,
+			-1.54,
+			-368.906
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (73)46634",
+		"Position": [
+			-262.291016,
+			-2.407,
+			-389.736
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (74)46782",
+		"Position": [
+			-263.194,
+			-2.923,
+			-391.614
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (75)43596",
+		"Position": [
+			-262.5,
+			-3.022,
+			-390.529
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (76)43328",
+		"Position": [
+			-217.672,
+			-2.97,
+			-373.78
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (77)47498",
+		"Position": [
+			-217.714,
+			-2.95,
+			-372.956
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (78)37336",
+		"Position": [
+			-212.794,
+			-2.992,
+			-367.681
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (79)48468",
+		"Position": [
+			-200.926,
+			-2.938,
+			-365.969
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (80)42254",
+		"Position": [
+			-217.354,
+			-2.806,
+			-366.465
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (81)36936",
+		"Position": [
+			-163.897,
+			-3.734,
+			-356.277
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (82)48536",
+		"Position": [
+			-163.082,
+			-3.79,
+			-355.932
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (83)38514",
+		"Position": [
+			-163.425,
+			-3.754,
+			-356.111
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (84)45596",
+		"Position": [
+			-130.956,
+			-3.554,
+			-358.49
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (85)43898",
+		"Position": [
+			-132.705,
+			-3.125,
+			-358.463
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (86)46068",
+		"Position": [
+			-126.538,
+			-4.472,
+			-347.941
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (87)41824",
+		"Position": [
+			-117.146,
+			-2.843,
+			-356.29
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (88)45578",
+		"Position": [
+			-122.411,
+			-3.794,
+			-334.723
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (89)41864",
+		"Position": [
+			-123.189,
+			-3.794,
+			-334.77
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (90)46936",
+		"Position": [
+			-143.376,
+			-2.894,
+			-416.281
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (91)38000",
+		"Position": [
+			-130.949,
+			-2.921,
+			-418.082
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (92)47202",
+		"Position": [
+			-132.214,
+			-2.844,
+			-417.767
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (93)40144",
+		"Position": [
+			-111.926,
+			-2.903,
+			-418.138
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (94)38498",
+		"Position": [
+			-109.797,
+			-2.895,
+			-417.661
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (95)38716",
+		"Position": [
+			-233.289,
+			-3.417,
+			-397.356
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (96)43532",
+		"Position": [
+			-233.09,
+			-3.415,
+			-397.995
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (97)37420",
+		"Position": [
+			-233.709,
+			-2.918,
+			-399.588
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (98)42682",
+		"Position": [
+			-234.086,
+			-3.529,
+			-394.214
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_fuel (99)48964",
+		"Position": [
+			-234.246,
+			-3.529,
+			-394.586
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_grenade (85)43058",
+		"Position": [
+			-204.458,
+			-3.606,
+			-370.319
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_grenade (86)40966",
+		"Position": [
+			-204.134,
+			-3.606,
+			-370.429
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_grenade (87)45834",
+		"Position": [
+			-204.592,
+			-3.606,
+			-369.961
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_grenade (88)36800",
+		"Position": [
+			-204.25,
+			-3.741,
+			-370.05
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (1)43440",
+		"Position": [
+			-147.196,
+			5.056,
+			-411.006
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (10)40506",
+		"Position": [
+			-156.564,
+			4.997,
+			-396.317
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (11)38482",
+		"Position": [
+			-154.8,
+			5.063,
+			-397.364
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (12)39350",
+		"Position": [
+			-151.535,
+			4.424,
+			-401.898
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (13)46244",
+		"Position": [
+			-150.61,
+			4.424,
+			-401.887
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (14)38366",
+		"Position": [
+			-150.072,
+			4.424,
+			-401.888
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (15)47672",
+		"Position": [
+			-154.511,
+			5.077,
+			-398.314
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (16)44938",
+		"Position": [
+			-155.451,
+			5.093,
+			-398.509
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (17)48578",
+		"Position": [
+			-156.423,
+			5.02,
+			-399.335
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (18)40412",
+		"Position": [
+			-155.652,
+			5.033,
+			-392.864
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (19)45874",
+		"Position": [
+			-189.06,
+			5.518,
+			-411.494
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (2)38410",
+		"Position": [
+			-148.792,
+			5.075,
+			-407.711
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (20)43002",
+		"Position": [
+			-189.742,
+			5.102,
+			-411.44
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (21)38088",
+		"Position": [
+			-191.618,
+			5.055,
+			-411.465
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (22)38206",
+		"Position": [
+			-191.202,
+			4.727,
+			-411.44
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (23)40566",
+		"Position": [
+			-200.503,
+			4.835,
+			-406.451
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (24)42690",
+		"Position": [
+			-200.587,
+			4.791,
+			-404.587
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (25)44102",
+		"Position": [
+			-200.328,
+			5.043,
+			-394.452
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (26)44086",
+		"Position": [
+			-200.143,
+			5.043,
+			-393.9
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (27)49044",
+		"Position": [
+			-194.247,
+			5.039,
+			-395.202
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (28)42930",
+		"Position": [
+			-195.806,
+			4.99,
+			-395.099
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (29)45058",
+		"Position": [
+			-188.129,
+			5.038,
+			-400.552
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (3)43050",
+		"Position": [
+			-148.705,
+			5.075,
+			-407.308
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (30)45066",
+		"Position": [
+			-186.517,
+			5.097,
+			-401.065
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (31)43746",
+		"Position": [
+			-184.882,
+			5.01,
+			-396.8
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (32)37106",
+		"Position": [
+			-186.672,
+			5.055,
+			-396.38
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (33)37948",
+		"Position": [
+			-187.781,
+			5.083,
+			-396.452
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (34)44254",
+		"Position": [
+			-185.888,
+			5.042,
+			-401.878
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (35)37816",
+		"Position": [
+			-184.713,
+			4.726,
+			-401.845
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (36)37344",
+		"Position": [
+			-191.895,
+			4.737,
+			-394.226
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (38)42042",
+		"Position": [
+			-191.773,
+			4.793,
+			-394.829
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (39)41208",
+		"Position": [
+			-256.573,
+			4.99,
+			-361.863
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (4)47746",
+		"Position": [
+			-153.01,
+			5.005,
+			-410.107
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (40)43122",
+		"Position": [
+			-258.129,
+			5.103,
+			-362.538
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (41)44906",
+		"Position": [
+			-259.577,
+			4.928,
+			-371.531
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (42)46988",
+		"Position": [
+			-260.163,
+			4.892,
+			-371.504
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (43)39050",
+		"Position": [
+			-191.9,
+			4.761,
+			-395.067
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (44)47122",
+		"Position": [
+			-256.499,
+			5.072,
+			-364.743
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (45)47656",
+		"Position": [
+			-258.467,
+			5.169,
+			-363.804
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (46)42910",
+		"Position": [
+			-256.579,
+			4.764,
+			-364.138
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (47)47814",
+		"Position": [
+			-251.001,
+			4.855,
+			-363.492
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (48)42146",
+		"Position": [
+			-251.551,
+			4.855,
+			-363.494
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (49)41940",
+		"Position": [
+			-252.269,
+			5.213,
+			-363.51
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (5)45984",
+		"Position": [
+			-155.247,
+			5.011,
+			-406.753
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (50)47914",
+		"Position": [
+			-265.258,
+			5.125,
+			-363.863
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (51)46854",
+		"Position": [
+			-264.895,
+			5.125,
+			-363.806
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (52)42886",
+		"Position": [
+			-262.943,
+			5.061,
+			-364.291
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (53)48680",
+		"Position": [
+			-264.114,
+			5.056,
+			-362.478
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (54)45422",
+		"Position": [
+			-265.059,
+			5.008,
+			-362.923
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (55)44094",
+		"Position": [
+			-263.416,
+			0.681,
+			-346.165
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (56)40826",
+		"Position": [
+			-263.893,
+			0.668,
+			-344.55
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (57)37024",
+		"Position": [
+			-263.873,
+			0.658,
+			-344.085
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (58)41664",
+		"Position": [
+			-141.474,
+			0.994,
+			-397.803
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (59)45176",
+		"Position": [
+			-141.949,
+			0.965,
+			-400.229
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (6)42074",
+		"Position": [
+			-154.488,
+			5.014,
+			-406.565
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (60)42312",
+		"Position": [
+			-145.047,
+			0.789,
+			-400.858
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (61)48332",
+		"Position": [
+			-146.773,
+			0.657,
+			-396.19
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (62)39380",
+		"Position": [
+			-145.269,
+			0.652,
+			-396.165
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (63)37226",
+		"Position": [
+			-139.912,
+			4.375,
+			-392.724
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (64)38654",
+		"Position": [
+			-125.26,
+			5.15,
+			-389.205
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (65)47874",
+		"Position": [
+			-139.906,
+			5.198,
+			-396.986
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (66)47962",
+		"Position": [
+			-140.079,
+			5.193,
+			-396.393
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (67)39342",
+		"Position": [
+			-260.718,
+			0.604,
+			-316.45
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (68)47318",
+		"Position": [
+			-260.538,
+			1.024,
+			-316.38
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (69)46586",
+		"Position": [
+			-171.431,
+			5.301,
+			-284.95
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (7)47334",
+		"Position": [
+			-158.06,
+			5.159,
+			-411.5
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (70)44516",
+		"Position": [
+			-171.431,
+			4.884,
+			-284.95
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (71)47130",
+		"Position": [
+			-171.843,
+			4.951,
+			-284.925
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (72)44508",
+		"Position": [
+			-171.649,
+			4.481,
+			-284.902
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (73)47632",
+		"Position": [
+			-268.449,
+			4.762,
+			-324.255
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (74)37218",
+		"Position": [
+			-266.772,
+			4.806,
+			-324.324
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (75)46414",
+		"Position": [
+			-266.124,
+			4.835,
+			-324.465
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (76)38594",
+		"Position": [
+			-131.204,
+			5.153,
+			-353.501
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (77)41528",
+		"Position": [
+			-131.803,
+			4.737,
+			-353.402
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (78)38646",
+		"Position": [
+			-151.601,
+			4.424,
+			-402.409
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (79)48178",
+		"Position": [
+			-151.957,
+			4.806,
+			-402.382
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (8)39940",
+		"Position": [
+			-157.052,
+			4.345,
+			-411.446
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (80)41238",
+		"Position": [
+			-131.204,
+			4.729,
+			-353.501
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff (9)39146",
+		"Position": [
+			-157.633,
+			4.741,
+			-411.485
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_housestuff39202",
+		"Position": [
+			-145.41,
+			4.986,
+			-410.091
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_intel_docs1 (1)42424",
+		"Position": [
+			-164.389,
+			1.29,
+			-322.922
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_intel_docs1 (10)46406",
+		"Position": [
+			-168.92,
+			1.049,
+			-359.231
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_intel_docs1 (11)39688",
+		"Position": [
+			-185.676,
+			1.038,
+			-368.7
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_intel_docs1 (12)43082",
+		"Position": [
+			-162.788,
+			4.976,
+			-347.49
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_intel_docs1 (13)45290",
+		"Position": [
+			-130.705,
+			5.063,
+			-353.457
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_intel_docs1 (14)48090",
+		"Position": [
+			-136.648,
+			5.036,
+			-378.01
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_intel_docs1 (2)43930",
+		"Position": [
+			-233.822,
+			5.226,
+			-341.353
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_intel_docs1 (3)43512",
+		"Position": [
+			-230.414,
+			5.187,
+			-345.155
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_intel_docs1 (4)40942",
+		"Position": [
+			-251.201,
+			5.246,
+			-370.097
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_intel_docs1 (5)41070",
+		"Position": [
+			-266.758,
+			5.586,
+			-324.256
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_intel_docs1 (6)39480",
+		"Position": [
+			-252.126,
+			5.23,
+			-321.586
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_intel_docs1 (7)38880",
+		"Position": [
+			-171.699,
+			5.364,
+			-343.736
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_intel_docs1 (8)49028",
+		"Position": [
+			-178.324,
+			5.26,
+			-343.915
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_intel_docs1 (9)48744",
+		"Position": [
+			-184.903,
+			0.609,
+			-365.946
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_intel_docs138836",
+		"Position": [
+			-180.53,
+			1.129,
+			-325.903
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (10)44922",
+		"Position": [
+			-190.858,
+			5.483,
+			-411.45
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (11)44946",
+		"Position": [
+			-190.281,
+			4.759,
+			-411.454
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (12)42130",
+		"Position": [
+			-194.123,
+			5.136,
+			-401.954
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (13)38586",
+		"Position": [
+			-193.508,
+			5.088,
+			-401.938
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (13)40900",
+		"Position": [
+			-235.956,
+			4.885,
+			-346.791
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (14)41604",
+		"Position": [
+			-193.059,
+			4.752,
+			-401.988
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (15)37708",
+		"Position": [
+			-186.792,
+			4.743,
+			-401.942
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (16)40958",
+		"Position": [
+			-185.517,
+			4.7,
+			-401.945
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (17)44830",
+		"Position": [
+			-187.786,
+			5.08,
+			-401.893
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (18)39334",
+		"Position": [
+			-184.736,
+			5.059,
+			-396.353
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (19)46486",
+		"Position": [
+			-259.891,
+			5.602,
+			-371.556
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (2)37800",
+		"Position": [
+			-156.983,
+			5.09,
+			-411.477
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (20)46016",
+		"Position": [
+			-260.703,
+			5.233,
+			-371.576
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (21)43320",
+		"Position": [
+			-252.543,
+			5.118,
+			-367.727
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (22)47514",
+		"Position": [
+			-252.345,
+			4.782,
+			-367.716
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (23)47374",
+		"Position": [
+			-255.5,
+			4.82,
+			-371.517
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (24)43970",
+		"Position": [
+			-254.43,
+			5.18,
+			-371.532
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (25)45318",
+		"Position": [
+			-160.007,
+			0.624,
+			-399.209
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (26)41274",
+		"Position": [
+			-146.206,
+			1.091,
+			-396.123
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (27)43990",
+		"Position": [
+			-147.812,
+			1.098,
+			-396.212
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (28)37162",
+		"Position": [
+			-234.478,
+			4.853,
+			-347.963
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (28)41656",
+		"Position": [
+			-268.894,
+			4.977,
+			-316.607
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (29)39516",
+		"Position": [
+			-268.817,
+			4.174,
+			-316.675
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (29)39744",
+		"Position": [
+			-236.15,
+			4.948,
+			-339.999
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (3)46470",
+		"Position": [
+			-157.297,
+			5.119,
+			-411.477
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (30)39736",
+		"Position": [
+			-234.401,
+			4.917,
+			-338.617
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (30)45604",
+		"Position": [
+			-150.021,
+			5.156,
+			-402.371
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (31)48646",
+		"Position": [
+			-162.39,
+			4.941,
+			-342.464
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (32)44182",
+		"Position": [
+			-263.781,
+			4.324,
+			-316.372
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (33)46320",
+		"Position": [
+			-263.775,
+			4.736,
+			-316.408
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (34)48348",
+		"Position": [
+			-263.561,
+			5.094,
+			-316.459
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (35)45446",
+		"Position": [
+			-263.753,
+			5.099,
+			-316.421
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (36)43376",
+		"Position": [
+			-269.05,
+			4.174,
+			-316.649
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (37)47730",
+		"Position": [
+			-250.942,
+			6.289,
+			-328.416
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (38)42058",
+		"Position": [
+			-263.507,
+			4.736,
+			-316.394
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (39)43368",
+		"Position": [
+			-251.87,
+			6.305,
+			-328.387
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (4)46822",
+		"Position": [
+			-159.904,
+			5.139,
+			-392.527
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (40)39396",
+		"Position": [
+			-263.536,
+			4.324,
+			-316.453
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (41)39540",
+		"Position": [
+			-161.427,
+			4.941,
+			-342.273
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (42)47454",
+		"Position": [
+			-161.841,
+			4.912,
+			-342.524
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (43)46422",
+		"Position": [
+			-162.594,
+			4.297,
+			-342.853
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (44)37752",
+		"Position": [
+			-265.847,
+			5.591,
+			-316.875
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (45)39302",
+		"Position": [
+			-265.585,
+			5.591,
+			-316.709
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (46)43724",
+		"Position": [
+			-266.331,
+			5.161,
+			-316.872
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (47)41512",
+		"Position": [
+			-250.591,
+			6.289,
+			-328.433
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (48)40388",
+		"Position": [
+			-262.511,
+			4.702,
+			-323.626
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (49)44322",
+		"Position": [
+			-262.703,
+			4.307,
+			-323.594
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (5)44314",
+		"Position": [
+			-159.327,
+			4.359,
+			-392.51
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (50)43890",
+		"Position": [
+			-262.706,
+			4.679,
+			-323.604
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (51)44206",
+		"Position": [
+			-262.703,
+			5.078,
+			-323.625
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (52)46920",
+		"Position": [
+			-262.764,
+			4.327,
+			-323.286
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (53)44646",
+		"Position": [
+			-139.541,
+			5.115,
+			-363.151
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (54)48130",
+		"Position": [
+			-139.152,
+			5.115,
+			-363.327
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (55)37186",
+		"Position": [
+			-124.208,
+			5.126,
+			-352.297
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (56)39420",
+		"Position": [
+			-125.334,
+			5.156,
+			-352.42
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (6)40404",
+		"Position": [
+			-149.936,
+			5.156,
+			-401.923
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (7)46312",
+		"Position": [
+			-150.567,
+			4.748,
+			-401.938
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (8)42114",
+		"Position": [
+			-151.806,
+			5.095,
+			-401.951
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_jeverly (9)39404",
+		"Position": [
+			-190.667,
+			5.064,
+			-411.455
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (1)47930",
+		"Position": [
+			-115.312,
+			5.126,
+			-351.574
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (10)42786",
+		"Position": [
+			-122.625,
+			5.22,
+			-395.612
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (100)44714",
+		"Position": [
+			16.6374512,
+			27.6368065,
+			-75.05029
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (101)43026",
+		"Position": [
+			-112.414,
+			-3.675,
+			-413.959
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (102)39808",
+		"Position": [
+			-113.141,
+			-3.675,
+			-414.851
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (103)45026",
+		"Position": [
+			-112.867,
+			-3.769,
+			-413.93
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (104)48218",
+		"Position": [
+			-108.178,
+			-3.963,
+			-413.627
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (11)39712",
+		"Position": [
+			-126.493,
+			5.062,
+			-395.383
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (12)41932",
+		"Position": [
+			-128.705,
+			5.091,
+			-386.79
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (13)40666",
+		"Position": [
+			-128.705,
+			4.603,
+			-386.79
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (14)43416",
+		"Position": [
+			-140.057,
+			5.637,
+			-394.691
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (15)44898",
+		"Position": [
+			-136.248,
+			5.161,
+			-386.731
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (16)39428",
+		"Position": [
+			-114.592,
+			5.039,
+			-413.85
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (17)42938",
+		"Position": [
+			-120.743,
+			4.778,
+			-408.19
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (18)48704",
+		"Position": [
+			-135.97,
+			5.266,
+			-411.392
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (19)44222",
+		"Position": [
+			-135.612,
+			5.249,
+			-411.421
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (2)39030",
+		"Position": [
+			-114.426,
+			4.917,
+			-365.132
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (20)39832",
+		"Position": [
+			-139.768,
+			5.171,
+			-408.202
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (21)37648",
+		"Position": [
+			-135.874,
+			4.496,
+			-406.48
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (22)38278",
+		"Position": [
+			-135.556,
+			5.132,
+			-406.529
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (23)47438",
+		"Position": [
+			-138.889,
+			4.84,
+			-406.473
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (24)48562",
+		"Position": [
+			-132.5033,
+			5.0449,
+			-402.515
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (25)38024",
+		"Position": [
+			-121.945,
+			5.071,
+			-400.296
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (26)39524",
+		"Position": [
+			-122.071,
+			4.652,
+			-400.393
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (27)42282",
+		"Position": [
+			-124.255,
+			5.3,
+			-398.096
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (28)40332",
+		"Position": [
+			-122.977,
+			0.669,
+			-411.222
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (29)37776",
+		"Position": [
+			-124.301,
+			0.674,
+			-411.188
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (3)45002",
+		"Position": [
+			-114.373,
+			4.875,
+			-364.289
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (30)38538",
+		"Position": [
+			-125.486,
+			0.666,
+			-406.778
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (31)38986",
+		"Position": [
+			-134.262,
+			1.086,
+			-409.35
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (32)36944",
+		"Position": [
+			-135.485,
+			1.096,
+			-411.129
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (33)46172",
+		"Position": [
+			-137.581,
+			1.085,
+			-411.058
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (34)48552",
+		"Position": [
+			-139.951,
+			0.707,
+			-409.482
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (35)47592",
+		"Position": [
+			-140.029,
+			0.624,
+			-408.95
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (36)42894",
+		"Position": [
+			-140.018,
+			1.488,
+			-409.063
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (37)37154",
+		"Position": [
+			-252.45,
+			5.161,
+			-314.19
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (38)44854",
+		"Position": [
+			-253.791,
+			5.218,
+			-313.933
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (39)43352",
+		"Position": [
+			-253.406,
+			5.218,
+			-313.737
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (4)40794",
+		"Position": [
+			-119.398,
+			5.205,
+			-368.659
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (40)43504",
+		"Position": [
+			-123.204,
+			-3.727,
+			-338.79
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (41)46910",
+		"Position": [
+			-122.79,
+			-3.727,
+			-338.281
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (42)43612",
+		"Position": [
+			-122.642,
+			-3.727,
+			-337.598
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (43)40974",
+		"Position": [
+			-122.334,
+			-3.727,
+			-337.146
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (45)45802",
+		"Position": [
+			-123.32,
+			-3.727,
+			-338.105
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (46)45684",
+		"Position": [
+			-127.022,
+			5.138,
+			-396.841
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (47)38238",
+		"Position": [
+			-128.717,
+			5.359,
+			-397.29
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (48)41544",
+		"Position": [
+			-127.149,
+			4.727,
+			-396.881
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (49)40682",
+		"Position": [
+			-140.031,
+			5.656,
+			-394.215
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (5)45160",
+		"Position": [
+			-115.968,
+			5.232,
+			-371.247
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (50)44982",
+		"Position": [
+			-136.016,
+			5.161,
+			-386.792
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (51)48170",
+		"Position": [
+			-127.459,
+			5.062,
+			-394.783
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (52)40930",
+		"Position": [
+			-127.453,
+			5.062,
+			-394.332
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (53)40092",
+		"Position": [
+			-122.777,
+			5.22,
+			-395.516
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (54)40292",
+		"Position": [
+			-122.777,
+			4.658,
+			-395.516
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (55)46288",
+		"Position": [
+			-136.124069,
+			5.051,
+			-350.9028
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (56)37090",
+		"Position": [
+			-135.471,
+			5.046,
+			-351.114
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (57)48654",
+		"Position": [
+			-135.614,
+			5.22,
+			-352.087
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (58)43572",
+		"Position": [
+			-254.027,
+			4.516,
+			-312.956
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (59)48606",
+		"Position": [
+			-128.171,
+			1.013,
+			-392.755
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (6)48520",
+		"Position": [
+			-115.971,
+			5.092,
+			-369.507
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (60)48760",
+		"Position": [
+			-128.19,
+			1.013,
+			-392.597
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (61)38772",
+		"Position": [
+			-124.6,
+			1.017,
+			-391.761
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (62)48106",
+		"Position": [
+			-124.724,
+			1.017,
+			-392.026
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (63)41612",
+		"Position": [
+			-126.433,
+			1.074,
+			-387.131
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (64)40518",
+		"Position": [
+			-126.631,
+			1.074,
+			-387.216
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (65)44698",
+		"Position": [
+			-127.293,
+			1.074,
+			-387.131
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (66)38622",
+		"Position": [
+			-127.713,
+			1.074,
+			-387.247
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (67)39608",
+		"Position": [
+			-131.537,
+			1.074,
+			-386.767
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (68)37016",
+		"Position": [
+			-131.685,
+			1.074,
+			-386.857
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (69)44434",
+		"Position": [
+			-132.599,
+			0.834,
+			-388.626
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (7)38246",
+		"Position": [
+			-115.545,
+			5.278,
+			-378.221
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (70)46100",
+		"Position": [
+			-136.402,
+			1.081,
+			-393.472
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (71)46446",
+		"Position": [
+			-137.516,
+			1.081,
+			-393.502
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (8)47246",
+		"Position": [
+			-118.95,
+			5.354,
+			-378.387
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med (9)43762",
+		"Position": [
+			-121.811,
+			5.149,
+			-384.843
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_block2 (4)39600",
+		"Position": [
+			-266.6567,
+			4.9899,
+			-324.323822
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "loot_med_block2 (5)45082",
+		"Position": [
+			-178.263245,
+			4.982,
+			-343.265442
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "loot_med_morph48908",
+		"Position": [
+			17.74939,
+			28.1928062,
+			-112.363281
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_san37034",
+		"Position": [
+			-128.717,
+			4.785,
+			-335.357
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_san38418",
+		"Position": [
+			-135.161,
+			5.307,
+			-339.379
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_san39186",
+		"Position": [
+			-134.211,
+			4.789,
+			-339.483
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_san39532",
+		"Position": [
+			-129.28,
+			4.805,
+			-334.84
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_san39592",
+		"Position": [
+			-129.741,
+			4.805,
+			-334.76
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_san40152",
+		"Position": [
+			-128.733,
+			4.795,
+			-336.709
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_san41430",
+		"Position": [
+			-135.168,
+			4.754,
+			-338.896
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_san41904",
+		"Position": [
+			-128.665,
+			4.795,
+			-337.215
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_san45132",
+		"Position": [
+			-129.585,
+			5.282,
+			-334.776
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_san45402",
+		"Position": [
+			-135.227,
+			5.26,
+			-338.495
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (1)37768",
+		"Position": [
+			-130.297,
+			4.384,
+			-395.494
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (10)44370",
+		"Position": [
+			-138.265,
+			1.046,
+			-405.667
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (100)42736",
+		"Position": [
+			-127.049,
+			0.428,
+			-395.536
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (101)46570",
+		"Position": [
+			-133.178,
+			1.006,
+			-396.308
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (102)37098",
+		"Position": [
+			-137.999,
+			0.791,
+			-395.401
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (103)42770",
+		"Position": [
+			-138.439,
+			0.791,
+			-395.569
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (104)45754",
+		"Position": [
+			-139.563,
+			1.007,
+			-399.457
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (105)45168",
+		"Position": [
+			-139.573,
+			0.535,
+			-399.446
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (11)39568",
+		"Position": [
+			-134.499,
+			1.046,
+			-404.337
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (12)48082",
+		"Position": [
+			-134.274,
+			1.046,
+			-404.538
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (13)37728",
+		"Position": [
+			-134.271,
+			1.046,
+			-405.13
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (14)44606",
+		"Position": [
+			-134.998,
+			1.613,
+			-405.869
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (15)45542",
+		"Position": [
+			-134.506,
+			0.805,
+			-399.016
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (16)48038",
+		"Position": [
+			-134.406,
+			0.805,
+			-398.105
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (17)41712",
+		"Position": [
+			-133.1225,
+			1.014,
+			-399.7821
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (18)48820",
+		"Position": [
+			-133.052,
+			1.026,
+			-399.368
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (19)37114",
+		"Position": [
+			-122.795,
+			1.05,
+			-399.56
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (2)40702",
+		"Position": [
+			-122.763,
+			5.628,
+			-411.37
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (20)40428",
+		"Position": [
+			-123.131,
+			1.011,
+			-399.577
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (21)43954",
+		"Position": [
+			-127.288,
+			1.07,
+			-396.566
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (22)39310",
+		"Position": [
+			-127.368,
+			0.537,
+			-396.508
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (23)45208",
+		"Position": [
+			-127.455,
+			1.559,
+			-397.543
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (24)40284",
+		"Position": [
+			-250.565,
+			4.734,
+			-328.52
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (25)48528",
+		"Position": [
+			-251.031,
+			4.734,
+			-328.508
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (26)48916",
+		"Position": [
+			-251.491,
+			4.734,
+			-328.523
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (27)42810",
+		"Position": [
+			-251.977,
+			4.734,
+			-328.478
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (28)48488",
+		"Position": [
+			-252.347,
+			4.734,
+			-328.467
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (29)47762",
+		"Position": [
+			-251.983,
+			4.499,
+			-328.025
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (3)37840",
+		"Position": [
+			-123.227,
+			5.628,
+			-411.414
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (30)39792",
+		"Position": [
+			-252.298,
+			4.738,
+			-320.473
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (31)46056",
+		"Position": [
+			-251.43,
+			4.821,
+			-320.473
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (32)46092",
+		"Position": [
+			-253.639,
+			5.315,
+			-320.422
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (33)44110",
+		"Position": [
+			-159.451,
+			1.161,
+			-374.374
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (34)46124",
+		"Position": [
+			-161.855,
+			1.211,
+			-374.233
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (35)48932",
+		"Position": [
+			-163.485,
+			1.018,
+			-374.253
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (36)46328",
+		"Position": [
+			-165.365,
+			1.045,
+			-374.305
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (37)47194",
+		"Position": [
+			-165.727,
+			1.057,
+			-371.89
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (38)49012",
+		"Position": [
+			-156.294,
+			0.445,
+			-374.7
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (39)42970",
+		"Position": [
+			-156.179,
+			0.369,
+			-375.95
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (4)45968",
+		"Position": [
+			-138.058,
+			5.119,
+			-410.788
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (40)43588",
+		"Position": [
+			-187.651,
+			1.22,
+			-373.668
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (41)44238",
+		"Position": [
+			-180.864,
+			1.31,
+			-373.4
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (42)39680",
+		"Position": [
+			-187.578,
+			1.26,
+			-375.552
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (43)45866",
+		"Position": [
+			-124.516,
+			5.157,
+			-354.025
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (44)37664",
+		"Position": [
+			-121.889,
+			5.061,
+			-355.123
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (45)36778",
+		"Position": [
+			-121.854,
+			5.042,
+			-357.552
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (46)42586",
+		"Position": [
+			-132.419,
+			5.189,
+			-358.632
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (47)41840",
+		"Position": [
+			-133.482,
+			5.246,
+			-358.427
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (48)46008",
+		"Position": [
+			-133.609,
+			5.229,
+			-356.805
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (49)36824",
+		"Position": [
+			-133.516,
+			5.229,
+			-356.317
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (5)47600",
+		"Position": [
+			-133.352,
+			5.115,
+			-408.252
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (50)48728",
+		"Position": [
+			-133.631,
+			5.229,
+			-355.595
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (51)44654",
+		"Position": [
+			-133.361,
+			5.229,
+			-355.715
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (52)44262",
+		"Position": [
+			-126.504,
+			4.411,
+			-371.816
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (53)40380",
+		"Position": [
+			-127.09,
+			4.746,
+			-371.832
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (54)46830",
+		"Position": [
+			-128.435,
+			5.231,
+			-377.993
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (55)37632",
+		"Position": [
+			-129.154,
+			5.234,
+			-377.936
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (56)38678",
+		"Position": [
+			-123.489,
+			5.109,
+			-377.974
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (57)36976",
+		"Position": [
+			-122.18,
+			5.204,
+			-376.644
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (58)46894",
+		"Position": [
+			-139.834,
+			5.169,
+			-371.57
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (59)41290",
+		"Position": [
+			-139.757,
+			5.169,
+			-372.038
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (6)36832",
+		"Position": [
+			-138.027,
+			4.487,
+			-410.848
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (60)40260",
+		"Position": [
+			-139.818,
+			5.169,
+			-372.787
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (61)47058",
+		"Position": [
+			-139.888,
+			5.148,
+			-374.074
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (62)47178",
+		"Position": [
+			-137.128,
+			5.155,
+			-367.199
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (63)42618",
+		"Position": [
+			-137.9819,
+			5.196,
+			-365.9749
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (64)38820",
+		"Position": [
+			-139.504,
+			5.187,
+			-364.987
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (65)47568",
+		"Position": [
+			-139.465,
+			5.271,
+			-361.418
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (66)42530",
+		"Position": [
+			-139.972,
+			5.168,
+			-356.808
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (67)44662",
+		"Position": [
+			-139.963,
+			5.168,
+			-356.339
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (68)38936",
+		"Position": [
+			-139.94,
+			4.749,
+			-356.555
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (69)46076",
+		"Position": [
+			-123.432,
+			4.684,
+			-347.431
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (7)37940",
+		"Position": [
+			-136.928,
+			4.766,
+			-411.395
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (70)43018",
+		"Position": [
+			-123.857,
+			4.303,
+			-347.452
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (71)47858",
+		"Position": [
+			-124.563,
+			5.06,
+			-347.535
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (72)42202",
+		"Position": [
+			-125.533,
+			5.06,
+			-347.607
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (73)37490",
+		"Position": [
+			-126.175,
+			5.03,
+			-347.607
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (74)41588",
+		"Position": [
+			-129.379,
+			5.086,
+			-347.572
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (75)44306",
+		"Position": [
+			-267.085,
+			4.323,
+			-301.651
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (76)39294",
+		"Position": [
+			-267.537,
+			4.323,
+			-301.361
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (77)36750",
+		"Position": [
+			-267.769,
+			4.323,
+			-302.124
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (78)48324",
+		"Position": [
+			-133.602,
+			5.229,
+			-354.574
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (79)46838",
+		"Position": [
+			-133.594,
+			5.229,
+			-357.392
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (8)42744",
+		"Position": [
+			-132.916,
+			5.251,
+			-399.735
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (80)44386",
+		"Position": [
+			-133.559,
+			5.229,
+			-358.062
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (81)48138",
+		"Position": [
+			-139.356,
+			5.271,
+			-360.969
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (82)39840",
+		"Position": [
+			-139.432,
+			5.187,
+			-365.658
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (83)41006",
+		"Position": [
+			-137.5855,
+			5.196,
+			-365.9516
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (84)45976",
+		"Position": [
+			-129.834,
+			5.086,
+			-347.631
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (85)44002",
+		"Position": [
+			-125.141,
+			5.06,
+			-347.668
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (86)43878",
+		"Position": [
+			-131.7,
+			5.089,
+			-347.647
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (87)41696",
+		"Position": [
+			-124.996,
+			5.157,
+			-353.98
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (88)48146",
+		"Position": [
+			-121.88,
+			5.095,
+			-355.6
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (89)41776",
+		"Position": [
+			-122.669,
+			5.177,
+			-358.777
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (9)40606",
+		"Position": [
+			-132.711,
+			5.212,
+			-400.107
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (90)39286",
+		"Position": [
+			-125.191,
+			5.173,
+			-359.087
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (91)45266",
+		"Position": [
+			-125.733,
+			5.173,
+			-359.022
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (92)48980",
+		"Position": [
+			-127.012,
+			4.404,
+			-371.794
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (93)36816",
+		"Position": [
+			-122.267,
+			5.204,
+			-376.122
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (94)38554",
+		"Position": [
+			-123.079,
+			5.109,
+			-377.938
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (95)43922",
+		"Position": [
+			-127.389,
+			5.116,
+			-377.86
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (96)48614",
+		"Position": [
+			-137.503,
+			5.155,
+			-367.197
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (97)41972",
+		"Position": [
+			-138.713,
+			5.147,
+			-367.183
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (98)43524",
+		"Position": [
+			-121.997,
+			1.089,
+			-397.948
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare (99)37964",
+		"Position": [
+			-123.746,
+			1.161,
+			-396.368
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_med_super_rare43204",
+		"Position": [
+			-116.032,
+			4.707,
+			-381.057
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (10)37388",
+		"Position": [
+			-176.885,
+			4.766,
+			-405.335
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (100)37824",
+		"Position": [
+			-219.511,
+			5.064,
+			-283.652
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (101)42122",
+		"Position": [
+			-214.859,
+			4.733,
+			-278.246
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (102)39824",
+		"Position": [
+			-194.977,
+			4.822,
+			-337.932
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (103)38222",
+		"Position": [
+			-195.589,
+			4.771,
+			-338.194
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (104)47114",
+		"Position": [
+			-173.09,
+			-3.793,
+			-339.423
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (105)40216",
+		"Position": [
+			-174.491,
+			-3.724,
+			-341.701
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (106)48186",
+		"Position": [
+			-174.577,
+			-3.638,
+			-341.116
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (107)40526",
+		"Position": [
+			-270.761,
+			-2.582,
+			-333.246
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (108)41230",
+		"Position": [
+			-271.256,
+			-2.568,
+			-333.026
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (109)46180",
+		"Position": [
+			-269.165,
+			-2.49,
+			-334.069
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (11)46132",
+		"Position": [
+			-247.881,
+			1.069,
+			-421.7
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (110)48720",
+		"Position": [
+			-261.979,
+			-2.886,
+			-353.17
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (111)48162",
+		"Position": [
+			-263.961,
+			-2.892,
+			-353.02
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (112)40356",
+		"Position": [
+			-275.425,
+			-2.801,
+			-344.778
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (113)38978",
+		"Position": [
+			-276.967,
+			-2.753,
+			-344.472
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (114)43066",
+		"Position": [
+			-277.871,
+			-2.464,
+			-354.294
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (115)39624",
+		"Position": [
+			-259.396,
+			-2.815,
+			-376.399
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (116)39452",
+		"Position": [
+			-260.436,
+			-2.792,
+			-376.373
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (117)46734",
+		"Position": [
+			-254.629,
+			-2.529,
+			-376.11
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (118)41376",
+		"Position": [
+			-265.019,
+			-2.667,
+			-385.156
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (119)42818",
+		"Position": [
+			-202.529,
+			-2.778,
+			-353.91
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (12)43978",
+		"Position": [
+			-247.883,
+			1.099,
+			-421.383
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (120)40000",
+		"Position": [
+			-201.959,
+			-2.778,
+			-354.052
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (121)38114",
+		"Position": [
+			-192.918,
+			-2.865,
+			-367.367
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (122)37324",
+		"Position": [
+			-183.644,
+			-2.817,
+			-361.086
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (123)42830",
+		"Position": [
+			-183.548,
+			-2.794,
+			-362.129
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (124)48496",
+		"Position": [
+			-168.952,
+			-2.553,
+			-366.997
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (125)37234",
+		"Position": [
+			-169.569,
+			-2.539,
+			-367.105
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (126)39720",
+		"Position": [
+			-121.149,
+			-2.809,
+			-364.651
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (127)40340",
+		"Position": [
+			-123.407,
+			-3.236,
+			-365.18
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (128)47074",
+		"Position": [
+			-117.086,
+			-2.889,
+			-355.328
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (15)46272",
+		"Position": [
+			-245.095,
+			1.059,
+			-415.983
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (16)38724",
+		"Position": [
+			-247.698,
+			1.238,
+			-378.545
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (17)39074",
+		"Position": [
+			-248.06,
+			1.238,
+			-378.391
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (18)47038",
+		"Position": [
+			-249.458,
+			1.314,
+			-377.485
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (19)37008",
+		"Position": [
+			-228.74,
+			1.253,
+			-382.091
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (20)46698",
+		"Position": [
+			-228.889,
+			1.363,
+			-381.154
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (21)40040",
+		"Position": [
+			-229.472,
+			1.363,
+			-380.111
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (22)38270",
+		"Position": [
+			-221.842,
+			1.354,
+			-421.405
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (23)41648",
+		"Position": [
+			-221.342,
+			1.333,
+			-421.445
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (24)49004",
+		"Position": [
+			-220.073,
+			1.341,
+			-423.285
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (25)44670",
+		"Position": [
+			-230.006,
+			1.463,
+			-371.718
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (26)39856",
+		"Position": [
+			-230.878,
+			1.479,
+			-371.728
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (27)40136",
+		"Position": [
+			-243.917,
+			1.537,
+			-366.433
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (28)46902",
+		"Position": [
+			-243.106,
+			1.463,
+			-365.478
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (29)46000",
+		"Position": [
+			-243.919,
+			1.463,
+			-365.799
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (30)44736",
+		"Position": [
+			-224.181,
+			1.516,
+			-355.504
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (31)46944",
+		"Position": [
+			-224.474,
+			1.486,
+			-354.958
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (32)45050",
+		"Position": [
+			-208.737,
+			1.277,
+			-367.575
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (33)48460",
+		"Position": [
+			-208.255,
+			1.252,
+			-366.558
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (34)38740",
+		"Position": [
+			-249.719,
+			1.508,
+			-356.874
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (35)45370",
+		"Position": [
+			-250.186,
+			1.468,
+			-356.925
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (36)40208",
+		"Position": [
+			-260.098,
+			1.564,
+			-383.342
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (37)45226",
+		"Position": [
+			-260.852,
+			1.379,
+			-378.97
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (38)46252",
+		"Position": [
+			-275.919,
+			1.225,
+			-379.114
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (39)42242",
+		"Position": [
+			-275.395,
+			1.127,
+			-378.68
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (40)46674",
+		"Position": [
+			-277.69,
+			1.248,
+			-368.486
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (41)41504",
+		"Position": [
+			-280.137,
+			1.141,
+			-363.746
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (42)41564",
+		"Position": [
+			-272.185,
+			1.313,
+			-369.36
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (43)44158",
+		"Position": [
+			-271.248,
+			1.302,
+			-362.354
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (44)41098",
+		"Position": [
+			-264.464,
+			0.673,
+			-320.164
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (45)45522",
+		"Position": [
+			-260.811,
+			0.649,
+			-320.186
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (46)41222",
+		"Position": [
+			-262.367,
+			0.665,
+			-319.874
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (47)41896",
+		"Position": [
+			-268.312,
+			1.245,
+			-327.657
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (48)38638",
+		"Position": [
+			-268.326,
+			1.192,
+			-328.171
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (49)46862",
+		"Position": [
+			-254.901,
+			0.804,
+			-291.631
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (50)47326",
+		"Position": [
+			-256.503,
+			0.717,
+			-290.583
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (51)41728",
+		"Position": [
+			-244.77,
+			0.66,
+			-293.452
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (52)40810",
+		"Position": [
+			-243.99,
+			0.709,
+			-292.181
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (53)37530",
+		"Position": [
+			-224.452,
+			0.733,
+			-277.892
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (54)40590",
+		"Position": [
+			-224.893,
+			0.714,
+			-277.862
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (55)41106",
+		"Position": [
+			-218.599,
+			0.656,
+			-291.998
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (56)44018",
+		"Position": [
+			-217.852,
+			0.698,
+			-293.87
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (57)45438",
+		"Position": [
+			-214.484,
+			0.705,
+			-293.15
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (58)47822",
+		"Position": [
+			-208.589,
+			0.766,
+			-297.928
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (59)47890",
+		"Position": [
+			-206.337,
+			0.894,
+			-297.789
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (60)48436",
+		"Position": [
+			-206.78,
+			2.633,
+			-292.876
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (61)48996",
+		"Position": [
+			-205.691,
+			2.58,
+			-292.848
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (62)41816",
+		"Position": [
+			-204.844,
+			2.542,
+			-292.862
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (63)37050",
+		"Position": [
+			-199.883,
+			2.187,
+			-288.516
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (64)40778",
+		"Position": [
+			-199.549,
+			2.255,
+			-287.393
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (65)37656",
+		"Position": [
+			-176.899,
+			1.414,
+			-250.241
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (66)38944",
+		"Position": [
+			-169.71,
+			5.209,
+			-281.545
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (67)40252",
+		"Position": [
+			-169.307,
+			5.209,
+			-281.333
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (68)47302",
+		"Position": [
+			-208.56,
+			5.409,
+			-299.913
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (69)39932",
+		"Position": [
+			-210.041,
+			5.388,
+			-299.338
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (70)41250",
+		"Position": [
+			-206.63,
+			5.662,
+			-277.827
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (71)37316",
+		"Position": [
+			-207.265,
+			5.658,
+			-277.72
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (72)42538",
+		"Position": [
+			-194.934,
+			4.86,
+			-295.142
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (73)42634",
+		"Position": [
+			-194.054,
+			4.86,
+			-297.049
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (74)41872",
+		"Position": [
+			-169.049,
+			5.294,
+			-298.414
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (75)38490",
+		"Position": [
+			-168.183,
+			5.273,
+			-298.403
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (76)41078",
+		"Position": [
+			-142.301,
+			5.617,
+			-299.159
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (77)41620",
+		"Position": [
+			-142.41,
+			5.583,
+			-299.462
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (78)38686",
+		"Position": [
+			-142.058,
+			5.641,
+			-301.342
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (79)48844",
+		"Position": [
+			-149.019,
+			4.835,
+			-356.078
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (8)37792",
+		"Position": [
+			62.0974121,
+			22.5098076,
+			285.8297
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (80)40650",
+		"Position": [
+			-148.863,
+			4.835,
+			-355.635
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (81)43660",
+		"Position": [
+			-169.126,
+			5.594,
+			-391.122
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (82)45668",
+		"Position": [
+			-170.395,
+			5.608,
+			-391.015
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (83)39058",
+		"Position": [
+			-162.359,
+			1.253,
+			-411.658
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (84)44290",
+		"Position": [
+			-163.411,
+			0.8,
+			-417.679
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (85)42610",
+		"Position": [
+			-176.077,
+			0.692,
+			-394.465
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (86)47688",
+		"Position": [
+			-224.913,
+			0.798,
+			-322.363
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (87)48868",
+		"Position": [
+			-224.297,
+			0.777,
+			-322.633
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (88)43754",
+		"Position": [
+			-113.263,
+			5.166,
+			-413.337
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (88)47786",
+		"Position": [
+			-262.32,
+			0.649,
+			-320.191
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (89)42170",
+		"Position": [
+			-238.644,
+			0.614,
+			-277.987
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (89)46594",
+		"Position": [
+			-246.855,
+			-2.876,
+			-410.376
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (9)40364",
+		"Position": [
+			-176.878,
+			4.769,
+			-412.316
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (90)38970",
+		"Position": [
+			-239.905,
+			0.629,
+			-277.979
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (90)45738",
+		"Position": [
+			-247.364,
+			-2.866,
+			-410.145
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (91)42674",
+		"Position": [
+			-136.672,
+			-3.662,
+			-266.496
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (91)45774",
+		"Position": [
+			-239.131,
+			0.634,
+			-281.698
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (92)40674",
+		"Position": [
+			-242.707,
+			0.699,
+			-280.464
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (92)45282",
+		"Position": [
+			-136.567,
+			-3.497,
+			-267.08
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (93)38390",
+		"Position": [
+			-242.982,
+			0.686,
+			-278.664
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (93)46494",
+		"Position": [
+			-167.042,
+			-3.59,
+			-291.947
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (94)42546",
+		"Position": [
+			-243.02,
+			0.661,
+			-281.436
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (94)43778",
+		"Position": [
+			-167.379,
+			-3.59,
+			-292.148
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (95)36920",
+		"Position": [
+			-167.525,
+			-3.59,
+			-291.621
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (95)38506",
+		"Position": [
+			-217.927,
+			4.76,
+			-355.596
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (96)45184",
+		"Position": [
+			-218.265,
+			4.729,
+			-355.272
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (96)45334",
+		"Position": [
+			-169.354,
+			1.236,
+			-377.52
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (97)38764",
+		"Position": [
+			-219.899,
+			4.813,
+			-359.6
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (97)48784",
+		"Position": [
+			-170.767,
+			1.27,
+			-376.697
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (98)47090",
+		"Position": [
+			-243.282,
+			5.075,
+			-290.826
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mix_food_med_ammo (99)42902",
+		"Position": [
+			-242.588,
+			5.085,
+			-291.137
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (1)41414",
+		"Position": [
+			-238.428,
+			0.744,
+			-406.988
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (10)44078",
+		"Position": [
+			-165.491,
+			1.223,
+			-272.985
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (11)41596",
+		"Position": [
+			-165.74,
+			1.223,
+			-272.463
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (12)40914",
+		"Position": [
+			-165.468,
+			1.237,
+			-272.685
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (13)48662",
+		"Position": [
+			-178.717,
+			5.053,
+			-292.217
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (14)47030",
+		"Position": [
+			-178.302,
+			5.053,
+			-292.616
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (15)37042",
+		"Position": [
+			-178.387,
+			5.053,
+			-292.253
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (16)42162",
+		"Position": [
+			-162.832,
+			5.075,
+			-297.256
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (17)47624",
+		"Position": [
+			-163.693,
+			5.075,
+			-297.176
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (18)38994",
+		"Position": [
+			-163.189,
+			5.075,
+			-297.456
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (19)46212",
+		"Position": [
+			-163.357,
+			5.075,
+			-296.764
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (2)40770",
+		"Position": [
+			-238.707,
+			0.701,
+			-407.577
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (20)48672",
+		"Position": [
+			-164.11,
+			4.651,
+			-296.41
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (21)38230",
+		"Position": [
+			-162.3632,
+			5.5811,
+			-297.1412
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (22)37522",
+		"Position": [
+			-145.119,
+			5.58,
+			-330.174
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (23)37554",
+		"Position": [
+			-145.339,
+			5.58,
+			-329.681
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (24)47704",
+		"Position": [
+			-147.823,
+			5.58,
+			-328.82
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (25)44500",
+		"Position": [
+			-147.553,
+			5.583,
+			-328.544
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (26)45386",
+		"Position": [
+			-256.075,
+			5.118,
+			-327.008
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (27)46972",
+		"Position": [
+			-256.116,
+			5.118,
+			-326.269
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (28)44282",
+		"Position": [
+			-256.028,
+			5.118,
+			-326.606
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (29)42954",
+		"Position": [
+			-256.212,
+			5.118,
+			-326.79
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (3)46538",
+		"Position": [
+			-238.743,
+			0.689,
+			-407.2
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (30)45462",
+		"Position": [
+			-127.802,
+			4.694,
+			-281.412
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (31)40300",
+		"Position": [
+			-128.069,
+			4.694,
+			-281.804
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (32)41258",
+		"Position": [
+			-128.129,
+			4.694,
+			-281.517
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (33)37292",
+		"Position": [
+			-268.871,
+			5.416,
+			-316.464
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (34)47186",
+		"Position": [
+			-268.889,
+			5.416,
+			-316.752
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (35)38044",
+		"Position": [
+			-269.018,
+			4.903,
+			-316.758
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (36)36912",
+		"Position": [
+			-268.83,
+			4.24,
+			-316.496
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (37)40990",
+		"Position": [
+			-268.716,
+			5.063,
+			-322.427
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (38)44974",
+		"Position": [
+			-268.849,
+			5.054,
+			-323.364
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (39)36848",
+		"Position": [
+			-268.785,
+			5,
+			-323.237
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (4)42878",
+		"Position": [
+			-149.155,
+			4.537,
+			-413.327
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (40)44798",
+		"Position": [
+			-253.822,
+			5.304,
+			-328.204
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (41)47046",
+		"Position": [
+			-253.515,
+			5.305,
+			-327.821
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (42)47366",
+		"Position": [
+			-254.897,
+			5.366,
+			-328.169
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (43)46742",
+		"Position": [
+			-254.63,
+			5.355,
+			-327.665
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (44)47422",
+		"Position": [
+			-254.335,
+			5.373,
+			-327.913
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (45)37832",
+		"Position": [
+			-252.244,
+			5.33,
+			-328.338
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (46)48776",
+		"Position": [
+			-251.337,
+			5.299,
+			-328.399
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (47)37122",
+		"Position": [
+			-250.45,
+			5.29,
+			-328.415
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (48)38214",
+		"Position": [
+			-269.02,
+			5,
+			-323.172
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (49)38052",
+		"Position": [
+			-268.756,
+			4.903,
+			-316.676
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (5)39848",
+		"Position": [
+			-179.062,
+			5.053,
+			-292.254
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (50)44678",
+		"Position": [
+			-138.453,
+			2.712,
+			-290.261
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (51)40574",
+		"Position": [
+			-138.716,
+			2.712,
+			-290.604
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (52)44362",
+		"Position": [
+			-138.336,
+			2.712,
+			-290.572
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (53)38796",
+		"Position": [
+			-139.267,
+			2.712,
+			-290.8
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (54)46196",
+		"Position": [
+			-268.782,
+			5.473,
+			-323.222
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (55)39326",
+		"Position": [
+			-268.706,
+			5.473,
+			-323.405
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (56)42854",
+		"Position": [
+			-217.158,
+			5.099,
+			-382.513
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (57)44026",
+		"Position": [
+			-218.143,
+			5.099,
+			-382.607
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (58)43946",
+		"Position": [
+			-217.403,
+			5.117,
+			-382.607
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (59)38530",
+		"Position": [
+			-216.063,
+			5.114,
+			-382.501
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (6)46514",
+		"Position": [
+			-149.408,
+			4.492,
+			-413.356
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (60)41520",
+		"Position": [
+			-180.449,
+			1.365,
+			-315.514
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (61)48736",
+		"Position": [
+			-180.406,
+			1.365,
+			-315.833
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (62)43106",
+		"Position": [
+			-180.944,
+			1.365,
+			-315.491
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (63)47830",
+		"Position": [
+			-181.207,
+			1.365,
+			-315.85
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (64)41704",
+		"Position": [
+			-268.989,
+			5.473,
+			-323.236
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (65)39760",
+		"Position": [
+			-180.746,
+			1.365,
+			-315.748
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (67)39908",
+		"Position": [
+			-181.209,
+			1.365,
+			-315.653
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (68)41160",
+		"Position": [
+			-250.956,
+			5.234,
+			-328.45
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (69)40494",
+		"Position": [
+			-251.881,
+			5.31,
+			-328.433
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (7)43938",
+		"Position": [
+			-148.929,
+			4.537,
+			-413.053
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (70)40982",
+		"Position": [
+			-253.996,
+			5.305,
+			-327.803
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (8)44598",
+		"Position": [
+			-148.904,
+			4.52,
+			-413.215
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod (9)44010",
+		"Position": [
+			-165.584,
+			1.223,
+			-273.262
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod_super (1)39488",
+		"Position": [
+			-126.66,
+			5.053,
+			-352.84
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod_super (2)47430",
+		"Position": [
+			-126.371,
+			5.171,
+			-352.314
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod_super (3)41800",
+		"Position": [
+			-127.012,
+			4.754,
+			-352.908
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mod_super39178",
+		"Position": [
+			-127.145,
+			5.053,
+			-352.858
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_mods (18)37888",
+		"Position": [
+			38.2574463,
+			21.64581,
+			82.28064
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (1)45234",
+		"Position": [
+			-195.161,
+			5.12,
+			-408.583
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (10)48074",
+		"Position": [
+			-251.148,
+			5.147,
+			-366.735
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (11)41832",
+		"Position": [
+			-251.146,
+			5.172,
+			-366.3156
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (12)45902",
+		"Position": [
+			-251.1885,
+			5.1176,
+			-366.1154
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (13)47146",
+		"Position": [
+			-250.919,
+			5.116,
+			-367.721
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (14)43384",
+		"Position": [
+			-263.709,
+			0.658,
+			-341.195
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (15)48630",
+		"Position": [
+			-263.545,
+			0.624,
+			-341.001
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (16)39960",
+		"Position": [
+			-127.605,
+			5.056,
+			-400.666
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (17)48940",
+		"Position": [
+			-127.425,
+			5.043,
+			-400.745
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (18)41808",
+		"Position": [
+			-129.509,
+			0.938,
+			-405.455
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (19)37992",
+		"Position": [
+			-129.649,
+			0.941,
+			-405.518
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (2)48988",
+		"Position": [
+			-194.901,
+			5.081,
+			-408.578
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (20)48638",
+		"Position": [
+			-129.836,
+			0.941,
+			-405.471
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (21)44046",
+		"Position": [
+			-250.356,
+			1.278,
+			-321.685
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (22)44142",
+		"Position": [
+			-250.421,
+			1.3,
+			-321.532
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (23)47350",
+		"Position": [
+			-233.733,
+			0.688,
+			-293.093
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (24)45310",
+		"Position": [
+			-233.54,
+			0.688,
+			-293.206
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (25)39924",
+		"Position": [
+			-233.54,
+			0.65,
+			-293.014
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (26)47648",
+		"Position": [
+			-172.917,
+			5.176,
+			-281.699
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (27)44878",
+		"Position": [
+			-172.511,
+			5.176,
+			-281.57
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (28)36984",
+		"Position": [
+			-172.657,
+			5.176,
+			-281.665
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (29)40950",
+		"Position": [
+			-219.7325,
+			1.2591,
+			-309.8692
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (30)41956",
+		"Position": [
+			-219.6257,
+			1.2591,
+			-309.9518
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (31)45192",
+		"Position": [
+			-219.7687,
+			1.2591,
+			-309.9753
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (32)42050",
+		"Position": [
+			-197.362,
+			5.071,
+			-408.609
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (33)43286",
+		"Position": [
+			-213.6246,
+			1.2008,
+			-301.9857
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (34)46296",
+		"Position": [
+			-213.485,
+			1.1955,
+			-302.0744
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (35)42794",
+		"Position": [
+			-184.767,
+			1.092,
+			-368.184
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (35)44150",
+		"Position": [
+			-233.311,
+			4.952,
+			-345.635
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (36)48712",
+		"Position": [
+			-184.847,
+			1.12,
+			-368.375
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (36)48804",
+		"Position": [
+			-233.482,
+			4.952,
+			-345.538
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (37)39916",
+		"Position": [
+			-184.67,
+			1.097,
+			-368.315
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (37)42802",
+		"Position": [
+			-233.431,
+			4.969,
+			-345.689
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (38)47294",
+		"Position": [
+			-261.96,
+			5.02,
+			-328.235
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (38)48030",
+		"Position": [
+			-267.54,
+			5.091,
+			-316.845
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (39)37856",
+		"Position": [
+			-267.827,
+			5.117,
+			-316.85
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (39)38382",
+		"Position": [
+			-262.223,
+			5.02,
+			-328.242
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (4)45258",
+		"Position": [
+			-197.239,
+			5.071,
+			-408.537
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (40)40630",
+		"Position": [
+			-262.825,
+			5.02,
+			-328.262
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (40)42554",
+		"Position": [
+			-266.846,
+			5.124,
+			-316.84
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (41)46236",
+		"Position": [
+			-264.721,
+			4.99,
+			-328.255
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (5)38844",
+		"Position": [
+			-200.574,
+			4.742,
+			-397.448
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (6)46650",
+		"Position": [
+			-200.432,
+			4.742,
+			-397.354
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (7)37716",
+		"Position": [
+			-263.722,
+			5.174,
+			-368.671
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (8)45894",
+		"Position": [
+			-263.851,
+			5.218,
+			-368.607
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money (9)46040",
+		"Position": [
+			-263.528,
+			5.166,
+			-368.663
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_money46478",
+		"Position": [
+			-194.907,
+			5.081,
+			-408.777
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_office_key (1)40276",
+		"Position": [
+			-197.89,
+			5.00188875,
+			-408.473724
+		],
+		"Rotation": [
+			90,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "loot_office_key (3)47014",
+		"Position": [
+			-158.392014,
+			0.8194107,
+			-393.0338
+		],
+		"Rotation": [
+			90,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "loot_op_room (5)46928",
+		"Position": [
+			-139.5908,
+			5.018,
+			-368.5823
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "loot_op_room (7)40598",
+		"Position": [
+			-168.527008,
+			1.023,
+			-359.124023
+		],
+		"Rotation": [
+			0,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "loot_small_jeverly_money (12)45746",
+		"Position": [
+			-69.5946045,
+			28.12981,
+			0.0217285156
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stim_sanitar (1)46390",
+		"Position": [
+			-134.547,
+			4.669,
+			-337.559
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stim_sanitar (10)44426",
+		"Position": [
+			-131.092,
+			5.063,
+			-335.437
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stim_sanitar (2)40740",
+		"Position": [
+			-134.295,
+			4.669,
+			-337.761
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stim_sanitar (3)42340",
+		"Position": [
+			-134.056,
+			4.372,
+			-338.213
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stim_sanitar (4)43852",
+		"Position": [
+			-134.788,
+			5.048,
+			-336.89
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stim_sanitar (5)40474",
+		"Position": [
+			-134.283,
+			4.372,
+			-337.892
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stim_sanitar (6)44410",
+		"Position": [
+			-134.718,
+			5.089,
+			-335.613
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stim_sanitar (7)40192",
+		"Position": [
+			-134.036,
+			5.089,
+			-335.367
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stim_sanitar (8)39372",
+		"Position": [
+			-133.373,
+			5.089,
+			-335.375
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stim_sanitar (9)37396",
+		"Position": [
+			-130.758,
+			5.063,
+			-335.276
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stim_sanitar42026",
+		"Position": [
+			-134.052,
+			4.644,
+			-338.203
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stim_trans (129)48098",
+		"Position": [
+			-133.188,
+			0.355,
+			-359.078
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stim_trans (130)39704",
+		"Position": [
+			-127.237,
+			0.737,
+			-362.745
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stim_trans (131)42658",
+		"Position": [
+			-122.379,
+			0.283,
+			-358.739
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stim_trans (132)47342",
+		"Position": [
+			-125.02,
+			0.38,
+			-354.137
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stim_trans (133)43844",
+		"Position": [
+			-138.521,
+			0.26,
+			-353.155
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stim_trans (134)37178",
+		"Position": [
+			-122.16,
+			0.242,
+			-352.812
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (100)43188",
+		"Position": [
+			-128.455,
+			4.777,
+			-360.193
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (101)37202",
+		"Position": [
+			-126.356,
+			5.127,
+			-363.549
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (102)40582",
+		"Position": [
+			-126.192,
+			5.127,
+			-364.122
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (103)45886",
+		"Position": [
+			-130.05,
+			5.151,
+			-374.529
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (104)43424",
+		"Position": [
+			-131.494,
+			5.156,
+			-377.988
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (105)48364",
+		"Position": [
+			-134.35,
+			5.214,
+			-373.116
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (106)43652",
+		"Position": [
+			-135.632,
+			5.214,
+			-372.415
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (107)45326",
+		"Position": [
+			-131.544,
+			0.984,
+			-405.455
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (108)45842",
+		"Position": [
+			-131.628,
+			0.755,
+			-404.899
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (109)40834",
+		"Position": [
+			-139.14,
+			0.299,
+			-403.654
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (110)45858",
+		"Position": [
+			-138.989,
+			0.788,
+			-404.823
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (111)42098",
+		"Position": [
+			-138.228,
+			0.54,
+			-405.733
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (112)39800",
+		"Position": [
+			-138.211,
+			0.242,
+			-405.722
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (113)37576",
+		"Position": [
+			-123.121,
+			0.748,
+			-357.046
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (114)46048",
+		"Position": [
+			-122.726,
+			0.709,
+			-355.312
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (115)38804",
+		"Position": [
+			-125.859,
+			0.326,
+			-362.582
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (116)46706",
+		"Position": [
+			-124.961,
+			0.721,
+			-362.139
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (117)37864",
+		"Position": [
+			-128.89,
+			0.237,
+			-363.078
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (118)38962",
+		"Position": [
+			-139.003,
+			0.229,
+			-362.163
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (119)40622",
+		"Position": [
+			-138.814,
+			0.335,
+			-355.289
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (120)46148",
+		"Position": [
+			-138.56,
+			0.75,
+			-354.077
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (121)46522",
+		"Position": [
+			-138.4,
+			0.804,
+			-357.2
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (122)43914",
+		"Position": [
+			-134.534,
+			0.825,
+			-352.572
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (123)42324",
+		"Position": [
+			-134.508,
+			0.322,
+			-352.943
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (124)48194",
+		"Position": [
+			-131.941,
+			0.881,
+			-358.256
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (125)42570",
+		"Position": [
+			-132.573,
+			0.245,
+			-358.636
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (126)44070",
+		"Position": [
+			-131.121,
+			0.308,
+			-358.183
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (127)43114",
+		"Position": [
+			-125.252,
+			0.269,
+			-352.599
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (128)43556",
+		"Position": [
+			-138.273,
+			0.717,
+			-357.845
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (41)42666",
+		"Position": [
+			-134.063,
+			0.825,
+			-352.461
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (42)45762",
+		"Position": [
+			-133.719,
+			0.825,
+			-352.376
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (44)48154",
+		"Position": [
+			-126.66,
+			0.755,
+			-362.909
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (45)38694",
+		"Position": [
+			-131.695,
+			0.883,
+			-357.614
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (48)39900",
+		"Position": [
+			-125.915,
+			0.269,
+			-352.665
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (50)37412",
+		"Position": [
+			-123.361,
+			0.748,
+			-357.107
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (51)45612",
+		"Position": [
+			-125.519,
+			0.742,
+			-351.904
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (53)40308",
+		"Position": [
+			-213.848,
+			4.298,
+			-382.326
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (54)39816",
+		"Position": [
+			-127.252,
+			5.062,
+			-393.866
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (56)36864",
+		"Position": [
+			-121.919,
+			5.16,
+			-386.78
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (57)46610",
+		"Position": [
+			-132.359,
+			4.988,
+			-388.633
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (59)45200",
+		"Position": [
+			-134.884,
+			5.039,
+			-388.091
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (60)43392",
+		"Position": [
+			-139.652,
+			5.251,
+			-391.821
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (62)48696",
+		"Position": [
+			-135.828,
+			5.081,
+			-406.914
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (63)46220",
+		"Position": [
+			-123.419,
+			5.355,
+			-398.071
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (65)45620",
+		"Position": [
+			-126.282,
+			5.15,
+			-359.273
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (66)42066",
+		"Position": [
+			-128.419,
+			5.439,
+			-359.991
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (68)39170",
+		"Position": [
+			-130.875,
+			5.151,
+			-374.521
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (69)41384",
+		"Position": [
+			-134.609,
+			5.179,
+			-374.549
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (71)43262",
+		"Position": [
+			-135.799,
+			1.025,
+			-411.12
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (72)42332",
+		"Position": [
+			-138.855,
+			0.788,
+			-404.267
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (74)37784",
+		"Position": [
+			-134.368,
+			0.577,
+			-404.509
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (75)39138",
+		"Position": [
+			-130.785,
+			1.053,
+			-405.477
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (77)44622",
+		"Position": [
+			-139.998,
+			1.081,
+			-392.557
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (78)45350",
+		"Position": [
+			-139.998,
+			1.603,
+			-392.758
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (79)38286",
+		"Position": [
+			-139.704,
+			1.043,
+			-390.394
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (81)39210",
+		"Position": [
+			-137.828,
+			1.139,
+			-389.028
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (82)45378",
+		"Position": [
+			-134.108,
+			1.143,
+			-387.841
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (84)40724",
+		"Position": [
+			-122.105,
+			0.709,
+			-354.65
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (85)42266",
+		"Position": [
+			-125.53,
+			0.721,
+			-362.004
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (87)37956",
+		"Position": [
+			-128.438,
+			0.255,
+			-362.459
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (88)47696",
+		"Position": [
+			-124.284,
+			0.444,
+			-358.057
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (90)40614",
+		"Position": [
+			-127.375,
+			0.161,
+			-362.444
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (91)42154",
+		"Position": [
+			-132.357,
+			0.245,
+			-357.799
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (93)38358",
+		"Position": [
+			-131.499,
+			0.881,
+			-358.018
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (94)37696",
+		"Position": [
+			-138.394,
+			0.335,
+			-354.73
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (96)39968",
+		"Position": [
+			-139.26,
+			0.229,
+			-361.655
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (97)47382",
+		"Position": [
+			-138.996,
+			0.229,
+			-361.356
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (98)41688",
+		"Position": [
+			-127.934,
+			5.439,
+			-360.208
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators (99)40160",
+		"Position": [
+			-128.044,
+			5.095,
+			-360.294
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_stimulators(40)45098",
+		"Position": [
+			-135.068,
+			0.184,
+			-352.062
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_storage (71)44034",
+		"Position": [
+			-183.554,
+			1.87,
+			-365.933
+		],
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_test_weap_work_zone (2)48622",
+		"Position": [
+			-241.3835,
+			0.6384,
+			-294.9797
+		],
+		"Rotation": [
+			90,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "loot_test_weap_work_zone (3)47738",
+		"Position": [
+			-138.48587,
+			5.171,
+			-283.100525
+		],
+		"Rotation": [
+			90,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "loot_test_weap_work_zone (4)46626",
+		"Position": [
+			-252.689743,
+			5.131,
+			-320.529541
+		],
+		"Rotation": [
+			90,
+			0,
+			0
+		]
+	},
+	{
+		"worldId": "loot_tool (26)37616",
+		"Position": [
+			-131.575,
+			5.024,
+			-413.801
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (27)47680",
+		"Position": [
+			-166.637,
+			4.893,
+			-384.454
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (28)44524",
+		"Position": [
+			-166.117,
+			4.778,
+			-384.487
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (29)45676",
+		"Position": [
+			-131.386,
+			5.038,
+			-413.381
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (30)38016",
+		"Position": [
+			-130.168,
+			4.803,
+			-408.215
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (31)36904",
+		"Position": [
+			-129.55,
+			4.848,
+			-408.229
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (32)37624",
+		"Position": [
+			-142.527,
+			4.973,
+			-386.799
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (33)43604",
+		"Position": [
+			-143.005,
+			4.645,
+			-386.59
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (34)44630",
+		"Position": [
+			-196.204,
+			2.572,
+			-277.739
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (35)45992",
+		"Position": [
+			-194.389,
+			2.055,
+			-270.168
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (36)40396",
+		"Position": [
+			-193.535,
+			2.055,
+			-269.551
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (37)47022",
+		"Position": [
+			-192.351,
+			2.049,
+			-269.903
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (38)42218",
+		"Position": [
+			-191.413,
+			2.043,
+			-269.916
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (39)40168",
+		"Position": [
+			-176.505,
+			1.484,
+			-249.183
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (40)40324",
+		"Position": [
+			-176.572,
+			0.41,
+			-249.878
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (41)43564",
+		"Position": [
+			-177.366,
+			0.336,
+			-250.297
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (42)39472",
+		"Position": [
+			-169.559,
+			1.249,
+			-252.094
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (43)43090",
+		"Position": [
+			-170.309,
+			1.297,
+			-253.836
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (44)48876",
+		"Position": [
+			-165.856,
+			1.185,
+			-267.053
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (45)46952",
+		"Position": [
+			-149.198,
+			2.673,
+			-251.12
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (46)37744",
+		"Position": [
+			-147.675,
+			2.686,
+			-250.884
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (47)45018",
+		"Position": [
+			-147.514,
+			3.13,
+			-256.347
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (48)46108",
+		"Position": [
+			-157.438,
+			2.105,
+			-270.399
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (49)43870",
+		"Position": [
+			-154.105,
+			2.064,
+			-270.367
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (50)40224",
+		"Position": [
+			-155.178,
+			2.064,
+			-269.974
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (51)42626",
+		"Position": [
+			-156.625,
+			2.241,
+			-269.939
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (52)42762",
+		"Position": [
+			-168.095,
+			1.465,
+			-287.164
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (53)37916",
+		"Position": [
+			-167.809,
+			1.42,
+			-286.575
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (54)37688",
+		"Position": [
+			-164.726,
+			1.104,
+			-282.418
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (55)46454",
+		"Position": [
+			-165.648,
+			1.132,
+			-282.433
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (56)38578",
+		"Position": [
+			-165.168,
+			1.08,
+			-282.744
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (57)48828",
+		"Position": [
+			-147.898,
+			2.043,
+			-270.055
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (58)44418",
+		"Position": [
+			-146.722,
+			2.054,
+			-270.472
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (59)37932",
+		"Position": [
+			-147.044,
+			2.08,
+			-269.873
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (60)43038",
+		"Position": [
+			-145.888,
+			2.115,
+			-276.147
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (61)45550",
+		"Position": [
+			-146.903,
+			2.088,
+			-275.524
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (62)37372",
+		"Position": [
+			-147.9082,
+			2.772,
+			-275.6202
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (63)40760",
+		"Position": [
+			-154.143,
+			1.791,
+			-282.072
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (64)42578",
+		"Position": [
+			-154.081,
+			1.686,
+			-282.704
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (65)42642",
+		"Position": [
+			-165.903,
+			4.783,
+			-281.756
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (66)40008",
+		"Position": [
+			-165.772,
+			4.814,
+			-281.221
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (67)37058",
+		"Position": [
+			-165.691,
+			1.165,
+			-317.909
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (67)48234",
+		"Position": [
+			-205.564,
+			5.216,
+			-284.191
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (68)37498",
+		"Position": [
+			-165.19,
+			1.087,
+			-317.909
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (68)45342",
+		"Position": [
+			-205.381,
+			5.216,
+			-284.73
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (69)37268",
+		"Position": [
+			-171.792,
+			1.028,
+			-316.196
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (69)48428",
+		"Position": [
+			-158.663,
+			1.072,
+			-319.093
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (70)42138",
+		"Position": [
+			-158.565,
+			1.072,
+			-319.362
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (70)44870",
+		"Position": [
+			-171.849,
+			1.028,
+			-315.789
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (71)39984",
+		"Position": [
+			-174.404,
+			0.864,
+			-319.141
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (71)42754",
+		"Position": [
+			-157.783,
+			1.062,
+			-319.344
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (72)38198",
+		"Position": [
+			-168.883,
+			1.155,
+			-309.265
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (72)43464",
+		"Position": [
+			-158.201,
+			1.108,
+			-319.286
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (73)39130",
+		"Position": [
+			-170.86,
+			1.165,
+			-313.301
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (73)48836",
+		"Position": [
+			-169.827,
+			-2.74,
+			-298.885
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (74)44054",
+		"Position": [
+			-174.994,
+			-3.757,
+			-348.008
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (74)47106",
+		"Position": [
+			-169.582,
+			-2.74,
+			-298.549
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (75)37972",
+		"Position": [
+			-169.811,
+			-2.74,
+			-300.093
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (75)47906",
+		"Position": [
+			-175.969,
+			-3.809,
+			-348.483
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (76)37146",
+		"Position": [
+			-175.506,
+			-3.907,
+			-347.911
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (76)38872",
+		"Position": [
+			-152.194,
+			-2.702,
+			-321.844
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (77)41354",
+		"Position": [
+			-152.837,
+			-3.693,
+			-321.758
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (77)49036",
+		"Position": [
+			-228.534,
+			-3.508,
+			-340.343
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (78)41580",
+		"Position": [
+			-227.219,
+			-3.585,
+			-341.247
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (79)46658",
+		"Position": [
+			-235.311,
+			-3.735,
+			-337.253
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (80)45140",
+		"Position": [
+			-236.012,
+			-3.705,
+			-337.461
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (81)40442",
+		"Position": [
+			-238.322,
+			-3.618,
+			-340.997
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (82)41784",
+		"Position": [
+			-246.261,
+			-2.457,
+			-365.317
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (83)37276",
+		"Position": [
+			-247.336,
+			-2.359,
+			-363.985
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (84)44814",
+		"Position": [
+			-243.516,
+			-2.415,
+			-360.666
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (85)39672",
+		"Position": [
+			-182.947,
+			-2.773,
+			-369.333
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (86)46164",
+		"Position": [
+			-182.971,
+			-2.773,
+			-368.847
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (87)43344",
+		"Position": [
+			-182.69,
+			-2.755,
+			-368.522
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (88)37546",
+		"Position": [
+			-118.143,
+			-2.906,
+			-319.495
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (89)44706",
+		"Position": [
+			-117.824,
+			-3.512,
+			-320.276
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (90)46578",
+		"Position": [
+			-117.384,
+			-3.688,
+			-321.139
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (91)45042",
+		"Position": [
+			-128.782,
+			-2.588,
+			-383.648
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (92)37600",
+		"Position": [
+			-129.494,
+			-2.6,
+			-383.625
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (93)40116",
+		"Position": [
+			-137.07,
+			-2.967,
+			-383.196
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_tool (94)43278",
+		"Position": [
+			-137.514,
+			-3.177,
+			-383.08
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (37)41536",
+		"Position": [
+			-134.954,
+			5.091,
+			-395.46
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (39)45430",
+		"Position": [
+			-139.629,
+			5.077,
+			-399.48
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (40)38662",
+		"Position": [
+			-126.721,
+			5.1269,
+			-402.657
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (41)38106",
+		"Position": [
+			-122.926,
+			5.163,
+			-386.913
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (42)46870",
+		"Position": [
+			-112.435,
+			1.078,
+			-334.762
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (43)47006",
+		"Position": [
+			-110.963,
+			1.076,
+			-334.86
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (44)41964",
+		"Position": [
+			-109.826,
+			1.207,
+			-334.989
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (45)40638",
+		"Position": [
+			-102.162,
+			0.672,
+			-336.124
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (46)39576",
+		"Position": [
+			-103.555,
+			0.672,
+			-336.293
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (47)45640",
+		"Position": [
+			-106.002,
+			0.672,
+			-336.314
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (48)46642",
+		"Position": [
+			-98.404,
+			0.672,
+			-337.811
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (49)46964",
+		"Position": [
+			-111.113,
+			1.096,
+			-351.295
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (50)42234",
+		"Position": [
+			-112.471,
+			1.096,
+			-351.121
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (51)47406",
+		"Position": [
+			-103.645,
+			0.427,
+			-353.043
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (52)46878",
+		"Position": [
+			-97.353,
+			0.459,
+			-352.506
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (53)45074",
+		"Position": [
+			-128.012,
+			4.12913275,
+			-422.539
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (54)37896",
+		"Position": [
+			-127.585,
+			5.176,
+			-423.757
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (55)48948",
+		"Position": [
+			-127.397,
+			5.23,
+			-426.591
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (56)42226",
+		"Position": [
+			-128.985,
+			4.607,
+			-428.675
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (57)47970",
+		"Position": [
+			-128.674,
+			4.607,
+			-431.399
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (58)45106",
+		"Position": [
+			-129.325,
+			4.607,
+			-432.014
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (59)44134",
+		"Position": [
+			-120.466,
+			5.176,
+			-422.335
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (60)48884",
+		"Position": [
+			-120.592,
+			5.158,
+			-422.678
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (61)39952",
+		"Position": [
+			-120.459,
+			5.158,
+			-425.243
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (62)46382",
+		"Position": [
+			-121.803,
+			4.794,
+			-428.662
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (63)37404",
+		"Position": [
+			-122.391,
+			4.794,
+			-431.457
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (64)47754",
+		"Position": [
+			-121.776,
+			4.794,
+			-436.464
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (65)40876",
+		"Position": [
+			-255.285,
+			0.223,
+			-282.311
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (66)41880",
+		"Position": [
+			-256.318,
+			1.191,
+			-282.874
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (67)37538",
+		"Position": [
+			-261.233,
+			0.637,
+			-281.757
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (68)39992",
+		"Position": [
+			-264.272,
+			0.637,
+			-281.478
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (69)48202",
+		"Position": [
+			-269.609,
+			0.637,
+			-281.512
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (70)47576",
+		"Position": [
+			-252.491,
+			5.09,
+			-302.508
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (71)38602",
+		"Position": [
+			-253.946,
+			5.09,
+			-302.59
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (72)45454",
+		"Position": [
+			-257.335,
+			4.386,
+			-301.455
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (73)38098",
+		"Position": [
+			-260.866,
+			4.386,
+			-301.608
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (74)39508",
+		"Position": [
+			-261.061,
+			4.458,
+			-313.143
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (75)45414",
+		"Position": [
+			-261.649,
+			4.458,
+			-313.745
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (76)38780",
+		"Position": [
+			-261.596,
+			4.458,
+			-312.978
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (77)46714",
+		"Position": [
+			-266.683,
+			4.458,
+			-312.985
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (78)47066",
+		"Position": [
+			-267.105,
+			4.458,
+			-312.799
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (79)39584",
+		"Position": [
+			-153.052,
+			0.34,
+			-408.847
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (80)37256",
+		"Position": [
+			-155.861,
+			1.021,
+			-407.858
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (81)40032",
+		"Position": [
+			-142.74,
+			0.34,
+			-409.115
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (82)47806",
+		"Position": [
+			-148.44,
+			0.34,
+			-407.929
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (83)46886",
+		"Position": [
+			-182.616,
+			0.574,
+			-408.759
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (84)40060",
+		"Position": [
+			-185.013,
+			0.574,
+			-408.627
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (85)42846",
+		"Position": [
+			-184.103,
+			1.173,
+			-409.834
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (86)45660",
+		"Position": [
+			-188.912,
+			0.623,
+			-408.918
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (87)37760",
+		"Position": [
+			-191.665,
+			0.623,
+			-408.636
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (88)48050",
+		"Position": [
+			-198.849,
+			0.36,
+			-409.165
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_toospaste_stuff (89)44270",
+		"Position": [
+			-198.14,
+			0.36,
+			-408.983
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_transluminator (72)45274",
+		"Position": [
+			-122.125,
+			5.014,
+			-369.003
+		],
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_transluminator (73)44298",
+		"Position": [
+			-134.444,
+			0.141,
+			-404.467
+		],
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_transluminator (74)44914",
+		"Position": [
+			-125.004,
+			5.145,
+			-286.941
+		],
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_transluminator (75)47946",
+		"Position": [
+			-173.7443,
+			1.2538,
+			-374.4323
+		],
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_unever_sup141792",
+		"Position": [
+			-236.628,
+			4.354,
+			-341.424
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_wc_stuff (34)41552",
+		"Position": [
+			-159.922,
+			0.97,
+			-407.819
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_wc_stuff (35)48022",
+		"Position": [
+			-158.7856,
+			1.096,
+			-407.5188
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "loot_wc_stuff (36)44822",
+		"Position": [
+			-157.3416,
+			0.936,
+			-407.6843
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "mil_reader (69)39728",
+		"Position": [
+			-124.623,
+			1.972,
+			-328.782
+		],
+		"randomRotation": true
+	},
+	{
+		"worldId": "mil_reader (70)40244",
+		"Position": [
+			-167.91,
+			0.6,
+			-359.225
+		],
+		"randomRotation": true
+	},
+	{
+		"worldId": "mil_reader40372",
+		"Position": [
+			-129.019,
+			5.51,
+			-286.935
+		],
+		"randomRotation": true
+	},
+	{
+		"worldId": "mil_reciv (72)47778",
+		"Position": [
+			-224.033,
+			0.86,
+			-318.951
+		],
+		"randomRotation": true
+	},
+	{
+		"worldId": "mil_reciv (73)43408",
+		"Position": [
+			-163.149,
+			3.81,
+			-314.871
+		],
+		"randomRotation": true
+	},
+	{
+		"worldId": "red_jeverly (36)46774",
+		"Position": [
+			-250.18,
+			6.274,
+			-328.509
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "red_jeverly (38)45242",
+		"Position": [
+			-251.342,
+			6.286,
+			-328.4
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "red_jeverly (39)45782",
+		"Position": [
+			-251.634,
+			6.286,
+			-328.456
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "red_jeverly (40)40922",
+		"Position": [
+			-252.341,
+			6.314,
+			-328.376
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "red_jeverly (41)36880",
+		"Position": [
+			-250.679,
+			4.353,
+			-328.061
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "red_jeverly (43)40016",
+		"Position": [
+			-251.494,
+			4.353,
+			-327.839
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "storage (72)40802",
+		"Position": [
+			-204.671,
+			2.61,
+			-304.507
+		],
+		"randomRotation": true
+	},
+	{
+		"worldId": "storage (74)48210",
+		"Position": [
+			-230.525,
+			5.63,
+			-341.331
+		],
+		"randomRotation": true
+	},
+	{
+		"worldId": "storage (76)40124",
+		"Position": [
+			-160.007,
+			0.613,
+			-353.924
+		],
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (1)38474",
+		"Position": [
+			-250.115,
+			5.183,
+			-322.412
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (10)37980",
+		"Position": [
+			-234.569,
+			5.01,
+			-342.871
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (11)39038",
+		"Position": [
+			-124.536,
+			4.833,
+			-351.794
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (12)45566",
+		"Position": [
+			-125.631,
+			4.833,
+			-351.507
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (13)36840",
+		"Position": [
+			-132.676,
+			4.439,
+			-348.116
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (14)43304",
+		"Position": [
+			-160.681,
+			1.159,
+			-374.173
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (15)43196",
+		"Position": [
+			-164.889,
+			1.164,
+			-374.168
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (16)43480",
+		"Position": [
+			-146.79,
+			5.065,
+			-398.445
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (18)36896",
+		"Position": [
+			-158.062943,
+			4.383,
+			-411.542053
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (19)39696",
+		"Position": [
+			-161.436,
+			4.673,
+			-409.201
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (2)38258",
+		"Position": [
+			-250.09,
+			4.768,
+			-322.831
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (20)44214",
+		"Position": [
+			-242.511,
+			5.184,
+			-381.522
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (21)40482",
+		"Position": [
+			-247.325,
+			4.926,
+			-377.467
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (22)47770",
+		"Position": [
+			-219.421,
+			4.87,
+			-379.255
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (23)43540",
+		"Position": [
+			-216.657,
+			5.034,
+			-381.754
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (24)47850",
+		"Position": [
+			-224.152,
+			0.448,
+			-403.579
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (25)44126",
+		"Position": [
+			-180.283,
+			0.886,
+			-329.687
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (26)43488",
+		"Position": [
+			-180.348,
+			0.658,
+			-313.245
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (27)47222",
+		"Position": [
+			-185.424,
+			0.74,
+			-314.028
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (28)40052",
+		"Position": [
+			-253.08,
+			4.366,
+			-327.326
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (29)36888",
+		"Position": [
+			-167.955,
+			4.536,
+			-281.55
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (3)45034",
+		"Position": [
+			-268.764,
+			4.369,
+			-319.918
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (4)48420",
+		"Position": [
+			-268.201,
+			4.815,
+			-322.107
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (5)41406",
+		"Position": [
+			-264.931,
+			4.426,
+			-316.76
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (6)46156",
+		"Position": [
+			-265.802,
+			5.268,
+			-368.637
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (7)48122",
+		"Position": [
+			-259.681,
+			4.399,
+			-371.569
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (8)48852",
+		"Position": [
+			-258.084,
+			4.399,
+			-370.344
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup1 (9)38032",
+		"Position": [
+			-235.463,
+			4.411,
+			-340.161
+		],
+		"useGravity": true,
+		"randomRotation": true
+	},
+	{
+		"worldId": "univ_loot_sup146260",
+		"Position": [
+			-253.519,
+			4.994,
+			-321.258
+		],
+		"useGravity": true,
+		"randomRotation": true
 	}
 ]
