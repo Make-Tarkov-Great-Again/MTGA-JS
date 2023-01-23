@@ -18,9 +18,9 @@
         "botAmount": "AsOnline"
     },
     "wavesSettings": {
-        "botAmount": "AsOnline",
+        "botAmount": "None",
         "botDifficulty": "AsOnline",
-        "isBosses": true,
+        "isBosses": false,
         "isTaggedAndCursed": false
     },
     "location": "Streets of Tarkov"
