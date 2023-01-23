@@ -436,7 +436,9 @@
             "rewardBlacklist": []
         }
     },
-    "loot": {},
+    "loot": {
+        "ForcePresetsLoot": false
+    },
     "match": {
         "enabled": true
     },
