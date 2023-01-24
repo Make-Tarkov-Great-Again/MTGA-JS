@@ -84,6 +84,9 @@
     },
     "raid": {
         "allowSelectEntryPoint": true,
+        "removeRestrictionsInRaid": true,
+        "_useCustomizedStaminaSettings": "/assets/database/configs/globals/stamina.json",
+        "useCustomizedStaminaSettings": true,
         "maxBotsAliveOnMap": 20,
         "waveCoef": {
             "low": 1,
