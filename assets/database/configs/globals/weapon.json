@@ -1,0 +1,100 @@
+{
+    "Aiming": {
+        "ProceduralIntensityByPose": {
+            "x": 0.33,
+            "y": 0.66,
+            "z": 1
+        },
+        "AimProceduralIntensity": 1,
+        "HeavyWeight": 9,
+        "LightWeight": 0.6,
+        "MaxTimeHeavy": 2.4,
+        "MinTimeHeavy": 0.95,
+        "MaxTimeLight": 2,
+        "MinTimeLight": 0.35,
+        "RecoilScaling": 1,
+        "RecoilDamping": 0.7,
+        "CameraSnapGlobalMult": 0.5,
+        "RecoilXIntensityByPose": {
+            "x": 0.35,
+            "y": 0.7,
+            "z": 1
+        },
+        "RecoilYIntensityByPose": {
+            "x": 0.7,
+            "y": 0.7,
+            "z": 1
+        },
+        "RecoilZIntensityByPose": {
+            "x": 0.7,
+            "y": 0.7,
+            "z": 1
+        },
+        "RecoilCrank": false,
+        "RecoilHandDamping": 0.45,
+        "RecoilConvergenceMult": 1,
+        "RecoilVertBonus": 20,
+        "RecoilBackBonus": 20
+    },
+    "Malfunction": {
+        "AmmoMalfChanceMult": 1,
+        "MagazineMalfChanceMult": 1,
+        "MalfRepairHardSlideMult": 1,
+        "MalfRepairOneHandBrokenMult": 0.9,
+        "MalfRepairTwoHandsBrokenMult": 0.8,
+        "AllowMalfForBots": false,
+        "ShowGlowAttemptsCount": 3,
+        "OutToIdleSpeedMultForPistol": 3,
+        "IdleToOutSpeedMultOnMalf": 3,
+        "TimeToQuickdrawPistol": 5,
+        "DurRangeToIgnoreMalfs": {
+            "x": 93,
+            "y": 100,
+            "z": 0
+        },
+        "DurFeedWt": 0.1,
+        "DurMisfireWt": 0.1,
+        "DurJamWt": 0.6,
+        "DurSoftSlideWt": 0.2,
+        "DurHardSlideMinWt": 0.3,
+        "DurHardSlideMaxWt": 0.8,
+        "AmmoMisfireWt": 0.7,
+        "AmmoFeedWt": 0.2,
+        "AmmoJamWt": 0.1,
+        "OverheatFeedWt": 0.35,
+        "OverheatJamWt": 0.25,
+        "OverheatSoftSlideWt": 0.7,
+        "OverheatHardSlideMinWt": 0.3,
+        "OverheatHardSlideMaxWt": 1.2
+    },
+    "Overheat": {
+        "MinOverheat": 0,
+        "MaxOverheat": 200,
+        "OverheatProblemsStart": 100,
+        "ModHeatFactor": 1,
+        "ModCoolFactor": 1,
+        "MinWearOnOverheat": 0.1,
+        "MaxWearOnOverheat": 0.2,
+        "MinWearOnMaxOverheat": 0.2,
+        "MaxWearOnMaxOverheat": 0.7,
+        "OverheatWearLimit": 0.55,
+        "MaxCOIIncreaseMult": 1.5,
+        "MinMalfChance": 0.5,
+        "MaxMalfChance": 9,
+        "DurReduceMinMult": 1,
+        "DurReduceMaxMult": 3,
+        "BarrelMoveRndDuration": 1,
+        "BarrelMoveMaxMult": 0,
+        "FireratePitchMult": 0.5,
+        "FirerateReduceMinMult": 0.85,
+        "FirerateReduceMaxMult": 1.15,
+        "FirerateOverheatBorder": 140,
+        "EnableSlideOnMaxOverheat": true,
+        "StartSlideOverheat": 200,
+        "FixSlideOverheat": 170,
+        "AutoshotMinOverheat": 170,
+        "AutoshotChance": 0.2,
+        "AutoshotPossibilityDuration": 3,
+        "MaxOverheatCoolCoef": 6
+    }
+}

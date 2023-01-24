@@ -445,5 +445,16 @@
     "match": {
         "enabled": true
     },
-    "weapons": {}
+    "weapons": {
+        "_useCustomizedWeaponSettings": "/assets/database/configs/globals/weapon.json",
+        "useCustomizedWeaponSettings": true
+    },
+    "skills": {
+        "_useCustomizedSkillSettings": "/assets/database/configs/globals/skills.json",
+        "useCustomizedSkillSettings": true
+    },
+    "health": {
+        "_useCustomizedHealthSettings": "/assets/database/configs/globals/health.json",
+        "useCustomizedHealthSettings": true
+    }
 }
