@@ -1,0 +1,129 @@
+{
+    "Stamina": {
+        "Capacity": 100,
+        "SprintDrainRate": 4.2,
+        "BaseRestorationRate": 4.4,
+        "JumpConsumption": 16,
+        "GrenadeHighThrow": 11,
+        "GrenadeLowThrow": 8,
+        "AimDrainRate": 1.1,
+        "AimRangeFinderDrainRate": 0.55,
+        "OxygenCapacity": 300,
+        "OxygenRestoration": 4,
+        "WalkOverweightLimits": {
+            "x": 42,
+            "y": 70,
+            "z": 0
+        },
+        "BaseOverweightLimits": {
+            "x": 21,
+            "y": 62,
+            "z": 0
+        },
+        "SprintOverweightLimits": {
+            "x": 21,
+            "y": 58,
+            "z": 0
+        },
+        "WalkSpeedOverweightLimits": {
+            "x": 32,
+            "y": 70,
+            "z": 0
+        },
+        "CrouchConsumption": {
+            "x": 0.17,
+            "y": 1,
+            "z": 0
+        },
+        "WalkConsumption": {
+            "x": 0.2,
+            "y": 0.5,
+            "z": 0
+        },
+        "StandupConsumption": {
+            "x": 10,
+            "y": 20,
+            "z": 0
+        },
+        "TransitionSpeed": {
+            "x": 1,
+            "y": 0.66,
+            "z": 0
+        },
+        "SprintAccelerationLowerLimit": 0.8,
+        "SprintSpeedLowerLimit": 0.1,
+        "SprintSensitivityLowerLimit": 0.5,
+        "AimConsumptionByPose": {
+            "x": 0.15,
+            "y": 0.75,
+            "z": 1
+        },
+        "RestorationMultiplierByPose": {
+            "x": 1.45,
+            "y": 1.25,
+            "z": 1
+        },
+        "OverweightConsumptionByPose": {
+            "x": -4,
+            "y": -3,
+            "z": 0
+        },
+        "AimingSpeedMultiplier": 0.4,
+        "WalkVisualEffectMultiplier": 0.1,
+        "HandsCapacity": 70,
+        "HandsRestoration": 2.1,
+        "ProneConsumption": 1,
+        "BaseHoldBreathConsumption": 4,
+        "SoundRadius": {
+            "x": 1,
+            "y": 4,
+            "z": 0
+        },
+        "ExhaustedMeleeSpeed": 0.65,
+        "FatigueRestorationRate": 0.42,
+        "FatigueAmountToCreateEffect": 15,
+        "ExhaustedMeleeDamageMultiplier": 0.33,
+        "FallDamageMultiplier": 3.9,
+        "SafeHeightOverweight": 1.75,
+        "SitToStandConsumption": 1,
+        "StaminaExhaustionCausesJiggle": true,
+        "StaminaExhaustionStartsBreathSound": true,
+        "StaminaExhaustionRocksCamera": false,
+        "HoldBreathStaminaMultiplier": {
+            "x": 2,
+            "y": 1,
+            "z": 0
+        },
+        "PoseLevelIncreaseSpeed": {
+            "x": 0.65,
+            "y": 0.4,
+            "z": 0
+        },
+        "PoseLevelDecreaseSpeed": {
+            "x": 0.85,
+            "y": 0.6,
+            "z": 0
+        },
+        "PoseLevelConsumptionPerNotch": {
+            "x": 1.1,
+            "y": 3,
+            "z": 0
+        }
+    },
+    "StaminaRestoration": {
+        "LowerLeftPoint": 0.9,
+        "LowerRightPoint": 0.5,
+        "LeftPlatoPoint": 0.1,
+        "RightPlatoPoint": 0.9,
+        "RightLimit": 1.5,
+        "ZeroValue": 0.07
+    },
+    "StaminaDrain": {
+        "LowerLeftPoint": 1.2,
+        "LowerRightPoint": 1.5,
+        "LeftPlatoPoint": 0.9,
+        "RightPlatoPoint": 1,
+        "RightLimit": 1.5,
+        "ZeroValue": 2
+    }
+}
