@@ -459,19 +459,6 @@
                 "DisabledForScav": false,
                 "BossLocationSpawn": [
                     {
-                        "BossName": "gifter",
-                        "BossChance": 15,
-                        "BossZone": "ZoneCenterBot,ZoneCenter,ZoneOLI,ZoneIDEA,ZoneGoshan,ZoneIDEAPark,ZoneOLIPark",
-                        "BossPlayer": false,
-                        "BossDifficult": "normal",
-                        "BossEscortType": "gifter",
-                        "BossEscortDifficult": "normal",
-                        "BossEscortAmount": "0",
-                        "Time": -1,
-                        "Supports": null,
-                        "RandomTimeSpawn": false
-                    },
-                    {
                         "BossName": "bossKilla",
                         "BossChance": 5,
                         "BossZone": "ZoneCenterBot,ZoneCenter,ZoneOLI,ZoneIDEA,ZoneGoshan,ZoneIDEAPark,ZoneOLIPark",
@@ -13873,21 +13860,6 @@
                 "maxItemCountInLocation": [],
                 "BossLocationSpawn": [
                     {
-                        "BossName": "gifter",
-                        "BossChance": 15,
-                        "BossZone": "Zone_TreatmentContainers,Zone_Chalet,Zone_RoofContainers,Zone_RoofBeach,Zone_Hellicopter",
-                        "BossPlayer": false,
-                        "BossDifficult": "normal",
-                        "BossEscortType": "gifter",
-                        "BossEscortDifficult": "normal",
-                        "BossEscortAmount": "0",
-                        "Time": -1,
-                        "TriggerId": "",
-                        "TriggerName": "",
-                        "Supports": null,
-                        "RandomTimeSpawn": false
-                    },
-                    {
                         "BossName": "bossZryachiy",
                         "BossChance": 100,
                         "BossZone": "Zone_Island",
@@ -16723,21 +16695,6 @@
                 ],
                 "DisabledForScav": false,
                 "BossLocationSpawn": [
-                    {
-                        "BossName": "gifter",
-                        "BossChance": 15,
-                        "BossZone": "ZoneRailStrorage,ZoneRailStrorage,ZoneRailStrorage,ZonePTOR1,ZonePTOR2,ZoneBarrack,ZoneBarrack,ZoneBarrack,ZoneSubStorage",
-                        "BossPlayer": false,
-                        "BossDifficult": "normal",
-                        "BossEscortType": "gifter",
-                        "BossEscortDifficult": "normal",
-                        "BossEscortAmount": "0",
-                        "Time": -1,
-                        "TriggerId": "",
-                        "TriggerName": "",
-                        "Supports": null,
-                        "RandomTimeSpawn": false
-                    },
                     {
                         "BossName": "bossGluhar",
                         "BossChance": 5,
@@ -23101,19 +23058,6 @@
                 ],
                 "DisabledForScav": false,
                 "BossLocationSpawn": [
-                    {
-                        "BossName": "gifter",
-                        "BossChance": 15,
-                        "BossZone": "ZonePort,ZoneGreenHouses,ZoneSanatorium1,ZoneGreenHouses,ZoneSanatorium2,ZoneMeteoStation,ZoneSanatorium1,ZoneSanatorium2",
-                        "BossPlayer": false,
-                        "BossDifficult": "normal",
-                        "BossEscortType": "gifter",
-                        "BossEscortDifficult": "normal",
-                        "BossEscortAmount": "0",
-                        "Time": -1,
-                        "Supports": null,
-                        "RandomTimeSpawn": false
-                    },
                     {
                         "BossName": "bossKnight",
                         "BossChance": 5,
@@ -36750,21 +36694,6 @@
                 ],
                 "BossLocationSpawn": [
                     {
-                        "BossName": "gifter",
-                        "BossChance": 10,
-                        "BossZone": "ZoneColumn",
-                        "BossPlayer": false,
-                        "BossDifficult": "normal",
-                        "BossEscortType": "gifter",
-                        "BossEscortDifficult": "normal",
-                        "BossEscortAmount": "0",
-                        "Time": -1,
-                        "TriggerId": "",
-                        "TriggerName": "",
-                        "Supports": null,
-                        "RandomTimeSpawn": false
-                    },
-                    {
                         "BossName": "bossGluhar",
                         "BossChance": 0.6,
                         "BossZone": "ZoneCarShowroom",
@@ -37513,19 +37442,6 @@
                 ],
                 "DisabledForScav": false,
                 "BossLocationSpawn": [
-                    {
-                        "BossName": "gifter",
-                        "BossChance": 15,
-                        "BossZone": "ZoneScavBase2,ZoneWoodCutter",
-                        "BossPlayer": false,
-                        "BossDifficult": "normal",
-                        "BossEscortType": "gifter",
-                        "BossEscortDifficult": "normal",
-                        "BossEscortAmount": "0",
-                        "Time": -1,
-                        "Supports": null,
-                        "RandomTimeSpawn": false
-                    },
                     {
                         "BossName": "bossKnight",
                         "BossChance": 5,
@@ -46480,19 +46396,6 @@
                 ],
                 "DisabledForScav": false,
                 "BossLocationSpawn": [
-                    {
-                        "BossName": "gifter",
-                        "BossChance": 15,
-                        "BossZone": "ZoneDormitory,ZoneGasStation,ZoneScavBase",
-                        "BossPlayer": false,
-                        "BossDifficult": "normal",
-                        "BossEscortType": "gifter",
-                        "BossEscortDifficult": "normal",
-                        "BossEscortAmount": "0",
-                        "Time": -1,
-                        "Supports": null,
-                        "RandomTimeSpawn": false
-                    },
                     {
                         "BossName": "bossKnight",
                         "BossChance": 5,
@@ -58591,18 +58494,6 @@
                 ],
                 "BossLocationSpawn": [
                     {
-                        "BossName": "gifter",
-                        "BossChance": 10,
-                        "BossZone": "BotZone",
-                        "BossPlayer": false,
-                        "BossDifficult": "normal",
-                        "BossEscortType": "gifter",
-                        "BossEscortDifficult": "normal",
-                        "BossEscortAmount": "0",
-                        "Time": -1,
-                        "RandomTimeSpawn": false
-                    },
-                    {
                         "BossName": "bossTagilla",
                         "BossChance": 5,
                         "BossZone": "BotZone",
@@ -62467,18 +62358,6 @@
                 "maxItemCountInLocation": [],
                 "BossLocationSpawn": [
                     {
-                        "BossName": "gifter",
-                        "BossChance": 5,
-                        "BossZone": "BotZone",
-                        "BossPlayer": false,
-                        "BossDifficult": "normal",
-                        "BossEscortType": "gifter",
-                        "BossEscortDifficult": "normal",
-                        "BossEscortAmount": "0",
-                        "Time": -1,
-                        "RandomTimeSpawn": false
-                    },
-                    {
                         "BossName": "bossTagilla",
                         "BossChance": 5,
                         "BossZone": "BotZone",
@@ -62917,21 +62796,6 @@
                 ],
                 "DisabledForScav": true,
                 "BossLocationSpawn": [
-                    {
-                        "BossName": "gifter",
-                        "BossChance": 15,
-                        "BossZone": "BotZoneFloor1,BotZoneFloor2",
-                        "BossPlayer": false,
-                        "BossDifficult": "normal",
-                        "BossEscortType": "gifter",
-                        "BossEscortDifficult": "normal",
-                        "BossEscortAmount": "0",
-                        "Time": -1,
-                        "TriggerId": "",
-                        "TriggerName": "",
-                        "Delay": 0,
-                        "RandomTimeSpawn": false
-                    },
                     {
                         "BossName": "pmcBot",
                         "BossChance": 35,
