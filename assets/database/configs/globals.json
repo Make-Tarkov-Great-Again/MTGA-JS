@@ -21348,16 +21348,16 @@
     "BaseHoldBreathConsumption": 4,
     "BaseOverweightLimits":
     {
-     "x": 21,
-     "y": 62,
+     "x": 26,
+     "y": 67,
      "z": 0
     },
-    "BaseRestorationRate": 4.4,
+    "BaseRestorationRate": 4.5,
     "Capacity": 100,
     "CrouchConsumption":
     {
      "x": 0.17,
-     "y": 1,
+     "y": 0.7,
      "z": 0
     },
     "ExhaustedMeleeDamageMultiplier": 0.33,
@@ -21375,14 +21375,14 @@
      "y": 1,
      "z": 0
     },
-    "JumpConsumption": 16,
+    "JumpConsumption": 14,
     "OverweightConsumptionByPose":
     {
-     "x": -4,
-     "y": -3,
+     "x": -3,
+     "y": -2,
      "z": 0
     },
-    "OxygenCapacity": 300,
+    "OxygenCapacity": 350,
     "OxygenRestoration": 4,
     "PoseLevelConsumptionPerNotch":
     {
@@ -21418,11 +21418,11 @@
      "z": 0
     },
     "SprintAccelerationLowerLimit": 0.8,
-    "SprintDrainRate": 4.2,
+    "SprintDrainRate": 4,
     "SprintOverweightLimits":
     {
-     "x": 21,
-     "y": 58,
+     "x": 26,
+     "y": 63,
      "z": 0
     },
     "SprintSensitivityLowerLimit": 0.5,
@@ -21450,13 +21450,13 @@
     },
     "WalkOverweightLimits":
     {
-     "x": 42,
-     "y": 70,
+     "x": 45,
+     "y": 75,
      "z": 0
     },
     "WalkSpeedOverweightLimits":
     {
-     "x": 32,
+     "x": 35,
      "y": 70,
      "z": 0
     },
