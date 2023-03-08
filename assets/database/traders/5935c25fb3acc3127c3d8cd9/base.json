@@ -1,128 +1,127 @@
 {
-	"_id": "5935c25fb3acc3127c3d8cd9",
-	"availableInRaid": false,
-	"avatar": "/files/trader/avatar/59b91cbd86f77469aa5343cb.jpg",
-	"balance_dol": 700000,
-	"balance_eur": 0,
-	"balance_rub": 7000000,
-	"buyer_up": false,
-	"currency": "USD",
-	"customization_seller": false,
-	"discount": 0,
-	"discount_end": 0,
-	"gridHeight": 160,
-	"insurance": {
-	  "availability": false,
-	  "excluded_category": [],
-	  "max_return_hour": 20,
-	  "max_storage_time": 24,
-	  "min_payment": 1000,
-	  "min_return_hour": 10
-	},
-	"items_buy": {
-	  "category": [
-		"5448fe124bdc2da5018b4567",
-		"5422acb9af1c889c16000029",
-		"5485a8684bdc2da71d8b4567",
-		"5448ecbe4bdc2d60728b4568",
-		"57864a3d24597754843f8721",
-		"57864ee62459775490116fc1",
-		"57864a66245977548f04a81f",
-		"5c164d2286f774194c5e69fa",
-		"5447e0e74bdc2d3c308b4567",
-		"57bef4c42459772e8d35a53b"
-	  ],
-	  "id_list": []
-	},
-	"items_buy_prohibited": {
-	  "category": [],
-	  "id_list": [
-		"62e910aaf957f2915e0a5e36"
-	  ]
-	},
-	"location": "Предпортовая",
-	"loyaltyLevels": [
-	  {
-		"buy_price_coef": 55,
-		"exchange_price_coef": 0,
-		"heal_price_coef": 0,
-		"insurance_price_coef": 5,
-		"minLevel": 1,
-		"minSalesSum": 0,
-		"minStanding": 0,
-		"repair_price_coef": 0
-	  },
-	  {
-		"buy_price_coef": 55,
-		"exchange_price_coef": 0,
-		"heal_price_coef": 0,
-		"insurance_price_coef": 0,
-		"minLevel": 14,
-		"minSalesSum": 11000,
-		"minStanding": 0,
-		"repair_price_coef": 0
-	  },
-	  {
-		"buy_price_coef": 55,
-		"exchange_price_coef": 0,
-		"heal_price_coef": 0,
-		"insurance_price_coef": 0,
-		"minLevel": 23,
-		"minSalesSum": 25000,
-		"minStanding": 0.3,
-		"repair_price_coef": 0
-	  },
-	  {
-		"buy_price_coef": 55,
-		"exchange_price_coef": 0,
-		"heal_price_coef": 0,
-		"insurance_price_coef": 0,
-		"minLevel": 37,
-		"minSalesSum": 32000,
-		"minStanding": 0.6,
-		"repair_price_coef": 0
-	  }
-	],
-	"medic": false,
-	"name": "Тадеуш",
-	"nextResupply": 1631483587,
-	"nickname": "Peacekeeper",
-	"repair": {
-	  "availability": false,
-	  "currency_coefficient": 0,
-	  "excluded_category": [],
-	  "excluded_id_list": [],
-	  "price_rate": 0,
-	  "quality": "2"
-	},
-	"sell_category": [
-	  "5b47574386f77428ca22b33f",
-	  "5b5f78dc86f77409407a7f8e",
-	  "5b5f71b386f774093f2ecf11",
-	  "5b5f71c186f77409407a7ec0",
-	  "5b5f71de86f774093f2ecf13",
-	  "5b5f724186f77447ed5636ad",
-	  "5b5f736886f774094242f193",
-	  "5b5f73ec86f774093e6cb4fd",
-	  "5b5f74cc86f77447ec5d770a",
-	  "5b5f750686f774093e6cb503",
-	  "5b5f751486f77447ec5d770c",
-	  "5b5f752e86f774093e6cb505",
-	  "5b5f754a86f774094242f19b",
-	  "5b5f755f86f77447ec5d770e",
-	  "5b5f757486f774093e6cb507",
-	  "5b5f75b986f77447ec5d7710",
-	  "5b5f75c686f774094242f19f",
-	  "5b5f75e486f77447ec5d7712",
-	  "5b5f760586f774093e6cb509",
-	  "5b5f761f86f774094242f1a1",
-	  "5b5f764186f77447ec5d7714",
-	  "5b47574386f77428ca22b346",
-	  "5b47574386f77428ca22b340",
-	  "5b47574386f77428ca22b344",
-	  "5b47574386f77428ca22b341"
-	],
-	"surname": "Пилсудский",
-	"unlockedByDefault": true
-  }
-  
+  "_id": "5935c25fb3acc3127c3d8cd9",
+  "availableInRaid": false,
+  "avatar": "/files/trader/avatar/59b91cbd86f77469aa5343cb.jpg",
+  "balance_dol": 700000,
+  "balance_eur": 0,
+  "balance_rub": 7000000,
+  "buyer_up": false,
+  "currency": "USD",
+  "customization_seller": false,
+  "discount": 0,
+  "discount_end": 0,
+  "gridHeight": 160,
+  "insurance": {
+    "availability": false,
+    "excluded_category": [],
+    "max_return_hour": 20,
+    "max_storage_time": 24,
+    "min_payment": 1000,
+    "min_return_hour": 10
+  },
+  "items_buy": {
+    "category": [
+      "5448fe124bdc2da5018b4567",
+      "5422acb9af1c889c16000029",
+      "5485a8684bdc2da71d8b4567",
+      "5448ecbe4bdc2d60728b4568",
+      "57864a3d24597754843f8721",
+      "57864ee62459775490116fc1",
+      "57864a66245977548f04a81f",
+      "5c164d2286f774194c5e69fa",
+      "5447e0e74bdc2d3c308b4567",
+      "57bef4c42459772e8d35a53b"
+    ],
+    "id_list": []
+  },
+  "items_buy_prohibited": {
+    "category": [],
+    "id_list": [
+      "62e910aaf957f2915e0a5e36"
+    ]
+  },
+  "location": "Предпортовая",
+  "loyaltyLevels": [
+    {
+      "buy_price_coef": 55,
+      "exchange_price_coef": 0,
+      "heal_price_coef": 0,
+      "insurance_price_coef": 5,
+      "minLevel": 1,
+      "minSalesSum": 0,
+      "minStanding": 0,
+      "repair_price_coef": 0
+    },
+    {
+      "buy_price_coef": 55,
+      "exchange_price_coef": 0,
+      "heal_price_coef": 0,
+      "insurance_price_coef": 0,
+      "minLevel": 14,
+      "minSalesSum": 11000,
+      "minStanding": 0,
+      "repair_price_coef": 0
+    },
+    {
+      "buy_price_coef": 55,
+      "exchange_price_coef": 0,
+      "heal_price_coef": 0,
+      "insurance_price_coef": 0,
+      "minLevel": 23,
+      "minSalesSum": 25000,
+      "minStanding": 0.3,
+      "repair_price_coef": 0
+    },
+    {
+      "buy_price_coef": 55,
+      "exchange_price_coef": 0,
+      "heal_price_coef": 0,
+      "insurance_price_coef": 0,
+      "minLevel": 37,
+      "minSalesSum": 32000,
+      "minStanding": 0.6,
+      "repair_price_coef": 0
+    }
+  ],
+  "medic": false,
+  "name": "Тадеуш",
+  "nextResupply": 1631483587,
+  "nickname": "Peacekeeper",
+  "repair": {
+    "availability": false,
+    "currency_coefficient": 0,
+    "excluded_category": [],
+    "excluded_id_list": [],
+    "price_rate": 0,
+    "quality": "2"
+  },
+  "sell_category": [
+    "5b47574386f77428ca22b33f",
+    "5b5f78dc86f77409407a7f8e",
+    "5b5f71b386f774093f2ecf11",
+    "5b5f71c186f77409407a7ec0",
+    "5b5f71de86f774093f2ecf13",
+    "5b5f724186f77447ed5636ad",
+    "5b5f736886f774094242f193",
+    "5b5f73ec86f774093e6cb4fd",
+    "5b5f74cc86f77447ec5d770a",
+    "5b5f750686f774093e6cb503",
+    "5b5f751486f77447ec5d770c",
+    "5b5f752e86f774093e6cb505",
+    "5b5f754a86f774094242f19b",
+    "5b5f755f86f77447ec5d770e",
+    "5b5f757486f774093e6cb507",
+    "5b5f75b986f77447ec5d7710",
+    "5b5f75c686f774094242f19f",
+    "5b5f75e486f77447ec5d7712",
+    "5b5f760586f774093e6cb509",
+    "5b5f761f86f774094242f1a1",
+    "5b5f764186f77447ec5d7714",
+    "5b47574386f77428ca22b346",
+    "5b47574386f77428ca22b340",
+    "5b47574386f77428ca22b344",
+    "5b47574386f77428ca22b341"
+  ],
+  "surname": "Пилсудский",
+  "unlockedByDefault": true
+}
