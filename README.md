@@ -10,14 +10,14 @@ Client version: Latest
 
 ## Known issues
 
-On first start, the Repair Window causes a client error. This can be monkey-fixed by starting and canceling a raid
+Bots and Loot, das it~~~~~
 
 [More information available on the Projects board](https://github.com/orgs/Make-Tarkov-Great-Again/projects/1)
 
-## Who are we, and why are we doing this.
+## Who are we, and why are we doing this?
 
 MTGA is a organization founded by a few Altered Escape developers.
-We are developing this emulator to offer an accessible live-like experience, up-to-date and easy to modify.
+We are developing this emulator to offer an accessible experience, that is up-to-date and easy to modify.
 
 ## Community
 
