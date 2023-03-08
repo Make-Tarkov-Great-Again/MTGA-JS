@@ -24,9 +24,17 @@ foreach($cert in $certs) {
             Remove-Item -Path $certPath
         }
     }
+
 }
 
 if(!$found) {
-    $msgBoxInput =  [System.Windows.Forms.MessageBox]::Show("After closing this popup box, you will be asked to install a new certificate. This certificate is required for the tarkov client to connect to the websocket server. Without this, some functions will not work. The certificate is valid for 3 days. This is a potential security issue and could be abused. We will try to change this as soon as we find someone to take over the binary part of this project.","Certificate installation required",0)
+    $msgBoxInput =  [System.Windows.Forms.MessageBox]::Show("Close your browser before closing this pop-up!
+
+After closing this popup box, you will be asked to install a new certificate. 
+This certificate is REQUIRED for the Client to connect to the websocket server. 
+Without connection to the websocket server the notification functions will NOT work. 
+
+The certificate is valid for 3 days","Certificate installation required",0)
     Import-Certificate -FilePath $certificateToInstallPath -CertStoreLocation cert:\CurrentUser\Root
+    $msgBoxInput =  [System.Windows.Forms.MessageBox]::Show("Restart your browser if it was open during installation or else the launcher will not work!","Restart Browser!",0)
 }
