@@ -63,6 +63,7 @@
         "allPocketsHaveSpecialSlots": true
     },
     "items": {
+        "allItemsArePreSearched": true,
         "quickExamine": true,
         "allExamined": {
             "enabled": true,
