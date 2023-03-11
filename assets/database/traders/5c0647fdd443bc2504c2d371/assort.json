@@ -4282,9 +4282,85 @@
       "_tpl": "56083cba4bdc2de22e8b456f",
       "parentId": "63d385bcb3eba6c95d0ef3d0",
       "slotId": "mod_stock"
+    },
+    {
+      "_id": "634acfb4da5c23324e07ca36",
+      "_tpl": "5fc22d7c187fea44d52eda44",
+      "parentId": "hideout",
+      "slotId": "hideout",
+      "upd": {
+        "FireMode": {
+          "FireMode": "single"
+        },
+        "StackObjectsCount": 5,
+        "BuyRestrictionMax": 1,
+        "BuyRestrictionCurrent": 0
+      }
+    },
+    {
+      "_id": "634acfb4da5c23324e07ca37",
+      "_tpl": "57c55efc2459772d2c6271e7",
+      "parentId": "634acfb4da5c23324e07ca36",
+      "slotId": "mod_pistol_grip"
+    },
+    {
+      "_id": "634acfb4da5c23324e07ca38",
+      "_tpl": "5fc23426900b1d5091531e15",
+      "parentId": "634acfb4da5c23324e07ca36",
+      "slotId": "mod_magazine"
+    },
+    {
+      "_id": "634acfb4da5c23324e07ca39",
+      "_tpl": "5649be884bdc2d79388b4577",
+      "parentId": "634acfb4da5c23324e07ca36",
+      "slotId": "mod_stock_001"
+    },
+    {
+      "_id": "634acfb4da5c23324e07ca3a",
+      "_tpl": "5fc2369685fd526b824a5713",
+      "parentId": "634acfb4da5c23324e07ca39",
+      "slotId": "mod_stock_000"
+    },
+    {
+      "_id": "634acfb4da5c23324e07ca3b",
+      "_tpl": "5fc278107283c4046c581489",
+      "parentId": "634acfb4da5c23324e07ca36",
+      "slotId": "mod_reciever"
+    },
+    {
+      "_id": "634acfb4da5c23324e07ca3c",
+      "_tpl": "5fc23678ab884124df0cd590",
+      "parentId": "634acfb4da5c23324e07ca3b",
+      "slotId": "mod_barrel"
+    },
+    {
+      "_id": "634acfb4da5c23324e07ca3d",
+      "_tpl": "5fc23636016cce60e8341b05",
+      "parentId": "634acfb4da5c23324e07ca3c",
+      "slotId": "mod_muzzle"
+    },
+    {
+      "_id": "634acfb4da5c23324e07ca3e",
+      "_tpl": "5fc2360f900b1d5091531e19",
+      "parentId": "634acfb4da5c23324e07ca3c",
+      "slotId": "mod_gas_block"
+    },
+    {
+      "_id": "634acfb4da5c23324e07ca3f",
+      "_tpl": "5fc235db2770a0045c59c683",
+      "parentId": "634acfb4da5c23324e07ca3b",
+      "slotId": "mod_handguard"
     }
   ],
   "barter_scheme": {
+    "634acfb4da5c23324e07ca36": [
+      [
+        {
+          "count": 250000,
+          "_tpl": "5449016a4bdc2d6f028b456f"
+        }
+      ]
+    ],
     "63d385b9b3eba6c95d0ef0c9": [
       [
         {
@@ -6783,6 +6859,7 @@
     ]
   },
   "loyal_level_items": {
+    "634acfb4da5c23324e07ca36": 4,
     "63d385b9b3eba6c95d0ef0c9": 2,
     "63d385b9b3eba6c95d0ef0d2": 1,
     "63d385b9b3eba6c95d0ef0d4": 1,
