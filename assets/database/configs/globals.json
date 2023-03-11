@@ -4028,9 +4028,9 @@
       "includePveTraderSales": false,
       "priceStabilizerStartIntervalInHours": 1,
       "minUserLevel": 15,
-      "communityTax": 3.5,
-      "communityItemTax": 3.5,
-      "communityRequirementTax": 6,
+      "communityTax": 3,
+      "communityItemTax": 3,
+      "communityRequirementTax": 3,
       "offerPriorityCost": 6,
       "offerDurationTimeInHour": 12,
       "offerDurationTimeInHourAfterRemove": 0.02,
@@ -4050,58 +4050,58 @@
         },
         {
           "from": 0.2,
-          "to": 10,
+          "to": 7,
           "count": 2
         },
         {
-          "from": 10,
+          "from": 7,
           "to": 30,
-          "count": 2
+          "count": 3
         },
         {
           "from": 30,
-          "to": 50,
-          "count": 3
-        },
-        {
-          "from": 50,
-          "to": 70,
-          "count": 3
-        },
-        {
-          "from": 70,
-          "to": 100,
+          "to": 60,
           "count": 4
+        },
+        {
+          "from": 60,
+          "to": 100,
+          "count": 5
         },
         {
           "from": 100,
           "to": 150,
-          "count": 4
+          "count": 6
         },
         {
           "from": 150,
+          "to": 200,
+          "count": 8
+        },
+        {
+          "from": 200,
           "to": 250,
-          "count": 5
+          "count": 8
         },
         {
           "from": 250,
           "to": 500,
-          "count": 5
+          "count": 8
         },
         {
           "from": 500,
           "to": 750,
-          "count": 6
+          "count": 8
         },
         {
           "from": 750,
           "to": 1000,
-          "count": 6
+          "count": 8
         },
         {
           "from": 1000,
           "to": 10000,
-          "count": 8
+          "count": 10
         }
       ],
       "balancerRemovePriceCoefficient": 5,
@@ -5679,6 +5679,11 @@
     },
     "ItemsCommonSettings": {
       "ItemRemoveAfterInterruptionTime": 2
+    },
+    "SquadSettings": {
+      "SendRequestDelaySeconds": 60,
+      "SecondsForExpiredRequest": 120,
+      "CountOfRequestsToOnePlayer": 3
     }
   },
   "bot_presets": [
@@ -5784,6 +5789,123 @@
       "SCATTERING_DIST_MODIF": 0.7,
       "MAX_AIMING_UPGRADE_BY_TIME": 0.85,
       "FIRST_CONTACT_ADD_SEC": 0.1,
+      "COEF_IF_MOVE": 1
+    },
+    {
+      "UseThis": true,
+      "Role": "bossKilla",
+      "BotDifficulty": "normal",
+      "VisibleAngle": 180,
+      "VisibleDistance": 140,
+      "ScatteringPerMeter": 0.09,
+      "HearingSense": 4.8,
+      "SCATTERING_DIST_MODIF": 0.45,
+      "MAX_AIMING_UPGRADE_BY_TIME": 0.15,
+      "FIRST_CONTACT_ADD_SEC": 0.13,
+      "COEF_IF_MOVE": 1
+    },
+    {
+      "UseThis": true,
+      "Role": "bossTagilla",
+      "BotDifficulty": "normal",
+      "VisibleAngle": 180,
+      "VisibleDistance": 140,
+      "ScatteringPerMeter": 0.09,
+      "HearingSense": 4.8,
+      "SCATTERING_DIST_MODIF": 0.45,
+      "MAX_AIMING_UPGRADE_BY_TIME": 0.15,
+      "FIRST_CONTACT_ADD_SEC": 0.13,
+      "COEF_IF_MOVE": 1
+    },
+    {
+      "UseThis": true,
+      "Role": "bossBully",
+      "BotDifficulty": "normal",
+      "VisibleAngle": 170,
+      "VisibleDistance": 140,
+      "ScatteringPerMeter": 0.02,
+      "HearingSense": 4.8,
+      "SCATTERING_DIST_MODIF": 0.8,
+      "MAX_AIMING_UPGRADE_BY_TIME": 0.15,
+      "FIRST_CONTACT_ADD_SEC": 0.13,
+      "COEF_IF_MOVE": 1
+    },
+    {
+      "UseThis": true,
+      "Role": "bossGluhar",
+      "BotDifficulty": "normal",
+      "VisibleAngle": 170,
+      "VisibleDistance": 140,
+      "ScatteringPerMeter": 0.045,
+      "HearingSense": 4.8,
+      "SCATTERING_DIST_MODIF": 0.67,
+      "MAX_AIMING_UPGRADE_BY_TIME": 0.15,
+      "FIRST_CONTACT_ADD_SEC": 0.13,
+      "COEF_IF_MOVE": 1
+    },
+    {
+      "UseThis": true,
+      "Role": "bossSanitar",
+      "BotDifficulty": "normal",
+      "VisibleAngle": 170,
+      "VisibleDistance": 140,
+      "ScatteringPerMeter": 0.045,
+      "HearingSense": 4.8,
+      "SCATTERING_DIST_MODIF": 0.6,
+      "MAX_AIMING_UPGRADE_BY_TIME": 0.15,
+      "FIRST_CONTACT_ADD_SEC": 0.13,
+      "COEF_IF_MOVE": 1
+    },
+    {
+      "UseThis": true,
+      "Role": "bossKojaniy",
+      "BotDifficulty": "normal",
+      "VisibleAngle": 170,
+      "VisibleDistance": 165,
+      "ScatteringPerMeter": 0.045,
+      "HearingSense": 4.8,
+      "SCATTERING_DIST_MODIF": 0.6,
+      "MAX_AIMING_UPGRADE_BY_TIME": 0.15,
+      "FIRST_CONTACT_ADD_SEC": 0.13,
+      "COEF_IF_MOVE": 1
+    },
+    {
+      "UseThis": true,
+      "Role": "bossKnight",
+      "BotDifficulty": "normal",
+      "VisibleAngle": 170,
+      "VisibleDistance": 140,
+      "ScatteringPerMeter": 0.045,
+      "HearingSense": 4.8,
+      "SCATTERING_DIST_MODIF": 0.6,
+      "MAX_AIMING_UPGRADE_BY_TIME": 0.15,
+      "FIRST_CONTACT_ADD_SEC": 0.13,
+      "COEF_IF_MOVE": 1
+    },
+    {
+      "UseThis": true,
+      "Role": "followerBigPipe",
+      "BotDifficulty": "normal",
+      "VisibleAngle": 180,
+      "VisibleDistance": 170,
+      "ScatteringPerMeter": 0.09,
+      "HearingSense": 4.8,
+      "SCATTERING_DIST_MODIF": 0.45,
+      "MAX_AIMING_UPGRADE_BY_TIME": 0.15,
+      "FIRST_CONTACT_ADD_SEC": 0.13,
+      "COEF_IF_MOVE": 1
+    },
+    {
+      "UseThis": true,
+      "Role": "followerBirdEye",
+      "BotDifficulty": "normal",
+      "VisibleAngle": 180,
+      "VisibleDistance": 255,
+      "ScatteringPerMeter": 0.045,
+      "HearingSense": 4.8,
+      "SCATTERING_DIST_MODIF": 0.55,
+      "MAX_AIMING_UPGRADE_BY_TIME": 0.15,
+      "FIRST_CONTACT_ADD_SEC": 0.13,
       "COEF_IF_MOVE": 1
     }
   ],
