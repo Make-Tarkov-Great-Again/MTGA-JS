@@ -5671,41 +5671,6 @@
       },
       "_proto": "5cc2e68f14c02e28b47de290"
     },
-    "6390103dfdb42a2ccc0e8cca": {
-      "_id": "6390103dfdb42a2ccc0e8cca",
-      "_name": "bear_hands_spna",
-      "_parent": "5cc086a314c02e000c6bea69",
-      "_type": "Item",
-      "_props": {
-        "Name": "DefaultBearHands",
-        "ShortName": "DefaultBearHands",
-        "Description": "DefaultBearHands",
-        "Side": [
-          "Bear"
-        ],
-        "BodyPart": "Hands",
-        "Prefab": {
-          "path": "assets/content/hands/hands_bear_spna/hands_bear_spna.skin.bundle",
-          "rcid": ""
-        },
-        "WatchPrefab": {
-          "path": "assets/content/hands/bear/bear_watch_luminoxrecon.bundle",
-          "rcid": ""
-        },
-        "IntegratedArmorVest": false,
-        "WatchPosition": {
-          "x": -0.06411,
-          "y": -0.00163,
-          "z": 0.03671
-        },
-        "WatchRotation": {
-          "x": 2.485724,
-          "y": -172.2751,
-          "z": 1.332026
-        }
-      },
-      "_proto": "5cc0876314c02e000c6bea6b"
-    },
     "6393082c1c8f182ad90c8961": {
       "_id": "6393082c1c8f182ad90c8961",
       "_name": "usec_hands_carinthia_softshell",
@@ -5740,6 +5705,41 @@
         }
       },
       "_proto": "5cde95fa7d6c8b04737c2d13"
+    },
+    "6390103dfdb42a2ccc0e8cca": {
+      "_id": "6390103dfdb42a2ccc0e8cca",
+      "_name": "bear_hands_spna",
+      "_parent": "5cc086a314c02e000c6bea69",
+      "_type": "Item",
+      "_props": {
+        "Name": "DefaultBearHands",
+        "ShortName": "DefaultBearHands",
+        "Description": "DefaultBearHands",
+        "Side": [
+          "Bear"
+        ],
+        "BodyPart": "Hands",
+        "Prefab": {
+          "path": "assets/content/hands/hands_bear_spna/hands_bear_spna.skin.bundle",
+          "rcid": ""
+        },
+        "WatchPrefab": {
+          "path": "assets/content/hands/bear/bear_watch_luminoxrecon.bundle",
+          "rcid": ""
+        },
+        "IntegratedArmorVest": false,
+        "WatchPosition": {
+          "x": -0.0641,
+          "y": -0.00163,
+          "z": 0.03684
+        },
+        "WatchRotation": {
+          "x": -2.486,
+          "y": 7.725,
+          "z": -1.332
+        }
+      },
+      "_proto": "5cc0876314c02e000c6bea6b"
     },
     "5cc084dd14c02e000b0550a3": {
       "_id": "5cc084dd14c02e000b0550a3",
@@ -8406,21 +8406,6 @@
         "Prefab": "BossBully"
       }
     },
-    "5fc6155b0b735e7b024c76ec": {
-      "_id": "5fc6155b0b735e7b024c76ec",
-      "_name": "BossGluhar",
-      "_parent": "5fc100cf95572123ae738483",
-      "_type": "Item",
-      "_props": {
-        "Name": "BossGluhar",
-        "ShortName": "BossGluhar",
-        "Description": "BossGluhar",
-        "Side": [
-          "Savage"
-        ],
-        "Prefab": "BossGluhar"
-      }
-    },
     "5fc615710b735e7b024c76ed": {
       "_id": "5fc615710b735e7b024c76ed",
       "_name": "BossSanitar",
@@ -8434,6 +8419,21 @@
           "Savage"
         ],
         "Prefab": "BossSanitar"
+      }
+    },
+    "5fc6155b0b735e7b024c76ec": {
+      "_id": "5fc6155b0b735e7b024c76ec",
+      "_name": "BossGluhar",
+      "_parent": "5fc100cf95572123ae738483",
+      "_type": "Item",
+      "_props": {
+        "Name": "BossGluhar",
+        "ShortName": "BossGluhar",
+        "Description": "BossGluhar",
+        "Side": [
+          "Savage"
+        ],
+        "Prefab": "BossGluhar"
       }
     },
     "5fc613c80b735e7b024c76e2": {
