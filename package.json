@@ -8,16 +8,10 @@
   "scripts": {
     "start": "node --trace-warnings app.mjs",
     "dev": "nodemon --trace-warnings app.mjs",
-    "transpile": "webpack --config webpack.config.mjs",
-    "package": "pkg -C Brotli package.json",
-    "compress": "node 7zip.config.mjs",
-    "build": "webpack --config webpack.config.mjs & pkg -C Brotli package.json & node 7zip.config.mjs"
-  },
-  "pkg": {
-    "targets": [
-      "latest-win-x64"
-    ],
-    "outputPath": "./dist"
+    "transpile": "webpack --config ./deploy/webpack.config.mjs",
+    "package": "node ./deploy/pkg.config.mjs",
+    "compress": "node ./deploy/7zip.config.mjs",
+    "build": "webpack --config ./deploy/webpack.config.mjs & node ./deploy/pkg.config.mjs & node ./deploy/7zip.config.mjs"
   },
   "keywords": [],
   "author": "MTGA-Team",
@@ -39,6 +33,7 @@
     "terminal-image": "^2.0.0"
   },
   "devDependencies": {
+    "@angablue/exe": "^1.2.0",
     "node-7z-archive": "^1.1.4",
     "nodemon": "^2.0.21",
     "pino-pretty": "^10.0.0",

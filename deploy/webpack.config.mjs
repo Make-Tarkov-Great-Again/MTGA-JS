@@ -19,5 +19,5 @@ export default {
     },
     plugins: [],
     target: "async-node",
-    externals: [/node_modules/, /*/assets/, /lib/*/  'bufferutil', 'utf-8-validate']
+    externals: [/node_modules/, 'bufferutil', 'utf-8-validate']
 }
