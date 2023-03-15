@@ -1,11 +1,23 @@
 {
-  "name": "MTGA-Server",
+  "name": "Server",
   "version": "0.0.1",
   "description": "Make Tarkov Great Again: An `Escape from Tarkov` emulation server built with Fastify",
   "main": "app.mjs",
+  "bin": "./dist/mtga.js",
+  "type": "module",
   "scripts": {
     "start": "node --trace-warnings app.mjs",
-    "dev": "nodemon --trace-warnings app.mjs"
+    "dev": "nodemon --trace-warnings app.mjs",
+    "transpile": "webpack --config webpack.config.mjs",
+    "package": "pkg -C Brotli package.json",
+    "compress": "node 7zip.config.mjs",
+    "build": "webpack --config webpack.config.mjs & pkg -C Brotli package.json & node 7zip.config.mjs"
+  },
+  "pkg": {
+    "targets": [
+      "latest-win-x64"
+    ],
+    "outputPath": "./dist"
   },
   "keywords": [],
   "author": "MTGA-Team",
@@ -17,17 +29,20 @@
     "@fastify/formbody": "^7.4.0",
     "@fastify/websocket": "^7.1.3",
     "@xhayper/discord-rpc": "^1.0.15",
-    "console-png": "^1.2.1",
     "fast-stringify": "^2.0.0",
     "fastify": "^4.14.1",
     "fastify-plugin": "^4.5.0",
     "json-fixer": "^1.6.15",
     "mongoid-js": "^1.3.0",
     "pino": "^8.11.0",
-    "selfsigned": "^2.1.1"
+    "selfsigned": "^2.1.1",
+    "terminal-image": "^2.0.0"
   },
   "devDependencies": {
+    "node-7z-archive": "^1.1.4",
     "nodemon": "^2.0.21",
-    "pino-pretty": "^9.4.0"
+    "pino-pretty": "^10.0.0",
+    "webpack": "^5.76.1",
+    "webpack-cli": "^5.0.1"
   }
 }

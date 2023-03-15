@@ -1,7 +1,6 @@
 import webinterface from "./lib/engine/WebInterface.mjs";
 import Server from './lib/engine/Server.mjs';
 
-
 await Promise.allSettled([
     await Server.setServerConfig(),
     await Server.registerCertificate(),
