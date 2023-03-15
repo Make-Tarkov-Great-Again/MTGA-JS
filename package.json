@@ -37,7 +37,7 @@
     "node-7z-archive": "^1.1.4",
     "nodemon": "^2.0.21",
     "pino-pretty": "^10.0.0",
-    "webpack": "^5.76.1",
+    "webpack": "^5.76.2",
     "webpack-cli": "^5.0.1"
   }
 }
