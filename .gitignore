@@ -62,5 +62,5 @@ user/certs/*
 fleaoffers.json
 assets/database/configs/resupply.json
 user/mods/*
-dist/*
+deploy/dist
 

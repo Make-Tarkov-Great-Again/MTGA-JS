@@ -2,9 +2,9 @@ import { createSfxWindows } from 'node-7z-archive';
 
 const ASSETS = "./assets";
 const LIB = "./lib"
-const EXE = "./dist/Server.exe"
-const NAME = "MTGA"
-const DEST = "./dist"
+const EXE = "./deploy/dist/MTGA-Server.exe"
+const NAME = "MTGA-Server.7z"
+const DEST = "./deploy/dist"
 
 const OPTIONS = {
     m: "x9",
