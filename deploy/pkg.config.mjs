@@ -9,7 +9,7 @@ const build = exe({
     icon: './assets/templates/webinterface/resources/favicon.ico',
     properties: {
         FileDescription: 'Make Tarkov Great Again',
-        ProductName: 'Make Tarkov Great Again',
+        ProductName: 'An `Escape from Tarkov` emulation server executable built with Fastify',
     }
 });
 

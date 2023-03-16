@@ -57,6 +57,7 @@ jspm_packages
 
 # project
 package-lock.json
+pnpm-lock.yaml
 user/
 fleaoffers.json
 assets/database/configs/resupply.json
