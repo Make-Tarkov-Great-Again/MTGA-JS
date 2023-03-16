@@ -1,4 +1,5 @@
 import exe from '@angablue/exe'
+import { logger } from '../lib/utilities/pino.mjs'
 
 const build = exe({
     entry: './deploy/dist/MTGA.js',
@@ -12,4 +13,4 @@ const build = exe({
     }
 });
 
-build.then(() => console.log('Build completed!'));
+build.then(() => logger.info('Executable completed and created!'));
