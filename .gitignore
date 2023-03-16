@@ -57,10 +57,8 @@ jspm_packages
 
 # project
 package-lock.json
-user/profiles/*
-user/certs/*
+user/
 fleaoffers.json
 assets/database/configs/resupply.json
-user/mods/*
 deploy/dist
-
+serverLogs/
