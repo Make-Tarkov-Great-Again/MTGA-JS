@@ -1,5 +1,4 @@
 <p align="center">
-  <br>
   <img src="https://user-images.githubusercontent.com/21200584/224684261-cfd9d151-91f5-4c31-8cfa-93cac25295e5.png" alt="MTGABABYYY">
   <br>
   <b>It's going to be great, so great, in fact it will be the best</b>
@@ -12,8 +11,6 @@ Client version: Latest
 [More information available on the Wiki](https://github.com/Make-Tarkov-Great-Again/MTGA-Backend/wiki)
 
 ## Known issues
-
-Bots and Loot, das it~~~~~
 
 [More information available on the Projects board that isn't actively updated lol](https://github.com/orgs/Make-Tarkov-Great-Again/projects/1)
 
