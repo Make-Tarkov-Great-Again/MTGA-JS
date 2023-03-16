@@ -1,4 +1,6 @@
 import { createSfxWindows } from 'node-7z-archive';
+import { logger } from '../lib/utilities/pino.mjs'
+
 
 const ASSETS = "./assets";
 const LIB = "./lib"
@@ -12,8 +14,9 @@ const OPTIONS = {
 
 createSfxWindows(NAME, [ASSETS, LIB, EXE], DEST, OPTIONS)
     .then(function () {
-        console.log('Archiving done!');
+        logger.info('Self-Extracting Archive completed and created!');
     })
     .catch(function (err) {
-        console.error(err);
+        logger.error(err);
     });
+

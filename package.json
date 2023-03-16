@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "Make Tarkov Great Again: An `Escape from Tarkov` emulation server built with Fastify",
   "main": "app.mjs",
-  "bin": "./dist/mtga.js",
   "type": "module",
   "scripts": {
     "start": "node --trace-warnings app.mjs",
