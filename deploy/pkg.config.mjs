@@ -8,8 +8,8 @@ const build = exe({
     target: 'latest-win-x64',
     icon: './assets/templates/webinterface/resources/favicon.ico',
     properties: {
-        FileDescription: 'Make Tarkov Great Again',
-        ProductName: 'An `Escape from Tarkov` emulation server executable built with Fastify',
+        ProductName: 'Make Tarkov Great Again',
+        FileDescription: 'An `Escape from Tarkov` emulation server executable built with Fastify',
     }
 });
 
