@@ -6,7 +6,8 @@
 
 ## Usage
 
-Client version: Latest
+Client version: Latest<br>
+Nodejs version: 19.8.1
 
 [More information available on the Wiki](https://github.com/Make-Tarkov-Great-Again/MTGA-Backend/wiki)
 
@@ -32,8 +33,6 @@ Our Discord is undergoing construction and is only available to those we invite.
 - Is there a part of the server you would like to tackle?
 - Some code you would like to refactor?
 - Got an idea you would like to share/implement?
-
-This server runs off the latest LTS of NodeJS, v18.7.0.
 
 Feel free to create a fork, open a pull request and request a review: **We are open to any contribution!**
 
