@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node --trace-warnings app.mjs",
-    "dev": "nodemon --trace-warnings app.mjs",
+    "dev": "node --trace-warnings --watch app.mjs",
     "transpile": "webpack --config ./deploy/webpack.config.mjs",
     "package": "node ./deploy/pkg.config.mjs",
     "compress": "node ./deploy/7zip.config.mjs",
@@ -34,9 +34,8 @@
   "devDependencies": {
     "@angablue/exe": "^1.2.0",
     "node-7z-archive": "^1.1.4",
-    "nodemon": "^2.0.21",
     "pino-pretty": "^10.0.0",
-    "webpack": "^5.76.2",
+    "webpack": "^5.76.3",
     "webpack-cli": "^5.0.1"
   }
 }
