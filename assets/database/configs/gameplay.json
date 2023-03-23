@@ -103,6 +103,7 @@
             "createFriendlyAI": true
         },
         "defaultRaidSettings": {
+            "raidMode": "Local",
             "aiAmount": "AsOnline",
             "aiDifficulty": "AsOnline",
             "bossEnabled": true,
