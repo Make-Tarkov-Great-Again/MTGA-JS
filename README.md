@@ -6,6 +6,8 @@
 
 Client version: Latest
 
+Nodejs version: 19.8.1
+
 [More information available on the Wiki](https://github.com/Make-Tarkov-Great-Again/MTGA-Backend/wiki)
 
 ## Known issues
