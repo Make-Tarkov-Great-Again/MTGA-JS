@@ -1,0 +1,6 @@
+{
+  "verbose": true,
+  "delay": 1500,
+  "signal": "SIGHUP",
+  "watch": ["lib", "assets"]
+}
