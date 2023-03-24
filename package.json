@@ -1,12 +1,12 @@
 {
-  "name": "Server",
+  "name": "mtga-server",
   "version": "0.0.1",
   "description": "Make Tarkov Great Again: An `Escape from Tarkov` emulation server built with Fastify",
   "main": "app.mjs",
   "type": "module",
   "scripts": {
     "start": "node --trace-warnings app.mjs",
-    "dev": "node --trace-warnings --watch app.mjs",
+    "dev": "node --watch --trace-warnings app.mjs",
     "transpile": "webpack --config ./deploy/webpack.config.mjs",
     "package": "node ./deploy/pkg.config.mjs",
     "compress": "node ./deploy/7zip.config.mjs",
