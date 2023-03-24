@@ -3,7 +3,7 @@ import Server from './lib/engine/Server.mjs';
 import { checkForUpdates } from "./lib/ext/update.mjs";
 
 await checkForUpdates();
-export async function startServer() {
+export async function OnReadyStartServer() {
     await Promise.allSettled([
       Server.setServerConfig(),
       Server.registerCertificate(),
