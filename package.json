@@ -34,7 +34,7 @@
     "pino": "^8.11.0",
     "ps-node": "^0.1.6",
     "selfsigned": "^2.1.1",
-    "terminal-image": "^2.0.0",
+    "terminal-image": "^2.0.0"
   },
   "devDependencies": {
     "@angablue/exe": "^1.2.0",
