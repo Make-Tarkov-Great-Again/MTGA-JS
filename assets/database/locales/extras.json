@@ -73,6 +73,31 @@
             }
         },
         "Voices": {
+            "6353fe04f0de2294830a0dbe": {
+                "Name": "Big Pipe",
+                "ShortName": "Big Pipe",
+                "Description": "Big Pipe"
+            },
+            "6353fe34f0de2294830a0dbf": {
+                "Name": "Bird Eye",
+                "ShortName": "Bird Eye",
+                "Description": "Bird Eye"
+            },
+            "6353fea0a644ca0c510d1dd8": {
+                "Name": "Killa",
+                "ShortName": "Killa",
+                "Description": "Killa"
+            },
+            "6353fe74a644ca0c510d1dd6": {
+                "Name": "Knight",
+                "ShortName": "Knight",
+                "Description": "Knight"
+            },
+            "6353fec227f75f803206e60a": {
+                "Name": "Tagilla",
+                "ShortName": "Tagilla",
+                "Description": "Tagilla"
+            },
             "5fc6155b0b735e7b024c76ec": {
                 "Name": "Gluhar",
                 "ShortName": "Gluhar",
