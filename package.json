@@ -5,7 +5,8 @@
   "main": "./lib/ext/update.mjs",
   "type": "module",
   "scripts": {
-    "start": "node --trace-warnings ./lib/ext/update.mjs",
+    "start": "node --trace-warnings app.mjs",
+    "start-update": "node --trace-warnings ./lib/ext/update.mjs",
     "dev": "nodemon --trace-warnings app.mjs",
     "transpile": "webpack --config ./deploy/webpack.config.mjs",
     "package": "node ./deploy/pkg.config.mjs",

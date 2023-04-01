@@ -8,7 +8,7 @@ await Promise.allSettled([
     await Server.printLogo(),
     await Server.registerPlugins(),
     await Server.setContentTypeParser(),
-    await Server.initializeServer(),
+    await Server.initializeServer()
 ]);
 
 const app = Server.app;
