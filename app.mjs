@@ -1,6 +1,8 @@
 import webinterface from "./lib/engine/WebInterface.mjs";
 import Server from './lib/engine/Server.mjs';
 
+
+
 await Promise.allSettled([
     await Server.setServerConfig(),
     await Server.registerCertificate(),
@@ -11,8 +13,9 @@ await Promise.allSettled([
     await Server.initializeServer()
 ]);
 
-const app = Server.app;
-const database = Server.database;
-const rpc = Server.rpc;
+export const app = Server.app;
+export const database = Server.database;
+export const rpc = Server.rpc;
+export { webinterface };
 
-export { webinterface, app, database, rpc };
+await Server.initializeMods();
