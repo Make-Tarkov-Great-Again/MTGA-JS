@@ -17,6 +17,14 @@
             <div class="form w-100 m-auto">
                 <h1 class="h3 mb-3 fw-normal">Launcher</h1>
                 <div class="form-floating">
+                    
+                    <select name="clienttype" type="dropdown" class="form-control" id="clienttype">
+                        {{clienttypechoices}}
+                    </select>
+                    <label for="edition">Client type</label>
+                </div>
+                <div class="form-floating">
+                    
                     <input name="tarkovPath" type="text" class="form-control" id="tarkovPath" placeholder="tarkovPath"
                         value="{{tarkovPath}}">
                     <label for="tarkovPath">tarkovPath</label>
