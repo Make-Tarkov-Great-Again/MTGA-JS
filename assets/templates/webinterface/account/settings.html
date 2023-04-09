@@ -2,7 +2,8 @@
     <div class="row mb-3">
         <div class="col-6 themed-grid-col">
             <h2>Account Settings</h2>
-            <div class="form w-100 m-auto">
+
+            <div class="form w-100 m-auto" id="password-div">
                 <h1 class="h3 mb-3 fw-normal">Change Password</h1>
                 <div class="form-floating">
                     <input name="password" type="password" class="form-control" id="password" placeholder="Password">
@@ -15,16 +16,8 @@
                 </div>
             </div>
             <div class="form w-100 m-auto">
-                <h1 class="h3 mb-3 fw-normal">Launcher</h1>
+                <h1 class="h3 mb-3 fw-normal">Client</h1>
                 <div class="form-floating">
-                    
-                    <select name="clienttype" type="dropdown" class="form-control" id="clienttype">
-                        {{clienttypechoices}}
-                    </select>
-                    <label for="edition">Client type</label>
-                </div>
-                <div class="form-floating">
-                    
                     <input name="tarkovPath" type="text" class="form-control" id="tarkovPath" placeholder="tarkovPath"
                         value="{{tarkovPath}}">
                     <label for="tarkovPath">tarkovPath</label>
@@ -45,13 +38,10 @@
                 <h1 class="h3 mb-3 fw-normal">Wipe</h1>
                 <div class="form-check">
                     <input class="form-check-input" name="wipe" type="checkbox" value="true" id="wipe">
-                    <label class="form-check-label" for="wipe">
-                        Check to wipe account
-                    </label>
+                    <label class="form-check-label" for="wipe">Check to wipe account</label>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
     <div class="row mb-3">
