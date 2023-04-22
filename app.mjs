@@ -18,4 +18,4 @@ export const database = Server.database;
 export const rpc = Server.rpc;
 export { webinterface };
 
-//await Server.initializeMods();
+await Server.initializeMods();
