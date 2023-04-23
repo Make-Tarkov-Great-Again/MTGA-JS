@@ -19,12 +19,12 @@
   "dependencies": {
     "@fastify/autoload": "^5.7.1",
     "@fastify/compress": "^6.2.1",
-	"@fastify/cors": "^8.0.0",
+    "@fastify/cors": "^8.2.1",
     "@fastify/cookie": "^8.3.0",
     "@fastify/formbody": "^7.4.0",
     "@fastify/websocket": "^7.2.0",
     "@octokit/rest": "^19.0.7",
-    "@xhayper/discord-rpc": "^1.0.15",
+    "@xhayper/discord-rpc": "^1.0.16",
     "archiver": "^5.3.1",
     "fast-stringify": "^2.0.0",
     "fastify": "^4.15.0",
@@ -40,7 +40,7 @@
     "node-7z-archive": "^1.1.4",
     "nodemon": "^2.0.22",
     "pino-pretty": "^10.0.0",
-    "webpack": "^5.78.0",
-    "webpack-cli": "^5.0.1"
+    "webpack": "^5.80.0",
+    "webpack-cli": "^5.0.2"
   }
 }
