@@ -7,7 +7,6 @@ await Promise.allSettled([
     await Server.setServerConfig(),
     await Server.registerCertificate(),
     await Server.setFastify(),
-    await Server.FuckYouCors(),
     await Server.printLogo(),
     await Server.registerPlugins(),
     await Server.setContentTypeParser(),
