@@ -33,7 +33,8 @@
     "mongoid-js": "^1.3.0",
     "pino": "^8.11.0",
     "selfsigned": "^2.1.1",
-    "terminal-image": "^2.0.0"
+    "terminal-image": "^2.0.0",
+    "ts-import": "5.0.0-beta.0"
   },
   "devDependencies": {
     "@angablue/exe": "^1.2.0",
