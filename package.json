@@ -10,8 +10,8 @@
     "dev": "nodemon --trace-warnings app.mjs",
     "transpile": "webpack --config ./deploy/webpack.config.mjs",
     "package": "node ./deploy/pkg.config.mjs",
-    "compress": "node ./deploy/7zip.config.mjs",
-    "build": "webpack --config ./deploy/webpack.config.mjs & node ./deploy/pkg.config.mjs & node ./deploy/7zip.config.mjs"
+    "compress": "node ./deploy/archiver.config.mjs",
+    "build": "webpack --config ./deploy/webpack.config.mjs & node ./deploy/pkg.config.mjs & node ./deploy/archiver.config.mjs"
   },
   "keywords": [],
   "author": "MTGA-Team",
@@ -36,7 +36,6 @@
   },
   "devDependencies": {
     "@angablue/exe": "^1.2.0",
-    "node-7z-archive": "^1.1.4",
     "nodemon": "^2.0.22",
     "pino-pretty": "^10.0.0",
     "webpack": "^5.78.0",
