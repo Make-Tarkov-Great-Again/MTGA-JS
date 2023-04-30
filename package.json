@@ -36,7 +36,6 @@
   },
   "devDependencies": {
     "@angablue/exe": "^1.2.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "node-7z-archive": "^1.1.4",
     "nodemon": "^2.0.22",
     "pino-pretty": "^10.0.0",
