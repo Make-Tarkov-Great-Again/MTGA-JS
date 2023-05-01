@@ -1,1 +1,1 @@
-//@deprecated
+//@deprecated 7zip replacement by archiver

@@ -1,5 +1,7 @@
 import { logger, createZipArchive, zipEntry } from '../lib/utilities/_index.mjs'
-
+/**
+* Create a zip archive with all the dist files
+*/
 
 const ASSETS = zipEntry('./assets',  'assets');
 const LIB = zipEntry('./lib',  'lib');

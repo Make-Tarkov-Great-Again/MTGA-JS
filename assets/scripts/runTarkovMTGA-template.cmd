@@ -1,4 +1,5 @@
 @ECHO OFF
+rem A batch template that runs Tarkov and requires an inpuit password
 :A
 echo Enter MTGA password
 set/p "MTGA_PASSWORD=>"
