@@ -3,6 +3,7 @@ import Server from './lib/engine/Server.mjs';
 
 
 await Server.setServerConfig();
+await Server.setZlibCache();
 await Server.registerCertificate();
 await Server.setFastify();
 await Server.printLogo();

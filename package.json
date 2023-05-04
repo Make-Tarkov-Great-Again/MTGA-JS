@@ -30,7 +30,7 @@
     "fastify-plugin": "^4.5.0",
     "json-fixer": "^1.6.15",
     "nanoid": "^4.0.2",
-    "pino": "^8.11.0",
+    "pino": "^8.12.1",
     "selfsigned": "^2.1.1",
     "terminal-image": "^2.0.0"
   },
@@ -39,7 +39,7 @@
     "node-7z-archive": "^1.1.4",
     "nodemon": "^2.0.22",
     "pino-pretty": "^10.0.0",
-    "webpack": "^5.81.0",
+    "webpack": "^5.82.0",
     "webpack-cli": "^5.0.2"
   }
 }
