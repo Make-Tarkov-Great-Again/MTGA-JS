@@ -9,6 +9,7 @@
   "discord": "",
   "website": "",
   "version": "0.0.1",
+  "enableDiscordRpc": true,
   "translations": {
     "alreadyInUse": "This nickname is already in use.",
     "tooShort": "Your nickname is too short"
