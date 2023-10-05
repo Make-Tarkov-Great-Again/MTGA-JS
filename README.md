@@ -1,12 +1,9 @@
-<h1>This JavaScript/Fastify backend has been archived as of 10/5/2023</h1>
-<h2>[Development is being resumed here on MTGA-GO]https://github.com/Make-Tarkov-Great-Again/MTGA-GO</h2>
-
-
-
 <p align="center">
   <img src="https://user-images.githubusercontent.com/21200584/224684261-cfd9d151-91f5-4c31-8cfa-93cac25295e5.png" alt="MTGABABYYY">
   <br>
   <b>It's going to be great, so great, in fact it will be the best</b>
+  
+  <a href="https://github.com/Make-Tarkov-Great-Again/MTGA-GO">This repo is being archived as of 10/5/2023 and production will resume on MTGA-GO</a>
 </p>
 
 ## Usage
